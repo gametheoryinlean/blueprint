@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strategy Profile — mdblueprint</title>
+  <title>Maximin is Bounded by Minimax — mdblueprint</title>
   <link rel="stylesheet" href="../style.css">
   <script defer>
     window.MathJax = {
@@ -77,17 +77,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-strategic_games-2e-strategy_profile">
-  <header class="definition_thmheading thm-heading">
-    <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Strategy Profile</span>
+<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-zero_sum-2e-maximin_le_minimax">
+  <header class="lemma_thmheading thm-heading">
+    <span class="lemma_thmcaption thm-caption">Lemma</span>
+    <span class="lemma_thmtitle thm-title">Maximin is Bounded by Minimax</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-definition">definition</span>
+      <span class="badge kind-lemma">lemma</span>
       <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-strategic_games-2e-strategy_profile">#</a>
+      <a class="permalink" href="#node-zero_sum-2e-maximin_le_minimax">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -103,7 +103,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="strategic_games_strategic_game.html">Strategic Game</a></li>
+        <li><a href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
         
       </ul>
     </div>
@@ -116,21 +116,22 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><code>StrategicGame.Profile</code></li>
+        <li><code>MatrixGame.maximin_le_minimax</code></li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.Basic</code></p>
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.Minimax</code></p>
       
     </div>
   </div>
   
 
-  <div class="definition_thmcontent thm-content body">
-    <h1>Strategy Profile</h1>
-<p>Given a strategic game $(I, (S_i), (u_i))$, a strategy profile is a tuple
-$\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p>
-<p>In Lean, a profile is <code>∀ i, G.strategy i</code>.</p>
+  <div class="lemma_thmcontent thm-content body">
+    <h1>Maximin is Bounded by Minimax</h1>
+<p>For every finite matrix game,</p>
+<p>$$\max_x \min_j E_A(x,j) \le \min_y \max_i E_A(i,y).$$</p>
+<p>This is the weak-duality inequality: player I's best guaranteed payoff cannot
+exceed player II's best upper bound on player I's payoff.</p>
     
   </div>
 
@@ -139,7 +140,7 @@ $\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="strategic_games_unilateral_deviation.html">Unilateral Deviation</a></li>
+      <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
       
     </ul>
   </section>
@@ -147,7 +148,7 @@ $\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p
 
   
   <footer class="tags">
-    <span class="tag">strategic-game</span><span class="tag">foundational</span>
+    <span class="tag">zero-sum</span><span class="tag">value</span><span class="tag">minimax</span>
   </footer>
   
 </article>

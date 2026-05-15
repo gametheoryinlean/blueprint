@@ -56,6 +56,9 @@
       "topic": "staged",
       "uses": [
         "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "zero_sum.mixed_matrix_payoff"
       ]
     },
     {
@@ -77,7 +80,8 @@
       ],
       "used_by": [
         "strategic_games.dominant_implies_nash",
-        "strategic_games.prisoners_dilemma"
+        "strategic_games.prisoners_dilemma",
+        "zero_sum.zero_sum_nash_value_unique"
       ]
     },
     {
@@ -118,7 +122,8 @@
       "used_by": [
         "strategic_games.mixed_strategy",
         "strategic_games.prisoners_dilemma",
-        "strategic_games.strategy_profile"
+        "strategic_games.strategy_profile",
+        "zero_sum.zero_sum_game"
       ]
     },
     {
@@ -220,6 +225,234 @@
       "used_by": [
         "strategic_games.weakly_dominant_strategy"
       ]
+    },
+    {
+      "id": "zero_sum.dantzig_proof_spine",
+      "title": "Dantzig Proof Spine for Minimax",
+      "kind": "proof-plan",
+      "status": "admitted",
+      "tags": [
+        "zero-sum",
+        "minimax",
+        "proof-plan",
+        "linear-programming"
+      ],
+      "lean_declarations": [
+        "DantzigState",
+        "DantzigState.isOptimal",
+        "DantzigState.value",
+        "DantzigState.stratI",
+        "DantzigState.basisVar",
+        "dotBeta0Pj_eq",
+        "optimal_basis_minimax",
+        "dantzigPivot",
+        "dantzigPivot_lexCond",
+        "dantzigPivot_beta0_decrease",
+        "dantzig_minimax"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.von_neumann_minimax"
+      ],
+      "used_by": [
+        "zero_sum.zero_sum_lp_bridge"
+      ]
+    },
+    {
+      "id": "zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "matrix-game",
+        "finite-game"
+      ],
+      "lean_declarations": [
+        "MatrixGame"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.zero_sum_game"
+      ],
+      "used_by": [
+        "zero_sum.mixed_matrix_payoff"
+      ]
+    },
+    {
+      "id": "zero_sum.maximin_le_minimax",
+      "title": "Maximin is Bounded by Minimax",
+      "kind": "lemma",
+      "status": "admitted",
+      "tags": [
+        "zero-sum",
+        "value",
+        "minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.maximin_le_minimax"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.maximin_minimax"
+      ],
+      "used_by": [
+        "zero_sum.von_neumann_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "value",
+        "minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.guarantee_I",
+        "MatrixGame.guarantee_II",
+        "MatrixGame.maximin",
+        "MatrixGame.minimax"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.mixed_matrix_payoff"
+      ],
+      "used_by": [
+        "zero_sum.maximin_le_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.mixed_matrix_payoff",
+      "title": "Expected Payoff of a Matrix Game",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "mixed-strategy",
+        "matrix-game"
+      ],
+      "lean_declarations": [
+        "expectedPayoffMatrix",
+        "MatrixGame.E",
+        "MatrixGame.Ej",
+        "MatrixGame.Ei"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.mixed_strategy",
+        "zero_sum.matrix_game"
+      ],
+      "used_by": [
+        "zero_sum.maximin_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "zero-sum",
+        "value",
+        "minimax",
+        "theorem"
+      ],
+      "lean_declarations": [
+        "MatrixGame.minimax_theorem",
+        "MatrixGame.minimax_optimal_strategies"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.maximin_le_minimax"
+      ],
+      "used_by": [
+        "zero_sum.dantzig_proof_spine",
+        "zero_sum.zero_sum_lp_bridge"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_game",
+      "title": "Zero-Sum Game",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "strategic-game",
+        "foundational"
+      ],
+      "lean_declarations": [
+        "StrategicGame.IsZeroSum",
+        "StrategicGame.IsConstantSum"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "zero_sum.matrix_game",
+        "zero_sum.zero_sum_payoff_negation"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_lp_bridge",
+      "title": "Zero-Sum Linear Programming Bridge",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "linear-programming",
+        "nash-equilibrium",
+        "staged"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.dantzig_proof_spine",
+        "zero_sum.von_neumann_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_nash_value_unique",
+      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
+      "kind": "theorem",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "equilibrium",
+        "value"
+      ],
+      "lean_declarations": [
+        "StrategicGame.Properties.IsZeroSum.nash_payoff_eq",
+        "StrategicGame.Properties.IsZeroSum.nash_payoff_eq_p1"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.nash_equilibrium",
+        "zero_sum.zero_sum_payoff_negation"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_payoff_negation",
+      "title": "Payoff Negation in Zero-Sum Games",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "payoff"
+      ],
+      "lean_declarations": [
+        "StrategicGame.Properties.IsZeroSum.neg",
+        "StrategicGame.Properties.IsZeroSum.neg'"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.zero_sum_game"
+      ],
+      "used_by": [
+        "zero_sum.zero_sum_nash_value_unique"
+      ]
     }
   ],
   "edges": [
@@ -278,6 +511,58 @@
     {
       "from": "strategic_games.weakly_dominates",
       "to": "strategic_games.unilateral_deviation"
+    },
+    {
+      "from": "zero_sum.dantzig_proof_spine",
+      "to": "zero_sum.von_neumann_minimax"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.zero_sum_game"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.maximin_minimax"
+    },
+    {
+      "from": "zero_sum.maximin_minimax",
+      "to": "zero_sum.mixed_matrix_payoff"
+    },
+    {
+      "from": "zero_sum.mixed_matrix_payoff",
+      "to": "strategic_games.mixed_strategy"
+    },
+    {
+      "from": "zero_sum.mixed_matrix_payoff",
+      "to": "zero_sum.matrix_game"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.maximin_le_minimax"
+    },
+    {
+      "from": "zero_sum.zero_sum_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "zero_sum.zero_sum_lp_bridge",
+      "to": "zero_sum.dantzig_proof_spine"
+    },
+    {
+      "from": "zero_sum.zero_sum_lp_bridge",
+      "to": "zero_sum.von_neumann_minimax"
+    },
+    {
+      "from": "zero_sum.zero_sum_nash_value_unique",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "zero_sum.zero_sum_nash_value_unique",
+      "to": "zero_sum.zero_sum_payoff_negation"
+    },
+    {
+      "from": "zero_sum.zero_sum_payoff_negation",
+      "to": "zero_sum.zero_sum_game"
     }
   ]
 }

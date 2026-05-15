@@ -23,6 +23,8 @@
       
         <li><a href="strategic_games/index.html">strategic_games</a></li>
       
+        <li><a href="zero_sum/index.html">zero_sum</a></li>
+      
       </ul>
     </section>
     
@@ -38,13 +40,35 @@
       
         <li><a href="keywords/example.html">example</a></li>
       
+        <li><a href="keywords/finite-game.html">finite-game</a></li>
+      
         <li><a href="keywords/foundational.html">foundational</a></li>
+      
+        <li><a href="keywords/linear-programming.html">linear-programming</a></li>
+      
+        <li><a href="keywords/matrix-game.html">matrix-game</a></li>
+      
+        <li><a href="keywords/minimax.html">minimax</a></li>
       
         <li><a href="keywords/mixed-strategy.html">mixed-strategy</a></li>
       
+        <li><a href="keywords/nash-equilibrium.html">nash-equilibrium</a></li>
+      
+        <li><a href="keywords/payoff.html">payoff</a></li>
+      
+        <li><a href="keywords/proof-plan.html">proof-plan</a></li>
+      
         <li><a href="keywords/solution-concept.html">solution-concept</a></li>
       
+        <li><a href="keywords/staged.html">staged</a></li>
+      
         <li><a href="keywords/strategic-game.html">strategic-game</a></li>
+      
+        <li><a href="keywords/theorem.html">theorem</a></li>
+      
+        <li><a href="keywords/value.html">value</a></li>
+      
+        <li><a href="keywords/zero-sum.html">zero-sum</a></li>
       
       </ul>
     </section>
@@ -90,6 +114,16 @@
 	"strategic_games.unilateral_deviation" [URL="#node-strategic_games-2e-unilateral_deviation", color="blue", label="Unilateral Deviation", penwidth="1.8", shape="box"];
 	"strategic_games.weakly_dominant_strategy" [URL="#node-strategic_games-2e-weakly_dominant_strategy", color="blue", label="Weakly Dominant Strategy", penwidth="1.8", shape="box"];
 	"strategic_games.weakly_dominates" [URL="#node-strategic_games-2e-weakly_dominates", color="blue", label="Weak Dominance", penwidth="1.8", shape="box"];
+	"zero_sum.dantzig_proof_spine" [URL="#node-zero_sum-2e-dantzig_proof_spine", color="blue", fillcolor="#A3D6FF", label="Dantzig Proof Spine for Minimax", penwidth="1.8", shape="ellipse", style="filled"];
+	"zero_sum.matrix_game" [URL="#node-zero_sum-2e-matrix_game", color="green", fillcolor="#B0ECA3", label="Matrix Game", penwidth="1.8", shape="box", style="filled"];
+	"zero_sum.maximin_le_minimax" [URL="#node-zero_sum-2e-maximin_le_minimax", color="blue", fillcolor="#A3D6FF", label="Maximin is Bounded by Minimax", penwidth="1.8", shape="ellipse", style="filled"];
+	"zero_sum.maximin_minimax" [URL="#node-zero_sum-2e-maximin_minimax", color="green", fillcolor="#B0ECA3", label="Maximin and Minimax Values", penwidth="1.8", shape="box", style="filled"];
+	"zero_sum.mixed_matrix_payoff" [URL="#node-zero_sum-2e-mixed_matrix_payoff", color="green", fillcolor="#B0ECA3", label="Expected Payoff of a Matrix Game", penwidth="1.8", shape="box", style="filled"];
+	"zero_sum.von_neumann_minimax" [URL="#node-zero_sum-2e-von_neumann_minimax", color="blue", fillcolor="#A3D6FF", label="Von Neumann Minimax Theorem", penwidth="1.8", shape="ellipse", style="filled"];
+	"zero_sum.zero_sum_game" [URL="#node-zero_sum-2e-zero_sum_game", color="green", fillcolor="#B0ECA3", label="Zero-Sum Game", penwidth="1.8", shape="box", style="filled"];
+	"zero_sum.zero_sum_lp_bridge" [URL="#node-zero_sum-2e-zero_sum_lp_bridge", color="#FFAA33", label="Zero-Sum Linear Programming Bridge", penwidth="1.8", shape="ellipse"];
+	"zero_sum.zero_sum_nash_value_unique" [URL="#node-zero_sum-2e-zero_sum_nash_value_unique", color="green", label="Nash Payoff Uniqueness in Zero-Sum Games", penwidth="1.8", shape="ellipse"];
+	"zero_sum.zero_sum_payoff_negation" [URL="#node-zero_sum-2e-zero_sum_payoff_negation", color="green", label="Payoff Negation in Zero-Sum Games", penwidth="1.8", shape="ellipse"];
 	"strategic_games.unilateral_deviation" -> "strategic_games.best_response" [style=dashed];
 	"strategic_games.best_response" -> "strategic_games.dominant_implies_nash" [style=dashed];
 	"strategic_games.nash_equilibrium" -> "strategic_games.dominant_implies_nash" [style=dashed];
@@ -104,6 +138,19 @@
 	"strategic_games.strategy_profile" -> "strategic_games.unilateral_deviation" [style=dashed];
 	"strategic_games.weakly_dominates" -> "strategic_games.weakly_dominant_strategy" [style=dashed];
 	"strategic_games.unilateral_deviation" -> "strategic_games.weakly_dominates" [style=dashed];
+	"zero_sum.von_neumann_minimax" -> "zero_sum.dantzig_proof_spine" [style=dashed];
+	"zero_sum.zero_sum_game" -> "zero_sum.matrix_game" [style=dashed];
+	"zero_sum.maximin_minimax" -> "zero_sum.maximin_le_minimax" [style=dashed];
+	"zero_sum.mixed_matrix_payoff" -> "zero_sum.maximin_minimax" [style=dashed];
+	"strategic_games.mixed_strategy" -> "zero_sum.mixed_matrix_payoff" [style=dashed];
+	"zero_sum.matrix_game" -> "zero_sum.mixed_matrix_payoff" [style=dashed];
+	"zero_sum.maximin_le_minimax" -> "zero_sum.von_neumann_minimax" [style=dashed];
+	"strategic_games.strategic_game" -> "zero_sum.zero_sum_game" [style=dashed];
+	"zero_sum.dantzig_proof_spine" -> "zero_sum.zero_sum_lp_bridge" [style=dashed];
+	"zero_sum.von_neumann_minimax" -> "zero_sum.zero_sum_lp_bridge" [style=dashed];
+	"strategic_games.nash_equilibrium" -> "zero_sum.zero_sum_nash_value_unique" [style=dashed];
+	"zero_sum.zero_sum_payoff_negation" -> "zero_sum.zero_sum_nash_value_unique" [style=dashed];
+	"zero_sum.zero_sum_game" -> "zero_sum.zero_sum_payoff_negation" [style=dashed];
 }</script>
 
 <div id="statements" class="dep-statements">
@@ -638,6 +685,524 @@ a payoff as playing $s'_i$:</p>
           <ul class="uses">
             
             <li><code>WeaklyDominates</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-dantzig_proof_spine-modal"
+    data-graph-node="zero_sum.dantzig_proof_spine"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm proof-plan_thmwrapper theorem-style-proof-plan">
+        <header class="proof-plan_thmheading thm-heading">
+          <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+          <span class="proof-plan_thmtitle thm-title">Dantzig Proof Spine for Minimax</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="proof-plan_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Dantzig Proof Spine for Minimax</h1>
+<p>Dantzig's proof represents the minimax theorem through an augmented linear
+system.  A basis state stores rows of the inverse basis matrix, a lexicographic
+condition prevents cycling, and optimality inequalities encode the game-theoretic
+guarantees.</p>
+<p>At an optimal basis, the extracted row strategy is nonnegative and satisfies
+the row player's guarantee inequalities.  The same basis data extracts a column
+strategy for player II.  The pivot step updates the inverse basis while
+preserving the lexicographic condition and strictly decreasing the leading row
+in lexicographic order.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_dantzig_proof_spine.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>DantzigState</code></li>
+            
+            <li><code>DantzigState.isOptimal</code></li>
+            
+            <li><code>DantzigState.value</code></li>
+            
+            <li><code>DantzigState.stratI</code></li>
+            
+            <li><code>DantzigState.basisVar</code></li>
+            
+            <li><code>dotBeta0Pj_eq</code></li>
+            
+            <li><code>optimal_basis_minimax</code></li>
+            
+            <li><code>dantzigPivot</code></li>
+            
+            <li><code>dantzigPivot_lexCond</code></li>
+            
+            <li><code>dantzigPivot_beta0_decrease</code></li>
+            
+            <li><code>dantzig_minimax</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-matrix_game-modal"
+    data-graph-node="zero_sum.matrix_game"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Matrix Game</span>
+          <span class="thm-status thm-status-formalized">formalized</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Matrix Game</h1>
+<p>A finite two-player zero-sum matrix game is specified by finite row and column
+sets $I,J$ and a payoff matrix</p>
+<p>$$A : I \times J \to \mathbb{R}.$$</p>
+<p>Player I chooses a row, player II chooses a column, player I receives
+$A(i,j)$, and player II receives $-A(i,j)$.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_matrix_game.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_zero_sum_game.html">Zero-Sum Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>MatrixGame</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-maximin_le_minimax-modal"
+    data-graph-node="zero_sum.maximin_le_minimax"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm lemma_thmwrapper theorem-style-lemma">
+        <header class="lemma_thmheading thm-heading">
+          <span class="lemma_thmcaption thm-caption">Lemma</span>
+          <span class="lemma_thmtitle thm-title">Maximin is Bounded by Minimax</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="lemma_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Maximin is Bounded by Minimax</h1>
+<p>For every finite matrix game,</p>
+<p>$$\max_x \min_j E_A(x,j) \le \min_y \max_i E_A(i,y).$$</p>
+<p>This is the weak-duality inequality: player I's best guaranteed payoff cannot
+exceed player II's best upper bound on player I's payoff.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_maximin_le_minimax.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>MatrixGame.maximin_le_minimax</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-maximin_minimax-modal"
+    data-graph-node="zero_sum.maximin_minimax"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Maximin and Minimax Values</span>
+          <span class="thm-status thm-status-formalized">formalized</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Maximin and Minimax Values</h1>
+<p>For a mixed row strategy $x$, player I's guarantee is the worst expected payoff
+against a pure column:</p>
+<p>$$\gamma_I(x) = \min_{j \in J} E_A(x,j).$$</p>
+<p>For a mixed column strategy $y$, player II's guarantee against player I is the
+largest payoff player I can obtain from a pure row:</p>
+<p>$$\gamma_{II}(y) = \max_{i \in I} E_A(i,y).$$</p>
+<p>The maximin value is $\sup_x \gamma_I(x)$, and the minimax value is
+$\inf_y \gamma_{II}(y)$.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_maximin_minimax.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_mixed_matrix_payoff.html">Expected Payoff of a Matrix Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>MatrixGame.guarantee_I</code></li>
+            
+            <li><code>MatrixGame.guarantee_II</code></li>
+            
+            <li><code>MatrixGame.maximin</code></li>
+            
+            <li><code>MatrixGame.minimax</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-mixed_matrix_payoff-modal"
+    data-graph-node="zero_sum.mixed_matrix_payoff"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Expected Payoff of a Matrix Game</span>
+          <span class="thm-status thm-status-formalized">formalized</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Expected Payoff of a Matrix Game</h1>
+<p>For mixed strategies $x \in \Delta(I)$ and $y \in \Delta(J)$, the expected
+payoff of the matrix game $A$ is</p>
+<p>$$E_A(x,y) = \sum_{i \in I}\sum_{j \in J} x_i y_j A(i,j).$$</p>
+<p>The one-sided forms $E_A(x,j)$ and $E_A(i,y)$ describe mixed play against a
+pure response.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_mixed_matrix_payoff.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_mixed_strategy.html">Mixed Strategy</a></li>
+            
+            <li><a href="zero_sum/zero_sum_matrix_game.html">Matrix Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>expectedPayoffMatrix</code></li>
+            
+            <li><code>MatrixGame.E</code></li>
+            
+            <li><code>MatrixGame.Ej</code></li>
+            
+            <li><code>MatrixGame.Ei</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-von_neumann_minimax-modal"
+    data-graph-node="zero_sum.von_neumann_minimax"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm theorem_thmwrapper theorem-style-theorem">
+        <header class="theorem_thmheading thm-heading">
+          <span class="theorem_thmcaption thm-caption">Theorem</span>
+          <span class="theorem_thmtitle thm-title">Von Neumann Minimax Theorem</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="theorem_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Von Neumann Minimax Theorem</h1>
+<p>Every finite two-player zero-sum matrix game has a value in mixed strategies:</p>
+<p>$$\max_x \min_j E_A(x,j) = \min_y \max_i E_A(i,y).$$</p>
+<p>Equivalently, there are optimal mixed strategies $x^\ast$ and $y^\ast$ and a
+value $v$ such that player I guarantees at least $v$ against every column and
+player II holds player I to at most $v$ against every row.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_von_neumann_minimax.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>MatrixGame.minimax_theorem</code></li>
+            
+            <li><code>MatrixGame.minimax_optimal_strategies</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-zero_sum_game-modal"
+    data-graph-node="zero_sum.zero_sum_game"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Zero-Sum Game</span>
+          <span class="thm-status thm-status-formalized">formalized</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Zero-Sum Game</h1>
+<p>A two-player strategic game is zero-sum if, at every strategy profile $\sigma$,
+the two players' payoffs add to zero:</p>
+<p>$$u_0(\sigma) + u_1(\sigma) = 0.$$</p>
+<p>A constant-sum game fixes the same sum to a constant $c$ instead of zero.  In a
+zero-sum game, player 1's payoff is the negative of player 0's payoff, so the
+game can be studied through a single payoff function.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_zero_sum_game.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_strategic_game.html">Strategic Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrategicGame.IsZeroSum</code></li>
+            
+            <li><code>StrategicGame.IsConstantSum</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-zero_sum_lp_bridge-modal"
+    data-graph-node="zero_sum.zero_sum_lp_bridge"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm proof-plan_thmwrapper theorem-style-proof-plan">
+        <header class="proof-plan_thmheading thm-heading">
+          <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+          <span class="proof-plan_thmtitle thm-title">Zero-Sum Linear Programming Bridge</span>
+          <span class="thm-status thm-status-staged">staged</span>
+        </header>
+        <div class="proof-plan_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Zero-Sum Linear Programming Bridge</h1>
+<p>The row player's maximum safe-value linear program and the column player's
+minimum safe-value dual linear program should be connected to the matrix-game
+guarantee definitions.  Once optimal row and column safe strategies are
+available, they form a mixed Nash equilibrium of the zero-sum game.</p>
+<p>This bridge is the natural entry point for algorithmic game theory treatments
+of zero-sum computation.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_zero_sum_lp_bridge.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
+            
+            <li><a href="zero_sum/zero_sum_dantzig_proof_spine.html">Dantzig Proof Spine for Minimax</a></li>
+            
+          </ul>
+          
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-zero_sum_nash_value_unique-modal"
+    data-graph-node="zero_sum.zero_sum_nash_value_unique"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm theorem_thmwrapper theorem-style-theorem">
+        <header class="theorem_thmheading thm-heading">
+          <span class="theorem_thmcaption thm-caption">Theorem</span>
+          <span class="theorem_thmtitle thm-title">Nash Payoff Uniqueness in Zero-Sum Games</span>
+          <span class="thm-status thm-status-formalized">formalized</span>
+        </header>
+        <div class="theorem_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Nash Payoff Uniqueness in Zero-Sum Games</h1>
+<p>In a zero-sum game, any two Nash equilibria give the same payoff to player 0
+and the same payoff to player 1.  Thus the equilibrium payoff is a value of the
+game, independent of which Nash equilibrium is chosen.</p>
+<p>The proof compares two equilibria through cross profiles.  One player's best
+response inequality is converted into the other player's inequality using
+zero-sum payoff negation.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_zero_sum_nash_value_unique.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_nash_equilibrium.html">Nash Equilibrium</a></li>
+            
+            <li><a href="zero_sum/zero_sum_zero_sum_payoff_negation.html">Payoff Negation in Zero-Sum Games</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrategicGame.Properties.IsZeroSum.nash_payoff_eq</code></li>
+            
+            <li><code>StrategicGame.Properties.IsZeroSum.nash_payoff_eq_p1</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-zero_sum-2e-zero_sum_payoff_negation-modal"
+    data-graph-node="zero_sum.zero_sum_payoff_negation"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm lemma_thmwrapper theorem-style-lemma">
+        <header class="lemma_thmheading thm-heading">
+          <span class="lemma_thmcaption thm-caption">Lemma</span>
+          <span class="lemma_thmtitle thm-title">Payoff Negation in Zero-Sum Games</span>
+          <span class="thm-status thm-status-formalized">formalized</span>
+        </header>
+        <div class="lemma_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Payoff Negation in Zero-Sum Games</h1>
+<p>If $G$ is zero-sum, then at every profile $\sigma$ the payoff of either player
+determines the other:</p>
+<p>$$u_1(\sigma) = -u_0(\sigma), \qquad u_0(\sigma) = -u_1(\sigma).$$</p>
+<p>This is the algebraic reduction that lets later value and optimality statements
+track only the row player's payoff.</p>
+            
+          </div>
+          <p><a href="zero_sum/zero_sum_zero_sum_payoff_negation.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="zero_sum/zero_sum_zero_sum_game.html">Zero-Sum Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrategicGame.Properties.IsZeroSum.neg</code></li>
+            
+            <li><code>StrategicGame.Properties.IsZeroSum.neg&#39;</code></li>
             
           </ul>
           

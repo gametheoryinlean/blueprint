@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strategy Profile — mdblueprint</title>
+  <title>Zero-Sum Game — mdblueprint</title>
   <link rel="stylesheet" href="../style.css">
   <script defer>
     window.MathJax = {
@@ -77,17 +77,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-strategic_games-2e-strategy_profile">
+<article class="definition_thmwrapper theorem-style-definition node-page" id="node-zero_sum-2e-zero_sum_game">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Strategy Profile</span>
+    <span class="definition_thmtitle thm-title">Zero-Sum Game</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-admitted">admitted</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-strategic_games-2e-strategy_profile">#</a>
+      <a class="permalink" href="#node-zero_sum-2e-zero_sum_game">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -103,7 +103,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="strategic_games_strategic_game.html">Strategic Game</a></li>
+        <li><a href="../strategic_games/strategic_games_strategic_game.html">Strategic Game</a></li>
         
       </ul>
     </div>
@@ -116,21 +116,26 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><code>StrategicGame.Profile</code></li>
+        <li><code>StrategicGame.IsZeroSum</code></li>
+        
+        <li><code>StrategicGame.IsConstantSum</code></li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.Basic</code></p>
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.ZeroSum</code></p>
       
     </div>
   </div>
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1>Strategy Profile</h1>
-<p>Given a strategic game $(I, (S_i), (u_i))$, a strategy profile is a tuple
-$\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p>
-<p>In Lean, a profile is <code>∀ i, G.strategy i</code>.</p>
+    <h1>Zero-Sum Game</h1>
+<p>A two-player strategic game is zero-sum if, at every strategy profile $\sigma$,
+the two players' payoffs add to zero:</p>
+<p>$$u_0(\sigma) + u_1(\sigma) = 0.$$</p>
+<p>A constant-sum game fixes the same sum to a constant $c$ instead of zero.  In a
+zero-sum game, player 1's payoff is the negative of player 0's payoff, so the
+game can be studied through a single payoff function.</p>
     
   </div>
 
@@ -139,7 +144,9 @@ $\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="strategic_games_unilateral_deviation.html">Unilateral Deviation</a></li>
+      <li><a href="zero_sum_matrix_game.html">Matrix Game</a></li>
+      
+      <li><a href="zero_sum_zero_sum_payoff_negation.html">Payoff Negation in Zero-Sum Games</a></li>
       
     </ul>
   </section>
@@ -147,7 +154,7 @@ $\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p
 
   
   <footer class="tags">
-    <span class="tag">strategic-game</span><span class="tag">foundational</span>
+    <span class="tag">zero-sum</span><span class="tag">strategic-game</span><span class="tag">foundational</span>
   </footer>
   
 </article>
