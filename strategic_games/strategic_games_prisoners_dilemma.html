@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prisoner&#39;s Dilemma — mdblueprint</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+          integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">mdblueprint</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <h2 id="nav-topics">Topics</h2>
+      <ul class="topic-list nav-list">
+      
+        <li><a href="../strategic_games/index.html">strategic_games</a></li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <h2 id="nav-keywords">Keywords</h2>
+      <ul class="keyword-list nav-list">
+      
+        <li><a href="../keywords/classic.html">classic</a></li>
+      
+        <li><a href="../keywords/dominance.html">dominance</a></li>
+      
+        <li><a href="../keywords/equilibrium.html">equilibrium</a></li>
+      
+        <li><a href="../keywords/example.html">example</a></li>
+      
+        <li><a href="../keywords/foundational.html">foundational</a></li>
+      
+        <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
+      
+        <li><a href="../keywords/solution-concept.html">solution-concept</a></li>
+      
+        <li><a href="../keywords/strategic-game.html">strategic-game</a></li>
+      
+      </ul>
+    </section>
+    
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+  </nav>
+  <main>
+    
+<article class="example_thmwrapper theorem-style-example node-page" id="node-strategic_games-2e-prisoners_dilemma">
+  <header class="example_thmheading thm-heading">
+    <span class="example_thmcaption thm-caption">Example</span>
+    <span class="example_thmtitle thm-title">Prisoner&#39;s Dilemma</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-example">example</span>
+      <span class="badge status-admitted">admitted</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-strategic_games-2e-prisoners_dilemma">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="strategic_games_strategic_game.html">Strategic Game</a></li>
+        
+        <li><a href="strategic_games_nash_equilibrium.html">Nash Equilibrium</a></li>
+        
+        <li><a href="strategic_games_weakly_dominant_strategy.html">Weakly Dominant Strategy</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><code>PrisonersDilemma.PD</code></li>
+        
+        <li><code>PrisonersDilemma.pd_defect_weakly_dominant</code></li>
+        
+        <li><code>PrisonersDilemma.pd_defect_nash</code></li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.Examples.PrisonersDilemma</code></p>
+      
+    </div>
+  </div>
+  
+
+  <div class="example_thmcontent thm-content body">
+    <h1>Prisoner's Dilemma</h1>
+<p>The Prisoner's Dilemma is a two-player strategic game where each player can
+Cooperate ($C$) or Defect ($D$). The payoff matrix is:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$C$</th>
+<th>$D$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$C$</td>
+<td>(2, 2)</td>
+<td>(0, 3)</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>(3, 0)</td>
+<td>(1, 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Defecting is a weakly dominant strategy for each player. The unique Nash
+equilibrium is $(D, D)$ with payoff $(1, 1)$, which is Pareto-dominated by
+$(C, C)$ with payoff $(2, 2)$.</p>
+    
+  </div>
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">strategic-game</span><span class="tag">example</span><span class="tag">classic</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+</body>
+</html>

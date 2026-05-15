@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dependency graph — mdblueprint</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+          integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="index.html">mdblueprint</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <h2 id="nav-topics">Topics</h2>
+      <ul class="topic-list nav-list">
+      
+        <li><a href="strategic_games/index.html">strategic_games</a></li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <h2 id="nav-keywords">Keywords</h2>
+      <ul class="keyword-list nav-list">
+      
+        <li><a href="keywords/classic.html">classic</a></li>
+      
+        <li><a href="keywords/dominance.html">dominance</a></li>
+      
+        <li><a href="keywords/equilibrium.html">equilibrium</a></li>
+      
+        <li><a href="keywords/example.html">example</a></li>
+      
+        <li><a href="keywords/foundational.html">foundational</a></li>
+      
+        <li><a href="keywords/mixed-strategy.html">mixed-strategy</a></li>
+      
+        <li><a href="keywords/solution-concept.html">solution-concept</a></li>
+      
+        <li><a href="keywords/strategic-game.html">strategic-game</a></li>
+      
+      </ul>
+    </section>
+    
+    <a class="nav-link" href="dep_graph_document.html">Dependency graph</a>
+  </nav>
+  <main>
+    
+<header class="graph-header">
+  <a class="toc" href="index.html">Home</a>
+  <h1 id="doc_title">Dependencies</h1>
+</header>
+
+<section id="Legend" class="graph-legend" aria-label="Dependency graph legend">
+  <button id="legend-title" class="legend-title" type="button">
+    Legend <span class="legend-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <dl id="legend-list" class="legend-list" hidden>
+    <dt>Boxes</dt><dd>definitions</dd>
+    <dt>Ellipses</dt><dd>theorems and lemmas</dd>
+    <dt>Blue border</dt><dd>the statement is ready to be formalized; all prerequisites are done</dd>
+    <dt>Orange border</dt><dd>the statement is not ready to be formalized; the blueprint needs more work</dd>
+    <dt>Blue background</dt><dd>the proof is ready to be formalized; all prerequisites are done</dd>
+    <dt>Green border</dt><dd>the statement is formalized</dd>
+    <dt>Green background</dt><dd>the proof is formalized</dd>
+    <dt>Dark green background</dt><dd>the proof and all ancestors are formalized</dd>
+  </dl>
+</section>
+
+<div id="graph" class="dep-graph" aria-label="Dependency graph"></div>
+<script id="graph-dot" type="text/plain">strict digraph "" {
+	graph [bgcolor=transparent];
+	node [label="\N", penwidth=1.8];
+	edge [arrowhead=vee];
+	"strategic_games.best_response" [URL="#node-strategic_games-2e-best_response", color="blue", label="Best Response", penwidth="1.8", shape="box"];
+	"strategic_games.dominant_implies_nash" [URL="#node-strategic_games-2e-dominant_implies_nash", color="blue", fillcolor="#A3D6FF", label="Dominant Strategy Profile is a Nash Equilibrium", penwidth="1.8", shape="ellipse", style="filled"];
+	"strategic_games.mixed_strategy" [URL="#node-strategic_games-2e-mixed_strategy", color="#FFAA33", label="Mixed Strategy", penwidth="1.8", shape="box"];
+	"strategic_games.nash_equilibrium" [URL="#node-strategic_games-2e-nash_equilibrium", color="blue", label="Nash Equilibrium", penwidth="1.8", shape="box"];
+	"strategic_games.prisoners_dilemma" [URL="#node-strategic_games-2e-prisoners_dilemma", color="blue", label="Prisoner's Dilemma", penwidth="1.8", shape="note"];
+	"strategic_games.strategic_game" [URL="#node-strategic_games-2e-strategic_game", color="blue", label="Strategic Game", penwidth="1.8", shape="box"];
+	"strategic_games.strategy_profile" [URL="#node-strategic_games-2e-strategy_profile", color="blue", label="Strategy Profile", penwidth="1.8", shape="box"];
+	"strategic_games.strictly_dominates" [URL="#node-strategic_games-2e-strictly_dominates", color="blue", label="Strict Dominance", penwidth="1.8", shape="box"];
+	"strategic_games.unilateral_deviation" [URL="#node-strategic_games-2e-unilateral_deviation", color="blue", label="Unilateral Deviation", penwidth="1.8", shape="box"];
+	"strategic_games.weakly_dominant_strategy" [URL="#node-strategic_games-2e-weakly_dominant_strategy", color="blue", label="Weakly Dominant Strategy", penwidth="1.8", shape="box"];
+	"strategic_games.weakly_dominates" [URL="#node-strategic_games-2e-weakly_dominates", color="blue", label="Weak Dominance", penwidth="1.8", shape="box"];
+	"strategic_games.unilateral_deviation" -> "strategic_games.best_response" [style=dashed];
+	"strategic_games.best_response" -> "strategic_games.dominant_implies_nash" [style=dashed];
+	"strategic_games.nash_equilibrium" -> "strategic_games.dominant_implies_nash" [style=dashed];
+	"strategic_games.weakly_dominant_strategy" -> "strategic_games.dominant_implies_nash" [style=dashed];
+	"strategic_games.strategic_game" -> "strategic_games.mixed_strategy" [style=dashed];
+	"strategic_games.best_response" -> "strategic_games.nash_equilibrium" [style=dashed];
+	"strategic_games.nash_equilibrium" -> "strategic_games.prisoners_dilemma" [style=dashed];
+	"strategic_games.strategic_game" -> "strategic_games.prisoners_dilemma" [style=dashed];
+	"strategic_games.weakly_dominant_strategy" -> "strategic_games.prisoners_dilemma" [style=dashed];
+	"strategic_games.strategic_game" -> "strategic_games.strategy_profile" [style=dashed];
+	"strategic_games.unilateral_deviation" -> "strategic_games.strictly_dominates" [style=dashed];
+	"strategic_games.strategy_profile" -> "strategic_games.unilateral_deviation" [style=dashed];
+	"strategic_games.weakly_dominates" -> "strategic_games.weakly_dominant_strategy" [style=dashed];
+	"strategic_games.unilateral_deviation" -> "strategic_games.weakly_dominates" [style=dashed];
+}</script>
+
+<div id="statements" class="dep-statements">
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-best_response-modal"
+    data-graph-node="strategic_games.best_response"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Best Response</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Best Response</h1>
+<p>A strategy $\sigma_i$ is a best response for player $i$ to the profile $\sigma$ if
+no unilateral deviation can improve $i$'s payoff:</p>
+<p>$$\forall s'_i \in S_i, \quad u_i(\sigma[i \mapsto s'_i]) \le u_i(\sigma).$$</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_best_response.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_unilateral_deviation.html">Unilateral Deviation</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>IsBestResponse</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-dominant_implies_nash-modal"
+    data-graph-node="strategic_games.dominant_implies_nash"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm theorem_thmwrapper theorem-style-theorem">
+        <header class="theorem_thmheading thm-heading">
+          <span class="theorem_thmcaption thm-caption">Theorem</span>
+          <span class="theorem_thmtitle thm-title">Dominant Strategy Profile is a Nash Equilibrium</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="theorem_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Dominant Strategy Profile is a Nash Equilibrium</h1>
+<p>If every player $i$ plays a weakly dominant strategy $s_i$, then the resulting
+profile $\sigma = (s_i)_{i \in I}$ is a Nash equilibrium.</p>
+            
+            <details class="proof-details">
+              <summary>Proof</summary>
+              <div class="proof-body">
+                <p>A weakly dominant strategy weakly dominates every alternative. In particular,
+for any player $i$ and any deviation $s'_i$, we have
+$u_i(\sigma[i \mapsto s'_i]) \le u_i(\sigma)$. This means each player is best
+responding, so $\sigma$ is a Nash equilibrium. $\square$</p>
+              </div>
+            </details>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_dominant_implies_nash.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_nash_equilibrium.html">Nash Equilibrium</a></li>
+            
+            <li><a href="strategic_games/strategic_games_weakly_dominant_strategy.html">Weakly Dominant Strategy</a></li>
+            
+            <li><a href="strategic_games/strategic_games_best_response.html">Best Response</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>IsNashEquilibrium.of_dominant</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-mixed_strategy-modal"
+    data-graph-node="strategic_games.mixed_strategy"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Mixed Strategy</span>
+          <span class="thm-status thm-status-staged">staged</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Mixed Strategy</h1>
+<p>A mixed strategy for player $i$ is a probability distribution over the strategy
+set $S_i$. When $S_i$ is finite, a mixed strategy is a vector
+$x_i \in \Delta(S_i)$ in the standard simplex.</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_mixed_strategy.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_strategic_game.html">Strategic Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>MixedStrategy</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-nash_equilibrium-modal"
+    data-graph-node="strategic_games.nash_equilibrium"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Nash Equilibrium</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Nash Equilibrium</h1>
+<p>A strategy profile $\sigma$ is a Nash equilibrium if every player is playing a best
+response to the strategies of the other players:</p>
+<p>$$\forall i \in I, \quad \sigma_i \text{ is a best response to } \sigma.$$</p>
+<p>Equivalently, no player can improve their payoff by a unilateral deviation.</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_nash_equilibrium.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_best_response.html">Best Response</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>IsNashEquilibrium</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-prisoners_dilemma-modal"
+    data-graph-node="strategic_games.prisoners_dilemma"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm example_thmwrapper theorem-style-example">
+        <header class="example_thmheading thm-heading">
+          <span class="example_thmcaption thm-caption">Example</span>
+          <span class="example_thmtitle thm-title">Prisoner&#39;s Dilemma</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="example_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Prisoner's Dilemma</h1>
+<p>The Prisoner's Dilemma is a two-player strategic game where each player can
+Cooperate ($C$) or Defect ($D$). The payoff matrix is:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$C$</th>
+<th>$D$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$C$</td>
+<td>(2, 2)</td>
+<td>(0, 3)</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>(3, 0)</td>
+<td>(1, 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Defecting is a weakly dominant strategy for each player. The unique Nash
+equilibrium is $(D, D)$ with payoff $(1, 1)$, which is Pareto-dominated by
+$(C, C)$ with payoff $(2, 2)$.</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_prisoners_dilemma.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_strategic_game.html">Strategic Game</a></li>
+            
+            <li><a href="strategic_games/strategic_games_nash_equilibrium.html">Nash Equilibrium</a></li>
+            
+            <li><a href="strategic_games/strategic_games_weakly_dominant_strategy.html">Weakly Dominant Strategy</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>PrisonersDilemma.PD</code></li>
+            
+            <li><code>PrisonersDilemma.pd_defect_weakly_dominant</code></li>
+            
+            <li><code>PrisonersDilemma.pd_defect_nash</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-strategic_game-modal"
+    data-graph-node="strategic_games.strategic_game"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Strategic Game</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Strategic Game</h1>
+<p>A strategic game (or normal-form game) is a tuple $(I, (S_i)<em>{i \in I}, (u_i)</em>{i \in I})$
+where $I$ is a set of players, $S_i$ is the strategy set of player $i$, and
+$u_i \colon \prod_{j \in I} S_j \to U$ is the payoff function of player $i$.</p>
+<p>In the Lean formalization, this is a structure with fields <code>strategy : ι → Type*</code> and
+<code>payoff : Profile → ι → U</code>, where <code>Profile = ∀ i, strategy i</code>.</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_strategic_game.html">Open node page</a></p>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrategicGame</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-strategy_profile-modal"
+    data-graph-node="strategic_games.strategy_profile"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Strategy Profile</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Strategy Profile</h1>
+<p>Given a strategic game $(I, (S_i), (u_i))$, a strategy profile is a tuple
+$\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p>
+<p>In Lean, a profile is <code>∀ i, G.strategy i</code>.</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_strategy_profile.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_strategic_game.html">Strategic Game</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrategicGame.Profile</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-strictly_dominates-modal"
+    data-graph-node="strategic_games.strictly_dominates"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Strict Dominance</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Strict Dominance</h1>
+<p>A strategy $s_i$ strictly dominates another strategy $s'_i$ for player $i$ if, for
+every profile $\sigma$ of the other players, playing $s_i$ yields strictly higher
+payoff:</p>
+<p>$$\forall \sigma, \quad u_i(\sigma[i \mapsto s'_i]) &lt; u_i(\sigma[i \mapsto s_i]).$$</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_strictly_dominates.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_unilateral_deviation.html">Unilateral Deviation</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrictlyDominates</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-unilateral_deviation-modal"
+    data-graph-node="strategic_games.unilateral_deviation"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Unilateral Deviation</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Unilateral Deviation</h1>
+<p>Given a strategy profile $\sigma$ and a player $i$, the unilateral deviation
+$(\sigma_{-i}, s'_i)$ is the profile where player $i$ plays $s'_i$ and all other
+players play according to $\sigma$. We write $\sigma[i \mapsto s']$.</p>
+<p>In Lean, this is <code>Function.update σ i s'</code>.</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_unilateral_deviation.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_strategy_profile.html">Strategy Profile</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>StrategicGame.deviate</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-weakly_dominant_strategy-modal"
+    data-graph-node="strategic_games.weakly_dominant_strategy"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Weakly Dominant Strategy</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Weakly Dominant Strategy</h1>
+<p>A strategy $s_i$ is weakly dominant for player $i$ if it weakly dominates every
+other strategy available to $i$:</p>
+<p>$$\forall s'_i \in S_i, \quad s_i \text{ weakly dominates } s'_i.$$</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_weakly_dominant_strategy.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_weakly_dominates.html">Weak Dominance</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>IsWeaklyDominant</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  
+  <div
+    class="dep-modal-container"
+    id="node-strategic_games-2e-weakly_dominates-modal"
+    data-graph-node="strategic_games.weakly_dominates"
+    hidden
+  >
+    <div class="dep-modal-content">
+      <button class="dep-closebtn" type="button" aria-label="Close">x</button>
+      <article class="thm definition_thmwrapper theorem-style-definition">
+        <header class="definition_thmheading thm-heading">
+          <span class="definition_thmcaption thm-caption">Definition</span>
+          <span class="definition_thmtitle thm-title">Weak Dominance</span>
+          <span class="thm-status thm-status-admitted">admitted</span>
+        </header>
+        <div class="definition_thmcontent thm-content">
+          <div class="body graph-modal-body">
+            <h1>Weak Dominance</h1>
+<p>A strategy $s_i$ weakly dominates another strategy $s'_i$ for player $i$ if, for
+every profile $\sigma$ of the other players, playing $s_i$ yields at least as high
+a payoff as playing $s'_i$:</p>
+<p>$$\forall \sigma, \quad u_i(\sigma[i \mapsto s'_i]) \le u_i(\sigma[i \mapsto s_i]).$$</p>
+            
+          </div>
+          <p><a href="strategic_games/strategic_games_weakly_dominates.html">Open node page</a></p>
+          
+          <h2>Uses</h2>
+          <ul class="uses">
+            
+            <li><a href="strategic_games/strategic_games_unilateral_deviation.html">Unilateral Deviation</a></li>
+            
+          </ul>
+          
+          
+          <h2>Lean declarations</h2>
+          <ul class="uses">
+            
+            <li><code>WeaklyDominates</code></li>
+            
+          </ul>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"
+        integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hpcc-js/wasm@2.20.0/dist/index.umd.js"
+        integrity="sha384-WLu5972Ng9UrZR3ZnbXFxTcAJO7KhiKgT3d7+1UFQWDchQ423ftbYX7Z4pA/30FV"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-graphviz@5.6.0/build/d3-graphviz.min.js"
+        integrity="sha384-HvHyah63+APdHqzEGlDbc6p4rPnnXDXa6R+dCL3tRFG2C+txlDKeI28o3RNEraki"
+        crossorigin="anonymous"></script>
+
+  </main>
+  <script src="graph.js"></script>
+</body>
+</html>

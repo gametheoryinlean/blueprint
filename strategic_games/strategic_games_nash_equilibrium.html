@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nash Equilibrium — mdblueprint</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+          integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../index.html">mdblueprint</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <h2 id="nav-topics">Topics</h2>
+      <ul class="topic-list nav-list">
+      
+        <li><a href="../strategic_games/index.html">strategic_games</a></li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <h2 id="nav-keywords">Keywords</h2>
+      <ul class="keyword-list nav-list">
+      
+        <li><a href="../keywords/classic.html">classic</a></li>
+      
+        <li><a href="../keywords/dominance.html">dominance</a></li>
+      
+        <li><a href="../keywords/equilibrium.html">equilibrium</a></li>
+      
+        <li><a href="../keywords/example.html">example</a></li>
+      
+        <li><a href="../keywords/foundational.html">foundational</a></li>
+      
+        <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
+      
+        <li><a href="../keywords/solution-concept.html">solution-concept</a></li>
+      
+        <li><a href="../keywords/strategic-game.html">strategic-game</a></li>
+      
+      </ul>
+    </section>
+    
+    <a class="nav-link" href="../dep_graph_document.html">Dependency graph</a>
+  </nav>
+  <main>
+    
+<article class="definition_thmwrapper theorem-style-definition node-page" id="node-strategic_games-2e-nash_equilibrium">
+  <header class="definition_thmheading thm-heading">
+    <span class="definition_thmcaption thm-caption">Definition</span>
+    <span class="definition_thmtitle thm-title">Nash Equilibrium</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-definition">definition</span>
+      <span class="badge status-admitted">admitted</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-strategic_games-2e-nash_equilibrium">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="strategic_games_best_response.html">Best Response</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><code>IsNashEquilibrium</code></li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.NashEquilibrium</code></p>
+      
+    </div>
+  </div>
+  
+
+  <div class="definition_thmcontent thm-content body">
+    <h1>Nash Equilibrium</h1>
+<p>A strategy profile $\sigma$ is a Nash equilibrium if every player is playing a best
+response to the strategies of the other players:</p>
+<p>$$\forall i \in I, \quad \sigma_i \text{ is a best response to } \sigma.$$</p>
+<p>Equivalently, no player can improve their payoff by a unilateral deviation.</p>
+    
+  </div>
+
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="strategic_games_dominant_implies_nash.html">Dominant Strategy Profile is a Nash Equilibrium</a></li>
+      
+      <li><a href="strategic_games_prisoners_dilemma.html">Prisoner&#39;s Dilemma</a></li>
+      
+    </ul>
+  </section>
+  
+
+  
+  <footer class="tags">
+    <span class="tag">strategic-game</span><span class="tag">solution-concept</span><span class="tag">equilibrium</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../graph.js"></script>
+</body>
+</html>
