@@ -218,16 +218,16 @@ no unilateral deviation can improve $i$'s payoff:</p>
         <div class="theorem_thmcontent thm-content">
           <div class="body graph-modal-body">
             <h1>Dominant Strategy Profile is a Nash Equilibrium</h1>
-<p>If every player $i$ plays a weakly dominant strategy $s_i$, then the resulting
-profile $\sigma = (s_i)_{i \in I}$ is a Nash equilibrium.</p>
+<p>If every player (i) plays a weakly dominant strategy (s_i), then the resulting
+profile (\sigma = (s_i)_{i \in I}) is a Nash equilibrium.</p>
             
             <details class="proof-details">
               <summary>Proof</summary>
               <div class="proof-body">
                 <p>A weakly dominant strategy weakly dominates every alternative. In particular,
-for any player $i$ and any deviation $s'_i$, we have
-$u_i(\sigma[i \mapsto s'_i]) \le u_i(\sigma)$. This means each player is best
-responding, so $\sigma$ is a Nash equilibrium. $\square$</p>
+for any player (i) and any deviation (s'_i), we have
+(u_i(\sigma[i \mapsto s'_i]) \le u_i(\sigma)). This means each player is best
+responding, so (\sigma) is a Nash equilibrium. (\square)</p>
               </div>
             </details>
             
@@ -277,8 +277,8 @@ responding, so $\sigma$ is a Nash equilibrium. $\square$</p>
           <div class="body graph-modal-body">
             <h1>Mixed Strategy</h1>
 <p>A mixed strategy for player $i$ is a probability distribution over the strategy
-set $S_i$. When $S_i$ is finite, a mixed strategy is a vector
-$x_i \in \Delta(S_i)$ in the standard simplex.</p>
+set (S_i). When (S_i) is finite, a mixed strategy is a vector
+(x_i \in \Delta(S_i)) in the standard simplex.</p>
             
           </div>
           <p><a href="strategic_games/strategic_games_mixed_strategy.html">Open node page</a></p>
@@ -443,9 +443,10 @@ $(C, C)$ with payoff $(2, 2)$.</p>
         <div class="definition_thmcontent thm-content">
           <div class="body graph-modal-body">
             <h1>Strategic Game</h1>
-<p>A strategic game (or normal-form game) is a tuple $(I, (S_i)<em>{i \in I}, (u_i)</em>{i \in I})$
-where $I$ is a set of players, $S_i$ is the strategy set of player $i$, and
-$u_i \colon \prod_{j \in I} S_j \to U$ is the payoff function of player $i$.</p>
+<p>A strategic game (or normal-form game) is a tuple
+((I, (S_i)<em>{i \in I}, (u_i)</em>{i \in I}))
+where (I) is a set of players, (S_i) is the strategy set of player (i), and
+(u_i \colon \prod_{j \in I} S_j \to U) is the payoff function of player (i).</p>
 <p>In the Lean formalization, this is a structure with fields <code>strategy : ι → Type*</code> and
 <code>payoff : Profile → ι → U</code>, where <code>Profile = ∀ i, strategy i</code>.</p>
             
@@ -483,8 +484,8 @@ $u_i \colon \prod_{j \in I} S_j \to U$ is the payoff function of player $i$.</p>
         <div class="definition_thmcontent thm-content">
           <div class="body graph-modal-body">
             <h1>Strategy Profile</h1>
-<p>Given a strategic game $(I, (S_i), (u_i))$, a strategy profile is a tuple
-$\sigma = (\sigma_i)_{i \in I}$ where $\sigma_i \in S_i$ for each player $i$.</p>
+<p>Given a strategic game ((I, (S_i), (u_i))), a strategy profile is a tuple
+(\sigma = (\sigma_i)_{i \in I}) where (\sigma_i \in S_i) for each player (i).</p>
 <p>In Lean, a profile is <code>∀ i, G.strategy i</code>.</p>
             
           </div>
@@ -574,9 +575,9 @@ payoff:</p>
         <div class="definition_thmcontent thm-content">
           <div class="body graph-modal-body">
             <h1>Unilateral Deviation</h1>
-<p>Given a strategy profile $\sigma$ and a player $i$, the unilateral deviation
-$(\sigma_{-i}, s'_i)$ is the profile where player $i$ plays $s'_i$ and all other
-players play according to $\sigma$. We write $\sigma[i \mapsto s']$.</p>
+<p>Given a strategy profile (\sigma) and a player (i), the unilateral deviation
+((\sigma_{-i}, s'_i)) is the profile where player (i) plays (s'_i) and all other
+players play according to (\sigma). We write (\sigma[i \mapsto s']).</p>
 <p>In Lean, this is <code>Function.update σ i s'</code>.</p>
             
           </div>
@@ -881,8 +882,8 @@ against a pure column:</p>
 <p>For a mixed column strategy $y$, player II's guarantee against player I is the
 largest payoff player I can obtain from a pure row:</p>
 <p>$$\gamma_{II}(y) = \max_{i \in I} E_A(i,y).$$</p>
-<p>The maximin value is $\sup_x \gamma_I(x)$, and the minimax value is
-$\inf_y \gamma_{II}(y)$.</p>
+<p>The maximin value is (\sup_x \gamma_I(x)), and the minimax value is
+(\inf_y \gamma_{II}(y)).</p>
             
           </div>
           <p><a href="zero_sum/zero_sum_maximin_minimax.html">Open node page</a></p>
