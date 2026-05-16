@@ -1,0 +1,24 @@
+{
+  "id": "strategic_game.symmetric_game",
+  "title": "Symmetric Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_symmetric_game.html",
+  "body_html": "<h1>Symmetric Game</h1>\n<p>A strategic game has a symmetry $\\phi$ if $\\phi$ is a permutation of the player\nset, induces bijections $S_i\\to S_{\\phi(i)}$, and preserves payoffs:\n$$\n  g_{\\phi(i)}(\\phi(s))=g_i(s)\n  \\quad\\text{for all } i\\in I,\\ s\\in S.\n$$\nThe same permutation acts on mixed profiles by transporting probability mass along\nthe induced bijections of strategy sets.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.strategic_game",
+      "title": "Strategic Game In Normal Form",
+      "href": "strategic_game/strategic_game_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.symmetric_mixed_equilibrium",
+      "title": "Symmetric Mixed Equilibrium",
+      "href": "strategic_game/strategic_game_symmetric_mixed_equilibrium.html"
+    }
+  ],
+  "lean_refs": []
+}

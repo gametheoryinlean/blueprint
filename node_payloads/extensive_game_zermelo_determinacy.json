@@ -1,0 +1,43 @@
+{
+  "id": "extensive_game.zermelo_determinacy",
+  "title": "Zermelo Determinacy For Finite Perfect-Information Games",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "extensive_game/extensive_game_zermelo_determinacy.html",
+  "body_html": "<h1>Zermelo Determinacy For Finite Perfect-Information Games</h1>\n<p>Every simple finite game with perfect information is determined.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The proof is by induction on the length of the tree. Each successor of the origin\ndefines a shorter subgame. By the induction hypothesis, each such subgame is\ndetermined and has value $+1$ or $-1$ according to which player can force a win.\nThe player who moves at the origin chooses a successor with the best value; if that\nvalue is favorable, that player wins, otherwise the opponent's winning strategy in\neach successor subgame wins.</p>",
+  "deps": [
+    {
+      "id": "extensive_game.determined_game",
+      "title": "Determined Game",
+      "href": "extensive_game/extensive_game_determined_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "extensive_game.chomp_strategy_stealing",
+      "title": "Chomp Strategy Stealing",
+      "href": "extensive_game/extensive_game_chomp_strategy_stealing.html"
+    },
+    {
+      "id": "extensive_game.strictly_competitive_perfect_information_determined",
+      "title": "Strictly Competitive Perfect-Information Determinacy",
+      "href": "extensive_game/extensive_game_strictly_competitive_perfect_information_determined.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "zermelo_exists_pure_NE",
+      "display_name": "zermelo_exists_pure_NE",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

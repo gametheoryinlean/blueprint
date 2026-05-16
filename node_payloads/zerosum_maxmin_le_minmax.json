@@ -1,0 +1,34 @@
+{
+  "id": "zerosum.maxmin_le_minmax",
+  "title": "Maxmin Is At Most Minmax",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "zerosum/zerosum_maxmin_le_minmax.html",
+  "body_html": "<h1>Maxmin Is At Most Minmax</h1>\n<p>For every zero-sum game, $\\underline v \\le \\overline v$.</p>",
+  "proof_html": "<p>For every pair $(i,j)$,\n$$\n  \\inf_{j' \\in J} g(i,j') \\le g(i,j) \\le \\sup_{i' \\in I} g(i',j).\n$$\nTaking the supremum over $i$ on the left and the infimum over $j$ on the right\ngives $\\underline v \\le \\overline v$. $\\square$</p>",
+  "deps": [
+    {
+      "id": "zerosum.maxmin_minmax",
+      "title": "Maxmin And Minmax",
+      "href": "zerosum/zerosum_maxmin_minmax.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zerosum.common_guarantee_value",
+      "title": "Common Guarantee Gives The Value",
+      "href": "zerosum/zerosum_common_guarantee_value.html"
+    },
+    {
+      "id": "zerosum.continuous_fictitious_play_gap",
+      "title": "Continuous Fictitious Play Closes The Duality Gap",
+      "href": "zerosum/zerosum_continuous_fictitious_play_gap.html"
+    },
+    {
+      "id": "zerosum.three_player_minimax_failure",
+      "title": "Three-Player Minimax Failure",
+      "href": "zerosum/zerosum_three_player_minimax_failure.html"
+    }
+  ],
+  "lean_refs": []
+}

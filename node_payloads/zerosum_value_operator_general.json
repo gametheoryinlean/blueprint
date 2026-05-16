@@ -1,0 +1,34 @@
+{
+  "id": "zerosum.value_operator_general",
+  "title": "General Value Operator",
+  "kind": "definition",
+  "status": "staged",
+  "href": "zerosum/zerosum_value_operator_general.html",
+  "body_html": "<h1>General Value Operator</h1>\n<p>Fix strategy sets $S$ and $T$ and a convex cone $F$ of functions\n$S\\times T\\to\\mathbb R$ containing the constant functions. Assume every game\n$(S,T,f)$ with $f\\in F$ has a value. The value operator is\n$$\n  \\operatorname{val}_{S\\times T}:F\\to\\mathbb R,\\qquad\n  f\\mapsto\n  \\sup_{s\\in S}\\inf_{t\\in T}f(s,t)\n  =\n  \\inf_{t\\in T}\\sup_{s\\in S}f(s,t).\n$$\nIt is monotone and translates constants:\n$$\n  f\\le g\\Rightarrow \\operatorname{val}(f)\\le\\operatorname{val}(g),\n  \\qquad\n  \\operatorname{val}(f+c)=\\operatorname{val}(f)+c.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "zerosum.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "zerosum/zerosum_value.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zerosum.derived_game",
+      "title": "Derived Game",
+      "href": "zerosum/zerosum_derived_game.html"
+    },
+    {
+      "id": "zerosum.value_directional_derivative",
+      "title": "Directional Derivative Of The Value",
+      "href": "zerosum/zerosum_value_directional_derivative.html"
+    },
+    {
+      "id": "zerosum.value_operator_nonexpansive_general",
+      "title": "General Value Operator Is Nonexpansive",
+      "href": "zerosum/zerosum_value_operator_nonexpansive_general.html"
+    }
+  ],
+  "lean_refs": []
+}

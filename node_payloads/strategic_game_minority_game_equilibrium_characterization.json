@@ -1,0 +1,18 @@
+{
+  "id": "strategic_game.minority_game_equilibrium_characterization",
+  "title": "Three-Player Minority Game Equilibria",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_minority_game_equilibrium_characterization.html",
+  "body_html": "<h1>Three-Player Minority Game Equilibria</h1>\n<p>In the symmetric three-player minority game, each player chooses one of two rooms\nand receives payoff $1$ if alone and $0$ otherwise.</p>\n<p>Represent a mixed profile by probabilities $p_i\\in[0,1]$ of choosing the first\nroom. For player $i$, let $\\{j,k\\}$ be the other players. The profile is a Nash\nequilibrium if and only if:</p>\n<ol>\n<li>$p_i=1$ implies $p_j+p_k\\le 1$;</li>\n<li>$p_i=0$ implies $p_j+p_k\\ge 1$;</li>\n<li>$0&lt;p_i&lt;1$ implies $p_j+p_k=1$.</li>\n</ol>\n<p>In particular, all non-unanimous pure profiles are Nash equilibria, and the\nsymmetric mixed profile $p_1=p_2=p_3=1/2$ is a Nash equilibrium.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.mixed_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium",
+      "href": "strategic_game/strategic_game_mixed_nash_equilibrium.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "approachability.blackwell_b_set_approachability",
+  "title": "Blackwell B-Set Approachability",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "approachability/approachability_blackwell_b_set_approachability.html",
+  "body_html": "<h1>Blackwell B-Set Approachability</h1>\n<p>Let $A=(a_{ij})$ be a finite matrix with vector payoffs in $\\mathbb R^k$, and let\n$C\\subseteq\\mathbb R^k$ be closed and convex. Suppose $C$ is a B-set for player 1:\nfor every $x\\notin C$, there exists $s\\in\\Delta(I)$ such that for every\n$z\\in sA$,\n$$\n  \\langle z-\\Pi_C(x),\\,x-\\Pi_C(x)\\rangle\\le 0.\n$$\nThen player 1 has a strategy in the repeated vector-payoff game such that, for\nevery strategy of player 2, the Cesaro average payoff $\\bar x_n$ approaches $C$\nalmost surely:\n$$\n  d(\\bar x_n,C)\\to 0.\n$$\nMoreover MFoGT's exercise asks to show the expected bound\n$$\n  \\mathbb E[d(\\bar x_n,C)]\\le \\frac{2\\|A\\|_\\infty}{\\sqrt n}.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "approachability.deterministic_blackwell_sequence",
+      "title": "Deterministic Blackwell Sequence",
+      "href": "approachability/approachability_deterministic_blackwell_sequence.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

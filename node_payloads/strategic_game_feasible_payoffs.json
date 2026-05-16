@@ -1,0 +1,34 @@
+{
+  "id": "strategic_game.feasible_payoffs",
+  "title": "Feasible And Individually Rational Payoffs",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_feasible_payoffs.html",
+  "body_html": "<h1>Feasible And Individually Rational Payoffs</h1>\n<p>For a finite game, the one-shot feasible payoff set is\n$$\n  P_1=\\{x\\in\\mathbb R^I:\\exists\\sigma\\in\\prod_{i\\in I}\\Delta(S_i),\\ G(\\sigma)=x\\}.\n$$\nThe set of feasible and individually rational one-shot payoffs is\n$$\n  R_1=\\{x\\in P_1:x_i\\ge V_i\\text{ for every }i\\in I\\},\n$$\nwhere $V_i$ is player $i$'s threat point.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_game/strategic_game_mixed_strategy.html"
+    },
+    {
+      "id": "strategic_game.threat_point",
+      "title": "Threat Point",
+      "href": "strategic_game/strategic_game_threat_point.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.nash_payoffs_are_individually_rational",
+      "title": "Nash Payoffs Are Individually Rational",
+      "href": "strategic_game/strategic_game_nash_payoffs_are_individually_rational.html"
+    },
+    {
+      "id": "strategic_game.noncontractible_feasible_payoff_example",
+      "title": "Noncontractible Feasible Payoff Example",
+      "href": "strategic_game/strategic_game_noncontractible_feasible_payoff_example.html"
+    }
+  ],
+  "lean_refs": []
+}

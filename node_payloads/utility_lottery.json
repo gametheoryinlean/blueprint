@@ -1,0 +1,69 @@
+{
+  "id": "utility.lottery",
+  "title": "Lottery",
+  "kind": "definition",
+  "status": "staged",
+  "href": "utility/utility_lottery.html",
+  "body_html": "<h1>Lottery</h1>\n<p>For a finite set of outcomes $O$, a lottery is a probability distribution on\n$O$. The degenerate lottery at $o\\in O$ assigns probability one to $o$.</p>\n<p>Given lotteries $L_1,L_2$ and a scalar $\\alpha\\in[0,1]$, the compound lottery\n$$\n  [\\alpha L_1,(1-\\alpha)L_2]\n$$\nis the lottery assigning each outcome the probability\n$$\n  \\alpha L_1(o)+(1-\\alpha)L_2(o).\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "utility.preference_relation",
+      "title": "Preference Relation",
+      "href": "utility/utility_preference_relation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "utility.expected_utility_representation",
+      "title": "Expected Utility Representation",
+      "href": "utility/utility_expected_utility_representation.html"
+    },
+    {
+      "id": "utility.vnm_axioms",
+      "title": "Von Neumann Morgenstern Axioms",
+      "href": "utility/utility_vnm_axioms.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Lottery",
+      "display_name": "Lottery",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Lottery.pure",
+      "display_name": "Lottery.pure",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Lottery.mix",
+      "display_name": "Lottery.mix",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

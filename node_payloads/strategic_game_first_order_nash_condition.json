@@ -1,0 +1,29 @@
+{
+  "id": "strategic_game.first_order_nash_condition",
+  "title": "First-Order Nash Condition",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_first_order_nash_condition.html",
+  "body_html": "<h1>First-Order Nash Condition</h1>\n<p>Let $G$ be a smooth Hilbert game. If $s$ is a Nash equilibrium, then\n$$\n  \\sum_{i\\in I}\n  \\langle \\nabla_i g_i(s),\\, s_i-t_i\\rangle\n  \\ge 0\n  \\quad\\text{for all }t\\in S.\n$$\nIf the game is concave, this condition is also sufficient for $s$ to be a Nash\nequilibrium.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>For each player, Nash optimality means $s_i$ locally maximizes\n$g_i(\\cdot,s_{-i})$ on a convex set. The first-order necessary condition gives the\ncorresponding inner-product inequality. Summing over players yields the displayed\nvariational inequality. If each payoff is concave in the player's own variable, the\nsame first-order condition is sufficient for global optimality, hence for Nash\nequilibrium.</p>",
+  "deps": [
+    {
+      "id": "strategic_game.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_game/strategic_game_nash_equilibrium.html"
+    },
+    {
+      "id": "strategic_game.smooth_game",
+      "title": "Smooth Game",
+      "href": "strategic_game/strategic_game_smooth_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.monotone_game_nash_uniqueness",
+      "title": "Nash Characterization And Uniqueness In Monotone Games",
+      "href": "strategic_game/strategic_game_monotone_game_nash_uniqueness.html"
+    }
+  ],
+  "lean_refs": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "zerosum.duality_gap",
+  "title": "Duality Gap In A Matrix Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "zerosum/zerosum_duality_gap.html",
+  "body_html": "<h1>Duality Gap In A Matrix Game</h1>\n<p>For a finite matrix game with bilinear payoff $g(x,y)=xAy$, define\n$$\n  L(y)=\\max_{x'\\in\\Delta(I)} g(x',y),\n  \\qquad\n  M(x)=\\min_{y'\\in\\Delta(J)} g(x,y').\n$$\nThe duality gap at $(x,y)$ is\n$$\n  W(x,y)=L(y)-M(x)\\ge0.\n$$</p>\n<p>The gap is zero exactly when $x$ and $y$ are optimal strategies. Indeed,\n$W(x,y)=0$ says that the best payoff player 1 can obtain against $y$ equals the\nworst payoff player 1 can secure with $x$, so the two one-sided guarantees meet\nat the value.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "zerosum.mixed_extension",
+      "title": "Mixed Extension Of A Matrix Game",
+      "href": "zerosum/zerosum_mixed_extension.html"
+    },
+    {
+      "id": "zerosum.optimal_strategy_sets",
+      "title": "Optimal Strategy Sets",
+      "href": "zerosum/zerosum_optimal_strategy_sets.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zerosum.continuous_fictitious_play_gap",
+      "title": "Continuous Fictitious Play Closes The Duality Gap",
+      "href": "zerosum/zerosum_continuous_fictitious_play_gap.html"
+    }
+  ],
+  "lean_refs": []
+}

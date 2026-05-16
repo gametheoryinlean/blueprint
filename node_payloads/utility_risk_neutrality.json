@@ -1,0 +1,71 @@
+{
+  "id": "utility.risk_neutrality",
+  "title": "Risk Neutrality",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "utility/utility_risk_neutrality.html",
+  "body_html": "<h1>Risk Neutrality</h1>\n<p>A utility function over monetary outcomes is risk neutral when evaluating the\nexpected monetary payoff first and then applying utility gives the same result as\ntaking the expectation of utility:\n$$\n  u\\left(\\sum_i p_i x_i\\right)=\\sum_i p_i u(x_i).\n$$</p>\n<p>In the finite setting, this is equivalent to $u$ being affine:\n$$\n  u(x)=a x+b.\n$$</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The affine-to-risk-neutral direction follows by distributing the affine formula\nthrough the finite weighted sum. For the reverse direction, use two-outcome\nlotteries to derive preservation of all convex combinations, then recover the\naffine formula from the values of $u(0)$ and $u(1)$.</p>",
+  "deps": [
+    {
+      "id": "utility.expected_utility_representation",
+      "title": "Expected Utility Representation",
+      "href": "utility/utility_expected_utility_representation.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "IsAffineUtility",
+      "display_name": "IsAffineUtility",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "IsRiskNeutral",
+      "display_name": "IsRiskNeutral",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "IsAffineUtility.isRiskNeutral",
+      "display_name": "IsAffineUtility.isRiskNeutral",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "IsRiskNeutral.isAffine",
+      "display_name": "IsRiskNeutral.isAffine",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

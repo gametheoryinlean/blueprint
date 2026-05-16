@@ -1,0 +1,24 @@
+{
+  "id": "linear_programming.strong_duality",
+  "title": "Strong Duality For Linear Programming",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "linear_programming/linear_programming_strong_duality.html",
+  "body_html": "<h1>Strong Duality For Linear Programming</h1>\n<p>Consider the primal linear program\n$$\n  \\min \\langle c,x\\rangle\n  \\quad\\text{subject to } Ax\\ge b,\\ x\\ge 0\n$$\nand its dual\n$$\n  \\max \\langle u,b\\rangle\n  \\quad\\text{subject to } uA\\le c,\\ u\\ge 0.\n$$\nThe primal has an optimal solution if and only if the dual has an optimal solution.\nWhen optimal solutions exist, the two programs have the same value.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebra.farkas_lemma",
+      "title": "Farkas Lemma",
+      "href": "linear_algebra/linear_algebra_farkas_lemma.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_programming.strong_complementarity",
+      "title": "Strong Complementarity For Linear Programming",
+      "href": "linear_programming/linear_programming_strong_complementarity.html"
+    }
+  ],
+  "lean_refs": []
+}

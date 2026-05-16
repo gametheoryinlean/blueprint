@@ -1,0 +1,24 @@
+{
+  "id": "linear_algebra.farkas_lemma",
+  "title": "Farkas Lemma",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "linear_algebra/linear_algebra_farkas_lemma.html",
+  "body_html": "<h1>Farkas Lemma</h1>\n<p>Let $A$ be an $m\\times n$ real matrix, $b\\in\\mathbb R^m$,\n$c\\in\\mathbb R^n$, and $d\\in\\mathbb R$. Assume\n$$\n  S=\\{x\\in\\mathbb R^n:Ax\\ge b\\}\n$$\nis nonempty. Then the following are equivalent:</p>\n<ol>\n<li>for every $x\\in\\mathbb R^n$, if $Ax\\ge b$ then\n   $\\langle c,x\\rangle\\ge d$;</li>\n<li>there exists $u\\in\\mathbb R^m$ such that\n   $u\\ge 0$, $uA=c$, and $\\langle u,b\\rangle\\ge d$.</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "linear_algebra.theorem_of_alternative",
+      "title": "Theorem Of The Alternative",
+      "href": "linear_algebra/linear_algebra_theorem_of_alternative.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "linear_programming.strong_duality",
+      "title": "Strong Duality For Linear Programming",
+      "href": "linear_programming/linear_programming_strong_duality.html"
+    }
+  ],
+  "lean_refs": []
+}

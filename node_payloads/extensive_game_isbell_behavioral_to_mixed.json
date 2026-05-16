@@ -1,0 +1,29 @@
+{
+  "id": "extensive_game.isbell_behavioral_to_mixed",
+  "title": "Isbell Behavioral-To-Mixed Equivalence",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "extensive_game/extensive_game_isbell_behavioral_to_mixed.html",
+  "body_html": "<h1>Isbell Behavioral-To-Mixed Equivalence</h1>\n<p>If an extensive game is linear for player $i$, then for every behavioral strategy\n$\\beta_i$ of player $i$ there exists a mixed strategy $\\sigma_i$ such that, against\nevery general strategy of the other players, the induced probability distributions\non terminal nodes coincide.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Given $\\beta_i$, define a product distribution on pure strategies by multiplying\nthe probabilities assigned by $\\beta_i$ at all information sets. Since each\ninformation set can occur at most once along a play, the probability of any terminal\nhistory factors through exactly the behavioral probabilities used on that history;\nall unused information-set probabilities sum to one. Hence the mixed strategy and\nbehavioral strategy induce the same outcome distribution.</p>",
+  "deps": [
+    {
+      "id": "extensive_game.linear_extensive_game",
+      "title": "Linear Extensive Game",
+      "href": "extensive_game/extensive_game_linear_extensive_game.html"
+    },
+    {
+      "id": "extensive_game.mixed_behavioral_general_strategies",
+      "title": "Mixed Behavioral And General Strategies",
+      "href": "extensive_game/extensive_game_mixed_behavioral_general_strategies.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "extensive_game.behavioral_equilibrium_exists",
+      "title": "Existence Of Behavioral Equilibrium",
+      "href": "extensive_game/extensive_game_behavioral_equilibrium_exists.html"
+    }
+  ],
+  "lean_refs": []
+}

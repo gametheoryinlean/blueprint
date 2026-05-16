@@ -1,0 +1,29 @@
+{
+  "id": "strategic_game.epsilon_proper_equilibrium",
+  "title": "Epsilon Proper Equilibrium",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_epsilon_proper_equilibrium.html",
+  "body_html": "<h1>Epsilon Proper Equilibrium</h1>\n<p>Let $G$ be a finite normal-form game. For $\\epsilon&gt;0$, a completely mixed\nprofile $\\sigma^\\epsilon\\in\\operatorname{int}\\Sigma$ is $\\epsilon$-proper if, for\nevery player $i$ and pure strategies $s_i,t_i\\in S_i$,\n$$\n  g_i(s_i,\\sigma^\\epsilon_{-i})\n  &lt;\n  g_i(t_i,\\sigma^\\epsilon_{-i})\n  \\quad\\Rightarrow\\quad\n  \\sigma^\\epsilon_i(s_i)\\le\n  \\epsilon\\,\\sigma^\\epsilon_i(t_i).\n$$</p>\n<p>More costly mistakes must be played with probabilities that are smaller by a\nfactor of at least $\\epsilon$. Every $\\epsilon$-proper profile is\n$\\epsilon$-perfect.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.epsilon_perfect_equilibrium",
+      "title": "Epsilon Perfect Equilibrium",
+      "href": "strategic_game/strategic_game_epsilon_perfect_equilibrium.html"
+    },
+    {
+      "id": "strategic_game.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_game/strategic_game_mixed_strategy.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.proper_equilibrium",
+      "title": "Proper Equilibrium",
+      "href": "strategic_game/strategic_game_proper_equilibrium.html"
+    }
+  ],
+  "lean_refs": []
+}

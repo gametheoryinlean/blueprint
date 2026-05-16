@@ -1,0 +1,34 @@
+{
+  "id": "fixed_point.kakutani_fixed_point",
+  "title": "Kakutani Fixed Point Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "fixed_point/fixed_point_kakutani_fixed_point.html",
+  "body_html": "<h1>Kakutani Fixed Point Theorem</h1>\n<p>Let $C$ be a nonempty convex compact subset of a normed vector space. Let\n$F:C\\rightrightarrows C$ be a correspondence such that:</p>\n<ol>\n<li>for every $c\\in C$, $F(c)$ is nonempty, compact, and convex;</li>\n<li>the graph $\\{(c,d)\\in C\\times C:d\\in F(c)\\}$ is closed.</li>\n</ol>\n<p>Then the fixed point set\n$$\n  \\{c\\in C:c\\in F(c)\\}\n$$\nis nonempty and compact.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "fixed_point.brouwer_compact_convex",
+      "title": "Brouwer Fixed Point Theorem",
+      "href": "fixed_point/fixed_point_brouwer_compact_convex.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "fixed_point.kakutani_from_two_player_nash",
+      "title": "Kakutani From Two-Player Nash Existence",
+      "href": "fixed_point/fixed_point_kakutani_from_two_player_nash.html"
+    },
+    {
+      "id": "strategic_game.compact_quasi_concave_nash_exists",
+      "title": "Nash Existence In Compact Quasi-Concave Games",
+      "href": "strategic_game/strategic_game_compact_quasi_concave_nash_exists.html"
+    },
+    {
+      "id": "strategic_game.proper_equilibrium_exists",
+      "title": "Existence Of Proper Equilibrium",
+      "href": "strategic_game/strategic_game_proper_equilibrium_exists.html"
+    }
+  ],
+  "lean_refs": []
+}

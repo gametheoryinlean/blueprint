@@ -1,0 +1,29 @@
+{
+  "id": "strategic_game.approximate_solution",
+  "title": "Approximate Solution",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_approximate_solution.html",
+  "body_html": "<h1>Approximate Solution</h1>\n<p>A pair $(s,v)\\in\\overline\\Gamma$ is an approximate solution if there exist\nprofiles $s^n$ and positive numbers $\\epsilon_n\\to 0$ such that:</p>\n<ol>\n<li>each $s^n$ is an $\\epsilon_n$-equilibrium;</li>\n<li>$(s^n,g(s^n))\\to(s,v)$.</li>\n</ol>\n<p>The profile $s$ is then called an approximate equilibrium.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.epsilon_equilibrium",
+      "title": "Epsilon Equilibrium",
+      "href": "strategic_game/strategic_game_epsilon_equilibrium.html"
+    },
+    {
+      "id": "strategic_game.reny_solution",
+      "title": "Reny Solution",
+      "href": "strategic_game/strategic_game_reny_solution.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.approximate_solution_is_reny",
+      "title": "Approximate Solutions Are Reny Solutions",
+      "href": "strategic_game/strategic_game_approximate_solution_is_reny.html"
+    }
+  ],
+  "lean_refs": []
+}

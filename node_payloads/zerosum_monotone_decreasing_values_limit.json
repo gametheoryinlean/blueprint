@@ -1,0 +1,29 @@
+{
+  "id": "zerosum.monotone_decreasing_values_limit",
+  "title": "Monotone Decreasing Values Limit",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "zerosum/zerosum_monotone_decreasing_values_limit.html",
+  "body_html": "<h1>Monotone Decreasing Values Limit</h1>\n<p>Let $G_n=(S,T,f_n)$ be a family of zero-sum games such that:</p>\n<ol>\n<li>$(f_n)$ is a weakly decreasing sequence of uniformly bounded functions\n   $S\\times T\\to\\mathbb R$;</li>\n<li>each $f_n$ is upper semicontinuous in the first variable;</li>\n<li>each $G_n$ has a value $v_n$;</li>\n<li>$S$ is compact.</li>\n</ol>\n<p>Let $f=\\inf_n f_n$. Then the game $G=(S,T,f)$ has value\n$$\n  v=\\inf_n v_n,\n$$\nand player 1 has an optimal strategy in $G$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "zerosum.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "zerosum/zerosum_value.html"
+    },
+    {
+      "id": "zerosum.quasi_concavity_semicontinuity",
+      "title": "Quasi-Concavity And Semicontinuity",
+      "href": "zerosum/zerosum_quasi_concavity_semicontinuity.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zerosum.monotone_family_assumption_counterexamples",
+      "title": "Monotone Family Assumption Counterexamples",
+      "href": "zerosum/zerosum_monotone_family_assumption_counterexamples.html"
+    }
+  ],
+  "lean_refs": []
+}

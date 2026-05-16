@@ -1,0 +1,29 @@
+{
+  "id": "extensive_game.simple_perfect_information_game",
+  "title": "Simple Perfect-Information Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "extensive_game/extensive_game_simple_perfect_information_game.html",
+  "body_html": "<h1>Simple Perfect-Information Game</h1>\n<p>A two-player perfect-information game is simple if its terminal outcomes are\npartitioned into winning sets $(R_1,R_2)$, where reaching a terminal node in $R_i$\nmeans player $i$ wins and the other player loses.</p>\n<p>A winning strategy for player $i$ is a strategy $\\sigma_i$ such that, for every\nopponent strategy $\\sigma_{-i}$,\n$$\n  F(\\sigma_i,\\sigma_{-i})\\in R_i.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "extensive_game.perfect_information_extensive_game",
+      "title": "Finite Extensive Game With Perfect Information",
+      "href": "extensive_game/extensive_game_perfect_information_extensive_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "extensive_game.chomp_strategy_stealing",
+      "title": "Chomp Strategy Stealing",
+      "href": "extensive_game/extensive_game_chomp_strategy_stealing.html"
+    },
+    {
+      "id": "extensive_game.determined_game",
+      "title": "Determined Game",
+      "href": "extensive_game/extensive_game_determined_game.html"
+    }
+  ],
+  "lean_refs": []
+}

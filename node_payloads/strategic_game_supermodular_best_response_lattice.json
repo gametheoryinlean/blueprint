@@ -1,0 +1,29 @@
+{
+  "id": "strategic_game.supermodular_best_response_lattice",
+  "title": "Supermodular Best Responses Are Lattices",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_supermodular_best_response_lattice.html",
+  "body_html": "<h1>Supermodular Best Responses Are Lattices</h1>\n<p>In a supermodular game, for every player $i$ and opponent profile $s_{-i}$, the\nbest-response set $BR_i(s_{-i})$ is a nonempty compact lattice.</p>\n<p>Moreover, best responses are monotone in the following sense: if\n$s_{-i}\\ge s'_{-i}$ and $t'_i\\in BR_i(s'_{-i})$, then there exists\n$t_i\\in BR_i(s_{-i})$ such that\n$$\n  t_i\\ge t'_i.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.best_response",
+      "title": "Best Response",
+      "href": "strategic_game/strategic_game_best_response.html"
+    },
+    {
+      "id": "strategic_game.supermodular_game",
+      "title": "Supermodular Game",
+      "href": "strategic_game/strategic_game_supermodular_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.supermodular_game_nash_exists",
+      "title": "Nash Existence In Supermodular Games",
+      "href": "strategic_game/strategic_game_supermodular_game_nash_exists.html"
+    }
+  ],
+  "lean_refs": []
+}

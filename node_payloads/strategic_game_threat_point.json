@@ -1,0 +1,24 @@
+{
+  "id": "strategic_game.threat_point",
+  "title": "Threat Point",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_threat_point.html",
+  "body_html": "<h1>Threat Point</h1>\n<p>Let $G$ be a finite strategic game. The punishment level, or threat point, for\nplayer $i$ is\n$$\n  V_i=\n  \\min_{\\sigma_{-i}\\in\\prod_{j\\ne i}\\Delta(S_j)}\n  \\max_{s_i\\in S_i} g_i(s_i,\\sigma_{-i}).\n$$\nIt is the maximal punishment that the other players can enforce against player\n$i$ using independent mixed strategies.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_game/strategic_game_mixed_strategy.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.feasible_payoffs",
+      "title": "Feasible And Individually Rational Payoffs",
+      "href": "strategic_game/strategic_game_feasible_payoffs.html"
+    }
+  ],
+  "lean_refs": []
+}

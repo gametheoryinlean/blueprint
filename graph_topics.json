@@ -1,0 +1,221 @@
+{
+  "topics": [
+    {
+      "id": "approachability",
+      "title": "Approachability",
+      "node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "approachability/index.html"
+    },
+    {
+      "id": "extensive_game",
+      "title": "Extensive Game",
+      "node_count": 51,
+      "kind_counts": {
+        "definition": 30,
+        "example": 4,
+        "proposition": 4,
+        "theorem": 13
+      },
+      "status_counts": {
+        "staged": 51
+      },
+      "href": "extensive_game/index.html"
+    },
+    {
+      "id": "fixed_point",
+      "title": "Fixed Point",
+      "node_count": 6,
+      "kind_counts": {
+        "lemma": 2,
+        "theorem": 4
+      },
+      "status_counts": {
+        "staged": 6
+      },
+      "href": "fixed_point/index.html"
+    },
+    {
+      "id": "lattice",
+      "title": "Lattice",
+      "node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "lattice/index.html"
+    },
+    {
+      "id": "linear_algebra",
+      "title": "Linear Algebra",
+      "node_count": 3,
+      "kind_counts": {
+        "theorem": 3
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "linear_algebra/index.html"
+    },
+    {
+      "id": "linear_programming",
+      "title": "Linear Programming",
+      "node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "linear_programming/index.html"
+    },
+    {
+      "id": "order",
+      "title": "Order",
+      "node_count": 1,
+      "kind_counts": {
+        "lemma": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "order/index.html"
+    },
+    {
+      "id": "strategic_game",
+      "title": "Strategic Game",
+      "node_count": 75,
+      "kind_counts": {
+        "definition": 37,
+        "example": 5,
+        "proposition": 16,
+        "theorem": 17
+      },
+      "status_counts": {
+        "staged": 75
+      },
+      "href": "strategic_game/index.html"
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "node_count": 11,
+      "kind_counts": {
+        "definition": 9,
+        "example": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "admitted": 10,
+        "staged": 1
+      },
+      "href": "strategic_games/index.html"
+    },
+    {
+      "id": "utility",
+      "title": "Utility",
+      "node_count": 9,
+      "kind_counts": {
+        "definition": 4,
+        "theorem": 5
+      },
+      "status_counts": {
+        "staged": 9
+      },
+      "href": "utility/index.html"
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "node_count": 10,
+      "kind_counts": {
+        "definition": 4,
+        "lemma": 2,
+        "proof-plan": 2,
+        "theorem": 2
+      },
+      "status_counts": {
+        "admitted": 3,
+        "formalized": 6,
+        "staged": 1
+      },
+      "href": "zero_sum/index.html"
+    },
+    {
+      "id": "zerosum",
+      "title": "Zerosum",
+      "node_count": 63,
+      "kind_counts": {
+        "definition": 18,
+        "example": 8,
+        "lemma": 3,
+        "proof-plan": 7,
+        "proposition": 17,
+        "theorem": 10
+      },
+      "status_counts": {
+        "staged": 63
+      },
+      "href": "zerosum/index.html"
+    }
+  ],
+  "edges": [
+    {
+      "from": "approachability",
+      "to": "zerosum",
+      "count": 1
+    },
+    {
+      "from": "fixed_point",
+      "to": "strategic_game",
+      "count": 5
+    },
+    {
+      "from": "lattice",
+      "to": "strategic_game",
+      "count": 1
+    },
+    {
+      "from": "linear_algebra",
+      "to": "linear_programming",
+      "count": 1
+    },
+    {
+      "from": "strategic_game",
+      "to": "extensive_game",
+      "count": 14
+    },
+    {
+      "from": "strategic_game",
+      "to": "fixed_point",
+      "count": 1
+    },
+    {
+      "from": "strategic_games",
+      "to": "zero_sum",
+      "count": 3
+    },
+    {
+      "from": "zerosum",
+      "to": "extensive_game",
+      "count": 3
+    },
+    {
+      "from": "zerosum",
+      "to": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "zerosum",
+      "to": "strategic_game",
+      "count": 2
+    }
+  ]
+}

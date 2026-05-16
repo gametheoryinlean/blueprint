@@ -2652,6 +2652,232 @@
       ]
     },
     {
+      "id": "strategic_games.best_response",
+      "title": "Best Response",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "solution-concept"
+      ],
+      "lean_declarations": [
+        "IsBestResponse"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.unilateral_deviation"
+      ],
+      "used_by": [
+        "strategic_games.dominant_implies_nash",
+        "strategic_games.nash_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.dominant_implies_nash",
+      "title": "Dominant Strategy Profile is a Nash Equilibrium",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "equilibrium",
+        "dominance"
+      ],
+      "lean_declarations": [
+        "IsNashEquilibrium.of_dominant"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.best_response",
+        "strategic_games.nash_equilibrium",
+        "strategic_games.weakly_dominant_strategy"
+      ]
+    },
+    {
+      "id": "strategic_games.mixed_strategy",
+      "title": "Mixed Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "mixed-strategy"
+      ],
+      "lean_declarations": [
+        "MixedStrategy"
+      ],
+      "topic": "staged",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "zero_sum.mixed_matrix_payoff"
+      ]
+    },
+    {
+      "id": "strategic_games.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "solution-concept",
+        "equilibrium"
+      ],
+      "lean_declarations": [
+        "IsNashEquilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.best_response"
+      ],
+      "used_by": [
+        "strategic_games.dominant_implies_nash",
+        "strategic_games.prisoners_dilemma",
+        "zero_sum.zero_sum_nash_value_unique"
+      ]
+    },
+    {
+      "id": "strategic_games.prisoners_dilemma",
+      "title": "Prisoner's Dilemma",
+      "kind": "example",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "example",
+        "classic"
+      ],
+      "lean_declarations": [
+        "PrisonersDilemma.PD",
+        "PrisonersDilemma.pd_defect_weakly_dominant",
+        "PrisonersDilemma.pd_defect_nash"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.nash_equilibrium",
+        "strategic_games.strategic_game",
+        "strategic_games.weakly_dominant_strategy"
+      ]
+    },
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "foundational"
+      ],
+      "lean_declarations": [
+        "StrategicGame"
+      ],
+      "topic": "strategic_games",
+      "used_by": [
+        "strategic_games.mixed_strategy",
+        "strategic_games.prisoners_dilemma",
+        "strategic_games.strategy_profile",
+        "zero_sum.zero_sum_game"
+      ]
+    },
+    {
+      "id": "strategic_games.strategy_profile",
+      "title": "Strategy Profile",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "foundational"
+      ],
+      "lean_declarations": [
+        "StrategicGame.Profile"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.unilateral_deviation"
+      ]
+    },
+    {
+      "id": "strategic_games.strictly_dominates",
+      "title": "Strict Dominance",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "dominance"
+      ],
+      "lean_declarations": [
+        "StrictlyDominates"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.unilateral_deviation"
+      ]
+    },
+    {
+      "id": "strategic_games.unilateral_deviation",
+      "title": "Unilateral Deviation",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "foundational"
+      ],
+      "lean_declarations": [
+        "StrategicGame.deviate"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategy_profile"
+      ],
+      "used_by": [
+        "strategic_games.best_response",
+        "strategic_games.strictly_dominates",
+        "strategic_games.weakly_dominates"
+      ]
+    },
+    {
+      "id": "strategic_games.weakly_dominant_strategy",
+      "title": "Weakly Dominant Strategy",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "dominance"
+      ],
+      "lean_declarations": [
+        "IsWeaklyDominant"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.weakly_dominates"
+      ],
+      "used_by": [
+        "strategic_games.dominant_implies_nash",
+        "strategic_games.prisoners_dilemma"
+      ]
+    },
+    {
+      "id": "strategic_games.weakly_dominates",
+      "title": "Weak Dominance",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "dominance"
+      ],
+      "lean_declarations": [
+        "WeaklyDominates"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.unilateral_deviation"
+      ],
+      "used_by": [
+        "strategic_games.weakly_dominant_strategy"
+      ]
+    },
+    {
       "id": "utility.expected_utility_representation",
       "title": "Expected Utility Representation",
       "kind": "theorem",
@@ -2845,6 +3071,230 @@
         "utility.expected_utility_representation",
         "utility.sure_thing_principle",
         "utility.vnm_axiom_independence"
+      ]
+    },
+    {
+      "id": "zero_sum.dantzig_proof_spine",
+      "title": "Dantzig Proof Spine for Minimax",
+      "kind": "proof-plan",
+      "status": "admitted",
+      "tags": [
+        "zero-sum",
+        "minimax",
+        "proof-plan",
+        "linear-programming"
+      ],
+      "target": "zero_sum.von_neumann_minimax",
+      "plan_status": "selected",
+      "lean_declarations": [
+        "DantzigState",
+        "DantzigState.isOptimal",
+        "DantzigState.value",
+        "DantzigState.stratI",
+        "DantzigState.basisVar",
+        "dotBeta0Pj_eq",
+        "optimal_basis_minimax",
+        "dantzigPivot",
+        "dantzigPivot_lexCond",
+        "dantzigPivot_beta0_decrease",
+        "dantzig_minimax"
+      ],
+      "topic": "zero_sum",
+      "used_by": [
+        "zero_sum.zero_sum_lp_bridge"
+      ]
+    },
+    {
+      "id": "zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "matrix-game",
+        "finite-game"
+      ],
+      "lean_declarations": [
+        "MatrixGame"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.zero_sum_game"
+      ],
+      "used_by": [
+        "zero_sum.mixed_matrix_payoff"
+      ]
+    },
+    {
+      "id": "zero_sum.maximin_le_minimax",
+      "title": "Maximin is Bounded by Minimax",
+      "kind": "lemma",
+      "status": "admitted",
+      "tags": [
+        "zero-sum",
+        "value",
+        "minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.maximin_le_minimax"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.maximin_minimax"
+      ],
+      "used_by": [
+        "zero_sum.von_neumann_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "value",
+        "minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.guarantee_I",
+        "MatrixGame.guarantee_II",
+        "MatrixGame.maximin",
+        "MatrixGame.minimax"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.mixed_matrix_payoff"
+      ],
+      "used_by": [
+        "zero_sum.maximin_le_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.mixed_matrix_payoff",
+      "title": "Expected Payoff of a Matrix Game",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "mixed-strategy",
+        "matrix-game"
+      ],
+      "lean_declarations": [
+        "expectedPayoffMatrix",
+        "MatrixGame.E",
+        "MatrixGame.Ej",
+        "MatrixGame.Ei"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.mixed_strategy",
+        "zero_sum.matrix_game"
+      ],
+      "used_by": [
+        "zero_sum.maximin_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "kind": "theorem",
+      "status": "admitted",
+      "tags": [
+        "zero-sum",
+        "value",
+        "minimax",
+        "theorem"
+      ],
+      "lean_declarations": [
+        "MatrixGame.minimax_theorem",
+        "MatrixGame.minimax_optimal_strategies"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.maximin_le_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_game",
+      "title": "Zero-Sum Game",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "strategic-game",
+        "foundational"
+      ],
+      "lean_declarations": [
+        "StrategicGame.IsZeroSum",
+        "StrategicGame.IsConstantSum"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "zero_sum.matrix_game",
+        "zero_sum.zero_sum_payoff_negation"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_lp_bridge",
+      "title": "Zero-Sum Linear Programming Bridge",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "linear-programming",
+        "nash-equilibrium",
+        "staged"
+      ],
+      "target": "zero_sum.von_neumann_minimax",
+      "plan_status": "candidate",
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.dantzig_proof_spine"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_nash_value_unique",
+      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
+      "kind": "theorem",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "equilibrium",
+        "value"
+      ],
+      "lean_declarations": [
+        "StrategicGame.Properties.IsZeroSum.nash_payoff_eq",
+        "StrategicGame.Properties.IsZeroSum.nash_payoff_eq_p1"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.nash_equilibrium",
+        "zero_sum.zero_sum_payoff_negation"
+      ]
+    },
+    {
+      "id": "zero_sum.zero_sum_payoff_negation",
+      "title": "Payoff Negation in Zero-Sum Games",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "payoff"
+      ],
+      "lean_declarations": [
+        "StrategicGame.Properties.IsZeroSum.neg",
+        "StrategicGame.Properties.IsZeroSum.neg'"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.zero_sum_game"
+      ],
+      "used_by": [
+        "zero_sum.zero_sum_nash_value_unique"
       ]
     },
     {
@@ -3076,9 +3526,6 @@
         "zerosum.fictitious_play",
         "zerosum.optimal_strategy_sets",
         "zerosum.value"
-      ],
-      "used_by": [
-        "zerosum.fictitious_play_robinson_proof"
       ]
     },
     {
@@ -3092,10 +3539,9 @@
         "robinson",
         "proof-plan"
       ],
-      "topic": "zerosum",
-      "uses": [
-        "zerosum.fictitious_play_convergence"
-      ]
+      "target": "zerosum.fictitious_play_convergence",
+      "plan_status": "candidate",
+      "topic": "zerosum"
     },
     {
       "id": "zerosum.finite_opponent_separation_minimax",
@@ -3180,10 +3626,9 @@
         "loomis",
         "proof-plan"
       ],
-      "topic": "zerosum",
-      "uses": [
-        "zerosum.loomis_theorem"
-      ]
+      "target": "zerosum.loomis_theorem",
+      "plan_status": "candidate",
+      "topic": "zerosum"
     },
     {
       "id": "zerosum.loomis_theorem",
@@ -3202,7 +3647,6 @@
       ],
       "used_by": [
         "linear_algebra.perron_frobenius_positive_matrix",
-        "zerosum.loomis_induction_proof",
         "zerosum.minimax_from_loomis"
       ]
     },
@@ -3217,10 +3661,9 @@
         "proof-plan",
         "linear-programming"
       ],
-      "topic": "zerosum",
-      "uses": [
-        "zerosum.minimax_theorem"
-      ]
+      "target": "zerosum.minimax_theorem",
+      "plan_status": "candidate",
+      "topic": "zerosum"
     },
     {
       "id": "zerosum.matching_pennies",
@@ -3314,10 +3757,11 @@
         "antisymmetric",
         "proof-plan"
       ],
+      "target": "zerosum.minimax_theorem",
+      "plan_status": "candidate",
       "topic": "zerosum",
       "uses": [
-        "zerosum.antisymmetric_matrix_game_value",
-        "zerosum.minimax_theorem"
+        "zerosum.antisymmetric_matrix_game_value"
       ]
     },
     {
@@ -3331,6 +3775,8 @@
         "approachability",
         "proof-plan"
       ],
+      "target": "zerosum.minimax_theorem",
+      "plan_status": "candidate",
       "topic": "zerosum",
       "uses": [
         "approachability.deterministic_blackwell_sequence"
@@ -3347,6 +3793,8 @@
         "loomis",
         "proof-plan"
       ],
+      "target": "zerosum.minimax_theorem",
+      "plan_status": "candidate",
       "topic": "zerosum",
       "uses": [
         "zerosum.loomis_theorem"
@@ -3376,8 +3824,6 @@
         "strategic_game.strict_dominance_never_best_response",
         "zerosum.computation_three_by_two_example",
         "zerosum.loomis_theorem",
-        "zerosum.lp_duality_minimax_proof",
-        "zerosum.minimax_from_antisymmetric_games",
         "zerosum.optimal_strategy_sets",
         "zerosum.ordered_field_minimax",
         "zerosum.stochastic_matrix_invariant_distribution",
@@ -3943,10 +4389,11 @@
         "continuous-game",
         "proof-plan"
       ],
+      "target": "zerosum.ville_theorem",
+      "plan_status": "candidate",
       "topic": "zerosum",
       "uses": [
-        "zerosum.minimax_theorem",
-        "zerosum.ville_theorem"
+        "zerosum.minimax_theorem"
       ]
     },
     {
@@ -3962,9 +4409,6 @@
       "topic": "zerosum",
       "uses": [
         "zerosum.minimax_theorem"
-      ],
-      "used_by": [
-        "zerosum.ville_discretization_proof"
       ]
     },
     {
@@ -4908,6 +5352,62 @@
       "to": "zerosum.support_complementarity"
     },
     {
+      "from": "strategic_games.best_response",
+      "to": "strategic_games.unilateral_deviation"
+    },
+    {
+      "from": "strategic_games.dominant_implies_nash",
+      "to": "strategic_games.best_response"
+    },
+    {
+      "from": "strategic_games.dominant_implies_nash",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.dominant_implies_nash",
+      "to": "strategic_games.weakly_dominant_strategy"
+    },
+    {
+      "from": "strategic_games.mixed_strategy",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "strategic_games.best_response"
+    },
+    {
+      "from": "strategic_games.prisoners_dilemma",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.prisoners_dilemma",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.prisoners_dilemma",
+      "to": "strategic_games.weakly_dominant_strategy"
+    },
+    {
+      "from": "strategic_games.strategy_profile",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.strictly_dominates",
+      "to": "strategic_games.unilateral_deviation"
+    },
+    {
+      "from": "strategic_games.unilateral_deviation",
+      "to": "strategic_games.strategy_profile"
+    },
+    {
+      "from": "strategic_games.weakly_dominant_strategy",
+      "to": "strategic_games.weakly_dominates"
+    },
+    {
+      "from": "strategic_games.weakly_dominates",
+      "to": "strategic_games.unilateral_deviation"
+    },
+    {
       "from": "utility.expected_utility_representation",
       "to": "utility.lottery"
     },
@@ -4946,6 +5446,50 @@
     {
       "from": "utility.vnm_axioms",
       "to": "utility.lottery"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.zero_sum_game"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.maximin_minimax"
+    },
+    {
+      "from": "zero_sum.maximin_minimax",
+      "to": "zero_sum.mixed_matrix_payoff"
+    },
+    {
+      "from": "zero_sum.mixed_matrix_payoff",
+      "to": "strategic_games.mixed_strategy"
+    },
+    {
+      "from": "zero_sum.mixed_matrix_payoff",
+      "to": "zero_sum.matrix_game"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.maximin_le_minimax"
+    },
+    {
+      "from": "zero_sum.zero_sum_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "zero_sum.zero_sum_lp_bridge",
+      "to": "zero_sum.dantzig_proof_spine"
+    },
+    {
+      "from": "zero_sum.zero_sum_nash_value_unique",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "zero_sum.zero_sum_nash_value_unique",
+      "to": "zero_sum.zero_sum_payoff_negation"
+    },
+    {
+      "from": "zero_sum.zero_sum_payoff_negation",
+      "to": "zero_sum.zero_sum_game"
     },
     {
       "from": "zerosum.antisymmetric_matrix_game_value",
@@ -5060,10 +5604,6 @@
       "to": "zerosum.value"
     },
     {
-      "from": "zerosum.fictitious_play_robinson_proof",
-      "to": "zerosum.fictitious_play_convergence"
-    },
-    {
       "from": "zerosum.finite_opponent_separation_minimax",
       "to": "zerosum.general_mixed_strategy_space"
     },
@@ -5088,20 +5628,12 @@
       "to": "zerosum.zero_sum_game"
     },
     {
-      "from": "zerosum.loomis_induction_proof",
-      "to": "zerosum.loomis_theorem"
-    },
-    {
       "from": "zerosum.loomis_theorem",
       "to": "zerosum.minimax_theorem"
     },
     {
       "from": "zerosum.loomis_theorem",
       "to": "zerosum.value_operator_properties"
-    },
-    {
-      "from": "zerosum.lp_duality_minimax_proof",
-      "to": "zerosum.minimax_theorem"
     },
     {
       "from": "zerosum.matching_pennies",
@@ -5126,10 +5658,6 @@
     {
       "from": "zerosum.minimax_from_antisymmetric_games",
       "to": "zerosum.antisymmetric_matrix_game_value"
-    },
-    {
-      "from": "zerosum.minimax_from_antisymmetric_games",
-      "to": "zerosum.minimax_theorem"
     },
     {
       "from": "zerosum.minimax_from_deterministic_approachability",
@@ -5306,10 +5834,6 @@
     {
       "from": "zerosum.ville_discretization_proof",
       "to": "zerosum.minimax_theorem"
-    },
-    {
-      "from": "zerosum.ville_discretization_proof",
-      "to": "zerosum.ville_theorem"
     },
     {
       "from": "zerosum.ville_theorem",

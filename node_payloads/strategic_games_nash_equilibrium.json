@@ -1,0 +1,48 @@
+{
+  "id": "strategic_games.nash_equilibrium",
+  "title": "Nash Equilibrium",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "strategic_games/strategic_games_nash_equilibrium.html",
+  "body_html": "<h1>Nash Equilibrium</h1>\n<p>A strategy profile $\\sigma$ is a Nash equilibrium if every player is playing a best\nresponse to the strategies of the other players:</p>\n<p>$$\\forall i \\in I, \\quad \\sigma_i \\text{ is a best response to } \\sigma.$$</p>\n<p>Equivalently, no player can improve their payoff by a unilateral deviation.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.best_response",
+      "title": "Best Response",
+      "href": "strategic_games/strategic_games_best_response.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.dominant_implies_nash",
+      "title": "Dominant Strategy Profile is a Nash Equilibrium",
+      "href": "strategic_games/strategic_games_dominant_implies_nash.html"
+    },
+    {
+      "id": "strategic_games.prisoners_dilemma",
+      "title": "Prisoner's Dilemma",
+      "href": "strategic_games/strategic_games_prisoners_dilemma.html"
+    },
+    {
+      "id": "zero_sum.zero_sum_nash_value_unique",
+      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
+      "href": "zero_sum/zero_sum_zero_sum_nash_value_unique.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "IsNashEquilibrium",
+      "display_name": "IsNashEquilibrium",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

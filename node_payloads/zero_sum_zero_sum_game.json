@@ -1,0 +1,56 @@
+{
+  "id": "zero_sum.zero_sum_game",
+  "title": "Zero-Sum Game",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "zero_sum/zero_sum_zero_sum_game.html",
+  "body_html": "<h1>Zero-Sum Game</h1>\n<p>A two-player strategic game is zero-sum if, at every strategy profile $\\sigma$,\nthe two players' payoffs add to zero:</p>\n<p>$$u_0(\\sigma) + u_1(\\sigma) = 0.$$</p>\n<p>A constant-sum game fixes the same sum to a constant $c$ instead of zero.  In a\nzero-sum game, player 1's payoff is the negative of player 0's payoff, so the\ngame can be studied through a single payoff function.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "href": "zero_sum/zero_sum_matrix_game.html"
+    },
+    {
+      "id": "zero_sum.zero_sum_payoff_negation",
+      "title": "Payoff Negation in Zero-Sum Games",
+      "href": "zero_sum/zero_sum_zero_sum_payoff_negation.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "StrategicGame.IsZeroSum",
+      "display_name": "StrategicGame.IsZeroSum",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "StrategicGame.IsConstantSum",
+      "display_name": "StrategicGame.IsConstantSum",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

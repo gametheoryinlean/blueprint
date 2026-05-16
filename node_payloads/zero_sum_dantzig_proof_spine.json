@@ -1,0 +1,162 @@
+{
+  "id": "zero_sum.dantzig_proof_spine",
+  "title": "Dantzig Proof Spine for Minimax",
+  "kind": "proof-plan",
+  "status": "admitted",
+  "href": "zero_sum/zero_sum_dantzig_proof_spine.html",
+  "body_html": "<h1>Dantzig Proof Spine for Minimax</h1>\n<p>Dantzig's proof represents the minimax theorem through an augmented linear\nsystem.  A basis state stores rows of the inverse basis matrix, a lexicographic\ncondition prevents cycling, and optimality inequalities encode the game-theoretic\nguarantees.</p>\n<p>At an optimal basis, the extracted row strategy is nonnegative and satisfies\nthe row player's guarantee inequalities.  The same basis data extracts a column\nstrategy for player II.  The pivot step updates the inverse basis while\npreserving the lexicographic condition and strictly decreasing the leading row\nin lexicographic order.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "zero_sum.zero_sum_lp_bridge",
+      "title": "Zero-Sum Linear Programming Bridge",
+      "href": "zero_sum/zero_sum_zero_sum_lp_bridge.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "DantzigState",
+      "display_name": "DantzigState",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "DantzigState.isOptimal",
+      "display_name": "DantzigState.isOptimal",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "DantzigState.value",
+      "display_name": "DantzigState.value",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "DantzigState.stratI",
+      "display_name": "DantzigState.stratI",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "DantzigState.basisVar",
+      "display_name": "DantzigState.basisVar",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "dotBeta0Pj_eq",
+      "display_name": "dotBeta0Pj_eq",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "optimal_basis_minimax",
+      "display_name": "optimal_basis_minimax",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "dantzigPivot",
+      "display_name": "dantzigPivot",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "dantzigPivot_lexCond",
+      "display_name": "dantzigPivot_lexCond",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "dantzigPivot_beta0_decrease",
+      "display_name": "dantzigPivot_beta0_decrease",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "dantzig_minimax",
+      "display_name": "dantzig_minimax",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

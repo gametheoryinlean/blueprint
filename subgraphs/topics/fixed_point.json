@@ -1,0 +1,166 @@
+{
+  "topic": {
+    "id": "fixed_point",
+    "title": "Fixed Point",
+    "href": "fixed_point/index.html",
+    "node_count": 6
+  },
+  "counts": {
+    "internal_nodes": 6,
+    "non_proof_plan_nodes": 6,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 8,
+    "visible_nodes_with_selected_proof_plans": 8
+  },
+  "nodes": [
+    {
+      "id": "fixed_point.brouwer_compact_convex",
+      "title": "Brouwer Fixed Point Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_brouwer_compact_convex.html",
+      "payload": "node_payloads/fixed_point_brouwer_compact_convex.json"
+    },
+    {
+      "id": "fixed_point.brouwer_simplex",
+      "title": "Brouwer Fixed Point Theorem For A Simplex",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_brouwer_simplex.html",
+      "payload": "node_payloads/fixed_point_brouwer_simplex.json"
+    },
+    {
+      "id": "fixed_point.kakutani_fixed_point",
+      "title": "Kakutani Fixed Point Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_kakutani_fixed_point.html",
+      "payload": "node_payloads/fixed_point_kakutani_fixed_point.json"
+    },
+    {
+      "id": "fixed_point.kakutani_from_two_player_nash",
+      "title": "Kakutani From Two-Player Nash Existence",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_kakutani_from_two_player_nash.html",
+      "payload": "node_payloads/fixed_point_kakutani_from_two_player_nash.json"
+    },
+    {
+      "id": "fixed_point.retract_fixed_point",
+      "title": "Fixed Point Theorem For Retracts Of A Simplex",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_retract_fixed_point.html",
+      "payload": "node_payloads/fixed_point_retract_fixed_point.json"
+    },
+    {
+      "id": "fixed_point.sperner_lemma",
+      "title": "Sperner Lemma",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_sperner_lemma.html",
+      "payload": "node_payloads/fixed_point_sperner_lemma.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "fixed_point.retract_fixed_point",
+      "to": "fixed_point.brouwer_compact_convex",
+      "kind": "uses"
+    },
+    {
+      "from": "fixed_point.sperner_lemma",
+      "to": "fixed_point.brouwer_simplex",
+      "kind": "uses"
+    },
+    {
+      "from": "fixed_point.brouwer_compact_convex",
+      "to": "fixed_point.kakutani_fixed_point",
+      "kind": "uses"
+    },
+    {
+      "from": "fixed_point.kakutani_fixed_point",
+      "to": "fixed_point.kakutani_from_two_player_nash",
+      "kind": "uses"
+    },
+    {
+      "from": "fixed_point.brouwer_simplex",
+      "to": "fixed_point.retract_fixed_point",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_game/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 75
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_game",
+      "to": "fixed_point.kakutani_from_two_player_nash",
+      "kind": "boundary_dependency",
+      "topic": "strategic_game",
+      "count": 1
+    },
+    {
+      "from": "fixed_point.brouwer_compact_convex",
+      "to": "topic:strategic_game",
+      "kind": "boundary_dependent",
+      "topic": "strategic_game",
+      "count": 3
+    },
+    {
+      "from": "fixed_point.kakutani_fixed_point",
+      "to": "topic:strategic_game",
+      "kind": "boundary_dependent",
+      "topic": "strategic_game",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "brouwer",
+      "title": "brouwer",
+      "href": "keywords/brouwer.html",
+      "count": 2
+    },
+    {
+      "id": "combinatorics",
+      "title": "combinatorics",
+      "href": "keywords/combinatorics.html",
+      "count": 1
+    },
+    {
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 6
+    },
+    {
+      "id": "kakutani",
+      "title": "kakutani",
+      "href": "keywords/kakutani.html",
+      "count": 2
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "retract",
+      "title": "retract",
+      "href": "keywords/retract.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "strategic_game.strict_dominance_never_best_response",
+  "title": "Strict Domination And Never Best Response",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_strict_dominance_never_best_response.html",
+  "body_html": "<h1>Strict Domination And Never Best Response</h1>\n<p>In a finite strategic game, a mixed strategy $m_i\\in\\Delta(S_i)$ is strictly\ndominated if and only if it is never a best response against any correlated\nstrategy of the opponents.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>If $m_i$ is strictly dominated by $\\sigma_i$, linearity of expected payoff extends\nthe strict inequality to every correlated strategy of the opponents, so $m_i$\ncannot be a best response.</p>\n<p>Conversely, form the two-player zero-sum game in which player $i$ compares the\npayoff of a pure action $t_i$ with the payoff of the fixed mixed strategy $m_i$.\nThe hypothesis that $m_i$ is never a best response implies that the auxiliary\nzero-sum game has strictly positive value. An optimal strategy in that game then\nstrictly dominates $m_i$ in the original game.</p>",
+  "deps": [
+    {
+      "id": "strategic_game.best_response",
+      "title": "Best Response",
+      "href": "strategic_game/strategic_game_best_response.html"
+    },
+    {
+      "id": "strategic_game.dominated_strategy",
+      "title": "Dominated Strategy",
+      "href": "strategic_game/strategic_game_dominated_strategy.html"
+    },
+    {
+      "id": "zerosum.minimax_theorem",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "zerosum/zerosum_minimax_theorem.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

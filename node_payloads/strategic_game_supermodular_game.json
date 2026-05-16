@@ -1,0 +1,24 @@
+{
+  "id": "strategic_game.supermodular_game",
+  "title": "Supermodular Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_supermodular_game.html",
+  "body_html": "<h1>Supermodular Game</h1>\n<p>A strategic game $G=(I,(S_i),(g_i))$ is supermodular if each $S_i$ is a compact\nnonempty lattice in some Euclidean space, each $g_i$ is upper semicontinuous in\n$s_i$, and:</p>\n<ol>\n<li>$g_i$ has increasing differences: for $s_i\\ge s'_i$ and\n   $s_{-i}\\ge s'_{-i}$,\n   $$\n     g_i(s_i,s_{-i})-g_i(s'_i,s_{-i})\n     \\ge\n     g_i(s_i,s'_{-i})-g_i(s'_i,s'_{-i});\n   $$</li>\n<li>$g_i$ is supermodular in $s_i$: for every fixed $s_{-i}$,\n   $$\n     g_i(s_i,s_{-i})+g_i(s'_i,s_{-i})\n     \\le\n     g_i(s_i\\vee s'_i,s_{-i})+g_i(s_i\\wedge s'_i,s_{-i}).\n   $$</li>\n</ol>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.strategic_game",
+      "title": "Strategic Game In Normal Form",
+      "href": "strategic_game/strategic_game_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.supermodular_best_response_lattice",
+      "title": "Supermodular Best Responses Are Lattices",
+      "href": "strategic_game/strategic_game_supermodular_best_response_lattice.html"
+    }
+  ],
+  "lean_refs": []
+}

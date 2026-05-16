@@ -1,0 +1,88 @@
+{
+  "topic": {
+    "id": "approachability",
+    "title": "Approachability",
+    "href": "approachability/index.html",
+    "node_count": 2
+  },
+  "counts": {
+    "internal_nodes": 2,
+    "non_proof_plan_nodes": 2,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
+  },
+  "nodes": [
+    {
+      "id": "approachability.blackwell_b_set_approachability",
+      "title": "Blackwell B-Set Approachability",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "approachability/approachability_blackwell_b_set_approachability.html",
+      "payload": "node_payloads/approachability_blackwell_b_set_approachability.json"
+    },
+    {
+      "id": "approachability.deterministic_blackwell_sequence",
+      "title": "Deterministic Blackwell Sequence",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "approachability/approachability_deterministic_blackwell_sequence.html",
+      "payload": "node_payloads/approachability_deterministic_blackwell_sequence.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "approachability.deterministic_blackwell_sequence",
+      "to": "approachability.blackwell_b_set_approachability",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "zerosum",
+      "title": "Zerosum",
+      "href": "zerosum/index.html",
+      "role": "dependent",
+      "node_count": 63
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "approachability.deterministic_blackwell_sequence",
+      "to": "topic:zerosum",
+      "kind": "boundary_dependent",
+      "topic": "zerosum",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "approachability",
+      "title": "approachability",
+      "href": "keywords/approachability.html",
+      "count": 2
+    },
+    {
+      "id": "convexity",
+      "title": "convexity",
+      "href": "keywords/convexity.html",
+      "count": 1
+    },
+    {
+      "id": "repeated-game",
+      "title": "repeated-game",
+      "href": "keywords/repeated-game.html",
+      "count": 1
+    },
+    {
+      "id": "vector-payoff",
+      "title": "vector-payoff",
+      "href": "keywords/vector-payoff.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": []
+}

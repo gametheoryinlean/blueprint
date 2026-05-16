@@ -1,0 +1,114 @@
+{
+  "id": "zerosum.minimax_theorem",
+  "title": "Von Neumann Minimax Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "zerosum/zerosum_minimax_theorem.html",
+  "body_html": "<h1>Von Neumann Minimax Theorem</h1>\n<p>For every finite real matrix game $A$, there exist mixed strategies\n$x^* \\in \\Delta(I)$ and $y^* \\in \\Delta(J)$ and a real number $v$ such that\n$$\n  x^* A y \\ge v \\quad \\text{for all } y \\in \\Delta(J),\n$$\nand\n$$\n  x A y^* \\le v \\quad \\text{for all } x \\in \\Delta(I).\n$$\nEquivalently, the mixed extension has a value\n$$\n  v=\\max_{x \\in \\Delta(I)}\\min_{y \\in \\Delta(J)} xAy\n   =\\min_{y \\in \\Delta(J)}\\max_{x \\in \\Delta(I)} xAy.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "zerosum.mixed_extension",
+      "title": "Mixed Extension Of A Matrix Game",
+      "href": "zerosum/zerosum_mixed_extension.html"
+    },
+    {
+      "id": "zerosum.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "zerosum/zerosum_value.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.strict_dominance_never_best_response",
+      "title": "Strict Domination And Never Best Response",
+      "href": "strategic_game/strategic_game_strict_dominance_never_best_response.html"
+    },
+    {
+      "id": "zerosum.computation_three_by_two_example",
+      "title": "Three-By-Two Matrix Game Computation",
+      "href": "zerosum/zerosum_computation_three_by_two_example.html"
+    },
+    {
+      "id": "zerosum.loomis_theorem",
+      "title": "Loomis Theorem",
+      "href": "zerosum/zerosum_loomis_theorem.html"
+    },
+    {
+      "id": "zerosum.optimal_strategy_sets",
+      "title": "Optimal Strategy Sets",
+      "href": "zerosum/zerosum_optimal_strategy_sets.html"
+    },
+    {
+      "id": "zerosum.ordered_field_minimax",
+      "title": "Ordered-Field Minimax Statement",
+      "href": "zerosum/zerosum_ordered_field_minimax.html"
+    },
+    {
+      "id": "zerosum.stochastic_matrix_invariant_distribution",
+      "title": "Stochastic Matrix Has An Invariant Distribution",
+      "href": "zerosum/zerosum_stochastic_matrix_invariant_distribution.html"
+    },
+    {
+      "id": "zerosum.two_by_two_value_formula",
+      "title": "Two-By-Two Value Formula",
+      "href": "zerosum/zerosum_two_by_two_value_formula.html"
+    },
+    {
+      "id": "zerosum.value_operator_properties",
+      "title": "Value Operator Properties",
+      "href": "zerosum/zerosum_value_operator_properties.html"
+    },
+    {
+      "id": "zerosum.ville_discretization_proof",
+      "title": "Ville Theorem By Discretization",
+      "href": "zerosum/zerosum_ville_discretization_proof.html"
+    },
+    {
+      "id": "zerosum.ville_theorem",
+      "title": "Ville Theorem",
+      "href": "zerosum/zerosum_ville_theorem.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "MatrixGame.minimax_theorem",
+      "display_name": "MatrixGame.minimax_theorem",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.minimax_optimal_strategies",
+      "display_name": "MatrixGame.minimax_optimal_strategies",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "dantzig_minimax",
+      "display_name": "dantzig_minimax",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

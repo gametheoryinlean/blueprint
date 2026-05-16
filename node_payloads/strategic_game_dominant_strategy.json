@@ -1,0 +1,45 @@
+{
+  "id": "strategic_game.dominant_strategy",
+  "title": "Dominant Strategy",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_dominant_strategy.html",
+  "body_html": "<h1>Dominant Strategy</h1>\n<p>A strategy $s_i\\in S_i$ is dominant for player $i$ if\n$$\n  g_i(s_i,s_{-i})\\ge g_i(t_i,s_{-i})\n  \\quad\\text{for all }t_i\\in S_i,\\ s_{-i}\\in S_{-i}.\n$$\nIt is strictly dominant if the inequality is strict for every\n$t_i\\ne s_i$ and every $s_{-i}$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.strategic_game",
+      "title": "Strategic Game In Normal Form",
+      "href": "strategic_game/strategic_game_strategic_game.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "IsWeaklyDominant",
+      "display_name": "IsWeaklyDominant",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "IsStrictlyDominant",
+      "display_name": "IsStrictlyDominant",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

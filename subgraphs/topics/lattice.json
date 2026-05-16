@@ -1,0 +1,68 @@
+{
+  "topic": {
+    "id": "lattice",
+    "title": "Lattice",
+    "href": "lattice/index.html",
+    "node_count": 1
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 3,
+    "visible_nodes_with_selected_proof_plans": 3
+  },
+  "nodes": [
+    {
+      "id": "lattice.tarski_fixed_point",
+      "title": "Tarski Fixed Point Theorem For Compact Euclidean Lattices",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "lattice/lattice_tarski_fixed_point.html",
+      "payload": "node_payloads/lattice_tarski_fixed_point.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_game/index.html",
+      "role": "dependent",
+      "node_count": 75
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "lattice.tarski_fixed_point",
+      "to": "topic:strategic_game",
+      "kind": "boundary_dependent",
+      "topic": "strategic_game",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 1
+    },
+    {
+      "id": "lattice",
+      "title": "lattice",
+      "href": "keywords/lattice.html",
+      "count": 1
+    },
+    {
+      "id": "tarski",
+      "title": "tarski",
+      "href": "keywords/tarski.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": []
+}

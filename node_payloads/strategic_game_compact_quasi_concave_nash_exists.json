@@ -1,0 +1,34 @@
+{
+  "id": "strategic_game.compact_quasi_concave_nash_exists",
+  "title": "Nash Existence In Compact Quasi-Concave Games",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_compact_quasi_concave_nash_exists.html",
+  "body_html": "<h1>Nash Existence In Compact Quasi-Concave Games</h1>\n<p>If $G$ is compact, continuous, and quasi-concave, then the set of Nash equilibria\nis nonempty and compact.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>MFoGT uses the maximal-element formulation. For each potential deviation $t$,\nlet $A(t)$ be the compact set of profiles not dominated by $t$. A Nash equilibrium\nis an element of $\\bigcap_{t\\in S}A(t)$. By compactness it suffices to prove the\nfinite intersection property. For finitely many deviations, restrict each player's\nstrategy set to the convex hull of their finitely many deviating strategies, obtain a\nfinite-dimensional compact convex game, and apply Kakutani's fixed point theorem\nto the best-response correspondence.</p>",
+  "deps": [
+    {
+      "id": "fixed_point.kakutani_fixed_point",
+      "title": "Kakutani Fixed Point Theorem",
+      "href": "fixed_point/fixed_point_kakutani_fixed_point.html"
+    },
+    {
+      "id": "strategic_game.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_game/strategic_game_nash_equilibrium.html"
+    },
+    {
+      "id": "strategic_game.quasi_concave_game",
+      "title": "Quasi-Concave Game",
+      "href": "strategic_game/strategic_game_quasi_concave_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_game.mixed_equilibrium_compact_continuous",
+      "title": "Mixed Equilibrium In Compact Continuous Games",
+      "href": "strategic_game/strategic_game_mixed_equilibrium_compact_continuous.html"
+    }
+  ],
+  "lean_refs": []
+}

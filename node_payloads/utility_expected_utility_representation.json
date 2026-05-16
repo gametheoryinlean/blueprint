@@ -1,0 +1,105 @@
+{
+  "id": "utility.expected_utility_representation",
+  "title": "Expected Utility Representation",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "utility/utility_expected_utility_representation.html",
+  "body_html": "<h1>Expected Utility Representation</h1>\n<p>If a preference relation over lotteries satisfies the vNM axioms, then there is\na utility index $u:O\\to \\mathbb{R}$ such that the preference over lotteries is\nrepresented by expected utility:\n$$\n  L \\mapsto \\sum_{o\\in O} L(o)u(o).\n$$</p>\n<p>Equivalently, a linear utility functional on lotteries is determined by its\nvalues on degenerate lotteries.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>MSZ first uses continuity to normalize every lottery between a best and a worst\noutcome, then uses independence to show that the resulting numerical index is\nlinear with respect to compound lotteries. The expected value formula follows by\ndecomposing a finite lottery into degenerate lotteries.</p>\n<p>The current Lean library already has the expected-value operator and the\nlinearity statement for expected value. The full representation theorem is\npresent as a theorem target in <code>GameTheoryLib/Utility/Lottery.lean</code>, but its\nproof is still open.</p>",
+  "deps": [
+    {
+      "id": "utility.utility_representation",
+      "title": "Utility Representation",
+      "href": "utility/utility_utility_representation.html"
+    },
+    {
+      "id": "utility.vnm_axioms",
+      "title": "Von Neumann Morgenstern Axioms",
+      "href": "utility/utility_vnm_axioms.html"
+    },
+    {
+      "id": "utility.lottery",
+      "title": "Lottery",
+      "href": "utility/utility_lottery.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "utility.positive_affine_uniqueness",
+      "title": "Positive Affine Uniqueness Of Utility",
+      "href": "utility/utility_positive_affine_uniqueness.html"
+    },
+    {
+      "id": "utility.risk_neutrality",
+      "title": "Risk Neutrality",
+      "href": "utility/utility_risk_neutrality.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Lottery.expectedValue",
+      "display_name": "Lottery.expectedValue",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Lottery.expectedValue_pure",
+      "display_name": "Lottery.expectedValue_pure",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "Lottery.expectedValue_mix",
+      "display_name": "Lottery.expectedValue_mix",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "IsLinearUtility",
+      "display_name": "IsLinearUtility",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    },
+    {
+      "name": "expectedValue_isLinearUtility",
+      "display_name": "expectedValue_isLinearUtility",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "raw",
+      "reason": null
+    }
+  ]
+}

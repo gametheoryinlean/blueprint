@@ -1,0 +1,18 @@
+{
+  "id": "strategic_game.prudent_strategy",
+  "title": "Prudent Strategy",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_game/strategic_game_prudent_strategy.html",
+  "body_html": "<h1>Prudent Strategy</h1>\n<p>A mixed strategy $\\sigma_i\\in\\Delta(S_i)$ is prudent for player $i$ if, for every\npure opponent profile $s_{-i}\\in S_{-i}$,\n$$\n  g_i(\\sigma_i,s_{-i})\\ge\n  \\max_{\\tau_i\\in\\Delta(S_i)}\n  \\min_{t_{-i}\\in S_{-i}} g_i(\\tau_i,t_{-i}).\n$$\nThus a prudent strategy guarantees player $i$ at least the player's maxmin\nsecurity payoff.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_game.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_game/strategic_game_mixed_strategy.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}
