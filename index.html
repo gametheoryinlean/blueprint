@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge Base — mdblueprint</title>
+  <title>Home — GameTheoryLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -17,28 +17,37 @@
           crossorigin="anonymous"></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      renderMathInElement(document.body, {
-        delimiters: [
-          { left: "$$", right: "$$", display: true },
-          { left: "\\[", right: "\\]", display: true },
-          { left: "$", right: "$", display: false },
-          { left: "\\(", right: "\\)", display: false }
-        ],
-        throwOnError: false
-      });
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
     });
   </script>
 </head>
 <body>
   <nav class="sidebar">
-    <a class="logo" href="index.html">mdblueprint</a>
+    <a class="logo" href="index.html">GameTheoryLib</a>
     <section class="nav-section" aria-labelledby="nav-topics">
       <h2 id="nav-topics">Topics</h2>
       <ul class="topic-list nav-list">
       
-        <li><a href="strategic_games/index.html">strategic_games</a></li>
+        <li><a href="approachability/index.html">approachability</a></li>
       
-        <li><a href="zero_sum/index.html">zero_sum</a></li>
+        <li><a href="extensive_game/index.html">extensive_game</a></li>
+      
+        <li><a href="fixed_point/index.html">fixed_point</a></li>
+      
+        <li><a href="lattice/index.html">lattice</a></li>
+      
+        <li><a href="linear_algebra/index.html">linear_algebra</a></li>
+      
+        <li><a href="linear_programming/index.html">linear_programming</a></li>
+      
+        <li><a href="order/index.html">order</a></li>
+      
+        <li><a href="strategic_game/index.html">strategic_game</a></li>
+      
+        <li><a href="utility/index.html">utility</a></li>
+      
+        <li><a href="zerosum/index.html">zerosum</a></li>
       
       </ul>
     </section>
@@ -47,41 +56,263 @@
       <h2 id="nav-keywords">Keywords</h2>
       <ul class="keyword-list nav-list">
       
-        <li><a href="keywords/classic.html">classic</a></li>
+        <li><a href="keywords/action.html">action</a></li>
+      
+        <li><a href="keywords/affine.html">affine</a></li>
+      
+        <li><a href="keywords/alternatives.html">alternatives</a></li>
+      
+        <li><a href="keywords/antisymmetric.html">antisymmetric</a></li>
+      
+        <li><a href="keywords/approachability.html">approachability</a></li>
+      
+        <li><a href="keywords/approximate-equilibrium.html">approximate-equilibrium</a></li>
+      
+        <li><a href="keywords/backward-induction.html">backward-induction</a></li>
+      
+        <li><a href="keywords/bargaining.html">bargaining</a></li>
+      
+        <li><a href="keywords/behavioral-strategy.html">behavioral-strategy</a></li>
+      
+        <li><a href="keywords/belief.html">belief</a></li>
+      
+        <li><a href="keywords/best-response.html">best-response</a></li>
+      
+        <li><a href="keywords/brouwer.html">brouwer</a></li>
+      
+        <li><a href="keywords/chance.html">chance</a></li>
+      
+        <li><a href="keywords/combinatorics.html">combinatorics</a></li>
+      
+        <li><a href="keywords/common-knowledge.html">common-knowledge</a></li>
+      
+        <li><a href="keywords/compactness.html">compactness</a></li>
+      
+        <li><a href="keywords/complementarity.html">complementarity</a></li>
+      
+        <li><a href="keywords/computation.html">computation</a></li>
+      
+        <li><a href="keywords/continuity.html">continuity</a></li>
+      
+        <li><a href="keywords/continuous-game.html">continuous-game</a></li>
+      
+        <li><a href="keywords/convex-game.html">convex-game</a></li>
+      
+        <li><a href="keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="keywords/correlated-equilibrium.html">correlated-equilibrium</a></li>
+      
+        <li><a href="keywords/correlation.html">correlation</a></li>
+      
+        <li><a href="keywords/counterexample.html">counterexample</a></li>
+      
+        <li><a href="keywords/cournot.html">cournot</a></li>
+      
+        <li><a href="keywords/definition.html">definition</a></li>
+      
+        <li><a href="keywords/derived-game.html">derived-game</a></li>
+      
+        <li><a href="keywords/determinacy.html">determinacy</a></li>
+      
+        <li><a href="keywords/deviation.html">deviation</a></li>
+      
+        <li><a href="keywords/discontinuous-game.html">discontinuous-game</a></li>
       
         <li><a href="keywords/dominance.html">dominance</a></li>
       
+        <li><a href="keywords/duality.html">duality</a></li>
+      
+        <li><a href="keywords/duel.html">duel</a></li>
+      
         <li><a href="keywords/equilibrium.html">equilibrium</a></li>
+      
+        <li><a href="keywords/equilibrium-refinement.html">equilibrium-refinement</a></li>
+      
+        <li><a href="keywords/equilibrium-selection.html">equilibrium-selection</a></li>
       
         <li><a href="keywords/example.html">example</a></li>
       
+        <li><a href="keywords/exercise.html">exercise</a></li>
+      
+        <li><a href="keywords/existence.html">existence</a></li>
+      
+        <li><a href="keywords/expected-payoff.html">expected-payoff</a></li>
+      
+        <li><a href="keywords/expected-utility.html">expected-utility</a></li>
+      
+        <li><a href="keywords/extensive-game.html">extensive-game</a></li>
+      
+        <li><a href="keywords/farkas.html">farkas</a></li>
+      
+        <li><a href="keywords/feasible-payoff.html">feasible-payoff</a></li>
+      
+        <li><a href="keywords/fictitious-play.html">fictitious-play</a></li>
+      
         <li><a href="keywords/finite-game.html">finite-game</a></li>
       
-        <li><a href="keywords/foundational.html">foundational</a></li>
+        <li><a href="keywords/fixed-point.html">fixed-point</a></li>
+      
+        <li><a href="keywords/focal-point.html">focal-point</a></li>
+      
+        <li><a href="keywords/forward-induction.html">forward-induction</a></li>
+      
+        <li><a href="keywords/game-tree.html">game-tree</a></li>
+      
+        <li><a href="keywords/genericity.html">genericity</a></li>
+      
+        <li><a href="keywords/guarantee.html">guarantee</a></li>
+      
+        <li><a href="keywords/imperfect-information.html">imperfect-information</a></li>
+      
+        <li><a href="keywords/independence.html">independence</a></li>
+      
+        <li><a href="keywords/information-set.html">information-set</a></li>
+      
+        <li><a href="keywords/invariance.html">invariance</a></li>
+      
+        <li><a href="keywords/invariant-distribution.html">invariant-distribution</a></li>
+      
+        <li><a href="keywords/kakutani.html">kakutani</a></li>
+      
+        <li><a href="keywords/kuhn-theorem.html">kuhn-theorem</a></li>
+      
+        <li><a href="keywords/lattice.html">lattice</a></li>
+      
+        <li><a href="keywords/learning.html">learning</a></li>
+      
+        <li><a href="keywords/limit.html">limit</a></li>
+      
+        <li><a href="keywords/linear-algebra.html">linear-algebra</a></li>
       
         <li><a href="keywords/linear-programming.html">linear-programming</a></li>
       
+        <li><a href="keywords/loomis.html">loomis</a></li>
+      
+        <li><a href="keywords/lottery.html">lottery</a></li>
+      
         <li><a href="keywords/matrix-game.html">matrix-game</a></li>
+      
+        <li><a href="keywords/mertens.html">mertens</a></li>
       
         <li><a href="keywords/minimax.html">minimax</a></li>
       
+        <li><a href="keywords/minmax.html">minmax</a></li>
+      
+        <li><a href="keywords/minority-game.html">minority-game</a></li>
+      
         <li><a href="keywords/mixed-strategy.html">mixed-strategy</a></li>
+      
+        <li><a href="keywords/monotone-game.html">monotone-game</a></li>
       
         <li><a href="keywords/nash-equilibrium.html">nash-equilibrium</a></li>
       
-        <li><a href="keywords/payoff.html">payoff</a></li>
+        <li><a href="keywords/nature.html">nature</a></li>
+      
+        <li><a href="keywords/normal-form.html">normal-form</a></li>
+      
+        <li><a href="keywords/obedience.html">obedience</a></li>
+      
+        <li><a href="keywords/optimal-strategy.html">optimal-strategy</a></li>
+      
+        <li><a href="keywords/order.html">order</a></li>
+      
+        <li><a href="keywords/ordered-field.html">ordered-field</a></li>
+      
+        <li><a href="keywords/outcome.html">outcome</a></li>
+      
+        <li><a href="keywords/perfect-information.html">perfect-information</a></li>
+      
+        <li><a href="keywords/perfect-recall.html">perfect-recall</a></li>
+      
+        <li><a href="keywords/perfection.html">perfection</a></li>
+      
+        <li><a href="keywords/perron-frobenius.html">perron-frobenius</a></li>
+      
+        <li><a href="keywords/polytope.html">polytope</a></li>
+      
+        <li><a href="keywords/preference.html">preference</a></li>
+      
+        <li><a href="keywords/profile.html">profile</a></li>
       
         <li><a href="keywords/proof-plan.html">proof-plan</a></li>
       
-        <li><a href="keywords/solution-concept.html">solution-concept</a></li>
+        <li><a href="keywords/proper-equilibrium.html">proper-equilibrium</a></li>
       
-        <li><a href="keywords/staged.html">staged</a></li>
+        <li><a href="keywords/prudence.html">prudence</a></li>
+      
+        <li><a href="keywords/randomized-strategy.html">randomized-strategy</a></li>
+      
+        <li><a href="keywords/rationality.html">rationality</a></li>
+      
+        <li><a href="keywords/rationalizability.html">rationalizability</a></li>
+      
+        <li><a href="keywords/refinement.html">refinement</a></li>
+      
+        <li><a href="keywords/repeated-game.html">repeated-game</a></li>
+      
+        <li><a href="keywords/retract.html">retract</a></li>
+      
+        <li><a href="keywords/risk.html">risk</a></li>
+      
+        <li><a href="keywords/robinson.html">robinson</a></li>
+      
+        <li><a href="keywords/saddle-point.html">saddle-point</a></li>
+      
+        <li><a href="keywords/semi-algebraic.html">semi-algebraic</a></li>
+      
+        <li><a href="keywords/separation.html">separation</a></li>
+      
+        <li><a href="keywords/sequential-equilibrium.html">sequential-equilibrium</a></li>
+      
+        <li><a href="keywords/simplex.html">simplex</a></li>
+      
+        <li><a href="keywords/sion.html">sion</a></li>
+      
+        <li><a href="keywords/smooth-game.html">smooth-game</a></li>
+      
+        <li><a href="keywords/stochastic-matrix.html">stochastic-matrix</a></li>
       
         <li><a href="keywords/strategic-game.html">strategic-game</a></li>
       
-        <li><a href="keywords/theorem.html">theorem</a></li>
+        <li><a href="keywords/strategic-stability.html">strategic-stability</a></li>
+      
+        <li><a href="keywords/strategy.html">strategy</a></li>
+      
+        <li><a href="keywords/strict-equilibrium.html">strict-equilibrium</a></li>
+      
+        <li><a href="keywords/subgame.html">subgame</a></li>
+      
+        <li><a href="keywords/subgame-perfect-equilibrium.html">subgame-perfect-equilibrium</a></li>
+      
+        <li><a href="keywords/supermodular-game.html">supermodular-game</a></li>
+      
+        <li><a href="keywords/support.html">support</a></li>
+      
+        <li><a href="keywords/symmetry.html">symmetry</a></li>
+      
+        <li><a href="keywords/tarski.html">tarski</a></li>
+      
+        <li><a href="keywords/topology.html">topology</a></li>
+      
+        <li><a href="keywords/two-by-two.html">two-by-two</a></li>
+      
+        <li><a href="keywords/utility.html">utility</a></li>
       
         <li><a href="keywords/value.html">value</a></li>
+      
+        <li><a href="keywords/value-operator.html">value-operator</a></li>
+      
+        <li><a href="keywords/variational-inequality.html">variational-inequality</a></li>
+      
+        <li><a href="keywords/vector-payoff.html">vector-payoff</a></li>
+      
+        <li><a href="keywords/ville.html">ville</a></li>
+      
+        <li><a href="keywords/vnm.html">vnm</a></li>
+      
+        <li><a href="keywords/weak-duality.html">weak-duality</a></li>
+      
+        <li><a href="keywords/zermelo.html">zermelo</a></li>
       
         <li><a href="keywords/zero-sum.html">zero-sum</a></li>
       
@@ -93,147 +324,1355 @@
   <main>
     
 <section class="blueprint-overview">
-  <h1>Knowledge Base</h1>
-  <p>21 nodes across 2 topics.</p>
+  <h1>GameTheoryLib Knowledge Blueprint</h1>
+  <p>213 nodes across 10 topics.</p>
   <p><a href="dep_graph_document.html">Dependency graph</a></p>
 </section>
 
 <nav class="blueprint-index-outline" aria-label="Knowledge outline">
   
   <section class="outline-topic">
-    <h2><a href="strategic_games/index.html">Strategic Games</a></h2>
+    <h2><a href="approachability/index.html">Approachability</a></h2>
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_best_response.html">Best Response</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_dominant_implies_nash.html">Dominant Strategy Profile is a Nash Equilibrium</a>
+        <a class="outline-node-title" href="approachability/approachability_blackwell_b_set_approachability.html">Blackwell B-Set Approachability</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_mixed_strategy.html">Mixed Strategy</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_nash_equilibrium.html">Nash Equilibrium</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_prisoners_dilemma.html">Prisoner&#39;s Dilemma</a>
-        <span class="example_thmcaption thm-caption">Example</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_strategic_game.html">Strategic Game</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_strategy_profile.html">Strategy Profile</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_strictly_dominates.html">Strict Dominance</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_unilateral_deviation.html">Unilateral Deviation</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_weakly_dominates.html">Weak Dominance</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="strategic_games/strategic_games_weakly_dominant_strategy.html">Weakly Dominant Strategy</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-admitted">admitted</span>
+        <a class="outline-node-title" href="approachability/approachability_deterministic_blackwell_sequence.html">Deterministic Blackwell Sequence</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
     </ol>
   </section>
   
   <section class="outline-topic">
-    <h2><a href="zero_sum/index.html">Zero Sum</a></h2>
+    <h2><a href="extensive_game/index.html">Extensive Game</a></h2>
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_dantzig_proof_spine.html">Dantzig Proof Spine for Minimax</a>
-        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_mixed_matrix_payoff.html">Expected Payoff of a Matrix Game</a>
+        <a class="outline-node-title" href="extensive_game/extensive_game_action_at_information_set.html">Action At An Information Set</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_matrix_game.html">Matrix Game</a>
+        <a class="outline-node-title" href="extensive_game/extensive_game_agent_normal_form.html">Agent Normal Form</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_maximin_minimax.html">Maximin and Minimax Values</a>
+        <a class="outline-node-title" href="extensive_game/extensive_game_backward_forward_induction_incompatibility.html">Backward And Forward Induction Can Conflict</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_behavioral_equilibrium.html">Behavioral Equilibrium</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a>
-        <span class="lemma_thmcaption thm-caption">Lemma</span>
-        <span class="badge status-admitted">admitted</span>
+        <a class="outline-node-title" href="extensive_game/extensive_game_belief_system.html">Belief System</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_zero_sum_nash_value_unique.html">Nash Payoff Uniqueness in Zero-Sum Games</a>
+        <a class="outline-node-title" href="extensive_game/extensive_game_chomp_strategy_stealing.html">Chomp Strategy Stealing</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_zero_sum_payoff_negation.html">Payoff Negation in Zero-Sum Games</a>
-        <span class="lemma_thmcaption thm-caption">Lemma</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-admitted">admitted</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_zero_sum_game.html">Zero-Sum Game</a>
+        <a class="outline-node-title" href="extensive_game/extensive_game_determined_game.html">Determined Game</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
+        <span class="badge status-staged">staged</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/zero_sum_zero_sum_lp_bridge.html">Zero-Sum Linear Programming Bridge</a>
+        <a class="outline-node-title" href="extensive_game/extensive_game_entrant_incomplete_information_value_example.html">Entrant Incomplete Information Value Example</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_behavioral_equilibrium_exists.html">Existence Of Behavioral Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_sequential_equilibrium_exists.html">Existence Of Sequential Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_spe_exists_perfect_recall.html">Existence Of Subgame-Perfect Equilibrium With Perfect Recall</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_extensive_form_perfect_equilibrium.html">Extensive Form Perfect Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_imperfect_information_extensive_game.html">Extensive Game With Imperfect Information</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_perfect_information_extensive_game.html">Finite Extensive Game With Perfect Information</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_forward_induction.html">Forward Induction</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_game_tree.html">Game Tree</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_generic_unique_spe.html">Generic Uniqueness Of Subgame-Perfect Equilibrium</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_history_and_subgame.html">History And Subgame</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_information_set.html">Information Set</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_information_set_refinement_equilibrium.html">Information Set Refinement And Equilibrium</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_isbell_behavioral_to_mixed.html">Isbell Behavioral-To-Mixed Equivalence</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_kuhn_spe_existence.html">Kuhn Existence Of Pure Subgame-Perfect Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_perfect_recall_mixed_to_behavioral.html">Kuhn Mixed-To-Behavioral Equivalence</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_linear_extensive_game.html">Linear Extensive Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_local_characterization_behavioral_equilibrium.html">Local Characterization Of Behavioral Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_mertens_stable_sets.html">Mertens Stable Sets</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_mixed_behavioral_general_strategies.html">Mixed Behavioral And General Strategies</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_nature_player.html">Nature In Extensive Games</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_normal_vs_extensive_perfection_difference.html">Normal And Extensive Perfection Can Differ</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_extensive_normal_form_invariance.html">Normal Form Invariance Of Extensive Representations</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_normal_form_reduction.html">Normal Form Reduction</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_perfect_recall.html">Perfect Recall</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_poker_game_value_example.html">Poker Game Value Example</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_proper_equilibrium_induces_sequential.html">Proper Equilibrium Induces Sequential Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_imperfect_information_pure_strategy.html">Pure Strategy With Imperfect Information</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_reached_information_set.html">Reached Information Set</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_rubinstein_bargaining_spe.html">Rubinstein Bargaining Subgame Perfect Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_semi_reduced_normal_form.html">Semi-Reduced Normal Form</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_sequential_equilibrium.html">Sequential Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_simple_perfect_information_game.html">Simple Perfect-Information Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_strategic_stability.html">Strategic Stability</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_perfect_information_strategy.html">Strategy In A Perfect-Information Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_strategy_profile_induced_outcome.html">Strategy Profile And Induced Outcome</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_strictly_competitive_perfect_information_determined.html">Strictly Competitive Perfect-Information Determinacy</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_spe_implies_nash.html">Subgame-Perfect Equilibrium Implies Nash Equilibrium</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_spe_imperfect_information.html">Subgame-Perfect Equilibrium In Imperfect-Information Games</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_subgame_perfect_equilibrium.html">Subgame-Perfect Equilibrium In Perfect-Information Games</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_subroot_subgame.html">Subroot And Subgame In Imperfect-Information Games</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_zero_sum_perfect_information_value.html">Value In Finite Zero-Sum Perfect-Information Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_weak_bayesian_perfect_equilibrium.html">Weak Bayesian Perfect Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="extensive_game/extensive_game_zermelo_determinacy.html">Zermelo Determinacy For Finite Perfect-Information Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="fixed_point/index.html">Fixed Point</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="fixed_point/fixed_point_brouwer_compact_convex.html">Brouwer Fixed Point Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="fixed_point/fixed_point_brouwer_simplex.html">Brouwer Fixed Point Theorem For A Simplex</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="fixed_point/fixed_point_retract_fixed_point.html">Fixed Point Theorem For Retracts Of A Simplex</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="fixed_point/fixed_point_kakutani_fixed_point.html">Kakutani Fixed Point Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="fixed_point/fixed_point_kakutani_from_two_player_nash.html">Kakutani From Two-Player Nash Existence</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="fixed_point/fixed_point_sperner_lemma.html">Sperner Lemma</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="lattice/index.html">Lattice</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="lattice/lattice_tarski_fixed_point.html">Tarski Fixed Point Theorem For Compact Euclidean Lattices</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="linear_algebra/index.html">Linear Algebra</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="linear_algebra/linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="linear_algebra/linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="linear_programming/index.html">Linear Programming</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="linear_programming/linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="order/index.html">Order</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="order/order_sup_inf_choice_function_identity.html">Sup-Inf Choice Function Identity</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="strategic_game/index.html">Strategic Game</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_approximate_solution.html">Approximate Solution</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_approximate_solution_is_reny.html">Approximate Solutions Are Reny Solutions</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_best_response.html">Best Response</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_best_response_face.html">Best Response Face</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_br_invariance.html">Best-Response Invariance</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_better_reply_secure_game.html">Better Reply Secure Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_common_knowledge_equilibrium_filtering.html">Common Knowledge Can Filter Nash Equilibria</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_convex_game.html">Convex Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_convex_game_variational_characterization.html">Convex Game Nash Variational Characterization</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_correlated_best_response_not_independent.html">Correlated Best Response Need Not Be Independent</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_correlated_equilibrium.html">Correlated Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_correlated_equilibrium_exists.html">Correlated Equilibrium Exists In Finite Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_correlated_equilibrium_convex_compact.html">Correlated Equilibrium Set Is Convex And Compact</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_correlated_strategy.html">Correlated Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_cournot_duopoly_supermodular_existence.html">Cournot Duopoly Equilibrium From Supermodularity</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_cournot_fishermen_equilibria.html">Cournot Fishermen Equilibria</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_degenerate_correlated_equilibrium.html">Degenerate Correlated Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_dominant_strategy.html">Dominant Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_dominated_strategy.html">Dominated Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_epsilon_equilibrium.html">Epsilon Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_epsilon_perfect_equilibrium.html">Epsilon Perfect Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_epsilon_proper_equilibrium.html">Epsilon Proper Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_perfect_equilibrium_exists.html">Existence Of Perfect Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_proper_equilibrium_exists.html">Existence Of Proper Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_reny_solution_exists.html">Existence Of Reny Solutions</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_feasible_payoffs.html">Feasible And Individually Rational Payoffs</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_finite_nash_computation_examples.html">Finite Nash Equilibrium Computation Examples</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_first_order_nash_condition.html">First-Order Nash Condition</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_focal_point.html">Focal Point</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_iterated_elimination.html">Iterated Elimination Of Strictly Dominated Strategies</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_mediated_game.html">Mediated Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_mixed_equilibrium_compact_continuous.html">Mixed Equilibrium In Compact Continuous Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_mixed_extension.html">Mixed Extension Of A Strategic Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_mixed_nash_equilibrium.html">Mixed Nash Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_mixed_strategy.html">Mixed Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_monotone_game.html">Monotone Smooth Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_monotone_game_nash_uniqueness.html">Nash Characterization And Uniqueness In Monotone Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_nash_is_rationalizable.html">Nash Equilibria Are Rationalizable</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_nash_equilibrium.html">Nash Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_nash_induces_correlated_equilibrium.html">Nash Equilibrium Induces Correlated Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_nash_existence_finite_games.html">Nash Existence For Finite Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_discontinuous_nash_existence.html">Nash Existence In Better Reply Secure Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_compact_quasi_concave_nash_exists.html">Nash Existence In Compact Quasi-Concave Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_convex_game_nash_exists.html">Nash Existence In Convex Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_supermodular_game_nash_exists.html">Nash Existence In Supermodular Games</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_nash_payoffs_are_individually_rational.html">Nash Payoffs Are Individually Rational</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_noncontractible_feasible_payoff_example.html">Noncontractible Feasible Payoff Example</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_obedience_condition.html">Obedience Condition</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_perfect_equilibrium.html">Perfect Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_perfect_equilibrium_undominated_two_player.html">Perfect Equilibrium And Undominated Equilibrium</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_proper_vs_perfect_equilibrium_examples.html">Proper And Perfect Equilibrium Examples</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_proper_equilibrium.html">Proper Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_prudent_strategy.html">Prudent Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_quasi_concave_game.html">Quasi-Concave Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_rationalizable_fixed_point.html">Rationalizable Set As Largest Best-Response Fixed Set</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_rationalizable_strategy.html">Rationalizable Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_recommendation_strategy.html">Recommendation Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_reny_solution.html">Reny Solution</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_mixed_nash_semialgebraic.html">Semi-Algebraic Mixed Nash Set</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_smooth_game.html">Smooth Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_dominance_solvable_game.html">Solvable Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_solvable_unique_nash.html">Solvable Games Have A Unique Nash Equilibrium</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_strategic_game.html">Strategic Game In Normal Form</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_strategy_profile.html">Strategy Profile</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_strict_dominance_never_best_response.html">Strict Domination And Never Best Response</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_strict_equilibrium.html">Strict Equilibrium</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_strict_equilibrium_is_proper.html">Strict Equilibrium Is Proper</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_supermodular_best_response_lattice.html">Supermodular Best Responses Are Lattices</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_supermodular_game.html">Supermodular Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_symmetric_game.html">Symmetric Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_symmetric_mixed_equilibrium.html">Symmetric Mixed Equilibrium</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_threat_point.html">Threat Point</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_minority_game_equilibrium_characterization.html">Three-Player Minority Game Equilibria</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_unilateral_deviation.html">Unilateral Deviation</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="strategic_game/strategic_game_weak_dominance_never_best_response.html">Weak Domination And Completely Mixed Tests</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="utility/index.html">Utility</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_expected_utility_representation.html">Expected Utility Representation</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_vnm_axiom_independence.html">Independence Of The VNM Axioms</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_lottery.html">Lottery</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_positive_affine_uniqueness.html">Positive Affine Uniqueness Of Utility</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_preference_relation.html">Preference Relation</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_risk_neutrality.html">Risk Neutrality</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_sure_thing_principle.html">Sure Thing Principle</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_utility_representation.html">Utility Representation</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="utility/utility_vnm_axioms.html">Von Neumann Morgenstern Axioms</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="zerosum/index.html">Zerosum</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_antisymmetric_matrix_game_value.html">Antisymmetric Matrix Games Have Value</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_common_guarantee_value.html">Common Guarantee Gives The Value</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_compact_mixed_vs_finite_support_minimax.html">Compact Mixed Versus Finite-Support Minimax</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_continuous_fictitious_play_gap.html">Continuous Fictitious Play Closes The Duality Gap</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_derived_game.html">Derived Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_diagonal_matrix_game_value.html">Diagonal Matrix Game Value</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>
         <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_value_directional_derivative.html">Directional Derivative Of The Value</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_duality_gap.html">Duality Gap In A Matrix Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_empirical_frequency.html">Empirical Frequency Of Play</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_epsilon_optimal_strategy.html">Epsilon-Optimal Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_fictitious_play.html">Fictitious Play</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_fictitious_play_convergence.html">Fictitious Play Convergence</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_finite_opponent_separation_minimax.html">Finite-Opponent Separation Minimax</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_general_mixed_minimax_theorem.html">General Mixed Minimax Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_general_mixed_strategy_space.html">General Mixed Strategy Space</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_value_operator_general.html">General Value Operator</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_value_operator_nonexpansive_general.html">General Value Operator Is Nonexpansive</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_intersection_lemma.html">Intersection Lemma</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_lp_duality_minimax_proof.html">LP Duality Proof Of Minimax</a>
+        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_loomis_theorem.html">Loomis Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_matching_pennies.html">Matching Pennies</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_matrix_game.html">Matrix Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_maxmin_minmax.html">Maxmin And Minmax</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_maxmin_le_minmax.html">Maxmin Is At Most Minmax</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_minimax_from_antisymmetric_games.html">Minimax From Antisymmetric Games</a>
+        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_minimax_from_deterministic_approachability.html">Minimax From Deterministic Approachability</a>
+        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_minimax_from_loomis.html">Minimax Theorem From Loomis Theorem</a>
+        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_mixed_extension.html">Mixed Extension Of A Matrix Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_mixed_extension_pathology.html">Mixed Extension Pathology</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_mixed_strategy_simplex.html">Mixed Strategy Simplex</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_monotone_decreasing_values_limit.html">Monotone Decreasing Values Limit</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_monotone_family_assumption_counterexamples.html">Monotone Family Assumption Counterexamples</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_noisy_duel_multiple_bullets_value.html">Noisy Duel With Multiple Bullets</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_noisy_duel_one_bullet_value.html">Noisy One-Bullet Duel Value</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_pure_minimax_compact_convex_one_sided.html">One-Sided Compact Convex Minimax</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_optimal_pairs_are_saddle_points.html">Optimal Pairs Are Exactly Saddle Points</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_optimal_strategy_sets.html">Optimal Strategy Sets</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_optimal_strategy_sets_are_polytopes.html">Optimal Strategy Sets Are Polytopes</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_player_guarantee.html">Player Guarantee</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_quasi_concavity_semicontinuity.html">Quasi-Concavity And Semicontinuity</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_fictitious_play_robinson_proof.html">Robinson Proof Of Fictitious Play Convergence</a>
+        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_saddle_point.html">Saddle Point</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_silent_duel_no_pure_value.html">Silent One-Bullet Duel Has No Pure Value</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_asymmetric_silent_noisy_duel_value.html">Silent Versus Noisy One-Bullet Duel Value</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_sion_boundary_counterexample.html">Sion Boundary Counterexample</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_sion_minimax_theorem.html">Sion Minimax Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_sion_wolfe_no_mixed_value.html">Sion-Wolfe Game Has No Mixed Value</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_stochastic_matrix_invariant_distribution.html">Stochastic Matrix Has An Invariant Distribution</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_strong_complementarity.html">Strong Complementarity</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_support_complementarity.html">Support Complementarity</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_mixed_support.html">Support Of A Mixed Strategy</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_computation_three_by_two_example.html">Three-By-Two Matrix Game Computation</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_three_player_minimax_failure.html">Three-Player Minimax Failure</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_two_by_two_value_formula.html">Two-By-Two Value Formula</a>
+        <span class="example_thmcaption thm-caption">Example</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_value.html">Value Of A Zero-Sum Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_value_operator_properties.html">Value Operator Properties</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_ville_theorem.html">Ville Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_ville_discretization_proof.html">Ville Theorem By Discretization</a>
+        <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_minimax_theorem.html">Von Neumann Minimax Theorem</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_zero_sum_game.html">Zero-Sum Game</a>
+        <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-staged">staged</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zerosum/zerosum_zero_sum_nash_saddle.html">Zero-Sum Nash Equilibria As Saddle Points</a>
+        <span class="proposition_thmcaption thm-caption">Proposition</span>
         <span class="badge status-staged">staged</span>
       </li>
       
