@@ -1,0 +1,92 @@
+{
+  "topic": {
+    "id": "zero_sum.lp",
+    "title": "Zero Sum.Lp",
+    "href": "zero_sum/lp/index.html",
+    "parent": "zero_sum",
+    "node_count": 1,
+    "descendant_node_count": 1
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 1,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 0,
+    "proof_plan_nodes": 1,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 1,
+    "visible_nodes_without_proof_plans": 2,
+    "visible_nodes_with_selected_proof_plans": 2
+  },
+  "nodes": [
+    {
+      "id": "zero_sum.lp.zero_sum_lp_bridge",
+      "title": "Zero-Sum Linear Programming Bridge",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.lp/zero_sum_lp_zero_sum_lp_bridge.html",
+      "payload": "node_payloads/zero_sum_lp_zero_sum_lp_bridge.json",
+      "target": "zero_sum.von_neumann_minimax",
+      "plan_status": "candidate"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 75
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.lp.zero_sum_lp_bridge",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "linear-programming",
+      "title": "linear-programming",
+      "href": "keywords/linear-programming.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "staged",
+      "title": "staged",
+      "href": "keywords/staged.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.lp.zero_sum_lp_bridge",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    }
+  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

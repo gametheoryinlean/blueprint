@@ -1,0 +1,18 @@
+{
+  "id": "zero_sum.minimax.minimax_from_antisymmetric_games",
+  "title": "Minimax From Antisymmetric Games",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "zero_sum/minimax/zero_sum_minimax_minimax_from_antisymmetric_games.html",
+  "body_html": "<h1>Minimax From Antisymmetric Games</h1>\n<p>To prove minimax for an arbitrary matrix $A$, first shift $A$ so that all entries\nare positive. Introduce an antisymmetric matrix built from $A$, for example\n$$\n  B=\n  \\begin{pmatrix}\n    0 &amp; A &amp; -1\\\\\n    -A^T &amp; 0 &amp; 1\\\\\n    1 &amp; -1 &amp; 0\n  \\end{pmatrix}.\n$$\nAn optimal strategy in the antisymmetric game $B$ yields optimal mixed strategies\nfor both players in the original game $A$.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "zero_sum.examples.antisymmetric_matrix_game_value",
+      "title": "Antisymmetric Matrix Games Have Value",
+      "href": "zero_sum/examples/zero_sum_examples_antisymmetric_matrix_game_value.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

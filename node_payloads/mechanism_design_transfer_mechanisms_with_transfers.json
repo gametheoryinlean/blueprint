@@ -1,0 +1,157 @@
+{
+  "id": "mechanism_design.transfer.mechanisms_with_transfers",
+  "title": "Mechanisms With Transfers",
+  "kind": "definition",
+  "status": "staged",
+  "href": "mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html",
+  "body_html": "<h1>Mechanisms With Transfers</h1>\n<p>A mechanism with transfers separates the allocation rule from the payment rule.\nQuasi-linear utility is supplied by combining the value of the selected\nallocation with the agent's payment.</p>\n<p>The transfer interface can be viewed as a direct mechanism, as an induced\nstrategic game, and as a source of DSIC and ex-post IR predicates specialized to\nquasi-linear utilities.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.basic.direct_mechanism_interface",
+      "title": "Direct Mechanism Interface",
+      "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "href": "auction/basic/auction_basic_formats.html"
+    },
+    {
+      "id": "mechanism_design.bayesian.bayesian_mechanisms",
+      "title": "Bayesian Mechanisms",
+      "href": "mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html"
+    },
+    {
+      "id": "mechanism_design.transfer.multiple_parameter_transfer_layer",
+      "title": "Multiple-Parameter Transfer Layer",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_multiple_parameter_transfer_layer.html"
+    },
+    {
+      "id": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "title": "Single-Parameter Transfer Layer",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_single_parameter_transfer_layer.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "MechanismWithTransfers",
+      "display_name": "MechanismWithTransfers",
+      "qualified_name": "MechanismWithTransfers",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L50",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.quasiLinearUtility",
+      "display_name": "MechanismWithTransfers.quasiLinearUtility",
+      "qualified_name": "MechanismWithTransfers.quasiLinearUtility",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L69",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.toMechanism",
+      "display_name": "MechanismWithTransfers.toMechanism",
+      "qualified_name": "MechanismWithTransfers.toMechanism",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L80",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.toStrategicGame",
+      "display_name": "MechanismWithTransfers.toStrategicGame",
+      "qualified_name": "MechanismWithTransfers.toStrategicGame",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L91",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.isDSIC",
+      "display_name": "MechanismWithTransfers.isDSIC",
+      "qualified_name": "MechanismWithTransfers.isDSIC",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L99",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.isExPostIR",
+      "display_name": "MechanismWithTransfers.isExPostIR",
+      "qualified_name": "MechanismWithTransfers.isExPostIR",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L107",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.toQuasiLinearGame",
+      "display_name": "MechanismWithTransfers.toQuasiLinearGame",
+      "qualified_name": "MechanismWithTransfers.toQuasiLinearGame",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L115",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.isQuasiLinearDSIC",
+      "display_name": "MechanismWithTransfers.isQuasiLinearDSIC",
+      "qualified_name": "MechanismWithTransfers.isQuasiLinearDSIC",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L125",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MechanismWithTransfers.isQuasiLinearExPostIR",
+      "display_name": "MechanismWithTransfers.isQuasiLinearExPostIR",
+      "qualified_name": "MechanismWithTransfers.isQuasiLinearExPostIR",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L132",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

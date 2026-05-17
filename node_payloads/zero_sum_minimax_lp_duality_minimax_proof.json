@@ -1,0 +1,12 @@
+{
+  "id": "zero_sum.minimax.lp_duality_minimax_proof",
+  "title": "LP Duality Proof Of Minimax",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "zero_sum/minimax/zero_sum_minimax_lp_duality_minimax_proof.html",
+  "body_html": "<h1>LP Duality Proof Of Minimax</h1>\n<p>Shift the matrix by adding a positive constant to every entry, so all entries\nare positive.  Apply finite-dimensional linear-programming duality to the dual\nprograms\n$$\n  XA \\ge \\mathbf{1}, \\quad X \\ge 0\n$$\nand\n$$\n  AY \\le \\mathbf{1}, \\quad Y \\ge 0.\n$$\nThe dual optimal solutions have a common objective value $w&gt;0$.  Normalizing\nthe vectors by $w$ gives mixed strategies $x^*$ and $y^*$, and the inequalities\nbecome the minimax optimality inequalities with value $1/w$.  Undoing the\nconstant shift gives the original game.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": []
+}

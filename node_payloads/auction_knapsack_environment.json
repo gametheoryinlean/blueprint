@@ -1,0 +1,129 @@
+{
+  "id": "auction.knapsack.environment",
+  "title": "Knapsack Auction Environment",
+  "kind": "definition",
+  "status": "staged",
+  "href": "auction/knapsack/auction_knapsack_environment.html",
+  "body_html": "<h1>Knapsack Auction Environment</h1>\n<p>A knapsack auction is a single-parameter mechanism equipped with public item\nweights and a total capacity constraint.</p>\n<p>The interface records the public item sizes, the capacity, weight and capacity\nsign assumptions, feasibility, and capacity-respecting allocation rules.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "title": "Single-Parameter Transfer Layer",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_single_parameter_transfer_layer.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.knapsack.binary_allocations",
+      "title": "Binary Knapsack Allocations",
+      "href": "auction/knapsack/auction_knapsack_binary_allocations.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "KnapsackAuction",
+      "display_name": "KnapsackAuction",
+      "qualified_name": "KnapsackAuction",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L61",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.RespectsCapacity",
+      "display_name": "KnapsackAuction.RespectsCapacity",
+      "qualified_name": "KnapsackAuction.RespectsCapacity",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L73",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.IsFeasible",
+      "display_name": "KnapsackAuction.IsFeasible",
+      "qualified_name": "KnapsackAuction.IsFeasible",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L80",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.size",
+      "display_name": "KnapsackAuction.size",
+      "qualified_name": "KnapsackAuction.size",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L84",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.capacity",
+      "display_name": "KnapsackAuction.capacity",
+      "qualified_name": "KnapsackAuction.capacity",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L88",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.NonnegativeWeights",
+      "display_name": "KnapsackAuction.NonnegativeWeights",
+      "qualified_name": "KnapsackAuction.NonnegativeWeights",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L92",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.PositiveWeights",
+      "display_name": "KnapsackAuction.PositiveWeights",
+      "qualified_name": "KnapsackAuction.PositiveWeights",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L96",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "KnapsackAuction.NonnegativeCapacity",
+      "display_name": "KnapsackAuction.NonnegativeCapacity",
+      "qualified_name": "KnapsackAuction.NonnegativeCapacity",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L100",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "strategic_games.payoff_geometry.feasible_payoffs",
+  "title": "Feasible And Individually Rational Payoffs",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/payoff_geometry/strategic_games_payoff_geometry_feasible_payoffs.html",
+  "body_html": "<h1>Feasible And Individually Rational Payoffs</h1>\n<p>For a finite game, the one-shot feasible payoff set is\n$$\n  P_1=\\{x\\in\\mathbb R^I:\\exists\\sigma\\in\\prod_{i\\in I}\\Delta(S_i),\\ G(\\sigma)=x\\}.\n$$\nThe set of feasible and individually rational one-shot payoffs is\n$$\n  R_1=\\{x\\in P_1:x_i\\ge V_i\\text{ for every }i\\in I\\},\n$$\nwhere $V_i$ is player $i$'s threat point.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.core.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_games/core/strategic_games_core_mixed_strategy.html"
+    },
+    {
+      "id": "strategic_games.payoff_geometry.threat_point",
+      "title": "Threat Point",
+      "href": "strategic_games/payoff_geometry/strategic_games_payoff_geometry_threat_point.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.equilibrium.nash_payoffs_are_individually_rational",
+      "title": "Nash Payoffs Are Individually Rational",
+      "href": "strategic_games/equilibrium/strategic_games_equilibrium_nash_payoffs_are_individually_rational.html"
+    },
+    {
+      "id": "strategic_games.payoff_geometry.noncontractible_feasible_payoff_example",
+      "title": "Noncontractible Feasible Payoff Example",
+      "href": "strategic_games/payoff_geometry/strategic_games_payoff_geometry_noncontractible_feasible_payoff_example.html"
+    }
+  ],
+  "lean_refs": []
+}

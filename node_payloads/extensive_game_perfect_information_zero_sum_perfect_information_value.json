@@ -1,0 +1,63 @@
+{
+  "id": "extensive_game.perfect_information.zero_sum_perfect_information_value",
+  "title": "Value In Finite Zero-Sum Perfect-Information Games",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "extensive_game/perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value.html",
+  "body_html": "<h1>Value In Finite Zero-Sum Perfect-Information Games</h1>\n<p>Every finite zero-sum perfect-information game, with or without Nature, has a\nvalue and both players have pure optimal strategies.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Use forward induction on the tree. If Nature moves at the root, the value is the\nprobability-weighted average of the successor subgame values. If player 1 moves,\nthe value is the maximum of successor values; if player 2 moves, it is the minimum.\nOptimal pure strategies are obtained by choosing an optimal successor and then\nfollowing optimal strategies in the selected subgame.</p>",
+  "deps": [
+    {
+      "id": "extensive_game.core.nature_player",
+      "title": "Nature In Extensive Games",
+      "href": "extensive_game/core/extensive_game_core_nature_player.html"
+    },
+    {
+      "id": "zero_sum.core.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "zero_sum/core/zero_sum_core_value.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "GameTree.IsZeroSum",
+      "display_name": "GameTree.IsZeroSum",
+      "qualified_name": "GameTree.IsZeroSum",
+      "module": "GameTheoryLib.ExtensiveGame.Zermelo",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/ExtensiveGame/Zermelo.lean#L42",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.value₀",
+      "display_name": "GameTree.value₀",
+      "qualified_name": "GameTree.value₀",
+      "module": "GameTheoryLib.ExtensiveGame.Zermelo",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/ExtensiveGame/Zermelo.lean#L63",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.value₀_minimax_prop",
+      "display_name": "GameTree.value₀_minimax_prop",
+      "qualified_name": "GameTree.value₀_minimax_prop",
+      "module": "GameTheoryLib.ExtensiveGame.Zermelo",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/ExtensiveGame/Zermelo.lean#L79",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

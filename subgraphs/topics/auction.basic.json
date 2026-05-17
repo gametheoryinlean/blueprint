@@ -1,0 +1,128 @@
+{
+  "topic": {
+    "id": "auction.basic",
+    "title": "Auction.Basic",
+    "href": "auction/basic/index.html",
+    "parent": "auction",
+    "node_count": 3,
+    "descendant_node_count": 3
+  },
+  "counts": {
+    "internal_nodes": 3,
+    "descendant_nodes": 3,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 3,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "auction.basic.bid_profile_supports",
+      "title": "Bid-Profile Supports",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction.basic/auction_basic_bid_profile_supports.html",
+      "payload": "node_payloads/auction_basic_bid_profile_supports.json"
+    },
+    {
+      "id": "auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction.basic/auction_basic_formats.html",
+      "payload": "node_payloads/auction_basic_formats.json"
+    },
+    {
+      "id": "auction.basic.ordered_bid_utilities",
+      "title": "Ordered-Bid Utilities",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction.basic/auction_basic_ordered_bid_utilities.html",
+      "payload": "node_payloads/auction_basic_ordered_bid_utilities.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.bid_profile_supports",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.ordered_bid_utilities",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "href": "mechanism_design/transfer/index.html",
+      "role": "dependency",
+      "node_count": 3
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "auction.basic.formats",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.transfer",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "argmax",
+      "title": "argmax",
+      "href": "keywords/argmax.html",
+      "count": 1
+    },
+    {
+      "id": "auction",
+      "title": "auction",
+      "href": "keywords/auction.html",
+      "count": 3
+    },
+    {
+      "id": "bid-profile",
+      "title": "bid-profile",
+      "href": "keywords/bid-profile.html",
+      "count": 1
+    },
+    {
+      "id": "bids",
+      "title": "bids",
+      "href": "keywords/bids.html",
+      "count": 1
+    },
+    {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 1
+    },
+    {
+      "id": "support",
+      "title": "support",
+      "href": "keywords/support.html",
+      "count": 1
+    },
+    {
+      "id": "transfers",
+      "title": "transfers",
+      "href": "keywords/transfers.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

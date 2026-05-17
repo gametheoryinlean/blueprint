@@ -1,0 +1,56 @@
+{
+  "id": "strategic_games.dominance.nash_is_rationalizable",
+  "title": "Nash Equilibria Are Rationalizable",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "strategic_games/dominance/strategic_games_dominance_nash_is_rationalizable.html",
+  "body_html": "<h1>Nash Equilibria Are Rationalizable</h1>\n<p>If $s$ is a Nash equilibrium, then $s$ is rationalizable.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The singleton set $\\{s\\}$ satisfies\n$$\n  \\{s\\}\\subseteq BR(\\{s\\})\n$$\nbecause every component of $s$ is a best response to the other components. Since\n$S^\\infty$ is the largest set $L$ with $L\\subseteq BR(L)$, it contains $\\{s\\}$.</p>",
+  "deps": [
+    {
+      "id": "strategic_games.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_games/strategic_games_nash_equilibrium.html"
+    },
+    {
+      "id": "strategic_games.dominance.rationalizable_fixed_point",
+      "title": "Rationalizable Set As Largest Best-Response Fixed Set",
+      "href": "strategic_games/dominance/strategic_games_dominance_rationalizable_fixed_point.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.dominance.solvable_unique_nash",
+      "title": "Solvable Games Have A Unique Nash Equilibrium",
+      "href": "strategic_games/dominance/strategic_games_dominance_solvable_unique_nash.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "StrategicGame.IsNashEquilibrium.survives",
+      "display_name": "StrategicGame.IsNashEquilibrium.survives",
+      "qualified_name": "StrategicGame.IsNashEquilibrium.survives",
+      "module": "GameTheoryLib.StrategicGame.IESDS",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/IESDS.lean#L61",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "StrategicGame.IsNashEquilibrium.isRationalizable",
+      "display_name": "StrategicGame.IsNashEquilibrium.isRationalizable",
+      "qualified_name": "StrategicGame.IsNashEquilibrium.isRationalizable",
+      "module": "GameTheoryLib.StrategicGame.IESDS",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/IESDS.lean#L78",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

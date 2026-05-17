@@ -1,0 +1,74 @@
+{
+  "id": "auction.basic.formats",
+  "title": "Basic Auction Formats",
+  "kind": "definition",
+  "status": "staged",
+  "href": "auction/basic/auction_basic_formats.html",
+  "body_html": "<h1>Basic Auction Formats</h1>\n<p>The basic auction layer defines single-item and multi-item transfer-auction\nformats. Multi-item feasibility records that no item is allocated to two\ndistinct agents.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.transfer.mechanisms_with_transfers",
+      "title": "Mechanisms With Transfers",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html"
+    },
+    {
+      "id": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "title": "Single-Parameter Transfer Layer",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_single_parameter_transfer_layer.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.basic.bid_profile_supports",
+      "title": "Bid-Profile Supports",
+      "href": "auction/basic/auction_basic_bid_profile_supports.html"
+    },
+    {
+      "id": "auction.basic.ordered_bid_utilities",
+      "title": "Ordered-Bid Utilities",
+      "href": "auction/basic/auction_basic_ordered_bid_utilities.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SingleItemAuction",
+      "display_name": "SingleItemAuction",
+      "qualified_name": "SingleItemAuction",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L83",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MultiItemAuction",
+      "display_name": "MultiItemAuction",
+      "qualified_name": "MultiItemAuction",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L92",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MultiItemAuction.IsFeasible",
+      "display_name": "MultiItemAuction.IsFeasible",
+      "qualified_name": "MultiItemAuction.IsFeasible",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L98",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

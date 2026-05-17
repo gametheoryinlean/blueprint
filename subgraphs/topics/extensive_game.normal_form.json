@@ -1,0 +1,186 @@
+{
+  "topic": {
+    "id": "extensive_game.normal_form",
+    "title": "Extensive Game.Normal Form",
+    "href": "extensive_game/normal_form/index.html",
+    "parent": "extensive_game",
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "descendant_nodes": 4,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 5,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
+  },
+  "nodes": [
+    {
+      "id": "extensive_game.normal_form.agent_normal_form",
+      "title": "Agent Normal Form",
+      "kind": "definition",
+      "status": "staged",
+      "href": "extensive_game.normal_form/extensive_game_normal_form_agent_normal_form.html",
+      "payload": "node_payloads/extensive_game_normal_form_agent_normal_form.json"
+    },
+    {
+      "id": "extensive_game.normal_form.extensive_normal_form_invariance",
+      "title": "Normal Form Invariance Of Extensive Representations",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "extensive_game.normal_form/extensive_game_normal_form_extensive_normal_form_invariance.html",
+      "payload": "node_payloads/extensive_game_normal_form_extensive_normal_form_invariance.json"
+    },
+    {
+      "id": "extensive_game.normal_form.normal_form_reduction",
+      "title": "Normal Form Reduction",
+      "kind": "definition",
+      "status": "staged",
+      "href": "extensive_game.normal_form/extensive_game_normal_form_normal_form_reduction.html",
+      "payload": "node_payloads/extensive_game_normal_form_normal_form_reduction.json"
+    },
+    {
+      "id": "extensive_game.normal_form.semi_reduced_normal_form",
+      "title": "Semi-Reduced Normal Form",
+      "kind": "definition",
+      "status": "staged",
+      "href": "extensive_game.normal_form/extensive_game_normal_form_semi_reduced_normal_form.html",
+      "payload": "node_payloads/extensive_game_normal_form_semi_reduced_normal_form.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "extensive_game.normal_form.normal_form_reduction",
+      "to": "extensive_game.normal_form.agent_normal_form",
+      "kind": "uses"
+    },
+    {
+      "from": "extensive_game.normal_form.normal_form_reduction",
+      "to": "extensive_game.normal_form.extensive_normal_form_invariance",
+      "kind": "uses"
+    },
+    {
+      "from": "extensive_game.normal_form.normal_form_reduction",
+      "to": "extensive_game.normal_form.semi_reduced_normal_form",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "extensive_game.core",
+      "title": "Extensive Game.Core",
+      "href": "extensive_game/core/index.html",
+      "role": "dependency",
+      "node_count": 7
+    },
+    {
+      "id": "extensive_game.equilibrium",
+      "title": "Extensive Game.Equilibrium",
+      "href": "extensive_game/equilibrium/index.html",
+      "role": "dependent",
+      "node_count": 17
+    },
+    {
+      "id": "extensive_game.examples",
+      "title": "Extensive Game.Examples",
+      "href": "extensive_game/examples/index.html",
+      "role": "dependent",
+      "node_count": 6
+    },
+    {
+      "id": "extensive_game.imperfect_information",
+      "title": "Extensive Game.Imperfect Information",
+      "href": "extensive_game/imperfect_information/index.html",
+      "role": "dependency",
+      "node_count": 8
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 90
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:extensive_game.core",
+      "to": "extensive_game.normal_form.normal_form_reduction",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game.core",
+      "count": 1
+    },
+    {
+      "from": "topic:extensive_game.imperfect_information",
+      "to": "extensive_game.normal_form.agent_normal_form",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game.imperfect_information",
+      "count": 2
+    },
+    {
+      "from": "topic:extensive_game.imperfect_information",
+      "to": "extensive_game.normal_form.extensive_normal_form_invariance",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game.imperfect_information",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "extensive_game.normal_form.normal_form_reduction",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "extensive_game.normal_form.agent_normal_form",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game.equilibrium",
+      "count": 2
+    },
+    {
+      "from": "extensive_game.normal_form.normal_form_reduction",
+      "to": "topic:extensive_game.examples",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game.examples",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "extensive-game",
+      "title": "extensive-game",
+      "href": "keywords/extensive-game.html",
+      "count": 4
+    },
+    {
+      "id": "invariance",
+      "title": "invariance",
+      "href": "keywords/invariance.html",
+      "count": 1
+    },
+    {
+      "id": "normal-form",
+      "title": "normal-form",
+      "href": "keywords/normal-form.html",
+      "count": 4
+    },
+    {
+      "id": "refinement",
+      "title": "refinement",
+      "href": "keywords/refinement.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

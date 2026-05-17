@@ -1,0 +1,23 @@
+{
+  "id": "strategic_games.continuous.monotone_game_nash_uniqueness",
+  "title": "Nash Characterization And Uniqueness In Monotone Games",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "strategic_games/continuous/strategic_games_continuous_monotone_game_nash_uniqueness.html",
+  "body_html": "<h1>Nash Characterization And Uniqueness In Monotone Games</h1>\n<p>For a Hilbert smooth monotone game, a profile $s$ is a Nash equilibrium if and\nonly if\n$$\n  \\sum_{i\\in I}\n  \\langle \\nabla_i g_i(t),\\,s_i-t_i\\rangle\n  \\ge 0\n  \\quad\\text{for all }t\\in S.\n$$\nIf the game is strictly monotone, the Nash equilibrium is unique.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The first-order Nash condition gives the inequality with $\\nabla g(s)$. Monotonicity\ntransfers it to the inequality with $\\nabla g(t)$. Conversely, testing only profiles\nthat deviate in one coordinate and using the mean value theorem recovers each\nplayer's no-profitable-deviation condition. If two equilibria existed in a strictly\nmonotone game, applying the first-order condition in both directions would force a\nnonnegative value for the monotonicity expression, contradicting strict negativity\nunless the two profiles coincide.</p>",
+  "deps": [
+    {
+      "id": "strategic_games.equilibrium.first_order_nash_condition",
+      "title": "First-Order Nash Condition",
+      "href": "strategic_games/equilibrium/strategic_games_equilibrium_first_order_nash_condition.html"
+    },
+    {
+      "id": "strategic_games.continuous.monotone_game",
+      "title": "Monotone Smooth Game",
+      "href": "strategic_games/continuous/strategic_games_continuous_monotone_game.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

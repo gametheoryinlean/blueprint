@@ -1,0 +1,29 @@
+{
+  "id": "strategic_games.continuous.smooth_game",
+  "title": "Smooth Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/continuous/strategic_games_continuous_smooth_game.html",
+  "body_html": "<h1>Smooth Game</h1>\n<p>For a game whose strategy sets are convex subsets of Hilbert spaces, the game is\nsmooth if, for every player $i$ and fixed $s_{-i}$, the map\n$$\n  s_i\\mapsto g_i(s_i,s_{-i})\n$$\nis $C^1$. It is concave if these maps are concave.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.continuous.monotone_game",
+      "title": "Monotone Smooth Game",
+      "href": "strategic_games/continuous/strategic_games_continuous_monotone_game.html"
+    },
+    {
+      "id": "strategic_games.equilibrium.first_order_nash_condition",
+      "title": "First-Order Nash Condition",
+      "href": "strategic_games/equilibrium/strategic_games_equilibrium_first_order_nash_condition.html"
+    }
+  ],
+  "lean_refs": []
+}

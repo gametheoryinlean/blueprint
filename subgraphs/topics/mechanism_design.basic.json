@@ -1,0 +1,132 @@
+{
+  "topic": {
+    "id": "mechanism_design.basic",
+    "title": "Mechanism Design.Basic",
+    "href": "mechanism_design/basic/index.html",
+    "parent": "mechanism_design",
+    "node_count": 2,
+    "descendant_node_count": 2
+  },
+  "counts": {
+    "internal_nodes": 2,
+    "descendant_nodes": 2,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 2,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 3,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
+  },
+  "nodes": [
+    {
+      "id": "mechanism_design.basic.direct_mechanism_interface",
+      "title": "Direct Mechanism Interface",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design.basic/mechanism_design_basic_direct_mechanism_interface.html",
+      "payload": "node_payloads/mechanism_design_basic_direct_mechanism_interface.json"
+    },
+    {
+      "id": "mechanism_design.basic.truthfulness_from_dsic",
+      "title": "Truthfulness From DSIC",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design.basic/mechanism_design_basic_truthfulness_from_dsic.html",
+      "payload": "node_payloads/mechanism_design_basic_truthfulness_from_dsic.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanism_design.basic.direct_mechanism_interface",
+      "to": "mechanism_design.basic.truthfulness_from_dsic",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "mechanism_design.bayesian",
+      "title": "Mechanism Design.Bayesian",
+      "href": "mechanism_design/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "href": "mechanism_design/transfer/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 90
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "mechanism_design.basic.direct_mechanism_interface",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "mechanism_design.basic.truthfulness_from_dsic",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.basic.direct_mechanism_interface",
+      "to": "topic:mechanism_design.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.bayesian",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.basic.direct_mechanism_interface",
+      "to": "topic:mechanism_design.transfer",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "direct-mechanism",
+      "title": "direct-mechanism",
+      "href": "keywords/direct-mechanism.html",
+      "count": 1
+    },
+    {
+      "id": "dsic",
+      "title": "dsic",
+      "href": "keywords/dsic.html",
+      "count": 2
+    },
+    {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 2
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

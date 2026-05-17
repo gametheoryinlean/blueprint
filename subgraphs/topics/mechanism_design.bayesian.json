@@ -1,0 +1,130 @@
+{
+  "topic": {
+    "id": "mechanism_design.bayesian",
+    "title": "Mechanism Design.Bayesian",
+    "href": "mechanism_design/bayesian/index.html",
+    "parent": "mechanism_design",
+    "node_count": 3,
+    "descendant_node_count": 3
+  },
+  "counts": {
+    "internal_nodes": 3,
+    "descendant_nodes": 3,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 3,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
+  },
+  "nodes": [
+    {
+      "id": "mechanism_design.bayesian.bayesian_mechanisms",
+      "title": "Bayesian Mechanisms",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design.bayesian/mechanism_design_bayesian_bayesian_mechanisms.html",
+      "payload": "node_payloads/mechanism_design_bayesian_bayesian_mechanisms.json"
+    },
+    {
+      "id": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
+      "title": "Ex-Ante Equilibrium Predicates",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design.bayesian/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html",
+      "payload": "node_payloads/mechanism_design_bayesian_ex_ante_equilibrium_predicates.json"
+    },
+    {
+      "id": "mechanism_design.bayesian.ex_ante_revelation_principle",
+      "title": "Ex-Ante Revelation Principle Interface",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design.bayesian/mechanism_design_bayesian_ex_ante_revelation_principle.html",
+      "payload": "node_payloads/mechanism_design_bayesian_ex_ante_revelation_principle.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
+      "to": "mechanism_design.bayesian.ex_ante_revelation_principle",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "mechanism_design.basic",
+      "title": "Mechanism Design.Basic",
+      "href": "mechanism_design/basic/index.html",
+      "role": "dependency",
+      "node_count": 2
+    },
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "href": "mechanism_design/transfer/index.html",
+      "role": "dependency",
+      "node_count": 3
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:mechanism_design.basic",
+      "to": "mechanism_design.bayesian.bayesian_mechanisms",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.basic",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "mechanism_design.bayesian.bayesian_mechanisms",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "bayesian-mechanism",
+      "title": "bayesian-mechanism",
+      "href": "keywords/bayesian-mechanism.html",
+      "count": 2
+    },
+    {
+      "id": "bayesian-nash-equilibrium",
+      "title": "bayesian-nash-equilibrium",
+      "href": "keywords/bayesian-nash-equilibrium.html",
+      "count": 2
+    },
+    {
+      "id": "incomplete-information",
+      "title": "incomplete-information",
+      "href": "keywords/incomplete-information.html",
+      "count": 1
+    },
+    {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 3
+    },
+    {
+      "id": "revelation-principle",
+      "title": "revelation-principle",
+      "href": "keywords/revelation-principle.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "zero_sum.minimax.loomis_induction_proof",
+  "title": "Direct Induction Proof Of Loomis Theorem",
+  "kind": "proof-plan",
+  "status": "staged",
+  "href": "zero_sum/minimax/zero_sum_minimax_loomis_induction_proof.html",
+  "body_html": "<h1>Direct Induction Proof Of Loomis Theorem</h1>\n<p>For matrices $A$ and $B$ indexed by $I\\times J$, with $B_{ij}&gt;0$, prove the\nexistence and uniqueness of $v\\in\\mathbb R$ and strategies\n$s\\in\\Delta(I)$, $t\\in\\Delta(J)$ such that\n$$\n  sA\\ge v\\,sB,\\qquad At\\le v\\,Bt.\n$$\nThe proof proceeds by induction on $|I|+|J|$. The induction step introduces\n$$\n  \\lambda_0=\\sup\\{\\lambda:\\exists s\\in\\Delta(I),\\ sA\\ge \\lambda sB\\}\n$$\nand\n$$\n  \\mu_0=\\inf\\{\\mu:\\exists t\\in\\Delta(J),\\ At\\le \\mu Bt\\},\n$$\nthen rules out $\\lambda_0&lt;\\mu_0$ by deleting a column or row and using the\ninduction hypothesis on the smaller matrix pair.</p>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": []
+}

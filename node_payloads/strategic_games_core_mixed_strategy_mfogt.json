@@ -1,0 +1,58 @@
+{
+  "id": "strategic_games.core.mixed_strategy_mfogt",
+  "title": "Mixed Strategy",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/core/strategic_games_core_mixed_strategy_mfogt.html",
+  "body_html": "<h1>Mixed Strategy</h1>\n<p>For a finite or measurable strategy set $S_i$, a mixed strategy of player $i$ is a\nprobability measure on $S_i$. In the finite case the mixed strategy space is the\nsimplex\n$$\n  \\Delta(S_i).\n$$\nPure strategies are identified with Dirac measures. A mixed profile is an element\n$$\n  \\sigma=(\\sigma_i)_{i\\in I}\\in \\prod_{i\\in I}\\Delta(S_i).\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "StrategicGame.MixedStrategy",
+      "display_name": "StrategicGame.MixedStrategy",
+      "qualified_name": "StrategicGame.MixedStrategy",
+      "module": "GameTheoryLib.StrategicGame.MixedStrategy",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/MixedStrategy.lean#L40",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "StrategicGame.MixedProfile",
+      "display_name": "StrategicGame.MixedProfile",
+      "qualified_name": "StrategicGame.MixedProfile",
+      "module": "GameTheoryLib.StrategicGame.MixedStrategy",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/MixedStrategy.lean#L45",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "StrategicGame.pureToMixed",
+      "display_name": "StrategicGame.pureToMixed",
+      "qualified_name": "StrategicGame.pureToMixed",
+      "module": "GameTheoryLib.StrategicGame.MixedStrategy",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/MixedStrategy.lean#L51",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

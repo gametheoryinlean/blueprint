@@ -1,0 +1,48 @@
+{
+  "id": "extensive_game.core.nature_player",
+  "title": "Nature In Extensive Games",
+  "kind": "definition",
+  "status": "staged",
+  "href": "extensive_game/core/extensive_game_core_nature_player.html",
+  "body_html": "<h1>Nature In Extensive Games</h1>\n<p>An extensive game with Nature has chance nodes at which no strategic player\nchooses an action. Instead, the game description specifies a probability\ndistribution over successors. A strategy profile of the strategic players then\ninduces a probability distribution over terminal outcomes.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "extensive_game.perfect_information.perfect_information_extensive_game",
+      "title": "Finite Extensive Game With Perfect Information",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_perfect_information_extensive_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "extensive_game.examples.entrant_incomplete_information_value_example",
+      "title": "Entrant Incomplete Information Value Example",
+      "href": "extensive_game/examples/extensive_game_examples_entrant_incomplete_information_value_example.html"
+    },
+    {
+      "id": "extensive_game.examples.poker_game_value_example",
+      "title": "Poker Game Value Example",
+      "href": "extensive_game/examples/extensive_game_examples_poker_game_value_example.html"
+    },
+    {
+      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value",
+      "title": "Value In Finite Zero-Sum Perfect-Information Games",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "ExtensiveGame.isChanceState",
+      "display_name": "ExtensiveGame.isChanceState",
+      "qualified_name": "ExtensiveGame.isChanceState",
+      "module": "GameTheoryLib.ExtensiveGame.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/ExtensiveGame/Basic.lean#L100",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

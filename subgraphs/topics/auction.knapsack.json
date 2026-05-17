@@ -1,0 +1,161 @@
+{
+  "topic": {
+    "id": "auction.knapsack",
+    "title": "Auction.Knapsack",
+    "href": "auction/knapsack/index.html",
+    "parent": "auction",
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "descendant_nodes": 4,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
+  },
+  "nodes": [
+    {
+      "id": "auction.knapsack.binary_allocations",
+      "title": "Binary Knapsack Allocations",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction.knapsack/auction_knapsack_binary_allocations.html",
+      "payload": "node_payloads/auction_knapsack_binary_allocations.json"
+    },
+    {
+      "id": "auction.knapsack.environment",
+      "title": "Knapsack Auction Environment",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction.knapsack/auction_knapsack_environment.html",
+      "payload": "node_payloads/auction_knapsack_environment.json"
+    },
+    {
+      "id": "auction.knapsack.relaxations_dynamic_programming",
+      "title": "Knapsack Relaxations And Dynamic Programming",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "auction.knapsack/auction_knapsack_relaxations_dynamic_programming.html",
+      "payload": "node_payloads/auction_knapsack_relaxations_dynamic_programming.json"
+    },
+    {
+      "id": "auction.knapsack.welfare_maximizing_mechanism",
+      "title": "Welfare-Maximizing Knapsack Mechanism",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "auction.knapsack/auction_knapsack_welfare_maximizing_mechanism.html",
+      "payload": "node_payloads/auction_knapsack_welfare_maximizing_mechanism.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "auction.knapsack.environment",
+      "to": "auction.knapsack.binary_allocations",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.knapsack.welfare_maximizing_mechanism",
+      "to": "auction.knapsack.relaxations_dynamic_programming",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.knapsack.binary_allocations",
+      "to": "auction.knapsack.welfare_maximizing_mechanism",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "mechanism_design.myerson",
+      "title": "Mechanism Design.Myerson",
+      "href": "mechanism_design/myerson/index.html",
+      "role": "dependency",
+      "node_count": 2
+    },
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "href": "mechanism_design/transfer/index.html",
+      "role": "dependency",
+      "node_count": 3
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:mechanism_design.myerson",
+      "to": "auction.knapsack.welfare_maximizing_mechanism",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.myerson",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "auction.knapsack.environment",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "approximation",
+      "title": "approximation",
+      "href": "keywords/approximation.html",
+      "count": 1
+    },
+    {
+      "id": "auction",
+      "title": "auction",
+      "href": "keywords/auction.html",
+      "count": 4
+    },
+    {
+      "id": "binary-allocation",
+      "title": "binary-allocation",
+      "href": "keywords/binary-allocation.html",
+      "count": 1
+    },
+    {
+      "id": "dsic",
+      "title": "dsic",
+      "href": "keywords/dsic.html",
+      "count": 1
+    },
+    {
+      "id": "dynamic-programming",
+      "title": "dynamic-programming",
+      "href": "keywords/dynamic-programming.html",
+      "count": 1
+    },
+    {
+      "id": "knapsack",
+      "title": "knapsack",
+      "href": "keywords/knapsack.html",
+      "count": 4
+    },
+    {
+      "id": "myerson",
+      "title": "myerson",
+      "href": "keywords/myerson.html",
+      "count": 1
+    },
+    {
+      "id": "single-parameter",
+      "title": "single-parameter",
+      "href": "keywords/single-parameter.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

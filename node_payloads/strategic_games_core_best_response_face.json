@@ -1,0 +1,28 @@
+{
+  "id": "strategic_games.core.best_response_face",
+  "title": "Best Response Face",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "strategic_games/core/strategic_games_core_best_response_face.html",
+  "body_html": "<h1>Best Response Face</h1>\n<p>For a finite strategic game and a correlated opponent strategy\n$\\theta_{-i}\\in\\Delta(S_{-i})$, the best-response set\n$BR_i(\\theta_{-i})$ is a face of the simplex $\\Delta(S_i)$.</p>\n<p>The extreme points of this face are exactly the pure strategies of player $i$\nthat are best responses against $\\theta_{-i}$.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The expected payoff $m_i\\mapsto g_i(m_i,\\theta_{-i})$ is affine on\n$\\Delta(S_i)$. Maximizers of an affine function over a simplex form the convex\nhull of the maximizing vertices, hence a simplex face.</p>",
+  "deps": [
+    {
+      "id": "strategic_games.best_response",
+      "title": "Best Response",
+      "href": "strategic_games/strategic_games_best_response.html"
+    },
+    {
+      "id": "strategic_games.correlated.correlated_strategy",
+      "title": "Correlated Strategy",
+      "href": "strategic_games/correlated/strategic_games_correlated_correlated_strategy.html"
+    },
+    {
+      "id": "strategic_games.core.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_games/core/strategic_games_core_mixed_strategy.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

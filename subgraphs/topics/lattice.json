@@ -4,22 +4,30 @@
     "title": "Lattice",
     "href": "lattice/index.html",
     "parent": null,
-    "node_count": 1,
-    "descendant_node_count": 1
+    "node_count": 2,
+    "descendant_node_count": 2
   },
   "counts": {
-    "internal_nodes": 1,
-    "descendant_nodes": 1,
+    "internal_nodes": 2,
+    "descendant_nodes": 2,
     "child_topics": 0,
-    "non_proof_plan_nodes": 1,
+    "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 3,
-    "visible_nodes_with_selected_proof_plans": 3
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
   },
   "nodes": [
+    {
+      "id": "lattice.staged_topic_catalog",
+      "title": "Staged Lattice Topic Catalog",
+      "kind": "task",
+      "status": "staged",
+      "href": "lattice/lattice_staged_topic_catalog.html",
+      "payload": "node_payloads/lattice_staged_topic_catalog.json"
+    },
     {
       "id": "lattice.tarski_fixed_point",
       "title": "Tarski Fixed Point Theorem For Compact Euclidean Lattices",
@@ -32,19 +40,19 @@
   "edges": [],
   "boundary_topics": [
     {
-      "id": "strategic_game",
-      "title": "Strategic Game",
-      "href": "strategic_game/index.html",
+      "id": "strategic_games.continuous",
+      "title": "Strategic Games.Continuous",
+      "href": "strategic_games/continuous/index.html",
       "role": "dependent",
-      "node_count": 75
+      "node_count": 13
     }
   ],
   "boundary_edges": [
     {
       "from": "lattice.tarski_fixed_point",
-      "to": "topic:strategic_game",
+      "to": "topic:strategic_games.continuous",
       "kind": "boundary_dependent",
-      "topic": "strategic_game",
+      "topic": "strategic_games.continuous",
       "count": 1
     }
   ],
@@ -59,12 +67,18 @@
       "id": "lattice",
       "title": "lattice",
       "href": "keywords/lattice.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "tarski",
       "title": "tarski",
       "href": "keywords/tarski.html",
+      "count": 1
+    },
+    {
+      "id": "topic-catalog",
+      "title": "topic-catalog",
+      "href": "keywords/topic-catalog.html",
       "count": 1
     }
   ],

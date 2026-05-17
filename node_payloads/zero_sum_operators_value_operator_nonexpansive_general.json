@@ -1,0 +1,18 @@
+{
+  "id": "zero_sum.operators.value_operator_nonexpansive_general",
+  "title": "General Value Operator Is Nonexpansive",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "zero_sum/operators/zero_sum_operators_value_operator_nonexpansive_general.html",
+  "body_html": "<h1>General Value Operator Is Nonexpansive</h1>\n<p>For payoff functions $f,g\\in F$,\n$$\n  |\\operatorname{val}(f)-\\operatorname{val}(g)|\n  \\le\n  \\|f-g\\|_\\infty.\n$$</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Since $f\\le g+\\|f-g\\|_\\infty$, monotonicity and translation of constants give\n$$\n  \\operatorname{val}(f)\n  \\le\n  \\operatorname{val}(g)+\\|f-g\\|_\\infty.\n$$\nThe reverse inequality follows by exchanging $f$ and $g$.</p>",
+  "deps": [
+    {
+      "id": "zero_sum.operators.value_operator_general",
+      "title": "General Value Operator",
+      "href": "zero_sum/operators/zero_sum_operators_value_operator_general.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

@@ -1,0 +1,129 @@
+{
+  "topic": {
+    "id": "auction",
+    "title": "Auction",
+    "href": "auction/index.html",
+    "parent": null,
+    "node_count": 1,
+    "descendant_node_count": 8
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 8,
+    "child_topics": 2,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 0,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 2,
+    "visible_nodes_with_selected_proof_plans": 2
+  },
+  "nodes": [
+    {
+      "id": "auction.staged_topic_catalog",
+      "title": "Staged Auction Topic Catalog",
+      "kind": "task",
+      "status": "staged",
+      "href": "auction/auction_staged_topic_catalog.html",
+      "payload": "node_payloads/auction_staged_topic_catalog.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [],
+  "boundary_edges": [],
+  "keywords": [
+    {
+      "id": "auction",
+      "title": "auction",
+      "href": "keywords/auction.html",
+      "count": 1
+    },
+    {
+      "id": "topic-catalog",
+      "title": "topic-catalog",
+      "href": "keywords/topic-catalog.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [
+    "auction.basic",
+    "auction.knapsack"
+  ],
+  "child_topic_nodes": [
+    {
+      "id": "auction.basic",
+      "title": "Auction.Basic",
+      "depth": 2,
+      "parent": "auction",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "definition": 3
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "auction/basic/index.html",
+      "children": []
+    },
+    {
+      "id": "auction.knapsack",
+      "title": "Auction.Knapsack",
+      "depth": 2,
+      "parent": "auction",
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "definition": 2,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 4
+      },
+      "href": "auction/knapsack/index.html",
+      "children": []
+    }
+  ],
+  "child_topic_edges": [],
+  "child_boundary_topics": [
+    {
+      "id": "mechanism_design.myerson",
+      "title": "Mechanism Design.Myerson",
+      "href": "mechanism_design/myerson/index.html",
+      "role": "dependency",
+      "node_count": 2
+    },
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "href": "mechanism_design/transfer/index.html",
+      "role": "dependency",
+      "node_count": 3
+    }
+  ],
+  "child_boundary_edges": [
+    {
+      "from": "topic:mechanism_design.myerson",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.myerson",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.transfer",
+      "count": 2
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    }
+  ]
+}

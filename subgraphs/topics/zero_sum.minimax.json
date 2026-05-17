@@ -1,0 +1,388 @@
+{
+  "topic": {
+    "id": "zero_sum.minimax",
+    "title": "Zero Sum.Minimax",
+    "href": "zero_sum/minimax/index.html",
+    "parent": "zero_sum",
+    "node_count": 11,
+    "descendant_node_count": 11
+  },
+  "counts": {
+    "internal_nodes": 11,
+    "descendant_nodes": 11,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 5,
+    "proof_plan_nodes": 6,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 6,
+    "proof_plan_attachments": 6,
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
+  },
+  "nodes": [
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof",
+      "title": "Direct Induction Proof Of Loomis Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_loomis_induction_proof.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof.json",
+      "target": "zero_sum.minimax.loomis_theorem",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_theorem",
+      "title": "Loomis Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_loomis_theorem.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_theorem.json"
+    },
+    {
+      "id": "zero_sum.minimax.lp_duality_minimax_proof",
+      "title": "LP Duality Proof Of Minimax",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_lp_duality_minimax_proof.html",
+      "payload": "node_payloads/zero_sum_minimax_lp_duality_minimax_proof.json",
+      "target": "zero_sum.minimax.minimax_theorem",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.minimax.minimax_from_antisymmetric_games",
+      "title": "Minimax From Antisymmetric Games",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_minimax_from_antisymmetric_games.html",
+      "payload": "node_payloads/zero_sum_minimax_minimax_from_antisymmetric_games.json",
+      "target": "zero_sum.minimax.minimax_theorem",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.minimax.minimax_from_deterministic_approachability",
+      "title": "Minimax From Deterministic Approachability",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_minimax_from_deterministic_approachability.html",
+      "payload": "node_payloads/zero_sum_minimax_minimax_from_deterministic_approachability.json",
+      "target": "zero_sum.minimax.minimax_theorem",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.minimax.minimax_from_loomis",
+      "title": "Minimax Theorem From Loomis Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_minimax_from_loomis.html",
+      "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json",
+      "target": "zero_sum.minimax.minimax_theorem",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.minimax.minimax_theorem",
+      "title": "Von Neumann Minimax Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_minimax_theorem.html",
+      "payload": "node_payloads/zero_sum_minimax_minimax_theorem.json"
+    },
+    {
+      "id": "zero_sum.minimax.ordered_field_minimax",
+      "title": "Ordered-Field Minimax Statement",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_ordered_field_minimax.html",
+      "payload": "node_payloads/zero_sum_minimax_ordered_field_minimax.json"
+    },
+    {
+      "id": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
+      "title": "Stochastic Matrix Has An Invariant Distribution",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
+      "payload": "node_payloads/zero_sum_minimax_stochastic_matrix_invariant_distribution.json"
+    },
+    {
+      "id": "zero_sum.minimax.ville_discretization_proof",
+      "title": "Ville Theorem By Discretization",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_ville_discretization_proof.html",
+      "payload": "node_payloads/zero_sum_minimax_ville_discretization_proof.json",
+      "target": "zero_sum.minimax.ville_theorem",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.minimax.ville_theorem",
+      "title": "Ville Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum.minimax/zero_sum_minimax_ville_theorem.html",
+      "payload": "node_payloads/zero_sum_minimax_ville_theorem.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_theorem",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.ordered_field_minimax",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.ville_discretization_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.ville_theorem",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "approachability",
+      "title": "Approachability",
+      "href": "approachability/index.html",
+      "role": "dependency",
+      "node_count": 3
+    },
+    {
+      "id": "linear_algebra",
+      "title": "Linear Algebra",
+      "href": "linear_algebra/index.html",
+      "role": "dependent",
+      "node_count": 4
+    },
+    {
+      "id": "strategic_games.dominance",
+      "title": "Strategic Games.Dominance",
+      "href": "strategic_games/dominance/index.html",
+      "role": "dependent",
+      "node_count": 9
+    },
+    {
+      "id": "zero_sum.core",
+      "title": "Zero Sum.Core",
+      "href": "zero_sum/core/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 19
+    },
+    {
+      "id": "zero_sum.examples",
+      "title": "Zero Sum.Examples",
+      "href": "zero_sum/examples/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 10
+    },
+    {
+      "id": "zero_sum.operators",
+      "title": "Zero Sum.Operators",
+      "href": "zero_sum/operators/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:zero_sum.core",
+      "to": "zero_sum.minimax.minimax_theorem",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum.operators",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.operators",
+      "count": 1
+    },
+    {
+      "from": "topic:approachability",
+      "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "approachability",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.examples",
+      "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum.examples",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_theorem",
+      "to": "topic:linear_algebra",
+      "kind": "boundary_dependent",
+      "topic": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "topic:strategic_games.dominance",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.dominance",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "topic:zero_sum.core",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.core",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "topic:zero_sum.examples",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.examples",
+      "count": 2
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "topic:zero_sum.operators",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.operators",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "antisymmetric",
+      "title": "antisymmetric",
+      "href": "keywords/antisymmetric.html",
+      "count": 1
+    },
+    {
+      "id": "approachability",
+      "title": "approachability",
+      "href": "keywords/approachability.html",
+      "count": 1
+    },
+    {
+      "id": "continuous-game",
+      "title": "continuous-game",
+      "href": "keywords/continuous-game.html",
+      "count": 2
+    },
+    {
+      "id": "invariant-distribution",
+      "title": "invariant-distribution",
+      "href": "keywords/invariant-distribution.html",
+      "count": 1
+    },
+    {
+      "id": "linear-programming",
+      "title": "linear-programming",
+      "href": "keywords/linear-programming.html",
+      "count": 1
+    },
+    {
+      "id": "loomis",
+      "title": "loomis",
+      "href": "keywords/loomis.html",
+      "count": 3
+    },
+    {
+      "id": "minimax",
+      "title": "minimax",
+      "href": "keywords/minimax.html",
+      "count": 8
+    },
+    {
+      "id": "ordered-field",
+      "title": "ordered-field",
+      "href": "keywords/ordered-field.html",
+      "count": 1
+    },
+    {
+      "id": "proof-plan",
+      "title": "proof-plan",
+      "href": "keywords/proof-plan.html",
+      "count": 6
+    },
+    {
+      "id": "stochastic-matrix",
+      "title": "stochastic-matrix",
+      "href": "keywords/stochastic-matrix.html",
+      "count": 1
+    },
+    {
+      "id": "value",
+      "title": "value",
+      "href": "keywords/value.html",
+      "count": 1
+    },
+    {
+      "id": "ville",
+      "title": "ville",
+      "href": "keywords/ville.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 11
+    }
+  ],
+  "proof_plan_attachments": [
+    {
+      "from": "zero_sum.minimax.loomis_theorem",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_theorem",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "zero_sum.minimax.ville_theorem",
+      "to": "zero_sum.minimax.ville_discretization_proof",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    }
+  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

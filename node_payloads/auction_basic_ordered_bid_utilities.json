@@ -1,0 +1,162 @@
+{
+  "id": "auction.basic.ordered_bid_utilities",
+  "title": "Ordered-Bid Utilities",
+  "kind": "definition",
+  "status": "staged",
+  "href": "auction/basic/auction_basic_ordered_bid_utilities.html",
+  "body_html": "<h1>Ordered-Bid Utilities</h1>\n<p>For finite linearly ordered bid spaces, the auction library provides maximum\nbid, argmax bidder, and maximum-bid-excluding-one-bidder utilities.</p>\n<p>These utilities support concrete auction rules such as first-price and\nsecond-price auctions.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "href": "auction/basic/auction_basic_formats.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "Auction.maxBid",
+      "display_name": "OrderedBids.Auction.maxBid",
+      "qualified_name": "OrderedBids.Auction.maxBid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L156",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.exists_maxBid",
+      "display_name": "OrderedBids.Auction.exists_maxBid",
+      "qualified_name": "OrderedBids.Auction.exists_maxBid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L159",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.argmaxBid",
+      "display_name": "OrderedBids.Auction.argmaxBid",
+      "qualified_name": "OrderedBids.Auction.argmaxBid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L167",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.argmaxBid_eq_maxBid",
+      "display_name": "OrderedBids.Auction.argmaxBid_eq_maxBid",
+      "qualified_name": "OrderedBids.Auction.argmaxBid_eq_maxBid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L170",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.bid_le_maxBid",
+      "display_name": "OrderedBids.Auction.bid_le_maxBid",
+      "qualified_name": "OrderedBids.Auction.bid_le_maxBid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L174",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.eq_argmaxBid_of_strict_max",
+      "display_name": "OrderedBids.Auction.eq_argmaxBid_of_strict_max",
+      "qualified_name": "OrderedBids.Auction.eq_argmaxBid_of_strict_max",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L179",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.maxBidExcluding",
+      "display_name": "OrderedBids.Auction.maxBidExcluding",
+      "qualified_name": "OrderedBids.Auction.maxBidExcluding",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L187",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.maxBidExcluding_le_maxBid",
+      "display_name": "OrderedBids.Auction.maxBidExcluding_le_maxBid",
+      "qualified_name": "OrderedBids.Auction.maxBidExcluding_le_maxBid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L191",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.maxBidExcluding_eq_maxBid_of_not_argmax",
+      "display_name": "OrderedBids.Auction.maxBidExcluding_eq_maxBid_of_not_argmax",
+      "qualified_name": "OrderedBids.Auction.maxBidExcluding_eq_maxBid_of_not_argmax",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L196",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.maxBidExcluding_le_argmaxBid_bid",
+      "display_name": "OrderedBids.Auction.maxBidExcluding_le_argmaxBid_bid",
+      "qualified_name": "OrderedBids.Auction.maxBidExcluding_le_argmaxBid_bid",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L204",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.maxBidExcluding_update_self",
+      "display_name": "OrderedBids.Auction.maxBidExcluding_update_self",
+      "qualified_name": "OrderedBids.Auction.maxBidExcluding_update_self",
+      "module": "GameTheoryLib.Auction.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Basic.lean#L211",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

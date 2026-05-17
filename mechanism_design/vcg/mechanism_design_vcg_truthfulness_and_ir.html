@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCG Truthfulness And Individual Rationality — EconCSLib Knowledge Blueprint</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
+        integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="../../style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.js"
+          integrity="sha384-FVvsvR4UzyIP8Y5hVvHjOfjVh+LWV78ll63SYx1t+nuuMPGMAihB8dJ2YsYyg1Wb"
+          crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/contrib/auto-render.min.js"
+          integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+          crossorigin="anonymous"></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.MDBLUEPRINT_MATH_OPTIONS = {"delimiters": [{"left": "$$", "right": "$$", "display": true}, {"left": "\\[", "right": "\\]", "display": true}, {"left": "$", "right": "$", "display": false}, {"left": "\\(", "right": "\\)", "display": false}], "throwOnError": false, "macros": {}};
+      renderMathInElement(document.body, window.MDBLUEPRINT_MATH_OPTIONS);
+    });
+  </script>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="logo" href="../../index.html">EconCSLib</a>
+    <a class="nav-link" href="../../dep_graph_document.html">Dependency graph</a>
+    <section class="nav-section" aria-labelledby="nav-topics">
+      <button class="sidebar-toggle" type="button" aria-expanded="true" aria-controls="topic-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Topics
+      </button>
+      <ul id="topic-list" class="topic-list nav-list">
+      
+        <li><a href="../../approachability/index.html">approachability</a></li>
+      
+        <li><a href="../../auction/index.html">auction</a></li>
+      
+        <li><a href="../../auction/basic/index.html">auction.basic</a></li>
+      
+        <li><a href="../../auction/knapsack/index.html">auction.knapsack</a></li>
+      
+        <li><a href="../../extensive_game/index.html">extensive_game</a></li>
+      
+        <li><a href="../../extensive_game/core/index.html">extensive_game.core</a></li>
+      
+        <li><a href="../../extensive_game/equilibrium/index.html">extensive_game.equilibrium</a></li>
+      
+        <li><a href="../../extensive_game/examples/index.html">extensive_game.examples</a></li>
+      
+        <li><a href="../../extensive_game/imperfect_information/index.html">extensive_game.imperfect_information</a></li>
+      
+        <li><a href="../../extensive_game/normal_form/index.html">extensive_game.normal_form</a></li>
+      
+        <li><a href="../../extensive_game/perfect_information/index.html">extensive_game.perfect_information</a></li>
+      
+        <li><a href="../../fixed_point/index.html">fixed_point</a></li>
+      
+        <li><a href="../../lattice/index.html">lattice</a></li>
+      
+        <li><a href="../../linear_algebra/index.html">linear_algebra</a></li>
+      
+        <li><a href="../../linear_programming/index.html">linear_programming</a></li>
+      
+        <li><a href="../../mechanism_design/index.html">mechanism_design</a></li>
+      
+        <li><a href="../../mechanism_design/basic/index.html">mechanism_design.basic</a></li>
+      
+        <li><a href="../../mechanism_design/bayesian/index.html">mechanism_design.bayesian</a></li>
+      
+        <li><a href="../../mechanism_design/myerson/index.html">mechanism_design.myerson</a></li>
+      
+        <li><a href="../../mechanism_design/transfer/index.html">mechanism_design.transfer</a></li>
+      
+        <li><a href="../../mechanism_design/vcg/index.html">mechanism_design.vcg</a></li>
+      
+        <li><a href="../../order/index.html">order</a></li>
+      
+        <li><a href="../../strategic_games/index.html">strategic_games</a></li>
+      
+        <li><a href="../../strategic_games/continuous/index.html">strategic_games.continuous</a></li>
+      
+        <li><a href="../../strategic_games/core/index.html">strategic_games.core</a></li>
+      
+        <li><a href="../../strategic_games/correlated/index.html">strategic_games.correlated</a></li>
+      
+        <li><a href="../../strategic_games/dominance/index.html">strategic_games.dominance</a></li>
+      
+        <li><a href="../../strategic_games/equilibrium/index.html">strategic_games.equilibrium</a></li>
+      
+        <li><a href="../../strategic_games/payoff_geometry/index.html">strategic_games.payoff_geometry</a></li>
+      
+        <li><a href="../../strategic_games/refinements/index.html">strategic_games.refinements</a></li>
+      
+        <li><a href="../../utility/index.html">utility</a></li>
+      
+        <li><a href="../../zero_sum/index.html">zero_sum</a></li>
+      
+        <li><a href="../../zero_sum/continuous/index.html">zero_sum.continuous</a></li>
+      
+        <li><a href="../../zero_sum/core/index.html">zero_sum.core</a></li>
+      
+        <li><a href="../../zero_sum/examples/index.html">zero_sum.examples</a></li>
+      
+        <li><a href="../../zero_sum/fictitious_play/index.html">zero_sum.fictitious_play</a></li>
+      
+        <li><a href="../../zero_sum/lp/index.html">zero_sum.lp</a></li>
+      
+        <li><a href="../../zero_sum/minimax/index.html">zero_sum.minimax</a></li>
+      
+        <li><a href="../../zero_sum/operators/index.html">zero_sum.operators</a></li>
+      
+      </ul>
+    </section>
+    
+    <section class="nav-section" aria-labelledby="nav-keywords">
+      <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
+        <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
+      </button>
+      <ul id="keyword-list" class="keyword-list nav-list">
+      
+        <li><a href="../../keywords/action.html">action</a></li>
+      
+        <li><a href="../../keywords/affine.html">affine</a></li>
+      
+        <li><a href="../../keywords/alternatives.html">alternatives</a></li>
+      
+        <li><a href="../../keywords/antisymmetric.html">antisymmetric</a></li>
+      
+        <li><a href="../../keywords/approachability.html">approachability</a></li>
+      
+        <li><a href="../../keywords/approximate-equilibrium.html">approximate-equilibrium</a></li>
+      
+        <li><a href="../../keywords/approximation.html">approximation</a></li>
+      
+        <li><a href="../../keywords/argmax.html">argmax</a></li>
+      
+        <li><a href="../../keywords/auction.html">auction</a></li>
+      
+        <li><a href="../../keywords/backward-induction.html">backward-induction</a></li>
+      
+        <li><a href="../../keywords/bargaining.html">bargaining</a></li>
+      
+        <li><a href="../../keywords/bayesian-mechanism.html">bayesian-mechanism</a></li>
+      
+        <li><a href="../../keywords/bayesian-nash-equilibrium.html">bayesian-nash-equilibrium</a></li>
+      
+        <li><a href="../../keywords/behavioral-strategy.html">behavioral-strategy</a></li>
+      
+        <li><a href="../../keywords/belief.html">belief</a></li>
+      
+        <li><a href="../../keywords/best-response.html">best-response</a></li>
+      
+        <li><a href="../../keywords/bid-profile.html">bid-profile</a></li>
+      
+        <li><a href="../../keywords/bids.html">bids</a></li>
+      
+        <li><a href="../../keywords/binary-allocation.html">binary-allocation</a></li>
+      
+        <li><a href="../../keywords/brouwer.html">brouwer</a></li>
+      
+        <li><a href="../../keywords/chance.html">chance</a></li>
+      
+        <li><a href="../../keywords/classic.html">classic</a></li>
+      
+        <li><a href="../../keywords/combinatorics.html">combinatorics</a></li>
+      
+        <li><a href="../../keywords/common-knowledge.html">common-knowledge</a></li>
+      
+        <li><a href="../../keywords/compactness.html">compactness</a></li>
+      
+        <li><a href="../../keywords/complementarity.html">complementarity</a></li>
+      
+        <li><a href="../../keywords/computation.html">computation</a></li>
+      
+        <li><a href="../../keywords/continuity.html">continuity</a></li>
+      
+        <li><a href="../../keywords/continuous-game.html">continuous-game</a></li>
+      
+        <li><a href="../../keywords/convex-game.html">convex-game</a></li>
+      
+        <li><a href="../../keywords/convexity.html">convexity</a></li>
+      
+        <li><a href="../../keywords/correlated-equilibrium.html">correlated-equilibrium</a></li>
+      
+        <li><a href="../../keywords/correlation.html">correlation</a></li>
+      
+        <li><a href="../../keywords/counterexample.html">counterexample</a></li>
+      
+        <li><a href="../../keywords/cournot.html">cournot</a></li>
+      
+        <li><a href="../../keywords/definition.html">definition</a></li>
+      
+        <li><a href="../../keywords/derived-game.html">derived-game</a></li>
+      
+        <li><a href="../../keywords/determinacy.html">determinacy</a></li>
+      
+        <li><a href="../../keywords/deviation.html">deviation</a></li>
+      
+        <li><a href="../../keywords/direct-mechanism.html">direct-mechanism</a></li>
+      
+        <li><a href="../../keywords/discontinuous-game.html">discontinuous-game</a></li>
+      
+        <li><a href="../../keywords/dominance.html">dominance</a></li>
+      
+        <li><a href="../../keywords/dsic.html">dsic</a></li>
+      
+        <li><a href="../../keywords/duality.html">duality</a></li>
+      
+        <li><a href="../../keywords/duel.html">duel</a></li>
+      
+        <li><a href="../../keywords/dynamic-programming.html">dynamic-programming</a></li>
+      
+        <li><a href="../../keywords/equilibrium.html">equilibrium</a></li>
+      
+        <li><a href="../../keywords/equilibrium-refinement.html">equilibrium-refinement</a></li>
+      
+        <li><a href="../../keywords/equilibrium-selection.html">equilibrium-selection</a></li>
+      
+        <li><a href="../../keywords/example.html">example</a></li>
+      
+        <li><a href="../../keywords/exercise.html">exercise</a></li>
+      
+        <li><a href="../../keywords/existence.html">existence</a></li>
+      
+        <li><a href="../../keywords/expected-payoff.html">expected-payoff</a></li>
+      
+        <li><a href="../../keywords/expected-utility.html">expected-utility</a></li>
+      
+        <li><a href="../../keywords/extensive-game.html">extensive-game</a></li>
+      
+        <li><a href="../../keywords/farkas.html">farkas</a></li>
+      
+        <li><a href="../../keywords/feasible-payoff.html">feasible-payoff</a></li>
+      
+        <li><a href="../../keywords/fictitious-play.html">fictitious-play</a></li>
+      
+        <li><a href="../../keywords/finite-game.html">finite-game</a></li>
+      
+        <li><a href="../../keywords/fixed-point.html">fixed-point</a></li>
+      
+        <li><a href="../../keywords/focal-point.html">focal-point</a></li>
+      
+        <li><a href="../../keywords/forward-induction.html">forward-induction</a></li>
+      
+        <li><a href="../../keywords/foundational.html">foundational</a></li>
+      
+        <li><a href="../../keywords/game-tree.html">game-tree</a></li>
+      
+        <li><a href="../../keywords/genericity.html">genericity</a></li>
+      
+        <li><a href="../../keywords/guarantee.html">guarantee</a></li>
+      
+        <li><a href="../../keywords/imperfect-information.html">imperfect-information</a></li>
+      
+        <li><a href="../../keywords/incomplete-information.html">incomplete-information</a></li>
+      
+        <li><a href="../../keywords/independence.html">independence</a></li>
+      
+        <li><a href="../../keywords/individual-rationality.html">individual-rationality</a></li>
+      
+        <li><a href="../../keywords/information-set.html">information-set</a></li>
+      
+        <li><a href="../../keywords/invariance.html">invariance</a></li>
+      
+        <li><a href="../../keywords/invariant-distribution.html">invariant-distribution</a></li>
+      
+        <li><a href="../../keywords/kakutani.html">kakutani</a></li>
+      
+        <li><a href="../../keywords/knapsack.html">knapsack</a></li>
+      
+        <li><a href="../../keywords/kuhn-theorem.html">kuhn-theorem</a></li>
+      
+        <li><a href="../../keywords/lattice.html">lattice</a></li>
+      
+        <li><a href="../../keywords/learning.html">learning</a></li>
+      
+        <li><a href="../../keywords/limit.html">limit</a></li>
+      
+        <li><a href="../../keywords/linear-algebra.html">linear-algebra</a></li>
+      
+        <li><a href="../../keywords/linear-programming.html">linear-programming</a></li>
+      
+        <li><a href="../../keywords/loomis.html">loomis</a></li>
+      
+        <li><a href="../../keywords/lottery.html">lottery</a></li>
+      
+        <li><a href="../../keywords/matrix-game.html">matrix-game</a></li>
+      
+        <li><a href="../../keywords/mdblueprint.html">mdblueprint</a></li>
+      
+        <li><a href="../../keywords/mechanism-design.html">mechanism-design</a></li>
+      
+        <li><a href="../../keywords/mertens.html">mertens</a></li>
+      
+        <li><a href="../../keywords/minimax.html">minimax</a></li>
+      
+        <li><a href="../../keywords/minmax.html">minmax</a></li>
+      
+        <li><a href="../../keywords/minority-game.html">minority-game</a></li>
+      
+        <li><a href="../../keywords/mixed-strategy.html">mixed-strategy</a></li>
+      
+        <li><a href="../../keywords/monotone-game.html">monotone-game</a></li>
+      
+        <li><a href="../../keywords/monotonicity.html">monotonicity</a></li>
+      
+        <li><a href="../../keywords/multiple-parameter.html">multiple-parameter</a></li>
+      
+        <li><a href="../../keywords/myerson.html">myerson</a></li>
+      
+        <li><a href="../../keywords/nash-equilibrium.html">nash-equilibrium</a></li>
+      
+        <li><a href="../../keywords/nature.html">nature</a></li>
+      
+        <li><a href="../../keywords/normal-form.html">normal-form</a></li>
+      
+        <li><a href="../../keywords/obedience.html">obedience</a></li>
+      
+        <li><a href="../../keywords/optimal-strategy.html">optimal-strategy</a></li>
+      
+        <li><a href="../../keywords/order.html">order</a></li>
+      
+        <li><a href="../../keywords/ordered-field.html">ordered-field</a></li>
+      
+        <li><a href="../../keywords/outcome.html">outcome</a></li>
+      
+        <li><a href="../../keywords/payoff.html">payoff</a></li>
+      
+        <li><a href="../../keywords/perfect-information.html">perfect-information</a></li>
+      
+        <li><a href="../../keywords/perfect-recall.html">perfect-recall</a></li>
+      
+        <li><a href="../../keywords/perfection.html">perfection</a></li>
+      
+        <li><a href="../../keywords/perron-frobenius.html">perron-frobenius</a></li>
+      
+        <li><a href="../../keywords/polytope.html">polytope</a></li>
+      
+        <li><a href="../../keywords/preference.html">preference</a></li>
+      
+        <li><a href="../../keywords/profile.html">profile</a></li>
+      
+        <li><a href="../../keywords/proof-plan.html">proof-plan</a></li>
+      
+        <li><a href="../../keywords/proper-equilibrium.html">proper-equilibrium</a></li>
+      
+        <li><a href="../../keywords/prudence.html">prudence</a></li>
+      
+        <li><a href="../../keywords/quasi-linear-utility.html">quasi-linear-utility</a></li>
+      
+        <li><a href="../../keywords/randomized-strategy.html">randomized-strategy</a></li>
+      
+        <li><a href="../../keywords/rationality.html">rationality</a></li>
+      
+        <li><a href="../../keywords/rationalizability.html">rationalizability</a></li>
+      
+        <li><a href="../../keywords/refinement.html">refinement</a></li>
+      
+        <li><a href="../../keywords/repeated-game.html">repeated-game</a></li>
+      
+        <li><a href="../../keywords/retract.html">retract</a></li>
+      
+        <li><a href="../../keywords/revelation-principle.html">revelation-principle</a></li>
+      
+        <li><a href="../../keywords/risk.html">risk</a></li>
+      
+        <li><a href="../../keywords/robinson.html">robinson</a></li>
+      
+        <li><a href="../../keywords/saddle-point.html">saddle-point</a></li>
+      
+        <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
+      
+        <li><a href="../../keywords/separation.html">separation</a></li>
+      
+        <li><a href="../../keywords/sequential-equilibrium.html">sequential-equilibrium</a></li>
+      
+        <li><a href="../../keywords/simplex.html">simplex</a></li>
+      
+        <li><a href="../../keywords/single-parameter.html">single-parameter</a></li>
+      
+        <li><a href="../../keywords/sion.html">sion</a></li>
+      
+        <li><a href="../../keywords/smooth-game.html">smooth-game</a></li>
+      
+        <li><a href="../../keywords/social-welfare.html">social-welfare</a></li>
+      
+        <li><a href="../../keywords/solution-concept.html">solution-concept</a></li>
+      
+        <li><a href="../../keywords/staged.html">staged</a></li>
+      
+        <li><a href="../../keywords/stochastic-matrix.html">stochastic-matrix</a></li>
+      
+        <li><a href="../../keywords/strategic-game.html">strategic-game</a></li>
+      
+        <li><a href="../../keywords/strategic-games.html">strategic-games</a></li>
+      
+        <li><a href="../../keywords/strategic-stability.html">strategic-stability</a></li>
+      
+        <li><a href="../../keywords/strategy.html">strategy</a></li>
+      
+        <li><a href="../../keywords/strict-equilibrium.html">strict-equilibrium</a></li>
+      
+        <li><a href="../../keywords/subgame.html">subgame</a></li>
+      
+        <li><a href="../../keywords/subgame-perfect-equilibrium.html">subgame-perfect-equilibrium</a></li>
+      
+        <li><a href="../../keywords/supermodular-game.html">supermodular-game</a></li>
+      
+        <li><a href="../../keywords/support.html">support</a></li>
+      
+        <li><a href="../../keywords/symmetry.html">symmetry</a></li>
+      
+        <li><a href="../../keywords/tarski.html">tarski</a></li>
+      
+        <li><a href="../../keywords/theorem.html">theorem</a></li>
+      
+        <li><a href="../../keywords/topic-catalog.html">topic-catalog</a></li>
+      
+        <li><a href="../../keywords/topology.html">topology</a></li>
+      
+        <li><a href="../../keywords/transfers.html">transfers</a></li>
+      
+        <li><a href="../../keywords/two-by-two.html">two-by-two</a></li>
+      
+        <li><a href="../../keywords/utility.html">utility</a></li>
+      
+        <li><a href="../../keywords/value.html">value</a></li>
+      
+        <li><a href="../../keywords/value-operator.html">value-operator</a></li>
+      
+        <li><a href="../../keywords/variational-inequality.html">variational-inequality</a></li>
+      
+        <li><a href="../../keywords/vcg.html">vcg</a></li>
+      
+        <li><a href="../../keywords/vector-payoff.html">vector-payoff</a></li>
+      
+        <li><a href="../../keywords/ville.html">ville</a></li>
+      
+        <li><a href="../../keywords/vnm.html">vnm</a></li>
+      
+        <li><a href="../../keywords/weak-duality.html">weak-duality</a></li>
+      
+        <li><a href="../../keywords/zermelo.html">zermelo</a></li>
+      
+        <li><a href="../../keywords/zero-sum.html">zero-sum</a></li>
+      
+      </ul>
+    </section>
+    
+  </nav>
+  <main>
+    
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-mechanism_design-2e-vcg-2e-truthfulness_and_ir">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">VCG Truthfulness And Individual Rationality</span>
+    <div class="thm_header_extras">
+      
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-staged">staged</span>
+    </div>
+    <div class="thm_header_hidden_extras">
+      <a class="permalink" href="#node-mechanism_design-2e-vcg-2e-truthfulness_and_ir">#</a>
+      
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
+    </div>
+  </header>
+
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="mechanism_design_vcg_welfare_and_payments.html">VCG Welfare And Payments</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
+
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/VCG.lean#L199"><code>MultipleParameterMechanism.vcg.VCGMechanism_truthful_quasiLinearUtility_nonneg</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 36d8470, GameTheoryLib.MechanismDesign.VCG
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/VCG.lean#L228"><code>MultipleParameterMechanism.vcg.VCGMechanism_truthful_profile_quasiLinearUtility_nonneg</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 36d8470, GameTheoryLib.MechanismDesign.VCG
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/VCG.lean#L241"><code>MultipleParameterMechanism.vcg.VCGMechanism_isExPostIR_of_all_nonnegative</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 36d8470, GameTheoryLib.MechanismDesign.VCG
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/VCG.lean#L265"><code>MultipleParameterMechanism.vcg.VCGMechanism_isDSIC</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 36d8470, GameTheoryLib.MechanismDesign.VCG
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.MechanismDesign.VCG</code></p>
+      
+    </div>
+  </div>
+  
+
+  <div class="theorem_thmcontent thm-content body">
+    <h1>VCG Truthfulness And Individual Rationality</h1>
+<p>Under the stated nonnegativity hypotheses, the VCG mechanism gives
+nonnegative truthful quasi-linear utility, is ex-post individually rational,
+and is dominant-strategy incentive compatible.</p>
+    
+  </div>
+
+  
+
+  
+  <footer class="tags">
+    <span class="tag">mechanism-design</span><span class="tag">vcg</span><span class="tag">dsic</span><span class="tag">individual-rationality</span>
+  </footer>
+  
+</article>
+
+  </main>
+  <script src="../../graph.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.querySelector('.sidebar-toggle');
+      var list = document.getElementById('topic-list');
+      if (!btn || !list) return;
+      var stored = localStorage.getItem('sidebar-topics-folded');
+      var folded = stored === 'true';
+      list.hidden = folded;
+      btn.setAttribute('aria-expanded', String(!folded));
+      btn.addEventListener('click', function() {
+        folded = !folded;
+        list.hidden = folded;
+        btn.setAttribute('aria-expanded', String(!folded));
+        localStorage.setItem('sidebar-topics-folded', String(folded));
+      });
+      var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
+      var keywordList = document.getElementById('keyword-list');
+      if (keywordBtn && keywordList) {
+        var kwStored = localStorage.getItem('sidebar-keywords-folded');
+        var kwFolded = kwStored === 'true';
+        keywordList.hidden = kwFolded;
+        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        keywordBtn.addEventListener('click', function() {
+          kwFolded = !kwFolded;
+          keywordList.hidden = kwFolded;
+          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

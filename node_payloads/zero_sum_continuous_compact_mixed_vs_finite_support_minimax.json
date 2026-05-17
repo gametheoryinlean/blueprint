@@ -1,0 +1,29 @@
+{
+  "id": "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
+  "title": "Compact Mixed Versus Finite-Support Minimax",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "zero_sum/continuous/zero_sum_continuous_compact_mixed_vs_finite_support_minimax.html",
+  "body_html": "<h1>Compact Mixed Versus Finite-Support Minimax</h1>\n<p>Let $(S,T,g)$ be a zero-sum game such that $S$ is compact Hausdorff and\n$g(\\cdot,t)$ is upper semicontinuous for every $t\\in T$. Then the mixed game\n$$\n  (\\Delta(S),\\Delta_f(T),g)\n$$\nhas a value, and player 1 has an optimal strategy.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The space $\\Delta(S)$ is compact in the weak-star topology, and integration\npreserves upper semicontinuity of $g(\\cdot,t)$. The payoff is bilinear on\n$\\Delta(S)\\times\\Delta_f(T)$. Thus the one-sided compact convex minimax theorem\napplies.</p>",
+  "deps": [
+    {
+      "id": "zero_sum.continuous.general_mixed_strategy_space",
+      "title": "General Mixed Strategy Space",
+      "href": "zero_sum/continuous/zero_sum_continuous_general_mixed_strategy_space.html"
+    },
+    {
+      "id": "zero_sum.continuous.pure_minimax_compact_convex_one_sided",
+      "title": "One-Sided Compact Convex Minimax",
+      "href": "zero_sum/continuous/zero_sum_continuous_pure_minimax_compact_convex_one_sided.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zero_sum.continuous.general_mixed_minimax_theorem",
+      "title": "General Mixed Minimax Theorem",
+      "href": "zero_sum/continuous/zero_sum_continuous_general_mixed_minimax_theorem.html"
+    }
+  ],
+  "lean_refs": []
+}

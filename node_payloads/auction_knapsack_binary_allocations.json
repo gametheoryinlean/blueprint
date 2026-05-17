@@ -1,0 +1,129 @@
+{
+  "id": "auction.knapsack.binary_allocations",
+  "title": "Binary Knapsack Allocations",
+  "kind": "definition",
+  "status": "staged",
+  "href": "auction/knapsack/auction_knapsack_binary_allocations.html",
+  "body_html": "<h1>Binary Knapsack Allocations</h1>\n<p>The binary-allocation layer represents selected agents by Boolean profiles,\nconverts them into real allocation vectors, and defines finite feasible\nknapsack search spaces with a social-welfare objective.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "auction.knapsack.environment",
+      "title": "Knapsack Auction Environment",
+      "href": "auction/knapsack/auction_knapsack_environment.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.knapsack.welfare_maximizing_mechanism",
+      "title": "Welfare-Maximizing Knapsack Mechanism",
+      "href": "auction/knapsack/auction_knapsack_welfare_maximizing_mechanism.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "BinaryAllocation",
+      "display_name": "KnapsackAuction.BinaryAllocations.BinaryAllocation",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.BinaryAllocation",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L112",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "binaryToAllocation",
+      "display_name": "KnapsackAuction.BinaryAllocations.binaryToAllocation",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.binaryToAllocation",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L115",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "binaryLoad",
+      "display_name": "KnapsackAuction.BinaryAllocations.binaryLoad",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.binaryLoad",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L119",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "binaryRespectsCapacity",
+      "display_name": "KnapsackAuction.BinaryAllocations.binaryRespectsCapacity",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.binaryRespectsCapacity",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L123",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "feasibleBinaryAllocations",
+      "display_name": "KnapsackAuction.BinaryAllocations.feasibleBinaryAllocations",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.feasibleBinaryAllocations",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L127",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "binarySocialWelfare",
+      "display_name": "KnapsackAuction.BinaryAllocations.binarySocialWelfare",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.binarySocialWelfare",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L132",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "zeroBinaryRespectsCapacity",
+      "display_name": "KnapsackAuction.BinaryAllocations.zeroBinaryRespectsCapacity",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.zeroBinaryRespectsCapacity",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L136",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "feasibleBinaryAllocations_nonempty",
+      "display_name": "KnapsackAuction.BinaryAllocations.feasibleBinaryAllocations_nonempty",
+      "qualified_name": "KnapsackAuction.BinaryAllocations.feasibleBinaryAllocations_nonempty",
+      "module": "GameTheoryLib.Auction.Knapsack",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Auction/Knapsack.lean#L140",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

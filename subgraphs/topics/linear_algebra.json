@@ -4,20 +4,20 @@
     "title": "Linear Algebra",
     "href": "linear_algebra/index.html",
     "parent": null,
-    "node_count": 3,
-    "descendant_node_count": 3
+    "node_count": 4,
+    "descendant_node_count": 4
   },
   "counts": {
-    "internal_nodes": 3,
-    "descendant_nodes": 3,
+    "internal_nodes": 4,
+    "descendant_nodes": 4,
     "child_topics": 0,
-    "non_proof_plan_nodes": 3,
+    "non_proof_plan_nodes": 4,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 6,
-    "visible_nodes_with_selected_proof_plans": 6
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
   },
   "nodes": [
     {
@@ -35,6 +35,14 @@
       "status": "staged",
       "href": "linear_algebra/linear_algebra_perron_frobenius_positive_matrix.html",
       "payload": "node_payloads/linear_algebra_perron_frobenius_positive_matrix.json"
+    },
+    {
+      "id": "linear_algebra.staged_topic_catalog",
+      "title": "Staged Linear Algebra Topic Catalog",
+      "kind": "task",
+      "status": "staged",
+      "href": "linear_algebra/linear_algebra_staged_topic_catalog.html",
+      "payload": "node_payloads/linear_algebra_staged_topic_catalog.json"
     },
     {
       "id": "linear_algebra.theorem_of_alternative",
@@ -58,22 +66,22 @@
       "title": "Linear Programming",
       "href": "linear_programming/index.html",
       "role": "dependent",
-      "node_count": 2
+      "node_count": 3
     },
     {
-      "id": "zerosum",
-      "title": "Zerosum",
-      "href": "zerosum/index.html",
+      "id": "zero_sum.minimax",
+      "title": "Zero Sum.Minimax",
+      "href": "zero_sum/minimax/index.html",
       "role": "dependency",
-      "node_count": 63
+      "node_count": 11
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:zerosum",
+      "from": "topic:zero_sum.minimax",
       "to": "linear_algebra.perron_frobenius_positive_matrix",
       "kind": "boundary_dependency",
-      "topic": "zerosum",
+      "topic": "zero_sum.minimax",
       "count": 1
     },
     {
@@ -107,12 +115,18 @@
       "id": "linear-algebra",
       "title": "linear-algebra",
       "href": "keywords/linear-algebra.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "perron-frobenius",
       "title": "perron-frobenius",
       "href": "keywords/perron-frobenius.html",
+      "count": 1
+    },
+    {
+      "id": "topic-catalog",
+      "title": "topic-catalog",
+      "href": "keywords/topic-catalog.html",
       "count": 1
     },
     {

@@ -1,0 +1,24 @@
+{
+  "id": "zero_sum.continuous.pure_minimax_compact_convex_one_sided",
+  "title": "One-Sided Compact Convex Minimax",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "zero_sum/continuous/zero_sum_continuous_pure_minimax_compact_convex_one_sided.html",
+  "body_html": "<h1>One-Sided Compact Convex Minimax</h1>\n<p>Let $G=(S,T,g)$ be a zero-sum game. Assume:</p>\n<ol>\n<li>$S$ is convex and compact;</li>\n<li>$T$ is convex;</li>\n<li>for each $t\\in T$, $g(\\cdot,t)$ is quasi-concave and upper semicontinuous;</li>\n<li>for each $s\\in S$, $g(s,\\cdot)$ is convex.</li>\n</ol>\n<p>Then\n$$\n  \\sup_{s\\in S}\\inf_{t\\in T}g(s,t)\n  =\n  \\inf_{t\\in T}\\sup_{s\\in S}g(s,t),\n$$\nand player 1 has an optimal strategy.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Assume a strict gap around $v$. Compactness gives finitely many opponent\nstrategies that cover $S$ by strict sublevel sets. Perturb these finitely many\nstrategies toward a relative-interior point so that the payoff becomes continuous\non their convex hull. Sion's theorem applies to the compact convex reduced game,\ncontradicting the assumed strict gap.</p>",
+  "deps": [
+    {
+      "id": "zero_sum.continuous.sion_minimax_theorem",
+      "title": "Sion Minimax Theorem",
+      "href": "zero_sum/continuous/zero_sum_continuous_sion_minimax_theorem.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
+      "title": "Compact Mixed Versus Finite-Support Minimax",
+      "href": "zero_sum/continuous/zero_sum_continuous_compact_mixed_vs_finite_support_minimax.html"
+    }
+  ],
+  "lean_refs": []
+}

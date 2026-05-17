@@ -1,0 +1,228 @@
+{
+  "topic": {
+    "id": "mechanism_design",
+    "title": "Mechanism Design",
+    "href": "mechanism_design/index.html",
+    "parent": null,
+    "node_count": 1,
+    "descendant_node_count": 13
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 13,
+    "child_topics": 5,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 0,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 2,
+    "visible_nodes_with_selected_proof_plans": 2
+  },
+  "nodes": [
+    {
+      "id": "mechanism_design.staged_topic_catalog",
+      "title": "Staged Mechanism Design Topic Catalog",
+      "kind": "task",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_staged_topic_catalog.html",
+      "payload": "node_payloads/mechanism_design_staged_topic_catalog.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [],
+  "boundary_edges": [],
+  "keywords": [
+    {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 1
+    },
+    {
+      "id": "topic-catalog",
+      "title": "topic-catalog",
+      "href": "keywords/topic-catalog.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [
+    "mechanism_design.basic",
+    "mechanism_design.bayesian",
+    "mechanism_design.myerson",
+    "mechanism_design.transfer",
+    "mechanism_design.vcg"
+  ],
+  "child_topic_nodes": [
+    {
+      "id": "mechanism_design.basic",
+      "title": "Mechanism Design.Basic",
+      "depth": 2,
+      "parent": "mechanism_design",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "definition": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "mechanism_design/basic/index.html",
+      "children": []
+    },
+    {
+      "id": "mechanism_design.bayesian",
+      "title": "Mechanism Design.Bayesian",
+      "depth": 2,
+      "parent": "mechanism_design",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "definition": 2,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "mechanism_design/bayesian/index.html",
+      "children": []
+    },
+    {
+      "id": "mechanism_design.myerson",
+      "title": "Mechanism Design.Myerson",
+      "depth": 2,
+      "parent": "mechanism_design",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "definition": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "mechanism_design/myerson/index.html",
+      "children": []
+    },
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "depth": 2,
+      "parent": "mechanism_design",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "definition": 3
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "mechanism_design/transfer/index.html",
+      "children": []
+    },
+    {
+      "id": "mechanism_design.vcg",
+      "title": "Mechanism Design.Vcg",
+      "depth": 2,
+      "parent": "mechanism_design",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "definition": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "mechanism_design/vcg/index.html",
+      "children": []
+    }
+  ],
+  "child_topic_edges": [
+    {
+      "from": "topic:mechanism_design.basic",
+      "to": "topic:mechanism_design.bayesian",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.basic",
+      "to": "topic:mechanism_design.transfer",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:mechanism_design.bayesian",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:mechanism_design.myerson",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:mechanism_design.vcg",
+      "kind": "topic_dependency",
+      "count": 1
+    }
+  ],
+  "child_boundary_topics": [
+    {
+      "id": "auction.basic",
+      "title": "Auction.Basic",
+      "href": "auction/basic/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "auction.knapsack",
+      "title": "Auction.Knapsack",
+      "href": "auction/knapsack/index.html",
+      "role": "dependent",
+      "node_count": 4
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 90
+    }
+  ],
+  "child_boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "topic:mechanism_design.basic",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 2
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependent",
+      "topic": "auction.basic",
+      "count": 2
+    },
+    {
+      "from": "topic:mechanism_design.myerson",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependent",
+      "topic": "auction.knapsack",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependent",
+      "topic": "auction.knapsack",
+      "count": 1
+    }
+  ]
+}

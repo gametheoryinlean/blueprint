@@ -1,0 +1,58 @@
+{
+  "id": "extensive_game.perfect_information.subgame_perfect_equilibrium",
+  "title": "Subgame-Perfect Equilibrium In Perfect-Information Games",
+  "kind": "definition",
+  "status": "staged",
+  "href": "extensive_game/perfect_information/extensive_game_perfect_information_subgame_perfect_equilibrium.html",
+  "body_html": "<h1>Subgame-Perfect Equilibrium In Perfect-Information Games</h1>\n<p>A strategy profile $\\sigma$ is subgame-perfect if for every position $p$, the\ncontinuation strategy profile $\\sigma[p]$ induced by $\\sigma$ is a Nash equilibrium\nof the subgame $G[p]$.</p>\n<p>This strengthens Nash equilibrium by requiring optimality after every possible\nhistory, including histories not reached by the equilibrium play.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "extensive_game.core.history_and_subgame",
+      "title": "History And Subgame",
+      "href": "extensive_game/core/extensive_game_core_history_and_subgame.html"
+    },
+    {
+      "id": "strategic_games.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_games/strategic_games_nash_equilibrium.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "extensive_game.examples.backward_forward_induction_incompatibility",
+      "title": "Backward And Forward Induction Can Conflict",
+      "href": "extensive_game/examples/extensive_game_examples_backward_forward_induction_incompatibility.html"
+    },
+    {
+      "id": "extensive_game.examples.rubinstein_bargaining_spe",
+      "title": "Rubinstein Bargaining Subgame Perfect Equilibrium",
+      "href": "extensive_game/examples/extensive_game_examples_rubinstein_bargaining_spe.html"
+    },
+    {
+      "id": "extensive_game.perfect_information.kuhn_spe_existence",
+      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_kuhn_spe_existence.html"
+    },
+    {
+      "id": "extensive_game.perfect_information.spe_implies_nash",
+      "title": "Subgame-Perfect Equilibrium Implies Nash Equilibrium",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_spe_implies_nash.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "IsSubgamePerfect",
+      "display_name": "GameTree.IsSubgamePerfect",
+      "qualified_name": "GameTree.IsSubgamePerfect",
+      "module": "GameTheoryLib.ExtensiveGame.GameTreeSPE",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/ExtensiveGame/GameTreeSPE.lean#L111",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

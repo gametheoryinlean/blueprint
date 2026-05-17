@@ -1,0 +1,37 @@
+{
+  "id": "strategic_games.equilibrium.nash_equilibrium_mfogt",
+  "title": "Nash Equilibrium",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/equilibrium/strategic_games_equilibrium_nash_equilibrium_mfogt.html",
+  "body_html": "<h1>Nash Equilibrium</h1>\n<p>A strategy profile $s\\in S$ is a Nash equilibrium if no player can profitably\ndeviate unilaterally:\n$$\n  g_i(t_i,s_{-i})\\le g_i(s_i,s_{-i})\n  \\quad\\text{for all } i\\in I,\\ t_i\\in S_i.\n$$\nEquivalently,\n$$\n  s_i\\in BR_i(s_{-i}) \\quad\\text{for every } i\\in I.\n$$</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.best_response",
+      "title": "Best Response",
+      "href": "strategic_games/strategic_games_best_response.html"
+    },
+    {
+      "id": "strategic_games.unilateral_deviation",
+      "title": "Unilateral Deviation",
+      "href": "strategic_games/strategic_games_unilateral_deviation.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "IsNashEquilibrium",
+      "display_name": "IsNashEquilibrium",
+      "qualified_name": "IsNashEquilibrium",
+      "module": "GameTheoryLib.StrategicGame.NashEquilibrium",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/NashEquilibrium.lean#L23",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

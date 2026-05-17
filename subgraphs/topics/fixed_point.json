@@ -4,20 +4,20 @@
     "title": "Fixed Point",
     "href": "fixed_point/index.html",
     "parent": null,
-    "node_count": 6,
-    "descendant_node_count": 6
+    "node_count": 7,
+    "descendant_node_count": 7
   },
   "counts": {
-    "internal_nodes": 6,
-    "descendant_nodes": 6,
+    "internal_nodes": 7,
+    "descendant_nodes": 7,
     "child_topics": 0,
-    "non_proof_plan_nodes": 6,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
   },
   "nodes": [
     {
@@ -67,6 +67,14 @@
       "status": "staged",
       "href": "fixed_point/fixed_point_sperner_lemma.html",
       "payload": "node_payloads/fixed_point_sperner_lemma.json"
+    },
+    {
+      "id": "fixed_point.staged_topic_catalog",
+      "title": "Staged Fixed Point Topic Catalog",
+      "kind": "task",
+      "status": "staged",
+      "href": "fixed_point/fixed_point_staged_topic_catalog.html",
+      "payload": "node_payloads/fixed_point_staged_topic_catalog.json"
     }
   ],
   "edges": [
@@ -98,34 +106,76 @@
   ],
   "boundary_topics": [
     {
-      "id": "strategic_game",
-      "title": "Strategic Game",
-      "href": "strategic_game/index.html",
+      "id": "strategic_games.continuous",
+      "title": "Strategic Games.Continuous",
+      "href": "strategic_games/continuous/index.html",
+      "role": "dependent",
+      "node_count": 13
+    },
+    {
+      "id": "strategic_games.core",
+      "title": "Strategic Games.Core",
+      "href": "strategic_games/core/index.html",
+      "role": "dependent",
+      "node_count": 12
+    },
+    {
+      "id": "strategic_games.equilibrium",
+      "title": "Strategic Games.Equilibrium",
+      "href": "strategic_games/equilibrium/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 75
+      "node_count": 13
+    },
+    {
+      "id": "strategic_games.refinements",
+      "title": "Strategic Games.Refinements",
+      "href": "strategic_games/refinements/index.html",
+      "role": "dependent",
+      "node_count": 14
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:strategic_game",
+      "from": "topic:strategic_games.equilibrium",
       "to": "fixed_point.kakutani_from_two_player_nash",
       "kind": "boundary_dependency",
-      "topic": "strategic_game",
+      "topic": "strategic_games.equilibrium",
       "count": 1
     },
     {
       "from": "fixed_point.brouwer_compact_convex",
-      "to": "topic:strategic_game",
+      "to": "topic:strategic_games.continuous",
       "kind": "boundary_dependent",
-      "topic": "strategic_game",
-      "count": 3
+      "topic": "strategic_games.continuous",
+      "count": 1
+    },
+    {
+      "from": "fixed_point.brouwer_compact_convex",
+      "to": "topic:strategic_games.core",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.core",
+      "count": 1
+    },
+    {
+      "from": "fixed_point.brouwer_compact_convex",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
     },
     {
       "from": "fixed_point.kakutani_fixed_point",
-      "to": "topic:strategic_game",
+      "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
-      "topic": "strategic_game",
-      "count": 2
+      "topic": "strategic_games.equilibrium",
+      "count": 1
+    },
+    {
+      "from": "fixed_point.kakutani_fixed_point",
+      "to": "topic:strategic_games.refinements",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.refinements",
+      "count": 1
     }
   ],
   "keywords": [
@@ -145,7 +195,7 @@
       "id": "fixed-point",
       "title": "fixed-point",
       "href": "keywords/fixed-point.html",
-      "count": 6
+      "count": 7
     },
     {
       "id": "kakutani",
@@ -163,6 +213,12 @@
       "id": "retract",
       "title": "retract",
       "href": "keywords/retract.html",
+      "count": 1
+    },
+    {
+      "id": "topic-catalog",
+      "title": "topic-catalog",
+      "href": "keywords/topic-catalog.html",
       "count": 1
     }
   ],

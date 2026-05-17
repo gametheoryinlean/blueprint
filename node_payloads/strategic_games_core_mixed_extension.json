@@ -1,0 +1,43 @@
+{
+  "id": "strategic_games.core.mixed_extension",
+  "title": "Mixed Extension Of A Strategic Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/core/strategic_games_core_mixed_extension.html",
+  "body_html": "<h1>Mixed Extension Of A Strategic Game</h1>\n<p>For a finite strategic game $G$, its mixed extension $\\widetilde G$ has player\n$i$'s strategy set $\\Delta(S_i)$ and payoff\n$$\n  \\widetilde g_i(\\sigma)\n  =\n  \\sum_{s=(s_1,\\ldots,s_N)\\in S}\n    \\left(\\prod_{j\\in I}\\sigma_j(s_j)\\right) g_i(s).\n$$\nThis is the multilinear extension of the pure payoff function.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.core.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_games/core/strategic_games_core_mixed_strategy.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous",
+      "title": "Mixed Equilibrium In Compact Continuous Games",
+      "href": "strategic_games/equilibrium/strategic_games_equilibrium_mixed_equilibrium_compact_continuous.html"
+    },
+    {
+      "id": "strategic_games.equilibrium.mixed_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium",
+      "href": "strategic_games/equilibrium/strategic_games_equilibrium_mixed_nash_equilibrium.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "StrategicGame.expectedPayoff",
+      "display_name": "StrategicGame.expectedPayoff",
+      "qualified_name": "StrategicGame.expectedPayoff",
+      "module": "GameTheoryLib.StrategicGame.MixedStrategy",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/MixedStrategy.lean#L80",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "strategic_games.correlated.mediated_game",
+  "title": "Mediated Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/correlated/strategic_games_correlated_mediated_game.html",
+  "body_html": "<h1>Mediated Game</h1>\n<p>Given a finite strategic-form game, a mediated game augments play with a\ncorrelating device. The device samples a pure strategy profile\n$s\\in\\prod_i S_i$ according to a probability distribution and privately\nrecommends $s_i$ to player $i$.</p>\n<p>Players observe only their own recommendations and then choose whether to obey\nor deviate.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    },
+    {
+      "id": "strategic_games.strategy_profile",
+      "title": "Strategy Profile",
+      "href": "strategic_games/strategic_games_strategy_profile.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.correlated.recommendation_strategy",
+      "title": "Recommendation Strategy",
+      "href": "strategic_games/correlated/strategic_games_correlated_recommendation_strategy.html"
+    }
+  ],
+  "lean_refs": []
+}

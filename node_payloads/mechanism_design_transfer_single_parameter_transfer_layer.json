@@ -1,0 +1,152 @@
+{
+  "id": "mechanism_design.transfer.single_parameter_transfer_layer",
+  "title": "Single-Parameter Transfer Layer",
+  "kind": "definition",
+  "status": "staged",
+  "href": "mechanism_design/transfer/mechanism_design_transfer_single_parameter_transfer_layer.html",
+  "body_html": "<h1>Single-Parameter Transfer Layer</h1>\n<p>Single-parameter mechanisms use scalar reports, scalar allocation coordinates,\nand scalar payments. This is the common interface for Myerson-style payment\nrules and knapsack auctions.</p>\n<p>The layer records allocation feasibility, monotonicity, quasi-linear value and\nutility, DSIC, and implementability predicates.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.transfer.mechanisms_with_transfers",
+      "title": "Mechanisms With Transfers",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "href": "auction/basic/auction_basic_formats.html"
+    },
+    {
+      "id": "auction.knapsack.environment",
+      "title": "Knapsack Auction Environment",
+      "href": "auction/knapsack/auction_knapsack_environment.html"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_formula",
+      "title": "Myerson Payment Formula",
+      "href": "mechanism_design/myerson/mechanism_design_myerson_payment_formula.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SingleParameterMechanism",
+      "display_name": "SingleParameterMechanism",
+      "qualified_name": "SingleParameterMechanism",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L153",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.IsAllocFeasible",
+      "display_name": "SingleParameterMechanism.IsAllocFeasible",
+      "qualified_name": "SingleParameterMechanism.IsAllocFeasible",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L163",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.IsMonotone",
+      "display_name": "SingleParameterMechanism.IsMonotone",
+      "qualified_name": "SingleParameterMechanism.IsMonotone",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L174",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.payment",
+      "display_name": "SingleParameterMechanism.payment",
+      "qualified_name": "SingleParameterMechanism.payment",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L184",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.quasiLinearValue",
+      "display_name": "SingleParameterMechanism.quasiLinearValue",
+      "qualified_name": "SingleParameterMechanism.quasiLinearValue",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L189",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.quasiLinearUtility",
+      "display_name": "SingleParameterMechanism.quasiLinearUtility",
+      "qualified_name": "SingleParameterMechanism.quasiLinearUtility",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L195",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility",
+      "display_name": "SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility",
+      "qualified_name": "SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L203",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.IsDSIC",
+      "display_name": "SingleParameterMechanism.IsDSIC",
+      "qualified_name": "SingleParameterMechanism.IsDSIC",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L220",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SingleParameterMechanism.IsImplementable",
+      "display_name": "SingleParameterMechanism.IsImplementable",
+      "qualified_name": "SingleParameterMechanism.IsImplementable",
+      "module": "GameTheoryLib.MechanismDesign.Transfer",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Transfer.lean#L229",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

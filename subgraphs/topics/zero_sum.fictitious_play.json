@@ -1,0 +1,181 @@
+{
+  "topic": {
+    "id": "zero_sum.fictitious_play",
+    "title": "Zero Sum.Fictitious Play",
+    "href": "zero_sum/fictitious_play/index.html",
+    "parent": "zero_sum",
+    "node_count": 5,
+    "descendant_node_count": 5
+  },
+  "counts": {
+    "internal_nodes": 5,
+    "descendant_nodes": 5,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 1,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 1,
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
+  },
+  "nodes": [
+    {
+      "id": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
+      "title": "Continuous Fictitious Play Closes The Duality Gap",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "zero_sum.fictitious_play/zero_sum_fictitious_play_continuous_fictitious_play_gap.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_continuous_fictitious_play_gap.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.empirical_frequency",
+      "title": "Empirical Frequency Of Play",
+      "kind": "definition",
+      "status": "staged",
+      "href": "zero_sum.fictitious_play/zero_sum_fictitious_play_empirical_frequency.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_empirical_frequency.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.fictitious_play",
+      "title": "Fictitious Play",
+      "kind": "definition",
+      "status": "staged",
+      "href": "zero_sum.fictitious_play/zero_sum_fictitious_play_fictitious_play.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_fictitious_play.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "title": "Fictitious Play Convergence",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum.fictitious_play/zero_sum_fictitious_play_fictitious_play_convergence.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_fictitious_play_convergence.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.fictitious_play_robinson_proof",
+      "title": "Robinson Proof Of Fictitious Play Convergence",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum.fictitious_play/zero_sum_fictitious_play_fictitious_play_robinson_proof.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_fictitious_play_robinson_proof.json",
+      "target": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "plan_status": "candidate"
+    }
+  ],
+  "edges": [
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.empirical_frequency",
+      "to": "zero_sum.fictitious_play.fictitious_play",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 75
+    },
+    {
+      "id": "zero_sum.core",
+      "title": "Zero Sum.Core",
+      "href": "zero_sum/core/index.html",
+      "role": "dependency",
+      "node_count": 19
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.fictitious_play.fictitious_play",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "zero_sum.fictitious_play.empirical_frequency",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "zero_sum.fictitious_play.fictitious_play",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "fictitious-play",
+      "title": "fictitious-play",
+      "href": "keywords/fictitious-play.html",
+      "count": 5
+    },
+    {
+      "id": "learning",
+      "title": "learning",
+      "href": "keywords/learning.html",
+      "count": 4
+    },
+    {
+      "id": "proof-plan",
+      "title": "proof-plan",
+      "href": "keywords/proof-plan.html",
+      "count": 1
+    },
+    {
+      "id": "robinson",
+      "title": "robinson",
+      "href": "keywords/robinson.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 5
+    }
+  ],
+  "proof_plan_attachments": [
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "to": "zero_sum.fictitious_play.fictitious_play_robinson_proof",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    }
+  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

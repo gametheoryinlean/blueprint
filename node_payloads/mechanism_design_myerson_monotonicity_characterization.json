@@ -1,0 +1,129 @@
+{
+  "id": "mechanism_design.myerson.monotonicity_characterization",
+  "title": "Myerson Monotonicity Characterization",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "mechanism_design/myerson/mechanism_design_myerson_monotonicity_characterization.html",
+  "body_html": "<h1>Myerson Monotonicity Characterization</h1>\n<p>For single-parameter mechanisms over real values, DSIC implies monotonicity.\nConversely, a monotone allocation rule paired with the canonical Myerson\npayment rule is DSIC.</p>\n<p>The zero-normalized DSIC payment rule is characterized by the Myerson payment\nformula, yielding existence and uniqueness of the zero-normalized payment rule\nfor monotone allocation rules.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.myerson.payment_formula",
+      "title": "Myerson Payment Formula",
+      "href": "mechanism_design/myerson/mechanism_design_myerson_payment_formula.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.knapsack.welfare_maximizing_mechanism",
+      "title": "Welfare-Maximizing Knapsack Mechanism",
+      "href": "auction/knapsack/auction_knapsack_welfare_maximizing_mechanism.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "isMonotone_of_isDSIC",
+      "display_name": "SingleParameterMechanism.MyersonLemma.isMonotone_of_isDSIC",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.isMonotone_of_isDSIC",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L66",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "withMyersonPayment_isDSIC_of_isMonotone",
+      "display_name": "SingleParameterMechanism.MyersonLemma.withMyersonPayment_isDSIC_of_isMonotone",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.withMyersonPayment_isDSIC_of_isMonotone",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L146",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "isImplementable_of_isMonotone",
+      "display_name": "SingleParameterMechanism.MyersonLemma.isImplementable_of_isMonotone",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.isImplementable_of_isMonotone",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L209",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "isImplementable_iff_isMonotone",
+      "display_name": "SingleParameterMechanism.MyersonLemma.isImplementable_iff_isMonotone",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.isImplementable_iff_isMonotone",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L219",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "payment_formula_of_isDSIC_of_zeroNormalized",
+      "display_name": "SingleParameterMechanism.MyersonLemma.payment_formula_of_isDSIC_of_zeroNormalized",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.payment_formula_of_isDSIC_of_zeroNormalized",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L236",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "payment_eq_myersonPayment_of_isDSIC_of_zeroNormalized",
+      "display_name": "SingleParameterMechanism.MyersonLemma.payment_eq_myersonPayment_of_isDSIC_of_zeroNormalized",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.payment_eq_myersonPayment_of_isDSIC_of_zeroNormalized",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L369",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "existsUnique_zeroNormalized_payment_of_isMonotone",
+      "display_name": "SingleParameterMechanism.MyersonLemma.existsUnique_zeroNormalized_payment_of_isMonotone",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.existsUnique_zeroNormalized_payment_of_isMonotone",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L381",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "payment_formula_of_zeroNormalized_and_isDSIC",
+      "display_name": "SingleParameterMechanism.MyersonLemma.payment_formula_of_zeroNormalized_and_isDSIC",
+      "qualified_name": "SingleParameterMechanism.MyersonLemma.payment_formula_of_zeroNormalized_and_isDSIC",
+      "module": "GameTheoryLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
+      "short_revision": "36d8470",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Myerson.lean#L396",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

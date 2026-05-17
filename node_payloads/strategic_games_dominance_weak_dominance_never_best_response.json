@@ -1,0 +1,28 @@
+{
+  "id": "strategic_games.dominance.weak_dominance_never_best_response",
+  "title": "Weak Domination And Completely Mixed Tests",
+  "kind": "proposition",
+  "status": "staged",
+  "href": "strategic_games/dominance/strategic_games_dominance_weak_dominance_never_best_response.html",
+  "body_html": "<h1>Weak Domination And Completely Mixed Tests</h1>\n<p>In a finite strategic game, a mixed strategy $m_i\\in\\Delta(S_i)$ is weakly\ndominated if and only if it is never a best response against a completely\ncorrelated strategy of the opponents.</p>\n<p>Here \"completely correlated\" means a correlated strategy in the relative interior\nof $\\Delta(S_{-i})$, assigning positive probability to every opponent profile.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Weak domination gives a strict expected-payoff improvement against every\nfull-support correlated opponent strategy, so $m_i$ is not a best response to any\nof them. For the converse, MFoGT reduces to an auxiliary finite zero-sum game. If\nthe value is positive then strict domination follows. If the value is zero, optimal\nsupport and best-response complementarity identify an opponent pure profile\nagainst which an optimal strategy gives a strict improvement while never lowering\nthe payoff elsewhere.</p>",
+  "deps": [
+    {
+      "id": "strategic_games.best_response",
+      "title": "Best Response",
+      "href": "strategic_games/strategic_games_best_response.html"
+    },
+    {
+      "id": "strategic_games.dominance.dominated_strategy",
+      "title": "Dominated Strategy",
+      "href": "strategic_games/dominance/strategic_games_dominance_dominated_strategy.html"
+    },
+    {
+      "id": "zero_sum.core.support_complementarity",
+      "title": "Support Complementarity",
+      "href": "zero_sum/core/zero_sum_core_support_complementarity.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

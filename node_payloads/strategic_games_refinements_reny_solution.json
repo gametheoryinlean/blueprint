@@ -1,0 +1,39 @@
+{
+  "id": "strategic_games.refinements.reny_solution",
+  "title": "Reny Solution",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/refinements/strategic_games_refinements_reny_solution.html",
+  "body_html": "<h1>Reny Solution</h1>\n<p>For a compact game $G$, let\n$$\n  \\Gamma=\\{(s,v)\\in S\\times\\mathbb R^I:v=g(s)\\}\n$$\nand let $\\overline\\Gamma$ be its closure. A pair\n$(s,v)\\in\\overline\\Gamma$ is a Reny solution if, for every player $i$,\n$$\n  \\sup_{t_i\\in S_i} \\underline g_i(t_i,s_{-i})\\le v_i,\n$$\nwhere $\\underline g_i$ is the lower semicontinuous regularization of $g_i$ with\nrespect to the opponents' variables.</p>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.refinements.approximate_solution",
+      "title": "Approximate Solution",
+      "href": "strategic_games/refinements/strategic_games_refinements_approximate_solution.html"
+    },
+    {
+      "id": "strategic_games.refinements.approximate_solution_is_reny",
+      "title": "Approximate Solutions Are Reny Solutions",
+      "href": "strategic_games/refinements/strategic_games_refinements_approximate_solution_is_reny.html"
+    },
+    {
+      "id": "strategic_games.refinements.better_reply_secure_game",
+      "title": "Better Reply Secure Game",
+      "href": "strategic_games/refinements/strategic_games_refinements_better_reply_secure_game.html"
+    },
+    {
+      "id": "strategic_games.refinements.reny_solution_exists",
+      "title": "Existence Of Reny Solutions",
+      "href": "strategic_games/refinements/strategic_games_refinements_reny_solution_exists.html"
+    }
+  ],
+  "lean_refs": []
+}

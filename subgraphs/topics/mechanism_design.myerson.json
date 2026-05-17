@@ -1,0 +1,117 @@
+{
+  "topic": {
+    "id": "mechanism_design.myerson",
+    "title": "Mechanism Design.Myerson",
+    "href": "mechanism_design/myerson/index.html",
+    "parent": "mechanism_design",
+    "node_count": 2,
+    "descendant_node_count": 2
+  },
+  "counts": {
+    "internal_nodes": 2,
+    "descendant_nodes": 2,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 2,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "mechanism_design.myerson.monotonicity_characterization",
+      "title": "Myerson Monotonicity Characterization",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design.myerson/mechanism_design_myerson_monotonicity_characterization.html",
+      "payload": "node_payloads/mechanism_design_myerson_monotonicity_characterization.json"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_formula",
+      "title": "Myerson Payment Formula",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design.myerson/mechanism_design_myerson_payment_formula.html",
+      "payload": "node_payloads/mechanism_design_myerson_payment_formula.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.monotonicity_characterization",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "auction.knapsack",
+      "title": "Auction.Knapsack",
+      "href": "auction/knapsack/index.html",
+      "role": "dependent",
+      "node_count": 4
+    },
+    {
+      "id": "mechanism_design.transfer",
+      "title": "Mechanism Design.Transfer",
+      "href": "mechanism_design/transfer/index.html",
+      "role": "dependency",
+      "node_count": 3
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:mechanism_design.transfer",
+      "to": "mechanism_design.myerson.payment_formula",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.monotonicity_characterization",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependent",
+      "topic": "auction.knapsack",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "dsic",
+      "title": "dsic",
+      "href": "keywords/dsic.html",
+      "count": 1
+    },
+    {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 2
+    },
+    {
+      "id": "monotonicity",
+      "title": "monotonicity",
+      "href": "keywords/monotonicity.html",
+      "count": 1
+    },
+    {
+      "id": "myerson",
+      "title": "myerson",
+      "href": "keywords/myerson.html",
+      "count": 2
+    },
+    {
+      "id": "single-parameter",
+      "title": "single-parameter",
+      "href": "keywords/single-parameter.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}
