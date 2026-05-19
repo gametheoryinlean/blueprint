@@ -4,8 +4,12 @@
   "kind": "proposition",
   "status": "staged",
   "href": "strategic_games/dominance/strategic_games_dominance_weak_dominance_never_best_response.html",
+  "primary_topic": "strategic_games.dominance",
+  "topics": [
+    "strategic_games.dominance"
+  ],
   "body_html": "<h1>Weak Domination And Completely Mixed Tests</h1>\n<p>In a finite strategic game, a mixed strategy $m_i\\in\\Delta(S_i)$ is weakly\ndominated if and only if it is never a best response against a completely\ncorrelated strategy of the opponents.</p>\n<p>Here \"completely correlated\" means a correlated strategy in the relative interior\nof $\\Delta(S_{-i})$, assigning positive probability to every opponent profile.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>Weak domination gives a strict expected-payoff improvement against every\nfull-support correlated opponent strategy, so $m_i$ is not a best response to any\nof them. For the converse, MFoGT reduces to an auxiliary finite zero-sum game. If\nthe value is positive then strict domination follows. If the value is zero, optimal\nsupport and best-response complementarity identify an opponent pure profile\nagainst which an optimal strategy gives a strict improvement while never lowering\nthe payoff elsewhere.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Weak domination gives a strict expected-payoff improvement against every\nfull-support correlated opponent strategy, so $m_i$ is not a best response to any\nof them. For the converse, MFoGT reduces to an auxiliary finite zero-sum game. If\nthe value is positive then strict domination follows. If the value is zero, optimal\nsupport and best-response complementarity identify an opponent pure profile\nagainst which an optimal strategy gives a strict improvement while never lowering\nthe payoff elsewhere.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Proposition 4.3.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Weak domination is equivalent to never being a best response against a completely correlated strategy.</li>\n</ul>",
   "deps": [
     {
       "id": "strategic_games.best_response",

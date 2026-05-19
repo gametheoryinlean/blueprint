@@ -1,0 +1,33 @@
+{
+  "id": "strategic_games.bayesian.bayesian_strategy",
+  "title": "Bayesian Strategy",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_strategy.html",
+  "primary_topic": "strategic_games.bayesian",
+  "topics": [
+    "strategic_games.bayesian"
+  ],
+  "body_html": "<h1>Bayesian Strategy</h1>\n<p>In a Bayesian game, a pure strategy of player $i$ is a type-contingent action\nplan\n$$\n  s_i:T_i\\to A_i.\n$$\nIt specifies what player $i$ will do after each type that player might observe.</p>\n<p>A mixed or behavioral Bayesian strategy assigns to each type a distribution over\nactions:\n$$\n  \\sigma_i:T_i\\to\\Delta(A_i).\n$$\nA Bayesian strategy profile is a tuple of such type-contingent plans, one for\neach player.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 7, Section 7.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Strategies in Bayesian games are type-contingent plans.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.bayesian.bayesian_game",
+      "title": "Bayesian Game",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_game.html"
+    },
+    {
+      "id": "strategic_games.core.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "strategic_games/core/strategic_games_core_mixed_strategy.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.bayesian.bayesian_equilibrium",
+      "title": "Bayesian Equilibrium",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_equilibrium.html"
+    }
+  ],
+  "lean_refs": []
+}

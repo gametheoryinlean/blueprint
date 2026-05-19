@@ -1,0 +1,52 @@
+{
+  "id": "mechanism_design.basic.dsic_predicate",
+  "title": "DSIC Predicate",
+  "kind": "definition",
+  "status": "staged",
+  "href": "mechanism_design/basic/mechanism_design_basic_dsic_predicate.html",
+  "primary_topic": "mechanism_design.basic",
+  "topics": [
+    "mechanism_design.basic"
+  ],
+  "body_html": "<h1>DSIC Predicate</h1>\n<p>A direct mechanism is dominant-strategy incentive compatible when, for every true\ntype profile and every agent, truthful reporting is weakly dominant in the\nstrategic game induced by that type profile.</p>\n<p>This definition treats DSIC as an instance of the library's strategic-game\ndominance API. The mechanism layer supplies reports, outcomes, and utilities;\nthe strategic-game layer supplies the dominance comparison.</p>\n<h2>References</h2>\n<ul>\n<li>[EconCSLib PR #27, blueprint/src/content.tex, def:md_basic_interface] EconCSLib pull request #27, https://github.com/gametheoryinlean/EconCSLib/pull/27. Migrated from the PR's old leanblueprint section into mdblueprint staged form.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.basic.induced_strategic_game",
+      "title": "Induced Strategic Game",
+      "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html"
+    },
+    {
+      "id": "strategic_games.weakly_dominant_strategy",
+      "title": "Weakly Dominant Strategy",
+      "href": "strategic_games/strategic_games_weakly_dominant_strategy.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.basic.truthfulness_from_dsic",
+      "title": "Truthfulness From DSIC",
+      "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html"
+    },
+    {
+      "id": "mechanism_design.transfer.mechanisms_with_transfers",
+      "title": "Mechanisms With Transfers",
+      "href": "mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Mechanism.IsDSIC",
+      "display_name": "Mechanism.IsDSIC",
+      "qualified_name": "Mechanism.IsDSIC",
+      "module": "GameTheoryLib.MechanismDesign.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/MechanismDesign/Basic.lean#L90",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

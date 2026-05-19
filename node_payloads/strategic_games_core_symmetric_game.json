@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "staged",
   "href": "strategic_games/core/strategic_games_core_symmetric_game.html",
-  "body_html": "<h1>Symmetric Game</h1>\n<p>A strategic game has a symmetry $\\phi$ if $\\phi$ is a permutation of the player\nset, induces bijections $S_i\\to S_{\\phi(i)}$, and preserves payoffs:\n$$\n  g_{\\phi(i)}(\\phi(s))=g_i(s)\n  \\quad\\text{for all } i\\in I,\\ s\\in S.\n$$\nThe same permutation acts on mixed profiles by transporting probability mass along\nthe induced bijections of strategy sets.</p>",
+  "primary_topic": "strategic_games.core",
+  "topics": [
+    "strategic_games.core"
+  ],
+  "body_html": "<h1>Symmetric Game</h1>\n<p>A strategic game has a symmetry $\\phi$ if $\\phi$ is a permutation of the player\nset, induces bijections $S_i\\to S_{\\phi(i)}$, and preserves payoffs:\n$$\n  g_{\\phi(i)}(\\phi(s))=g_i(s)\n  \\quad\\text{for all } i\\in I,\\ s\\in S.\n$$\nThe same permutation acts on mixed profiles by transporting probability mass along\nthe induced bijections of strategy sets.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Theorem 4.6.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Definition of a game symmetry used before the symmetric equilibrium theorem.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -18,6 +22,16 @@
       "id": "strategic_games.core.symmetric_mixed_equilibrium",
       "title": "Symmetric Mixed Equilibrium",
       "href": "strategic_games/core/strategic_games_core_symmetric_mixed_equilibrium.html"
+    },
+    {
+      "id": "strategic_games.dynamics.replicator_dynamics",
+      "title": "Replicator Dynamics",
+      "href": "strategic_games/dynamics/strategic_games_dynamics_replicator_dynamics.html"
+    },
+    {
+      "id": "strategic_games.evolution.evolutionarily_stable_strategy",
+      "title": "Evolutionarily Stable Strategy",
+      "href": "strategic_games/evolution/strategic_games_evolution_evolutionarily_stable_strategy.html"
     }
   ],
   "lean_refs": []

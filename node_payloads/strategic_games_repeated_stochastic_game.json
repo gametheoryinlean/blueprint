@@ -1,0 +1,28 @@
+{
+  "id": "strategic_games.repeated.stochastic_game",
+  "title": "Stochastic Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/repeated/strategic_games_repeated_stochastic_game.html",
+  "primary_topic": "strategic_games.repeated",
+  "topics": [
+    "strategic_games.repeated"
+  ],
+  "body_html": "<h1>Stochastic Game</h1>\n<p>A stochastic game has a state variable, and each state is associated with a\nstage game. At every stage, the current state and action profile determine both\nthe current payoff vector and the probability distribution of the next state.</p>\n<p>Thus an action may affect current payoff and also future strategic opportunities\nthrough the state transition.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 8, Section 8.6.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Stochastic games and action-dependent state transitions.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.repeated.big_match_uniform_value",
+      "title": "Big Match Uniform Value",
+      "href": "strategic_games/repeated/strategic_games_repeated_big_match_uniform_value.html"
+    }
+  ],
+  "lean_refs": []
+}

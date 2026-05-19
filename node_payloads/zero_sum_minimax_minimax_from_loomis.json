@@ -4,7 +4,11 @@
   "kind": "proof-plan",
   "status": "staged",
   "href": "zero_sum/minimax/zero_sum_minimax_minimax_from_loomis.html",
-  "body_html": "<h1>Minimax Theorem From Loomis Theorem</h1>\n<p>Loomis' theorem implies the finite von Neumann minimax theorem by taking\n$B$ to be the all-ones matrix. If $B_{ij}=1$ for all $(i,j)$, then for every\nmixed row $x\\in\\Delta(I)$ and every mixed column $y\\in\\Delta(J)$,\n$$\n  xB=(1,\\ldots,1),\\qquad By=(1,\\ldots,1)^T.\n$$\nThe Loomis inequalities become\n$$\n  xA\\ge v(1,\\ldots,1),\\qquad Ay\\le v(1,\\ldots,1)^T.\n$$\nEquivalently,\n$$\n  xAy'\\ge v \\quad\\text{for all }y'\\in\\Delta(J),\n  \\qquad\n  x'Ay\\le v \\quad\\text{for all }x'\\in\\Delta(I).\n$$\nThus $x$ guarantees $v$ for player 1 and $y$ guarantees $v$ for player 2, so the\nmaxmin and minmax values coincide at $v$.</p>\n<p>This node records the reverse direction from Loomis to minimax. The node\n<code>zero_sum.minimax.loomis_theorem</code> records the MFoGT proof route from minimax to Loomis, so\nthe two nodes together document the equivalence discussed in MFoGT Section 2.5.</p>",
+  "primary_topic": "zero_sum.minimax",
+  "topics": [
+    "zero_sum.minimax"
+  ],
+  "body_html": "<h1>Minimax Theorem From Loomis Theorem</h1>\n<p>Loomis' theorem implies the finite von Neumann minimax theorem by taking\n$B$ to be the all-ones matrix. If $B_{ij}=1$ for all $(i,j)$, then for every\nmixed row $x\\in\\Delta(I)$ and every mixed column $y\\in\\Delta(J)$,\n$$\n  xB=(1,\\ldots,1),\\qquad By=(1,\\ldots,1)^T.\n$$\nThe Loomis inequalities become\n$$\n  xA\\ge v(1,\\ldots,1),\\qquad Ay\\le v(1,\\ldots,1)^T.\n$$\nEquivalently,\n$$\n  xAy'\\ge v \\quad\\text{for all }y'\\in\\Delta(J),\n  \\qquad\n  x'Ay\\le v \\quad\\text{for all }x'\\in\\Delta(I).\n$$\nThus $x$ guarantees $v$ for player 1 and $y$ guarantees $v$ for player 2, so the\nmaxmin and minmax values coincide at $v$.</p>\n<p>This node records the reverse direction from Loomis to minimax. The node\n<code>zero_sum.minimax.loomis_theorem</code> records the MFoGT proof route from minimax to Loomis, so\nthe two nodes together document the equivalence discussed in MFoGT Section 2.5.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.5, paragraph after Theorem 2.5.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Taking B to be the all-ones matrix in Loomis recovers von Neumann minimax.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {

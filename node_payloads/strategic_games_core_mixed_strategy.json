@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "staged",
   "href": "strategic_games/core/strategic_games_core_mixed_strategy.html",
-  "body_html": "<h1>Mixed Strategy</h1>\n<p>A mixed strategy for player $i$ is a probability distribution over the strategy\nset \\(S_i\\). When \\(S_i\\) is finite, a mixed strategy is a vector\n\\(x_i \\in \\Delta(S_i)\\) in the standard simplex.</p>",
+  "primary_topic": "strategic_games.core",
+  "topics": [
+    "strategic_games.core"
+  ],
+  "body_html": "<h1>Mixed Strategy</h1>\n<p>A mixed strategy for player $i$ is a probability distribution over the strategy\nset \\(S_i\\). When \\(S_i\\) is finite, a mixed strategy is a vector\n\\(x_i \\in \\Delta(S_i)\\) in the standard simplex.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 3] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Mixed strategies and mixed extensions.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -15,6 +19,11 @@
   ],
   "dependents": [
     {
+      "id": "strategic_games.bayesian.bayesian_strategy",
+      "title": "Bayesian Strategy",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_strategy.html"
+    },
+    {
       "id": "strategic_games.core.best_response_face",
       "title": "Best Response Face",
       "href": "strategic_games/core/strategic_games_core_best_response_face.html"
@@ -23,6 +32,11 @@
       "id": "strategic_games.core.mixed_extension",
       "title": "Mixed Extension Of A Strategic Game",
       "href": "strategic_games/core/strategic_games_core_mixed_extension.html"
+    },
+    {
+      "id": "strategic_games.correlated.canonical_correlation_device",
+      "title": "Canonical Correlation Device",
+      "href": "strategic_games/correlated/strategic_games_correlated_canonical_correlation_device.html"
     },
     {
       "id": "strategic_games.correlated.correlated_best_response_not_independent",
@@ -77,9 +91,9 @@
       "qualified_name": "StrategicGame.MixedStrategy",
       "module": "GameTheoryLib.StrategicGame.MixedStrategy",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/MixedStrategy.lean#L40",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/MixedStrategy.lean#L40",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

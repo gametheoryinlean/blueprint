@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 4,
+    "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
   },
   "nodes": [
     {
@@ -124,6 +124,13 @@
       "href": "strategic_games/refinements/index.html",
       "role": "dependent",
       "node_count": 14
+    },
+    {
+      "id": "strategic_games.variational",
+      "title": "Strategic Games.Variational",
+      "href": "strategic_games/variational/index.html",
+      "role": "dependent",
+      "node_count": 1
     }
   ],
   "boundary_edges": [
@@ -167,6 +174,13 @@
       "to": "topic:strategic_games.refinements",
       "kind": "boundary_dependent",
       "topic": "strategic_games.refinements",
+      "count": 1
+    },
+    {
+      "from": "fixed_point.brouwer_compact_convex",
+      "to": "topic:strategic_games.variational",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.variational",
       "count": 1
     }
   ],

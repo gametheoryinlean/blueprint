@@ -4,20 +4,20 @@
     "title": "Mechanism Design.Basic",
     "href": "mechanism_design/basic/index.html",
     "parent": "mechanism_design",
-    "node_count": 2,
-    "descendant_node_count": 2
+    "node_count": 5,
+    "descendant_node_count": 5
   },
   "counts": {
-    "internal_nodes": 2,
-    "descendant_nodes": 2,
+    "internal_nodes": 5,
+    "descendant_nodes": 5,
     "child_topics": 0,
-    "non_proof_plan_nodes": 2,
+    "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 6,
-    "visible_nodes_with_selected_proof_plans": 6
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -25,21 +25,65 @@
       "title": "Direct Mechanism Interface",
       "kind": "definition",
       "status": "staged",
-      "href": "mechanism_design.basic/mechanism_design_basic_direct_mechanism_interface.html",
+      "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html",
       "payload": "node_payloads/mechanism_design_basic_direct_mechanism_interface.json"
+    },
+    {
+      "id": "mechanism_design.basic.dsic_predicate",
+      "title": "DSIC Predicate",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design/basic/mechanism_design_basic_dsic_predicate.html",
+      "payload": "node_payloads/mechanism_design_basic_dsic_predicate.json"
+    },
+    {
+      "id": "mechanism_design.basic.ex_post_ir_predicate",
+      "title": "Ex-Post Individual Rationality Predicate",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design/basic/mechanism_design_basic_ex_post_ir_predicate.html",
+      "payload": "node_payloads/mechanism_design_basic_ex_post_ir_predicate.json"
+    },
+    {
+      "id": "mechanism_design.basic.induced_strategic_game",
+      "title": "Induced Strategic Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html",
+      "payload": "node_payloads/mechanism_design_basic_induced_strategic_game.json"
     },
     {
       "id": "mechanism_design.basic.truthfulness_from_dsic",
       "title": "Truthfulness From DSIC",
       "kind": "theorem",
       "status": "staged",
-      "href": "mechanism_design.basic/mechanism_design_basic_truthfulness_from_dsic.html",
+      "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html",
       "payload": "node_payloads/mechanism_design_basic_truthfulness_from_dsic.json"
     }
   ],
   "edges": [
     {
+      "from": "mechanism_design.basic.induced_strategic_game",
+      "to": "mechanism_design.basic.dsic_predicate",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.basic.direct_mechanism_interface",
+      "to": "mechanism_design.basic.ex_post_ir_predicate",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.basic.direct_mechanism_interface",
+      "to": "mechanism_design.basic.induced_strategic_game",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "mechanism_design.basic.truthfulness_from_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.basic.induced_strategic_game",
       "to": "mechanism_design.basic.truthfulness_from_dsic",
       "kind": "uses"
     }
@@ -64,13 +108,27 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 86
+      "node_count": 132
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:strategic_games",
       "to": "mechanism_design.basic.direct_mechanism_interface",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "mechanism_design.basic.dsic_predicate",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "mechanism_design.basic.induced_strategic_game",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
@@ -90,7 +148,28 @@
       "count": 1
     },
     {
+      "from": "mechanism_design.basic.induced_strategic_game",
+      "to": "topic:mechanism_design.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.bayesian",
+      "count": 1
+    },
+    {
       "from": "mechanism_design.basic.direct_mechanism_interface",
+      "to": "topic:mechanism_design.transfer",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "topic:mechanism_design.transfer",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.transfer",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.basic.ex_post_ir_predicate",
       "to": "topic:mechanism_design.transfer",
       "kind": "boundary_dependent",
       "topic": "mechanism_design.transfer",
@@ -105,21 +184,39 @@
       "count": 1
     },
     {
+      "id": "dominance",
+      "title": "dominance",
+      "href": "keywords/dominance.html",
+      "count": 1
+    },
+    {
       "id": "dsic",
       "title": "dsic",
       "href": "keywords/dsic.html",
-      "count": 2
+      "count": 3
+    },
+    {
+      "id": "individual-rationality",
+      "title": "individual-rationality",
+      "href": "keywords/individual-rationality.html",
+      "count": 1
     },
     {
       "id": "mechanism-design",
       "title": "mechanism-design",
       "href": "keywords/mechanism-design.html",
-      "count": 2
+      "count": 5
     },
     {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
       "count": 1
     }
   ],

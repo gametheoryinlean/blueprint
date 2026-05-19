@@ -5,19 +5,19 @@
     "href": "strategic_games/index.html",
     "parent": null,
     "node_count": 10,
-    "descendant_node_count": 86
+    "descendant_node_count": 132
   },
   "counts": {
     "internal_nodes": 10,
-    "descendant_nodes": 86,
-    "child_topics": 7,
+    "descendant_nodes": 132,
+    "child_topics": 16,
     "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 12,
+    "boundary_topics": 17,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 23,
-    "visible_nodes_with_selected_proof_plans": 23
+    "visible_nodes_without_proof_plans": 28,
+    "visible_nodes_with_selected_proof_plans": 28
   },
   "nodes": [
     {
@@ -195,7 +195,14 @@
       "title": "Mechanism Design.Basic",
       "href": "mechanism_design/basic/index.html",
       "role": "dependent",
-      "node_count": 2
+      "node_count": 5
+    },
+    {
+      "id": "strategic_games.bayesian",
+      "title": "Strategic Games.Bayesian",
+      "href": "strategic_games/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 6
     },
     {
       "id": "strategic_games.continuous",
@@ -216,7 +223,7 @@
       "title": "Strategic Games.Correlated",
       "href": "strategic_games/correlated/index.html",
       "role": "dependent",
-      "node_count": 10
+      "node_count": 11
     },
     {
       "id": "strategic_games.dominance",
@@ -233,6 +240,13 @@
       "node_count": 13
     },
     {
+      "id": "strategic_games.learning",
+      "title": "Strategic Games.Learning",
+      "href": "strategic_games/learning/index.html",
+      "role": "dependent",
+      "node_count": 7
+    },
+    {
       "id": "strategic_games.payoff_geometry",
       "title": "Strategic Games.Payoff Geometry",
       "href": "strategic_games/payoff_geometry/index.html",
@@ -240,11 +254,32 @@
       "node_count": 5
     },
     {
+      "id": "strategic_games.population",
+      "title": "Strategic Games.Population",
+      "href": "strategic_games/population/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "strategic_games.potential",
+      "title": "Strategic Games.Potential",
+      "href": "strategic_games/potential/index.html",
+      "role": "dependent",
+      "node_count": 2
+    },
+    {
       "id": "strategic_games.refinements",
       "title": "Strategic Games.Refinements",
       "href": "strategic_games/refinements/index.html",
       "role": "dependent",
       "node_count": 14
+    },
+    {
+      "id": "strategic_games.repeated",
+      "title": "Strategic Games.Repeated",
+      "href": "strategic_games/repeated/index.html",
+      "role": "dependent",
+      "node_count": 15
     },
     {
       "id": "zero_sum",
@@ -295,7 +330,28 @@
       "to": "topic:mechanism_design.basic",
       "kind": "boundary_dependent",
       "topic": "mechanism_design.basic",
+      "count": 2
+    },
+    {
+      "from": "strategic_games.weakly_dominant_strategy",
+      "to": "topic:mechanism_design.basic",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.basic",
       "count": 1
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "topic:strategic_games.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.bayesian",
+      "count": 2
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "topic:strategic_games.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.bayesian",
+      "count": 2
     },
     {
       "from": "strategic_games.best_response",
@@ -365,7 +421,7 @@
       "to": "topic:strategic_games.correlated",
       "kind": "boundary_dependent",
       "topic": "strategic_games.correlated",
-      "count": 1
+      "count": 2
     },
     {
       "from": "strategic_games.strategy_profile",
@@ -417,10 +473,38 @@
       "count": 1
     },
     {
+      "from": "strategic_games.strategic_game",
+      "to": "topic:strategic_games.learning",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.learning",
+      "count": 1
+    },
+    {
       "from": "strategic_games.nash_equilibrium",
       "to": "topic:strategic_games.payoff_geometry",
       "kind": "boundary_dependent",
       "topic": "strategic_games.payoff_geometry",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "topic:strategic_games.population",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.population",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "topic:strategic_games.potential",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.potential",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "topic:strategic_games.potential",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.potential",
       "count": 1
     },
     {
@@ -443,6 +527,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.refinements",
       "count": 1
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "topic:strategic_games.repeated",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.repeated",
+      "count": 2
     },
     {
       "from": "strategic_games.nash_equilibrium",
@@ -505,15 +596,41 @@
   ],
   "proof_plan_attachments": [],
   "child_topics": [
+    "strategic_games.bayesian",
     "strategic_games.continuous",
     "strategic_games.core",
     "strategic_games.correlated",
     "strategic_games.dominance",
+    "strategic_games.dynamics",
     "strategic_games.equilibrium",
+    "strategic_games.evolution",
+    "strategic_games.learning",
+    "strategic_games.manifold",
     "strategic_games.payoff_geometry",
-    "strategic_games.refinements"
+    "strategic_games.population",
+    "strategic_games.potential",
+    "strategic_games.refinements",
+    "strategic_games.repeated",
+    "strategic_games.variational"
   ],
   "child_topic_nodes": [
+    {
+      "id": "strategic_games.bayesian",
+      "title": "Strategic Games.Bayesian",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 6,
+      "direct_node_count": 6,
+      "kind_counts": {
+        "definition": 4,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 6
+      },
+      "href": "strategic_games/bayesian/index.html",
+      "children": []
+    },
     {
       "id": "strategic_games.continuous",
       "title": "Strategic Games.Continuous",
@@ -555,15 +672,15 @@
       "title": "Strategic Games.Correlated",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 10,
-      "direct_node_count": 10,
+      "node_count": 11,
+      "direct_node_count": 11,
       "kind_counts": {
-        "definition": 4,
+        "definition": 5,
         "example": 1,
         "theorem": 5
       },
       "status_counts": {
-        "staged": 10
+        "staged": 11
       },
       "href": "strategic_games/correlated/index.html",
       "children": []
@@ -586,6 +703,23 @@
       "children": []
     },
     {
+      "id": "strategic_games.dynamics",
+      "title": "Strategic Games.Dynamics",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "definition": 3,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 4
+      },
+      "href": "strategic_games/dynamics/index.html",
+      "children": []
+    },
+    {
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "depth": 2,
@@ -602,6 +736,58 @@
         "staged": 13
       },
       "href": "strategic_games/equilibrium/index.html",
+      "children": []
+    },
+    {
+      "id": "strategic_games.evolution",
+      "title": "Strategic Games.Evolution",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "definition": 1,
+        "proposition": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "strategic_games/evolution/index.html",
+      "children": []
+    },
+    {
+      "id": "strategic_games.learning",
+      "title": "Strategic Games.Learning",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 7,
+      "direct_node_count": 7,
+      "kind_counts": {
+        "definition": 4,
+        "theorem": 3
+      },
+      "status_counts": {
+        "staged": 7
+      },
+      "href": "strategic_games/learning/index.html",
+      "children": []
+    },
+    {
+      "id": "strategic_games.manifold",
+      "title": "Strategic Games.Manifold",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "definition": 2,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 4
+      },
+      "href": "strategic_games/manifold/index.html",
       "children": []
     },
     {
@@ -622,6 +808,40 @@
       "children": []
     },
     {
+      "id": "strategic_games.population",
+      "title": "Strategic Games.Population",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "definition": 2,
+        "proposition": 1
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "strategic_games/population/index.html",
+      "children": []
+    },
+    {
+      "id": "strategic_games.potential",
+      "title": "Strategic Games.Potential",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "definition": 1,
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "strategic_games/potential/index.html",
+      "children": []
+    },
+    {
       "id": "strategic_games.refinements",
       "title": "Strategic Games.Refinements",
       "depth": 2,
@@ -639,9 +859,48 @@
       },
       "href": "strategic_games/refinements/index.html",
       "children": []
+    },
+    {
+      "id": "strategic_games.repeated",
+      "title": "Strategic Games.Repeated",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 15,
+      "direct_node_count": 15,
+      "kind_counts": {
+        "definition": 9,
+        "theorem": 6
+      },
+      "status_counts": {
+        "staged": 15
+      },
+      "href": "strategic_games/repeated/index.html",
+      "children": []
+    },
+    {
+      "id": "strategic_games.variational",
+      "title": "Strategic Games.Variational",
+      "depth": 2,
+      "parent": "strategic_games",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "definition": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "strategic_games/variational/index.html",
+      "children": []
     }
   ],
   "child_topic_edges": [
+    {
+      "from": "topic:strategic_games.bayesian",
+      "to": "topic:strategic_games.repeated",
+      "kind": "topic_dependency",
+      "count": 1
+    },
     {
       "from": "topic:strategic_games.continuous",
       "to": "topic:strategic_games.equilibrium",
@@ -656,15 +915,33 @@
     },
     {
       "from": "topic:strategic_games.core",
+      "to": "topic:strategic_games.bayesian",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.core",
       "to": "topic:strategic_games.correlated",
       "kind": "topic_dependency",
-      "count": 3
+      "count": 4
+    },
+    {
+      "from": "topic:strategic_games.core",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "topic_dependency",
+      "count": 1
     },
     {
       "from": "topic:strategic_games.core",
       "to": "topic:strategic_games.equilibrium",
       "kind": "topic_dependency",
       "count": 2
+    },
+    {
+      "from": "topic:strategic_games.core",
+      "to": "topic:strategic_games.evolution",
+      "kind": "topic_dependency",
+      "count": 1
     },
     {
       "from": "topic:strategic_games.core",
@@ -685,10 +962,28 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games.correlated",
+      "to": "topic:strategic_games.learning",
+      "kind": "topic_dependency",
+      "count": 2
+    },
+    {
       "from": "topic:strategic_games.dominance",
       "to": "topic:strategic_games.refinements",
       "kind": "topic_dependency",
       "count": 2
+    },
+    {
+      "from": "topic:strategic_games.dynamics",
+      "to": "topic:strategic_games.evolution",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "topic:strategic_games.bayesian",
+      "kind": "topic_dependency",
+      "count": 1
     },
     {
       "from": "topic:strategic_games.equilibrium",
@@ -710,6 +1005,18 @@
     },
     {
       "from": "topic:strategic_games.equilibrium",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "topic:strategic_games.manifold",
+      "kind": "topic_dependency",
+      "count": 2
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
       "to": "topic:strategic_games.refinements",
       "kind": "topic_dependency",
       "count": 3
@@ -721,13 +1028,38 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games.payoff_geometry",
+      "to": "topic:strategic_games.repeated",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.potential",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
       "from": "topic:strategic_games.refinements",
       "to": "topic:strategic_games.equilibrium",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.variational",
+      "to": "topic:strategic_games.dynamics",
       "kind": "topic_dependency",
       "count": 1
     }
   ],
   "child_boundary_topics": [
+    {
+      "id": "approachability",
+      "title": "Approachability",
+      "href": "approachability/index.html",
+      "role": "dependency",
+      "node_count": 2
+    },
     {
       "id": "extensive_game.equilibrium",
       "title": "Extensive Game.Equilibrium",
@@ -741,6 +1073,13 @@
       "href": "extensive_game/examples/index.html",
       "role": "dependent",
       "node_count": 6
+    },
+    {
+      "id": "extensive_game.perfect_information",
+      "title": "Extensive Game.Perfect Information",
+      "href": "extensive_game/perfect_information/index.html",
+      "role": "dependency",
+      "node_count": 9
     },
     {
       "id": "fixed_point",
@@ -780,6 +1119,20 @@
   ],
   "child_boundary_edges": [
     {
+      "from": "topic:approachability",
+      "to": "topic:strategic_games.learning",
+      "kind": "boundary_dependency",
+      "topic": "approachability",
+      "count": 1
+    },
+    {
+      "from": "topic:extensive_game.perfect_information",
+      "to": "topic:strategic_games.repeated",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game.perfect_information",
+      "count": 1
+    },
+    {
       "from": "topic:fixed_point",
       "to": "topic:strategic_games.continuous",
       "kind": "boundary_dependency",
@@ -808,6 +1161,13 @@
       "count": 1
     },
     {
+      "from": "topic:fixed_point",
+      "to": "topic:strategic_games.variational",
+      "kind": "boundary_dependency",
+      "topic": "fixed_point",
+      "count": 1
+    },
+    {
       "from": "topic:lattice",
       "to": "topic:strategic_games.continuous",
       "kind": "boundary_dependency",
@@ -820,6 +1180,13 @@
       "kind": "boundary_dependency",
       "topic": "zero_sum.core",
       "count": 1
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "topic:strategic_games.repeated",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 2
     },
     {
       "from": "topic:zero_sum.minimax",

@@ -1,0 +1,112 @@
+{
+  "topic": {
+    "id": "strategic_games.potential",
+    "title": "Strategic Games.Potential",
+    "href": "strategic_games/potential/index.html",
+    "parent": "strategic_games",
+    "node_count": 2,
+    "descendant_node_count": 2
+  },
+  "counts": {
+    "internal_nodes": 2,
+    "descendant_nodes": 2,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 2,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "strategic_games.potential.potential_game",
+      "title": "Potential Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "strategic_games/potential/strategic_games_potential_potential_game.html",
+      "payload": "node_payloads/strategic_games_potential_potential_game.json"
+    },
+    {
+      "id": "strategic_games.potential.potential_maximizer_nash",
+      "title": "Potential Maximizer Is Nash",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "strategic_games/potential/strategic_games_potential_potential_maximizer_nash.html",
+      "payload": "node_payloads/strategic_games_potential_potential_maximizer_nash.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "strategic_games.potential.potential_game",
+      "to": "strategic_games.potential.potential_maximizer_nash",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 132
+    },
+    {
+      "id": "strategic_games.dynamics",
+      "title": "Strategic Games.Dynamics",
+      "href": "strategic_games/dynamics/index.html",
+      "role": "dependent",
+      "node_count": 4
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "strategic_games.potential.potential_game",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "strategic_games.potential.potential_maximizer_nash",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.potential.potential_game",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.dynamics",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "potential-game",
+      "title": "potential-game",
+      "href": "keywords/potential-game.html",
+      "count": 2
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 2
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

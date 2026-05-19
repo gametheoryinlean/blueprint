@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "staged",
   "href": "strategic_games/core/strategic_games_core_unilateral_deviation_mfogt.html",
-  "body_html": "<h1>Unilateral Deviation</h1>\n<p>Given a profile $s\\in S$, a player $i$, and an alternative strategy\n$t_i\\in S_i$, the unilateral deviation of player $i$ replaces only player\n$i$'s component:\n$$\n  (t_i,s_{-i})_j=\n  \\begin{cases}\n    t_i, &amp; j=i,\\\\\n    s_j, &amp; j\\ne i.\n  \\end{cases}\n$$\nThis is the basic local move used in best-response, dominance, and Nash\nequilibrium conditions.</p>",
+  "primary_topic": "strategic_games.core",
+  "topics": [
+    "strategic_games.core"
+  ],
+  "body_html": "<h1>Unilateral Deviation</h1>\n<p>Given a profile $s\\in S$, a player $i$, and an alternative strategy\n$t_i\\in S_i$, the unilateral deviation of player $i$ replaces only player\n$i$'s component:\n$$\n  (t_i,s_{-i})_j=\n  \\begin{cases}\n    t_i, &amp; j=i,\\\\\n    s_j, &amp; j\\ne i.\n  \\end{cases}\n$$\nThis is the basic local move used in best-response, dominance, and Nash\nequilibrium conditions.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 1.3.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Nash equilibrium is stated by absence of profitable unilateral deviations.</li>\n<li>[MFoGT, Definition 4.5.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Deviation t_i against s_{-i}.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -21,9 +25,9 @@
       "qualified_name": "StrategicGame.deviate",
       "module": "_mdblueprint.tests.fixtures.lean.GameTheoryLib.StrategicGame.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L13",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L13",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -34,9 +38,9 @@
       "qualified_name": "StrategicGame.Profile.deviate_self",
       "module": "GameTheoryLib.StrategicGame.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/Basic.lean#L61",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/Basic.lean#L61",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -47,9 +51,9 @@
       "qualified_name": "StrategicGame.Profile.deviate_same",
       "module": "GameTheoryLib.StrategicGame.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/Basic.lean#L67",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/Basic.lean#L67",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -60,9 +64,9 @@
       "qualified_name": "StrategicGame.Profile.deviate_of_ne",
       "module": "GameTheoryLib.StrategicGame.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/Basic.lean#L73",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/Basic.lean#L73",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

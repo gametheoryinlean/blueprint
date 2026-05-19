@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "admitted",
   "href": "strategic_games/strategic_games_strategic_game.html",
-  "body_html": "<h1>Strategic Game</h1>\n<p>A strategic game (or normal-form game) is a tuple\n\\((I, (S_i)_{i \\in I}, (u_i)_{i \\in I})\\)\nwhere \\(I\\) is a set of players, \\(S_i\\) is the strategy set of player \\(i\\), and\n\\(u_i \\colon \\prod_{j \\in I} S_j \\to U\\) is the payoff function of player \\(i\\).</p>\n<p>In the Lean formalization, this is a structure with fields <code>strategy : ι → Type*</code> and\n<code>payoff : Profile → ι → U</code>, where <code>Profile = ∀ i, strategy i</code>.</p>",
+  "primary_topic": "strategic_games",
+  "topics": [
+    "strategic_games"
+  ],
+  "body_html": "<h1>Strategic Game</h1>\n<p>A strategic game (or normal-form game) is a tuple\n\\((I, (S_i)_{i \\in I}, (u_i)_{i \\in I})\\)\nwhere \\(I\\) is a set of players, \\(S_i\\) is the strategy set of player \\(i\\), and\n\\(u_i \\colon \\prod_{j \\in I} S_j \\to U\\) is the payoff function of player \\(i\\).</p>\n<p>In the Lean formalization, this is a structure with fields <code>strategy : ι → Type*</code> and\n<code>payoff : Profile → ι → U</code>, where <code>Profile = ∀ i, strategy i</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of strategic-form game.</li>\n</ul>",
   "proof_html": null,
   "deps": [],
   "dependents": [
@@ -17,6 +21,21 @@
       "id": "mechanism_design.basic.direct_mechanism_interface",
       "title": "Direct Mechanism Interface",
       "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html"
+    },
+    {
+      "id": "mechanism_design.basic.induced_strategic_game",
+      "title": "Induced Strategic Game",
+      "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html"
+    },
+    {
+      "id": "strategic_games.bayesian.agent_normal_form",
+      "title": "Agent Normal Form Of A Bayesian Game",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_agent_normal_form.html"
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_game",
+      "title": "Bayesian Game",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_game.html"
     },
     {
       "id": "strategic_games.continuous.convex_game",
@@ -64,6 +83,11 @@
       "href": "strategic_games/core/strategic_games_core_symmetric_game.html"
     },
     {
+      "id": "strategic_games.correlated.canonical_correlation_device",
+      "title": "Canonical Correlation Device",
+      "href": "strategic_games/correlated/strategic_games_correlated_canonical_correlation_device.html"
+    },
+    {
       "id": "strategic_games.correlated.mediated_game",
       "title": "Mediated Game",
       "href": "strategic_games/correlated/strategic_games_correlated_mediated_game.html"
@@ -74,6 +98,21 @@
       "href": "strategic_games/dominance/strategic_games_dominance_dominated_strategy.html"
     },
     {
+      "id": "strategic_games.learning.external_regret",
+      "title": "External Regret",
+      "href": "strategic_games/learning/strategic_games_learning_external_regret.html"
+    },
+    {
+      "id": "strategic_games.population.population_game",
+      "title": "Population Game",
+      "href": "strategic_games/population/strategic_games_population_population_game.html"
+    },
+    {
+      "id": "strategic_games.potential.potential_game",
+      "title": "Potential Game",
+      "href": "strategic_games/potential/strategic_games_potential_potential_game.html"
+    },
+    {
       "id": "strategic_games.prisoners_dilemma",
       "title": "Prisoner's Dilemma",
       "href": "strategic_games/strategic_games_prisoners_dilemma.html"
@@ -82,6 +121,16 @@
       "id": "strategic_games.refinements.reny_solution",
       "title": "Reny Solution",
       "href": "strategic_games/refinements/strategic_games_refinements_reny_solution.html"
+    },
+    {
+      "id": "strategic_games.repeated.standard_repeated_game",
+      "title": "Standard Repeated Game",
+      "href": "strategic_games/repeated/strategic_games_repeated_standard_repeated_game.html"
+    },
+    {
+      "id": "strategic_games.repeated.stochastic_game",
+      "title": "Stochastic Game",
+      "href": "strategic_games/repeated/strategic_games_repeated_stochastic_game.html"
     },
     {
       "id": "strategic_games.strategy_profile",
@@ -101,9 +150,9 @@
       "qualified_name": "StrategicGame",
       "module": "_mdblueprint.tests.fixtures.lean.GameTheoryLib.StrategicGame.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L3",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L3",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

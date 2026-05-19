@@ -1,0 +1,28 @@
+{
+  "id": "strategic_games.learning.hannan_set",
+  "title": "Hannan Set",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/learning/strategic_games_learning_hannan_set.html",
+  "primary_topic": "strategic_games.learning",
+  "topics": [
+    "strategic_games.learning"
+  ],
+  "body_html": "<h1>Hannan Set</h1>\n<p>For player $i$, the Hannan set is the set of distributions $q\\in\\Delta(A)$ over\naction profiles for which player $i$ has no profitable fixed-action\ncounterfactual:\n$$\n  \\sum_{a\\in A}q(a)g_i(a)\n  \\ge\n  \\sum_{a\\in A}q(a)g_i(b_i,a_{-i})\n  \\quad\\text{for every } b_i\\in A_i.\n$$</p>\n<p>Equivalently, $q$ makes player $i$'s realized action payoff at least as good as\nthe payoff from any single action chosen in hindsight.</p>\n<p>The intersection of the Hannan sets over all players is the distributional\ntarget reached when every player has no external regret. It is weaker than the\ncorrelated-equilibrium set because it does not condition deviations on the\nrecommended action.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 7, Section 7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Hannan set associated to no-external-regret play.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.learning.external_regret",
+      "title": "External Regret",
+      "href": "strategic_games/learning/strategic_games_learning_external_regret.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.learning.no_external_regret_hannan_convergence",
+      "title": "No External Regret Converges To Hannan Set",
+      "href": "strategic_games/learning/strategic_games_learning_no_external_regret_hannan_convergence.html"
+    }
+  ],
+  "lean_refs": []
+}

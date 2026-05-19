@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "admitted",
   "href": "strategic_games/strategic_games_weakly_dominant_strategy.html",
-  "body_html": "<h1>Weakly Dominant Strategy</h1>\n<p>A strategy $s_i$ is weakly dominant for player $i$ if it weakly dominates every\nother strategy available to $i$:</p>\n<p>$$\\forall s'_i \\in S_i, \\quad s_i \\text{ weakly dominates } s'_i.$$</p>",
+  "primary_topic": "strategic_games",
+  "topics": [
+    "strategic_games"
+  ],
+  "body_html": "<h1>Weakly Dominant Strategy</h1>\n<p>A strategy $s_i$ is weakly dominant for player $i$ if it weakly dominates every\nother strategy available to $i$:</p>\n<p>$$\\forall s'_i \\in S_i, \\quad s_i \\text{ weakly dominates } s'_i.$$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Section 2.3] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of weakly dominant strategy.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -14,6 +18,11 @@
     }
   ],
   "dependents": [
+    {
+      "id": "mechanism_design.basic.dsic_predicate",
+      "title": "DSIC Predicate",
+      "href": "mechanism_design/basic/mechanism_design_basic_dsic_predicate.html"
+    },
     {
       "id": "strategic_games.dominant_implies_nash",
       "title": "Dominant Strategy Profile is a Nash Equilibrium",
@@ -32,9 +41,9 @@
       "qualified_name": "IsWeaklyDominant",
       "module": "GameTheoryLib.StrategicGame.Dominance",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/Dominance.lean#L32",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/Dominance.lean#L32",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

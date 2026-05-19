@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -46,6 +46,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "strategic_games.learning",
+      "title": "Strategic Games.Learning",
+      "href": "strategic_games/learning/index.html",
+      "role": "dependent",
+      "node_count": 7
+    },
+    {
       "id": "zero_sum.minimax",
       "title": "Zero Sum.Minimax",
       "href": "zero_sum/minimax/index.html",
@@ -54,6 +61,13 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "approachability.blackwell_b_set_approachability",
+      "to": "topic:strategic_games.learning",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.learning",
+      "count": 1
+    },
     {
       "from": "approachability.deterministic_blackwell_sequence",
       "to": "topic:zero_sum.minimax",

@@ -1,0 +1,41 @@
+{
+  "id": "strategic_games.potential.potential_maximizer_nash",
+  "title": "Potential Maximizer Is Nash",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "strategic_games/potential/strategic_games_potential_potential_maximizer_nash.html",
+  "primary_topic": "strategic_games.potential",
+  "topics": [
+    "strategic_games.potential"
+  ],
+  "body_html": "<h1>Potential Maximizer Is Nash</h1>\n<p>In a finite exact potential game, every global maximizer of the potential is a\npure Nash equilibrium.</p>\n<p>The proof is local: if a unilateral deviation from a potential maximizer were\nprofitable, exactness would make the same deviation increase the potential,\ncontradicting maximality.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Section 5.6, Exercise 1(1)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Finite potential games have pure equilibria by maximizing the potential.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.potential.potential_game",
+      "title": "Potential Game",
+      "href": "strategic_games/potential/strategic_games_potential_potential_game.html"
+    },
+    {
+      "id": "strategic_games.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_games/strategic_games_nash_equilibrium.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "IsExactPotential.maximizer_is_nash",
+      "display_name": "StrategicGame.Theorems.IsExactPotential.maximizer_is_nash",
+      "qualified_name": "StrategicGame.Theorems.IsExactPotential.maximizer_is_nash",
+      "module": "GameTheoryLib.StrategicGame.PotentialGame",
+      "repository_title": "EconCSLib",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/PotentialGame.lean#L59",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

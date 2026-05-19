@@ -4,8 +4,12 @@
   "kind": "theorem",
   "status": "staged",
   "href": "utility/utility_sure_thing_principle.html",
+  "primary_topic": "utility",
+  "topics": [
+    "utility"
+  ],
   "body_html": "<h1>Sure Thing Principle</h1>\n<p>The sure-thing principle says that a common consequence in a lottery mixture\ndoes not affect strict preference between the non-common parts.</p>\n<p>If independence holds, then for any lotteries $L_1,L_2,L_3,L_4$ and\n$\\alpha\\in[0,1]$,\n$$\n  \\operatorname{StrictPref}([\\alpha L_1,(1-\\alpha)L_3],\n  [\\alpha L_2,(1-\\alpha)L_3])\n$$\nif and only if\n$$\n  \\operatorname{StrictPref}([\\alpha L_1,(1-\\alpha)L_4],\n  [\\alpha L_2,(1-\\alpha)L_4]).\n$$</p>",
-  "proof_html": "<p>Sketch</p>\n<p>When $\\alpha=0$, both sides compare a lottery with itself and strict preference\nis impossible. When $\\alpha&gt;0$, apply independence once to remove $L_3$ and once\nto insert $L_4$.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>When $\\alpha=0$, both sides compare a lottery with itself and strict preference\nis impossible. When $\\alpha&gt;0$, apply independence once to remove $L_3$ and once\nto insert $L_4$.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Exercise 2.12] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. The sure-thing principle follows from independence.</li>\n</ul>",
   "deps": [
     {
       "id": "utility.vnm_axioms",
@@ -21,9 +25,9 @@
       "qualified_name": "VNM.sure_thing_principle",
       "module": "GameTheoryLib.Utility.VNMAxioms",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Utility/VNMAxioms.lean#L64",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/Utility/VNMAxioms.lean#L64",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

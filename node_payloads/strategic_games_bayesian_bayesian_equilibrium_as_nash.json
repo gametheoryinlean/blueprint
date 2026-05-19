@@ -1,0 +1,38 @@
+{
+  "id": "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+  "title": "Bayesian Equilibrium As Nash Equilibrium",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_equilibrium_as_nash.html",
+  "primary_topic": "strategic_games.bayesian",
+  "topics": [
+    "strategic_games.bayesian"
+  ],
+  "body_html": "<h1>Bayesian Equilibrium As Nash Equilibrium</h1>\n<p>For a finite Bayesian game with a common prior, Bayesian equilibria correspond\nto Nash equilibria of the associated agent normal form.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>A Bayesian strategy profile assigns an action distribution to every player-type\npair, which is exactly a mixed profile in the agent normal form. A unilateral\ndeviation by one type-agent changes the original player's prescription only at\nthat type. Thus the agent's Nash best-response inequality is the interim\nBayesian incentive constraint for that type. Conversely, typewise interim\noptimality for every player-type pair gives Nash optimality for every agent.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 7, Section 7.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Bayesian equilibrium corresponds to Nash equilibrium in the associated strategic-form representation.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "strategic_games.bayesian.bayesian_equilibrium",
+      "title": "Bayesian Equilibrium",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_equilibrium.html"
+    },
+    {
+      "id": "strategic_games.bayesian.agent_normal_form",
+      "title": "Agent Normal Form Of A Bayesian Game",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_agent_normal_form.html"
+    },
+    {
+      "id": "strategic_games.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_games/strategic_games_nash_equilibrium.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
+      "title": "Finite Bayesian Equilibrium Exists",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_finite_bayesian_equilibrium_exists.html"
+    }
+  ],
+  "lean_refs": []
+}

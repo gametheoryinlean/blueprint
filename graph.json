@@ -13,6 +13,9 @@
       "topic": "approachability",
       "uses": [
         "approachability.deterministic_blackwell_sequence"
+      ],
+      "used_by": [
+        "strategic_games.learning.calibrated_strategy_exists"
       ]
     },
     {
@@ -1160,7 +1163,8 @@
         "extensive_game.examples.backward_forward_induction_incompatibility",
         "extensive_game.examples.rubinstein_bargaining_spe",
         "extensive_game.perfect_information.kuhn_spe_existence",
-        "extensive_game.perfect_information.spe_implies_nash"
+        "extensive_game.perfect_information.spe_implies_nash",
+        "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
       ]
     },
     {
@@ -1223,7 +1227,8 @@
         "fixed_point.kakutani_fixed_point",
         "strategic_games.continuous.convex_game_nash_exists",
         "strategic_games.core.symmetric_mixed_equilibrium",
-        "strategic_games.equilibrium.nash_existence_finite_games"
+        "strategic_games.equilibrium.nash_existence_finite_games",
+        "strategic_games.variational.evaluation_game_equilibrium"
       ]
     },
     {
@@ -1415,19 +1420,83 @@
         "dsic"
       ],
       "lean_declarations": [
-        "Mechanism",
-        "Mechanism.toStrategicGame",
-        "Mechanism.IsDSIC",
-        "Mechanism.IsExPostIR"
+        "Mechanism"
       ],
       "topic": "mechanism_design",
       "uses": [
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "mechanism_design.basic.truthfulness_from_dsic",
+        "mechanism_design.basic.ex_post_ir_predicate",
+        "mechanism_design.basic.induced_strategic_game",
         "mechanism_design.bayesian.bayesian_mechanisms",
         "mechanism_design.transfer.mechanisms_with_transfers"
+      ]
+    },
+    {
+      "id": "mechanism_design.basic.dsic_predicate",
+      "title": "DSIC Predicate",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "dsic",
+        "dominance"
+      ],
+      "lean_declarations": [
+        "Mechanism.IsDSIC"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.basic.induced_strategic_game",
+        "strategic_games.weakly_dominant_strategy"
+      ],
+      "used_by": [
+        "mechanism_design.basic.truthfulness_from_dsic",
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ]
+    },
+    {
+      "id": "mechanism_design.basic.ex_post_ir_predicate",
+      "title": "Ex-Post Individual Rationality Predicate",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "individual-rationality"
+      ],
+      "lean_declarations": [
+        "Mechanism.IsExPostIR"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.basic.direct_mechanism_interface"
+      ],
+      "used_by": [
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ]
+    },
+    {
+      "id": "mechanism_design.basic.induced_strategic_game",
+      "title": "Induced Strategic Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "strategic-game"
+      ],
+      "lean_declarations": [
+        "Mechanism.toStrategicGame"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.basic.direct_mechanism_interface",
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "mechanism_design.basic.dsic_predicate",
+        "mechanism_design.basic.truthfulness_from_dsic",
+        "mechanism_design.bayesian.bayesian_mechanisms"
       ]
     },
     {
@@ -1445,7 +1514,8 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.basic.direct_mechanism_interface",
+        "mechanism_design.basic.dsic_predicate",
+        "mechanism_design.basic.induced_strategic_game",
         "strategic_games.nash_equilibrium"
       ]
     },
@@ -1479,6 +1549,7 @@
       "topic": "mechanism_design",
       "uses": [
         "mechanism_design.basic.direct_mechanism_interface",
+        "mechanism_design.basic.induced_strategic_game",
         "mechanism_design.transfer.mechanisms_with_transfers"
       ],
       "used_by": [
@@ -1604,7 +1675,9 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.basic.direct_mechanism_interface"
+        "mechanism_design.basic.direct_mechanism_interface",
+        "mechanism_design.basic.dsic_predicate",
+        "mechanism_design.basic.ex_post_ir_predicate"
       ],
       "used_by": [
         "auction.basic.formats",
@@ -1726,6 +1799,121 @@
         "minimax"
       ],
       "topic": "order"
+    },
+    {
+      "id": "strategic_games.bayesian.agent_normal_form",
+      "title": "Agent Normal Form Of A Bayesian Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "bayesian-game",
+        "normal-form"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.bayesian.bayesian_game",
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.bayesian.bayesian_equilibrium_as_nash"
+      ]
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_equilibrium",
+      "title": "Bayesian Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "bayesian-game",
+        "bayesian-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.bayesian.bayesian_strategy",
+        "strategic_games.nash_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.bayesian.bayesian_equilibrium_as_nash"
+      ]
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+      "title": "Bayesian Equilibrium As Nash Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "bayesian-game",
+        "bayesian-equilibrium",
+        "nash-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.bayesian.agent_normal_form",
+        "strategic_games.bayesian.bayesian_equilibrium",
+        "strategic_games.nash_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.bayesian.finite_bayesian_equilibrium_exists"
+      ]
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_game",
+      "title": "Bayesian Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "bayesian-game",
+        "incomplete-information"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.bayesian.agent_normal_form",
+        "strategic_games.bayesian.bayesian_strategy",
+        "strategic_games.repeated.incomplete_information"
+      ]
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_strategy",
+      "title": "Bayesian Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "bayesian-game",
+        "strategy"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.bayesian.bayesian_game",
+        "strategic_games.core.mixed_strategy"
+      ],
+      "used_by": [
+        "strategic_games.bayesian.bayesian_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
+      "title": "Finite Bayesian Equilibrium Exists",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "bayesian-game",
+        "bayesian-equilibrium",
+        "existence"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+        "strategic_games.equilibrium.nash_existence_finite_games"
+      ]
     },
     {
       "id": "strategic_games.best_response",
@@ -2093,8 +2281,10 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
+        "strategic_games.bayesian.bayesian_strategy",
         "strategic_games.core.best_response_face",
         "strategic_games.core.mixed_extension",
+        "strategic_games.correlated.canonical_correlation_device",
         "strategic_games.correlated.correlated_best_response_not_independent",
         "strategic_games.correlated.correlated_equilibrium",
         "strategic_games.correlated.correlated_strategy",
@@ -2170,7 +2360,9 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "strategic_games.core.symmetric_mixed_equilibrium"
+        "strategic_games.core.symmetric_mixed_equilibrium",
+        "strategic_games.dynamics.replicator_dynamics",
+        "strategic_games.evolution.evolutionarily_stable_strategy"
       ]
     },
     {
@@ -2211,6 +2403,22 @@
       ]
     },
     {
+      "id": "strategic_games.correlated.canonical_correlation_device",
+      "title": "Canonical Correlation Device",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "correlated-equilibrium",
+        "correlation-device"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.core.mixed_strategy",
+        "strategic_games.strategic_game"
+      ]
+    },
+    {
       "id": "strategic_games.correlated.correlated_best_response_not_independent",
       "title": "Correlated Best Response Need Not Be Independent",
       "kind": "example",
@@ -2246,7 +2454,9 @@
         "strategic_games.correlated.correlated_equilibrium_convex_compact",
         "strategic_games.correlated.correlated_equilibrium_exists",
         "strategic_games.correlated.degenerate_correlated_equilibrium",
-        "strategic_games.correlated.nash_induces_correlated_equilibrium"
+        "strategic_games.correlated.nash_induces_correlated_equilibrium",
+        "strategic_games.learning.internal_regret",
+        "strategic_games.learning.no_internal_regret_correlated_convergence"
       ]
     },
     {
@@ -2596,6 +2806,71 @@
       ]
     },
     {
+      "id": "strategic_games.dynamics.nash_field",
+      "title": "Nash Field",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "dynamics",
+        "nash-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.equilibrium.mixed_nash_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.dynamics.positive_correlation",
+      "title": "Positive Correlation Dynamics",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "dynamics",
+        "potential-game"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.variational.evaluation_game_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "title": "Potential Is Lyapunov For Replicator Dynamics",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "potential-game",
+        "dynamics"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.dynamics.replicator_dynamics",
+        "strategic_games.potential.potential_game"
+      ]
+    },
+    {
+      "id": "strategic_games.dynamics.replicator_dynamics",
+      "title": "Replicator Dynamics",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "dynamics",
+        "evolution"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.core.symmetric_game"
+      ],
+      "used_by": [
+        "strategic_games.dynamics.potential_replicator_lyapunov",
+        "strategic_games.evolution.ess_replicator_lyapunov"
+      ]
+    },
+    {
       "id": "strategic_games.equilibrium.common_knowledge_equilibrium_filtering",
       "title": "Common Knowledge Can Filter Nash Equilibria",
       "kind": "example",
@@ -2720,9 +2995,11 @@
       "used_by": [
         "strategic_games.continuous.minority_game_equilibrium_characterization",
         "strategic_games.correlated.nash_induces_correlated_equilibrium",
+        "strategic_games.dynamics.nash_field",
         "strategic_games.equilibrium.finite_nash_computation_examples",
         "strategic_games.equilibrium.mixed_nash_semialgebraic",
         "strategic_games.equilibrium.nash_existence_finite_games",
+        "strategic_games.manifold.equilibrium_manifold",
         "strategic_games.refinements.perfect_equilibrium"
       ]
     },
@@ -2739,6 +3016,9 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.equilibrium.mixed_nash_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.manifold.generic_finite_odd_equilibria"
       ]
     },
     {
@@ -2777,6 +3057,7 @@
       "used_by": [
         "extensive_game.equilibrium.behavioral_equilibrium_exists",
         "fixed_point.kakutani_from_two_player_nash",
+        "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
         "strategic_games.core.symmetric_mixed_equilibrium",
         "strategic_games.correlated.correlated_equilibrium_exists",
         "strategic_games.refinements.perfect_equilibrium_exists"
@@ -2832,6 +3113,263 @@
       ]
     },
     {
+      "id": "strategic_games.evolution.ess_replicator_lyapunov",
+      "title": "ESS Replicator Lyapunov Function",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "evolution",
+        "replicator-dynamics"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.dynamics.replicator_dynamics",
+        "strategic_games.evolution.ess_uniform_invasion_barrier"
+      ]
+    },
+    {
+      "id": "strategic_games.evolution.ess_uniform_invasion_barrier",
+      "title": "ESS Uniform Invasion Barrier",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "evolution",
+        "ess"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.evolution.evolutionarily_stable_strategy"
+      ],
+      "used_by": [
+        "strategic_games.evolution.ess_replicator_lyapunov"
+      ]
+    },
+    {
+      "id": "strategic_games.evolution.evolutionarily_stable_strategy",
+      "title": "Evolutionarily Stable Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "evolution",
+        "ess"
+      ],
+      "lean_declarations": [
+        "IsESS",
+        "IsNSS"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.core.symmetric_game"
+      ],
+      "used_by": [
+        "strategic_games.evolution.ess_uniform_invasion_barrier"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.calibrated_strategy",
+      "title": "Calibrated Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "calibration"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.learning.external_regret"
+      ],
+      "used_by": [
+        "strategic_games.learning.calibrated_strategy_exists"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.calibrated_strategy_exists",
+      "title": "Calibrated Strategy Exists",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "calibration",
+        "existence"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "approachability.blackwell_b_set_approachability",
+        "strategic_games.learning.calibrated_strategy"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.external_regret",
+      "title": "External Regret",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "regret"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.learning.calibrated_strategy",
+        "strategic_games.learning.hannan_set",
+        "strategic_games.learning.internal_regret",
+        "strategic_games.learning.no_external_regret_hannan_convergence"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.hannan_set",
+      "title": "Hannan Set",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "regret"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.learning.external_regret"
+      ],
+      "used_by": [
+        "strategic_games.learning.no_external_regret_hannan_convergence"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.internal_regret",
+      "title": "Internal Regret",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "regret",
+        "correlated-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.correlated.correlated_equilibrium",
+        "strategic_games.learning.external_regret"
+      ],
+      "used_by": [
+        "strategic_games.learning.no_internal_regret_correlated_convergence"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.no_external_regret_hannan_convergence",
+      "title": "No External Regret Converges To Hannan Set",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "regret",
+        "convergence"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.learning.external_regret",
+        "strategic_games.learning.hannan_set"
+      ]
+    },
+    {
+      "id": "strategic_games.learning.no_internal_regret_correlated_convergence",
+      "title": "No Internal Regret Converges To Correlated Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "learning",
+        "regret",
+        "correlated-equilibrium",
+        "convergence"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.correlated.correlated_equilibrium",
+        "strategic_games.learning.internal_regret"
+      ]
+    },
+    {
+      "id": "strategic_games.manifold.equilibrium_manifold",
+      "title": "Equilibrium Manifold",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "equilibrium-manifold",
+        "nash-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.equilibrium.mixed_nash_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.manifold.essential_component",
+        "strategic_games.manifold.kohlberg_mertens_structure_theorem"
+      ]
+    },
+    {
+      "id": "strategic_games.manifold.essential_component",
+      "title": "Essential Equilibrium Component",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "equilibrium-manifold",
+        "robustness"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.manifold.equilibrium_manifold"
+      ],
+      "used_by": [
+        "strategic_games.manifold.generic_finite_odd_equilibria"
+      ]
+    },
+    {
+      "id": "strategic_games.manifold.generic_finite_odd_equilibria",
+      "title": "Generic Finite Odd Equilibria",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "equilibrium-manifold",
+        "genericity"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.equilibrium.mixed_nash_semialgebraic",
+        "strategic_games.manifold.essential_component",
+        "strategic_games.manifold.kohlberg_mertens_structure_theorem"
+      ]
+    },
+    {
+      "id": "strategic_games.manifold.kohlberg_mertens_structure_theorem",
+      "title": "Kohlberg Mertens Structure Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "equilibrium-manifold",
+        "topology"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.manifold.equilibrium_manifold"
+      ],
+      "used_by": [
+        "strategic_games.manifold.generic_finite_odd_equilibria"
+      ]
+    },
+    {
       "id": "strategic_games.nash_equilibrium",
       "title": "Nash Equilibrium",
       "kind": "definition",
@@ -2854,6 +3392,8 @@
         "extensive_game.equilibrium.strategic_stability",
         "extensive_game.perfect_information.subgame_perfect_equilibrium",
         "mechanism_design.basic.truthfulness_from_dsic",
+        "strategic_games.bayesian.bayesian_equilibrium",
+        "strategic_games.bayesian.bayesian_equilibrium_as_nash",
         "strategic_games.continuous.convex_game_variational_characterization",
         "strategic_games.continuous.cournot_fishermen_equilibria",
         "strategic_games.continuous.supermodular_game_nash_exists",
@@ -2867,6 +3407,7 @@
         "strategic_games.equilibrium.nash_payoffs_are_individually_rational",
         "strategic_games.equilibrium.strict_equilibrium",
         "strategic_games.payoff_geometry.focal_point",
+        "strategic_games.potential.potential_maximizer_nash",
         "strategic_games.prisoners_dilemma",
         "strategic_games.refinements.better_reply_secure_game",
         "zero_sum.zero_sum_nash_value_unique"
@@ -2951,7 +3492,99 @@
         "strategic_games.core.mixed_strategy"
       ],
       "used_by": [
-        "strategic_games.payoff_geometry.feasible_payoffs"
+        "strategic_games.payoff_geometry.feasible_payoffs",
+        "strategic_games.repeated.feasible_individually_rational_payoffs"
+      ]
+    },
+    {
+      "id": "strategic_games.population.population_game",
+      "title": "Population Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "population-game"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.population.wardrop_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.population.wardrop_equilibrium",
+      "title": "Nash Wardrop Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "population-game",
+        "wardrop-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.population.population_game"
+      ],
+      "used_by": [
+        "strategic_games.population.wardrop_variational_characterization"
+      ]
+    },
+    {
+      "id": "strategic_games.population.wardrop_variational_characterization",
+      "title": "Wardrop Variational Characterization",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "population-game",
+        "variational-inequality"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.population.wardrop_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.potential.potential_game",
+      "title": "Potential Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "potential-game"
+      ],
+      "lean_declarations": [
+        "IsExactPotential",
+        "IsOrdinalPotential"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.dynamics.potential_replicator_lyapunov",
+        "strategic_games.potential.potential_maximizer_nash"
+      ]
+    },
+    {
+      "id": "strategic_games.potential.potential_maximizer_nash",
+      "title": "Potential Maximizer Is Nash",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "potential-game",
+        "nash-equilibrium"
+      ],
+      "lean_declarations": [
+        "IsExactPotential.maximizer_is_nash"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.nash_equilibrium",
+        "strategic_games.potential.potential_game"
       ]
     },
     {
@@ -3238,6 +3871,276 @@
       ]
     },
     {
+      "id": "strategic_games.repeated.big_match_uniform_value",
+      "title": "Big Match Uniform Value",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "stochastic-game",
+        "zero-sum"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.stochastic_game",
+        "zero_sum.core.value"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.cav_u_theorem",
+      "title": "Cav U Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "incomplete-information",
+        "zero-sum"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.incomplete_information",
+        "zero_sum.core.value"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.discounted_folk_theorem",
+      "title": "Discounted Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem",
+        "discounting"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.discounted_game",
+        "strategic_games.repeated.feasible_individually_rational_payoffs"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.discounted_game",
+      "title": "Discounted Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "discounting"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.strategy"
+      ],
+      "used_by": [
+        "strategic_games.repeated.discounted_folk_theorem",
+        "strategic_games.repeated.uniform_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.feasible_individually_rational_payoffs",
+      "title": "Repeated Feasible Individually Rational Payoffs",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "feasible-payoff"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.payoff_geometry.threat_point"
+      ],
+      "used_by": [
+        "strategic_games.repeated.discounted_folk_theorem",
+        "strategic_games.repeated.finitely_repeated_folk_theorem",
+        "strategic_games.repeated.uniform_folk_theorem"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.finitely_repeated_folk_theorem",
+      "title": "Finitely Repeated Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.feasible_individually_rational_payoffs",
+        "strategic_games.repeated.finitely_repeated_game"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.finitely_repeated_game",
+      "title": "Finitely Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.strategy"
+      ],
+      "used_by": [
+        "strategic_games.repeated.finitely_repeated_folk_theorem",
+        "strategic_games.repeated.uniform_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.incomplete_information",
+      "title": "Repeated Game With Incomplete Information",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "incomplete-information"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.bayesian.bayesian_game",
+        "strategic_games.repeated.standard_repeated_game"
+      ],
+      "used_by": [
+        "strategic_games.repeated.cav_u_theorem"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.signals",
+      "title": "Repeated Game With Signals",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "signals",
+        "imperfect-monitoring"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.strategy"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.standard_repeated_game",
+      "title": "Standard Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.repeated.incomplete_information",
+        "strategic_games.repeated.strategy"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.stochastic_game",
+      "title": "Stochastic Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "stochastic-game"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "strategic_games.repeated.big_match_uniform_value"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.strategy",
+      "title": "Repeated Game Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "strategy"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.standard_repeated_game"
+      ],
+      "used_by": [
+        "strategic_games.repeated.discounted_game",
+        "strategic_games.repeated.finitely_repeated_game",
+        "strategic_games.repeated.signals"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
+      "title": "Subgame Perfect Uniform Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem",
+        "subgame-perfect-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "extensive_game.perfect_information.subgame_perfect_equilibrium",
+        "strategic_games.repeated.uniform_folk_theorem"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.uniform_equilibrium",
+      "title": "Uniform Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "uniform-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.discounted_game",
+        "strategic_games.repeated.finitely_repeated_game"
+      ],
+      "used_by": [
+        "strategic_games.repeated.uniform_folk_theorem"
+      ]
+    },
+    {
+      "id": "strategic_games.repeated.uniform_folk_theorem",
+      "title": "Uniform Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.repeated.feasible_individually_rational_payoffs",
+        "strategic_games.repeated.uniform_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
+      ]
+    },
+    {
       "id": "strategic_games.strategic_game",
       "title": "Strategic Game",
       "kind": "definition",
@@ -3253,6 +4156,9 @@
       "used_by": [
         "extensive_game.normal_form.normal_form_reduction",
         "mechanism_design.basic.direct_mechanism_interface",
+        "mechanism_design.basic.induced_strategic_game",
+        "strategic_games.bayesian.agent_normal_form",
+        "strategic_games.bayesian.bayesian_game",
         "strategic_games.continuous.convex_game",
         "strategic_games.continuous.quasi_concave_game",
         "strategic_games.continuous.smooth_game",
@@ -3262,10 +4168,16 @@
         "strategic_games.core.mixed_strategy_mfogt",
         "strategic_games.core.strategy_profile_mfogt",
         "strategic_games.core.symmetric_game",
+        "strategic_games.correlated.canonical_correlation_device",
         "strategic_games.correlated.mediated_game",
         "strategic_games.dominance.dominated_strategy",
+        "strategic_games.learning.external_regret",
+        "strategic_games.population.population_game",
+        "strategic_games.potential.potential_game",
         "strategic_games.prisoners_dilemma",
         "strategic_games.refinements.reny_solution",
+        "strategic_games.repeated.standard_repeated_game",
+        "strategic_games.repeated.stochastic_game",
         "strategic_games.strategy_profile",
         "zero_sum.zero_sum_game"
       ]
@@ -3335,6 +4247,24 @@
       ]
     },
     {
+      "id": "strategic_games.variational.evaluation_game_equilibrium",
+      "title": "Evaluation Game Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "variational-inequality",
+        "fixed-point"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "fixed_point.brouwer_compact_convex"
+      ],
+      "used_by": [
+        "strategic_games.dynamics.positive_correlation"
+      ]
+    },
+    {
       "id": "strategic_games.weakly_dominant_strategy",
       "title": "Weakly Dominant Strategy",
       "kind": "definition",
@@ -3351,6 +4281,7 @@
         "strategic_games.weakly_dominates"
       ],
       "used_by": [
+        "mechanism_design.basic.dsic_predicate",
         "strategic_games.dominant_implies_nash",
         "strategic_games.prisoners_dilemma"
       ]
@@ -4120,6 +5051,8 @@
         "extensive_game.examples.entrant_incomplete_information_value_example",
         "extensive_game.examples.poker_game_value_example",
         "extensive_game.perfect_information.zero_sum_perfect_information_value",
+        "strategic_games.repeated.big_match_uniform_value",
+        "strategic_games.repeated.cav_u_theorem",
         "zero_sum.continuous.finite_opponent_separation_minimax",
         "zero_sum.continuous.general_mixed_minimax_theorem",
         "zero_sum.continuous.monotone_decreasing_values_limit",
@@ -5386,8 +6319,32 @@
       "to": "strategic_games.strategic_game"
     },
     {
-      "from": "mechanism_design.basic.truthfulness_from_dsic",
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "mechanism_design.basic.induced_strategic_game"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "strategic_games.weakly_dominant_strategy"
+    },
+    {
+      "from": "mechanism_design.basic.ex_post_ir_predicate",
       "to": "mechanism_design.basic.direct_mechanism_interface"
+    },
+    {
+      "from": "mechanism_design.basic.induced_strategic_game",
+      "to": "mechanism_design.basic.direct_mechanism_interface"
+    },
+    {
+      "from": "mechanism_design.basic.induced_strategic_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "mechanism_design.basic.truthfulness_from_dsic",
+      "to": "mechanism_design.basic.dsic_predicate"
+    },
+    {
+      "from": "mechanism_design.basic.truthfulness_from_dsic",
+      "to": "mechanism_design.basic.induced_strategic_game"
     },
     {
       "from": "mechanism_design.basic.truthfulness_from_dsic",
@@ -5396,6 +6353,10 @@
     {
       "from": "mechanism_design.bayesian.bayesian_mechanisms",
       "to": "mechanism_design.basic.direct_mechanism_interface"
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "mechanism_design.basic.induced_strategic_game"
     },
     {
       "from": "mechanism_design.bayesian.bayesian_mechanisms",
@@ -5422,6 +6383,14 @@
       "to": "mechanism_design.basic.direct_mechanism_interface"
     },
     {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.basic.dsic_predicate"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.basic.ex_post_ir_predicate"
+    },
+    {
       "from": "mechanism_design.transfer.multiple_parameter_transfer_layer",
       "to": "mechanism_design.transfer.mechanisms_with_transfers"
     },
@@ -5436,6 +6405,54 @@
     {
       "from": "mechanism_design.vcg.welfare_and_payments",
       "to": "mechanism_design.transfer.multiple_parameter_transfer_layer"
+    },
+    {
+      "from": "strategic_games.bayesian.agent_normal_form",
+      "to": "strategic_games.bayesian.bayesian_game"
+    },
+    {
+      "from": "strategic_games.bayesian.agent_normal_form",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_equilibrium",
+      "to": "strategic_games.bayesian.bayesian_strategy"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_equilibrium",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+      "to": "strategic_games.bayesian.agent_normal_form"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+      "to": "strategic_games.bayesian.bayesian_equilibrium"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_strategy",
+      "to": "strategic_games.bayesian.bayesian_game"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_strategy",
+      "to": "strategic_games.core.mixed_strategy"
+    },
+    {
+      "from": "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
+      "to": "strategic_games.bayesian.bayesian_equilibrium_as_nash"
+    },
+    {
+      "from": "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
+      "to": "strategic_games.equilibrium.nash_existence_finite_games"
     },
     {
       "from": "strategic_games.best_response",
@@ -5576,6 +6593,14 @@
     {
       "from": "strategic_games.core.unilateral_deviation_mfogt",
       "to": "strategic_games.strategy_profile"
+    },
+    {
+      "from": "strategic_games.correlated.canonical_correlation_device",
+      "to": "strategic_games.core.mixed_strategy"
+    },
+    {
+      "from": "strategic_games.correlated.canonical_correlation_device",
+      "to": "strategic_games.strategic_game"
     },
     {
       "from": "strategic_games.correlated.correlated_best_response_not_independent",
@@ -5730,6 +6755,26 @@
       "to": "strategic_games.weakly_dominant_strategy"
     },
     {
+      "from": "strategic_games.dynamics.nash_field",
+      "to": "strategic_games.equilibrium.mixed_nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.dynamics.positive_correlation",
+      "to": "strategic_games.variational.evaluation_game_equilibrium"
+    },
+    {
+      "from": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "to": "strategic_games.dynamics.replicator_dynamics"
+    },
+    {
+      "from": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "to": "strategic_games.potential.potential_game"
+    },
+    {
+      "from": "strategic_games.dynamics.replicator_dynamics",
+      "to": "strategic_games.core.symmetric_game"
+    },
+    {
       "from": "strategic_games.equilibrium.common_knowledge_equilibrium_filtering",
       "to": "strategic_games.nash_equilibrium"
     },
@@ -5818,6 +6863,90 @@
       "to": "strategic_games.refinements.proper_equilibrium"
     },
     {
+      "from": "strategic_games.evolution.ess_replicator_lyapunov",
+      "to": "strategic_games.dynamics.replicator_dynamics"
+    },
+    {
+      "from": "strategic_games.evolution.ess_replicator_lyapunov",
+      "to": "strategic_games.evolution.ess_uniform_invasion_barrier"
+    },
+    {
+      "from": "strategic_games.evolution.ess_uniform_invasion_barrier",
+      "to": "strategic_games.evolution.evolutionarily_stable_strategy"
+    },
+    {
+      "from": "strategic_games.evolution.evolutionarily_stable_strategy",
+      "to": "strategic_games.core.symmetric_game"
+    },
+    {
+      "from": "strategic_games.learning.calibrated_strategy",
+      "to": "strategic_games.learning.external_regret"
+    },
+    {
+      "from": "strategic_games.learning.calibrated_strategy_exists",
+      "to": "approachability.blackwell_b_set_approachability"
+    },
+    {
+      "from": "strategic_games.learning.calibrated_strategy_exists",
+      "to": "strategic_games.learning.calibrated_strategy"
+    },
+    {
+      "from": "strategic_games.learning.external_regret",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.learning.hannan_set",
+      "to": "strategic_games.learning.external_regret"
+    },
+    {
+      "from": "strategic_games.learning.internal_regret",
+      "to": "strategic_games.correlated.correlated_equilibrium"
+    },
+    {
+      "from": "strategic_games.learning.internal_regret",
+      "to": "strategic_games.learning.external_regret"
+    },
+    {
+      "from": "strategic_games.learning.no_external_regret_hannan_convergence",
+      "to": "strategic_games.learning.external_regret"
+    },
+    {
+      "from": "strategic_games.learning.no_external_regret_hannan_convergence",
+      "to": "strategic_games.learning.hannan_set"
+    },
+    {
+      "from": "strategic_games.learning.no_internal_regret_correlated_convergence",
+      "to": "strategic_games.correlated.correlated_equilibrium"
+    },
+    {
+      "from": "strategic_games.learning.no_internal_regret_correlated_convergence",
+      "to": "strategic_games.learning.internal_regret"
+    },
+    {
+      "from": "strategic_games.manifold.equilibrium_manifold",
+      "to": "strategic_games.equilibrium.mixed_nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.manifold.essential_component",
+      "to": "strategic_games.manifold.equilibrium_manifold"
+    },
+    {
+      "from": "strategic_games.manifold.generic_finite_odd_equilibria",
+      "to": "strategic_games.equilibrium.mixed_nash_semialgebraic"
+    },
+    {
+      "from": "strategic_games.manifold.generic_finite_odd_equilibria",
+      "to": "strategic_games.manifold.essential_component"
+    },
+    {
+      "from": "strategic_games.manifold.generic_finite_odd_equilibria",
+      "to": "strategic_games.manifold.kohlberg_mertens_structure_theorem"
+    },
+    {
+      "from": "strategic_games.manifold.kohlberg_mertens_structure_theorem",
+      "to": "strategic_games.manifold.equilibrium_manifold"
+    },
+    {
       "from": "strategic_games.nash_equilibrium",
       "to": "strategic_games.best_response"
     },
@@ -5844,6 +6973,30 @@
     {
       "from": "strategic_games.payoff_geometry.threat_point",
       "to": "strategic_games.core.mixed_strategy"
+    },
+    {
+      "from": "strategic_games.population.population_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.population.wardrop_equilibrium",
+      "to": "strategic_games.population.population_game"
+    },
+    {
+      "from": "strategic_games.population.wardrop_variational_characterization",
+      "to": "strategic_games.population.wardrop_equilibrium"
+    },
+    {
+      "from": "strategic_games.potential.potential_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.potential.potential_maximizer_nash",
+      "to": "strategic_games.nash_equilibrium"
+    },
+    {
+      "from": "strategic_games.potential.potential_maximizer_nash",
+      "to": "strategic_games.potential.potential_game"
     },
     {
       "from": "strategic_games.prisoners_dilemma",
@@ -5974,6 +7127,98 @@
       "to": "strategic_games.refinements.reny_solution"
     },
     {
+      "from": "strategic_games.repeated.big_match_uniform_value",
+      "to": "strategic_games.repeated.stochastic_game"
+    },
+    {
+      "from": "strategic_games.repeated.big_match_uniform_value",
+      "to": "zero_sum.core.value"
+    },
+    {
+      "from": "strategic_games.repeated.cav_u_theorem",
+      "to": "strategic_games.repeated.incomplete_information"
+    },
+    {
+      "from": "strategic_games.repeated.cav_u_theorem",
+      "to": "zero_sum.core.value"
+    },
+    {
+      "from": "strategic_games.repeated.discounted_folk_theorem",
+      "to": "strategic_games.repeated.discounted_game"
+    },
+    {
+      "from": "strategic_games.repeated.discounted_folk_theorem",
+      "to": "strategic_games.repeated.feasible_individually_rational_payoffs"
+    },
+    {
+      "from": "strategic_games.repeated.discounted_game",
+      "to": "strategic_games.repeated.strategy"
+    },
+    {
+      "from": "strategic_games.repeated.feasible_individually_rational_payoffs",
+      "to": "strategic_games.payoff_geometry.threat_point"
+    },
+    {
+      "from": "strategic_games.repeated.finitely_repeated_folk_theorem",
+      "to": "strategic_games.repeated.feasible_individually_rational_payoffs"
+    },
+    {
+      "from": "strategic_games.repeated.finitely_repeated_folk_theorem",
+      "to": "strategic_games.repeated.finitely_repeated_game"
+    },
+    {
+      "from": "strategic_games.repeated.finitely_repeated_game",
+      "to": "strategic_games.repeated.strategy"
+    },
+    {
+      "from": "strategic_games.repeated.incomplete_information",
+      "to": "strategic_games.bayesian.bayesian_game"
+    },
+    {
+      "from": "strategic_games.repeated.incomplete_information",
+      "to": "strategic_games.repeated.standard_repeated_game"
+    },
+    {
+      "from": "strategic_games.repeated.signals",
+      "to": "strategic_games.repeated.strategy"
+    },
+    {
+      "from": "strategic_games.repeated.standard_repeated_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.repeated.stochastic_game",
+      "to": "strategic_games.strategic_game"
+    },
+    {
+      "from": "strategic_games.repeated.strategy",
+      "to": "strategic_games.repeated.standard_repeated_game"
+    },
+    {
+      "from": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
+      "to": "extensive_game.perfect_information.subgame_perfect_equilibrium"
+    },
+    {
+      "from": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
+      "to": "strategic_games.repeated.uniform_folk_theorem"
+    },
+    {
+      "from": "strategic_games.repeated.uniform_equilibrium",
+      "to": "strategic_games.repeated.discounted_game"
+    },
+    {
+      "from": "strategic_games.repeated.uniform_equilibrium",
+      "to": "strategic_games.repeated.finitely_repeated_game"
+    },
+    {
+      "from": "strategic_games.repeated.uniform_folk_theorem",
+      "to": "strategic_games.repeated.feasible_individually_rational_payoffs"
+    },
+    {
+      "from": "strategic_games.repeated.uniform_folk_theorem",
+      "to": "strategic_games.repeated.uniform_equilibrium"
+    },
+    {
       "from": "strategic_games.strategy_profile",
       "to": "strategic_games.strategic_game"
     },
@@ -5984,6 +7229,10 @@
     {
       "from": "strategic_games.unilateral_deviation",
       "to": "strategic_games.strategy_profile"
+    },
+    {
+      "from": "strategic_games.variational.evaluation_game_equilibrium",
+      "to": "fixed_point.brouwer_compact_convex"
     },
     {
       "from": "strategic_games.weakly_dominant_strategy",

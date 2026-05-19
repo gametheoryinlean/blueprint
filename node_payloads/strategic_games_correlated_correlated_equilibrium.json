@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "staged",
   "href": "strategic_games/correlated/strategic_games_correlated_correlated_equilibrium.html",
-  "body_html": "<h1>Correlated Equilibrium</h1>\n<p>A correlated equilibrium of a finite strategic-form game is a probability\ndistribution $\\mu$ over pure strategy profiles such that the obedient\nrecommendation strategy is an equilibrium of the mediated game.</p>\n<p>Equivalently, $\\mu$ satisfies the obedience inequalities for every player, every\nrecommended action, and every unilateral replacement action.</p>\n<p>This is different from an independent mixed profile: the distribution $\\mu$ may\ncorrelate the players' recommendations.</p>",
+  "primary_topic": "strategic_games.correlated",
+  "topics": [
+    "strategic_games.correlated"
+  ],
+  "body_html": "<h1>Correlated Equilibrium</h1>\n<p>A correlated equilibrium of a finite strategic-form game is a probability\ndistribution $\\mu$ over pure strategy profiles such that the obedient\nrecommendation strategy is an equilibrium of the mediated game.</p>\n<p>Equivalently, $\\mu$ satisfies the obedience inequalities for every player, every\nrecommended action, and every unilateral replacement action.</p>\n<p>This is different from an independent mixed profile: the distribution $\\mu$ may\ncorrelate the players' recommendations.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 8, Definition 8.6] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Correlated equilibrium as a distribution satisfying all obedience inequalities.</li>\n<li>[MFoGT, Chapter 7, Section 7.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Aumann correlated equilibrium in the chapter on correlated equilibria, learning, and Bayesian equilibria.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -38,6 +42,16 @@
       "id": "strategic_games.correlated.nash_induces_correlated_equilibrium",
       "title": "Nash Equilibrium Induces Correlated Equilibrium",
       "href": "strategic_games/correlated/strategic_games_correlated_nash_induces_correlated_equilibrium.html"
+    },
+    {
+      "id": "strategic_games.learning.internal_regret",
+      "title": "Internal Regret",
+      "href": "strategic_games/learning/strategic_games_learning_internal_regret.html"
+    },
+    {
+      "id": "strategic_games.learning.no_internal_regret_correlated_convergence",
+      "title": "No Internal Regret Converges To Correlated Equilibrium",
+      "href": "strategic_games/learning/strategic_games_learning_no_internal_regret_correlated_convergence.html"
     }
   ],
   "lean_refs": []

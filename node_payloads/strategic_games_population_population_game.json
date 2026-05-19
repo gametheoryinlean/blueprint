@@ -1,0 +1,28 @@
+{
+  "id": "strategic_games.population.population_game",
+  "title": "Population Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/population/strategic_games_population_population_game.html",
+  "primary_topic": "strategic_games.population",
+  "topics": [
+    "strategic_games.population"
+  ],
+  "body_html": "<h1>Population Game</h1>\n<p>A population game has a finite set $I$ of nonatomic populations. For each\npopulation $i$, the finite set $S_i$ lists the strategies available to agents in\nthat population, and\n$$\n  X_i=\\Delta(S_i)\n$$\nis the simplex of population shares. A configuration is\n$x=(x_i)_{i\\in I}\\in X=\\prod_i X_i$, where $x_i(s_i)$ is the proportion of\npopulation $i$ using strategy $s_i$.</p>\n<p>The payoff data are maps\n$$\n  K_i:S_i\\times X\\to\\mathbb R,\n$$\nwhere $K_i(s_i,x)$ is the payoff of an individual agent of population $i$ who\nuses $s_i$ when the aggregate configuration is $x$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Section 5.2.1.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Population games and nonatomic strategy proportions.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.population.wardrop_equilibrium",
+      "title": "Nash Wardrop Equilibrium",
+      "href": "strategic_games/population/strategic_games_population_wardrop_equilibrium.html"
+    }
+  ],
+  "lean_refs": []
+}

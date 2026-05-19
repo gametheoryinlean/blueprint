@@ -4,8 +4,12 @@
   "kind": "theorem",
   "status": "staged",
   "href": "utility/utility_expected_utility_representation.html",
+  "primary_topic": "utility",
+  "topics": [
+    "utility"
+  ],
   "body_html": "<h1>Expected Utility Representation</h1>\n<p>If a preference relation over lotteries satisfies the vNM axioms, then there is\na utility index $u:O\\to \\mathbb{R}$ such that the preference over lotteries is\nrepresented by expected utility:\n$$\n  L \\mapsto \\sum_{o\\in O} L(o)u(o).\n$$</p>\n<p>Equivalently, a linear utility functional on lotteries is determined by its\nvalues on degenerate lotteries.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>MSZ first uses continuity to normalize every lottery between a best and a worst\noutcome, then uses independence to show that the resulting numerical index is\nlinear with respect to compound lotteries. The expected value formula follows by\ndecomposing a finite lottery into degenerate lotteries.</p>\n<p>The current Lean library already has the expected-value operator and the\nlinearity statement for expected value. The full representation theorem is\npresent as a theorem target in <code>GameTheoryLib/Utility/Lottery.lean</code>, but its\nproof is still open.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>MSZ first uses continuity to normalize every lottery between a best and a worst\noutcome, then uses independence to show that the resulting numerical index is\nlinear with respect to compound lotteries. The expected value formula follows by\ndecomposing a finite lottery into degenerate lotteries.</p>\n<p>The current Lean library already has the expected-value operator and the\nlinearity statement for expected value. The full representation theorem is\npresent as a theorem target in <code>GameTheoryLib/Utility/Lottery.lean</code>, but its\nproof is still open.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Theorem 2.18] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Expected-utility representation theorem.</li>\n</ul>",
   "deps": [
     {
       "id": "utility.utility_representation",
@@ -42,9 +46,9 @@
       "qualified_name": "Lottery.expectedValue",
       "module": "GameTheoryLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Utility/Lottery.lean#L77",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/Utility/Lottery.lean#L77",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -55,9 +59,9 @@
       "qualified_name": "Properties.Lottery.expectedValue_pure",
       "module": "GameTheoryLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Utility/Lottery.lean#L87",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/Utility/Lottery.lean#L87",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -68,9 +72,9 @@
       "qualified_name": "Properties.Lottery.expectedValue_mix",
       "module": "GameTheoryLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Utility/Lottery.lean#L96",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/Utility/Lottery.lean#L96",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -81,9 +85,9 @@
       "qualified_name": "IsLinearUtility",
       "module": "GameTheoryLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Utility/Lottery.lean#L125",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/Utility/Lottery.lean#L125",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -94,9 +98,9 @@
       "qualified_name": "expectedValue_isLinearUtility",
       "module": "GameTheoryLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/Utility/Lottery.lean#L131",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/Utility/Lottery.lean#L131",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

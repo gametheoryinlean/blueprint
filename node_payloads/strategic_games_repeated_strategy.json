@@ -1,0 +1,38 @@
+{
+  "id": "strategic_games.repeated.strategy",
+  "title": "Repeated Game Strategy",
+  "kind": "definition",
+  "status": "staged",
+  "href": "strategic_games/repeated/strategic_games_repeated_strategy.html",
+  "primary_topic": "strategic_games.repeated",
+  "topics": [
+    "strategic_games.repeated"
+  ],
+  "body_html": "<h1>Repeated Game Strategy</h1>\n<p>In a standard repeated game, a strategy of player $i$ is a map\n$$\n  \\sigma_i:H\\to\\Delta(A_i),\n$$\nwhere $H=\\bigcup_{t\\ge 0}H_t$ is the set of finite public histories.</p>\n<p>After history $h\\in H_t$, the mixed action $\\sigma_i(h)$ is used at stage\n$t+1$. A strategy profile induces a probability distribution on finite histories\nand, by extension, on infinite plays.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 8, Definition 8.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Behavior strategies in standard repeated games.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "strategic_games.repeated.standard_repeated_game",
+      "title": "Standard Repeated Game",
+      "href": "strategic_games/repeated/strategic_games_repeated_standard_repeated_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "strategic_games.repeated.discounted_game",
+      "title": "Discounted Repeated Game",
+      "href": "strategic_games/repeated/strategic_games_repeated_discounted_game.html"
+    },
+    {
+      "id": "strategic_games.repeated.finitely_repeated_game",
+      "title": "Finitely Repeated Game",
+      "href": "strategic_games/repeated/strategic_games_repeated_finitely_repeated_game.html"
+    },
+    {
+      "id": "strategic_games.repeated.signals",
+      "title": "Repeated Game With Signals",
+      "href": "strategic_games/repeated/strategic_games_repeated_signals.html"
+    }
+  ],
+  "lean_refs": []
+}

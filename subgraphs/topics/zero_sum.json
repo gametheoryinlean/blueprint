@@ -138,7 +138,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 86
+      "node_count": 132
     },
     {
       "id": "strategic_games.core",
@@ -562,6 +562,13 @@
       "href": "strategic_games/dominance/index.html",
       "role": "dependent",
       "node_count": 9
+    },
+    {
+      "id": "strategic_games.repeated",
+      "title": "Strategic Games.Repeated",
+      "href": "strategic_games/repeated/index.html",
+      "role": "dependent",
+      "node_count": 15
     }
   ],
   "child_boundary_edges": [
@@ -599,6 +606,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.dominance",
       "count": 1
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "topic:strategic_games.repeated",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.repeated",
+      "count": 2
     }
   ]
 }

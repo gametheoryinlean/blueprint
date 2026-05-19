@@ -4,8 +4,12 @@
   "kind": "theorem",
   "status": "admitted",
   "href": "strategic_games/strategic_games_dominant_implies_nash.html",
+  "primary_topic": "strategic_games",
+  "topics": [
+    "strategic_games"
+  ],
   "body_html": "<h1>Dominant Strategy Profile is a Nash Equilibrium</h1>\n<p>If every player \\(i\\) plays a weakly dominant strategy \\(s_i\\), then the resulting\nprofile \\(\\sigma = (s_i)_{i \\in I}\\) is a Nash equilibrium.</p>",
-  "proof_html": "<p>A weakly dominant strategy weakly dominates every alternative. In particular,\nfor any player \\(i\\) and any deviation \\(s'_i\\), we have\n\\(u_i(\\sigma[i \\mapsto s'_i]) \\le u_i(\\sigma)\\). This means each player is best\nresponding, so \\(\\sigma\\) is a Nash equilibrium. \\(\\square\\)</p>",
+  "proof_html": "<p>A weakly dominant strategy weakly dominates every alternative. In particular,\nfor any player \\(i\\) and any deviation \\(s'_i\\), we have\n\\(u_i(\\sigma[i \\mapsto s'_i]) \\le u_i(\\sigma)\\). This means each player is best\nresponding, so \\(\\sigma\\) is a Nash equilibrium. \\(\\square\\)</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Relationship between dominant strategies and Nash equilibrium.</li>\n</ul>",
   "deps": [
     {
       "id": "strategic_games.nash_equilibrium",
@@ -31,9 +35,9 @@
       "qualified_name": "IsNashEquilibrium.of_dominant",
       "module": "GameTheoryLib.StrategicGame.NashEquilibrium",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/NashEquilibrium.lean#L30",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/NashEquilibrium.lean#L30",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

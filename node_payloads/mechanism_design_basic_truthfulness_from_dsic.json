@@ -4,13 +4,22 @@
   "kind": "theorem",
   "status": "staged",
   "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html",
-  "body_html": "<h1>Truthfulness From DSIC</h1>\n<p>In a direct mechanism, if truthful reporting is dominant-strategy incentive\ncompatible, then the truthful reporting profile is a Nash equilibrium of the\ninduced strategic game.</p>",
+  "primary_topic": "mechanism_design.basic",
+  "topics": [
+    "mechanism_design.basic"
+  ],
+  "body_html": "<h1>Truthfulness From DSIC</h1>\n<p>In a direct mechanism, if truthful reporting is dominant-strategy incentive\ncompatible, then the truthful reporting profile is a Nash equilibrium of the\ninduced strategic game.</p>\n<h2>References</h2>\n<ul>\n<li>[EconCSLib PR #27, blueprint/src/content.tex, thm:md_basic_truthful] EconCSLib pull request #27, https://github.com/gametheoryinlean/EconCSLib/pull/27. Migrated from the PR's old leanblueprint section into mdblueprint staged form.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
-      "id": "mechanism_design.basic.direct_mechanism_interface",
-      "title": "Direct Mechanism Interface",
-      "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html"
+      "id": "mechanism_design.basic.dsic_predicate",
+      "title": "DSIC Predicate",
+      "href": "mechanism_design/basic/mechanism_design_basic_dsic_predicate.html"
+    },
+    {
+      "id": "mechanism_design.basic.induced_strategic_game",
+      "title": "Induced Strategic Game",
+      "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html"
     },
     {
       "id": "strategic_games.nash_equilibrium",
@@ -26,9 +35,9 @@
       "qualified_name": "Mechanism.IsDSIC.truthful_isNash",
       "module": "GameTheoryLib.MechanismDesign.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Basic.lean#L103",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/MechanismDesign/Basic.lean#L103",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

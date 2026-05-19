@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 15,
-    "visible_nodes_with_selected_proof_plans": 15
+    "visible_nodes_without_proof_plans": 16,
+    "visible_nodes_with_selected_proof_plans": 16
   },
   "nodes": [
     {
@@ -25,7 +25,7 @@
       "title": "Generic Uniqueness Of Subgame-Perfect Equilibrium",
       "kind": "proposition",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_generic_unique_spe.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_generic_unique_spe.html",
       "payload": "node_payloads/extensive_game_perfect_information_generic_unique_spe.json"
     },
     {
@@ -33,7 +33,7 @@
       "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium",
       "kind": "theorem",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_kuhn_spe_existence.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_kuhn_spe_existence.html",
       "payload": "node_payloads/extensive_game_perfect_information_kuhn_spe_existence.json"
     },
     {
@@ -41,7 +41,7 @@
       "title": "Finite Extensive Game With Perfect Information",
       "kind": "definition",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_perfect_information_extensive_game.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_perfect_information_extensive_game.html",
       "payload": "node_payloads/extensive_game_perfect_information_perfect_information_extensive_game.json"
     },
     {
@@ -49,7 +49,7 @@
       "title": "Strategy In A Perfect-Information Game",
       "kind": "definition",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_perfect_information_strategy.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_perfect_information_strategy.html",
       "payload": "node_payloads/extensive_game_perfect_information_perfect_information_strategy.json"
     },
     {
@@ -57,7 +57,7 @@
       "title": "Subgame-Perfect Equilibrium Implies Nash Equilibrium",
       "kind": "proposition",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_spe_implies_nash.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_spe_implies_nash.html",
       "payload": "node_payloads/extensive_game_perfect_information_spe_implies_nash.json"
     },
     {
@@ -65,7 +65,7 @@
       "title": "Strictly Competitive Perfect-Information Determinacy",
       "kind": "theorem",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.html",
       "payload": "node_payloads/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.json"
     },
     {
@@ -73,7 +73,7 @@
       "title": "Subgame-Perfect Equilibrium In Perfect-Information Games",
       "kind": "definition",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_subgame_perfect_equilibrium.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_subgame_perfect_equilibrium.html",
       "payload": "node_payloads/extensive_game_perfect_information_subgame_perfect_equilibrium.json"
     },
     {
@@ -81,7 +81,7 @@
       "title": "Zermelo Determinacy For Finite Perfect-Information Games",
       "kind": "theorem",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_zermelo_determinacy.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zermelo_determinacy.html",
       "payload": "node_payloads/extensive_game_perfect_information_zermelo_determinacy.json"
     },
     {
@@ -89,7 +89,7 @@
       "title": "Value In Finite Zero-Sum Perfect-Information Games",
       "kind": "theorem",
       "status": "staged",
-      "href": "extensive_game.perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value.html",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value.html",
       "payload": "node_payloads/extensive_game_perfect_information_zero_sum_perfect_information_value.json"
     }
   ],
@@ -147,7 +147,14 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 86
+      "node_count": 132
+    },
+    {
+      "id": "strategic_games.repeated",
+      "title": "Strategic Games.Repeated",
+      "href": "strategic_games/repeated/index.html",
+      "role": "dependent",
+      "node_count": 15
     },
     {
       "id": "zero_sum.core",
@@ -233,6 +240,13 @@
       "to": "topic:extensive_game.imperfect_information",
       "kind": "boundary_dependent",
       "topic": "extensive_game.imperfect_information",
+      "count": 1
+    },
+    {
+      "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
+      "to": "topic:strategic_games.repeated",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.repeated",
       "count": 1
     }
   ],

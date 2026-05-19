@@ -1,0 +1,57 @@
+{
+  "id": "mechanism_design.basic.induced_strategic_game",
+  "title": "Induced Strategic Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html",
+  "primary_topic": "mechanism_design.basic",
+  "topics": [
+    "mechanism_design.basic"
+  ],
+  "body_html": "<h1>Induced Strategic Game</h1>\n<p>Given a direct mechanism \\(M\\), a utility function, and a true type profile, the\ninduced strategic game takes each agent's report space as the agent's strategy\nspace. The payoff of a report profile is the utility of the outcome selected by\nthe mechanism under the true type profile.</p>\n<p>The induced game is the bridge that lets mechanism-design predicates reuse\nnormal-form equilibrium and dominance notions instead of duplicating them.</p>\n<h2>References</h2>\n<ul>\n<li>[EconCSLib PR #27, blueprint/src/content.tex, def:md_basic_interface] EconCSLib pull request #27, https://github.com/gametheoryinlean/EconCSLib/pull/27. Migrated from the PR's old leanblueprint section into mdblueprint staged form.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.basic.direct_mechanism_interface",
+      "title": "Direct Mechanism Interface",
+      "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html"
+    },
+    {
+      "id": "strategic_games.strategic_game",
+      "title": "Strategic Game",
+      "href": "strategic_games/strategic_games_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.basic.dsic_predicate",
+      "title": "DSIC Predicate",
+      "href": "mechanism_design/basic/mechanism_design_basic_dsic_predicate.html"
+    },
+    {
+      "id": "mechanism_design.basic.truthfulness_from_dsic",
+      "title": "Truthfulness From DSIC",
+      "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html"
+    },
+    {
+      "id": "mechanism_design.bayesian.bayesian_mechanisms",
+      "title": "Bayesian Mechanisms",
+      "href": "mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Mechanism.toStrategicGame",
+      "display_name": "Mechanism.toStrategicGame",
+      "qualified_name": "Mechanism.toStrategicGame",
+      "module": "GameTheoryLib.MechanismDesign.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/MechanismDesign/Basic.lean#L77",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

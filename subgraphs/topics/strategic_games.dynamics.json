@@ -1,0 +1,175 @@
+{
+  "topic": {
+    "id": "strategic_games.dynamics",
+    "title": "Strategic Games.Dynamics",
+    "href": "strategic_games/dynamics/index.html",
+    "parent": "strategic_games",
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "descendant_nodes": 4,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 5,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
+  },
+  "nodes": [
+    {
+      "id": "strategic_games.dynamics.nash_field",
+      "title": "Nash Field",
+      "kind": "definition",
+      "status": "staged",
+      "href": "strategic_games/dynamics/strategic_games_dynamics_nash_field.html",
+      "payload": "node_payloads/strategic_games_dynamics_nash_field.json"
+    },
+    {
+      "id": "strategic_games.dynamics.positive_correlation",
+      "title": "Positive Correlation Dynamics",
+      "kind": "definition",
+      "status": "staged",
+      "href": "strategic_games/dynamics/strategic_games_dynamics_positive_correlation.html",
+      "payload": "node_payloads/strategic_games_dynamics_positive_correlation.json"
+    },
+    {
+      "id": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "title": "Potential Is Lyapunov For Replicator Dynamics",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "strategic_games/dynamics/strategic_games_dynamics_potential_replicator_lyapunov.html",
+      "payload": "node_payloads/strategic_games_dynamics_potential_replicator_lyapunov.json"
+    },
+    {
+      "id": "strategic_games.dynamics.replicator_dynamics",
+      "title": "Replicator Dynamics",
+      "kind": "definition",
+      "status": "staged",
+      "href": "strategic_games/dynamics/strategic_games_dynamics_replicator_dynamics.html",
+      "payload": "node_payloads/strategic_games_dynamics_replicator_dynamics.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "strategic_games.dynamics.replicator_dynamics",
+      "to": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "strategic_games.core",
+      "title": "Strategic Games.Core",
+      "href": "strategic_games/core/index.html",
+      "role": "dependency",
+      "node_count": 12
+    },
+    {
+      "id": "strategic_games.equilibrium",
+      "title": "Strategic Games.Equilibrium",
+      "href": "strategic_games/equilibrium/index.html",
+      "role": "dependency",
+      "node_count": 13
+    },
+    {
+      "id": "strategic_games.evolution",
+      "title": "Strategic Games.Evolution",
+      "href": "strategic_games/evolution/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "strategic_games.potential",
+      "title": "Strategic Games.Potential",
+      "href": "strategic_games/potential/index.html",
+      "role": "dependency",
+      "node_count": 2
+    },
+    {
+      "id": "strategic_games.variational",
+      "title": "Strategic Games.Variational",
+      "href": "strategic_games/variational/index.html",
+      "role": "dependency",
+      "node_count": 1
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games.core",
+      "to": "strategic_games.dynamics.replicator_dynamics",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.core",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "strategic_games.dynamics.nash_field",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.potential",
+      "to": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.potential",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.variational",
+      "to": "strategic_games.dynamics.positive_correlation",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.variational",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.dynamics.replicator_dynamics",
+      "to": "topic:strategic_games.evolution",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.evolution",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "dynamics",
+      "title": "dynamics",
+      "href": "keywords/dynamics.html",
+      "count": 4
+    },
+    {
+      "id": "evolution",
+      "title": "evolution",
+      "href": "keywords/evolution.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "potential-game",
+      "title": "potential-game",
+      "href": "keywords/potential-game.html",
+      "count": 2
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 4
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

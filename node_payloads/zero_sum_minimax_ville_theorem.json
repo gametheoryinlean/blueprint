@@ -4,7 +4,11 @@
   "kind": "theorem",
   "status": "staged",
   "href": "zero_sum/minimax/zero_sum_minimax_ville_theorem.html",
-  "body_html": "<h1>Ville Theorem</h1>\n<p>Let $I=J=[0,1]$ and let $f:I\\times J\\to\\mathbb{R}$ be continuous.  The mixed\nextension over Borel probability measures on $[0,1]$ has a value, and each\nplayer has an optimal strategy.  Moreover, for every $\\varepsilon&gt;0$, each\nplayer has an $\\varepsilon$-optimal strategy with finite support.</p>\n<p>The mixed payoff is\n$$\n  f(\\sigma,\\tau)=\\int_{[0,1]\\times[0,1]} f(x,y)\\,d\\sigma(x)\\,d\\tau(y),\n$$\nwhere $\\sigma$ and $\\tau$ are Borel probability measures on $[0,1]$.</p>\n<p>MFoGT proves the theorem by finite approximations. One discretizes the square\n$[0,1]\\times[0,1]$ by finer and finer grids, applies finite minimax to each\nmatrix game, and then extracts weakly convergent subsequences of optimal\nprobability measures. Uniform continuity transfers the finite-grid guarantees to\nthe continuous game. The finite-support $\\varepsilon$-optimal strategies come\nfrom the same grid approximations.</p>",
+  "primary_topic": "zero_sum.minimax",
+  "topics": [
+    "zero_sum.minimax"
+  ],
+  "body_html": "<h1>Ville Theorem</h1>\n<p>Let $I=J=[0,1]$ and let $f:I\\times J\\to\\mathbb{R}$ be continuous.  The mixed\nextension over Borel probability measures on $[0,1]$ has a value, and each\nplayer has an optimal strategy.  Moreover, for every $\\varepsilon&gt;0$, each\nplayer has an $\\varepsilon$-optimal strategy with finite support.</p>\n<p>The mixed payoff is\n$$\n  f(\\sigma,\\tau)=\\int_{[0,1]\\times[0,1]} f(x,y)\\,d\\sigma(x)\\,d\\tau(y),\n$$\nwhere $\\sigma$ and $\\tau$ are Borel probability measures on $[0,1]$.</p>\n<p>MFoGT proves the theorem by finite approximations. One discretizes the square\n$[0,1]\\times[0,1]$ by finer and finer grids, applies finite minimax to each\nmatrix game, and then extracts weakly convergent subsequences of optimal\nprobability measures. Uniform continuity transfers the finite-grid guarantees to\nthe continuous game. The finite-support $\\varepsilon$-optimal strategies come\nfrom the same grid approximations.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Theorem 2.5.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Continuous zero-sum game on [0,1] has a value in mixed strategies.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {

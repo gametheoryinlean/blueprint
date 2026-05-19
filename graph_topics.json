@@ -132,14 +132,14 @@
       "title": "Mechanism Design",
       "depth": 1,
       "parent": null,
-      "node_count": 12,
+      "node_count": 15,
       "direct_node_count": 0,
       "kind_counts": {
-        "definition": 8,
+        "definition": 11,
         "theorem": 4
       },
       "status_counts": {
-        "staged": 12
+        "staged": 15
       },
       "href": "mechanism_design/index.html",
       "children": [
@@ -171,27 +171,36 @@
       "title": "Strategic Games",
       "depth": 1,
       "parent": null,
-      "node_count": 86,
+      "node_count": 132,
       "direct_node_count": 10,
       "kind_counts": {
-        "definition": 46,
+        "definition": 74,
         "example": 6,
-        "proposition": 16,
-        "theorem": 18
+        "proposition": 18,
+        "theorem": 34
       },
       "status_counts": {
         "admitted": 10,
-        "staged": 76
+        "staged": 122
       },
       "href": "strategic_games/index.html",
       "children": [
+        "strategic_games.bayesian",
         "strategic_games.continuous",
         "strategic_games.core",
         "strategic_games.correlated",
         "strategic_games.dominance",
+        "strategic_games.dynamics",
         "strategic_games.equilibrium",
+        "strategic_games.evolution",
+        "strategic_games.learning",
+        "strategic_games.manifold",
         "strategic_games.payoff_geometry",
-        "strategic_games.refinements"
+        "strategic_games.population",
+        "strategic_games.potential",
+        "strategic_games.refinements",
+        "strategic_games.repeated",
+        "strategic_games.variational"
       ]
     },
     {
@@ -245,9 +254,19 @@
   ],
   "edges": [
     {
+      "from": "approachability",
+      "to": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "extensive_game",
+      "to": "strategic_games",
+      "count": 1
+    },
+    {
       "from": "fixed_point",
       "to": "strategic_games",
-      "count": 5
+      "count": 6
     },
     {
       "from": "lattice",
@@ -277,7 +296,7 @@
     {
       "from": "strategic_games",
       "to": "mechanism_design",
-      "count": 2
+      "count": 4
     },
     {
       "from": "strategic_games",
@@ -297,7 +316,7 @@
     {
       "from": "zero_sum",
       "to": "strategic_games",
-      "count": 2
+      "count": 4
     }
   ]
 }

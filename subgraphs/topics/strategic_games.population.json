@@ -1,0 +1,110 @@
+{
+  "topic": {
+    "id": "strategic_games.population",
+    "title": "Strategic Games.Population",
+    "href": "strategic_games/population/index.html",
+    "parent": "strategic_games",
+    "node_count": 3,
+    "descendant_node_count": 3
+  },
+  "counts": {
+    "internal_nodes": 3,
+    "descendant_nodes": 3,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 3,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "strategic_games.population.population_game",
+      "title": "Population Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "strategic_games/population/strategic_games_population_population_game.html",
+      "payload": "node_payloads/strategic_games_population_population_game.json"
+    },
+    {
+      "id": "strategic_games.population.wardrop_equilibrium",
+      "title": "Nash Wardrop Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "strategic_games/population/strategic_games_population_wardrop_equilibrium.html",
+      "payload": "node_payloads/strategic_games_population_wardrop_equilibrium.json"
+    },
+    {
+      "id": "strategic_games.population.wardrop_variational_characterization",
+      "title": "Wardrop Variational Characterization",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "strategic_games/population/strategic_games_population_wardrop_variational_characterization.html",
+      "payload": "node_payloads/strategic_games_population_wardrop_variational_characterization.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "strategic_games.population.population_game",
+      "to": "strategic_games.population.wardrop_equilibrium",
+      "kind": "uses"
+    },
+    {
+      "from": "strategic_games.population.wardrop_equilibrium",
+      "to": "strategic_games.population.wardrop_variational_characterization",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 132
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "strategic_games.population.population_game",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "population-game",
+      "title": "population-game",
+      "href": "keywords/population-game.html",
+      "count": 3
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 3
+    },
+    {
+      "id": "variational-inequality",
+      "title": "variational-inequality",
+      "href": "keywords/variational-inequality.html",
+      "count": 1
+    },
+    {
+      "id": "wardrop-equilibrium",
+      "title": "wardrop-equilibrium",
+      "href": "keywords/wardrop-equilibrium.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

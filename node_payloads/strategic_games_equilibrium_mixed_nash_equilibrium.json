@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "staged",
   "href": "strategic_games/equilibrium/strategic_games_equilibrium_mixed_nash_equilibrium.html",
-  "body_html": "<h1>Mixed Nash Equilibrium</h1>\n<p>A mixed equilibrium of a finite strategic game $G$ is a Nash equilibrium of its\nmixed extension $\\widetilde G$.</p>\n<p>Equivalently, a mixed profile $\\sigma$ is a mixed Nash equilibrium if for every\nplayer $i$ and every pure deviation $t_i\\in S_i$,\n$$\n  \\widetilde g_i(t_i,\\sigma_{-i})\n  \\le\n  \\widetilde g_i(\\sigma_i,\\sigma_{-i}).\n$$</p>",
+  "primary_topic": "strategic_games.equilibrium",
+  "topics": [
+    "strategic_games.equilibrium"
+  ],
+  "body_html": "<h1>Mixed Nash Equilibrium</h1>\n<p>A mixed equilibrium of a finite strategic game $G$ is a Nash equilibrium of its\nmixed extension $\\widetilde G$.</p>\n<p>Equivalently, a mixed profile $\\sigma$ is a mixed Nash equilibrium if for every\nplayer $i$ and every pure deviation $t_i\\in S_i$,\n$$\n  \\widetilde g_i(t_i,\\sigma_{-i})\n  \\le\n  \\widetilde g_i(\\sigma_i,\\sigma_{-i}).\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Definition 4.6.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Mixed equilibrium of a finite game.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -30,6 +34,11 @@
       "href": "strategic_games/correlated/strategic_games_correlated_nash_induces_correlated_equilibrium.html"
     },
     {
+      "id": "strategic_games.dynamics.nash_field",
+      "title": "Nash Field",
+      "href": "strategic_games/dynamics/strategic_games_dynamics_nash_field.html"
+    },
+    {
       "id": "strategic_games.equilibrium.finite_nash_computation_examples",
       "title": "Finite Nash Equilibrium Computation Examples",
       "href": "strategic_games/equilibrium/strategic_games_equilibrium_finite_nash_computation_examples.html"
@@ -45,6 +54,11 @@
       "href": "strategic_games/equilibrium/strategic_games_equilibrium_nash_existence_finite_games.html"
     },
     {
+      "id": "strategic_games.manifold.equilibrium_manifold",
+      "title": "Equilibrium Manifold",
+      "href": "strategic_games/manifold/strategic_games_manifold_equilibrium_manifold.html"
+    },
+    {
       "id": "strategic_games.refinements.perfect_equilibrium",
       "title": "Perfect Equilibrium",
       "href": "strategic_games/refinements/strategic_games_refinements_perfect_equilibrium.html"
@@ -57,9 +71,9 @@
       "qualified_name": "StrategicGame.IsMixedNashEq",
       "module": "GameTheoryLib.StrategicGame.MixedStrategy",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/MixedStrategy.lean#L102",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/MixedStrategy.lean#L102",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

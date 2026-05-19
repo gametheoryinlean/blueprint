@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "admitted",
   "href": "strategic_games/strategic_games_nash_equilibrium.html",
-  "body_html": "<h1>Nash Equilibrium</h1>\n<p>A strategy profile $\\sigma$ is a Nash equilibrium if every player is playing a best\nresponse to the strategies of the other players:</p>\n<p>$$\\forall i \\in I, \\quad \\sigma_i \\text{ is a best response to } \\sigma.$$</p>\n<p>Equivalently, no player can improve their payoff by a unilateral deviation.</p>",
+  "primary_topic": "strategic_games",
+  "topics": [
+    "strategic_games"
+  ],
+  "body_html": "<h1>Nash Equilibrium</h1>\n<p>A strategy profile $\\sigma$ is a Nash equilibrium if every player is playing a best\nresponse to the strategies of the other players:</p>\n<p>$$\\forall i \\in I, \\quad \\sigma_i \\text{ is a best response to } \\sigma.$$</p>\n<p>Equivalently, no player can improve their payoff by a unilateral deviation.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Section 2.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of Nash equilibrium in pure strategies.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -38,6 +42,16 @@
       "id": "mechanism_design.basic.truthfulness_from_dsic",
       "title": "Truthfulness From DSIC",
       "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html"
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_equilibrium",
+      "title": "Bayesian Equilibrium",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_equilibrium.html"
+    },
+    {
+      "id": "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+      "title": "Bayesian Equilibrium As Nash Equilibrium",
+      "href": "strategic_games/bayesian/strategic_games_bayesian_bayesian_equilibrium_as_nash.html"
     },
     {
       "id": "strategic_games.continuous.convex_game_variational_characterization",
@@ -105,6 +119,11 @@
       "href": "strategic_games/payoff_geometry/strategic_games_payoff_geometry_focal_point.html"
     },
     {
+      "id": "strategic_games.potential.potential_maximizer_nash",
+      "title": "Potential Maximizer Is Nash",
+      "href": "strategic_games/potential/strategic_games_potential_potential_maximizer_nash.html"
+    },
+    {
       "id": "strategic_games.prisoners_dilemma",
       "title": "Prisoner's Dilemma",
       "href": "strategic_games/strategic_games_prisoners_dilemma.html"
@@ -127,9 +146,9 @@
       "qualified_name": "IsNashEquilibrium",
       "module": "GameTheoryLib.StrategicGame.NashEquilibrium",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/StrategicGame/NashEquilibrium.lean#L23",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/StrategicGame/NashEquilibrium.lean#L23",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

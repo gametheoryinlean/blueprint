@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 12,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 8,
+    "boundary_topics": 11,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 21,
-    "visible_nodes_with_selected_proof_plans": 21
+    "visible_nodes_without_proof_plans": 24,
+    "visible_nodes_with_selected_proof_plans": 24
   },
   "nodes": [
     {
@@ -25,7 +25,7 @@
       "title": "Best Response Face",
       "kind": "proposition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_best_response_face.html",
+      "href": "strategic_games/core/strategic_games_core_best_response_face.html",
       "payload": "node_payloads/strategic_games_core_best_response_face.json"
     },
     {
@@ -33,7 +33,7 @@
       "title": "Best Response",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_best_response_mfogt.html",
+      "href": "strategic_games/core/strategic_games_core_best_response_mfogt.html",
       "payload": "node_payloads/strategic_games_core_best_response_mfogt.json"
     },
     {
@@ -41,7 +41,7 @@
       "title": "Best-Response Invariance",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_br_invariance.html",
+      "href": "strategic_games/core/strategic_games_core_br_invariance.html",
       "payload": "node_payloads/strategic_games_core_br_invariance.json"
     },
     {
@@ -49,7 +49,7 @@
       "title": "Dominant Strategy",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_dominant_strategy.html",
+      "href": "strategic_games/core/strategic_games_core_dominant_strategy.html",
       "payload": "node_payloads/strategic_games_core_dominant_strategy.json"
     },
     {
@@ -57,7 +57,7 @@
       "title": "Mixed Extension Of A Strategic Game",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_mixed_extension.html",
+      "href": "strategic_games/core/strategic_games_core_mixed_extension.html",
       "payload": "node_payloads/strategic_games_core_mixed_extension.json"
     },
     {
@@ -65,7 +65,7 @@
       "title": "Mixed Strategy",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_mixed_strategy.html",
+      "href": "strategic_games/core/strategic_games_core_mixed_strategy.html",
       "payload": "node_payloads/strategic_games_core_mixed_strategy.json"
     },
     {
@@ -73,7 +73,7 @@
       "title": "Mixed Strategy",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_mixed_strategy_mfogt.html",
+      "href": "strategic_games/core/strategic_games_core_mixed_strategy_mfogt.html",
       "payload": "node_payloads/strategic_games_core_mixed_strategy_mfogt.json"
     },
     {
@@ -81,7 +81,7 @@
       "title": "Strategic Game In Normal Form",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_strategic_game_mfogt.html",
+      "href": "strategic_games/core/strategic_games_core_strategic_game_mfogt.html",
       "payload": "node_payloads/strategic_games_core_strategic_game_mfogt.json"
     },
     {
@@ -89,7 +89,7 @@
       "title": "Strategy Profile",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_strategy_profile_mfogt.html",
+      "href": "strategic_games/core/strategic_games_core_strategy_profile_mfogt.html",
       "payload": "node_payloads/strategic_games_core_strategy_profile_mfogt.json"
     },
     {
@@ -97,7 +97,7 @@
       "title": "Symmetric Game",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_symmetric_game.html",
+      "href": "strategic_games/core/strategic_games_core_symmetric_game.html",
       "payload": "node_payloads/strategic_games_core_symmetric_game.json"
     },
     {
@@ -105,7 +105,7 @@
       "title": "Symmetric Mixed Equilibrium",
       "kind": "theorem",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_symmetric_mixed_equilibrium.html",
+      "href": "strategic_games/core/strategic_games_core_symmetric_mixed_equilibrium.html",
       "payload": "node_payloads/strategic_games_core_symmetric_mixed_equilibrium.json"
     },
     {
@@ -113,7 +113,7 @@
       "title": "Unilateral Deviation",
       "kind": "definition",
       "status": "staged",
-      "href": "strategic_games.core/strategic_games_core_unilateral_deviation_mfogt.html",
+      "href": "strategic_games/core/strategic_games_core_unilateral_deviation_mfogt.html",
       "payload": "node_payloads/strategic_games_core_unilateral_deviation_mfogt.json"
     }
   ],
@@ -154,14 +154,28 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 86
+      "node_count": 132
+    },
+    {
+      "id": "strategic_games.bayesian",
+      "title": "Strategic Games.Bayesian",
+      "href": "strategic_games/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 6
     },
     {
       "id": "strategic_games.correlated",
       "title": "Strategic Games.Correlated",
       "href": "strategic_games/correlated/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 10
+      "node_count": 11
+    },
+    {
+      "id": "strategic_games.dynamics",
+      "title": "Strategic Games.Dynamics",
+      "href": "strategic_games/dynamics/index.html",
+      "role": "dependent",
+      "node_count": 4
     },
     {
       "id": "strategic_games.equilibrium",
@@ -169,6 +183,13 @@
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency_and_dependent",
       "node_count": 13
+    },
+    {
+      "id": "strategic_games.evolution",
+      "title": "Strategic Games.Evolution",
+      "href": "strategic_games/evolution/index.html",
+      "role": "dependent",
+      "node_count": 3
     },
     {
       "id": "strategic_games.payoff_geometry",
@@ -286,10 +307,24 @@
     },
     {
       "from": "strategic_games.core.mixed_strategy",
+      "to": "topic:strategic_games.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.bayesian",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.core.mixed_strategy",
       "to": "topic:strategic_games.correlated",
       "kind": "boundary_dependent",
       "topic": "strategic_games.correlated",
-      "count": 3
+      "count": 4
+    },
+    {
+      "from": "strategic_games.core.symmetric_game",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.dynamics",
+      "count": 1
     },
     {
       "from": "strategic_games.core.mixed_extension",
@@ -297,6 +332,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
       "count": 2
+    },
+    {
+      "from": "strategic_games.core.symmetric_game",
+      "to": "topic:strategic_games.evolution",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.evolution",
+      "count": 1
     },
     {
       "from": "strategic_games.core.mixed_strategy",

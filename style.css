@@ -61,6 +61,31 @@ body {
 .nav-list a:hover, .nav-link:hover { color: var(--accent); }
 .nav-link { display: block; font-weight: 600; }
 
+.topic-children {
+  border-left: 1px solid var(--border);
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding-left: 0.9rem;
+}
+
+.topic-children li {
+  list-style: none;
+}
+
+.topic-children li::marker {
+  display: none;
+}
+
+.topic-parent summary {
+  cursor: pointer;
+}
+
+.topic-active > a,
+.topic-active > details > summary a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .sidebar-toggle {
   background: none;
   border: none;
@@ -133,6 +158,13 @@ a { color: var(--accent); }
 .lean-info code { font-family: var(--mono); background: var(--badge-bg); padding: 0.1rem 0.3rem; border-radius: 2px; }
 .lean-modules { font-size: 0.85rem; color: #666; margin-top: 0.3rem; }
 .lean-source-meta { color: #666; font-size: 0.82rem; margin-left: 0.35rem; }
+
+/* Node cross-references rendered from [[node:id]] shortcodes */
+a.node-ref { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+a.node-ref:hover { text-decoration: none; }
+span.node-ref.unresolved { color: #b00020; font-style: italic; cursor: not-allowed; }
+span.node-ref.unresolved::before { content: "?"; font-size: 0.75em; vertical-align: super; margin-right: 1px; }
+
 .body { line-height: 1.7; margin-top: 1.5rem; }
 .tags { margin-top: 2rem; }
 .tag {

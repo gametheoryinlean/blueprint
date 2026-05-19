@@ -4,7 +4,11 @@
   "kind": "definition",
   "status": "staged",
   "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html",
-  "body_html": "<h1>Direct Mechanism Interface</h1>\n<p>A direct mechanism for agents \\(I\\), report spaces \\(T_i\\), and outcomes \\(O\\)\nmaps reported types to an outcome. It induces a strategic game by taking reports\nas strategies and evaluating outcomes through externally supplied utilities.</p>\n<p>The interface includes dominant-strategy incentive compatibility and ex-post\nindividual rationality predicates.</p>",
+  "primary_topic": "mechanism_design.basic",
+  "topics": [
+    "mechanism_design.basic"
+  ],
+  "body_html": "<h1>Direct Mechanism Interface</h1>\n<p>A direct mechanism for agents \\(I\\), report spaces \\(T_i\\), and outcomes \\(O\\)\nmaps reported types to an outcome. It induces a strategic game by taking reports\nas strategies and evaluating outcomes through externally supplied utilities.</p>\n<p>This node records the direct revelation structure itself. The induced strategic\ngame, DSIC predicate, and ex-post individual rationality predicate are separate\nbasic mechanism-design nodes because they add additional payoff or order\nstructure.</p>\n<h2>References</h2>\n<ul>\n<li>[EconCSLib PR #27, blueprint/src/content.tex, def:md_basic_interface] EconCSLib pull request #27, https://github.com/gametheoryinlean/EconCSLib/pull/27. Migrated from the PR's old leanblueprint section into mdblueprint staged form.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -15,9 +19,14 @@
   ],
   "dependents": [
     {
-      "id": "mechanism_design.basic.truthfulness_from_dsic",
-      "title": "Truthfulness From DSIC",
-      "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html"
+      "id": "mechanism_design.basic.ex_post_ir_predicate",
+      "title": "Ex-Post Individual Rationality Predicate",
+      "href": "mechanism_design/basic/mechanism_design_basic_ex_post_ir_predicate.html"
+    },
+    {
+      "id": "mechanism_design.basic.induced_strategic_game",
+      "title": "Induced Strategic Game",
+      "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html"
     },
     {
       "id": "mechanism_design.bayesian.bayesian_mechanisms",
@@ -37,48 +46,9 @@
       "qualified_name": "Mechanism",
       "module": "GameTheoryLib.MechanismDesign.Basic",
       "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Basic.lean#L55",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
-      "name": "Mechanism.toStrategicGame",
-      "display_name": "Mechanism.toStrategicGame",
-      "qualified_name": "Mechanism.toStrategicGame",
-      "module": "GameTheoryLib.MechanismDesign.Basic",
-      "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Basic.lean#L77",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
-      "name": "Mechanism.IsDSIC",
-      "display_name": "Mechanism.IsDSIC",
-      "qualified_name": "Mechanism.IsDSIC",
-      "module": "GameTheoryLib.MechanismDesign.Basic",
-      "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Basic.lean#L90",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
-      "name": "Mechanism.IsExPostIR",
-      "display_name": "Mechanism.IsExPostIR",
-      "qualified_name": "Mechanism.IsExPostIR",
-      "module": "GameTheoryLib.MechanismDesign.Basic",
-      "repository_title": "EconCSLib",
-      "revision": "36d8470e381277f86323c0c8f1c2ad1027ce8269",
-      "short_revision": "36d8470",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/36d8470e381277f86323c0c8f1c2ad1027ce8269/GameTheoryLib/MechanismDesign/Basic.lean#L97",
+      "revision": "b9976f250e0bd9af3d7e3f312df8625b75c2fc3b",
+      "short_revision": "b9976f2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9976f250e0bd9af3d7e3f312df8625b75c2fc3b/GameTheoryLib/MechanismDesign/Basic.lean#L55",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
