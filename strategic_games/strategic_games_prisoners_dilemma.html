@@ -588,11 +588,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/60073586a23a122600e8de59bb4057aee4835c2a/GameTheoryLib/Examples/PrisonersDilemma.lean#L55"><code>PrisonersDilemma.PD</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ef681f22fb75c626de3570215ac12312f1310b79/GameTheoryLib/Examples/PrisonersDilemma.lean#L55"><code>PrisonersDilemma.PD</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 6007358, GameTheoryLib.Examples.PrisonersDilemma
+            EconCSLib @ ef681f2, GameTheoryLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -600,11 +600,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/60073586a23a122600e8de59bb4057aee4835c2a/GameTheoryLib/Examples/PrisonersDilemma.lean#L66"><code>PrisonersDilemma.pd_defect_weakly_dominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ef681f22fb75c626de3570215ac12312f1310b79/GameTheoryLib/Examples/PrisonersDilemma.lean#L66"><code>PrisonersDilemma.pd_defect_weakly_dominant</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 6007358, GameTheoryLib.Examples.PrisonersDilemma
+            EconCSLib @ ef681f2, GameTheoryLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -612,11 +612,35 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/60073586a23a122600e8de59bb4057aee4835c2a/GameTheoryLib/Examples/PrisonersDilemma.lean#L72"><code>PrisonersDilemma.pd_defect_nash</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ef681f22fb75c626de3570215ac12312f1310b79/GameTheoryLib/Examples/PrisonersDilemma.lean#L72"><code>PrisonersDilemma.pd_defect_nash</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 6007358, GameTheoryLib.Examples.PrisonersDilemma
+            EconCSLib @ ef681f2, GameTheoryLib.Examples.PrisonersDilemma
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ef681f22fb75c626de3570215ac12312f1310b79/GameTheoryLib/Examples/PrisonersDilemma.lean#L76"><code>PrisonersDilemma.pd_nash_unique</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ ef681f2, GameTheoryLib.Examples.PrisonersDilemma
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ef681f22fb75c626de3570215ac12312f1310b79/GameTheoryLib/Examples/PrisonersDilemma.lean#L84"><code>PrisonersDilemma.pd_pareto_suboptimal</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ ef681f2, GameTheoryLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -633,7 +657,8 @@
   <div class="example_thmcontent thm-content body">
     <h1>Prisoner's Dilemma</h1>
 <p>The Prisoner's Dilemma is a two-player strategic game where each player can
-Cooperate ($C$) or Defect ($D$). The payoff matrix is:</p>
+Cooperate ($C$) or Defect ($D$). The Lean example uses this normalized payoff
+matrix:</p>
 <table>
 <thead>
 <tr>
@@ -645,22 +670,23 @@ Cooperate ($C$) or Defect ($D$). The payoff matrix is:</p>
 <tbody>
 <tr>
 <td>$C$</td>
-<td>(2, 2)</td>
-<td>(0, 3)</td>
+<td>(3, 3)</td>
+<td>(0, 5)</td>
 </tr>
 <tr>
 <td>$D$</td>
-<td>(3, 0)</td>
+<td>(5, 0)</td>
 <td>(1, 1)</td>
 </tr>
 </tbody>
 </table>
 <p>Defecting is a weakly dominant strategy for each player. The unique Nash
 equilibrium is $(D, D)$ with payoff $(1, 1)$, which is Pareto-dominated by
-$(C, C)$ with payoff $(2, 2)$.</p>
+$(C, C)$ with payoff $(3, 3)$.</p>
 <h2>References</h2>
 <ul>
-<li>[MSZ, Chapter 2, Example 2.8] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Prisoner's Dilemma.</li>
+<li>[MSZ, Chapter 4] Maschler, Solan, and Zamir, <em>Game Theory</em>,
+  <code>references/GameTheory.pdf</code>. Prisoner's Dilemma in utility units.</li>
 </ul>
     
   </div>
