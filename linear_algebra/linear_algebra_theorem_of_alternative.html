@@ -88,8 +88,13 @@
           <a href="../lattice/index.html">Lattice</a>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../linear_algebra/index.html">Linear Algebra</a>
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="linear_algebra">
+            <summary><a href="../linear_algebra/index.html">Linear Algebra</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../linear_algebra/alternatives/index.html">Alternatives</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-leaf">
@@ -409,6 +414,8 @@
       
         <li><a href="../keywords/egalitarian.html">egalitarian</a></li>
       
+        <li><a href="../keywords/elimination.html">elimination</a></li>
+      
         <li><a href="../keywords/envy-cycle.html">envy-cycle</a></li>
       
         <li><a href="../keywords/envy-free.html">envy-free</a></li>
@@ -466,6 +473,8 @@
         <li><a href="../keywords/forward-induction.html">forward-induction</a></li>
       
         <li><a href="../keywords/foundational.html">foundational</a></li>
+      
+        <li><a href="../keywords/fourier-motzkin.html">fourier-motzkin</a></li>
       
         <li><a href="../keywords/fubini.html">fubini</a></li>
       
@@ -797,29 +806,125 @@
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-linear_algebra-2e-theorem_of_alternative">#</a>
       
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
       
     </div>
   </header>
 
+  
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a></li>
+        
+      </ul>
+    </div>
+  </div>
   
 
   
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Theorem Of The Alternative</h1>
-<p>Let $A$ be an $m\times n$ real matrix and let $b\in\mathbb R^m$. Define
+<h2>Setup</h2>
+<p>Fix a linearly ordered field $\mathbb{K}$ and finite nonempty index types
+$I$ and $J$. Let $A \colon I \times J \to \mathbb{K}$ be a matrix and
+$b \colon I \to \mathbb{K}$ a right-hand side vector. Define the
+<strong>primal feasibility region</strong> and <strong>Farkas certificate set</strong>
 $$
-  S=\{x\in\mathbb R^n:Ax\ge b\}
+  S = S(A, b) \;=\; \{\, x \colon J \to \mathbb{K} \mid \forall i \in I,\;
+      \textstyle\sum_{j \in J} A_{ij}\, x_j \ge b_i \,\},
 $$
-and
 $$
-  T=\{u\in\mathbb R^m:u\ge 0,\ uA=0,\ \langle u,b\rangle&gt;0\}.
+  T = T(A, b) \;=\; \bigl\{\, u \colon I \to \mathbb{K} \,\big|\, u \ge 0,\;
+      \forall j \in J,\, \textstyle\sum_{i \in I} u_i A_{ij} = 0,\;
+      \textstyle\sum_{i \in I} u_i b_i &gt; 0 \,\bigr\}.
+$$</p>
+<h2>Statement</h2>
+<p><strong>Theorem (of the alternative).</strong> Exactly one of $S$ and $T$ is nonempty.</p>
+<p>In particular,
 $$
-Then exactly one of $S$ and $T$ is nonempty.</p>
+  S = \emptyset \quad\Longleftrightarrow\quad T \ne \emptyset.
+$$</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The two halves are independent.</p>
+<p><em>Disjointness ($S$ and $T$ cannot both be nonempty).</em> Suppose $x \in S$ and
+$u \in T$. Weighting the $I$ inequalities $Ax \ge b$ by the nonnegative
+weights $u_i$ and summing:
+$$
+  \textstyle\sum_i u_i \sum_j A_{ij}\, x_j \;\ge\; \sum_i u_i b_i.
+$$
+The left-hand side rewrites as
+$\sum_j x_j \sum_i u_i A_{ij} = \sum_j x_j \cdot 0 = 0$ (using
+$u^{\mathsf T}A = 0$ from $u \in T$). The right-hand side is $&gt; 0$ from
+$\langle u, b\rangle &gt; 0$. So $0 \ge \sum_i u_i b_i &gt; 0$, contradiction.</p>
+<p><em>Existence (at least one of $S$, $T$ is nonempty).</em> By strong induction on
+$n = |J|$.</p>
+<p><strong>Base $n = 0$.</strong> $J = \emptyset$, so the empty sum gives
+$\sum_{j \in \emptyset} A_{ij}\,x_j = 0$ for every $i$. The constraints
+$Ax \ge b$ become $0 \ge b_i$ for every $i$, i.e. $b \le 0$ componentwise.
+The unique $x \colon \emptyset \to \mathbb{K}$ lives in $S$ iff $b \le 0$.</p>
+<p>If $b \le 0$ then $S \ne \emptyset$. Otherwise, some $b_{i_0} &gt; 0$; pick
+$u = e_{i_0}$ (the indicator at $i_0$). Then $u \ge 0$, the matrix
+constraint $u^{\mathsf T} A = 0$ is vacuous (no columns), and
+$\sum_i u_i b_i = b_{i_0} &gt; 0$, so $u \in T$ and $T \ne \emptyset$.</p>
+<p><strong>Inductive step.</strong> Suppose the theorem holds for any system on $n$
+columns. Given a system $(A, b)$ on $J$ with $|J| = n + 1$, pick any
+$j^\star \in J$ and apply Fourier-Motzkin elimination
+(<a class="node-ref" data-node-id="linear_algebra.theorem_of_alternative.fourier_motzkin" href="theorem_of_alternative/linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>) to obtain
+a reduced system $(A', b')$ on $J' = J \setminus \{j^\star\}$ (which has
+$n$ columns) together with two transfer properties:</p>
+<ol>
+<li><strong>Feasibility iff.</strong> $S(A, b) \ne \emptyset \iff S(A', b') \ne \emptyset$.</li>
+<li><strong>Certificate lift.</strong> Every $u' \in T(A', b')$ explicitly produces a
+   $u \in T(A, b)$.</li>
+</ol>
+<p>By the inductive hypothesis applied to $(A', b')$, either $S(A', b')$ or
+$T(A', b')$ is nonempty.</p>
+<ul>
+<li>If $S(A', b') \ne \emptyset$, then by (1) $S(A, b) \ne \emptyset$.</li>
+<li>If $T(A', b') \ne \emptyset$, then by (2) $T(A, b) \ne \emptyset$.</li>
+</ul>
+<p>Either way, at least one of $S(A, b)$, $T(A, b)$ is nonempty. $\square$</p>
+<h2>Remarks</h2>
+<ul>
+<li>The proof is <strong>constructive over $\mathbb{K}$</strong>: the FM reduction is an
+  explicit rational construction, and the certificate lift is an explicit
+  nonnegative combination of the reduced certificate with finite-many
+  matrix-entry coefficients. So if $A$, $b$ have entries in $\mathbb{K}$,
+  the witness ($x$ or $u$) lives in $\mathbb{K}$ as well.</li>
+<li>No topology, completeness, or compactness is invoked. The theorem holds
+  uniformly over every linearly ordered field, including $\mathbb{Q}$.</li>
+<li>The "exactly one" phrasing is the conjunction of disjointness and
+  existence. In Lean it is convenient to state the equivalence
+  $\neg\,S\text{-nonempty} \iff T\text{-nonempty}$.</li>
+</ul>
+<h2>Consequences</h2>
+<p>This theorem is the gateway to several downstream results in the
+LP / linear-algebra cluster:</p>
+<ul>
+<li><em>Farkas' lemma</em>: re-expression in terms of "for every $x$, $Ax \ge b$
+  implies $\langle c, x\rangle \ge d$ iff there is a dual certificate".</li>
+<li><em>LP strong duality</em>: once Farkas is available, duality follows by
+  combining primal feasibility and bounded objective.</li>
+<li><em>Matrix-game polytope structure</em>: optimal strategy sets are
+  intersections of the simplex with finitely many half-spaces.</li>
+</ul>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Section 2.8, Exercise 7] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Fourier elimination theorem of the alternative.</li>
+<li>[MFoGT, Section 2.8, Exercise 7] Laraki, Renault, and Sorin,
+  <em>Mathematical Foundations of Game Theory</em>,
+  <code>references/MathFoundationsGameTheory.pdf</code>. Fourier elimination theorem
+  of the alternative.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -837,10 +942,21 @@ Then exactly one of $S$ and $T$ is nonempty.</p>
   
 
   
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../linear_algebra/index.html">Linear Algebra</a></li>
+      
+      <li><a href="../linear_algebra/alternatives/index.html">Linear Algebra.Alternatives</a></li>
+      
+    </ul>
+  </section>
+  
 
   
   <footer class="tags">
-    <span class="tag">linear-algebra</span><span class="tag">convexity</span><span class="tag">alternatives</span>
+    <span class="tag">linear-algebra</span><span class="tag">convexity</span><span class="tag">alternatives</span><span class="tag">fourier-motzkin</span>
   </footer>
   
 </article>

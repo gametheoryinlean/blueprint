@@ -1712,11 +1712,41 @@
       "tags": [
         "linear-algebra",
         "convexity",
-        "alternatives"
+        "alternatives",
+        "fourier-motzkin"
+      ],
+      "primary_topic": "linear_algebra",
+      "topics": [
+        "linear_algebra",
+        "linear_algebra.alternatives"
+      ],
+      "topic": "linear_algebra",
+      "uses": [
+        "linear_algebra.theorem_of_alternative.fourier_motzkin"
+      ],
+      "used_by": [
+        "linear_algebra.farkas_lemma"
+      ]
+    },
+    {
+      "id": "linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "title": "Fourier-Motzkin Elimination Step",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "linear-algebra",
+        "fourier-motzkin",
+        "alternatives",
+        "elimination"
+      ],
+      "primary_topic": "linear_algebra",
+      "topics": [
+        "linear_algebra",
+        "linear_algebra.alternatives"
       ],
       "topic": "linear_algebra",
       "used_by": [
-        "linear_algebra.farkas_lemma"
+        "linear_algebra.theorem_of_alternative"
       ]
     },
     {
@@ -10564,7 +10594,7 @@
       "id": "zero_sum.minimax.loomis_theorem",
       "title": "Loomis Theorem (Positive B)",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "zero-sum",
         "minimax",
@@ -11018,7 +11048,7 @@
       "id": "zero_sum.von_neumann_minimax",
       "title": "Von Neumann Minimax Theorem",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "zero-sum",
         "value",
@@ -11600,6 +11630,10 @@
     {
       "from": "zero_sum.minimax.loomis_theorem",
       "to": "linear_algebra.perron_frobenius_positive_matrix"
+    },
+    {
+      "from": "linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "to": "linear_algebra.theorem_of_alternative"
     },
     {
       "from": "linear_programming.strong_duality",
