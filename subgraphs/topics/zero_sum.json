@@ -4,20 +4,20 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 74,
-    "descendant_node_count": 74
+    "node_count": 73,
+    "descendant_node_count": 73
   },
   "counts": {
-    "internal_nodes": 74,
-    "descendant_nodes": 74,
+    "internal_nodes": 73,
+    "descendant_nodes": 73,
     "child_topics": 7,
-    "non_proof_plan_nodes": 65,
+    "non_proof_plan_nodes": 64,
     "proof_plan_nodes": 9,
     "selected_proof_plan_nodes": 5,
     "boundary_topics": 9,
     "proof_plan_attachments": 9,
-    "visible_nodes_without_proof_plans": 75,
-    "visible_nodes_with_selected_proof_plans": 80
+    "visible_nodes_without_proof_plans": 74,
+    "visible_nodes_with_selected_proof_plans": 79
   },
   "nodes": [
     {
@@ -147,22 +147,6 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_core_epsilon_optimal_strategy.html",
       "payload": "node_payloads/zero_sum_core_epsilon_optimal_strategy.json"
-    },
-    {
-      "id": "zero_sum.core.maxmin_le_minmax",
-      "title": "Maxmin Is At Most Minmax",
-      "kind": "lemma",
-      "status": "staged",
-      "href": "zero_sum/zero_sum_core_maxmin_le_minmax.html",
-      "payload": "node_payloads/zero_sum_core_maxmin_le_minmax.json"
-    },
-    {
-      "id": "zero_sum.core.maxmin_minmax",
-      "title": "Maxmin And Minmax",
-      "kind": "definition",
-      "status": "staged",
-      "href": "zero_sum/zero_sum_core_maxmin_minmax.html",
-      "payload": "node_payloads/zero_sum_core_maxmin_minmax.json"
     },
     {
       "id": "zero_sum.core.mixed_extension",
@@ -507,6 +491,14 @@
       "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json"
     },
     {
+      "id": "zero_sum.minimax.minimax_theorem",
+      "title": "Minimax Theorem (merged into Von Neumann Minimax)",
+      "kind": "concept",
+      "status": "deprecated",
+      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html",
+      "payload": "node_payloads/zero_sum_minimax_minimax_theorem.json"
+    },
+    {
       "id": "zero_sum.minimax.ordered_field_minimax",
       "title": "Ordered-Field Minimax Statement",
       "kind": "theorem",
@@ -768,16 +760,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.maxmin_minmax",
-      "to": "zero_sum.core.maxmin_le_minmax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.player_guarantee",
-      "to": "zero_sum.core.maxmin_minmax",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.core.mixed_strategy_simplex",
       "to": "zero_sum.core.mixed_extension",
       "kind": "uses"
@@ -983,7 +965,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.maxmin_le_minmax",
+      "from": "zero_sum.maximin_le_minimax",
       "to": "zero_sum.examples.three_player_minimax_failure",
       "kind": "uses"
     },
@@ -998,12 +980,12 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.maxmin_le_minmax",
+      "from": "zero_sum.fictitious_play.fictitious_play",
       "to": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "kind": "uses"
     },
     {
-      "from": "zero_sum.fictitious_play.fictitious_play",
+      "from": "zero_sum.maximin_le_minimax",
       "to": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "kind": "uses"
     },
@@ -1125,6 +1107,11 @@
     {
       "from": "zero_sum.maximin_minimax",
       "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.minimax.minimax_theorem",
       "kind": "uses"
     },
     {
@@ -1436,6 +1423,12 @@
       "count": 2
     },
     {
+      "id": "deprecated",
+      "title": "deprecated",
+      "href": "keywords/deprecated.html",
+      "count": 1
+    },
+    {
       "id": "derived-game",
       "title": "derived-game",
       "href": "keywords/derived-game.html",
@@ -1544,12 +1537,6 @@
       "count": 20
     },
     {
-      "id": "minmax",
-      "title": "minmax",
-      "href": "keywords/minmax.html",
-      "count": 2
-    },
-    {
       "id": "mixed-strategy",
       "title": "mixed-strategy",
       "href": "keywords/mixed-strategy.html",
@@ -1596,6 +1583,12 @@
       "title": "proof-plan",
       "href": "keywords/proof-plan.html",
       "count": 7
+    },
+    {
+      "id": "redirect",
+      "title": "redirect",
+      "href": "keywords/redirect.html",
+      "count": 1
     },
     {
       "id": "robinson",
@@ -1673,7 +1666,7 @@
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 13
+      "count": 12
     },
     {
       "id": "value-operator",
@@ -1691,13 +1684,13 @@
       "id": "weak-duality",
       "title": "weak-duality",
       "href": "keywords/weak-duality.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 74
+      "count": 72
     }
   ],
   "proof_plan_attachments": [
@@ -1791,17 +1784,17 @@
       "title": "Zero Sum.Core",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 24,
-      "direct_node_count": 24,
+      "node_count": 22,
+      "direct_node_count": 22,
       "kind_counts": {
-        "definition": 14,
-        "lemma": 4,
+        "definition": 13,
+        "lemma": 3,
         "proposition": 2,
         "theorem": 4
       },
       "status_counts": {
         "formalized": 20,
-        "staged": 4
+        "staged": 2
       },
       "href": "zero_sum/core/index.html",
       "children": []
@@ -1865,15 +1858,17 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 17,
-      "direct_node_count": 17,
+      "node_count": 18,
+      "direct_node_count": 18,
       "kind_counts": {
+        "concept": 1,
         "lemma": 2,
         "proof-plan": 7,
         "theorem": 8
       },
       "status_counts": {
         "admitted": 2,
+        "deprecated": 1,
         "formalized": 6,
         "staged": 9
       },
@@ -1939,7 +1934,13 @@
       "from": "topic:zero_sum.minimax",
       "to": "topic:zero_sum.examples",
       "kind": "topic_dependency",
-      "count": 4
+      "count": 5
+    },
+    {
+      "from": "topic:zero_sum.minimax",
+      "to": "topic:zero_sum.fictitious_play",
+      "kind": "topic_dependency",
+      "count": 1
     },
     {
       "from": "topic:zero_sum.minimax",

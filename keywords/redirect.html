@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maxmin And Minmax — EconCSLib Knowledge Blueprint</title>
+  <title>Keyword: redirect — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -149,8 +149,8 @@
           <a href="../utility/index.html">Utility</a>
         </li>
       
-        <li class="topic-parent topic-active">
-          <details open data-topic-root="zero_sum">
+        <li class="topic-parent">
+          <details data-topic-root="zero_sum">
             <summary><a href="../zero_sum/index.html">Zero Sum</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../zero_sum/continuous/index.html">Continuous</a>
@@ -262,6 +262,8 @@
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
         <li><a href="../keywords/deferred.html">deferred</a></li>
+      
+        <li><a href="../keywords/deprecated.html">deprecated</a></li>
       
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
@@ -383,8 +385,6 @@
       
         <li><a href="../keywords/minimax.html">minimax</a></li>
       
-        <li><a href="../keywords/minmax.html">minmax</a></li>
-      
         <li><a href="../keywords/minority-game.html">minority-game</a></li>
       
         <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
@@ -448,6 +448,8 @@
         <li><a href="../keywords/rationality.html">rationality</a></li>
       
         <li><a href="../keywords/rationalizability.html">rationalizability</a></li>
+      
+        <li><a href="../keywords/redirect.html">redirect</a></li>
       
         <li><a href="../keywords/refinement.html">refinement</a></li>
       
@@ -555,95 +557,19 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-zero_sum-2e-core-2e-maxmin_minmax">
-  <header class="definition_thmheading thm-heading">
-    <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Maxmin And Minmax</span>
-    <div class="thm_header_extras">
-      
-      <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
-    </div>
-    <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-zero_sum-2e-core-2e-maxmin_minmax">#</a>
-      
-      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
-      
-      
-    </div>
-  </header>
+<h1>Keyword: redirect</h1>
 
+<div class="blueprint-node-list">
   
-  <div class="modal-container" id="uses-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li><a href="zero_sum_core_player_guarantee.html">Player Guarantee</a></li>
-        
-      </ul>
-    </div>
-  </div>
+  <article class="concept_thmwrapper theorem-style-concept summary-node">
+    <header class="concept_thmheading thm-heading">
+      <span class="concept_thmcaption thm-caption">Concept</span>
+      <a class="concept_thmtitle thm-title" href="../zero_sum/zero_sum_minimax_minimax_theorem.html">Minimax Theorem (merged into Von Neumann Minimax)</a>
+      <span class="badge status-deprecated">deprecated</span>
+    </header>
+  </article>
   
-
-  
-
-  <div class="definition_thmcontent thm-content body">
-    <h1>Maxmin And Minmax</h1>
-<blockquote>
-<p><strong>Scope.</strong> This node is the <strong>abstract / pure-strategy</strong> version: $I$ and $J$
-are arbitrary nonempty strategy sets, and the inner extremum ranges over pure
-strategies. The <strong>finite mixed-strategy</strong> instantiation (with $x \in \Delta(I)$,
-$y \in \Delta(J)$, and Mathlib's <code>Finset.inf'</code> / <code>Finset.sup'</code>) lives in
-<a class="node-ref" data-node-id="zero_sum.maximin_minimax" href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a> and is the one currently formalised.</p>
-</blockquote>
-<p>For a zero-sum game $(I,J,g)$, the maxmin is
-$$
-  \underline v = \sup_{i \in I} \inf_{j \in J} g(i,j),
-$$
-and the minmax is
-$$
-  \overline v = \inf_{j \in J} \sup_{i \in I} g(i,j).
-$$
-The maxmin is the best amount player 1 can guarantee, and the minmax is the
-least amount player 2 can guarantee as an upper bound on player 1's payoff.</p>
-<h2>References</h2>
-<ul>
-<li>[MFoGT, Def. 2.2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Maxmin and minmax of a zero-sum game.</li>
-</ul>
-    
-  </div>
-
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="zero_sum_core_maxmin_le_minmax.html">Maxmin Is At Most Minmax</a></li>
-      
-    </ul>
-  </section>
-  
-
-  
-  <section class="topic-memberships">
-    <h2>Also in</h2>
-    <ul>
-      
-      <li><a href="../zero_sum/index.html">Zero Sum</a></li>
-      
-      <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
-      
-    </ul>
-  </section>
-  
-
-  
-  <footer class="tags">
-    <span class="tag">zero-sum</span><span class="tag">value</span><span class="tag">minmax</span>
-  </footer>
-  
-</article>
+</div>
 
   </main>
   <script src="../graph.js"></script>

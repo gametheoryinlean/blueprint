@@ -263,6 +263,8 @@
       
         <li><a href="../keywords/deferred.html">deferred</a></li>
       
+        <li><a href="../keywords/deprecated.html">deprecated</a></li>
+      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -383,8 +385,6 @@
       
         <li><a href="../keywords/minimax.html">minimax</a></li>
       
-        <li><a href="../keywords/minmax.html">minmax</a></li>
-      
         <li><a href="../keywords/minority-game.html">minority-game</a></li>
       
         <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
@@ -448,6 +448,8 @@
         <li><a href="../keywords/rationality.html">rationality</a></li>
       
         <li><a href="../keywords/rationalizability.html">rationalizability</a></li>
+      
+        <li><a href="../keywords/redirect.html">redirect</a></li>
       
         <li><a href="../keywords/refinement.html">refinement</a></li>
       
@@ -596,11 +598,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L87"><code>MatrixGame.guarantee_I</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L87"><code>MatrixGame.guarantee_I</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c2de143, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ b970030, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -608,11 +610,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L92"><code>MatrixGame.guarantee_II</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L92"><code>MatrixGame.guarantee_II</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c2de143, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ b970030, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -620,11 +622,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L97"><code>MatrixGame.maximin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L97"><code>MatrixGame.maximin</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c2de143, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ b970030, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -632,11 +634,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L102"><code>MatrixGame.minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L102"><code>MatrixGame.minimax</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c2de143, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ b970030, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -660,9 +662,26 @@ largest payoff player I can obtain from a pure row:</p>
 <p>$$\gamma_{II}(y) = \max_{i \in I} E_A(i,y).$$</p>
 <p>The maximin value is \(\sup_x \gamma_I(x)\), and the minimax value is
 \(\inf_y \gamma_{II}(y)\).</p>
+<h2>Abstract pure-strategy form</h2>
+<p>The same definition applies on arbitrary nonempty strategy sets $I, J$ and a
+payoff $g : I \times J \to \mathbb{R}$, with the inner extremum ranging over
+<strong>pure</strong> strategies (no mixing). Then the maxmin is</p>
+<p>$$
+  \underline v = \sup_{i \in I} \inf_{j \in J} g(i,j),
+$$</p>
+<p>and the minmax is</p>
+<p>$$
+  \overline v = \inf_{j \in J} \sup_{i \in I} g(i,j).
+$$</p>
+<p>The maxmin is the best amount player 1 can guarantee, and the minmax is the
+least amount player 2 can guarantee as an upper bound on player 1's payoff.
+The Lean library currently formalises the finite mixed-strategy instantiation
+above; the abstract form is the common conceptual ancestor and the form used
+when reasoning over general (e.g. infinite) strategy spaces.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 2, Definitions 2.2.2-2.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Guarantees, maxmin, minmax, and game value.</li>
+<li>[MFoGT, Def. 2.2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Abstract pure-strategy maxmin and minmax (merged from <code>zero_sum.core.maxmin_minmax</code>).</li>
 </ul>
     
   </div>

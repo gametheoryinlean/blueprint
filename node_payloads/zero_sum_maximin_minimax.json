@@ -9,7 +9,7 @@
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Maximin and Minimax Values</h1>\n<p>For a mixed row strategy $x$, player I's guarantee is the worst expected payoff\nagainst a pure column:</p>\n<p>$$\\gamma_I(x) = \\min_{j \\in J} E_A(x,j).$$</p>\n<p>For a mixed column strategy $y$, player II's guarantee against player I is the\nlargest payoff player I can obtain from a pure row:</p>\n<p>$$\\gamma_{II}(y) = \\max_{i \\in I} E_A(i,y).$$</p>\n<p>The maximin value is \\(\\sup_x \\gamma_I(x)\\), and the minimax value is\n\\(\\inf_y \\gamma_{II}(y)\\).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Definitions 2.2.2-2.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Guarantees, maxmin, minmax, and game value.</li>\n</ul>",
+  "body_html": "<h1>Maximin and Minimax Values</h1>\n<p>For a mixed row strategy $x$, player I's guarantee is the worst expected payoff\nagainst a pure column:</p>\n<p>$$\\gamma_I(x) = \\min_{j \\in J} E_A(x,j).$$</p>\n<p>For a mixed column strategy $y$, player II's guarantee against player I is the\nlargest payoff player I can obtain from a pure row:</p>\n<p>$$\\gamma_{II}(y) = \\max_{i \\in I} E_A(i,y).$$</p>\n<p>The maximin value is \\(\\sup_x \\gamma_I(x)\\), and the minimax value is\n\\(\\inf_y \\gamma_{II}(y)\\).</p>\n<h2>Abstract pure-strategy form</h2>\n<p>The same definition applies on arbitrary nonempty strategy sets $I, J$ and a\npayoff $g : I \\times J \\to \\mathbb{R}$, with the inner extremum ranging over\n<strong>pure</strong> strategies (no mixing). Then the maxmin is</p>\n<p>$$\n  \\underline v = \\sup_{i \\in I} \\inf_{j \\in J} g(i,j),\n$$</p>\n<p>and the minmax is</p>\n<p>$$\n  \\overline v = \\inf_{j \\in J} \\sup_{i \\in I} g(i,j).\n$$</p>\n<p>The maxmin is the best amount player 1 can guarantee, and the minmax is the\nleast amount player 2 can guarantee as an upper bound on player 1's payoff.\nThe Lean library currently formalises the finite mixed-strategy instantiation\nabove; the abstract form is the common conceptual ancestor and the form used\nwhen reasoning over general (e.g. infinite) strategy spaces.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Definitions 2.2.2-2.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Guarantees, maxmin, minmax, and game value.</li>\n<li>[MFoGT, Def. 2.2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Abstract pure-strategy maxmin and minmax (merged from <code>zero_sum.core.maxmin_minmax</code>).</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -57,9 +57,9 @@
       "qualified_name": "MatrixGame.guarantee_I",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "c2de14391da6912f8c5608edefbaf8a5a9ca4550",
-      "short_revision": "c2de143",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L87",
+      "revision": "b9700300c913f22c2e507e68346a5d35ac8aaf2d",
+      "short_revision": "b970030",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L87",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -70,9 +70,9 @@
       "qualified_name": "MatrixGame.guarantee_II",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "c2de14391da6912f8c5608edefbaf8a5a9ca4550",
-      "short_revision": "c2de143",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L92",
+      "revision": "b9700300c913f22c2e507e68346a5d35ac8aaf2d",
+      "short_revision": "b970030",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L92",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -83,9 +83,9 @@
       "qualified_name": "MatrixGame.maximin",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "c2de14391da6912f8c5608edefbaf8a5a9ca4550",
-      "short_revision": "c2de143",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L97",
+      "revision": "b9700300c913f22c2e507e68346a5d35ac8aaf2d",
+      "short_revision": "b970030",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L97",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -96,9 +96,9 @@
       "qualified_name": "MatrixGame.minimax",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "c2de14391da6912f8c5608edefbaf8a5a9ca4550",
-      "short_revision": "c2de143",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c2de14391da6912f8c5608edefbaf8a5a9ca4550/EconCSLib/StrategicGame/Minimax.lean#L102",
+      "revision": "b9700300c913f22c2e507e68346a5d35ac8aaf2d",
+      "short_revision": "b970030",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b9700300c913f22c2e507e68346a5d35ac8aaf2d/EconCSLib/StrategicGame/Minimax.lean#L102",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maxmin Is At Most Minmax — EconCSLib Knowledge Blueprint</title>
+  <title>Minimax Theorem (merged into Von Neumann Minimax) — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -263,6 +263,8 @@
       
         <li><a href="../keywords/deferred.html">deferred</a></li>
       
+        <li><a href="../keywords/deprecated.html">deprecated</a></li>
+      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -383,8 +385,6 @@
       
         <li><a href="../keywords/minimax.html">minimax</a></li>
       
-        <li><a href="../keywords/minmax.html">minmax</a></li>
-      
         <li><a href="../keywords/minority-game.html">minority-game</a></li>
       
         <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
@@ -448,6 +448,8 @@
         <li><a href="../keywords/rationality.html">rationality</a></li>
       
         <li><a href="../keywords/rationalizability.html">rationalizability</a></li>
+      
+        <li><a href="../keywords/redirect.html">redirect</a></li>
       
         <li><a href="../keywords/refinement.html">refinement</a></li>
       
@@ -555,17 +557,17 @@
   </nav>
   <main>
     
-<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-zero_sum-2e-core-2e-maxmin_le_minmax">
-  <header class="lemma_thmheading thm-heading">
-    <span class="lemma_thmcaption thm-caption">Lemma</span>
-    <span class="lemma_thmtitle thm-title">Maxmin Is At Most Minmax</span>
+<article class="concept_thmwrapper theorem-style-concept node-page" id="node-zero_sum-2e-minimax-2e-minimax_theorem">
+  <header class="concept_thmheading thm-heading">
+    <span class="concept_thmcaption thm-caption">Concept</span>
+    <span class="concept_thmtitle thm-title">Minimax Theorem (merged into Von Neumann Minimax)</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge kind-concept">concept</span>
+      <span class="badge status-deprecated">deprecated</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-zero_sum-2e-core-2e-maxmin_le_minmax">#</a>
+      <a class="permalink" href="#node-zero_sum-2e-minimax-2e-minimax_theorem">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -579,7 +581,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="zero_sum_core_maxmin_minmax.html">Maxmin And Minmax</a></li>
+        <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
         
       </ul>
     </div>
@@ -588,45 +590,27 @@
 
   
 
-  <div class="lemma_thmcontent thm-content body">
-    <h1>Maxmin Is At Most Minmax</h1>
+  <div class="concept_thmcontent thm-content body">
+    <h1>Minimax Theorem (merged)</h1>
 <blockquote>
-<p><strong>Scope.</strong> This is the <strong>abstract / pure-strategy</strong> weak duality on arbitrary
-strategy sets. The <strong>finite mixed-strategy</strong> version with
-$\Delta(I), \Delta(J)$ lives in <a class="node-ref" data-node-id="zero_sum.maximin_le_minimax" href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a> and is
-formalised in Lean.</p>
+<p><strong>This node was merged.</strong> The content that used to live at
+<code>zero_sum.minimax.minimax_theorem</code> is now part of
+<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>. See [#51] for the merge rationale.</p>
+<p>If you arrived here from an old bookmark, a saved link, or a cross-document
+reference, please update it to point at <code>zero_sum.von_neumann_minimax</code>.</p>
 </blockquote>
-<p>For every zero-sum game, $\underline v \le \overline v$.</p>
-    
-    <details class="proof-details">
-      <summary>Proof</summary>
-      <div class="proof-body">
-        <p>For every pair $(i,j)$,
-$$
-  \inf_{j' \in J} g(i,j') \le g(i,j) \le \sup_{i' \in I} g(i',j).
-$$
-Taking the supremum over $i$ on the left and the infimum over $j$ on the right
-gives $\underline v \le \overline v$. $\square$</p>
+<p>The Von Neumann minimax theorem for finite two-player zero-sum games is
+formalised in Lean as <code>MatrixGame.minimax_theorem</code> and is documented at
+<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>. The Dantzig ordered-field route that
+used to be cross-listed here is tracked at
+<a class="node-ref" data-node-id="zero_sum.minimax.ordered_field_minimax" href="minimax/zero_sum_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Lem. 2.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Weak duality for maxmin and minmax.</li>
+<li>[MFoGT, Chapter 2, Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Original source of the merged minimax theorem statement.</li>
 </ul>
-      </div>
-    </details>
     
   </div>
 
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="zero_sum_examples_three_player_minimax_failure.html">Three-Player Minimax Failure</a></li>
-      
-      <li><a href="zero_sum_fictitious_play_continuous_fictitious_play_gap.html">Continuous Fictitious Play Closes The Duality Gap</a></li>
-      
-    </ul>
-  </section>
   
 
   
@@ -636,7 +620,7 @@ gives $\underline v \le \overline v$. $\square$</p>
       
       <li><a href="../zero_sum/index.html">Zero Sum</a></li>
       
-      <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      <li><a href="../zero_sum/minimax/index.html">Zero Sum.Minimax</a></li>
       
     </ul>
   </section>
@@ -644,7 +628,7 @@ gives $\underline v \le \overline v$. $\square$</p>
 
   
   <footer class="tags">
-    <span class="tag">zero-sum</span><span class="tag">weak-duality</span><span class="tag">minmax</span>
+    <span class="tag">deprecated</span><span class="tag">redirect</span>
   </footer>
   
 </article>
