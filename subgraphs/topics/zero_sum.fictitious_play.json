@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 4,
     "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 1,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 1,
-    "visible_nodes_without_proof_plans": 6,
-    "visible_nodes_with_selected_proof_plans": 7
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 8
   },
   "nodes": [
     {
@@ -82,6 +82,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependent",
+      "node_count": 136
+    },
+    {
       "id": "zero_sum",
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
@@ -117,6 +124,13 @@
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 2
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "to": "topic:strategic_games",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games",
+      "count": 1
     }
   ],
   "keywords": [

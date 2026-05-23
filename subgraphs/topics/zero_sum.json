@@ -1291,8 +1291,8 @@
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
-      "role": "dependency",
-      "node_count": 135
+      "role": "dependency_and_dependent",
+      "node_count": 136
     },
     {
       "id": "strategic_games.core",
@@ -1371,6 +1371,13 @@
       "to": "topic:linear_algebra",
       "kind": "boundary_dependent",
       "topic": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "to": "topic:strategic_games",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games",
       "count": 1
     },
     {
@@ -2009,8 +2016,8 @@
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
-      "role": "dependency",
-      "node_count": 135
+      "role": "dependency_and_dependent",
+      "node_count": 136
     },
     {
       "id": "strategic_games.core",
@@ -2027,11 +2034,25 @@
       "node_count": 9
     },
     {
+      "id": "strategic_games.dynamics",
+      "title": "Strategic Games.Dynamics",
+      "href": "strategic_games/dynamics/index.html",
+      "role": "dependent",
+      "node_count": 5
+    },
+    {
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency_and_dependent",
       "node_count": 16
+    },
+    {
+      "id": "strategic_games.potential",
+      "title": "Strategic Games.Potential",
+      "href": "strategic_games/potential/index.html",
+      "role": "dependent",
+      "node_count": 3
     },
     {
       "id": "strategic_games.repeated",
@@ -2120,6 +2141,13 @@
       "count": 3
     },
     {
+      "from": "topic:zero_sum.fictitious_play",
+      "to": "topic:strategic_games",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
       "from": "topic:zero_sum.core",
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependent",
@@ -2131,6 +2159,13 @@
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependent",
       "topic": "strategic_games.dominance",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.fictitious_play",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.dynamics",
       "count": 1
     },
     {
@@ -2146,6 +2181,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
       "count": 3
+    },
+    {
+      "from": "topic:zero_sum.fictitious_play",
+      "to": "topic:strategic_games.potential",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.potential",
+      "count": 1
     },
     {
       "from": "topic:zero_sum.core",

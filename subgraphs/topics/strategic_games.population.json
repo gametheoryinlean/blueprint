@@ -62,8 +62,8 @@
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
-      "role": "dependency",
-      "node_count": 135
+      "role": "dependency_and_dependent",
+      "node_count": 136
     }
   ],
   "boundary_edges": [
@@ -71,6 +71,13 @@
       "from": "topic:strategic_games",
       "to": "strategic_games.population.population_game",
       "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.population.population_game",
+      "to": "topic:strategic_games",
+      "kind": "boundary_dependent",
       "topic": "strategic_games",
       "count": 1
     }

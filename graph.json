@@ -2899,6 +2899,32 @@
       ]
     },
     {
+      "id": "strategic_games.dynamics.stable_game_framework",
+      "title": "Stable Game Framework (Hofbauer–Sandholm)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "dynamics",
+        "potential-game",
+        "zero-sum",
+        "lyapunov",
+        "deferred"
+      ],
+      "primary_topic": "strategic_games",
+      "topics": [
+        "strategic_games",
+        "strategic_games.dynamics",
+        "strategic_games.potential"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.population.population_game",
+        "strategic_games.potential.potential_game",
+        "zero_sum.fictitious_play.fictitious_play_convergence"
+      ]
+    },
+    {
       "id": "strategic_games.equilibrium.common_knowledge_equilibrium_filtering",
       "title": "Common Knowledge Can Filter Nash Equilibria",
       "kind": "example",
@@ -3538,6 +3564,7 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
+        "strategic_games.dynamics.stable_game_framework",
         "strategic_games.population.wardrop_equilibrium"
       ]
     },
@@ -3593,6 +3620,7 @@
       ],
       "used_by": [
         "strategic_games.dynamics.potential_replicator_lyapunov",
+        "strategic_games.dynamics.stable_game_framework",
         "strategic_games.potential.potential_maximizer_nash"
       ]
     },
@@ -5686,6 +5714,9 @@
         "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.value",
         "zero_sum.fictitious_play.fictitious_play"
+      ],
+      "used_by": [
+        "strategic_games.dynamics.stable_game_framework"
       ]
     },
     {
@@ -7419,6 +7450,18 @@
     {
       "from": "strategic_games.dynamics.replicator_dynamics",
       "to": "strategic_games.core.symmetric_game"
+    },
+    {
+      "from": "strategic_games.dynamics.stable_game_framework",
+      "to": "strategic_games.population.population_game"
+    },
+    {
+      "from": "strategic_games.dynamics.stable_game_framework",
+      "to": "strategic_games.potential.potential_game"
+    },
+    {
+      "from": "strategic_games.dynamics.stable_game_framework",
+      "to": "zero_sum.fictitious_play.fictitious_play_convergence"
     },
     {
       "from": "strategic_games.equilibrium.common_knowledge_equilibrium_filtering",

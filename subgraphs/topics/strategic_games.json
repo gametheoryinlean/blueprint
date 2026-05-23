@@ -4,20 +4,20 @@
     "title": "Strategic Games",
     "href": "strategic_games/index.html",
     "parent": null,
-    "node_count": 10,
-    "descendant_node_count": 135
+    "node_count": 11,
+    "descendant_node_count": 136
   },
   "counts": {
-    "internal_nodes": 10,
-    "descendant_nodes": 135,
+    "internal_nodes": 11,
+    "descendant_nodes": 136,
     "child_topics": 16,
-    "non_proof_plan_nodes": 10,
+    "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 17,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 28,
-    "visible_nodes_with_selected_proof_plans": 28
+    "visible_nodes_without_proof_plans": 29,
+    "visible_nodes_with_selected_proof_plans": 29
   },
   "nodes": [
     {
@@ -35,6 +35,14 @@
       "status": "admitted",
       "href": "strategic_games/strategic_games_dominant_implies_nash.html",
       "payload": "node_payloads/strategic_games_dominant_implies_nash.json"
+    },
+    {
+      "id": "strategic_games.dynamics.stable_game_framework",
+      "title": "Stable Game Framework (Hofbauer–Sandholm)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "strategic_games/strategic_games_dynamics_stable_game_framework.html",
+      "payload": "node_payloads/strategic_games_dynamics_stable_game_framework.json"
     },
     {
       "id": "strategic_games.nash_equilibrium",
@@ -257,15 +265,15 @@
       "id": "strategic_games.population",
       "title": "Strategic Games.Population",
       "href": "strategic_games/population/index.html",
-      "role": "dependent",
+      "role": "dependency_and_dependent",
       "node_count": 3
     },
     {
       "id": "strategic_games.potential",
       "title": "Strategic Games.Potential",
       "href": "strategic_games/potential/index.html",
-      "role": "dependent",
-      "node_count": 2
+      "role": "dependency_and_dependent",
+      "node_count": 3
     },
     {
       "id": "strategic_games.refinements",
@@ -285,11 +293,32 @@
       "id": "zero_sum",
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
-      "role": "dependent",
+      "role": "dependency_and_dependent",
       "node_count": 75
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:strategic_games.population",
+      "to": "strategic_games.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.population",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.potential",
+      "to": "strategic_games.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.potential",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "strategic_games.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
     {
       "from": "strategic_games.best_response",
       "to": "topic:extensive_game.equilibrium",
@@ -558,10 +587,22 @@
       "count": 1
     },
     {
+      "id": "deferred",
+      "title": "deferred",
+      "href": "keywords/deferred.html",
+      "count": 1
+    },
+    {
       "id": "dominance",
       "title": "dominance",
       "href": "keywords/dominance.html",
       "count": 4
+    },
+    {
+      "id": "dynamics",
+      "title": "dynamics",
+      "href": "keywords/dynamics.html",
+      "count": 1
     },
     {
       "id": "equilibrium",
@@ -582,6 +623,18 @@
       "count": 3
     },
     {
+      "id": "lyapunov",
+      "title": "lyapunov",
+      "href": "keywords/lyapunov.html",
+      "count": 1
+    },
+    {
+      "id": "potential-game",
+      "title": "potential-game",
+      "href": "keywords/potential-game.html",
+      "count": 1
+    },
+    {
       "id": "solution-concept",
       "title": "solution-concept",
       "href": "keywords/solution-concept.html",
@@ -591,7 +644,13 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 10
+      "count": 11
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],
@@ -707,14 +766,14 @@
       "title": "Strategic Games.Dynamics",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
         "definition": 3,
-        "theorem": 1
+        "theorem": 2
       },
       "status_counts": {
-        "staged": 4
+        "staged": 5
       },
       "href": "strategic_games/dynamics/index.html",
       "children": []
@@ -830,14 +889,14 @@
       "title": "Strategic Games.Potential",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 2,
-      "direct_node_count": 2,
+      "node_count": 3,
+      "direct_node_count": 3,
       "kind_counts": {
         "definition": 1,
-        "theorem": 1
+        "theorem": 2
       },
       "status_counts": {
-        "staged": 2
+        "staged": 3
       },
       "href": "strategic_games/potential/index.html",
       "children": []
@@ -1035,10 +1094,22 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.potential",
+      "from": "topic:strategic_games.population",
       "to": "topic:strategic_games.dynamics",
       "kind": "topic_dependency",
       "count": 1
+    },
+    {
+      "from": "topic:strategic_games.population",
+      "to": "topic:strategic_games.potential",
+      "kind": "topic_dependency",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.potential",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "topic_dependency",
+      "count": 2
     },
     {
       "from": "topic:strategic_games.refinements",
@@ -1116,6 +1187,13 @@
       "href": "zero_sum/core/index.html",
       "role": "dependency_and_dependent",
       "node_count": 24
+    },
+    {
+      "id": "zero_sum.fictitious_play",
+      "title": "Zero Sum.Fictitious Play",
+      "href": "zero_sum/fictitious_play/index.html",
+      "role": "dependency",
+      "node_count": 5
     },
     {
       "id": "zero_sum.minimax",
@@ -1198,10 +1276,24 @@
     },
     {
       "from": "topic:zero_sum",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 7
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:strategic_games.potential",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
     },
     {
       "from": "topic:zero_sum",
@@ -1230,6 +1322,20 @@
       "kind": "boundary_dependency",
       "topic": "zero_sum.core",
       "count": 2
+    },
+    {
+      "from": "topic:zero_sum.fictitious_play",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.fictitious_play",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.fictitious_play",
+      "to": "topic:strategic_games.potential",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.fictitious_play",
+      "count": 1
     },
     {
       "from": "topic:zero_sum.minimax",

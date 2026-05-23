@@ -4,20 +4,20 @@
     "title": "Strategic Games.Dynamics",
     "href": "strategic_games/dynamics/index.html",
     "parent": "strategic_games",
-    "node_count": 4,
-    "descendant_node_count": 4
+    "node_count": 5,
+    "descendant_node_count": 5
   },
   "counts": {
-    "internal_nodes": 4,
-    "descendant_nodes": 4,
+    "internal_nodes": 5,
+    "descendant_nodes": 5,
     "child_topics": 0,
-    "non_proof_plan_nodes": 4,
+    "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 7,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 13,
+    "visible_nodes_with_selected_proof_plans": 13
   },
   "nodes": [
     {
@@ -51,6 +51,14 @@
       "status": "staged",
       "href": "strategic_games/dynamics/strategic_games_dynamics_replicator_dynamics.html",
       "payload": "node_payloads/strategic_games_dynamics_replicator_dynamics.json"
+    },
+    {
+      "id": "strategic_games.dynamics.stable_game_framework",
+      "title": "Stable Game Framework (Hofbauer–Sandholm)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "strategic_games/strategic_games_dynamics_stable_game_framework.html",
+      "payload": "node_payloads/strategic_games_dynamics_stable_game_framework.json"
     }
   ],
   "edges": [
@@ -83,11 +91,18 @@
       "node_count": 3
     },
     {
+      "id": "strategic_games.population",
+      "title": "Strategic Games.Population",
+      "href": "strategic_games/population/index.html",
+      "role": "dependency",
+      "node_count": 3
+    },
+    {
       "id": "strategic_games.potential",
       "title": "Strategic Games.Potential",
       "href": "strategic_games/potential/index.html",
       "role": "dependency",
-      "node_count": 2
+      "node_count": 3
     },
     {
       "id": "strategic_games.variational",
@@ -95,6 +110,13 @@
       "href": "strategic_games/variational/index.html",
       "role": "dependency",
       "node_count": 1
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 75
     }
   ],
   "boundary_edges": [
@@ -113,8 +135,22 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games.population",
+      "to": "strategic_games.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.population",
+      "count": 1
+    },
+    {
       "from": "topic:strategic_games.potential",
       "to": "strategic_games.dynamics.potential_replicator_lyapunov",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.potential",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.potential",
+      "to": "strategic_games.dynamics.stable_game_framework",
       "kind": "boundary_dependency",
       "topic": "strategic_games.potential",
       "count": 1
@@ -127,6 +163,13 @@
       "count": 1
     },
     {
+      "from": "topic:zero_sum",
+      "to": "strategic_games.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
       "from": "strategic_games.dynamics.replicator_dynamics",
       "to": "topic:strategic_games.evolution",
       "kind": "boundary_dependent",
@@ -136,15 +179,27 @@
   ],
   "keywords": [
     {
+      "id": "deferred",
+      "title": "deferred",
+      "href": "keywords/deferred.html",
+      "count": 1
+    },
+    {
       "id": "dynamics",
       "title": "dynamics",
       "href": "keywords/dynamics.html",
-      "count": 4
+      "count": 5
     },
     {
       "id": "evolution",
       "title": "evolution",
       "href": "keywords/evolution.html",
+      "count": 1
+    },
+    {
+      "id": "lyapunov",
+      "title": "lyapunov",
+      "href": "keywords/lyapunov.html",
       "count": 1
     },
     {
@@ -157,13 +212,19 @@
       "id": "potential-game",
       "title": "potential-game",
       "href": "keywords/potential-game.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 4
+      "count": 5
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],
