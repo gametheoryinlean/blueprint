@@ -347,8 +347,6 @@
       
         <li><a href="../keywords/individual-rationality.html">individual-rationality</a></li>
       
-        <li><a href="../keywords/induction.html">induction</a></li>
-      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/invariance.html">invariance</a></li>
@@ -594,14 +592,15 @@ column vectors indexed by $I$. Thus the first inequality says that player 1's
 mixed row $x$ guarantees the ratio level $v$ against every column, and the
 second inequality says that player 2's mixed column $y$ caps the same ratio
 level against every row.</p>
-<p>MFoGT presents Loomis as an extension of von Neumann's minimax theorem. One
-proof route derives it from the finite minimax theorem by considering
-$t\mapsto\operatorname{val}(A-tB)$. The canonical natural-language blueprint
-route for finite minimax uses the independent induction proof recorded in the
-separate Loomis induction proof-plan node, so this theorem is not made dependent
-on finite minimax in the DAG.</p>
-<p>Taking $B$ to be the all-ones matrix recovers von Neumann minimax, because
-$xB$ and $By$ are both all-ones vectors for probability vectors $x$ and $y$.</p>
+<p>MFoGT presents Loomis as an extension of von Neumann's minimax theorem. The
+canonical blueprint route in this library is the opposite: Loomis is proved
+directly by induction on $|I|+|J|$ (see the proof-plan
+<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof" href="minimax/zero_sum_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>), and finite minimax is then
+obtained as the $B=\mathbf{1}$ specialisation
+(<a class="node-ref" data-node-id="zero_sum.minimax.minimax_from_loomis" href="minimax/zero_sum_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a>), because $xB$ and $By$ are both
+all-ones vectors for probability vectors $x$ and $y$. The alternative
+$t\mapsto\operatorname{val}(A-tB)$ route, which would derive Loomis from finite
+minimax, is therefore not used here.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -635,6 +634,8 @@ attaining strategies satisfy $xA\ge vxB$ and $Ay\le vBy$.</p>
     <ul>
       
       <li><a href="../linear_algebra/linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a></li>
+      
+      <li><a href="zero_sum_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a></li>
       
     </ul>
   </section>

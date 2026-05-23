@@ -11,12 +11,12 @@
     "internal_nodes": 18,
     "descendant_nodes": 18,
     "child_topics": 0,
-    "non_proof_plan_nodes": 11,
-    "proof_plan_nodes": 7,
-    "selected_proof_plan_nodes": 4,
+    "non_proof_plan_nodes": 10,
+    "proof_plan_nodes": 8,
+    "selected_proof_plan_nodes": 5,
     "boundary_topics": 4,
-    "proof_plan_attachments": 8,
-    "visible_nodes_without_proof_plans": 16,
+    "proof_plan_attachments": 9,
+    "visible_nodes_without_proof_plans": 15,
     "visible_nodes_with_selected_proof_plans": 20
   },
   "nodes": [
@@ -112,11 +112,13 @@
     },
     {
       "id": "zero_sum.minimax.minimax_from_loomis",
-      "title": "Minimax Theorem by Simplified Loomis Induction",
-      "kind": "theorem",
+      "title": "Minimax via the All-Ones Specialization of Loomis",
+      "kind": "proof-plan",
       "status": "formalized",
       "href": "zero_sum/zero_sum_minimax_minimax_from_loomis.html",
-      "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json"
+      "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json",
+      "target": "zero_sum.von_neumann_minimax",
+      "plan_status": "selected"
     },
     {
       "id": "zero_sum.minimax.minimax_theorem",
@@ -198,12 +200,22 @@
     {
       "from": "zero_sum.lam_mu_existence",
       "to": "zero_sum.minimax.minimax_from_loomis",
-      "kind": "uses"
+      "kind": "proof_plan_uses"
     },
     {
       "from": "zero_sum.loomis_route_compactness",
       "to": "zero_sum.minimax.minimax_from_loomis",
-      "kind": "uses"
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_theorem",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "proof_plan_uses"
     },
     {
       "from": "zero_sum.von_neumann_minimax",
@@ -234,26 +246,6 @@
       "from": "zero_sum.dantzig_proof_spine",
       "to": "zero_sum.simplex_termination",
       "kind": "proof_plan_uses"
-    },
-    {
-      "from": "zero_sum.lam_mu_existence",
-      "to": "zero_sum.von_neumann_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.loomis_route_compactness",
-      "to": "zero_sum.von_neumann_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.maximin_le_minimax",
-      "to": "zero_sum.von_neumann_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.minimax.minimax_from_loomis",
-      "to": "zero_sum.von_neumann_minimax",
-      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -311,13 +303,6 @@
     {
       "from": "topic:zero_sum",
       "to": "zero_sum.maximin_le_minimax",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.minimax.minimax_from_loomis",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 1
@@ -436,12 +421,6 @@
       "count": 1
     },
     {
-      "id": "induction",
-      "title": "induction",
-      "href": "keywords/induction.html",
-      "count": 1
-    },
-    {
       "id": "invariant-distribution",
       "title": "invariant-distribution",
       "href": "keywords/invariant-distribution.html",
@@ -499,7 +478,7 @@
       "id": "proof-plan",
       "title": "proof-plan",
       "href": "keywords/proof-plan.html",
-      "count": 6
+      "count": 7
     },
     {
       "id": "redirect",
@@ -590,6 +569,12 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
+      "kind": "has_plan",
+      "plan_status": "selected"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.minimax.minimax_from_loomis",
       "kind": "has_plan",
       "plan_status": "selected"
     },

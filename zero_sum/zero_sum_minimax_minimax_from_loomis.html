@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimax Theorem by Simplified Loomis Induction — EconCSLib Knowledge Blueprint</title>
+  <title>Minimax via the All-Ones Specialization of Loomis — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -347,8 +347,6 @@
       
         <li><a href="../keywords/individual-rationality.html">individual-rationality</a></li>
       
-        <li><a href="../keywords/induction.html">induction</a></li>
-      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/invariance.html">invariance</a></li>
@@ -557,13 +555,13 @@
   </nav>
   <main>
     
-<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-zero_sum-2e-minimax-2e-minimax_from_loomis">
-  <header class="theorem_thmheading thm-heading">
-    <span class="theorem_thmcaption thm-caption">Theorem</span>
-    <span class="theorem_thmtitle thm-title">Minimax Theorem by Simplified Loomis Induction</span>
+<article class="proof-plan_thmwrapper theorem-style-proof-plan node-page" id="node-zero_sum-2e-minimax-2e-minimax_from_loomis">
+  <header class="proof-plan_thmheading thm-heading">
+    <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
+    <span class="proof-plan_thmtitle thm-title">Minimax via the All-Ones Specialization of Loomis</span>
     <div class="thm_header_extras">
       <span class="checkmark">✓</span>
-      <span class="badge kind-theorem">theorem</span>
+      <span class="badge kind-proof-plan">proof-plan</span>
       <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
@@ -583,11 +581,13 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
+        <li><a href="zero_sum_minimax_loomis_theorem.html">Loomis Theorem</a></li>
+        
+        <li><a href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a></li>
+        
         <li><a href="zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a></li>
         
         <li><a href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a></li>
-        
-        <li><a href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
         
       </ul>
     </div>
@@ -602,11 +602,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L202"><code>MinimaxLoomis.Interval</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L202"><code>MinimaxLoomis.Interval</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -614,11 +614,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L211"><code>MinimaxLoomis.linear_comb</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L211"><code>MinimaxLoomis.linear_comb</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -626,11 +626,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L228"><code>MinimaxLoomis.wsum_comb_eq_comb_wsum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L228"><code>MinimaxLoomis.wsum_comb_eq_comb_wsum</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -638,11 +638,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L253"><code>MinimaxLoomis.linear_comb_gt_of_ge_gt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L253"><code>MinimaxLoomis.linear_comb_gt_of_ge_gt</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -650,11 +650,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L261"><code>MinimaxLoomis.linear_comb_lt_of_le_lt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L261"><code>MinimaxLoomis.linear_comb_lt_of_le_lt</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -662,11 +662,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L269"><code>MinimaxLoomis.wsum_linear_comb_gt_of_ge_gt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L269"><code>MinimaxLoomis.wsum_linear_comb_gt_of_ge_gt</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -674,11 +674,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L277"><code>MinimaxLoomis.wsum_linear_comb_lt_of_le_lt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L277"><code>MinimaxLoomis.wsum_linear_comb_lt_of_le_lt</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -686,11 +686,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L293"><code>MinimaxLoomis.ContinuousAt_gt_of_gt_nbh</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L293"><code>MinimaxLoomis.ContinuousAt_gt_of_gt_nbh</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -698,11 +698,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L307"><code>MinimaxLoomis.ContinuousAt_lt_of_lt_nbh</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L307"><code>MinimaxLoomis.ContinuousAt_lt_of_lt_nbh</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -710,11 +710,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L322"><code>MinimaxLoomis.linear_comb_gt_of_gt_nbh&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L322"><code>MinimaxLoomis.linear_comb_gt_of_gt_nbh&#39;</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -722,11 +722,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L333"><code>MinimaxLoomis.linear_comb_lt_of_lt_nbh&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L333"><code>MinimaxLoomis.linear_comb_lt_of_lt_nbh&#39;</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -734,11 +734,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L347"><code>MinimaxLoomis.singleton_of_card_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L347"><code>MinimaxLoomis.singleton_of_card_one</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -746,11 +746,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L354"><code>MinimaxLoomis.minmax&#39;_IJ_2</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L354"><code>MinimaxLoomis.minmax&#39;_IJ_2</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -758,11 +758,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L392"><code>MinimaxLoomis.dropEquiv</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L392"><code>MinimaxLoomis.dropEquiv</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -770,11 +770,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L402"><code>MinimaxLoomis.sum_split_at</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L402"><code>MinimaxLoomis.sum_split_at</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -782,11 +782,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L413"><code>MinimaxLoomis.extendDropColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L413"><code>MinimaxLoomis.extendDropColumn</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -794,11 +794,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L431"><code>MinimaxLoomis.extendDropRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L431"><code>MinimaxLoomis.extendDropRow</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -806,11 +806,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L438"><code>MinimaxLoomis.wsum_extendDropColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L438"><code>MinimaxLoomis.wsum_extendDropColumn</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -818,11 +818,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L455"><code>MinimaxLoomis.wsum_extendDropRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L455"><code>MinimaxLoomis.wsum_extendDropRow</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -830,11 +830,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L465"><code>MinimaxLoomis.minmax&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L465"><code>MinimaxLoomis.minmax&#39;</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -842,11 +842,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/e10003041201bb829ef95eafb8b22e76c541287a/EconCSLib/StrategicGame/MinimaxLoomis.lean#L676"><code>MinimaxLoomis.minmax_theorem&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/bc8f17670038653a5d13f9912fb69f68a53e76b4/EconCSLib/StrategicGame/MinimaxLoomis.lean#L676"><code>MinimaxLoomis.minmax_theorem&#39;</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ e100030, EconCSLib.StrategicGame.MinimaxLoomis
+            EconCSLib @ bc8f176, EconCSLib.StrategicGame.MinimaxLoomis
           </span>
           
           
@@ -860,62 +860,55 @@
   </div>
   
 
-  <div class="theorem_thmcontent thm-content body">
-    <h1>Minimax Theorem by Simplified Loomis Induction</h1>
-<p><em>Statement.</em> For every finite matrix game $A : I \times J \to \mathbb{R}$ with
-$|I|, |J| \ge 1$, the maxmin and minmax values coincide:
+  <div class="proof-plan_thmcontent thm-content body">
+    <h1>Minimax via the All-Ones Specialization of Loomis</h1>
+<p>This proof-plan node records the <strong>selected</strong> route the library uses to close
+the finite von Neumann minimax theorem
+(<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>): take the Loomis theorem
+(<a class="node-ref" data-node-id="zero_sum.minimax.loomis_theorem" href="minimax/zero_sum_minimax_loomis_theorem.html">Loomis Theorem</a>) and specialise the positive matrix
+$B$ to the all-ones matrix $\mathbf{1}$. An alternative, ordered-field-generic
+route via Dantzig pivots is recorded in
+<a class="node-ref" data-node-id="zero_sum.dantzig_proof_spine" href="zero_sum_dantzig_proof_spine.html">Dantzig Proof Spine for Minimax (Ordered-Field Route)</a> (still has an open
+simplex-termination step).</p>
+<p><em>Proof (specialization of Loomis).</em> Apply the Loomis theorem
+<a class="node-ref" data-node-id="zero_sum.minimax.loomis_theorem" href="minimax/zero_sum_minimax_loomis_theorem.html">Loomis Theorem</a> with the positive matrix
+$B = \mathbf{1}$ (the all-ones $I \times J$ matrix). It produces
+$x \in \Delta(I)$, $y \in \Delta(J)$, and $v \in \mathbb{R}$ with
 $$
-  \lambda_0 = \sup_{x \in \Delta(I)} \min_{j \in J} \sum_i x_i A(i,j)
-            = \inf_{y \in \Delta(J)} \max_{i \in I} \sum_j y_j A(i,j) = \mu_0.
-$$</p>
-<p>This node records the <strong>simplified Loomis</strong> proof actually used in the Lean
-formalisation, which works <strong>directly</strong> on $A$ (no separate $B$) and induces on
-$n = |I| + |J|$.  The general (positive $B$) Loomis theorem is held in
-<a class="node-ref" data-node-id="zero_sum.minimax.loomis_theorem" href="minimax/zero_sum_minimax_loomis_theorem.html">Loomis Theorem</a> as future work.</p>
-    
-    <details class="proof-details">
-      <summary>Proof</summary>
-      <div class="proof-body">
-        <p>Strong induction on $n = |I| + |J|$, starting at $n = 2$.</p>
-<p><strong>Base case</strong> $|I| = |J| = 1$. Both $\lambda_0$ and $\mu_0$ collapse to the
-unique payoff entry, so they coincide.</p>
-<p><strong>Inductive step.</strong> Assume the claim for all smaller dimensions. By the weak
-duality established in <a class="node-ref" data-node-id="zero_sum.lam_mu_existence" href="zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a> we already have
-$\lambda_0 \le \mu_0$; suppose strictly $\lambda_0 &lt; \mu_0$ for contradiction.
-Pick optimisers $x^\ast, y^\ast$ from the same node.</p>
-<p>A short averaging argument shows that strict inequality forces <em>either</em> some
-column $j_0$ with $\sum_i x^\ast_i A(i, j_0) &gt; \lambda_0$, <em>or</em> some row $i_0$
-with $\sum_j y^\ast_j A(i_0, j) &lt; \mu_0$. By symmetry we handle the column
-case.</p>
-<p>The smaller matrix game $A'$ obtained by dropping column $j_0$ has total
-dimension $n - 1$, so the induction hypothesis gives $\lambda_0(A') = \mu_0(A')$.
-Extending column strategies on $J' = \{j \ne j_0\}$ to $J$ by putting zero mass
-on $j_0$ shows $\mu_0(A) \le \mu_0(A')$, hence $\lambda_0(A) &lt; \lambda_0(A')$.
-Let $x'$ be the inductive optimiser on $A'$. Continuity (from
-<a class="node-ref" data-node-id="zero_sum.loomis_route_compactness" href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a>) lets us pick a strict convex
-combination $t \cdot x^\ast + (1-t) \cdot x'$ that still beats $\lambda_0(A)$
-at every column — including $j_0$ thanks to the open neighborhood around
-$x^\ast$ where $x^\ast \cdot A(\cdot, j_0) &gt; \lambda_0$. This contradicts the
-maximality of $\lambda_0(A)$.</p>
-<p>The row case is symmetric. Hence $\lambda_0 = \mu_0$.</p>
+  xA \ge v \cdot xB \qquad\text{and}\qquad Ay \le v \cdot By.
+$$
+For every probability vector $x \in \Delta(I)$ and $y \in \Delta(J)$ the
+all-ones vectors $xB$ and $By$ are identically $1$. Hence the Loomis
+inequalities collapse to
+$$
+  \sum_i x_i A(i, j) \ge v \quad\text{for every } j \in J,
+  \qquad
+  \sum_j y_j A(i, j) \le v \quad\text{for every } i \in I.
+$$
+The first inequality says $x$ guarantees at least $v$ for player I, so
+$\lambda_0 \ge v$; the second says $y$ holds player I to at most $v$, so
+$\mu_0 \le v$. Weak duality $\lambda_0 \le \mu_0$
+(<a class="node-ref" data-node-id="zero_sum.maximin_le_minimax" href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a>) closes the sandwich:
+$\lambda_0 = \mu_0 = v$, with $(x, y)$ the asserted optimisers.</p>
+<p><em>Lean implementation note.</em> The Lean development closes this statement by
+inlining the $B = \mathbf{1}$ specialisation of the Loomis induction
+<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof" href="minimax/zero_sum_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>: it carries out the strong
+induction on $|I| + |J|$ directly against $A$ (the $xB$ and $By$ factors
+become the constant $1$, removing the need for any positive-$B$ machinery).
+The compactness/continuity scaffold lives in
+<a class="node-ref" data-node-id="zero_sum.loomis_route_compactness" href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a> and the existence + weak-duality
+step in <a class="node-ref" data-node-id="zero_sum.lam_mu_existence" href="zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a>; the induction step then mirrors
+the general Loomis argument with $B$ erased. This route lets the library
+close finite minimax in Lean before formalising the general positive-$B$
+Loomis statement.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Chapter 2, Section 2.3, Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Simplified Loomis induction proof of the finite von Neumann minimax theorem.</li>
+<li>[MFoGT, Chapter 2, Section 2.3, Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite von Neumann minimax theorem.</li>
+<li>[MFoGT, Thm. 2.5.1] Same. Loomis theorem; minimax is the $B = \mathbf{1}$ specialisation.</li>
 </ul>
-      </div>
-    </details>
     
   </div>
 
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
-      
-    </ul>
-  </section>
   
 
   
@@ -933,7 +926,7 @@ maximality of $\lambda_0(A)$.</p>
 
   
   <footer class="tags">
-    <span class="tag">zero-sum</span><span class="tag">minimax</span><span class="tag">loomis</span><span class="tag">induction</span>
+    <span class="tag">zero-sum</span><span class="tag">minimax</span><span class="tag">loomis</span><span class="tag">proof-plan</span>
   </footer>
   
 </article>
