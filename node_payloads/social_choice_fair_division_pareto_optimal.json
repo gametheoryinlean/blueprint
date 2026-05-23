@@ -1,0 +1,49 @@
+{
+  "id": "social_choice.fair_division.pareto_optimal",
+  "title": "Pareto Optimal Allocation",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_pareto_optimal.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.core"
+  ],
+  "body_html": "<h1>Pareto Optimal Allocation</h1>\n<p>For a feasibility predicate $F : \\mathrm{Allocation}\\ N\\ S \\to \\mathrm{Prop}$,\na utility profile $u : N \\to S \\to \\mathbb{R}$, and an allocation $A$\n([[social_choice.fair_division.allocation]]), $A$ is <em>Pareto optimal</em> (PO)\nif no feasible allocation weakly Pareto-improves on it with at least one\nstrict improvement:\n$$\n\\neg \\exists B,\\ F(B) \\;\\wedge\\;\n\\bigl(\\forall i,\\ u_i(A(i)) \\le u_i(B(i))\\bigr) \\;\\wedge\\;\n\\bigl(\\exists i,\\ u_i(A(i)) &lt; u_i(B(i))\\bigr).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.IsParetoOptimal</code>. The feasibility\npredicate is a plain hypothesis (rather than being baked into a class),\nso the same definition applies to divisible and indivisible\nspecializations\n([[social_choice.fair_division.indivisible.pareto_optimal]]).</p>\n<p>PO is the classical efficiency yardstick: it asks only that no other\nfeasible allocation can make every agent at least as well off and someone\nstrictly better off.</p>\n<p>In the indivisible-goods setting, the combination <em>EF1 + PO</em> always\nexists via the <em>maximum Nash welfare</em> allocation\n(Caragiannis–Kurokawa–Moulin–Procaccia–Shah–Wang 2019) and (with a\ndifferent output) via <em>envy-cycle elimination</em>\n([[social_choice.fair_division.indivisible.envy_cycle_algorithm]]).</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Pareto optimality in fair division.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.allocation",
+      "title": "Allocation",
+      "href": "social_choice/social_choice_fair_division_allocation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.cardinal_instance_wrappers",
+      "title": "Cardinal-Instance Fairness and Welfare Wrappers",
+      "href": "social_choice/social_choice_fair_division_cardinal_instance_wrappers.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.pareto_optimal",
+      "title": "Indivisible Pareto Optimal",
+      "href": "social_choice/social_choice_fair_division_indivisible_pareto_optimal.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.IsParetoOptimal",
+      "display_name": "SocialChoice.FairDivision.IsParetoOptimal",
+      "qualified_name": "SocialChoice.FairDivision.IsParetoOptimal",
+      "module": "EconCSLib.SocialChoice.FairDivision.Fairness",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L37",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

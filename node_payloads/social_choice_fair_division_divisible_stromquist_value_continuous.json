@@ -1,0 +1,68 @@
+{
+  "id": "social_choice.fair_division.divisible.stromquist_value_continuous",
+  "title": "Piece-Value Function Is Continuous on the Division Simplex",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_divisible_stromquist_value_continuous.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.divisible",
+    "social_choice.fair_division.divisible.stromquist"
+  ],
+  "body_html": "<h1>Piece-Value Function Is Continuous on the Division Simplex</h1>\n<p>For each agent $j$ and piece index $i$, the <em>piece-value function</em>\nassigns to a simplex point $x$ the value agent $j$ places on the $i$-th\npiece at division $x$:\n$$\nv(x, j, i) \\;=\\; \\mu_j\\bigl(\\mathrm{piece}(x, i)\\bigr).\n$$</p>\n<p>In Lean: <code>strom_value</code>.</p>\n<p><strong>Lemma.</strong> For each fixed $(j, i)$, $x \\mapsto v(x, j, i)$ is continuous\non $\\mathrm{Fin}\\ n \\to \\mathbb{R}$.</p>\n<p>In Lean: <code>strom_value_continuous</code>.</p>",
+  "proof_html": "<p>sketch</p>\n<p>The $i$-th piece is a half-open interval whose endpoints are continuous\nlinear functions of $x$ (the partial sums $\\sum_{j &lt; i} x_j$ and\n$\\sum_{j \\le i} x_j$). Composing with the homeomorphism $\\varphi$ yields\nhalf-open intervals in $\\mathbb{R}$ whose endpoints depend continuously\non $x$.</p>\n<p>The CDF $t \\mapsto \\mu_j((-\\infty, t])$ for the finite non-atomic measure\n$\\mu_j$ (pushed to $\\mathbb{R}$ if needed) is continuous\n([[social_choice.fair_division.divisible.cdf_continuous]]). The value of\n$\\mu_j$ on a half-open interval is the difference of two CDF values at\nthe endpoints, hence continuous in $x$.</p>\n<h2>Where this is used</h2>\n<p>Continuity of $v$ is what makes the <em>preference sets</em>\n([[social_choice.fair_division.divisible.stromquist_preference_sets]])\nclosed and the <em>unique-preference sets</em>\n([[social_choice.fair_division.divisible.stromquist_unique_preference_sets]])\nopen — the two topological inputs to the KKM lemma in Stromquist's\nproof. Non-atomicity of $\\mu_j$ enters here through <code>cdfRealContinuous</code>.</p>\n<h2>References</h2>\n<ul>\n<li>Stromquist, W. (1980). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 87: 640–644.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "social_choice.fair_division.divisible.stromquist_pieces",
+      "title": "Stromquist Pieces from the Division Simplex",
+      "href": "social_choice/social_choice_fair_division_divisible_stromquist_pieces.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.cdf_continuous",
+      "title": "CDF of a Non-Atomic Finite Measure on ℝ Is Continuous",
+      "href": "social_choice/social_choice_fair_division_divisible_cdf_continuous.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.divisible.stromquist_preference_sets",
+      "title": "Stromquist Preference Sets A(i, j)",
+      "href": "social_choice/social_choice_fair_division_divisible_stromquist_preference_sets.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.stromquist_unique_preference_sets",
+      "title": "Stromquist Unique-Preference Sets B(i, j)",
+      "href": "social_choice/social_choice_fair_division_divisible_stromquist_unique_preference_sets.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Divisible.strom_value",
+      "display_name": "SocialChoice.FairDivision.Divisible.strom_value",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.strom_value",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L357",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Divisible.strom_value_continuous",
+      "display_name": "SocialChoice.FairDivision.Divisible.strom_value_continuous",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.strom_value_continuous",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L366",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

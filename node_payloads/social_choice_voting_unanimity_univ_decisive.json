@@ -1,0 +1,49 @@
+{
+  "id": "social_choice.voting.unanimity_univ_decisive",
+  "title": "Grand Coalition Is Decisive under Unanimity",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_unanimity_univ_decisive.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.arrow"
+  ],
+  "body_html": "<h1>Grand Coalition Is Decisive under Unanimity</h1>\n<p><strong>Theorem.</strong> If a social welfare function $F$ ([[social_choice.voting.swf]])\nsatisfies unanimity ([[social_choice.voting.unanimity]]), then the grand\ncoalition $N \\subseteq N$ is decisive for $F$\n([[social_choice.voting.is_decisive]]).</p>",
+  "proof_html": "<p>Unanimity says: if every voter strictly prefers $a$ to $b$, society\ndoes too. Specialising the universal quantifier in $\\mathrm{IsDecisive}$ to\nthe universal coalition gives exactly that statement. $\\square$</p>\n<p>In Lean: <code>SocialChoice.Voting.unanimity_univ_isDecisive</code>.</p>\n<p>This is the <em>base case</em> of the decisive-coalition proof of Arrow's theorem\n([[social_choice.voting.arrow_of_unanimity_iia]]): start from the trivially\ndecisive grand coalition, then shrink it in cardinality using\n[[social_choice.voting.decisive_contraction]] until you reach a singleton\ndictator.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Decisive-coalitions proof of Arrow.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "social_choice.voting.is_decisive",
+      "title": "Decisive Coalition and Dictator",
+      "href": "social_choice/social_choice_voting_is_decisive.html"
+    },
+    {
+      "id": "social_choice.voting.unanimity",
+      "title": "Unanimity (Pareto Axiom)",
+      "href": "social_choice/social_choice_voting_unanimity.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.minimal_decisive_card_one",
+      "title": "Minimal Decisive Coalition Has Size One",
+      "href": "social_choice/social_choice_voting_minimal_decisive_card_one.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.unanimity_univ_isDecisive",
+      "display_name": "SocialChoice.Voting.unanimity_univ_isDecisive",
+      "qualified_name": "SocialChoice.Voting.unanimity_univ_isDecisive",
+      "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Decisive.lean#L64",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

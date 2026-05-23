@@ -1,0 +1,69 @@
+{
+  "id": "social_choice.fair_division.indivisible.proportional",
+  "title": "Indivisible Proportional",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_indivisible_proportional.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.indivisible"
+  ],
+  "body_html": "<h1>Indivisible Proportional</h1>\n<p>For a valuation $v$ ([[social_choice.fair_division.indivisible.valuation]])\nand an allocation $A$ over an outer good set <code>allGoods : Finset G</code>,\n$A$ is <em>proportional</em> (PROP) if every agent's bundle is worth at least\na $1/n$ fraction of the total value:\n$$\n\\forall i \\in N,\\ v_i(\\mathrm{allGoods}) \\le n \\cdot v_i(A(i)).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsProportional</code> — an\n<code>abbrev</code> for the generic [[social_choice.fair_division.proportional]]\nspecialised at <code>v.val</code> and the whole-set <code>allGoods</code>.</p>\n<h2>Existence</h2>\n<p>PROP allocations <strong>need not exist</strong> for indivisible goods. The same\ncounterexample that defeats EF\n([[social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good]])\nalso defeats PROP: with 2 agents and 1 unit-value good, the agent who\ngets nothing receives value $0 &lt; 1/2$.</p>\n<p>For additive valuations on complete allocations, however, EF (when it\nholds) implies PROP\n([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]]).</p>\n<h2>Implications</h2>\n<p>In the indivisible-additive setting:\n- <strong>EF ⇒ PROP</strong>\n  ([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]]):\n  envy-freeness combined with additivity forces every agent to receive\n  at least $1/n$ of the total value.\n- <strong>PROP ⇒ MMS</strong>\n  ([[social_choice.fair_division.indivisible.proportional_implies_mms_additive]]):\n  the proportional bound implies the maximin-share guarantee.\n- <strong>EF1 does <em>not</em> imply PROP</strong> in general.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Indivisible proportionality.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.indivisible.allocation",
+      "title": "Indivisible Allocation",
+      "href": "social_choice/social_choice_fair_division_indivisible_allocation.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.valuation",
+      "title": "Indivisible Valuation",
+      "href": "social_choice/social_choice_fair_division_indivisible_valuation.html"
+    },
+    {
+      "id": "social_choice.fair_division.proportional",
+      "title": "Proportional Allocation",
+      "href": "social_choice/social_choice_fair_division_proportional.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.indivisible.checker",
+      "title": "Decidable Fairness Checkers",
+      "href": "social_choice/social_choice_fair_division_indivisible_checker.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
+      "title": "EF ⇒ PROP (Additive Valuations, Complete Allocations)",
+      "href": "social_choice/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.proportional_alpha_mms_additive",
+      "title": "PROP ⇒ α-MMS (Additive Valuations)",
+      "href": "social_choice/social_choice_fair_division_indivisible_proportional_alpha_mms_additive.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.proportional_implies_mms_additive",
+      "title": "PROP ⇒ MMS (Additive Valuations, Complete Allocations)",
+      "href": "social_choice/social_choice_fair_division_indivisible_proportional_implies_mms_additive.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.IsProportional",
+      "display_name": "SocialChoice.FairDivision.Indivisible.IsProportional",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.IsProportional",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L92",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

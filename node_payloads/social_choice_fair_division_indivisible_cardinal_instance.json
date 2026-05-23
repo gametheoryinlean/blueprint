@@ -1,0 +1,225 @@
+{
+  "id": "social_choice.fair_division.indivisible.cardinal_instance",
+  "title": "Indivisible Cardinal Instance",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_indivisible_cardinal_instance.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.indivisible"
+  ],
+  "body_html": "<h1>Indivisible Cardinal Instance</h1>\n<p>An <em>indivisible cardinal instance</em> assigns each agent a real-valued\nutility for every bundle:\n$$\n\\mathrm{utility} : N \\to \\mathrm{Finset}\\ G \\to \\mathbb{R}.\n$$</p>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Indivisible.CardinalInstance N G</code>\nwith a <code>utility</code> field plus the outer good set <code>allGoods : Finset G</code>.</p>\n<h2>Bridges</h2>\n<ul>\n<li><code>toValuation</code> — wrap as a bare <code>Valuation</code>\n  ([[social_choice.fair_division.indivisible.valuation]]).</li>\n<li><code>toGenericCardinalInstance</code> — view as a generic real-valued cardinal\n  fair-division instance ([[social_choice.fair_division.cardinal_instance]])\n  over share type $\\mathrm{Finset}\\ G$ and resource value <code>allGoods</code>.</li>\n<li><code>toShareInstance</code> — compose with <code>inducedSharePref</code> to get the\n  underlying indivisible ordinal instance\n  ([[social_choice.fair_division.indivisible.ordinal_instance]]).</li>\n</ul>\n<h2>Instance-keyed wrappers</h2>\n<p>A full menu of instance-keyed fairness and welfare predicates is\nre-exported:</p>\n<ul>\n<li><code>IsEnvyFree</code>, <code>IsEF1</code>, <code>IsEFX</code>, <code>IsProportional</code>, <code>IsEquitable</code>,\n  <code>IsMaxminShare</code> — fairness predicates.</li>\n<li><code>IsParetoOptimal</code>, <code>IsUtilitarianOptimal</code>, <code>IsMaxmin</code> — efficiency\n  / welfare-optimality predicates.</li>\n</ul>\n<p>All wrappers are definitional pass-throughs to the corresponding\ngeneric or <code>Indivisible</code>-prefixed predicates with $I.\\mathrm{utility}$\nand feasibility supplied from the instance.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Cardinal valuations in indivisible fair division.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.indivisible.valuation",
+      "title": "Indivisible Valuation",
+      "href": "social_choice/social_choice_fair_division_indivisible_valuation.html"
+    },
+    {
+      "id": "social_choice.fair_division.cardinal_instance",
+      "title": "Cardinal Fair-Division Instance",
+      "href": "social_choice/social_choice_fair_division_cardinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.envy_free",
+      "title": "Envy-Free Allocation",
+      "href": "social_choice/social_choice_fair_division_envy_free.html"
+    },
+    {
+      "id": "social_choice.fair_division.proportional",
+      "title": "Proportional Allocation",
+      "href": "social_choice/social_choice_fair_division_proportional.html"
+    },
+    {
+      "id": "social_choice.fair_division.utilitarian_welfare",
+      "title": "Utilitarian Welfare and Utilitarian Optimality",
+      "href": "social_choice/social_choice_fair_division_utilitarian_welfare.html"
+    },
+    {
+      "id": "social_choice.fair_division.egalitarian_welfare",
+      "title": "Egalitarian (Maximin) Welfare",
+      "href": "social_choice/social_choice_fair_division_egalitarian_welfare.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.indivisible.additive_instance",
+      "title": "Indivisible Additive Instance",
+      "href": "social_choice/social_choice_fair_division_indivisible_additive_instance.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L54",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toValuation",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toValuation",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toValuation",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L63",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toGenericCardinalInstance",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toGenericCardinalInstance",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toGenericCardinalInstance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L74",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toShareInstance",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toShareInstance",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.toShareInstance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L83",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEnvyFree",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEnvyFree",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEnvyFree",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L91",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEF1",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEF1",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEF1",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L96",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEFX",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEFX",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEFX",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L101",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsProportional",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsProportional",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsProportional",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L107",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEquitable",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEquitable",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsEquitable",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L112",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsMaxminShare",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsMaxminShare",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsMaxminShare",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L117",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsParetoOptimal",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsParetoOptimal",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsParetoOptimal",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L122",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsUtilitarianOptimal",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsUtilitarianOptimal",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsUtilitarianOptimal",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L137",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsMaxmin",
+      "display_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsMaxmin",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.CardinalInstance.IsMaxmin",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L142",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

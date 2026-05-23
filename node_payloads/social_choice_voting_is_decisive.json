@@ -1,0 +1,77 @@
+{
+  "id": "social_choice.voting.is_decisive",
+  "title": "Decisive Coalition and Dictator",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_is_decisive.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.arrow"
+  ],
+  "body_html": "<h1>Decisive Coalition and Dictator</h1>\n<p>A coalition $C \\subseteq N$ is <em>decisive</em> for a social welfare function $F$\n([[social_choice.voting.swf]]) if it is decisive for every ordered pair of\nalternatives:\n$$\n\\forall a, b \\in A,\\ \\mathrm{IsDecisiveFor}(F, C, a, b).\n$$</p>\n<p>An individual $i \\in N$ is a <em>dictator</em> exactly when their singleton coalition\n$\\{i\\}$ is decisive in this sense.</p>\n<p>In Lean: <code>SocialChoice.Voting.IsDecisive F C</code> and the singleton specialization\n<code>SocialChoice.Voting.SWF.IsDictator F i := IsDecisive F {i}</code>.</p>\n<p>This identification is the structural heart of the decisive-coalition proof\nof Arrow ([[social_choice.voting.arrow_of_unanimity_iia]]): the dictatorship\nconclusion ([[social_choice.voting.dictatorial_swf]]) reduces to producing a\nsingleton decisive coalition.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.15] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Decisive coalitions and the singleton dictator.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.voting.is_decisive_for",
+      "title": "Decisive Coalition for an Ordered Pair",
+      "href": "social_choice/social_choice_voting_is_decisive_for.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.arrow_of_unanimity_iia",
+      "title": "Arrow's Theorem via Decisive Coalitions",
+      "href": "social_choice/social_choice_voting_arrow_of_unanimity_iia.html"
+    },
+    {
+      "id": "social_choice.voting.decisive_contraction",
+      "title": "Coalition Contraction — Splitting a Decisive Coalition",
+      "href": "social_choice/social_choice_voting_decisive_contraction.html"
+    },
+    {
+      "id": "social_choice.voting.decisive_spread",
+      "title": "Field Expansion — Decisive on One Pair Implies Decisive Everywhere",
+      "href": "social_choice/social_choice_voting_decisive_spread.html"
+    },
+    {
+      "id": "social_choice.voting.minimal_decisive_card_one",
+      "title": "Minimal Decisive Coalition Has Size One",
+      "href": "social_choice/social_choice_voting_minimal_decisive_card_one.html"
+    },
+    {
+      "id": "social_choice.voting.unanimity_univ_decisive",
+      "title": "Grand Coalition Is Decisive under Unanimity",
+      "href": "social_choice/social_choice_voting_unanimity_univ_decisive.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.IsDecisive",
+      "display_name": "SocialChoice.Voting.IsDecisive",
+      "qualified_name": "SocialChoice.Voting.IsDecisive",
+      "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Decisive.lean#L56",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.Voting.SWF.IsDictator",
+      "display_name": "SocialChoice.Voting.SWF.IsDictator",
+      "qualified_name": "SocialChoice.Voting.SWF.IsDictator",
+      "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Decisive.lean#L61",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

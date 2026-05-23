@@ -1,0 +1,61 @@
+{
+  "id": "social_choice.fair_division.indivisible.ordinal_instance",
+  "title": "Indivisible Ordinal Instance",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_indivisible_ordinal_instance.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.indivisible"
+  ],
+  "body_html": "<h1>Indivisible Ordinal Instance</h1>\n<p>An <em>indivisible ordinal instance</em> is the no-externality share model\nspecialized to discrete-item allocation: each agent's preference is an\nordinal preference on bundles $\\mathrm{Finset}\\ G$.</p>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Indivisible.Instance N G</code>\nwith a <code>sharePref : N → Pref (Finset G)</code> field plus the outer good set\n<code>allGoods : Finset G</code>.</p>\n<p>Feasibility is the partition predicate\n[[social_choice.fair_division.indivisible.allocation]].</p>\n<h2>Bridge to the generic share-instance API</h2>\n<p><code>Indivisible.Instance.toShareInstance</code> (with <code>[Fintype N]\n[DecidableEq G]</code>) views the indivisible ordinal instance as a generic\nno-externality share instance\n([[social_choice.fair_division.share_instance]]) over share type\n$\\mathrm{Finset}\\ G$ and resource value <code>allGoods</code>. This lets all\ngeneric share-instance solution concepts apply.</p>\n<p>This wrapper layer parallels the divisible analogue\n([[social_choice.fair_division.divisible.ordinal_instance]]) — both\nplug into the same shared social-choice infrastructure via\n<code>toShareInstance</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Indivisible-goods instances.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.share_instance",
+      "title": "Share Instance (No-Externality Model)",
+      "href": "social_choice/social_choice_fair_division_share_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.allocation",
+      "title": "Indivisible Allocation",
+      "href": "social_choice/social_choice_fair_division_indivisible_allocation.html"
+    },
+    {
+      "id": "social_choice.core.preference",
+      "title": "Preference Relation",
+      "href": "social_choice/social_choice_core_preference.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.Instance",
+      "display_name": "SocialChoice.FairDivision.Indivisible.Instance",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.Instance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L28",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Indivisible.Instance.toShareInstance",
+      "display_name": "SocialChoice.FairDivision.Indivisible.Instance.toShareInstance",
+      "qualified_name": "SocialChoice.FairDivision.Indivisible.Instance.toShareInstance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L44",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

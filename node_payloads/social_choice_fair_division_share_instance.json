@@ -1,0 +1,82 @@
+{
+  "id": "social_choice.fair_division.share_instance",
+  "title": "Share Instance (No-Externality Model)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_share_instance.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.core"
+  ],
+  "body_html": "<h1>Share Instance (No-Externality Model)</h1>\n<p>A <em>share instance</em> is a fair-division instance restricted to the\n<em>no-externality</em> model: each agent ranks only the share they personally\nreceive, not the entire allocation.</p>\n<p>In Lean: <code>SocialChoice.FairDivision.ShareInstance N R S</code>, with fields\n<code>resource : R</code>, <code>feasible : Allocation N S → Prop</code>, and\n<code>sharePref : N → Pref S</code>.</p>\n<p>This is the standard input shape for textbook fair-division problems\n(envy-freeness, proportionality, MMS, etc., all formulated in terms of\neach agent's own share).</p>\n<h2>Lift to the full-allocation interface</h2>\n<p>There is a canonical embedding\n<code>toInstance : ShareInstance N R S → Instance N R S</code>\n([[social_choice.fair_division.instance]]) that promotes share preferences\nto allocation preferences by comparing two allocations only through the\nevaluating agent's own share:\n$$\nA \\preceq_i B \\iff A(i) \\preceq_{\\mathrm{share},i} B(i).\n$$</p>\n<p>The promoted relation inherits reflexivity, transitivity, and totality\npointwise from <code>sharePref i</code>, so the result is a valid <code>Pref</code> on\nallocations.</p>\n<p>This lift is the bridge that makes the share-instance API a true special\ncase of the generic allocation-preference instance, and lets the same\nsolution concepts apply at both layers.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. No-externality fair-division model.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.allocation",
+      "title": "Allocation",
+      "href": "social_choice/social_choice_fair_division_allocation.html"
+    },
+    {
+      "id": "social_choice.fair_division.instance",
+      "title": "Fair Division Instance",
+      "href": "social_choice/social_choice_fair_division_instance.html"
+    },
+    {
+      "id": "social_choice.core.preference",
+      "title": "Preference Relation",
+      "href": "social_choice/social_choice_core_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.cardinal_instance",
+      "title": "Cardinal Fair-Division Instance",
+      "href": "social_choice/social_choice_fair_division_cardinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.ordinal_instance",
+      "title": "Divisible Ordinal Instance",
+      "href": "social_choice/social_choice_fair_division_divisible_ordinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.ordinal_instance",
+      "title": "Indivisible Ordinal Instance",
+      "href": "social_choice/social_choice_fair_division_indivisible_ordinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.utility_represents",
+      "title": "Utility Represents Share Preference",
+      "href": "social_choice/social_choice_fair_division_utility_represents.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.ShareInstance",
+      "display_name": "SocialChoice.FairDivision.ShareInstance",
+      "qualified_name": "SocialChoice.FairDivision.ShareInstance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Basic.lean#L45",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.ShareInstance.toInstance",
+      "display_name": "SocialChoice.FairDivision.ShareInstance.toInstance",
+      "qualified_name": "SocialChoice.FairDivision.ShareInstance.toInstance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Basic.lean#L58",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

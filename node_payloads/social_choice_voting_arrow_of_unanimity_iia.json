@@ -1,0 +1,64 @@
+{
+  "id": "social_choice.voting.arrow_of_unanimity_iia",
+  "title": "Arrow's Theorem via Decisive Coalitions",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_arrow_of_unanimity_iia.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.arrow"
+  ],
+  "body_html": "<h1>Arrow's Theorem via Decisive Coalitions</h1>\n<p><strong>Theorem.</strong> Let $A$ have three distinct elements (witnessed by\n<code>h0 : ∃ x y z, x ≠ y ∧ x ≠ z ∧ y ≠ z</code>) and let $N$ be a finite nonempty\nvoter type. Every social welfare function $F$\n([[social_choice.voting.swf]]) satisfying unanimity\n([[social_choice.voting.unanimity]]) and IIA\n([[social_choice.voting.iia]]) is dictatorial\n([[social_choice.voting.dictatorial_swf]]).</p>\n<p>In Lean: <code>SocialChoice.Voting.arrow_of_unanimity_iia</code>. This is the internal\ndecisive-coalition form of Arrow; the public Fintype-cardinality version\n([[social_choice.voting.arrow_impossibility]]) packages the\nthree-distinct-elements hypothesis from <code>Fintype.card A ≥ 3</code>.</p>",
+  "proof_html": "<p>sketch</p>\n<p>By the size-one minimal-decisive-coalition theorem\n([[social_choice.voting.minimal_decisive_card_one]]) there is a decisive\ncoalition $C$ with $|C| = 1$. Subsingleton extraction yields $C = \\{i_0\\}$\nfor some $i_0$. Because decisive on every ordered pair means in particular\nthat $i_0$'s strict preference forces society's strict preference for every\npair, $i_0$ is a dictator. $\\square$</p>\n<h2>Attribution</h2>\n<p>The Lean port of the full decisive-coalitions proof is adapted from\n<code>GameTheory/SocialChoice.lean</code> in\n<a href=\"https://github.com/mdnestor/GameTheory\">mdnestor/GameTheory</a>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.10] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Arrow's impossibility theorem.</li>\n<li>Arrow, K. J. (1951). <em>Social Choice and Individual Values</em>.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "social_choice.voting.minimal_decisive_card_one",
+      "title": "Minimal Decisive Coalition Has Size One",
+      "href": "social_choice/social_choice_voting_minimal_decisive_card_one.html"
+    },
+    {
+      "id": "social_choice.voting.is_decisive",
+      "title": "Decisive Coalition and Dictator",
+      "href": "social_choice/social_choice_voting_is_decisive.html"
+    },
+    {
+      "id": "social_choice.voting.dictatorial_swf",
+      "title": "Dictatorial Social Welfare Function",
+      "href": "social_choice/social_choice_voting_dictatorial_swf.html"
+    },
+    {
+      "id": "social_choice.voting.unanimity",
+      "title": "Unanimity (Pareto Axiom)",
+      "href": "social_choice/social_choice_voting_unanimity.html"
+    },
+    {
+      "id": "social_choice.voting.iia",
+      "title": "Independence of Irrelevant Alternatives",
+      "href": "social_choice/social_choice_voting_iia.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.arrow_impossibility",
+      "title": "Arrow's Impossibility Theorem",
+      "href": "social_choice/social_choice_voting_arrow_impossibility.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.arrow_of_unanimity_iia",
+      "display_name": "SocialChoice.Voting.arrow_of_unanimity_iia",
+      "qualified_name": "SocialChoice.Voting.arrow_of_unanimity_iia",
+      "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Decisive.lean#L610",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

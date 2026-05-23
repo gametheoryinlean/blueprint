@@ -1,0 +1,411 @@
+{
+  "topic": {
+    "id": "core",
+    "title": "Core",
+    "href": "core/index.html",
+    "parent": null,
+    "node_count": 12,
+    "descendant_node_count": 12
+  },
+  "counts": {
+    "internal_nodes": 12,
+    "descendant_nodes": 12,
+    "child_topics": 4,
+    "non_proof_plan_nodes": 12,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 1,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 14,
+    "visible_nodes_with_selected_proof_plans": 14
+  },
+  "nodes": [
+    {
+      "id": "core.argmax.list_arg_max_on",
+      "title": "Argmax of a List under a Total Preorder",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/argmax/core_argmax_list_arg_max_on.html",
+      "payload": "node_payloads/core_argmax_list_arg_max_on.json"
+    },
+    {
+      "id": "core.preference.abstract_relation",
+      "title": "Abstract Preference-Relation Axioms",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/preference/core_preference_abstract_relation.html",
+      "payload": "node_payloads/core_preference_abstract_relation.json"
+    },
+    {
+      "id": "core.preference.indifferent",
+      "title": "Indifference Relation",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/preference/core_preference_indifferent.html",
+      "payload": "node_payloads/core_preference_indifferent.json"
+    },
+    {
+      "id": "core.preference.represents_preference",
+      "title": "Utility Representation of a Preference",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/preference/core_preference_represents_preference.html",
+      "payload": "node_payloads/core_preference_represents_preference.json"
+    },
+    {
+      "id": "core.preference.strictly_preferred",
+      "title": "Strict Preference Relation",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/preference/core_preference_strictly_preferred.html",
+      "payload": "node_payloads/core_preference_strictly_preferred.json"
+    },
+    {
+      "id": "core.preference.total_preorder",
+      "title": "Total Preorder",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/preference/core_preference_total_preorder.html",
+      "payload": "node_payloads/core_preference_total_preorder.json"
+    },
+    {
+      "id": "core.profile.deviate",
+      "title": "Standalone Profile and Unilateral Deviation",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/profile/core_profile_deviate.html",
+      "payload": "node_payloads/core_profile_deviate.json"
+    },
+    {
+      "id": "core.simplex.bounded_by_value",
+      "title": "Pointwise Bounds Are Simplex Bounds",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "core/simplex/core_simplex_bounded_by_value.html",
+      "payload": "node_payloads/core_simplex_bounded_by_value.json"
+    },
+    {
+      "id": "core.simplex.continuity",
+      "title": "Continuity on the Real Standard Simplex",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "core/simplex/core_simplex_continuity.html",
+      "payload": "node_payloads/core_simplex_continuity.json"
+    },
+    {
+      "id": "core.simplex.pure",
+      "title": "Point Mass on the Standard Simplex",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/simplex/core_simplex_pure.html",
+      "payload": "node_payloads/core_simplex_pure.json"
+    },
+    {
+      "id": "core.simplex.wsum",
+      "title": "Weighted Sum over the Standard Simplex",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/simplex/core_simplex_wsum.html",
+      "payload": "node_payloads/core_simplex_wsum.json"
+    },
+    {
+      "id": "core.simplex.wsum_comm",
+      "title": "Iterated Weighted Sums Commute",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "core/simplex/core_simplex_wsum_comm.html",
+      "payload": "node_payloads/core_simplex_wsum_comm.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "core.preference.total_preorder",
+      "to": "core.argmax.list_arg_max_on",
+      "kind": "uses"
+    },
+    {
+      "from": "core.preference.indifferent",
+      "to": "core.preference.represents_preference",
+      "kind": "uses"
+    },
+    {
+      "from": "core.preference.strictly_preferred",
+      "to": "core.preference.represents_preference",
+      "kind": "uses"
+    },
+    {
+      "from": "core.simplex.pure",
+      "to": "core.simplex.bounded_by_value",
+      "kind": "uses"
+    },
+    {
+      "from": "core.simplex.wsum",
+      "to": "core.simplex.bounded_by_value",
+      "kind": "uses"
+    },
+    {
+      "from": "core.simplex.wsum",
+      "to": "core.simplex.continuity",
+      "kind": "uses"
+    },
+    {
+      "from": "core.simplex.wsum",
+      "to": "core.simplex.pure",
+      "kind": "uses"
+    },
+    {
+      "from": "core.simplex.wsum",
+      "to": "core.simplex.wsum_comm",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "utility",
+      "title": "Utility",
+      "href": "utility/index.html",
+      "role": "dependent",
+      "node_count": 9
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "core.preference.abstract_relation",
+      "to": "topic:utility",
+      "kind": "boundary_dependent",
+      "topic": "utility",
+      "count": 1
+    },
+    {
+      "from": "core.preference.indifferent",
+      "to": "topic:utility",
+      "kind": "boundary_dependent",
+      "topic": "utility",
+      "count": 1
+    },
+    {
+      "from": "core.preference.strictly_preferred",
+      "to": "topic:utility",
+      "kind": "boundary_dependent",
+      "topic": "utility",
+      "count": 1
+    },
+    {
+      "from": "core.preference.total_preorder",
+      "to": "topic:utility",
+      "kind": "boundary_dependent",
+      "topic": "utility",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "argmax",
+      "title": "argmax",
+      "href": "keywords/argmax.html",
+      "count": 1
+    },
+    {
+      "id": "continuity",
+      "title": "continuity",
+      "href": "keywords/continuity.html",
+      "count": 1
+    },
+    {
+      "id": "core",
+      "title": "core",
+      "href": "keywords/core.html",
+      "count": 12
+    },
+    {
+      "id": "deviation",
+      "title": "deviation",
+      "href": "keywords/deviation.html",
+      "count": 1
+    },
+    {
+      "id": "dirac",
+      "title": "dirac",
+      "href": "keywords/dirac.html",
+      "count": 1
+    },
+    {
+      "id": "extensive-game",
+      "title": "extensive-game",
+      "href": "keywords/extensive-game.html",
+      "count": 1
+    },
+    {
+      "id": "fubini",
+      "title": "fubini",
+      "href": "keywords/fubini.html",
+      "count": 1
+    },
+    {
+      "id": "indifference",
+      "title": "indifference",
+      "href": "keywords/indifference.html",
+      "count": 1
+    },
+    {
+      "id": "minimax",
+      "title": "minimax",
+      "href": "keywords/minimax.html",
+      "count": 1
+    },
+    {
+      "id": "preference",
+      "title": "preference",
+      "href": "keywords/preference.html",
+      "count": 5
+    },
+    {
+      "id": "profile",
+      "title": "profile",
+      "href": "keywords/profile.html",
+      "count": 1
+    },
+    {
+      "id": "simplex",
+      "title": "simplex",
+      "href": "keywords/simplex.html",
+      "count": 5
+    },
+    {
+      "id": "strict-preference",
+      "title": "strict-preference",
+      "href": "keywords/strict-preference.html",
+      "count": 1
+    },
+    {
+      "id": "topology",
+      "title": "topology",
+      "href": "keywords/topology.html",
+      "count": 1
+    },
+    {
+      "id": "total-preorder",
+      "title": "total-preorder",
+      "href": "keywords/total-preorder.html",
+      "count": 1
+    },
+    {
+      "id": "utility-representation",
+      "title": "utility-representation",
+      "href": "keywords/utility-representation.html",
+      "count": 1
+    },
+    {
+      "id": "vnm",
+      "title": "vnm",
+      "href": "keywords/vnm.html",
+      "count": 1
+    },
+    {
+      "id": "weighted-sum",
+      "title": "weighted-sum",
+      "href": "keywords/weighted-sum.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [
+    "core.argmax",
+    "core.preference",
+    "core.profile",
+    "core.simplex"
+  ],
+  "child_topic_nodes": [
+    {
+      "id": "core.argmax",
+      "title": "Core.Argmax",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "definition": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "core/argmax/index.html",
+      "children": []
+    },
+    {
+      "id": "core.preference",
+      "title": "Core.Preference",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 5,
+      "direct_node_count": 5,
+      "kind_counts": {
+        "definition": 5
+      },
+      "status_counts": {
+        "staged": 5
+      },
+      "href": "core/preference/index.html",
+      "children": []
+    },
+    {
+      "id": "core.profile",
+      "title": "Core.Profile",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "definition": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "core/profile/index.html",
+      "children": []
+    },
+    {
+      "id": "core.simplex",
+      "title": "Core.Simplex",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 5,
+      "direct_node_count": 5,
+      "kind_counts": {
+        "definition": 2,
+        "lemma": 3
+      },
+      "status_counts": {
+        "staged": 5
+      },
+      "href": "core/simplex/index.html",
+      "children": []
+    }
+  ],
+  "child_topic_edges": [
+    {
+      "from": "topic:core.preference",
+      "to": "topic:core.argmax",
+      "kind": "topic_dependency",
+      "count": 1
+    }
+  ],
+  "child_boundary_topics": [
+    {
+      "id": "utility",
+      "title": "Utility",
+      "href": "utility/index.html",
+      "role": "dependent",
+      "node_count": 9
+    }
+  ],
+  "child_boundary_edges": [
+    {
+      "from": "topic:core.preference",
+      "to": "topic:utility",
+      "kind": "boundary_dependent",
+      "topic": "utility",
+      "count": 4
+    }
+  ]
+}

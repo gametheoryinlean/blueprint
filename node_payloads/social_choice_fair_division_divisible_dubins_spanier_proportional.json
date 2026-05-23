@@ -1,0 +1,65 @@
+{
+  "id": "social_choice.fair_division.divisible.dubins_spanier_proportional",
+  "title": "Dubins–Spanier Proportional Existence",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_divisible_dubins_spanier_proportional.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.divisible",
+    "social_choice.fair_division.divisible.dubins_spanier"
+  ],
+  "body_html": "<h1>Dubins–Spanier Proportional Existence</h1>\n<p><strong>Theorem.</strong> For every $n \\ge 1$ and every family of finite measures\n$\\mu : \\mathrm{Fin}\\ n \\to \\mathrm{Measure}\\ I$ on the unit interval $I =\n[0, 1]$ with each $\\mu_i$ non-atomic, there exists a complete measurable\npartition $A : \\mathrm{Allocation}\\ (\\mathrm{Fin}\\ n)\\ I$ that is\nproportional in the measure sense:\n$$\n\\forall i \\in \\mathrm{Fin}\\ n,\\ \\mu_i(I) \\;\\le\\; n \\cdot \\mu_i(A(i)).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code>.</p>",
+  "proof_html": "<p>By the moving-knife induction ([[social_choice.fair_division.divisible.ds_step]]),\nusing the IVT-on-measures cut lemma\n([[social_choice.fair_division.divisible.cut_exists]]) at each level.</p>\n<h2>Significance</h2>\n<p>Two parts:</p>\n<ol>\n<li>\n<p><strong>Existence with explicit algorithm.</strong> Unlike Stromquist's EF existence\n   ([[social_choice.fair_division.divisible.ef_exists]]) — which uses a\n   KKM compactness argument — Dubins–Spanier's proportional existence is\n   <em>constructive</em>: the algorithm can be unfolded to produce the\n   allocation step by step.</p>\n</li>\n<li>\n<p><strong>PROP, not EF.</strong> The output is proportional but in general <em>not</em>\n   envy-free. EF is a strictly stronger notion for $n \\ge 3$ agents and\n   requires the deeper Stromquist construction.</p>\n</li>\n</ol>\n<p>The bundled-instance wrapper is\n[[social_choice.fair_division.divisible.dubins_spanier_rule]].</p>\n<h2>References</h2>\n<ul>\n<li>Dubins, L. E. and Spanier, E. H. (1961). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 68: 1–17.</li>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Dubins–Spanier moving knife.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "social_choice.fair_division.divisible.cut_exists",
+      "title": "IVT — Cut Point Exists for Non-Atomic Measures on [0,1]",
+      "href": "social_choice/social_choice_fair_division_divisible_cut_exists.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.ds_step",
+      "title": "Dubins–Spanier Inductive Step",
+      "href": "social_choice/social_choice_fair_division_divisible_ds_step.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.envy_free",
+      "title": "Divisible Envy-Free, Proportional, Equitable Predicates",
+      "href": "social_choice/social_choice_fair_division_divisible_envy_free.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.allocation",
+      "title": "Divisible Allocation",
+      "href": "social_choice/social_choice_fair_division_divisible_allocation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.divisible.dubins_spanier_rule",
+      "title": "Dubins–Spanier as a Rule on Measure Instances",
+      "href": "social_choice/social_choice_fair_division_divisible_dubins_spanier_rule.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.proportional_exists",
+      "title": "Proportional Existence on [0,1] (n Agents)",
+      "href": "social_choice/social_choice_fair_division_divisible_proportional_exists.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Divisible.dubinsSpanierProportional",
+      "display_name": "SocialChoice.FairDivision.Divisible.dubinsSpanierProportional",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.dubinsSpanierProportional",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L418",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

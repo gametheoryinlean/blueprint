@@ -1,0 +1,53 @@
+{
+  "id": "social_choice.voting.dictatorial_scf",
+  "title": "Dictatorial Social Choice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_dictatorial_scf.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting"
+  ],
+  "body_html": "<h1>Dictatorial Social Choice Function</h1>\n<p>A social choice function $G$ is <em>dictatorial</em> if there exists a voter\n$i \\in N$ whose top-ranked alternative is always selected: for every profile\n$P$, the chosen outcome $G(P)$ strictly dominates every other alternative\nunder $P_i$:\n$$\n\\exists i \\in N,\\ \\forall P,\\ \\forall b \\ne G(P),\\\nG(P) \\succ_{P_i} b.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.SCF.Dictatorial</code>.</p>\n<p>This is the SCF counterpart to dictatorship for social welfare functions\n([[social_choice.voting.dictatorial_swf]]): rather than copying the dictator's\nfull ranking, the SCF returns the dictator's unique top choice at every\nprofile.</p>\n<p>Gibbard–Satterthwaite ([[social_choice.voting.gibbard_satterthwaite]]) shows\nthat for $|A| \\ge 3$ on a finite nonempty voter set, the conjunction of\nunanimity and strategy-proofness ([[social_choice.voting.strategyproof]])\nforces $G$ to be dictatorial in this sense.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.23] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Dictatorial SCF.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.voting.scf",
+      "title": "Social Choice Function",
+      "href": "social_choice/social_choice_voting_scf.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.gibbard_satterthwaite",
+      "title": "Gibbard–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_gibbard_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.muller_satterthwaite",
+      "title": "Muller–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_muller_satterthwaite.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.SCF.Dictatorial",
+      "display_name": "SocialChoice.Voting.SCF.Dictatorial",
+      "qualified_name": "SocialChoice.Voting.SCF.Dictatorial",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Basic.lean#L86",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

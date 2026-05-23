@@ -1,0 +1,82 @@
+{
+  "id": "social_choice.fair_division.utilitarian_welfare",
+  "title": "Utilitarian Welfare and Utilitarian Optimality",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_utilitarian_welfare.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.core"
+  ],
+  "body_html": "<h1>Utilitarian Welfare and Utilitarian Optimality</h1>\n<p>For a finite population $N$, a utility profile $u : N \\to S \\to \\mathbb{R}$,\nand an allocation $A : N \\to S$ ([[social_choice.fair_division.allocation]]),\nthe <em>utilitarian (social) welfare</em> is the sum of agents' utilities from\ntheir own shares:\n$$\nW_{\\mathrm{util}}(u, A) = \\sum_{i \\in N} u_i(A(i)).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.utilitarianWelfare</code> (noncomputable, uses\n<code>∑ i : N</code> on <code>Fintype N</code>).</p>\n<p>An allocation $A$ is <em>utilitarian-optimal</em> w.r.t. a feasibility predicate\n$F$ if no feasible allocation has strictly larger utilitarian welfare:\n$$\n\\forall B,\\ F(B) \\Rightarrow W_{\\mathrm{util}}(u, B) \\le W_{\\mathrm{util}}(u, A).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.IsUtilitarianOptimal</code>.</p>\n<p>The accompanying basic lemmas in <code>Welfare.lean</code> say:</p>\n<ul>\n<li>$W_{\\mathrm{util}}$ is monotone in the per-agent utility:\n  $\\forall i,\\ u_i(A_i) \\le u_i(B_i) \\Rightarrow W_{\\mathrm{util}}(u, A) \\le W_{\\mathrm{util}}(u, B)$.</li>\n<li>For a unique-agent population it collapses to the single agent's\n  utility.</li>\n</ul>\n<p>Utilitarian-optimal allocations are Pareto optimal\n([[social_choice.fair_division.pareto_optimal]]) but the converse fails:\nPO is a much weaker condition.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Utilitarian social welfare.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.allocation",
+      "title": "Allocation",
+      "href": "social_choice/social_choice_fair_division_allocation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.cardinal_instance_wrappers",
+      "title": "Cardinal-Instance Fairness and Welfare Wrappers",
+      "href": "social_choice/social_choice_fair_division_cardinal_instance_wrappers.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.cardinal_instance",
+      "title": "Divisible Cardinal Instance",
+      "href": "social_choice/social_choice_fair_division_divisible_cardinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.egal_le_util",
+      "title": "Egalitarian Welfare Lower-Bounds Utilitarian Welfare",
+      "href": "social_choice/social_choice_fair_division_egal_le_util.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.cardinal_instance",
+      "title": "Indivisible Cardinal Instance",
+      "href": "social_choice/social_choice_fair_division_indivisible_cardinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.indivisible.utilitarian_welfare",
+      "title": "Indivisible Utilitarian Welfare",
+      "href": "social_choice/social_choice_fair_division_indivisible_utilitarian_welfare.html"
+    },
+    {
+      "id": "social_choice.fair_division.welfare_monotone",
+      "title": "Basic Welfare Lemmas",
+      "href": "social_choice/social_choice_fair_division_welfare_monotone.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.utilitarianWelfare",
+      "display_name": "SocialChoice.FairDivision.utilitarianWelfare",
+      "qualified_name": "SocialChoice.FairDivision.utilitarianWelfare",
+      "module": "EconCSLib.SocialChoice.FairDivision.Welfare",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L19",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.IsUtilitarianOptimal",
+      "display_name": "SocialChoice.FairDivision.IsUtilitarianOptimal",
+      "qualified_name": "SocialChoice.FairDivision.IsUtilitarianOptimal",
+      "module": "EconCSLib.SocialChoice.FairDivision.Welfare",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L29",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

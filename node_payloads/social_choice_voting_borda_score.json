@@ -1,0 +1,69 @@
+{
+  "id": "social_choice.voting.borda_score",
+  "title": "Borda Score and Borda Winner",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_borda_score.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.rules"
+  ],
+  "body_html": "<h1>Borda Score and Borda Winner</h1>\n<p>The <em>Borda score</em> of an alternative $a$ under preference $P_i$ counts\nhow many alternatives are ranked strictly below $a$:\n$$\nb(P_i, a) = \\#\\{c \\in A \\mid a \\succ_{P_i} c\\}.\n$$</p>\n<p>The <em>total Borda score</em> across the profile is\n$$\nB(P, a) = \\sum_{i \\in N} b(P_i, a).\n$$</p>\n<p>An alternative $a$ is a <em>Borda winner</em> if it maximizes the total Borda\nscore:\n$$\n\\forall c \\in A,\\ B(P, c) \\le B(P, a).\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.bordaScore</code>, <code>.bordaTotalScore</code>, and\n<code>.IsBordaWinner</code>. The definitions live under <code>noncomputable</code> because\nfiltering by a bare-<code>Prop</code> strict preference uses classical decidability.</p>\n<p>Ties between Borda winners are explicitly allowed — <code>IsBordaWinner</code> is the\n$\\arg\\max$ membership predicate, not a function returning a unique winner.</p>\n<h2>Properties (informal)</h2>\n<ul>\n<li>Borda is monotonic, anonymous, and neutral.</li>\n<li>Borda is <em>not</em> a Condorcet method\n  ([[social_choice.voting.condorcet_winner]]): the Borda winner may differ\n  from the Condorcet winner when both exist.</li>\n<li>Borda is strategy-manipulable\n  ([[social_choice.voting.strategyproof]] fails) — already follows from\n  Gibbard–Satterthwaite for $|A| \\ge 3$.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Positional scoring rules.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.core.preference_profile",
+      "title": "Preference Profile",
+      "href": "social_choice/social_choice_core_preference_profile.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.bordaScore",
+      "display_name": "SocialChoice.Voting.bordaScore",
+      "qualified_name": "SocialChoice.Voting.bordaScore",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/VotingRules.lean#L62",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.Voting.bordaTotalScore",
+      "display_name": "SocialChoice.Voting.bordaTotalScore",
+      "qualified_name": "SocialChoice.Voting.bordaTotalScore",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/VotingRules.lean#L66",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.Voting.IsBordaWinner",
+      "display_name": "SocialChoice.Voting.IsBordaWinner",
+      "qualified_name": "SocialChoice.Voting.IsBordaWinner",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/VotingRules.lean#L71",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

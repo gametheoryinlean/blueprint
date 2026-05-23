@@ -1,0 +1,54 @@
+{
+  "id": "social_choice.voting.majority_prefers",
+  "title": "Pairwise Majority Comparison",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_majority_prefers.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.rules"
+  ],
+  "body_html": "<h1>Pairwise Majority Comparison</h1>\n<p>For a finite voter type $N$ and preference profile $P$, society <em>prefers\n$a$ to $b$ by strict majority</em> if strictly more voters strictly prefer $a$\nto $b$ than vice versa:\n$$\n\\#\\{i \\in N \\mid a \\succ_{P_i} b\\}\n\\;&gt;\\;\n\\#\\{i \\in N \\mid b \\succ_{P_i} a\\}.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.MajorityPrefers</code>, written using\n<code>Finset.card (Finset.univ.filter ...)</code> and the bundled strict preference\n<code>(P i).lt</code>.</p>\n<p>This is the natural starting point for two-alternative voting rules and for\nthe Condorcet criterion ([[social_choice.voting.condorcet_winner]]): a\nCondorcet winner is an alternative that pairwise-majority-beats every\nother.</p>\n<p>The strict-majority form (as opposed to weak majority) makes pairwise\ncomparison antisymmetric — at most one of $a, b$ can majority-beat the\nother.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Majority rule.</li>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Voting and Condorcet criteria.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.core.preference_profile",
+      "title": "Preference Profile",
+      "href": "social_choice/social_choice_core_preference_profile.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.condorcet_paradox",
+      "title": "Condorcet Paradox",
+      "href": "social_choice/social_choice_voting_condorcet_paradox.html"
+    },
+    {
+      "id": "social_choice.voting.condorcet_winner",
+      "title": "Condorcet Winner",
+      "href": "social_choice/social_choice_voting_condorcet_winner.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.MajorityPrefers",
+      "display_name": "SocialChoice.Voting.MajorityPrefers",
+      "qualified_name": "SocialChoice.Voting.MajorityPrefers",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/VotingRules.lean#L43",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "social_choice.voting.monotonic_scf",
+  "title": "Monotonic Social Choice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_monotonic_scf.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting"
+  ],
+  "body_html": "<h1>Monotonic Social Choice Function</h1>\n<p>A social choice function $G$ is <em>monotonic</em> (in the Maskin sense, restricted\nto strict comparisons against the chosen winner) if a winner remains a\nwinner whenever it is weakly pushed up in everyone's ranking: for every pair\nof profiles $P, Q$ and every alternative $a$,\n$$\nG(P) = a \\;\\wedge\\;\n\\bigl(\\forall i,\\ \\forall c \\ne a,\\ a \\succ_{P_i} c \\Rightarrow a \\succ_{Q_i} c\\bigr)\n\\;\\Rightarrow\\; G(Q) = a.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.SCF.Monotonic</code>.</p>\n<p>The condition only requires that strict $a$-vs-$c$ comparisons in favor of\nthe winner persist; voters may rearrange their rankings among\nnon-winning alternatives freely.</p>\n<p>Monotonicity is the bridge from strategy-proofness\n([[social_choice.voting.strategyproof]]) to dictatorship in the Gibbard\n–Satterthwaite chain: strategy-proof SCFs are monotonic\n([[social_choice.voting.strategyproof_implies_monotonic]]), and monotonic\nunanimous SCFs with $|A| \\ge 3$ are dictatorial\n([[social_choice.voting.muller_satterthwaite]]).</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.22] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Monotonicity for SCFs.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.voting.scf",
+      "title": "Social Choice Function",
+      "href": "social_choice/social_choice_voting_scf.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.muller_satterthwaite",
+      "title": "Muller–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_muller_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.strategyproof_implies_monotonic",
+      "title": "Strategy-Proof ⇒ Monotonic",
+      "href": "social_choice/social_choice_voting_strategyproof_implies_monotonic.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.SCF.Monotonic",
+      "display_name": "SocialChoice.Voting.SCF.Monotonic",
+      "qualified_name": "SocialChoice.Voting.SCF.Monotonic",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Basic.lean#L91",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

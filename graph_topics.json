@@ -37,6 +37,28 @@
       ]
     },
     {
+      "id": "core",
+      "title": "Core",
+      "depth": 1,
+      "parent": null,
+      "node_count": 12,
+      "direct_node_count": 12,
+      "kind_counts": {
+        "definition": 9,
+        "lemma": 3
+      },
+      "status_counts": {
+        "staged": 12
+      },
+      "href": "core/index.html",
+      "children": [
+        "core.argmax",
+        "core.preference",
+        "core.profile",
+        "core.simplex"
+      ]
+    },
+    {
       "id": "extensive_game",
       "title": "Extensive Game",
       "depth": 1,
@@ -184,6 +206,28 @@
       "children": []
     },
     {
+      "id": "social_choice",
+      "title": "Social Choice",
+      "depth": 1,
+      "parent": null,
+      "node_count": 125,
+      "direct_node_count": 125,
+      "kind_counts": {
+        "definition": 71,
+        "lemma": 12,
+        "theorem": 42
+      },
+      "status_counts": {
+        "staged": 125
+      },
+      "href": "social_choice/index.html",
+      "children": [
+        "social_choice.core",
+        "social_choice.fair_division",
+        "social_choice.voting"
+      ]
+    },
+    {
       "id": "strategic_games",
       "title": "Strategic Games",
       "depth": 1,
@@ -243,22 +287,22 @@
       "title": "Zero Sum",
       "depth": 1,
       "parent": null,
-      "node_count": 73,
-      "direct_node_count": 73,
+      "node_count": 79,
+      "direct_node_count": 79,
       "kind_counts": {
         "concept": 1,
-        "definition": 19,
+        "definition": 20,
         "example": 8,
-        "lemma": 5,
-        "proof-plan": 10,
+        "lemma": 11,
+        "proof-plan": 9,
         "proposition": 14,
         "theorem": 16
       },
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 25,
-        "staged": 45
+        "formalized": 26,
+        "staged": 50
       },
       "href": "zero_sum/index.html",
       "children": [
@@ -277,6 +321,11 @@
       "from": "approachability",
       "to": "strategic_games",
       "count": 1
+    },
+    {
+      "from": "core",
+      "to": "utility",
+      "count": 4
     },
     {
       "from": "extensive_game",

@@ -9,7 +9,7 @@
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Matrix Game</h1>\n<p>A finite two-player zero-sum matrix game is specified by finite row and column\nsets $I,J$ and a payoff matrix</p>\n<p>$$A : I \\times J \\to \\mathbb{R}.$$</p>\n<p>Player I chooses a row, player II chooses a column, player I receives\n$A(i,j)$, and player II receives $-A(i,j)$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Def. 2.2.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite two-player zero-sum games in matrix form.</li>\n</ul>",
+  "body_html": "<h1>Matrix Game</h1>\n<p>A finite two-player zero-sum matrix game is specified by finite row and column\nsets $I,J$ and a payoff matrix valued in a scalar field $\\mathbb{K}$</p>\n<p>$$A : I \\times J \\to \\mathbb{K}.$$</p>\n<p>Player I chooses a row, player II chooses a column, player I receives\n$A(i,j)$, and player II receives $-A(i,j)$. The default scalar in\nthe Lean structure is $\\mathbb{Q}$ (no order completeness assumed); the\ncanonical instantiations are $\\mathbb{Q}$ (where the value still lies in\nthe field by LP/Dantzig but the <code>sSup</code>-based <code>maximin/minimax</code>\ndefinitions are unavailable) and $\\mathbb{R}$ (where order completeness\ngives the full Loomis / minimax theorem).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Def. 2.2.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite two-player zero-sum games in matrix form.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -55,9 +55,19 @@
       "href": "zero_sum/zero_sum_examples_matching_pennies.html"
     },
     {
+      "id": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "title": "Cesàro Payoff Convergence From Robinson Lemma",
+      "href": "zero_sum/zero_sum_fictitious_play_cesaro_payoff_from_robinson.html"
+    },
+    {
       "id": "zero_sum.fictitious_play.fictitious_play",
       "title": "Fictitious Play",
       "href": "zero_sum/zero_sum_fictitious_play_fictitious_play.html"
+    },
+    {
+      "id": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "title": "Robinson Admissible Sequence Lemma",
+      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma.html"
     },
     {
       "id": "zero_sum.lam_mu_existence",
@@ -68,6 +78,11 @@
       "id": "zero_sum.matrix_game_nash_equilibrium",
       "title": "Mixed Nash Equilibrium of a Matrix Game",
       "href": "zero_sum/zero_sum_matrix_game_nash_equilibrium.html"
+    },
+    {
+      "id": "zero_sum.minimax.value_predicates",
+      "title": "Field-Generic Value Predicates",
+      "href": "zero_sum/zero_sum_minimax_value_predicates.html"
     },
     {
       "id": "zero_sum.mixed_matrix_payoff",
@@ -82,9 +97,9 @@
       "qualified_name": "MatrixGame",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "77e8e547d06d44034fd405817ed1fa44de1e89bd",
-      "short_revision": "77e8e54",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/77e8e547d06d44034fd405817ed1fa44de1e89bd/EconCSLib/StrategicGame/Minimax.lean#L48",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/StrategicGame/Minimax.lean#L54",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

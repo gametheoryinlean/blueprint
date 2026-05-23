@@ -1,0 +1,54 @@
+{
+  "id": "social_choice.fair_division.instance",
+  "title": "Fair Division Instance",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_instance.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.core"
+  ],
+  "body_html": "<h1>Fair Division Instance</h1>\n<p>A <em>fair-division instance</em> over a population $N$, resource type $R$, and\nshare type $S$ bundles:</p>\n<ul>\n<li><strong>Resource side</strong>: a value <code>resource : R</code> carrying problem-specific\n  parameters (the cake, the item set, capacity constraints, …).</li>\n<li><strong>Feasibility</strong>: a predicate <code>feasible : Allocation N S → Prop</code> on\n  complete allocations.</li>\n<li><strong>Preferences</strong>: for each agent, a preference $P_i$ on the <em>whole\n  allocation</em> space ($\\mathrm{Pref}(\\mathrm{Allocation}\\ N\\ S)$).</li>\n</ul>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Instance N R S</code>.</p>\n<p>The generality of <code>pref i : Pref (Allocation N S)</code> lets the instance encode\n<em>externalities</em> — agent $i$'s ranking can depend on every other agent's\nshare, not just their own. The no-externality specialization is\n[[social_choice.fair_division.share_instance]].</p>\n<p>This instance sits exactly above the generic social-choice instance shape\n([[social_choice.core.instance]]) but with a structured alternative space\n$\\mathrm{Allocation}\\ N\\ S$ in place of an unstructured $A$.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Fair division instances.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.allocation",
+      "title": "Allocation",
+      "href": "social_choice/social_choice_fair_division_allocation.html"
+    },
+    {
+      "id": "social_choice.core.preference",
+      "title": "Preference Relation",
+      "href": "social_choice/social_choice_core_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.share_instance",
+      "title": "Share Instance (No-Externality Model)",
+      "href": "social_choice/social_choice_fair_division_share_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.solution_concept",
+      "title": "Fair Division Solution Concept and Rule",
+      "href": "social_choice/social_choice_fair_division_solution_concept.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Instance",
+      "display_name": "SocialChoice.FairDivision.Instance",
+      "qualified_name": "SocialChoice.FairDivision.Instance",
+      "module": "EconCSLib.SocialChoice.FairDivision.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Basic.lean#L35",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

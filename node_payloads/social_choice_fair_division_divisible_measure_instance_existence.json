@@ -1,0 +1,79 @@
+{
+  "id": "social_choice.fair_division.divisible.measure_instance_existence",
+  "title": "Measure-Instance Existence Wrappers",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_divisible_measure_instance_existence.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.divisible"
+  ],
+  "body_html": "<h1>Measure-Instance Existence Wrappers</h1>\n<p>The bundled-instance forms of the three main existence results on\n$I = [0, 1]$, all stated against a divisible measure instance\n$\\mathrm{MeasureInstance}\\ (\\mathrm{Fin}\\ n)\\ I$\n([[social_choice.fair_division.divisible.measure_instance]]).</p>\n<table>\n<thead>\n<tr>\n<th>Theorem</th>\n<th>Underlying result</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>MeasureInstance.proportional_exists</code></td>\n<td>[[social_choice.fair_division.divisible.proportional_exists]]</td>\n</tr>\n<tr>\n<td><code>MeasureInstance.envyFree_exists</code></td>\n<td>[[social_choice.fair_division.divisible.ef_exists]]</td>\n</tr>\n<tr>\n<td><code>MeasureInstance.envyFree_and_proportional_exists</code></td>\n<td>[[social_choice.fair_division.divisible.ef_exists_and_proportional]]</td>\n</tr>\n</tbody>\n</table>\n<p>Each wrapper takes a <code>MeasureInstance</code> whose underlying measure family\n$I.\\mathrm{measure}$ is finite and non-atomic, and produces the\ncorresponding feasible allocation satisfying the named property under\n$I.\\mathrm{IsProportional}$ / $I.\\mathrm{IsEnvyFree}$.</p>\n<h2>Why three wrappers</h2>\n<p>Splitting the existence statements at the bundled-instance level lets\ndownstream consumers refer to the property they need without dragging\nin the entire Stromquist machinery:</p>\n<ul>\n<li><code>proportional_exists</code> is the cheapest (Dubins–Spanier route, fully\n  constructive).</li>\n<li><code>envyFree_exists</code> invokes Stromquist's KKM / shifted-cell argument.</li>\n<li><code>envyFree_and_proportional_exists</code> packages both for the common\n  textbook statement \"fair division exists for cake-cutting\".</li>\n</ul>\n<p>Each wrapper is a thin definitional bridge from the underlying raw\nexistence theorem; the substantive content lives in the unwrapped\nversions.</p>\n<h2>References</h2>\n<ul>\n<li>Dubins, L. E. and Spanier, E. H. (1961). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 68: 1–17.</li>\n<li>Stromquist, W. (1980). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 87: 640–644.</li>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.divisible.measure_instance",
+      "title": "Divisible Measure Instance",
+      "href": "social_choice/social_choice_fair_division_divisible_measure_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.proportional_exists",
+      "title": "Proportional Existence on [0,1] (n Agents)",
+      "href": "social_choice/social_choice_fair_division_divisible_proportional_exists.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.ef_exists",
+      "title": "Envy-Free Existence (Stromquist, n Agents)",
+      "href": "social_choice/social_choice_fair_division_divisible_ef_exists.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.ef_exists_and_proportional",
+      "title": "EF + Proportional Existence (Stromquist Corollary)",
+      "href": "social_choice/social_choice_fair_division_divisible_ef_exists_and_proportional.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Divisible.MeasureInstance.proportional_exists",
+      "display_name": "SocialChoice.FairDivision.Divisible.MeasureInstance.proportional_exists",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.MeasureInstance.proportional_exists",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1355",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_exists",
+      "display_name": "SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_exists",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_exists",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1366",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_and_proportional_exists",
+      "display_name": "SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_and_proportional_exists",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_and_proportional_exists",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1377",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "social_choice.voting.plurality_score",
+  "title": "Plurality Score and Plurality Winner",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_plurality_score.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.rules"
+  ],
+  "body_html": "<h1>Plurality Score and Plurality Winner</h1>\n<p>The <em>plurality score</em> of an alternative $a$ under a finite preference\nprofile $P$ counts the voters who rank $a$ first (strictly above every\nother alternative):\n$$\n\\mathrm{plu}(P, a) =\n\\#\\{i \\in N \\mid \\forall b \\ne a,\\ a \\succ_{P_i} b\\}.\n$$</p>\n<p>An alternative $a$ is a <em>plurality winner</em> if it maximises the plurality\nscore:\n$$\n\\forall c \\in A,\\ \\mathrm{plu}(P, c) \\le \\mathrm{plu}(P, a).\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.pluralityScore</code> and <code>.IsPluralityWinner</code>. As\nwith Borda ([[social_choice.voting.borda_score]]), the definitions are\n<code>noncomputable</code> because filtering by a bare-<code>Prop</code> strict preference uses\nclassical decidability, and ties are allowed in <code>IsPluralityWinner</code>.</p>\n<h2>Properties (informal)</h2>\n<ul>\n<li>Plurality is the simplest positional rule (all weight on the top rank).</li>\n<li>Plurality is <em>not</em> a Condorcet method: examples exist where the Condorcet\n  winner is <em>not</em> even a plurality winner.</li>\n<li>Plurality satisfies unanimity ([[social_choice.voting.unanimity]]) but is\n  strategy-manipulable for $|A| \\ge 3$\n  ([[social_choice.voting.gibbard_satterthwaite]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Plurality and positional scoring rules.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.core.preference_profile",
+      "title": "Preference Profile",
+      "href": "social_choice/social_choice_core_preference_profile.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.pluralityScore",
+      "display_name": "SocialChoice.Voting.pluralityScore",
+      "qualified_name": "SocialChoice.Voting.pluralityScore",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/VotingRules.lean#L77",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.Voting.IsPluralityWinner",
+      "display_name": "SocialChoice.Voting.IsPluralityWinner",
+      "qualified_name": "SocialChoice.Voting.IsPluralityWinner",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/VotingRules.lean#L83",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

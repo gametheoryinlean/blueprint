@@ -1,0 +1,81 @@
+{
+  "id": "core.preference.indifferent",
+  "title": "Indifference Relation",
+  "kind": "definition",
+  "status": "staged",
+  "href": "core/preference/core_preference_indifferent.html",
+  "primary_topic": "core.preference",
+  "topics": [
+    "core",
+    "core.preference"
+  ],
+  "body_html": "<h1>Indifference Relation</h1>\n<p>On any <code>Preorder α</code>, two elements are <em>indifferent</em> when each is weakly\npreferred to the other:\n$$\n  \\operatorname{Indifferent}(a, b) \\quad\\Longleftrightarrow\\quad\n  a \\le b \\;\\text{ and }\\; b \\le a.\n$$</p>\n<p>Indifference is reflexive, symmetric, and transitive. It is therefore an\nequivalence relation on every preorder. On a <code>PartialOrder</code> antisymmetry\ncollapses it to equality; on a general preorder (or total preorder) it can\nrelate genuinely distinct elements, which is the typical situation in utility\ntheory.</p>\n<p>In Lean this is <code>Indifferent : α → α → Prop</code> together with\n<code>Indifferent.refl / symm / trans</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Def. 2.5] Maschler, Solan, and Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>. Indifference as the symmetric part of weak\n  preference.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "core.preference.represents_preference",
+      "title": "Utility Representation of a Preference",
+      "href": "core/preference/core_preference_represents_preference.html"
+    },
+    {
+      "id": "utility.preference_relation",
+      "title": "Preference Relation (MSZ Ch.2 Narrative)",
+      "href": "utility/utility_preference_relation.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Indifferent",
+      "display_name": "Indifferent",
+      "qualified_name": "Indifferent",
+      "module": "EconCSLib.Core.Preference",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/Core/Preference.lean#L44",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Indifferent.refl",
+      "display_name": "Indifferent.refl",
+      "qualified_name": "Indifferent.refl",
+      "module": "EconCSLib.Core.Preference",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/Core/Preference.lean#L47",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Indifferent.symm",
+      "display_name": "Indifferent.symm",
+      "qualified_name": "Indifferent.symm",
+      "module": "EconCSLib.Core.Preference",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/Core/Preference.lean#L50",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Indifferent.trans",
+      "display_name": "Indifferent.trans",
+      "qualified_name": "Indifferent.trans",
+      "module": "EconCSLib.Core.Preference",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/Core/Preference.lean#L53",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

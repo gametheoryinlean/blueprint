@@ -1,0 +1,75 @@
+{
+  "id": "social_choice.fair_division.welfare_monotone",
+  "title": "Basic Welfare Lemmas",
+  "kind": "lemma",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_welfare_monotone.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.core"
+  ],
+  "body_html": "<h1>Basic Welfare Lemmas</h1>\n<p>Three small lemmas keep the welfare layer self-contained.</p>\n<p><strong>Monotonicity of utilitarian welfare.</strong> If $A$ is pointwise weakly\nimproved by $B$,\n$$\n\\bigl(\\forall i,\\ u_i(A(i)) \\le u_i(B(i))\\bigr) \\Rightarrow\nW_{\\mathrm{util}}(u, A) \\le W_{\\mathrm{util}}(u, B).\n$$\nIn Lean: <code>utilitarianWelfare_mono</code> (immediate from <code>Finset.sum_le_sum</code>).</p>\n<p><strong>Unique-agent collapse.</strong> If $N$ has exactly one element (the canonical\n<code>default : N</code>), then $W_{\\mathrm{util}}(u, A) = u_{\\mathrm{default}}(A(\\mathrm{default}))$.\nIn Lean: <code>utilitarianWelfare_unique</code> (<code>@[simp]</code>-tagged).</p>\n<p><strong>Egalitarian lower bound on each agent.</strong> Every agent obtains at least\nthe egalitarian welfare from their share:\n$$\n\\forall i,\\ W_{\\mathrm{egal}}(u, A) \\le u_i(A(i)).\n$$\nIn Lean: <code>egalitarianWelfare_le</code> (immediate from <code>Finset.inf'_le</code>).</p>\n<p>These are the basic algebraic facts used downstream when comparing\nutilitarian and egalitarian objectives (see\n[[social_choice.fair_division.egal_le_util]]).</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Welfare aggregations.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.fair_division.utilitarian_welfare",
+      "title": "Utilitarian Welfare and Utilitarian Optimality",
+      "href": "social_choice/social_choice_fair_division_utilitarian_welfare.html"
+    },
+    {
+      "id": "social_choice.fair_division.egalitarian_welfare",
+      "title": "Egalitarian (Maximin) Welfare",
+      "href": "social_choice/social_choice_fair_division_egalitarian_welfare.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.egal_le_util",
+      "title": "Egalitarian Welfare Lower-Bounds Utilitarian Welfare",
+      "href": "social_choice/social_choice_fair_division_egal_le_util.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.utilitarianWelfare_mono",
+      "display_name": "SocialChoice.FairDivision.utilitarianWelfare_mono",
+      "qualified_name": "SocialChoice.FairDivision.utilitarianWelfare_mono",
+      "module": "EconCSLib.SocialChoice.FairDivision.Welfare",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L47",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.utilitarianWelfare_unique",
+      "display_name": "SocialChoice.FairDivision.utilitarianWelfare_unique",
+      "qualified_name": "SocialChoice.FairDivision.utilitarianWelfare_unique",
+      "module": "EconCSLib.SocialChoice.FairDivision.Welfare",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L55",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.FairDivision.egalitarianWelfare_le",
+      "display_name": "SocialChoice.FairDivision.egalitarianWelfare_le",
+      "qualified_name": "SocialChoice.FairDivision.egalitarianWelfare_le",
+      "module": "EconCSLib.SocialChoice.FairDivision.Welfare",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L61",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

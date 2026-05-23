@@ -1,0 +1,88 @@
+{
+  "id": "social_choice.fair_division.allocation",
+  "title": "Allocation",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_fair_division_allocation.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.fair_division",
+    "social_choice.fair_division.core"
+  ],
+  "body_html": "<h1>Allocation</h1>\n<p>For a population $N$ and a share type $S$, an <em>allocation</em> is a function\n$A : N \\to S$ assigning each agent the share they receive.</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Allocation N S := N → S</code>, a plain type\nalias. Structural feasibility (partitioning a cake into disjoint pieces, or\nsplitting items into disjoint bundles) is <em>not</em> baked into this type — it\nis stated separately by predicates such as the divisible\n<code>IsAllocation</code> ([[social_choice.fair_division.divisible.allocation]]) or\nthe indivisible <code>IsAllocation</code>\n([[social_choice.fair_division.indivisible.allocation]]).</p>\n<p>The separation is deliberate: many algorithms manipulate raw allocations\n(round-robin steps, cycle rotations) before establishing that the result\nis a valid partition.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Allocation as a function from agents to shares.</li>\n<li>[AGT Chapter 13] Nisan et al., <em>Algorithmic Game Theory</em>. Allocations for cake-cutting.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [
+    {
+      "id": "social_choice.fair_division.cardinal_instance",
+      "title": "Cardinal Fair-Division Instance",
+      "href": "social_choice/social_choice_fair_division_cardinal_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.divisible.allocation",
+      "title": "Divisible Allocation",
+      "href": "social_choice/social_choice_fair_division_divisible_allocation.html"
+    },
+    {
+      "id": "social_choice.fair_division.egalitarian_welfare",
+      "title": "Egalitarian (Maximin) Welfare",
+      "href": "social_choice/social_choice_fair_division_egalitarian_welfare.html"
+    },
+    {
+      "id": "social_choice.fair_division.envy_free",
+      "title": "Envy-Free Allocation",
+      "href": "social_choice/social_choice_fair_division_envy_free.html"
+    },
+    {
+      "id": "social_choice.fair_division.equitable",
+      "title": "Equitable Allocation",
+      "href": "social_choice/social_choice_fair_division_equitable.html"
+    },
+    {
+      "id": "social_choice.fair_division.instance",
+      "title": "Fair Division Instance",
+      "href": "social_choice/social_choice_fair_division_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.pareto_optimal",
+      "title": "Pareto Optimal Allocation",
+      "href": "social_choice/social_choice_fair_division_pareto_optimal.html"
+    },
+    {
+      "id": "social_choice.fair_division.proportional",
+      "title": "Proportional Allocation",
+      "href": "social_choice/social_choice_fair_division_proportional.html"
+    },
+    {
+      "id": "social_choice.fair_division.share_instance",
+      "title": "Share Instance (No-Externality Model)",
+      "href": "social_choice/social_choice_fair_division_share_instance.html"
+    },
+    {
+      "id": "social_choice.fair_division.solution_concept",
+      "title": "Fair Division Solution Concept and Rule",
+      "href": "social_choice/social_choice_fair_division_solution_concept.html"
+    },
+    {
+      "id": "social_choice.fair_division.utilitarian_welfare",
+      "title": "Utilitarian Welfare and Utilitarian Optimality",
+      "href": "social_choice/social_choice_fair_division_utilitarian_welfare.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Allocation",
+      "display_name": "SocialChoice.FairDivision.Allocation",
+      "qualified_name": "SocialChoice.FairDivision.Allocation",
+      "module": "EconCSLib.SocialChoice.FairDivision.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/FairDivision/Basic.lean#L29",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

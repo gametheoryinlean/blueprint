@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -46,7 +46,7 @@
     },
     {
       "id": "utility.preference_relation",
-      "title": "Preference Relation",
+      "title": "Preference Relation (MSZ Ch.2 Narrative)",
       "kind": "definition",
       "status": "staged",
       "href": "utility/utility_preference_relation.html",
@@ -145,8 +145,24 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "core.preference",
+      "title": "Core.Preference",
+      "href": "core/preference/index.html",
+      "role": "dependency",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:core.preference",
+      "to": "utility.preference_relation",
+      "kind": "boundary_dependency",
+      "topic": "core.preference",
+      "count": 4
+    }
+  ],
   "keywords": [
     {
       "id": "affine",

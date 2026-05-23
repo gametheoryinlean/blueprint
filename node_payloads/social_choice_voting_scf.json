@@ -1,0 +1,68 @@
+{
+  "id": "social_choice.voting.scf",
+  "title": "Social Choice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_scf.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting"
+  ],
+  "body_html": "<h1>Social Choice Function</h1>\n<p>A <em>social choice function</em> (SCF) on a population $N$ and alternative set $A$\nis a map\n$$\nG : \\mathrm{PrefProfile}(N, A) \\to A\n$$\nthat selects, for every preference profile, a single winning alternative.</p>\n<p>In Lean this is the structure <code>SocialChoice.Voting.SCF N A</code> with one field\n<code>f : PrefProfile N A → A</code>, equipped with a <code>CoeFun</code> so <code>G P</code> is the chosen\nalternative at profile $P$.</p>\n<p>Compared with a social welfare function ([[social_choice.voting.swf]]) the\nSCF returns only the top-pick rather than a full ranking. The standard\naxioms — unanimity ([[social_choice.voting.unanimity]]), monotonicity\n([[social_choice.voting.monotonic_scf]]), strategy-proofness\n([[social_choice.voting.strategyproof]]), and (non-)dictatorship\n([[social_choice.voting.dictatorial_scf]]) — are all stated directly on\n$G(P)$.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Social choice function.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.core.preference_profile",
+      "title": "Preference Profile",
+      "href": "social_choice/social_choice_core_preference_profile.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.dictatorial_scf",
+      "title": "Dictatorial Social Choice Function",
+      "href": "social_choice/social_choice_voting_dictatorial_scf.html"
+    },
+    {
+      "id": "social_choice.voting.gibbard_satterthwaite",
+      "title": "Gibbard–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_gibbard_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.monotonic_scf",
+      "title": "Monotonic Social Choice Function",
+      "href": "social_choice/social_choice_voting_monotonic_scf.html"
+    },
+    {
+      "id": "social_choice.voting.muller_satterthwaite",
+      "title": "Muller–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_muller_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.strategyproof",
+      "title": "Strategy-Proof Social Choice Function",
+      "href": "social_choice/social_choice_voting_strategyproof.html"
+    },
+    {
+      "id": "social_choice.voting.unanimity",
+      "title": "Unanimity (Pareto Axiom)",
+      "href": "social_choice/social_choice_voting_unanimity.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.SCF",
+      "display_name": "SocialChoice.Voting.SCF",
+      "qualified_name": "SocialChoice.Voting.SCF",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Basic.lean#L29",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

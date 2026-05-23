@@ -1,0 +1,53 @@
+{
+  "id": "social_choice.voting.strategyproof",
+  "title": "Strategy-Proof Social Choice Function",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_strategyproof.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting"
+  ],
+  "body_html": "<h1>Strategy-Proof Social Choice Function</h1>\n<p>A social choice function $G$ is <em>strategy-proof</em> (non-manipulable) if no\nvoter can improve their outcome by misreporting: for every profile $P$,\nvoter $i$, and alternative report $Q_i$,\n$$\n\\neg\\bigl(\\, G(P[i \\mapsto Q_i]) \\succ_{P_i} G(P) \\,\\bigr).\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.SCF.StrategyProof</code>, using\n<code>Function.update P i Q_i</code> for the profile with voter $i$'s report replaced\nby $Q_i$. Voter $i$'s <em>true</em> preference $P_i$ is what determines whether\ndeviating is profitable.</p>\n<p>Strategy-proofness is the central incentive-compatibility axiom for ordinal\nvoting rules; it is the natural ordinal counterpart of dominant-strategy\nincentive compatibility (DSIC) in mechanism design.</p>\n<p>Two classical implications closed the field:</p>\n<ul>\n<li>Strategy-proof SCFs are monotonic\n  ([[social_choice.voting.strategyproof_implies_monotonic]]).</li>\n<li>Combined with unanimity ([[social_choice.voting.unanimity]]) and\n  $|A| \\ge 3$, strategy-proofness forces dictatorship — the\n  Gibbard–Satterthwaite theorem\n  ([[social_choice.voting.gibbard_satterthwaite]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.36] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Strategy-proof / nonmanipulable SCF.</li>\n<li>Gibbard, A. (1973). \"Manipulation of voting schemes\". <em>Econometrica</em>.</li>\n<li>Satterthwaite, M. A. (1975). \"Strategy-proofness and Arrow's conditions\". <em>J. Econ. Theory</em>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.voting.scf",
+      "title": "Social Choice Function",
+      "href": "social_choice/social_choice_voting_scf.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.gibbard_satterthwaite",
+      "title": "Gibbard–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_gibbard_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.strategyproof_implies_monotonic",
+      "title": "Strategy-Proof ⇒ Monotonic",
+      "href": "social_choice/social_choice_voting_strategyproof_implies_monotonic.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.SCF.StrategyProof",
+      "display_name": "SocialChoice.Voting.SCF.StrategyProof",
+      "qualified_name": "SocialChoice.Voting.SCF.StrategyProof",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Basic.lean#L80",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

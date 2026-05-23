@@ -4,20 +4,20 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 73,
-    "descendant_node_count": 73
+    "node_count": 79,
+    "descendant_node_count": 79
   },
   "counts": {
-    "internal_nodes": 73,
-    "descendant_nodes": 73,
+    "internal_nodes": 79,
+    "descendant_nodes": 79,
     "child_topics": 7,
-    "non_proof_plan_nodes": 63,
-    "proof_plan_nodes": 10,
-    "selected_proof_plan_nodes": 6,
+    "non_proof_plan_nodes": 70,
+    "proof_plan_nodes": 9,
+    "selected_proof_plan_nodes": 5,
     "boundary_topics": 9,
-    "proof_plan_attachments": 10,
-    "visible_nodes_without_proof_plans": 73,
-    "visible_nodes_with_selected_proof_plans": 79
+    "proof_plan_attachments": 9,
+    "visible_nodes_without_proof_plans": 80,
+    "visible_nodes_with_selected_proof_plans": 85
   },
   "nodes": [
     {
@@ -335,6 +335,14 @@
       "payload": "node_payloads/zero_sum_examples_two_by_two_value_formula.json"
     },
     {
+      "id": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "title": "Cesàro Payoff Convergence From Robinson Lemma",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_fictitious_play_cesaro_payoff_from_robinson.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_cesaro_payoff_from_robinson.json"
+    },
+    {
       "id": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "title": "Continuous Fictitious Play Closes The Duality Gap",
       "kind": "proposition",
@@ -367,14 +375,44 @@
       "payload": "node_payloads/zero_sum_fictitious_play_fictitious_play_convergence.json"
     },
     {
-      "id": "zero_sum.fictitious_play.fictitious_play_robinson_proof",
-      "title": "Robinson Proof Of Fictitious Play Convergence",
-      "kind": "proof-plan",
+      "id": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "title": "Robinson Admissible Sequence Lemma",
+      "kind": "lemma",
       "status": "staged",
-      "href": "zero_sum/zero_sum_fictitious_play_fictitious_play_robinson_proof.html",
-      "payload": "node_payloads/zero_sum_fictitious_play_fictitious_play_robinson_proof.json",
-      "target": "zero_sum.fictitious_play.fictitious_play_convergence",
-      "plan_status": "selected"
+      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_robinson_admissible_lemma.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
+      "title": "Bracket Invariant For Admissible Sequences",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma_bracket_invariant.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_robinson_admissible_lemma_bracket_invariant.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
+      "title": "Euclidean Division Pasting In Robinson Induction",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma_induction_step.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_robinson_admissible_lemma_induction_step.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
+      "title": "Subgame Reduction For Non-Useful Indices",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma_subgame_reduction.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_robinson_admissible_lemma_subgame_reduction.json"
+    },
+    {
+      "id": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
+      "title": "Useful Window Bound For Admissible Sequences",
+      "kind": "lemma",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma_useful_window.html",
+      "payload": "node_payloads/zero_sum_fictitious_play_robinson_admissible_lemma_useful_window.json"
     },
     {
       "id": "zero_sum.lam_mu_existence",
@@ -515,6 +553,14 @@
       "status": "staged",
       "href": "zero_sum/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
       "payload": "node_payloads/zero_sum_minimax_stochastic_matrix_invariant_distribution.json"
+    },
+    {
+      "id": "zero_sum.minimax.value_predicates",
+      "title": "Field-Generic Value Predicates",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_value_predicates.html",
+      "payload": "node_payloads/zero_sum_minimax_value_predicates.json"
     },
     {
       "id": "zero_sum.minimax.ville_discretization_proof",
@@ -977,6 +1023,26 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.core.duality_gap",
       "to": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "kind": "uses"
@@ -1022,8 +1088,83 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+      "to": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.fictitious_play.fictitious_play",
       "to": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "to": "zero_sum.fictitious_play.fictitious_play_convergence",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.fictitious_play",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
+      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
       "kind": "uses"
     },
     {
@@ -1129,6 +1270,16 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.minimax.value_predicates",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.maximin_minimax",
+      "to": "zero_sum.minimax.value_predicates",
       "kind": "uses"
     },
     {
@@ -1362,6 +1513,12 @@
       "count": 1
     },
     {
+      "id": "cesaro",
+      "title": "cesaro",
+      "href": "keywords/cesaro.html",
+      "count": 1
+    },
+    {
       "id": "compactness",
       "title": "compactness",
       "href": "keywords/compactness.html",
@@ -1455,7 +1612,13 @@
       "id": "fictitious-play",
       "title": "fictitious-play",
       "href": "keywords/fictitious-play.html",
-      "count": 6
+      "count": 11
+    },
+    {
+      "id": "field-generic",
+      "title": "field-generic",
+      "href": "keywords/field-generic.html",
+      "count": 1
     },
     {
       "id": "finite-game",
@@ -1473,6 +1636,12 @@
       "id": "guarantee",
       "title": "guarantee",
       "href": "keywords/guarantee.html",
+      "count": 1
+    },
+    {
+      "id": "invariant",
+      "title": "invariant",
+      "href": "keywords/invariant.html",
       "count": 1
     },
     {
@@ -1560,10 +1729,16 @@
       "count": 1
     },
     {
+      "id": "predicate",
+      "title": "predicate",
+      "href": "keywords/predicate.html",
+      "count": 1
+    },
+    {
       "id": "proof-plan",
       "title": "proof-plan",
       "href": "keywords/proof-plan.html",
-      "count": 8
+      "count": 7
     },
     {
       "id": "redirect",
@@ -1575,7 +1750,7 @@
       "id": "robinson",
       "title": "robinson",
       "href": "keywords/robinson.html",
-      "count": 1
+      "count": 6
     },
     {
       "id": "saddle-point",
@@ -1647,7 +1822,7 @@
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 12
+      "count": 13
     },
     {
       "id": "value-operator",
@@ -1671,7 +1846,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 72
+      "count": 78
     }
   ],
   "proof_plan_attachments": [
@@ -1680,12 +1855,6 @@
       "to": "zero_sum.dantzig_proof_spine",
       "kind": "has_plan",
       "plan_status": "candidate"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play_convergence",
-      "to": "zero_sum.fictitious_play.fictitious_play_robinson_proof",
-      "kind": "has_plan",
-      "plan_status": "selected"
     },
     {
       "from": "zero_sum.von_neumann_minimax",
@@ -1771,16 +1940,16 @@
       "title": "Zero Sum.Core",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 22,
-      "direct_node_count": 22,
+      "node_count": 23,
+      "direct_node_count": 23,
       "kind_counts": {
-        "definition": 13,
+        "definition": 14,
         "lemma": 3,
         "proposition": 2,
         "theorem": 4
       },
       "status_counts": {
-        "formalized": 20,
+        "formalized": 21,
         "staged": 2
       },
       "href": "zero_sum/core/index.html",
@@ -1809,16 +1978,16 @@
       "title": "Zero Sum.Fictitious Play",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 5,
-      "direct_node_count": 5,
+      "node_count": 10,
+      "direct_node_count": 10,
       "kind_counts": {
         "definition": 2,
-        "proof-plan": 1,
+        "lemma": 6,
         "proposition": 1,
         "theorem": 1
       },
       "status_counts": {
-        "staged": 5
+        "staged": 10
       },
       "href": "zero_sum/fictitious_play/index.html",
       "children": []
@@ -1845,10 +2014,11 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 18,
-      "direct_node_count": 18,
+      "node_count": 19,
+      "direct_node_count": 19,
       "kind_counts": {
         "concept": 1,
+        "definition": 1,
         "lemma": 2,
         "proof-plan": 8,
         "theorem": 7
@@ -1856,7 +2026,7 @@
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 6,
+        "formalized": 7,
         "staged": 9
       },
       "href": "zero_sum/minimax/index.html",
@@ -1897,13 +2067,13 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.fictitious_play",
       "kind": "topic_dependency",
-      "count": 7
+      "count": 10
     },
     {
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.minimax",
       "kind": "topic_dependency",
-      "count": 7
+      "count": 9
     },
     {
       "from": "topic:zero_sum.core",

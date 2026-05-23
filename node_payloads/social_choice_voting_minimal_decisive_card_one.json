@@ -1,0 +1,54 @@
+{
+  "id": "social_choice.voting.minimal_decisive_card_one",
+  "title": "Minimal Decisive Coalition Has Size One",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_minimal_decisive_card_one.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.arrow"
+  ],
+  "body_html": "<h1>Minimal Decisive Coalition Has Size One</h1>\n<p><strong>Theorem.</strong> Let $F$ be a social welfare function on a finite nonempty voter\ntype with $|A| \\ge 3$, satisfying unanimity ([[social_choice.voting.unanimity]])\nand IIA ([[social_choice.voting.iia]]). Then $F$ admits a decisive coalition of\nsize exactly one.</p>\n<p>Formally: the cardinality predicate $n \\mapsto \\exists C\\ \\mathrm{decisive\\ of\\ size}\\ n$\nis well-founded on $\\mathbb{N}$, and its minimum equals $1$.</p>\n<p>In Lean: <code>SocialChoice.Voting.minimal_decisive_coalition_card_one</code>.</p>",
+  "proof_html": "<p>sketch</p>\n<ol>\n<li>\n<p>The grand coalition is decisive of size $|N|$\n   ([[social_choice.voting.unanimity_univ_decisive]]), so the cardinality\n   predicate is nonempty. Take any minimal $n$.</p>\n</li>\n<li>\n<p>$n \\ne 0$: a decisive coalition is nonempty by definition.</p>\n</li>\n<li>\n<p>$n &lt; 2$: if $n \\ge 2$, the contraction lemma\n   ([[social_choice.voting.decisive_contraction]]) produces a strictly\n   smaller decisive coalition, contradicting minimality.</p>\n</li>\n</ol>\n<p>Combining $n \\ne 0$ and $n &lt; 2$ forces $n = 1$. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Minimality step in the decisive-coalitions proof.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "social_choice.voting.is_decisive",
+      "title": "Decisive Coalition and Dictator",
+      "href": "social_choice/social_choice_voting_is_decisive.html"
+    },
+    {
+      "id": "social_choice.voting.unanimity_univ_decisive",
+      "title": "Grand Coalition Is Decisive under Unanimity",
+      "href": "social_choice/social_choice_voting_unanimity_univ_decisive.html"
+    },
+    {
+      "id": "social_choice.voting.decisive_contraction",
+      "title": "Coalition Contraction — Splitting a Decisive Coalition",
+      "href": "social_choice/social_choice_voting_decisive_contraction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.arrow_of_unanimity_iia",
+      "title": "Arrow's Theorem via Decisive Coalitions",
+      "href": "social_choice/social_choice_voting_arrow_of_unanimity_iia.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.minimal_decisive_coalition_card_one",
+      "display_name": "SocialChoice.Voting.minimal_decisive_coalition_card_one",
+      "qualified_name": "SocialChoice.Voting.minimal_decisive_coalition_card_one",
+      "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Decisive.lean#L581",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

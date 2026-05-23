@@ -1,0 +1,54 @@
+{
+  "id": "social_choice.voting.is_decisive_for",
+  "title": "Decisive Coalition for an Ordered Pair",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_is_decisive_for.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting",
+    "social_choice.voting.arrow"
+  ],
+  "body_html": "<h1>Decisive Coalition for an Ordered Pair</h1>\n<p>Fix a social welfare function $F$ ([[social_choice.voting.swf]]). A coalition\n$C \\subseteq N$ is <em>decisive for the ordered pair</em> $(a, b)$ if unanimous\nstrict $a \\succ b$ inside $C$ forces society to rank $a \\succ b$:\n$$\n\\forall P,\\ \\bigl(\\forall i \\in C,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow a \\succ_{F(P)} b.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.IsDecisiveFor F C a b</code>.</p>\n<p>The pair $(a,b)$ is ordered: decisiveness for $(a,b)$ does <em>not</em> imply\ndecisiveness for $(b,a)$. Lifting from a single decisive pair to all pairs is\nthe content of the <em>field expansion</em> lemma\n[[social_choice.voting.decisive_spread]].</p>\n<p>Decisiveness is the structural device behind the Arrow proof\n([[social_choice.voting.arrow_of_unanimity_iia]]): one shows the grand\ncoalition is decisive (under unanimity), that decisive coalitions can be\nshrunk in cardinality (under unanimity + IIA), and that a singleton\ndecisive coalition is a dictator.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.14] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Decisive coalitions.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.voting.swf",
+      "title": "Social Welfare Function",
+      "href": "social_choice/social_choice_voting_swf.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.is_decisive",
+      "title": "Decisive Coalition and Dictator",
+      "href": "social_choice/social_choice_voting_is_decisive.html"
+    },
+    {
+      "id": "social_choice.voting.is_weakly_decisive_for",
+      "title": "Weakly Decisive Coalition",
+      "href": "social_choice/social_choice_voting_is_weakly_decisive_for.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.IsDecisiveFor",
+      "display_name": "SocialChoice.Voting.IsDecisiveFor",
+      "qualified_name": "SocialChoice.Voting.IsDecisiveFor",
+      "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Decisive.lean#L51",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

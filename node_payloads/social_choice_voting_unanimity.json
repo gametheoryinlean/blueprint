@@ -1,0 +1,96 @@
+{
+  "id": "social_choice.voting.unanimity",
+  "title": "Unanimity (Pareto Axiom)",
+  "kind": "definition",
+  "status": "staged",
+  "href": "social_choice/social_choice_voting_unanimity.html",
+  "primary_topic": "social_choice",
+  "topics": [
+    "social_choice",
+    "social_choice.voting"
+  ],
+  "body_html": "<h1>Unanimity (Pareto Axiom)</h1>\n<p>Unanimity asks that an aggregation rule respect unanimous individual strict\nrankings. Two parallel versions:</p>\n<p><strong>SWF unanimity.</strong> A social welfare function $F$ is <em>unanimous</em> if for every\nprofile $P$ and every pair $a, b \\in A$,\n$$\n\\bigl(\\forall i \\in N,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow a \\succ_{F(P)} b.\n$$</p>\n<p><strong>SCF unanimity.</strong> A social choice function $G$ is <em>unanimous</em> if for every\nprofile $P$ and every $a \\in A$,\n$$\n\\bigl(\\forall i \\in N,\\ \\forall b \\ne a,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow G(P) = a.\n$$</p>\n<p>In Lean these are <code>SocialChoice.Voting.SWF.Unanimity</code> and\n<code>SocialChoice.Voting.SCF.Unanimity</code>, defined in terms of the bundled strict\npreference [[social_choice.core.strict_preference]].</p>\n<p>Unanimity is the weakest Paretian axiom in this hierarchy. It is the hypothesis\nfor both Arrow's impossibility ([[social_choice.voting.arrow_impossibility]])\nand Muller-Satterthwaite ([[social_choice.voting.muller_satterthwaite]]).</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.8, 21.26] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Unanimity / Pareto axioms.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "social_choice.voting.swf",
+      "title": "Social Welfare Function",
+      "href": "social_choice/social_choice_voting_swf.html"
+    },
+    {
+      "id": "social_choice.voting.scf",
+      "title": "Social Choice Function",
+      "href": "social_choice/social_choice_voting_scf.html"
+    },
+    {
+      "id": "social_choice.core.strict_preference",
+      "title": "Strict Preference",
+      "href": "social_choice/social_choice_core_strict_preference.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "social_choice.voting.arrow_impossibility",
+      "title": "Arrow's Impossibility Theorem",
+      "href": "social_choice/social_choice_voting_arrow_impossibility.html"
+    },
+    {
+      "id": "social_choice.voting.arrow_of_unanimity_iia",
+      "title": "Arrow's Theorem via Decisive Coalitions",
+      "href": "social_choice/social_choice_voting_arrow_of_unanimity_iia.html"
+    },
+    {
+      "id": "social_choice.voting.decisive_contraction",
+      "title": "Coalition Contraction — Splitting a Decisive Coalition",
+      "href": "social_choice/social_choice_voting_decisive_contraction.html"
+    },
+    {
+      "id": "social_choice.voting.decisive_spread",
+      "title": "Field Expansion — Decisive on One Pair Implies Decisive Everywhere",
+      "href": "social_choice/social_choice_voting_decisive_spread.html"
+    },
+    {
+      "id": "social_choice.voting.gibbard_satterthwaite",
+      "title": "Gibbard–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_gibbard_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.muller_satterthwaite",
+      "title": "Muller–Satterthwaite Theorem",
+      "href": "social_choice/social_choice_voting_muller_satterthwaite.html"
+    },
+    {
+      "id": "social_choice.voting.unanimity_univ_decisive",
+      "title": "Grand Coalition Is Decisive under Unanimity",
+      "href": "social_choice/social_choice_voting_unanimity_univ_decisive.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.Voting.SWF.Unanimity",
+      "display_name": "SocialChoice.Voting.SWF.Unanimity",
+      "qualified_name": "SocialChoice.Voting.SWF.Unanimity",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Basic.lean#L44",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "SocialChoice.Voting.SCF.Unanimity",
+      "display_name": "SocialChoice.Voting.SCF.Unanimity",
+      "qualified_name": "SocialChoice.Voting.SCF.Unanimity",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "f95604f008beee0925f18cd2fcb14efdd6ccc98f",
+      "short_revision": "f95604f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f95604f008beee0925f18cd2fcb14efdd6ccc98f/EconCSLib/SocialChoice/Voting/Basic.lean#L74",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}
