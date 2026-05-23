@@ -3,35 +3,36 @@
   "title": "Maxmin Is At Most Minmax",
   "kind": "lemma",
   "status": "staged",
-  "href": "zero_sum/core/zero_sum_core_maxmin_le_minmax.html",
-  "primary_topic": "zero_sum.core",
+  "href": "zero_sum/zero_sum_core_maxmin_le_minmax.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.core"
   ],
   "body_html": "<h1>Maxmin Is At Most Minmax</h1>\n<p>For every zero-sum game, $\\underline v \\le \\overline v$.</p>",
-  "proof_html": "<p>For every pair $(i,j)$,\n$$\n  \\inf_{j' \\in J} g(i,j') \\le g(i,j) \\le \\sup_{i' \\in I} g(i',j).\n$$\nTaking the supremum over $i$ on the left and the infimum over $j$ on the right\ngives $\\underline v \\le \\overline v$. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lemma 2.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Weak duality for maxmin and minmax.</li>\n</ul>",
+  "proof_html": "<p>For every pair $(i,j)$,\n$$\n  \\inf_{j' \\in J} g(i,j') \\le g(i,j) \\le \\sup_{i' \\in I} g(i',j).\n$$\nTaking the supremum over $i$ on the left and the infimum over $j$ on the right\ngives $\\underline v \\le \\overline v$. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lem. 2.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Weak duality for maxmin and minmax.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.maxmin_minmax",
       "title": "Maxmin And Minmax",
-      "href": "zero_sum/core/zero_sum_core_maxmin_minmax.html"
+      "href": "zero_sum/zero_sum_core_maxmin_minmax.html"
     }
   ],
   "dependents": [
     {
       "id": "zero_sum.core.common_guarantee_value",
       "title": "Common Guarantee Gives The Value",
-      "href": "zero_sum/core/zero_sum_core_common_guarantee_value.html"
+      "href": "zero_sum/zero_sum_core_common_guarantee_value.html"
     },
     {
       "id": "zero_sum.examples.three_player_minimax_failure",
       "title": "Three-Player Minimax Failure",
-      "href": "zero_sum/examples/zero_sum_examples_three_player_minimax_failure.html"
+      "href": "zero_sum/zero_sum_examples_three_player_minimax_failure.html"
     },
     {
       "id": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "title": "Continuous Fictitious Play Closes The Duality Gap",
-      "href": "zero_sum/fictitious_play/zero_sum_fictitious_play_continuous_fictitious_play_gap.html"
+      "href": "zero_sum/zero_sum_fictitious_play_continuous_fictitious_play_gap.html"
     }
   ],
   "lean_refs": []

@@ -3,30 +3,31 @@
   "title": "Duality Gap In A Matrix Game",
   "kind": "definition",
   "status": "staged",
-  "href": "zero_sum/core/zero_sum_core_duality_gap.html",
-  "primary_topic": "zero_sum.core",
+  "href": "zero_sum/zero_sum_core_duality_gap.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Duality Gap In A Matrix Game</h1>\n<p>For a finite matrix game with bilinear payoff $g(x,y)=xAy$, define\n$$\n  L(y)=\\max_{x'\\in\\Delta(I)} g(x',y),\n  \\qquad\n  M(x)=\\min_{y'\\in\\Delta(J)} g(x,y').\n$$\nThe duality gap at $(x,y)$ is\n$$\n  W(x,y)=L(y)-M(x)\\ge0.\n$$</p>\n<p>The gap is zero exactly when $x$ and $y$ are optimal strategies. Indeed,\n$W(x,y)=0$ says that the best payoff player 1 can obtain against $y$ equals the\nworst payoff player 1 can secure with $x$, so the two one-sided guarantees meet\nat the value.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, proof of Proposition 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. L(y), M(x), and W(x,y)=L(y)-M(x) used for continuous fictitious play.</li>\n</ul>",
+  "body_html": "<h1>Duality Gap In A Matrix Game</h1>\n<p>For a finite matrix game with bilinear payoff $g(x,y)=xAy$, define\n$$\n  L(y)=\\max_{x'\\in\\Delta(I)} g(x',y),\n  \\qquad\n  M(x)=\\min_{y'\\in\\Delta(J)} g(x,y').\n$$\nThe duality gap at $(x,y)$ is\n$$\n  W(x,y)=L(y)-M(x)\\ge0.\n$$</p>\n<p>The gap is zero exactly when $x$ and $y$ are optimal strategies. Indeed,\n$W(x,y)=0$ says that the best payoff player 1 can obtain against $y$ equals the\nworst payoff player 1 can secure with $x$, so the two one-sided guarantees meet\nat the value.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, proof of Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. L(y), M(x), and W(x,y)=L(y)-M(x) used for continuous fictitious play.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
       "id": "zero_sum.core.mixed_extension",
       "title": "Mixed Extension Of A Matrix Game",
-      "href": "zero_sum/core/zero_sum_core_mixed_extension.html"
+      "href": "zero_sum/zero_sum_core_mixed_extension.html"
     },
     {
       "id": "zero_sum.core.optimal_strategy_sets",
       "title": "Optimal Strategy Sets",
-      "href": "zero_sum/core/zero_sum_core_optimal_strategy_sets.html"
+      "href": "zero_sum/zero_sum_core_optimal_strategy_sets.html"
     }
   ],
   "dependents": [
     {
       "id": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "title": "Continuous Fictitious Play Closes The Duality Gap",
-      "href": "zero_sum/fictitious_play/zero_sum_fictitious_play_continuous_fictitious_play_gap.html"
+      "href": "zero_sum/zero_sum_fictitious_play_continuous_fictitious_play_gap.html"
     }
   ],
   "lean_refs": []

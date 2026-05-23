@@ -241,7 +241,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 132
+      "node_count": 134
     },
     {
       "id": "strategic_games.core",
@@ -262,7 +262,7 @@
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency",
-      "node_count": 13
+      "node_count": 15
     },
     {
       "id": "strategic_games.refinements",
@@ -279,11 +279,18 @@
       "node_count": 15
     },
     {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 77
+    },
+    {
       "id": "zero_sum.core",
       "title": "Zero Sum.Core",
       "href": "zero_sum/core/index.html",
       "role": "dependency",
-      "node_count": 19
+      "node_count": 26
     }
   ],
   "child_boundary_edges": [
@@ -341,6 +348,20 @@
       "to": "topic:extensive_game.examples",
       "kind": "boundary_dependency",
       "topic": "strategic_games.refinements",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:extensive_game.examples",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:extensive_game.perfect_information",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
       "count": 1
     },
     {

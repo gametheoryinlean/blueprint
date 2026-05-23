@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -51,6 +51,13 @@
       "href": "linear_algebra/index.html",
       "role": "dependency",
       "node_count": 3
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependent",
+      "node_count": 77
     }
   ],
   "boundary_edges": [
@@ -59,6 +66,13 @@
       "to": "linear_programming.strong_duality",
       "kind": "boundary_dependency",
       "topic": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "linear_programming.strong_complementarity",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
       "count": 1
     }
   ],

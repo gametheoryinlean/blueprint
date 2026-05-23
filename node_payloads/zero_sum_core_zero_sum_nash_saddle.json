@@ -3,23 +3,29 @@
   "title": "Zero-Sum Nash Equilibria As Saddle Points",
   "kind": "proposition",
   "status": "staged",
-  "href": "zero_sum/core/zero_sum_core_zero_sum_nash_saddle.html",
-  "primary_topic": "zero_sum.core",
+  "href": "zero_sum/zero_sum_core_zero_sum_nash_saddle.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Zero-Sum Nash Equilibria As Saddle Points</h1>\n<p>In a zero-sum game, a pair of mixed strategies is a Nash equilibrium exactly\nwhen it is a saddle point of the matrix payoff.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Proposition 2.4.1(d), proof paragraph] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Saddle points express the identity between optimal strategies and Nash equilibria.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Zero-Sum Nash Equilibria As Saddle Points</h1>\n<p>In a zero-sum game, a pair of mixed strategies is a Nash equilibrium exactly\nwhen it is a saddle point of the matrix payoff.</p>",
+  "proof_html": "<p>Write $u(x,y)=xAy$ for player $1$'s payoff and $-u(x,y)$ for player\n$2$'s payoff. A mixed pair $(x^*,y^*)$ is a Nash equilibrium exactly when\n$$\n  u(x,y^*)\\le u(x^*,y^*)\\quad\\text{for all }x\n$$\nand\n$$\n  -u(x^*,y)\\le -u(x^*,y^*)\\quad\\text{for all }y.\n$$\nThe second inequality is equivalent to\n$u(x^*,y^*)\\le u(x^*,y)$ for all $y$. Together these are precisely the saddle\npoint inequalities.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(d), proof paragraph] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Saddle points express the identity between optimal strategies and Nash equilibria.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.saddle_point",
       "title": "Saddle Point",
-      "href": "zero_sum/core/zero_sum_core_saddle_point.html"
+      "href": "zero_sum/zero_sum_core_saddle_point.html"
     },
     {
       "id": "zero_sum.zero_sum_game",
       "title": "Zero-Sum Game",
       "href": "zero_sum/zero_sum_zero_sum_game.html"
+    },
+    {
+      "id": "strategic_games.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "strategic_games/strategic_games_nash_equilibrium.html"
     }
   ],
   "dependents": [],

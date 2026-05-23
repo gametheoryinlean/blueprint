@@ -99,6 +99,10 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../mixed_strategy/index.html">Mixed Strategy</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../order/index.html">Order</a>
         </li>
       
@@ -255,6 +259,8 @@
       
         <li><a href="../keywords/cournot.html">cournot</a></li>
       
+        <li><a href="../keywords/dantzig.html">dantzig</a></li>
+      
         <li><a href="../keywords/definition.html">definition</a></li>
       
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
@@ -339,6 +345,8 @@
       
         <li><a href="../keywords/individual-rationality.html">individual-rationality</a></li>
       
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/invariance.html">invariance</a></li>
@@ -394,6 +402,8 @@
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
       
         <li><a href="../keywords/obedience.html">obedience</a></li>
+      
+        <li><a href="../keywords/open-issue.html">open-issue</a></li>
       
         <li><a href="../keywords/optimal-strategy.html">optimal-strategy</a></li>
       
@@ -586,11 +596,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/ZeroSum.lean#L69"><code>StrategicGame.IsZeroSum.nash_payoff_eq</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/ZeroSum.lean#L69"><code>StrategicGame.IsZeroSum.nash_payoff_eq</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.ZeroSum
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.ZeroSum
           </span>
           
           
@@ -598,11 +608,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/ZeroSum.lean#L120"><code>StrategicGame.IsZeroSum.nash_payoff_eq_p1</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/ZeroSum.lean#L120"><code>StrategicGame.IsZeroSum.nash_payoff_eq_p1</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.ZeroSum
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.ZeroSum
           </span>
           
           
@@ -624,15 +634,49 @@ game, independent of which Nash equilibrium is chosen.</p>
 <p>The proof compares two equilibria through cross profiles.  One player's best
 response inequality is converted into the other player's inequality using
 zero-sum payoff negation.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Let $\sigma=(\sigma_0,\sigma_1)$ and
+$\tau=(\tau_0,\tau_1)$ be two Nash equilibria, and write $u$ for player $0$'s
+payoff. Since $\sigma_0$ is a best response to $\sigma_1$ and $\tau_0$ is an
+available deviation,
+$$
+  u(\sigma_0,\sigma_1)\ge u(\tau_0,\sigma_1).
+$$
+Since $\tau_1$ is a best response to $\tau_0$ for player $1$, payoff negation
+turns player $1$'s best-response inequality into
+$$
+  u(\tau_0,\sigma_1)\ge u(\tau_0,\tau_1).
+$$
+Thus $u(\sigma)\ge u(\tau)$. Reversing the roles of $\sigma$ and $\tau$ gives
+$u(\tau)\ge u(\sigma)$, so player $0$'s equilibrium payoff is unique. Player
+$1$'s payoff is its negative, hence is unique as well.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 4, Theorems 4.44-4.45] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. All Nash equilibria of a zero-sum game have the same payoff value.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
   
 
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../zero_sum/index.html">Zero Sum</a></li>
+      
+      <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      
+      <li><a href="../strategic_games/equilibrium/index.html">Strategic Games.Equilibrium</a></li>
+      
+    </ul>
+  </section>
   
 
   

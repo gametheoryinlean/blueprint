@@ -151,6 +151,22 @@
       ]
     },
     {
+      "id": "mixed_strategy",
+      "title": "Mixed Strategy",
+      "depth": 1,
+      "parent": null,
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "lemma": 1
+      },
+      "status_counts": {
+        "formalized": 1
+      },
+      "href": "mixed_strategy/index.html",
+      "children": []
+    },
+    {
       "id": "order",
       "title": "Order",
       "depth": 1,
@@ -171,16 +187,17 @@
       "title": "Strategic Games",
       "depth": 1,
       "parent": null,
-      "node_count": 132,
+      "node_count": 134,
       "direct_node_count": 10,
       "kind_counts": {
         "definition": 74,
         "example": 6,
         "proposition": 18,
-        "theorem": 34
+        "theorem": 36
       },
       "status_counts": {
         "admitted": 10,
+        "formalized": 2,
         "staged": 122
       },
       "href": "strategic_games/index.html",
@@ -225,19 +242,19 @@
       "title": "Zero Sum",
       "depth": 1,
       "parent": null,
-      "node_count": 73,
-      "direct_node_count": 9,
+      "node_count": 77,
+      "direct_node_count": 77,
       "kind_counts": {
         "definition": 22,
         "example": 8,
-        "lemma": 5,
+        "lemma": 6,
         "proof-plan": 9,
         "proposition": 17,
-        "theorem": 12
+        "theorem": 15
       },
       "status_counts": {
-        "admitted": 3,
-        "formalized": 6,
+        "admitted": 2,
+        "formalized": 11,
         "staged": 64
       },
       "href": "zero_sum/index.html",
@@ -279,8 +296,23 @@
       "count": 1
     },
     {
+      "from": "linear_programming",
+      "to": "zero_sum",
+      "count": 1
+    },
+    {
       "from": "mechanism_design",
       "to": "auction",
+      "count": 4
+    },
+    {
+      "from": "mixed_strategy",
+      "to": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "mixed_strategy",
+      "to": "zero_sum",
       "count": 4
     },
     {
@@ -301,7 +333,7 @@
     {
       "from": "strategic_games",
       "to": "zero_sum",
-      "count": 3
+      "count": 4
     },
     {
       "from": "zero_sum",
@@ -315,8 +347,13 @@
     },
     {
       "from": "zero_sum",
+      "to": "mixed_strategy",
+      "count": 1
+    },
+    {
+      "from": "zero_sum",
       "to": "strategic_games",
-      "count": 4
+      "count": 9
     }
   ]
 }

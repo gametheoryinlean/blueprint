@@ -3,23 +3,29 @@
   "title": "Strong Complementarity",
   "kind": "proposition",
   "status": "staged",
-  "href": "zero_sum/core/zero_sum_core_strong_complementarity.html",
-  "primary_topic": "zero_sum.core",
+  "href": "zero_sum/zero_sum_core_strong_complementarity.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Strong Complementarity</h1>\n<p>There exists an optimal pair $(x^*,y^*) \\in X(A)\\times Y(A)$ such that a pure\nrow has positive probability under $x^*$ if and only if it is a best response\nto $y^*$, and a pure column has positive probability under $y^*$ if and only\nif it is a best response to $x^*$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Proposition 2.4.1(c)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Existence of a strongly complementary optimal pair.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Strong Complementarity</h1>\n<p>There exists an optimal pair $(x^*,y^*) \\in X(A)\\times Y(A)$ such that a pure\nrow has positive probability under $x^*$ if and only if it is a best response\nto $y^*$, and a pure column has positive probability under $y^*$ if and only\nif it is a best response to $x^*$.</p>",
+  "proof_html": "<p>Write the row player's optimality problem as the linear program that\nmaximizes $v$ subject to\n$$\n  xAe_j\\ge v\\quad (j\\in J),\\qquad x\\in\\Delta(I),\n$$\nand write the dual column problem as the program that minimizes $w$ subject to\n$$\n  e_iAy\\le w\\quad (i\\in I),\\qquad y\\in\\Delta(J).\n$$\nBy linear-programming strong complementarity, there are optimal primal-dual\nsolutions for which each primal slack is positive exactly when the corresponding\ndual variable is zero, and each dual slack is positive exactly when the\ncorresponding primal variable is zero. Translating the slacks back to the matrix\ngame, a row $i$ has zero probability in $x^*$ exactly when its payoff against\n$y^*$ is strictly below the value; hence $x_i^*&gt;0$ exactly when row $i$ is a\nbest response to $y^*$. Similarly, a column $j$ has zero probability in $y^*$\nexactly when $x^*Ae_j$ is strictly above the value; hence $y_j^*&gt;0$ exactly when\ncolumn $j$ is a best response to $x^*$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(c)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Existence of a strongly complementary optimal pair.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.optimal_strategy_sets",
       "title": "Optimal Strategy Sets",
-      "href": "zero_sum/core/zero_sum_core_optimal_strategy_sets.html"
+      "href": "zero_sum/zero_sum_core_optimal_strategy_sets.html"
     },
     {
       "id": "zero_sum.core.support_complementarity",
       "title": "Support Complementarity",
-      "href": "zero_sum/core/zero_sum_core_support_complementarity.html"
+      "href": "zero_sum/zero_sum_core_support_complementarity.html"
+    },
+    {
+      "id": "linear_programming.strong_complementarity",
+      "title": "Strong Complementarity For Linear Programming",
+      "href": "linear_programming/linear_programming_strong_complementarity.html"
     }
   ],
   "dependents": [],

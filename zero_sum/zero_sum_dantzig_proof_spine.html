@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dantzig Proof Spine for Minimax — EconCSLib Knowledge Blueprint</title>
+  <title>Dantzig Proof Spine for Minimax (Ordered-Field Route) — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -96,6 +96,10 @@
           <a href="../mechanism_design/vcg/index.html">Vcg</a>
         </li></ul>
           </details>
+        </li>
+      
+        <li class="topic-leaf">
+          <a href="../mixed_strategy/index.html">Mixed Strategy</a>
         </li>
       
         <li class="topic-leaf">
@@ -255,6 +259,8 @@
       
         <li><a href="../keywords/cournot.html">cournot</a></li>
       
+        <li><a href="../keywords/dantzig.html">dantzig</a></li>
+      
         <li><a href="../keywords/definition.html">definition</a></li>
       
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
@@ -339,6 +345,8 @@
       
         <li><a href="../keywords/individual-rationality.html">individual-rationality</a></li>
       
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/invariance.html">invariance</a></li>
@@ -394,6 +402,8 @@
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
       
         <li><a href="../keywords/obedience.html">obedience</a></li>
+      
+        <li><a href="../keywords/open-issue.html">open-issue</a></li>
       
         <li><a href="../keywords/optimal-strategy.html">optimal-strategy</a></li>
       
@@ -546,7 +556,7 @@
 <article class="proof-plan_thmwrapper theorem-style-proof-plan node-page" id="node-zero_sum-2e-dantzig_proof_spine">
   <header class="proof-plan_thmheading thm-heading">
     <span class="proof-plan_thmcaption thm-caption">Proof plan</span>
-    <span class="proof-plan_thmtitle thm-title">Dantzig Proof Spine for Minimax</span>
+    <span class="proof-plan_thmtitle thm-title">Dantzig Proof Spine for Minimax (Ordered-Field Route)</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-proof-plan">proof-plan</span>
@@ -571,11 +581,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L73"><code>DantzigState</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L41"><code>LexPos</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -583,11 +593,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L99"><code>DantzigState.isOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L33"><code>lexLt</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -595,11 +605,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L103"><code>DantzigState.value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L37"><code>lexGt</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -607,11 +617,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L106"><code>DantzigState.stratI</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L44"><code>lexPos_iff</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -619,11 +629,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L113"><code>DantzigState.basisVar</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L57"><code>LexPos.add</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -631,11 +641,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L119"><code>dotBeta0Pj_eq</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L74"><code>LexPos.add_nonneg_smul</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -643,11 +653,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L137"><code>optimal_basis_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L86"><code>lexGt_iff_lexPos_sub</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -655,11 +665,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L167"><code>dantzigPivot</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/LexOrder.lean#L95"><code>LexPos.first_nonneg</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.LexOrder
           </span>
           
           
@@ -667,11 +677,203 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L183"><code>dantzigPivot_lexCond</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L73"><code>DantzigState</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L103"><code>DantzigState.value</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L106"><code>DantzigState.stratI</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L113"><code>DantzigState.basisVar</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L82"><code>DantzigState.hasBasisProp</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L99"><code>DantzigState.isOptimal</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L58"><code>dantzigP0</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L61"><code>dantzigPj</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L67"><code>dantzigUk</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L91"><code>dotBeta0Pj</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L95"><code>dotBeta0Uk</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L119"><code>dotBeta0Pj_eq</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L44"><code>fin_sum_succ</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L137"><code>optimal_basis_minimax</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L459"><code>stratI_sum_one</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L167"><code>dantzigPivot</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L183"><code>dantzigPivot_lexCond</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
@@ -679,11 +881,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L252"><code>dantzigPivot_beta0_decrease</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L252"><code>dantzigPivot_beta0_decrease</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
           </span>
           
           
@@ -691,11 +893,119 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L491"><code>dantzig_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L276"><code>identityBeta</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.MinimaxDantzig
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L280"><code>identityBeta_lexPos</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L287"><code>initialState_exists</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L296"><code>augColVec</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L325"><code>BFSConstraint</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L334"><code>extractPlayerII</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L340"><code>extractPlayerII_nonneg</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L354"><code>extractPlayerII_sum</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L390"><code>extractPlayerII_guarantee</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
+          </span>
+          
+          <span class="badge status-needs_proof_review">sorry/admit</span>
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L492"><code>dantzig_minimax</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.MinimaxDantzig
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
@@ -703,27 +1013,64 @@
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MinimaxDantzig</code></p>
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.LexOrder</code>, <code>GameTheoryLib.StrategicGame.MinimaxDantzig</code></p>
       
     </div>
   </div>
   
 
   <div class="proof-plan_thmcontent thm-content body">
-    <h1>Dantzig Proof Spine for Minimax</h1>
+    <h1>Dantzig Proof Spine for Minimax (Ordered-Field Route)</h1>
+<p>This proof-plan node records the <strong>alternative</strong>, ordered-field-generic route
+to the von Neumann minimax theorem. The primary route used by the library is
+the simplified Loomis induction over $\mathbb{R}$
+(<a class="node-ref" data-node-id="zero_sum.minimax.minimax_from_loomis" href="minimax/zero_sum_minimax_minimax_from_loomis.html">Minimax Theorem by Simplified Loomis Induction</a>). The Dantzig route is retained
+because:</p>
+<ol>
+<li>It works over any linearly ordered field, not just $\mathbb{R}$ — a strict
+   generalisation of Loomis.</li>
+<li>It yields a <em>constructive</em> simplex algorithm in Lean, useful as a
+   future basis for executable extraction.</li>
+<li>Most of its algebraic scaffolding is already proved; only the
+   simplex-termination step (the top-level <code>dantzig_minimax</code> induction) is
+   open — tracked as the open issue
+   <a class="node-ref" data-node-id="zero_sum.simplex_termination" href="zero_sum_simplex_termination.html">Dantzig Simplex Termination (Open)</a> in <code>staged/</code>.</li>
+</ol>
+<blockquote>
+<p><strong>Open.</strong> This route is <em>not yet complete</em>. The lone remaining gap is the
+simplex algorithm's finite-termination argument; see the proof-plan node
+linked above for the precise statement and intended approach.</p>
+</blockquote>
 <p>Dantzig's proof represents the minimax theorem through an augmented linear
 system.  A basis state stores rows of the inverse basis matrix, a lexicographic
-condition prevents cycling, and optimality inequalities encode the game-theoretic
-guarantees.</p>
+condition prevents cycling, and optimality inequalities encode the
+game-theoretic guarantees.</p>
 <p>At an optimal basis, the extracted row strategy is nonnegative and satisfies
 the row player's guarantee inequalities.  The same basis data extracts a column
 strategy for player II.  The pivot step updates the inverse basis while
 preserving the lexicographic condition and strictly decreasing the leading row
 in lexicographic order.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The route starts from Dantzig's augmented system for the shifted
+positive payoff matrix. A basis state contains enough inverse-basis data to
+read off candidate row and column variables. If the current basis is not
+optimal, the pivot rule selects an entering and leaving variable so that
+feasibility is preserved and the lexicographic leading row strictly decreases.
+The lexicographic condition rules out cycles, so repeated pivots terminate. At
+the terminal basis, the optimality inequalities say exactly that the extracted
+row strategy guarantees the terminal value and the extracted column strategy
+caps the same value. Normalizing the extracted nonnegative variables gives
+mixed strategies, and undoing the initial constant shift gives the minimax
+equality for the original game.</p>
 <h2>References</h2>
 <ul>
 <li>[Dantzig, Sections 2-3] Dantzig, <em>A Constructive Proof of the Min-Max Theorem</em>, <code>docs/dev/references/Dantzig, CONSTRUCTIVE PROOF OF THE MIN-MAX THEOREM.pdf</code>. Constructive proof of the minimax theorem via simplex-style pivots.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -732,17 +1079,32 @@ in lexicographic order.</p>
     <h2>Used by</h2>
     <ul>
       
-      <li><a href="lp/zero_sum_lp_zero_sum_lp_bridge.html">Zero-Sum Linear Programming Bridge</a></li>
+      <li><a href="zero_sum_lp_zero_sum_lp_bridge.html">Zero-Sum Linear Programming Bridge</a></li>
+      
+      <li><a href="zero_sum_simplex_termination.html">Dantzig Simplex Termination (Open)</a></li>
       
     </ul>
   </section>
   
 
   
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../zero_sum/index.html">Zero Sum</a></li>
+      
+      <li><a href="../zero_sum/minimax/index.html">Zero Sum.Minimax</a></li>
+      
+      <li><a href="../zero_sum/lp/index.html">Zero Sum.Lp</a></li>
+      
+    </ul>
+  </section>
+  
 
   
   <footer class="tags">
-    <span class="tag">zero-sum</span><span class="tag">minimax</span><span class="tag">proof-plan</span><span class="tag">linear-programming</span>
+    <span class="tag">zero-sum</span><span class="tag">minimax</span><span class="tag">proof-plan</span><span class="tag">linear-programming</span><span class="tag">ordered-field</span><span class="tag">dantzig</span>
   </footer>
   
 </article>

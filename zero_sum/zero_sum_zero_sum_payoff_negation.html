@@ -99,6 +99,10 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../mixed_strategy/index.html">Mixed Strategy</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../order/index.html">Order</a>
         </li>
       
@@ -255,6 +259,8 @@
       
         <li><a href="../keywords/cournot.html">cournot</a></li>
       
+        <li><a href="../keywords/dantzig.html">dantzig</a></li>
+      
         <li><a href="../keywords/definition.html">definition</a></li>
       
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
@@ -339,6 +345,8 @@
       
         <li><a href="../keywords/individual-rationality.html">individual-rationality</a></li>
       
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/invariance.html">invariance</a></li>
@@ -394,6 +402,8 @@
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
       
         <li><a href="../keywords/obedience.html">obedience</a></li>
+      
+        <li><a href="../keywords/open-issue.html">open-issue</a></li>
       
         <li><a href="../keywords/optimal-strategy.html">optimal-strategy</a></li>
       
@@ -584,11 +594,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/ZeroSum.lean#L58"><code>StrategicGame.IsZeroSum.neg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/ZeroSum.lean#L58"><code>StrategicGame.IsZeroSum.neg</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.ZeroSum
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.ZeroSum
           </span>
           
           
@@ -596,11 +606,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/ZeroSum.lean#L63"><code>StrategicGame.IsZeroSum.neg&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/ZeroSum.lean#L63"><code>StrategicGame.IsZeroSum.neg&#39;</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.ZeroSum
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.ZeroSum
           </span>
           
           
@@ -621,10 +631,23 @@ determines the other:</p>
 <p>$$u_1(\sigma) = -u_0(\sigma), \qquad u_0(\sigma) = -u_1(\sigma).$$</p>
 <p>This is the algebraic reduction that lets later value and optimality statements
 track only the row player's payoff.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The zero-sum hypothesis says
+$$
+  u_0(\sigma)+u_1(\sigma)=0
+$$
+at every profile $\sigma$. Rearranging in the underlying additive group gives
+$u_1(\sigma)=-u_0(\sigma)$, and applying the same rearrangement with the players
+interchanged gives $u_0(\sigma)=-u_1(\sigma)$.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 4, Section 4.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Immediate algebraic consequence of zero-sum payoffs.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -639,6 +662,17 @@ track only the row player's payoff.</p>
   </section>
   
 
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../zero_sum/index.html">Zero Sum</a></li>
+      
+      <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      
+    </ul>
+  </section>
   
 
   

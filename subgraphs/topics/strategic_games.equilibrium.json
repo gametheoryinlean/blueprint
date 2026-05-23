@@ -4,20 +4,20 @@
     "title": "Strategic Games.Equilibrium",
     "href": "strategic_games/equilibrium/index.html",
     "parent": "strategic_games",
-    "node_count": 13,
-    "descendant_node_count": 13
+    "node_count": 15,
+    "descendant_node_count": 15
   },
   "counts": {
-    "internal_nodes": 13,
-    "descendant_nodes": 13,
+    "internal_nodes": 15,
+    "descendant_nodes": 15,
     "child_topics": 0,
-    "non_proof_plan_nodes": 13,
+    "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 11,
+    "boundary_topics": 12,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 25,
-    "visible_nodes_with_selected_proof_plans": 25
+    "visible_nodes_without_proof_plans": 28,
+    "visible_nodes_with_selected_proof_plans": 28
   },
   "nodes": [
     {
@@ -123,6 +123,22 @@
       "status": "staged",
       "href": "strategic_games/equilibrium/strategic_games_equilibrium_strict_equilibrium_is_proper.html",
       "payload": "node_payloads/strategic_games_equilibrium_strict_equilibrium_is_proper.json"
+    },
+    {
+      "id": "zero_sum.matrix_game_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium of a Matrix Game",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_matrix_game_nash_equilibrium.html",
+      "payload": "node_payloads/zero_sum_matrix_game_nash_equilibrium.json"
+    },
+    {
+      "id": "zero_sum.zero_sum_nash_value_unique",
+      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_zero_sum_nash_value_unique.html",
+      "payload": "node_payloads/zero_sum_zero_sum_nash_value_unique.json"
     }
   ],
   "edges": [
@@ -172,7 +188,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 132
+      "node_count": 134
     },
     {
       "id": "strategic_games.bayesian",
@@ -229,6 +245,13 @@
       "href": "strategic_games/refinements/index.html",
       "role": "dependency_and_dependent",
       "node_count": 14
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 77
     }
   ],
   "boundary_edges": [
@@ -303,6 +326,13 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games",
+      "to": "zero_sum.zero_sum_nash_value_unique",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
       "from": "topic:strategic_games.continuous",
       "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
       "kind": "boundary_dependency",
@@ -342,6 +372,20 @@
       "to": "strategic_games.equilibrium.strict_equilibrium_is_proper",
       "kind": "boundary_dependency",
       "topic": "strategic_games.refinements",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.matrix_game_nash_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 4
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.zero_sum_nash_value_unique",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
       "count": 1
     },
     {
@@ -463,6 +507,12 @@
       "count": 2
     },
     {
+      "id": "equilibrium",
+      "title": "equilibrium",
+      "href": "keywords/equilibrium.html",
+      "count": 1
+    },
+    {
       "id": "equilibrium-refinement",
       "title": "equilibrium-refinement",
       "href": "keywords/equilibrium-refinement.html",
@@ -493,16 +543,28 @@
       "count": 1
     },
     {
+      "id": "matrix-game",
+      "title": "matrix-game",
+      "href": "keywords/matrix-game.html",
+      "count": 1
+    },
+    {
       "id": "mixed-strategy",
       "title": "mixed-strategy",
       "href": "keywords/mixed-strategy.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 8
+      "count": 9
+    },
+    {
+      "id": "saddle-point",
+      "title": "saddle-point",
+      "href": "keywords/saddle-point.html",
+      "count": 1
     },
     {
       "id": "semi-algebraic",
@@ -529,10 +591,22 @@
       "count": 1
     },
     {
+      "id": "value",
+      "title": "value",
+      "href": "keywords/value.html",
+      "count": 1
+    },
+    {
       "id": "variational-inequality",
       "title": "variational-inequality",
       "href": "keywords/variational-inequality.html",
       "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 2
     }
   ],
   "proof_plan_attachments": [],

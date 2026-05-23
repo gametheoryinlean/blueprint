@@ -3,18 +3,19 @@
   "title": "Stochastic Matrix Has An Invariant Distribution",
   "kind": "theorem",
   "status": "staged",
-  "href": "zero_sum/minimax/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
-  "primary_topic": "zero_sum.minimax",
+  "href": "zero_sum/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.minimax"
   ],
-  "body_html": "<h1>Stochastic Matrix Has An Invariant Distribution</h1>\n<p>Every finite stochastic matrix has an invariant distribution.</p>\n<p>MFoGT derives this from minimax as follows. Let $A$ be a square stochastic\nmatrix and put $B=A-\\operatorname{Id}$. In the zero-sum game with payoff matrix\n$B$, the uniform mixed strategy of player 2 guarantees payoff at most $0$ for\nplayer 1, so the value is at most $0$.</p>\n<p>Conversely, against any mixed column $y$, player 1 can choose a row $i$ with\n$y_i=\\min_j y_j$. Since the row of $A$ is a probability vector,\n$$\n  (Ay)_i-y_i=\\sum_j A_{ij}y_j-y_i\\ge 0.\n$$\nTherefore player 1 can guarantee at least $0$, and the value of $B$ is $0$.\nIf $x^*$ is an optimal strategy of player 1, then\n$$\n  x^*A-x^*\\ge 0.\n$$\nPairing with the uniform vector gives equality of the total mass, hence every\ncomponent is actually zero and $x^*A=x^*$. Thus $x^*$ is an invariant\ndistribution.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Corollary 2.5.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Invariant distribution of a stochastic matrix from minimax.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Stochastic Matrix Has An Invariant Distribution</h1>\n<p>Every finite stochastic matrix has an invariant distribution.</p>",
+  "proof_html": "<p>Let $A$ be a square stochastic\nmatrix and put $B=A-\\operatorname{Id}$. In the zero-sum game with payoff matrix\n$B$, the uniform mixed strategy of player 2 guarantees payoff at most $0$ for\nplayer 1, so the value is at most $0$.</p>\n<p>Conversely, against any mixed column $y$, player 1 can choose a row $i$ with\n$y_i=\\min_j y_j$. Since the row of $A$ is a probability vector,\n$$\n  (Ay)_i-y_i=\\sum_j A_{ij}y_j-y_i\\ge 0.\n$$\nTherefore player 1 can guarantee at least $0$, and the value of $B$ is $0$.\nIf $x^*$ is an optimal strategy of player 1, then\n$$\n  x^*A-x^*\\ge 0.\n$$\nPairing with the uniform vector gives equality of the total mass, hence every\ncomponent is actually zero and $x^*A=x^*$. Thus $x^*$ is an invariant\ndistribution.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Cor. 2.5.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Invariant distribution of a stochastic matrix from minimax.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.minimax.minimax_theorem",
       "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/minimax/zero_sum_minimax_minimax_theorem.html"
+      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html"
     }
   ],
   "dependents": [],

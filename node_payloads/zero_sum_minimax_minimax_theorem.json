@@ -3,23 +3,29 @@
   "title": "Von Neumann Minimax Theorem",
   "kind": "theorem",
   "status": "staged",
-  "href": "zero_sum/minimax/zero_sum_minimax_minimax_theorem.html",
-  "primary_topic": "zero_sum.minimax",
+  "href": "zero_sum/zero_sum_minimax_minimax_theorem.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.minimax"
   ],
-  "body_html": "<h1>Von Neumann Minimax Theorem</h1>\n<p>For every finite real matrix game $A$, there exist mixed strategies\n$x^* \\in \\Delta(I)$ and $y^* \\in \\Delta(J)$ and a real number $v$ such that\n$$\n  x^* A y \\ge v \\quad \\text{for all } y \\in \\Delta(J),\n$$\nand\n$$\n  x A y^* \\le v \\quad \\text{for all } x \\in \\Delta(I).\n$$\nEquivalently, the mixed extension has a value\n$$\n  v=\\max_{x \\in \\Delta(I)}\\min_{y \\in \\Delta(J)} xAy\n   =\\min_{y \\in \\Delta(J)}\\max_{x \\in \\Delta(I)} xAy.\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Theorem 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Von Neumann minimax theorem for finite matrix games.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Von Neumann Minimax Theorem</h1>\n<p>For every finite real matrix game $A$, there exist mixed strategies\n$x^* \\in \\Delta(I)$ and $y^* \\in \\Delta(J)$ and a real number $v$ such that\n$$\n  x^* A y \\ge v \\quad \\text{for all } y \\in \\Delta(J),\n$$\nand\n$$\n  x A y^* \\le v \\quad \\text{for all } x \\in \\Delta(I).\n$$\nEquivalently, the mixed extension has a value\n$$\n  v=\\max_{x \\in \\Delta(I)}\\min_{y \\in \\Delta(J)} xAy\n   =\\min_{y \\in \\Delta(J)}\\max_{x \\in \\Delta(I)} xAy.\n$$</p>",
+  "proof_html": "<p>Apply Loomis' theorem with $B$ equal to the all-ones matrix. For mixed\nstrategies $x$ and $y$, the products $xB$ and $By$ are both all-ones vectors.\nThus Loomis gives $x^*,y^*,v$ such that\n$$\n  x^*Ae_j\\ge v\\quad\\text{for every }j\n$$\nand\n$$\n  e_iAy^*\\le v\\quad\\text{for every }i.\n$$\nBy linearity in mixed strategies, these inequalities are equivalent to\n$x^*Ay\\ge v$ for every mixed column $y$ and $xAy^*\\le v$ for every mixed row\n$x$. Hence the row player can guarantee $v$ and the column player can hold the\nrow player to $v$. Weak duality forces the maxmin and minmax to be equal to\nthis common number.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Von Neumann minimax theorem for finite matrix games.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.mixed_extension",
       "title": "Mixed Extension Of A Matrix Game",
-      "href": "zero_sum/core/zero_sum_core_mixed_extension.html"
+      "href": "zero_sum/zero_sum_core_mixed_extension.html"
     },
     {
       "id": "zero_sum.core.value",
       "title": "Value Of A Zero-Sum Game",
-      "href": "zero_sum/core/zero_sum_core_value.html"
+      "href": "zero_sum/zero_sum_core_value.html"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_theorem",
+      "title": "Loomis Theorem",
+      "href": "zero_sum/zero_sum_minimax_loomis_theorem.html"
     }
   ],
   "dependents": [
@@ -29,49 +35,74 @@
       "href": "strategic_games/dominance/strategic_games_dominance_strict_dominance_never_best_response.html"
     },
     {
+      "id": "zero_sum.core.optimal_pairs_are_saddle_points",
+      "title": "Optimal Pairs Are Exactly Saddle Points",
+      "href": "zero_sum/zero_sum_core_optimal_pairs_are_saddle_points.html"
+    },
+    {
       "id": "zero_sum.core.optimal_strategy_sets",
       "title": "Optimal Strategy Sets",
-      "href": "zero_sum/core/zero_sum_core_optimal_strategy_sets.html"
+      "href": "zero_sum/zero_sum_core_optimal_strategy_sets.html"
+    },
+    {
+      "id": "zero_sum.core.optimal_strategy_sets_are_polytopes",
+      "title": "Optimal Strategy Sets Are Polytopes",
+      "href": "zero_sum/zero_sum_core_optimal_strategy_sets_are_polytopes.html"
+    },
+    {
+      "id": "zero_sum.core.support_complementarity",
+      "title": "Support Complementarity",
+      "href": "zero_sum/zero_sum_core_support_complementarity.html"
+    },
+    {
+      "id": "zero_sum.examples.antisymmetric_matrix_game_value",
+      "title": "Antisymmetric Matrix Games Have Value",
+      "href": "zero_sum/zero_sum_examples_antisymmetric_matrix_game_value.html"
     },
     {
       "id": "zero_sum.examples.computation_three_by_two_example",
       "title": "Three-By-Two Matrix Game Computation",
-      "href": "zero_sum/examples/zero_sum_examples_computation_three_by_two_example.html"
+      "href": "zero_sum/zero_sum_examples_computation_three_by_two_example.html"
+    },
+    {
+      "id": "zero_sum.examples.diagonal_matrix_game_value",
+      "title": "Diagonal Matrix Game Value",
+      "href": "zero_sum/zero_sum_examples_diagonal_matrix_game_value.html"
     },
     {
       "id": "zero_sum.examples.two_by_two_value_formula",
       "title": "Two-By-Two Value Formula",
-      "href": "zero_sum/examples/zero_sum_examples_two_by_two_value_formula.html"
+      "href": "zero_sum/zero_sum_examples_two_by_two_value_formula.html"
     },
     {
-      "id": "zero_sum.minimax.loomis_theorem",
-      "title": "Loomis Theorem",
-      "href": "zero_sum/minimax/zero_sum_minimax_loomis_theorem.html"
+      "id": "zero_sum.lp.zero_sum_lp_bridge",
+      "title": "Zero-Sum Linear Programming Bridge",
+      "href": "zero_sum/zero_sum_lp_zero_sum_lp_bridge.html"
     },
     {
       "id": "zero_sum.minimax.ordered_field_minimax",
       "title": "Ordered-Field Minimax Statement",
-      "href": "zero_sum/minimax/zero_sum_minimax_ordered_field_minimax.html"
+      "href": "zero_sum/zero_sum_minimax_ordered_field_minimax.html"
     },
     {
       "id": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
       "title": "Stochastic Matrix Has An Invariant Distribution",
-      "href": "zero_sum/minimax/zero_sum_minimax_stochastic_matrix_invariant_distribution.html"
+      "href": "zero_sum/zero_sum_minimax_stochastic_matrix_invariant_distribution.html"
     },
     {
       "id": "zero_sum.minimax.ville_discretization_proof",
       "title": "Ville Theorem By Discretization",
-      "href": "zero_sum/minimax/zero_sum_minimax_ville_discretization_proof.html"
+      "href": "zero_sum/zero_sum_minimax_ville_discretization_proof.html"
     },
     {
       "id": "zero_sum.minimax.ville_theorem",
       "title": "Ville Theorem",
-      "href": "zero_sum/minimax/zero_sum_minimax_ville_theorem.html"
+      "href": "zero_sum/zero_sum_minimax_ville_theorem.html"
     },
     {
       "id": "zero_sum.operators.value_operator_properties",
       "title": "Value Operator Properties",
-      "href": "zero_sum/operators/zero_sum_operators_value_operator_properties.html"
+      "href": "zero_sum/zero_sum_operators_value_operator_properties.html"
     }
   ],
   "lean_refs": [
@@ -81,10 +112,10 @@
       "qualified_name": "MatrixGame.minimax_theorem",
       "module": "GameTheoryLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "55d6ba5ee2477930ea872ea2de3b8c137320740b",
-      "short_revision": "55d6ba5",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/Minimax.lean#L106",
-      "has_sorry": true,
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/Minimax.lean#L127",
+      "has_sorry": false,
       "status": "resolved",
       "reason": null
     },
@@ -94,10 +125,10 @@
       "qualified_name": "MatrixGame.minimax_optimal_strategies",
       "module": "GameTheoryLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "55d6ba5ee2477930ea872ea2de3b8c137320740b",
-      "short_revision": "55d6ba5",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/Minimax.lean#L115",
-      "has_sorry": true,
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/Minimax.lean#L136",
+      "has_sorry": false,
       "status": "resolved",
       "reason": null
     },
@@ -107,9 +138,9 @@
       "qualified_name": "dantzig_minimax",
       "module": "GameTheoryLib.StrategicGame.MinimaxDantzig",
       "repository_title": "EconCSLib",
-      "revision": "55d6ba5ee2477930ea872ea2de3b8c137320740b",
-      "short_revision": "55d6ba5",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L491",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxDantzig.lean#L492",
       "has_sorry": true,
       "status": "resolved",
       "reason": null

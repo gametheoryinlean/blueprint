@@ -6,10 +6,11 @@
   "href": "zero_sum/zero_sum_zero_sum_payoff_negation.html",
   "primary_topic": "zero_sum",
   "topics": [
-    "zero_sum"
+    "zero_sum",
+    "zero_sum.core"
   ],
-  "body_html": "<h1>Payoff Negation in Zero-Sum Games</h1>\n<p>If $G$ is zero-sum, then at every profile $\\sigma$ the payoff of either player\ndetermines the other:</p>\n<p>$$u_1(\\sigma) = -u_0(\\sigma), \\qquad u_0(\\sigma) = -u_1(\\sigma).$$</p>\n<p>This is the algebraic reduction that lets later value and optimality statements\ntrack only the row player's payoff.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 4, Section 4.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Immediate algebraic consequence of zero-sum payoffs.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Payoff Negation in Zero-Sum Games</h1>\n<p>If $G$ is zero-sum, then at every profile $\\sigma$ the payoff of either player\ndetermines the other:</p>\n<p>$$u_1(\\sigma) = -u_0(\\sigma), \\qquad u_0(\\sigma) = -u_1(\\sigma).$$</p>\n<p>This is the algebraic reduction that lets later value and optimality statements\ntrack only the row player's payoff.</p>",
+  "proof_html": "<p>The zero-sum hypothesis says\n$$\n  u_0(\\sigma)+u_1(\\sigma)=0\n$$\nat every profile $\\sigma$. Rearranging in the underlying additive group gives\n$u_1(\\sigma)=-u_0(\\sigma)$, and applying the same rearrangement with the players\ninterchanged gives $u_0(\\sigma)=-u_1(\\sigma)$.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 4, Section 4.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Immediate algebraic consequence of zero-sum payoffs.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.zero_sum_game",
@@ -31,9 +32,9 @@
       "qualified_name": "StrategicGame.IsZeroSum.neg",
       "module": "GameTheoryLib.StrategicGame.ZeroSum",
       "repository_title": "EconCSLib",
-      "revision": "55d6ba5ee2477930ea872ea2de3b8c137320740b",
-      "short_revision": "55d6ba5",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/ZeroSum.lean#L58",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/ZeroSum.lean#L58",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -44,9 +45,9 @@
       "qualified_name": "StrategicGame.IsZeroSum.neg'",
       "module": "GameTheoryLib.StrategicGame.ZeroSum",
       "repository_title": "EconCSLib",
-      "revision": "55d6ba5ee2477930ea872ea2de3b8c137320740b",
-      "short_revision": "55d6ba5",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/ZeroSum.lean#L63",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/ZeroSum.lean#L63",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

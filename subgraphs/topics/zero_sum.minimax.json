@@ -4,38 +4,80 @@
     "title": "Zero Sum.Minimax",
     "href": "zero_sum/minimax/index.html",
     "parent": "zero_sum",
-    "node_count": 11,
-    "descendant_node_count": 11
+    "node_count": 18,
+    "descendant_node_count": 18
   },
   "counts": {
-    "internal_nodes": 11,
-    "descendant_nodes": 11,
+    "internal_nodes": 18,
+    "descendant_nodes": 18,
     "child_topics": 0,
-    "non_proof_plan_nodes": 5,
-    "proof_plan_nodes": 6,
-    "selected_proof_plan_nodes": 0,
-    "boundary_topics": 6,
-    "proof_plan_attachments": 6,
-    "visible_nodes_without_proof_plans": 12,
-    "visible_nodes_with_selected_proof_plans": 12
+    "non_proof_plan_nodes": 11,
+    "proof_plan_nodes": 7,
+    "selected_proof_plan_nodes": 4,
+    "boundary_topics": 4,
+    "proof_plan_attachments": 8,
+    "visible_nodes_without_proof_plans": 16,
+    "visible_nodes_with_selected_proof_plans": 20
   },
   "nodes": [
+    {
+      "id": "zero_sum.dantzig_proof_spine",
+      "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
+      "kind": "proof-plan",
+      "status": "admitted",
+      "href": "zero_sum/zero_sum_dantzig_proof_spine.html",
+      "payload": "node_payloads/zero_sum_dantzig_proof_spine.json",
+      "target": "zero_sum.von_neumann_minimax",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.lam_mu_existence",
+      "title": "Existence of Optimal Mixed Strategies (Loomis Foundations)",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_lam_mu_existence.html",
+      "payload": "node_payloads/zero_sum_lam_mu_existence.json"
+    },
+    {
+      "id": "zero_sum.loomis_route_compactness",
+      "title": "Compactness and Continuity Scaffold for the Loomis Route",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_loomis_route_compactness.html",
+      "payload": "node_payloads/zero_sum_loomis_route_compactness.json"
+    },
+    {
+      "id": "zero_sum.matrix_game_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium of a Matrix Game",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_matrix_game_nash_equilibrium.html",
+      "payload": "node_payloads/zero_sum_matrix_game_nash_equilibrium.json"
+    },
+    {
+      "id": "zero_sum.maximin_le_minimax",
+      "title": "Maximin is Bounded by Minimax",
+      "kind": "lemma",
+      "status": "admitted",
+      "href": "zero_sum/zero_sum_maximin_le_minimax.html",
+      "payload": "node_payloads/zero_sum_maximin_le_minimax.json"
+    },
     {
       "id": "zero_sum.minimax.loomis_induction_proof",
       "title": "Direct Induction Proof Of Loomis Theorem",
       "kind": "proof-plan",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_loomis_induction_proof.html",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof.html",
       "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof.json",
       "target": "zero_sum.minimax.loomis_theorem",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "id": "zero_sum.minimax.loomis_theorem",
       "title": "Loomis Theorem",
       "kind": "theorem",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_loomis_theorem.html",
+      "href": "zero_sum/zero_sum_minimax_loomis_theorem.html",
       "payload": "node_payloads/zero_sum_minimax_loomis_theorem.json"
     },
     {
@@ -43,17 +85,17 @@
       "title": "LP Duality Proof Of Minimax",
       "kind": "proof-plan",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_lp_duality_minimax_proof.html",
+      "href": "zero_sum/zero_sum_minimax_lp_duality_minimax_proof.html",
       "payload": "node_payloads/zero_sum_minimax_lp_duality_minimax_proof.json",
       "target": "zero_sum.minimax.minimax_theorem",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "id": "zero_sum.minimax.minimax_from_antisymmetric_games",
       "title": "Minimax From Antisymmetric Games",
       "kind": "proof-plan",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_minimax_from_antisymmetric_games.html",
+      "href": "zero_sum/zero_sum_minimax_minimax_from_antisymmetric_games.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_from_antisymmetric_games.json",
       "target": "zero_sum.minimax.minimax_theorem",
       "plan_status": "candidate"
@@ -63,27 +105,25 @@
       "title": "Minimax From Deterministic Approachability",
       "kind": "proof-plan",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_minimax_from_deterministic_approachability.html",
+      "href": "zero_sum/zero_sum_minimax_minimax_from_deterministic_approachability.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_from_deterministic_approachability.json",
       "target": "zero_sum.minimax.minimax_theorem",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "id": "zero_sum.minimax.minimax_from_loomis",
-      "title": "Minimax Theorem From Loomis Theorem",
-      "kind": "proof-plan",
-      "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_minimax_from_loomis.html",
-      "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json",
-      "target": "zero_sum.minimax.minimax_theorem",
-      "plan_status": "candidate"
+      "title": "Minimax Theorem by Simplified Loomis Induction",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_minimax_from_loomis.html",
+      "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json"
     },
     {
       "id": "zero_sum.minimax.minimax_theorem",
       "title": "Von Neumann Minimax Theorem",
       "kind": "theorem",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_minimax_theorem.html",
+      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_theorem.json"
     },
     {
@@ -91,7 +131,7 @@
       "title": "Ordered-Field Minimax Statement",
       "kind": "theorem",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_ordered_field_minimax.html",
+      "href": "zero_sum/zero_sum_minimax_ordered_field_minimax.html",
       "payload": "node_payloads/zero_sum_minimax_ordered_field_minimax.json"
     },
     {
@@ -99,7 +139,7 @@
       "title": "Stochastic Matrix Has An Invariant Distribution",
       "kind": "theorem",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
+      "href": "zero_sum/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
       "payload": "node_payloads/zero_sum_minimax_stochastic_matrix_invariant_distribution.json"
     },
     {
@@ -107,30 +147,68 @@
       "title": "Ville Theorem By Discretization",
       "kind": "proof-plan",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_ville_discretization_proof.html",
+      "href": "zero_sum/zero_sum_minimax_ville_discretization_proof.html",
       "payload": "node_payloads/zero_sum_minimax_ville_discretization_proof.json",
       "target": "zero_sum.minimax.ville_theorem",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "id": "zero_sum.minimax.ville_theorem",
       "title": "Ville Theorem",
       "kind": "theorem",
       "status": "staged",
-      "href": "zero_sum/minimax/zero_sum_minimax_ville_theorem.html",
+      "href": "zero_sum/zero_sum_minimax_ville_theorem.html",
       "payload": "node_payloads/zero_sum_minimax_ville_theorem.json"
+    },
+    {
+      "id": "zero_sum.simplex_termination",
+      "title": "Dantzig Simplex Termination (Open)",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_simplex_termination.html",
+      "payload": "node_payloads/zero_sum_simplex_termination.json",
+      "target": "zero_sum.von_neumann_minimax",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_von_neumann_minimax.html",
+      "payload": "node_payloads/zero_sum_von_neumann_minimax.json"
     }
   ],
   "edges": [
     {
-      "from": "zero_sum.minimax.minimax_theorem",
-      "to": "zero_sum.minimax.loomis_theorem",
+      "from": "zero_sum.loomis_route_compactness",
+      "to": "zero_sum.lam_mu_existence",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.loomis_route_compactness",
+      "to": "zero_sum.matrix_game_nash_equilibrium",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.matrix_game_nash_equilibrium",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lam_mu_existence",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.loomis_route_compactness",
+      "to": "zero_sum.minimax.minimax_from_loomis",
       "kind": "uses"
     },
     {
       "from": "zero_sum.minimax.loomis_theorem",
-      "to": "zero_sum.minimax.minimax_from_loomis",
-      "kind": "proof_plan_uses"
+      "to": "zero_sum.minimax.minimax_theorem",
+      "kind": "uses"
     },
     {
       "from": "zero_sum.minimax.minimax_theorem",
@@ -150,6 +228,31 @@
     {
       "from": "zero_sum.minimax.minimax_theorem",
       "to": "zero_sum.minimax.ville_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.dantzig_proof_spine",
+      "to": "zero_sum.simplex_termination",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.lam_mu_existence",
+      "to": "zero_sum.von_neumann_minimax",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.loomis_route_compactness",
+      "to": "zero_sum.von_neumann_minimax",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.von_neumann_minimax",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.minimax_from_loomis",
+      "to": "zero_sum.von_neumann_minimax",
       "kind": "uses"
     }
   ],
@@ -176,41 +279,55 @@
       "node_count": 9
     },
     {
-      "id": "zero_sum.core",
-      "title": "Zero Sum.Core",
-      "href": "zero_sum/core/index.html",
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 19
-    },
-    {
-      "id": "zero_sum.examples",
-      "title": "Zero Sum.Examples",
-      "href": "zero_sum/examples/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 10
-    },
-    {
-      "id": "zero_sum.operators",
-      "title": "Zero Sum.Operators",
-      "href": "zero_sum/operators/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 5
+      "node_count": 77
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:zero_sum.core",
-      "to": "zero_sum.minimax.minimax_theorem",
+      "from": "topic:zero_sum",
+      "to": "zero_sum.lam_mu_existence",
       "kind": "boundary_dependency",
-      "topic": "zero_sum.core",
+      "topic": "zero_sum",
+      "count": 3
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.loomis_route_compactness",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.matrix_game_nash_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
       "count": 2
     },
     {
-      "from": "topic:zero_sum.operators",
-      "to": "zero_sum.minimax.loomis_theorem",
+      "from": "topic:zero_sum",
+      "to": "zero_sum.maximin_le_minimax",
       "kind": "boundary_dependency",
-      "topic": "zero_sum.operators",
+      "topic": "zero_sum",
       "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.minimax_theorem",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
     },
     {
       "from": "topic:approachability",
@@ -220,10 +337,10 @@
       "count": 1
     },
     {
-      "from": "topic:zero_sum.examples",
+      "from": "topic:zero_sum",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
       "kind": "boundary_proof_plan_dependency",
-      "topic": "zero_sum.examples",
+      "topic": "zero_sum",
       "count": 1
     },
     {
@@ -242,23 +359,23 @@
     },
     {
       "from": "zero_sum.minimax.minimax_theorem",
-      "to": "topic:zero_sum.core",
+      "to": "topic:zero_sum",
       "kind": "boundary_dependent",
-      "topic": "zero_sum.core",
+      "topic": "zero_sum",
+      "count": 9
+    },
+    {
+      "from": "zero_sum.dantzig_proof_spine",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
       "count": 1
     },
     {
       "from": "zero_sum.minimax.minimax_theorem",
-      "to": "topic:zero_sum.examples",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.examples",
-      "count": 2
-    },
-    {
-      "from": "zero_sum.minimax.minimax_theorem",
-      "to": "topic:zero_sum.operators",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.operators",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
       "count": 1
     }
   ],
@@ -276,10 +393,40 @@
       "count": 1
     },
     {
+      "id": "compactness",
+      "title": "compactness",
+      "href": "keywords/compactness.html",
+      "count": 1
+    },
+    {
+      "id": "continuity",
+      "title": "continuity",
+      "href": "keywords/continuity.html",
+      "count": 1
+    },
+    {
       "id": "continuous-game",
       "title": "continuous-game",
       "href": "keywords/continuous-game.html",
       "count": 2
+    },
+    {
+      "id": "dantzig",
+      "title": "dantzig",
+      "href": "keywords/dantzig.html",
+      "count": 2
+    },
+    {
+      "id": "existence",
+      "title": "existence",
+      "href": "keywords/existence.html",
+      "count": 1
+    },
+    {
+      "id": "induction",
+      "title": "induction",
+      "href": "keywords/induction.html",
+      "count": 1
     },
     {
       "id": "invariant-distribution",
@@ -291,7 +438,7 @@
       "id": "linear-programming",
       "title": "linear-programming",
       "href": "keywords/linear-programming.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "loomis",
@@ -300,16 +447,40 @@
       "count": 3
     },
     {
+      "id": "matrix-game",
+      "title": "matrix-game",
+      "href": "keywords/matrix-game.html",
+      "count": 1
+    },
+    {
       "id": "minimax",
       "title": "minimax",
       "href": "keywords/minimax.html",
-      "count": 8
+      "count": 14
+    },
+    {
+      "id": "mixed-strategy",
+      "title": "mixed-strategy",
+      "href": "keywords/mixed-strategy.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "open-issue",
+      "title": "open-issue",
+      "href": "keywords/open-issue.html",
+      "count": 1
     },
     {
       "id": "ordered-field",
       "title": "ordered-field",
       "href": "keywords/ordered-field.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "proof-plan",
@@ -318,16 +489,34 @@
       "count": 6
     },
     {
+      "id": "saddle-point",
+      "title": "saddle-point",
+      "href": "keywords/saddle-point.html",
+      "count": 1
+    },
+    {
+      "id": "simplex",
+      "title": "simplex",
+      "href": "keywords/simplex.html",
+      "count": 2
+    },
+    {
       "id": "stochastic-matrix",
       "title": "stochastic-matrix",
       "href": "keywords/stochastic-matrix.html",
       "count": 1
     },
     {
+      "id": "theorem",
+      "title": "theorem",
+      "href": "keywords/theorem.html",
+      "count": 1
+    },
+    {
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "ville",
@@ -336,24 +525,42 @@
       "count": 1
     },
     {
+      "id": "weak-duality",
+      "title": "weak-duality",
+      "href": "keywords/weak-duality.html",
+      "count": 1
+    },
+    {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 11
+      "count": 18
     }
   ],
   "proof_plan_attachments": [
     {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.dantzig_proof_spine",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.lp.zero_sum_lp_bridge",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
       "from": "zero_sum.minimax.loomis_theorem",
       "to": "zero_sum.minimax.loomis_induction_proof",
       "kind": "has_plan",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "from": "zero_sum.minimax.minimax_theorem",
       "to": "zero_sum.minimax.lp_duality_minimax_proof",
       "kind": "has_plan",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "from": "zero_sum.minimax.minimax_theorem",
@@ -365,17 +572,17 @@
       "from": "zero_sum.minimax.minimax_theorem",
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
       "kind": "has_plan",
-      "plan_status": "candidate"
-    },
-    {
-      "from": "zero_sum.minimax.minimax_theorem",
-      "to": "zero_sum.minimax.minimax_from_loomis",
-      "kind": "has_plan",
-      "plan_status": "candidate"
+      "plan_status": "selected"
     },
     {
       "from": "zero_sum.minimax.ville_theorem",
       "to": "zero_sum.minimax.ville_discretization_proof",
+      "kind": "has_plan",
+      "plan_status": "selected"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.simplex_termination",
       "kind": "has_plan",
       "plan_status": "candidate"
     }

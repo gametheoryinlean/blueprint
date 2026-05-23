@@ -3,18 +3,19 @@
   "title": "Ordered-Field Minimax Statement",
   "kind": "theorem",
   "status": "staged",
-  "href": "zero_sum/minimax/zero_sum_minimax_ordered_field_minimax.html",
-  "primary_topic": "zero_sum.minimax",
+  "href": "zero_sum/zero_sum_minimax_ordered_field_minimax.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.minimax"
   ],
-  "body_html": "<h1>Ordered-Field Minimax Statement</h1>\n<p>The finite minimax theorem admits an ordered-field form: if the payoff matrix\nhas entries in an ordered field and the proof is carried out algebraically\nthrough finitely many weak linear inequalities, then the value and optimal\nmixed strategies can be taken over that ordered field.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3, paragraph after the proof of Theorem 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Ordered-field generalization via finite weak linear inequalities.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Ordered-Field Minimax Statement</h1>\n<p>The finite minimax theorem admits an ordered-field form: if the payoff matrix\nhas entries in an ordered field and the proof is carried out algebraically\nthrough finitely many weak linear inequalities, then the value and optimal\nmixed strategies can be taken over that ordered field.</p>",
+  "proof_html": "<p>Use an algebraic proof route for finite minimax, such as the\nlinear-programming or Dantzig route, whose steps are finite systems of weak\nlinear inequalities, pivot operations, and normalizations by positive elements.\nThese operations make sense over any ordered field. The terminal inequalities\nare precisely the two minimax optimality systems, so the extracted mixed\nstrategies and value lie in the same ordered field as the matrix entries.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3, paragraph after the proof of Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Ordered-field generalization via finite weak linear inequalities.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.minimax.minimax_theorem",
       "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/minimax/zero_sum_minimax_minimax_theorem.html"
+      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html"
     }
   ],
   "dependents": [],

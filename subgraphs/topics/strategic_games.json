@@ -5,11 +5,11 @@
     "href": "strategic_games/index.html",
     "parent": null,
     "node_count": 10,
-    "descendant_node_count": 132
+    "descendant_node_count": 134
   },
   "counts": {
     "internal_nodes": 10,
-    "descendant_nodes": 132,
+    "descendant_nodes": 134,
     "child_topics": 16,
     "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
@@ -237,7 +237,7 @@
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependent",
-      "node_count": 13
+      "node_count": 15
     },
     {
       "id": "strategic_games.learning",
@@ -286,7 +286,7 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependent",
-      "node_count": 73
+      "node_count": 77
     }
   ],
   "boundary_edges": [
@@ -540,7 +540,7 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 1
+      "count": 2
     },
     {
       "from": "strategic_games.strategic_game",
@@ -724,15 +724,16 @@
       "title": "Strategic Games.Equilibrium",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 13,
-      "direct_node_count": 13,
+      "node_count": 15,
+      "direct_node_count": 15,
       "kind_counts": {
         "definition": 4,
         "example": 2,
         "proposition": 3,
-        "theorem": 4
+        "theorem": 6
       },
       "status_counts": {
+        "formalized": 2,
         "staged": 13
       },
       "href": "strategic_games/equilibrium/index.html",
@@ -1096,25 +1097,32 @@
       "node_count": 1
     },
     {
+      "id": "mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "mixed_strategy/index.html",
+      "role": "dependency",
+      "node_count": 1
+    },
+    {
       "id": "zero_sum",
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
-      "role": "dependent",
-      "node_count": 73
+      "role": "dependency_and_dependent",
+      "node_count": 77
     },
     {
       "id": "zero_sum.core",
       "title": "Zero Sum.Core",
       "href": "zero_sum/core/index.html",
-      "role": "dependency",
-      "node_count": 19
+      "role": "dependency_and_dependent",
+      "node_count": 26
     },
     {
       "id": "zero_sum.minimax",
       "title": "Zero Sum.Minimax",
       "href": "zero_sum/minimax/index.html",
       "role": "dependency",
-      "node_count": 11
+      "node_count": 18
     }
   ],
   "child_boundary_edges": [
@@ -1175,11 +1183,46 @@
       "count": 1
     },
     {
+      "from": "topic:mixed_strategy",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "mixed_strategy",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:strategic_games.dominance",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 5
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:strategic_games.repeated",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
       "from": "topic:zero_sum.core",
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependency",
       "topic": "zero_sum.core",
       "count": 1
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.core",
+      "count": 3
     },
     {
       "from": "topic:zero_sum.core",
@@ -1194,6 +1237,13 @@
       "kind": "boundary_dependency",
       "topic": "zero_sum.minimax",
       "count": 1
+    },
+    {
+      "from": "topic:zero_sum.minimax",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum.minimax",
+      "count": 2
     },
     {
       "from": "topic:strategic_games.core",
@@ -1242,6 +1292,13 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.core",
+      "to": "topic:zero_sum.core",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.core",
       "count": 1
     }
   ]

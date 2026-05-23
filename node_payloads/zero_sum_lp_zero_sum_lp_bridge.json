@@ -3,18 +3,24 @@
   "title": "Zero-Sum Linear Programming Bridge",
   "kind": "proof-plan",
   "status": "staged",
-  "href": "zero_sum/lp/zero_sum_lp_zero_sum_lp_bridge.html",
-  "primary_topic": "zero_sum.lp",
+  "href": "zero_sum/zero_sum_lp_zero_sum_lp_bridge.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.lp"
   ],
-  "body_html": "<h1>Zero-Sum Linear Programming Bridge</h1>\n<p>The row player's maximum safe-value linear program and the column player's\nminimum safe-value dual linear program should be connected to the matrix-game\nguarantee definitions.  Once optimal row and column safe strategies are\navailable, they form a mixed Nash equilibrium of the zero-sum game.</p>\n<p>This bridge is the natural entry point for algorithmic game theory treatments\nof zero-sum computation.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Section 1.4.2, Theorem 1.11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Optimal zero-sum LP solutions form a Nash equilibrium.</li>\n</ul>",
-  "proof_html": null,
+  "body_html": "<h1>Zero-Sum Linear Programming Bridge</h1>\n<p>The row player's maximum safe-value linear program and the column player's\nminimum safe-value dual linear program should be connected to the matrix-game\nguarantee definitions.  Once optimal row and column safe strategies are\navailable, they form a mixed Nash equilibrium of the zero-sum game.</p>\n<p>This bridge is the natural entry point for algorithmic game theory treatments\nof zero-sum computation.</p>",
+  "proof_html": "<p>The row LP maximizes a scalar $v$ subject to the inequalities saying\nthat the chosen mixed row strategy guarantees at least $v$ against every pure\ncolumn. The dual column LP minimizes a scalar $w$ subject to the inequalities\nsaying that the chosen mixed column strategy holds every pure row payoff to at\nmost $w$. Strong duality gives optimal solutions with $v=w$. These two sets of\ninequalities are exactly the saddle-point inequalities for the matrix payoff, so\nthe resulting mixed strategies form a zero-sum Nash equilibrium and realize the\nmatrix-game value.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Section 1.4.2, Thm. 1.11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Optimal zero-sum LP solutions form a Nash equilibrium.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.dantzig_proof_spine",
-      "title": "Dantzig Proof Spine for Minimax",
+      "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
       "href": "zero_sum/zero_sum_dantzig_proof_spine.html"
+    },
+    {
+      "id": "zero_sum.minimax.minimax_theorem",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html"
     }
   ],
   "dependents": [],

@@ -1,0 +1,232 @@
+{
+  "id": "zero_sum.lam_mu_existence",
+  "title": "Existence of Optimal Mixed Strategies (Loomis Foundations)",
+  "kind": "theorem",
+  "status": "formalized",
+  "href": "zero_sum/zero_sum_lam_mu_existence.html",
+  "primary_topic": "zero_sum",
+  "topics": [
+    "zero_sum",
+    "zero_sum.minimax"
+  ],
+  "body_html": "<h1>Existence of Optimal Mixed Strategies (Loomis Foundations)</h1>\n<p>For a finite matrix game $A : I \\times J \\to \\mathbb{R}$, the row player's\nguarantee function is\n$$\\lambda_{\\mathrm{aux}}(x) = \\min_{j \\in J} \\sum_{i \\in I} x_i A(i,j),$$\nand the column player's loss-cap function is\n$$\\mu_{\\mathrm{aux}}(y) = \\max_{i \\in I} \\sum_{j \\in J} y_j A(i,j).$$\nThe two scalar values\n$$\\lambda_0 = \\sup_{x \\in \\Delta(I)} \\lambda_{\\mathrm{aux}}(x) \\quad \\text{and} \\quad\n  \\mu_0 = \\inf_{y \\in \\Delta(J)} \\mu_{\\mathrm{aux}}(y)$$\nare the maxmin and minmax values of the game.</p>\n<p>This node packages four facts that hold <em>before</em> the inductive minimax\nidentity is established:</p>\n<ol>\n<li><strong>Continuity.</strong> Both $\\lambda_{\\mathrm{aux}}$ and $\\mu_{\\mathrm{aux}}$ are\n   continuous on the (compact) mixed-strategy simplices.</li>\n<li><strong>Boundedness.</strong> $\\lambda_{\\mathrm{aux}}$ is bounded above and\n   $\\mu_{\\mathrm{aux}}$ is bounded below by the obvious extremes of $A$.</li>\n<li><strong>Achievement.</strong> There exist mixed strategies $x^\\ast$ and $y^\\ast$ such\n   that $\\sum_i x^\\ast_i A(i,j) \\ge \\lambda_0$ for every column $j$ and\n   $\\sum_j y^\\ast_j A(i,j) \\le \\mu_0$ for every row $i$.</li>\n<li><strong>Weak duality.</strong> $\\lambda_0 \\le \\mu_0$.</li>\n</ol>",
+  "proof_html": "<p>Continuity of $\\lambda_{\\mathrm{aux}}$ is the finite infimum of\ncontinuous weighted sums (<code>Continuous.finset_inf'_apply</code>); the proof for\n$\\mu_{\\mathrm{aux}}$ is dual. Boundedness follows because each weighted sum\nis bounded by the extreme matrix entry. The supremum\n$\\lambda_0$ is achieved by the extreme-value theorem applied to the compact\nmixed-strategy simplex (<code>IsCompact.exists_isMaxOn</code>), and the optimiser\nrealises $\\lambda_0$ on every pure column by the infimum definition; the\n$\\mu_0$ side is symmetric. Weak duality combines the two optimisers in the\nbilinear payoff:\n$$\\lambda_0 \\le \\sum_{i,j} x^\\ast_i y^\\ast_j A(i,j) \\le \\mu_0,$$\nusing the pointwise-to-weighted bound transfer from\n<a class=\"node-ref\" data-node-id=\"zero_sum.loomis_route_compactness\" href=\"zero_sum_loomis_route_compactness.html\">Compactness and Continuity Scaffold for the Loomis Route</a>.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Existence of mixed optimisers and weak duality, prior to the inductive minimax theorem.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "zero_sum.loomis_route_compactness",
+      "title": "Compactness and Continuity Scaffold for the Loomis Route",
+      "href": "zero_sum/zero_sum_loomis_route_compactness.html"
+    },
+    {
+      "id": "zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "href": "zero_sum/zero_sum_matrix_game.html"
+    },
+    {
+      "id": "zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "href": "zero_sum/zero_sum_maximin_minimax.html"
+    },
+    {
+      "id": "zero_sum.mixed_matrix_payoff",
+      "title": "Expected Payoff of a Matrix Game",
+      "href": "zero_sum/zero_sum_mixed_matrix_payoff.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "zero_sum.minimax.minimax_from_loomis",
+      "title": "Minimax Theorem by Simplified Loomis Induction",
+      "href": "zero_sum/zero_sum_minimax_minimax_from_loomis.html"
+    },
+    {
+      "id": "zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "MinimaxLoomis.E",
+      "display_name": "MinimaxLoomis.E",
+      "qualified_name": "MinimaxLoomis.E",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L43",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.lam.aux",
+      "display_name": "MinimaxLoomis.lam.aux",
+      "qualified_name": "MinimaxLoomis.lam.aux",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L50",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.mu.aux",
+      "display_name": "MinimaxLoomis.mu.aux",
+      "qualified_name": "MinimaxLoomis.mu.aux",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L119",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.lam0",
+      "display_name": "MinimaxLoomis.lam0",
+      "qualified_name": "MinimaxLoomis.lam0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L54",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.mu0",
+      "display_name": "MinimaxLoomis.mu0",
+      "qualified_name": "MinimaxLoomis.mu0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L123",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.lam.aux.continuous",
+      "display_name": "MinimaxLoomis.lam.aux.continuous",
+      "qualified_name": "MinimaxLoomis.lam.aux.continuous",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L62",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.mu.aux.continuous",
+      "display_name": "MinimaxLoomis.mu.aux.continuous",
+      "qualified_name": "MinimaxLoomis.mu.aux.continuous",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L131",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.lam.aux.bddAbove",
+      "display_name": "MinimaxLoomis.lam.aux.bddAbove",
+      "qualified_name": "MinimaxLoomis.lam.aux.bddAbove",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L69",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.mu.aux.bddBelow",
+      "display_name": "MinimaxLoomis.mu.aux.bddBelow",
+      "qualified_name": "MinimaxLoomis.mu.aux.bddBelow",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L138",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.lam.aux.le_lam0",
+      "display_name": "MinimaxLoomis.lam.aux.le_lam0",
+      "qualified_name": "MinimaxLoomis.lam.aux.le_lam0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L94",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.mu.aux.ge_mu0",
+      "display_name": "MinimaxLoomis.mu.aux.ge_mu0",
+      "qualified_name": "MinimaxLoomis.mu.aux.ge_mu0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L159",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.exists_xx_lam0",
+      "display_name": "MinimaxLoomis.exists_xx_lam0",
+      "qualified_name": "MinimaxLoomis.exists_xx_lam0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L103",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.exists_yy_mu0",
+      "display_name": "MinimaxLoomis.exists_yy_mu0",
+      "qualified_name": "MinimaxLoomis.exists_yy_mu0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L167",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MinimaxLoomis.lam0_le_mu0",
+      "display_name": "MinimaxLoomis.lam0_le_mu0",
+      "qualified_name": "MinimaxLoomis.lam0_le_mu0",
+      "module": "GameTheoryLib.StrategicGame.MinimaxLoomis",
+      "repository_title": "EconCSLib",
+      "revision": "42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2",
+      "short_revision": "42d7b9b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/MinimaxLoomis.lean#L183",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

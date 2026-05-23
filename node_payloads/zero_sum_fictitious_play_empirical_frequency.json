@@ -3,25 +3,26 @@
   "title": "Empirical Frequency Of Play",
   "kind": "definition",
   "status": "staged",
-  "href": "zero_sum/fictitious_play/zero_sum_fictitious_play_empirical_frequency.html",
-  "primary_topic": "zero_sum.fictitious_play",
+  "href": "zero_sum/zero_sum_fictitious_play_empirical_frequency.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.fictitious_play"
   ],
-  "body_html": "<h1>Empirical Frequency Of Play</h1>\n<p>Let $(i_t)_{t\\ge1}$ be a sequence of pure actions in a finite action set $I$.\nAfter $n$ stages, its empirical frequency is the mixed strategy\n$$\n  x_n=\\frac1n\\sum_{t=1}^n e_{i_t}\\in\\Delta(I),\n$$\nwhere $e_i$ is the Dirac mass on action $i$.</p>\n<p>For a two-player matrix game with realized pure actions $(i_t,j_t)$, write\n$$\n  x_n=\\frac1n\\sum_{t=1}^n e_{i_t}\\in\\Delta(I),\n  \\qquad\n  y_n=\\frac1n\\sum_{t=1}^n e_{j_t}\\in\\Delta(J).\n$$\nFictitious play is defined by requiring each player's next action to be a best\nresponse to the opponent's current empirical frequency.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, before Definition 2.7.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Empirical distributions x_n and y_n of previously played pure actions.</li>\n</ul>",
+  "body_html": "<h1>Empirical Frequency Of Play</h1>\n<p>Let $(i_t)_{t\\ge1}$ be a sequence of pure actions in a finite action set $I$.\nAfter $n$ stages, its empirical frequency is the mixed strategy\n$$\n  x_n=\\frac1n\\sum_{t=1}^n e_{i_t}\\in\\Delta(I),\n$$\nwhere $e_i$ is the Dirac mass on action $i$.</p>\n<p>For a two-player matrix game with realized pure actions $(i_t,j_t)$, write\n$$\n  x_n=\\frac1n\\sum_{t=1}^n e_{i_t}\\in\\Delta(I),\n  \\qquad\n  y_n=\\frac1n\\sum_{t=1}^n e_{j_t}\\in\\Delta(J).\n$$\nFictitious play is defined by requiring each player's next action to be a best\nresponse to the opponent's current empirical frequency.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, before Def. 2.7.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Empirical distributions x_n and y_n of previously played pure actions.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
       "id": "zero_sum.core.mixed_strategy_simplex",
       "title": "Mixed Strategy Simplex",
-      "href": "zero_sum/core/zero_sum_core_mixed_strategy_simplex.html"
+      "href": "zero_sum/zero_sum_core_mixed_strategy_simplex.html"
     }
   ],
   "dependents": [
     {
       "id": "zero_sum.fictitious_play.fictitious_play",
       "title": "Fictitious Play",
-      "href": "zero_sum/fictitious_play/zero_sum_fictitious_play_fictitious_play.html"
+      "href": "zero_sum/zero_sum_fictitious_play_fictitious_play.html"
     }
   ],
   "lean_refs": []

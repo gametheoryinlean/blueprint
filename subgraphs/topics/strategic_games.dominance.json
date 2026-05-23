@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 15,
-    "visible_nodes_with_selected_proof_plans": 15
+    "visible_nodes_without_proof_plans": 14,
+    "visible_nodes_with_selected_proof_plans": 14
   },
   "nodes": [
     {
@@ -148,7 +148,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 132
+      "node_count": 134
     },
     {
       "id": "strategic_games.refinements",
@@ -158,18 +158,11 @@
       "node_count": 14
     },
     {
-      "id": "zero_sum.core",
-      "title": "Zero Sum.Core",
-      "href": "zero_sum/core/index.html",
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
       "role": "dependency",
-      "node_count": 19
-    },
-    {
-      "id": "zero_sum.minimax",
-      "title": "Zero Sum.Minimax",
-      "href": "zero_sum/minimax/index.html",
-      "role": "dependency",
-      "node_count": 11
+      "node_count": 77
     }
   ],
   "boundary_edges": [
@@ -209,17 +202,17 @@
       "count": 1
     },
     {
-      "from": "topic:zero_sum.core",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response",
+      "from": "topic:zero_sum",
+      "to": "strategic_games.dominance.strict_dominance_never_best_response",
       "kind": "boundary_dependency",
-      "topic": "zero_sum.core",
+      "topic": "zero_sum",
       "count": 1
     },
     {
-      "from": "topic:zero_sum.minimax",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response",
+      "from": "topic:zero_sum",
+      "to": "strategic_games.dominance.weak_dominance_never_best_response",
       "kind": "boundary_dependency",
-      "topic": "zero_sum.minimax",
+      "topic": "zero_sum",
       "count": 1
     },
     {

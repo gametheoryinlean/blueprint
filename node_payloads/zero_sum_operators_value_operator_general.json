@@ -3,9 +3,10 @@
   "title": "General Value Operator",
   "kind": "definition",
   "status": "staged",
-  "href": "zero_sum/operators/zero_sum_operators_value_operator_general.html",
-  "primary_topic": "zero_sum.operators",
+  "href": "zero_sum/zero_sum_operators_value_operator_general.html",
+  "primary_topic": "zero_sum",
   "topics": [
+    "zero_sum",
     "zero_sum.operators"
   ],
   "body_html": "<h1>General Value Operator</h1>\n<p>Fix strategy sets $S$ and $T$ and a convex cone $F$ of functions\n$S\\times T\\to\\mathbb R$ containing the constant functions. Assume every game\n$(S,T,f)$ with $f\\in F$ has a value. The value operator is\n$$\n  \\operatorname{val}_{S\\times T}:F\\to\\mathbb R,\\qquad\n  f\\mapsto\n  \\sup_{s\\in S}\\inf_{t\\in T}f(s,t)\n  =\n  \\inf_{t\\in T}\\sup_{s\\in S}f(s,t).\n$$\nIt is monotone and translates constants:\n$$\n  f\\le g\\Rightarrow \\operatorname{val}(f)\\le\\operatorname{val}(g),\n  \\qquad\n  \\operatorname{val}(f+c)=\\operatorname{val}(f)+c.\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 3.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Value operator on a cone of payoff functions for games with a value.</li>\n</ul>",
@@ -14,24 +15,24 @@
     {
       "id": "zero_sum.core.value",
       "title": "Value Of A Zero-Sum Game",
-      "href": "zero_sum/core/zero_sum_core_value.html"
+      "href": "zero_sum/zero_sum_core_value.html"
     }
   ],
   "dependents": [
     {
       "id": "zero_sum.operators.derived_game",
       "title": "Derived Game",
-      "href": "zero_sum/operators/zero_sum_operators_derived_game.html"
+      "href": "zero_sum/zero_sum_operators_derived_game.html"
     },
     {
       "id": "zero_sum.operators.value_directional_derivative",
       "title": "Directional Derivative Of The Value",
-      "href": "zero_sum/operators/zero_sum_operators_value_directional_derivative.html"
+      "href": "zero_sum/zero_sum_operators_value_directional_derivative.html"
     },
     {
       "id": "zero_sum.operators.value_operator_nonexpansive_general",
       "title": "General Value Operator Is Nonexpansive",
-      "href": "zero_sum/operators/zero_sum_operators_value_operator_nonexpansive_general.html"
+      "href": "zero_sum/zero_sum_operators_value_operator_nonexpansive_general.html"
     }
   ],
   "lean_refs": []

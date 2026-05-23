@@ -99,6 +99,10 @@
         </li>
       
         <li class="topic-leaf">
+          <a href="../mixed_strategy/index.html">Mixed Strategy</a>
+        </li>
+      
+        <li class="topic-leaf">
           <a href="../order/index.html">Order</a>
         </li>
       
@@ -255,6 +259,8 @@
       
         <li><a href="../keywords/cournot.html">cournot</a></li>
       
+        <li><a href="../keywords/dantzig.html">dantzig</a></li>
+      
         <li><a href="../keywords/definition.html">definition</a></li>
       
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
@@ -339,6 +345,8 @@
       
         <li><a href="../keywords/individual-rationality.html">individual-rationality</a></li>
       
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/invariance.html">invariance</a></li>
@@ -394,6 +402,8 @@
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
       
         <li><a href="../keywords/obedience.html">obedience</a></li>
+      
+        <li><a href="../keywords/open-issue.html">open-issue</a></li>
       
         <li><a href="../keywords/optimal-strategy.html">optimal-strategy</a></li>
       
@@ -584,14 +594,14 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55d6ba5ee2477930ea872ea2de3b8c137320740b/GameTheoryLib/StrategicGame/Minimax.lean#L95"><code>MatrixGame.maximin_le_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/42d7b9bf4cf24c294946a0ec3adc94d86b5f1db2/GameTheoryLib/StrategicGame/Minimax.lean#L115"><code>MatrixGame.maximin_le_minimax</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 55d6ba5, GameTheoryLib.StrategicGame.Minimax
+            EconCSLib @ 42d7b9b, GameTheoryLib.StrategicGame.Minimax
           </span>
           
-          <span class="badge status-needs_proof_review">sorry/admit</span>
+          
         </li>
         
       </ul>
@@ -608,10 +618,29 @@
 <p>$$\max_x \min_j E_A(x,j) \le \min_y \max_i E_A(i,y).$$</p>
 <p>This is the weak-duality inequality: player I's best guaranteed payoff cannot
 exceed player II's best upper bound on player I's payoff.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>For every mixed row $x$ and mixed column $y$,
+$$
+  \min_j E_A(x,j) \le E_A(x,y) \le \max_i E_A(i,y).
+$$
+Taking the supremum over $x$ on the left preserves the first inequality against
+the fixed upper bound $\max_i E_A(i,y)$, so
+$$
+  \max_x \min_j E_A(x,j) \le \max_i E_A(i,y)
+$$
+for every $y$. Taking the infimum over $y$ gives
+$$
+  \max_x \min_j E_A(x,j) \le \min_y \max_i E_A(i,y).
+$$</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 2, Lemmas 2.2.4 and 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. The lower value never exceeds the upper value.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -626,6 +655,19 @@ exceed player II's best upper bound on player I's payoff.</p>
   </section>
   
 
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../zero_sum/index.html">Zero Sum</a></li>
+      
+      <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      
+      <li><a href="../zero_sum/minimax/index.html">Zero Sum.Minimax</a></li>
+      
+    </ul>
+  </section>
   
 
   
