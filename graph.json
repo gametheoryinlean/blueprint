@@ -10116,6 +10116,7 @@
         "zero_sum.mixed_matrix_payoff"
       ],
       "used_by": [
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
         "zero_sum.minimax.minimax_from_loomis"
       ]
     },
@@ -10153,6 +10154,7 @@
         "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.lam_mu_existence",
         "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
         "zero_sum.minimax.minimax_from_loomis"
       ]
     },
@@ -10214,6 +10216,7 @@
         "zero_sum.fictitious_play.robinson_admissible_lemma",
         "zero_sum.lam_mu_existence",
         "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.loomis_theorem",
         "zero_sum.minimax.value_predicates",
         "zero_sum.mixed_matrix_payoff"
       ]
@@ -10329,7 +10332,7 @@
       "id": "zero_sum.minimax.loomis_induction_proof",
       "title": "Direct Induction Proof Of Loomis Theorem",
       "kind": "proof-plan",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "loomis",
@@ -10342,13 +10345,226 @@
       ],
       "target": "zero_sum.minimax.loomis_theorem",
       "plan_status": "selected",
-      "topic": "zero_sum"
+      "lean_declarations": [
+        "LoomisGeneral.loomis_value_eq"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.minimax.loomis_induction_proof.base_case",
+        "zero_sum.minimax.loomis_induction_proof.column_drop",
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+        "zero_sum.minimax.loomis_induction_proof.row_drop",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.loomis_induction_proof.weak_duality"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "title": "Base Case of Loomis Induction",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "loomis",
+        "base-case"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "LoomisGeneral.loomis_value_IJ_2"
+      ],
+      "topic": "zero_sum",
+      "used_by": [
+        "zero_sum.minimax.loomis_induction_proof",
+        "zero_sum.minimax.loomis_theorem"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "title": "Column-Drop Step of Loomis Induction",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "loomis",
+        "induction"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "LoomisGeneral.loomis_value_eq_aux"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.loomis_induction_proof.weak_duality"
+      ],
+      "used_by": [
+        "zero_sum.minimax.loomis_induction_proof",
+        "zero_sum.minimax.loomis_induction_proof.row_drop",
+        "zero_sum.minimax.loomis_theorem"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "title": "Positive Aggregates xB and By",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "loomis",
+        "simplex",
+        "positivity"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "LoomisGeneral.IsPositive",
+        "LoomisGeneral.IsPositive.one",
+        "LoomisGeneral.wsum_pos",
+        "LoomisGeneral.xA",
+        "LoomisGeneral.xB",
+        "LoomisGeneral.Ay",
+        "LoomisGeneral.By",
+        "LoomisGeneral.xB_pos",
+        "LoomisGeneral.By_pos",
+        "LoomisGeneral.xBy_pos"
+      ],
+      "topic": "zero_sum",
+      "used_by": [
+        "zero_sum.minimax.loomis_induction_proof",
+        "zero_sum.minimax.loomis_induction_proof.column_drop",
+        "zero_sum.minimax.loomis_induction_proof.row_drop",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.loomis_induction_proof.weak_duality",
+        "zero_sum.minimax.loomis_theorem"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "title": "Row-Drop Step of Loomis Induction",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "loomis",
+        "induction"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "LoomisGeneral.loomis_value_eq_aux"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.minimax.loomis_induction_proof.column_drop",
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.loomis_induction_proof.weak_duality"
+      ],
+      "used_by": [
+        "zero_sum.minimax.loomis_induction_proof",
+        "zero_sum.minimax.loomis_theorem"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "title": "Existence of Loomis Optimisers",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "loomis",
+        "existence",
+        "compactness"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "LoomisGeneral.colRatio",
+        "LoomisGeneral.rowRatio",
+        "LoomisGeneral.lamB.aux",
+        "LoomisGeneral.muB.aux",
+        "LoomisGeneral.lamB0",
+        "LoomisGeneral.muB0",
+        "LoomisGeneral.lamB.aux_gt_iff_gt",
+        "LoomisGeneral.muB.aux_lt_iff_lt",
+        "LoomisGeneral.colRatio.continuous",
+        "LoomisGeneral.rowRatio.continuous",
+        "LoomisGeneral.lamB.aux.continuous",
+        "LoomisGeneral.muB.aux.continuous",
+        "LoomisGeneral.lamB.aux.bddAbove",
+        "LoomisGeneral.muB.aux.bddBelow",
+        "LoomisGeneral.lamB.aux.le_lamB0",
+        "LoomisGeneral.muB.aux.ge_muB0",
+        "LoomisGeneral.exists_xx_lamB0",
+        "LoomisGeneral.exists_yy_muB0"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.lam_mu_existence",
+        "zero_sum.loomis_route_compactness",
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate"
+      ],
+      "used_by": [
+        "zero_sum.minimax.loomis_induction_proof",
+        "zero_sum.minimax.loomis_induction_proof.column_drop",
+        "zero_sum.minimax.loomis_induction_proof.row_drop",
+        "zero_sum.minimax.loomis_induction_proof.weak_duality",
+        "zero_sum.minimax.loomis_theorem"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "title": "Weak Duality For Loomis Values",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "loomis",
+        "weak-duality"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "LoomisGeneral.lamB0_le_muB0"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+        "zero_sum.minimax.loomis_induction_proof.value_existence"
+      ],
+      "used_by": [
+        "zero_sum.minimax.loomis_induction_proof",
+        "zero_sum.minimax.loomis_induction_proof.column_drop",
+        "zero_sum.minimax.loomis_induction_proof.row_drop",
+        "zero_sum.minimax.loomis_theorem"
+      ]
     },
     {
       "id": "zero_sum.minimax.loomis_theorem",
-      "title": "Loomis Theorem",
+      "title": "Loomis Theorem (Positive B)",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "minimax",
@@ -10359,7 +10575,23 @@
         "zero_sum",
         "zero_sum.minimax"
       ],
+      "lean_declarations": [
+        "LoomisGeneral.IsPositive",
+        "LoomisGeneral.lamB0",
+        "LoomisGeneral.muB0",
+        "LoomisGeneral.loomis_value_eq",
+        "LoomisGeneral.loomis_theorem"
+      ],
       "topic": "zero_sum",
+      "uses": [
+        "zero_sum.matrix_game",
+        "zero_sum.minimax.loomis_induction_proof.base_case",
+        "zero_sum.minimax.loomis_induction_proof.column_drop",
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+        "zero_sum.minimax.loomis_induction_proof.row_drop",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.loomis_induction_proof.weak_duality"
+      ],
       "used_by": [
         "linear_algebra.perron_frobenius_positive_matrix",
         "zero_sum.minimax.minimax_from_loomis"
@@ -10470,7 +10702,10 @@
         "MinimaxLoomis.wsum_extendDropColumn",
         "MinimaxLoomis.wsum_extendDropRow",
         "MinimaxLoomis.minmax'",
-        "MinimaxLoomis.minmax_theorem'"
+        "MinimaxLoomis.minmax_theorem'",
+        "LoomisGeneral.minmax_from_general",
+        "LoomisGeneral.lamB0_one",
+        "LoomisGeneral.muB0_one"
       ],
       "topic": "zero_sum",
       "uses": [
@@ -14005,6 +14240,106 @@
     {
       "from": "zero_sum.mixed_matrix_payoff",
       "to": "zero_sum.maximin_minimax"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "to": "zero_sum.minimax.loomis_induction_proof"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "zero_sum.minimax.loomis_induction_proof"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "to": "zero_sum.minimax.loomis_induction_proof"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_induction_proof"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.column_drop"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.column_drop"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_induction_proof.column_drop"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
+    },
+    {
+      "from": "zero_sum.lam_mu_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence"
+    },
+    {
+      "from": "zero_sum.loomis_route_compactness",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.weak_duality"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.weak_duality"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.minimax.loomis_theorem"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "to": "zero_sum.minimax.loomis_theorem"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "zero_sum.minimax.loomis_theorem"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_theorem"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "to": "zero_sum.minimax.loomis_theorem"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_theorem"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_theorem"
     },
     {
       "from": "zero_sum.examples.antisymmetric_matrix_game_value",

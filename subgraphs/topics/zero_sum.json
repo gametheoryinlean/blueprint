@@ -4,20 +4,20 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 79,
-    "descendant_node_count": 79
+    "node_count": 85,
+    "descendant_node_count": 85
   },
   "counts": {
-    "internal_nodes": 79,
-    "descendant_nodes": 79,
+    "internal_nodes": 85,
+    "descendant_nodes": 85,
     "child_topics": 7,
-    "non_proof_plan_nodes": 70,
+    "non_proof_plan_nodes": 76,
     "proof_plan_nodes": 9,
     "selected_proof_plan_nodes": 5,
     "boundary_topics": 9,
     "proof_plan_attachments": 9,
-    "visible_nodes_without_proof_plans": 80,
-    "visible_nodes_with_selected_proof_plans": 85
+    "visible_nodes_without_proof_plans": 86,
+    "visible_nodes_with_selected_proof_plans": 91
   },
   "nodes": [
     {
@@ -476,17 +476,65 @@
       "id": "zero_sum.minimax.loomis_induction_proof",
       "title": "Direct Induction Proof Of Loomis Theorem",
       "kind": "proof-plan",
-      "status": "staged",
+      "status": "formalized",
       "href": "zero_sum/zero_sum_minimax_loomis_induction_proof.html",
       "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof.json",
       "target": "zero_sum.minimax.loomis_theorem",
       "plan_status": "selected"
     },
     {
+      "id": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "title": "Base Case of Loomis Induction",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_base_case.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof_base_case.json"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "title": "Column-Drop Step of Loomis Induction",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_column_drop.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof_column_drop.json"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "title": "Positive Aggregates xB and By",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_positive_aggregate.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof_positive_aggregate.json"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "title": "Row-Drop Step of Loomis Induction",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_row_drop.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof_row_drop.json"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "title": "Existence of Loomis Optimisers",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_value_existence.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof_value_existence.json"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "title": "Weak Duality For Loomis Values",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_weak_duality.html",
+      "payload": "node_payloads/zero_sum_minimax_loomis_induction_proof_weak_duality.json"
+    },
+    {
       "id": "zero_sum.minimax.loomis_theorem",
-      "title": "Loomis Theorem",
+      "title": "Loomis Theorem (Positive B)",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "href": "zero_sum/zero_sum_minimax_loomis_theorem.html",
       "payload": "node_payloads/zero_sum_minimax_loomis_theorem.json"
     },
@@ -1233,6 +1281,131 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_induction_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lam_mu_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.loomis_route_compactness",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "zero_sum.minimax.loomis_theorem",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.examples.antisymmetric_matrix_game_value",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
       "kind": "proof_plan_uses"
@@ -1513,6 +1686,12 @@
       "count": 1
     },
     {
+      "id": "base-case",
+      "title": "base-case",
+      "href": "keywords/base-case.html",
+      "count": 1
+    },
+    {
       "id": "cesaro",
       "title": "cesaro",
       "href": "keywords/cesaro.html",
@@ -1522,7 +1701,7 @@
       "id": "compactness",
       "title": "compactness",
       "href": "keywords/compactness.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "complementarity",
@@ -1600,7 +1779,7 @@
       "id": "existence",
       "title": "existence",
       "href": "keywords/existence.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "expected-payoff",
@@ -1639,6 +1818,12 @@
       "count": 1
     },
     {
+      "id": "induction",
+      "title": "induction",
+      "href": "keywords/induction.html",
+      "count": 2
+    },
+    {
       "id": "invariant",
       "title": "invariant",
       "href": "keywords/invariant.html",
@@ -1672,7 +1857,7 @@
       "id": "loomis",
       "title": "loomis",
       "href": "keywords/loomis.html",
-      "count": 3
+      "count": 9
     },
     {
       "id": "matrix-game",
@@ -1729,6 +1914,12 @@
       "count": 1
     },
     {
+      "id": "positivity",
+      "title": "positivity",
+      "href": "keywords/positivity.html",
+      "count": 1
+    },
+    {
       "id": "predicate",
       "title": "predicate",
       "href": "keywords/predicate.html",
@@ -1768,7 +1959,7 @@
       "id": "simplex",
       "title": "simplex",
       "href": "keywords/simplex.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "sion",
@@ -1840,13 +2031,13 @@
       "id": "weak-duality",
       "title": "weak-duality",
       "href": "keywords/weak-duality.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 78
+      "count": 84
     }
   ],
   "proof_plan_attachments": [
@@ -2014,20 +2205,20 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 19,
-      "direct_node_count": 19,
+      "node_count": 25,
+      "direct_node_count": 25,
       "kind_counts": {
         "concept": 1,
         "definition": 1,
-        "lemma": 2,
+        "lemma": 8,
         "proof-plan": 8,
         "theorem": 7
       },
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 7,
-        "staged": 9
+        "formalized": 15,
+        "staged": 7
       },
       "href": "zero_sum/minimax/index.html",
       "children": []
@@ -2073,7 +2264,7 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.minimax",
       "kind": "topic_dependency",
-      "count": 9
+      "count": 10
     },
     {
       "from": "topic:zero_sum.core",
@@ -2219,7 +2410,7 @@
       "to": "topic:zero_sum.minimax",
       "kind": "boundary_dependency",
       "topic": "mixed_strategy",
-      "count": 2
+      "count": 3
     },
     {
       "from": "topic:strategic_games",

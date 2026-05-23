@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loomis Theorem — EconCSLib Knowledge Blueprint</title>
+  <title>Loomis Theorem (Positive B) — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -279,6 +279,8 @@
       
         <li><a href="../keywords/bargaining.html">bargaining</a></li>
       
+        <li><a href="../keywords/base-case.html">base-case</a></li>
+      
         <li><a href="../keywords/bayesian-equilibrium.html">bayesian-equilibrium</a></li>
       
         <li><a href="../keywords/bayesian-game.html">bayesian-game</a></li>
@@ -493,6 +495,8 @@
       
         <li><a href="../keywords/indivisible.html">indivisible</a></li>
       
+        <li><a href="../keywords/induction.html">induction</a></li>
+      
         <li><a href="../keywords/information-set.html">information-set</a></li>
       
         <li><a href="../keywords/instance.html">instance</a></li>
@@ -606,6 +610,8 @@
         <li><a href="../keywords/polytope.html">polytope</a></li>
       
         <li><a href="../keywords/population-game.html">population-game</a></li>
+      
+        <li><a href="../keywords/positivity.html">positivity</a></li>
       
         <li><a href="../keywords/potential-game.html">potential-game</a></li>
       
@@ -782,70 +788,212 @@
 <article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-zero_sum-2e-minimax-2e-loomis_theorem">
   <header class="theorem_thmheading thm-heading">
     <span class="theorem_thmcaption thm-caption">Theorem</span>
-    <span class="theorem_thmtitle thm-title">Loomis Theorem</span>
+    <span class="theorem_thmtitle thm-title">Loomis Theorem (Positive B)</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-minimax-2e-loomis_theorem">#</a>
       
+      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
+      
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
 
   
+  <div class="modal-container" id="uses-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li><a href="zero_sum_matrix_game.html">Matrix Game</a></li>
+        
+        <li><a href="zero_sum_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a></li>
+        
+        <li><a href="zero_sum_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a></li>
+        
+        <li><a href="zero_sum_minimax_loomis_induction_proof_weak_duality.html">Weak Duality For Loomis Values</a></li>
+        
+        <li><a href="zero_sum_minimax_loomis_induction_proof_base_case.html">Base Case of Loomis Induction</a></li>
+        
+        <li><a href="zero_sum_minimax_loomis_induction_proof_column_drop.html">Column-Drop Step of Loomis Induction</a></li>
+        
+        <li><a href="zero_sum_minimax_loomis_induction_proof_row_drop.html">Row-Drop Step of Loomis Induction</a></li>
+        
+      </ul>
+    </div>
+  </div>
+  
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4febbad2e1f287833c6f170135fd2026d22ad443/EconCSLib/StrategicGame/LoomisGeneral.lean#L50"><code>LoomisGeneral.IsPositive</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 4febbad, EconCSLib.StrategicGame.LoomisGeneral
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4febbad2e1f287833c6f170135fd2026d22ad443/EconCSLib/StrategicGame/LoomisGeneral.lean#L147"><code>LoomisGeneral.lamB0</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 4febbad, EconCSLib.StrategicGame.LoomisGeneral
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4febbad2e1f287833c6f170135fd2026d22ad443/EconCSLib/StrategicGame/LoomisGeneral.lean#L150"><code>LoomisGeneral.muB0</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 4febbad, EconCSLib.StrategicGame.LoomisGeneral
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4febbad2e1f287833c6f170135fd2026d22ad443/EconCSLib/StrategicGame/LoomisGeneral.lean#L821"><code>LoomisGeneral.loomis_value_eq</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 4febbad, EconCSLib.StrategicGame.LoomisGeneral
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4febbad2e1f287833c6f170135fd2026d22ad443/EconCSLib/StrategicGame/LoomisGeneral.lean#L841"><code>LoomisGeneral.loomis_theorem</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 4febbad, EconCSLib.StrategicGame.LoomisGeneral
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>EconCSLib.StrategicGame.LoomisGeneral</code></p>
+      
+    </div>
+  </div>
   
 
   <div class="theorem_thmcontent thm-content body">
-    <h1>Loomis Theorem</h1>
-<p>Let $A$ and $B$ be two real matrices indexed by $I\times J$, and assume that
-all entries of $B$ are positive.  Then there exist
-$(x,y,v)\in \Delta(I)\times \Delta(J)\times \mathbb{R}$ such that
+    <h1>Loomis Theorem (Positive B)</h1>
+<h2>Setup</h2>
+<p>Fix finite nonempty index types $I$ and $J$. Let $A, B \colon I \times J \to
+\mathbb{R}$ be two real matrices, and assume $B$ is <strong>entrywise positive</strong>:
+$B_{ij} &gt; 0$ for every $(i, j) \in I \times J$.</p>
+<p>For $x \in \Delta(I)$ and $y \in \Delta(J)$ define the row- and column-vector
+products
 $$
-  xA \ge v\,xB
+  (xA)_j = \sum_i x_i A_{ij}, \qquad (Ay)_i = \sum_j A_{ij}\, y_j,
 $$
-and
+and similarly $(xB)_j$, $(By)_i$. Positivity of $B$ implies $(xB)_j &gt; 0$ for
+every $x \in \Delta(I)$ and every $j$, and $(By)_i &gt; 0$ for every
+$y \in \Delta(J)$ and every $i$ — recorded as
+<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.positive_aggregate" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a>.</p>
+<h2>Statement</h2>
+<p><strong>Theorem (Loomis).</strong> There exist $x \in \Delta(I)$, $y \in \Delta(J)$, and
+$v \in \mathbb{R}$ such that
 $$
-  Ay \le v\,By.
+  xA \ge v \cdot xB, \qquad Ay \le v \cdot By,
+$$
+where the inequalities are componentwise. Equivalently, for every $j \in J$
+and every $i \in I$,
+$$
+  \sum_i x_i A_{ij} \ge v \sum_i x_i B_{ij}, \qquad
+  \sum_j A_{ij}\, y_j \le v \sum_j B_{ij}\, y_j.
 $$</p>
-<p>Here $xA$ and $xB$ are row vectors indexed by $J$, while $Ay$ and $By$ are
-column vectors indexed by $I$. Thus the first inequality says that player 1's
-mixed row $x$ guarantees the ratio level $v$ against every column, and the
-second inequality says that player 2's mixed column $y$ caps the same ratio
-level against every row.</p>
+<p>The common ratio level $v$ is the <strong>Loomis value</strong> of the pair $(A, B)$. The
+scalar form of the same statement is
+$$
+  \lambda_0 \;=\; \mu_0 \;=\; v,
+$$
+where
+$$
+  \lambda_0
+  \;=\; \sup_{x \in \Delta(I)} \inf_{j \in J} \frac{(xA)_j}{(xB)_j},
+  \qquad
+  \mu_0
+  \;=\; \inf_{y \in \Delta(J)} \sup_{i \in I} \frac{(Ay)_i}{(By)_i}.
+$$
+The denominators are strictly positive by positivity of $B$, so both
+expressions are well-defined.</p>
+<h2>Discussion</h2>
 <p>MFoGT presents Loomis as an extension of von Neumann's minimax theorem. The
 canonical blueprint route in this library is the opposite: Loomis is proved
-directly by induction on $|I|+|J|$ (see the proof-plan
-<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof" href="minimax/zero_sum_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>), and finite minimax is then
-obtained as the $B=\mathbf{1}$ specialisation
-(<a class="node-ref" data-node-id="zero_sum.minimax.minimax_from_loomis" href="minimax/zero_sum_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a>), because $xB$ and $By$ are both
-all-ones vectors for probability vectors $x$ and $y$. The alternative
-$t\mapsto\operatorname{val}(A-tB)$ route, which would derive Loomis from finite
-minimax, is therefore not used here.</p>
+directly by induction on $|I| + |J|$ (see the proof-plan
+<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof" href="minimax/zero_sum_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>). Finite minimax is then the
+$B = \mathbf{1}$ specialisation
+(<a class="node-ref" data-node-id="zero_sum.minimax.minimax_from_loomis" href="minimax/zero_sum_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a>): for any probability vectors
+$x, y$ and the all-ones matrix $B = \mathbf{1}$, both $xB$ and $By$ are
+identically $1$, so the Loomis inequalities collapse to
+$\min_j (xA)_j \ge v \ge \max_i (Ay)_i$.</p>
+<p>The library's Lean development formalises the general positive-$B$ Loomis
+theorem in <code>EconCSLib.StrategicGame.LoomisGeneral</code>, and re-derives the
+$B = \mathbf{1}$ specialisation (the finite von Neumann minimax) as the
+corollary <code>LoomisGeneral.minmax_from_general</code>. The original inlined
+induction at $B = \mathbf{1}$ in <code>EconCSLib.StrategicGame.MinimaxLoomis</code>
+is retained as an independent witness.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>The selected proof route is the direct induction proof. It constructs
-the extremal lower ratio
-$$
-  \lambda_0=\sup\{\lambda:\exists x\in\Delta(I),\ xA\ge \lambda xB\}
-$$
-and the extremal upper ratio
-$$
-  \mu_0=\inf\{\mu:\exists y\in\Delta(J),\ Ay\le \mu By\}.
-$$
-Compactness of the finite simplices gives attaining strategies, positivity of
-$B$ gives $\lambda_0\le\mu_0$, and the induction step rules out
-$\lambda_0&lt;\mu_0$ by deleting a strict column or row and mixing the inductive
-strategy back into the original game. Thus $\lambda_0=\mu_0=v$, and the
-attaining strategies satisfy $xA\ge vxB$ and $Ay\le vBy$.</p>
+        <p>See the induction-on-$|I|+|J|$ proof-plan
+<em>Direct Induction Proof Of Loomis Theorem</em>, which decomposes the argument
+into:</p>
+<ol>
+<li>positivity of the aggregates $xB$ and $By$
+   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.positive_aggregate" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a>);</li>
+<li>existence of optimisers attaining $\lambda_0$ and $\mu_0$
+   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.value_existence" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a>);</li>
+<li>weak duality $\lambda_0 \le \mu_0$
+   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.weak_duality" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_weak_duality.html">Weak Duality For Loomis Values</a>);</li>
+<li>the base case $|I| + |J| = 2$
+   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.base_case" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_base_case.html">Base Case of Loomis Induction</a>);</li>
+<li>the column-drop induction step
+   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.column_drop" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_column_drop.html">Column-Drop Step of Loomis Induction</a>);</li>
+<li>the row-drop induction step
+   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof.row_drop" href="minimax/loomis_induction_proof/zero_sum_minimax_loomis_induction_proof_row_drop.html">Row-Drop Step of Loomis Induction</a>).</li>
+</ol>
+<p>Steps 1–3 give $\lambda_0 \le \mu_0$ and existence of attaining strategies
+$x_0, y_0$. Step 4 closes the base case. Steps 5–6 rule out the strict
+inequality $\lambda_0 &lt; \mu_0$ by induction on $|I| + |J|$, leaving the
+equality $\lambda_0 = \mu_0 = v$, witnessed by $(x_0, y_0)$.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Thm. 2.5.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Loomis theorem for matrices A and positive B.</li>
+<li>[MFoGT, Thm. 2.5.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations
+  of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Loomis
+  theorem for matrices $A$ and positive $B$.</li>
+<li>[MFoGT, Section 2.8, Exercise 1] Same. Direct induction proof of Loomis,
+  independent of von Neumann minimax.</li>
 </ul>
       </div>
     </details>
