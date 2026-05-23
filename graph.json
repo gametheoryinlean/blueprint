@@ -1712,11 +1712,19 @@
       "id": "linear_algebra.perron_frobenius_positive_matrix",
       "title": "Perron-Frobenius For Positive Matrices",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "linear-algebra",
         "perron-frobenius",
         "zero-sum"
+      ],
+      "primary_topic": "linear_algebra",
+      "topics": [
+        "linear_algebra",
+        "linear_algebra.perron_frobenius"
+      ],
+      "lean_declarations": [
+        "EconCSLib.LinearAlgebra.perron_frobenius"
       ],
       "topic": "linear_algebra",
       "uses": [
@@ -1806,6 +1814,7 @@
       ],
       "used_by": [
         "linear_programming.strong_complementarity",
+        "zero_sum.lp.zero_sum_lp_bridge",
         "zero_sum.minimax.lp_duality_minimax_proof"
       ]
     },
@@ -9665,7 +9674,6 @@
       ],
       "topic": "zero_sum",
       "used_by": [
-        "zero_sum.lp.zero_sum_lp_bridge",
         "zero_sum.simplex_termination"
       ]
     },
@@ -10212,7 +10220,7 @@
       "plan_status": "candidate",
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.dantzig_proof_spine"
+        "linear_programming.strong_duality"
       ]
     },
     {
@@ -14256,7 +14264,7 @@
       "to": "zero_sum.lam_mu_existence"
     },
     {
-      "from": "zero_sum.dantzig_proof_spine",
+      "from": "linear_programming.strong_duality",
       "to": "zero_sum.lp.zero_sum_lp_bridge"
     },
     {
