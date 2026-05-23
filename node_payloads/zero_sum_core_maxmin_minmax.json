@@ -9,7 +9,7 @@
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Maxmin And Minmax</h1>\n<p>For a zero-sum game $(I,J,g)$, the maxmin is\n$$\n  \\underline v = \\sup_{i \\in I} \\inf_{j \\in J} g(i,j),\n$$\nand the minmax is\n$$\n  \\overline v = \\inf_{j \\in J} \\sup_{i \\in I} g(i,j).\n$$\nThe maxmin is the best amount player 1 can guarantee, and the minmax is the\nleast amount player 2 can guarantee as an upper bound on player 1's payoff.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Maxmin and minmax of a zero-sum game.</li>\n</ul>",
+  "body_html": "<h1>Maxmin And Minmax</h1>\n<blockquote>\n<p><strong>Scope.</strong> This node is the <strong>abstract / pure-strategy</strong> version: $I$ and $J$\nare arbitrary nonempty strategy sets, and the inner extremum ranges over pure\nstrategies. The <strong>finite mixed-strategy</strong> instantiation (with $x \\in \\Delta(I)$,\n$y \\in \\Delta(J)$, and Mathlib's <code>Finset.inf'</code> / <code>Finset.sup'</code>) lives in\n<a class=\"node-ref\" data-node-id=\"zero_sum.maximin_minimax\" href=\"zero_sum_maximin_minimax.html\">Maximin and Minimax Values</a> and is the one currently formalised.</p>\n</blockquote>\n<p>For a zero-sum game $(I,J,g)$, the maxmin is\n$$\n  \\underline v = \\sup_{i \\in I} \\inf_{j \\in J} g(i,j),\n$$\nand the minmax is\n$$\n  \\overline v = \\inf_{j \\in J} \\sup_{i \\in I} g(i,j).\n$$\nThe maxmin is the best amount player 1 can guarantee, and the minmax is the\nleast amount player 2 can guarantee as an upper bound on player 1's payoff.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Maxmin and minmax of a zero-sum game.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -23,11 +23,6 @@
       "id": "zero_sum.core.maxmin_le_minmax",
       "title": "Maxmin Is At Most Minmax",
       "href": "zero_sum/zero_sum_core_maxmin_le_minmax.html"
-    },
-    {
-      "id": "zero_sum.core.value",
-      "title": "Value Of A Zero-Sum Game",
-      "href": "zero_sum/zero_sum_core_value.html"
     }
   ],
   "lean_refs": []

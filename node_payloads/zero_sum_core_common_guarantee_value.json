@@ -2,15 +2,15 @@
   "id": "zero_sum.core.common_guarantee_value",
   "title": "Common Guarantee Gives The Value",
   "kind": "lemma",
-  "status": "staged",
+  "status": "formalized",
   "href": "zero_sum/zero_sum_core_common_guarantee_value.html",
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Common Guarantee Gives The Value</h1>\n<p>If player 1 and player 2 both guarantee the same number $w$, then $w$ is the\nunique value of the game, and the strategies witnessing the two guarantees are\noptimal.</p>",
-  "proof_html": "<p>The two guarantees and weak duality give the chain\n$$\n  w \\le \\underline v \\le \\overline v \\le w.\n$$\nThus $\\underline v=\\overline v=w$, and the witnessing strategies attain the\nvalue. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lem. 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. A common guarantee is unique and equal to the value.</li>\n</ul>",
+  "body_html": "<h1>Common Guarantee Gives The Value</h1>\n<p>If player I and player II both guarantee the same number $w$, then $w$ is\nthe unique value of the game, and the strategies witnessing the two\nguarantees are optimal.</p>",
+  "proof_html": "<p>The two guarantees and weak duality give the chain\n$$\n  w \\le \\underline v \\le \\overline v \\le w.\n$$\nThus $\\underline v=\\overline v=w$, and the witnessing strategies attain the\nvalue. The minimax theorem (<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>) closes the\ninner two inequalities, the player-guarantee bound is the outer pair\n(<a class=\"node-ref\" data-node-id=\"zero_sum.core.player_guarantee\" href=\"core/zero_sum_core_player_guarantee.html\">Player Guarantee</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lem. 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. A common guarantee is unique and equal to the value.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.player_guarantee",
@@ -23,11 +23,30 @@
       "href": "zero_sum/zero_sum_core_value.html"
     },
     {
-      "id": "zero_sum.core.maxmin_le_minmax",
-      "title": "Maxmin Is At Most Minmax",
-      "href": "zero_sum/zero_sum_core_maxmin_le_minmax.html"
+      "id": "zero_sum.maximin_le_minimax",
+      "title": "Maximin is Bounded by Minimax",
+      "href": "zero_sum/zero_sum_maximin_le_minimax.html"
+    },
+    {
+      "id": "zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
     }
   ],
   "dependents": [],
-  "lean_refs": []
+  "lean_refs": [
+    {
+      "name": "MatrixGame.common_guarantee_eq_value",
+      "display_name": "MatrixGame.common_guarantee_eq_value",
+      "qualified_name": "MatrixGame.common_guarantee_eq_value",
+      "module": "GameTheoryLib.StrategicGame.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "d627d1b8efc5618c9f7c9187eed5f02c26672a1f",
+      "short_revision": "d627d1b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L283",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

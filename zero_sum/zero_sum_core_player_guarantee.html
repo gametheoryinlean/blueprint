@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Player Guarantee</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-player_guarantee">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -579,18 +579,64 @@
         
         <li><a href="zero_sum_zero_sum_game.html">Zero-Sum Game</a></li>
         
+        <li><a href="zero_sum_matrix_game.html">Matrix Game</a></li>
+        
       </ul>
     </div>
   </div>
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L107"><code>MatrixGame.IsPlayerIGuarantee</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L112"><code>MatrixGame.IsPlayerIIGuarantee</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="definition_thmcontent thm-content body">
     <h1>Player Guarantee</h1>
-<p>In a zero-sum game $(I,J,g)$, player 1 guarantees $w$ if there exists
-$i \in I$ such that $g(i,j) \ge w$ for every $j \in J$.  Player 2 guarantees
-$w$ if there exists $j \in J$ such that $g(i,j) \le w$ for every $i \in I$.</p>
+<p>In the finite mixed-strategy version, $w$ is a <strong>guarantee for player I</strong>
+when some $x \in \Delta(I)$ achieves $E_A(x, j) \ge w$ for every pure
+$j \in J$. Symmetrically, $w$ is a <strong>guarantee for player II</strong> when some
+$y \in \Delta(J)$ achieves $E_A(i, y) \le w$ for every pure $i \in I$.
+Equivalently, $w$ is a player I guarantee iff $w \le \operatorname{val}(A)$
+(the maximin), and dually for player II with $\operatorname{val}(A) \le w$
+(the minimax).</p>
+<p>The abstract pure-strategy version ($\exists i, \forall j, g(i, j) \ge w$)
+collapses on finite mixed extensions to the same scalar bound via the
+Loomis-style order characterisation
+(<a class="node-ref" data-node-id="zero_sum.loomis_route_compactness" href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a>).</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Def. 2.2.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Guarantees for both players in a zero-sum game.</li>

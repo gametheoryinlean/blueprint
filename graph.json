@@ -3438,7 +3438,6 @@
         "strategic_games.potential.potential_maximizer_nash",
         "strategic_games.prisoners_dilemma",
         "strategic_games.refinements.better_reply_secure_game",
-        "zero_sum.core.zero_sum_nash_saddle",
         "zero_sum.zero_sum_nash_value_unique"
       ]
     },
@@ -4831,7 +4830,7 @@
       "id": "zero_sum.core.common_guarantee_value",
       "title": "Common Guarantee Gives The Value",
       "kind": "lemma",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "value",
@@ -4842,18 +4841,22 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.common_guarantee_eq_value"
+      ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.maxmin_le_minmax",
         "zero_sum.core.player_guarantee",
-        "zero_sum.core.value"
+        "zero_sum.core.value",
+        "zero_sum.maximin_le_minimax",
+        "zero_sum.von_neumann_minimax"
       ]
     },
     {
       "id": "zero_sum.core.duality_gap",
       "title": "Duality Gap In A Matrix Game",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "value",
@@ -4864,10 +4867,13 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.dualityGap"
+      ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.mixed_extension",
-        "zero_sum.core.optimal_strategy_sets"
+        "zero_sum.maximin_minimax"
       ],
       "used_by": [
         "zero_sum.fictitious_play.continuous_fictitious_play_gap"
@@ -4877,7 +4883,7 @@
       "id": "zero_sum.core.epsilon_optimal_strategy",
       "title": "Epsilon-Optimal Strategy",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "optimal-strategy",
@@ -4888,33 +4894,14 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.IsEpsilonOptimalRow",
+        "MatrixGame.IsEpsilonOptimalColumn"
+      ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.player_guarantee",
         "zero_sum.core.value"
-      ]
-    },
-    {
-      "id": "zero_sum.core.matrix_game_mfogt",
-      "title": "Matrix Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "zero-sum",
-        "matrix-game",
-        "finite-game"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.core"
-      ],
-      "lean_declarations": [
-        "MatrixGame"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "zero_sum.zero_sum_game"
       ]
     },
     {
@@ -4937,7 +4924,6 @@
         "zero_sum.core.maxmin_minmax"
       ],
       "used_by": [
-        "zero_sum.core.common_guarantee_value",
         "zero_sum.examples.three_player_minimax_failure",
         "zero_sum.fictitious_play.continuous_fictitious_play_gap"
       ]
@@ -4962,15 +4948,14 @@
         "zero_sum.core.player_guarantee"
       ],
       "used_by": [
-        "zero_sum.core.maxmin_le_minmax",
-        "zero_sum.core.value"
+        "zero_sum.core.maxmin_le_minmax"
       ]
     },
     {
       "id": "zero_sum.core.mixed_extension",
       "title": "Mixed Extension Of A Matrix Game",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "mixed-strategy",
@@ -4999,7 +4984,7 @@
       "id": "zero_sum.core.mixed_strategy_simplex",
       "title": "Mixed Strategy Simplex",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "mixed-strategy",
@@ -5008,7 +4993,13 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core"
+        "zero_sum.core",
+        "mixed_strategy"
+      ],
+      "lean_declarations": [
+        "stdSimplex",
+        "stdSimplex.pure",
+        "wsum"
       ],
       "topic": "zero_sum",
       "uses": [
@@ -5025,7 +5016,7 @@
       "id": "zero_sum.core.mixed_support",
       "title": "Support Of A Mixed Strategy",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "mixed-strategy",
@@ -5034,7 +5025,11 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core"
+        "zero_sum.core",
+        "mixed_strategy"
+      ],
+      "lean_declarations": [
+        "MatrixGame.support"
       ],
       "topic": "zero_sum",
       "uses": [
@@ -5047,8 +5042,8 @@
     {
       "id": "zero_sum.core.optimal_pairs_are_saddle_points",
       "title": "Optimal Pairs Are Exactly Saddle Points",
-      "kind": "proposition",
-      "status": "staged",
+      "kind": "theorem",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "saddle-point",
@@ -5059,18 +5054,28 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.optimal_pairs_iff_saddle_point",
+        "MatrixGame.mem_optimalRowStrategies_iff_E_ge",
+        "MatrixGame.mem_optimalColumnStrategies_iff_E_le"
+      ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.saddle_point",
-        "zero_sum.minimax.minimax_theorem"
+        "zero_sum.loomis_route_compactness",
+        "zero_sum.maximin_le_minimax",
+        "zero_sum.von_neumann_minimax"
+      ],
+      "used_by": [
+        "zero_sum.core.support_complementarity"
       ]
     },
     {
       "id": "zero_sum.core.optimal_strategy_sets",
       "title": "Optimal Strategy Sets",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "optimal-strategy"
@@ -5080,12 +5085,16 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.optimalRowStrategies",
+        "MatrixGame.optimalColumnStrategies"
+      ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.minimax.minimax_theorem"
+        "zero_sum.core.value",
+        "zero_sum.maximin_minimax"
       ],
       "used_by": [
-        "zero_sum.core.duality_gap",
         "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.core.optimal_strategy_sets_are_polytopes",
         "zero_sum.core.strong_complementarity",
@@ -5120,7 +5129,7 @@
       "id": "zero_sum.core.player_guarantee",
       "title": "Player Guarantee",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "value",
@@ -5131,8 +5140,13 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.IsPlayerIGuarantee",
+        "MatrixGame.IsPlayerIIGuarantee"
+      ],
       "topic": "zero_sum",
       "uses": [
+        "zero_sum.matrix_game",
         "zero_sum.zero_sum_game"
       ],
       "used_by": [
@@ -5145,7 +5159,7 @@
       "id": "zero_sum.core.saddle_point",
       "title": "Saddle Point",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "saddle-point",
@@ -5156,10 +5170,14 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.IsSaddlePoint",
+        "MatrixGame.IsMixedNashEq"
+      ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.mixed_extension",
-        "zero_sum.core.value"
+        "zero_sum.matrix_game"
       ],
       "used_by": [
         "zero_sum.core.optimal_pairs_are_saddle_points",
@@ -5191,8 +5209,8 @@
     {
       "id": "zero_sum.core.support_complementarity",
       "title": "Support Complementarity",
-      "kind": "proposition",
-      "status": "staged",
+      "kind": "theorem",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "complementarity",
@@ -5203,11 +5221,16 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.support_complementarity_row",
+        "MatrixGame.support_complementarity_column"
+      ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.mixed_support",
+        "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.minimax.minimax_theorem"
+        "zero_sum.von_neumann_minimax"
       ],
       "used_by": [
         "strategic_games.dominance.weak_dominance_never_best_response",
@@ -5218,7 +5241,7 @@
       "id": "zero_sum.core.value",
       "title": "Value Of A Zero-Sum Game",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "value"
@@ -5228,9 +5251,15 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.value",
+        "MatrixGame.value_eq_maximin",
+        "MatrixGame.value_eq_minimax"
+      ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.maxmin_minmax"
+        "zero_sum.maximin_minimax",
+        "zero_sum.von_neumann_minimax"
       ],
       "used_by": [
         "extensive_game.examples.entrant_incomplete_information_value_example",
@@ -5244,7 +5273,7 @@
         "zero_sum.continuous.sion_minimax_theorem",
         "zero_sum.core.common_guarantee_value",
         "zero_sum.core.epsilon_optimal_strategy",
-        "zero_sum.core.saddle_point",
+        "zero_sum.core.optimal_strategy_sets",
         "zero_sum.examples.antisymmetric_matrix_game_value",
         "zero_sum.examples.diagonal_matrix_game_value",
         "zero_sum.examples.matching_pennies",
@@ -5256,30 +5285,10 @@
       ]
     },
     {
-      "id": "zero_sum.core.zero_sum_game_mfogt",
-      "title": "Zero-Sum Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "zero-sum",
-        "strategic-game",
-        "definition"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.core"
-      ],
-      "lean_declarations": [
-        "StrategicGame.IsZeroSum"
-      ],
-      "topic": "zero_sum"
-    },
-    {
       "id": "zero_sum.core.zero_sum_nash_saddle",
       "title": "Zero-Sum Nash Equilibria As Saddle Points",
-      "kind": "proposition",
-      "status": "staged",
+      "kind": "theorem",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "nash-equilibrium",
@@ -5288,13 +5297,18 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core"
+        "zero_sum.core",
+        "strategic_games.equilibrium"
+      ],
+      "lean_declarations": [
+        "MatrixGame.isMixedNashEq_iff_isSaddlePoint",
+        "MatrixGame.IsSaddlePoint",
+        "MatrixGame.IsMixedNashEq"
       ],
       "topic": "zero_sum",
       "uses": [
-        "strategic_games.nash_equilibrium",
         "zero_sum.core.saddle_point",
-        "zero_sum.zero_sum_game"
+        "zero_sum.matrix_game_nash_equilibrium"
       ]
     },
     {
@@ -5769,6 +5783,7 @@
         "zero_sum.mixed_matrix_payoff"
       ],
       "used_by": [
+        "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.lam_mu_existence",
         "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.minimax.minimax_from_loomis",
@@ -5824,6 +5839,8 @@
       "used_by": [
         "zero_sum.core.mixed_extension",
         "zero_sum.core.mixed_strategy_simplex",
+        "zero_sum.core.player_guarantee",
+        "zero_sum.core.saddle_point",
         "zero_sum.examples.antisymmetric_matrix_game_value",
         "zero_sum.examples.diagonal_matrix_game_value",
         "zero_sum.examples.matching_pennies",
@@ -5870,13 +5887,16 @@
         "zero_sum.matrix_game",
         "zero_sum.mixed_matrix_payoff",
         "zero_sum.von_neumann_minimax"
+      ],
+      "used_by": [
+        "zero_sum.core.zero_sum_nash_saddle"
       ]
     },
     {
       "id": "zero_sum.maximin_le_minimax",
       "title": "Maximin is Bounded by Minimax",
       "kind": "lemma",
-      "status": "admitted",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "value",
@@ -5896,6 +5916,8 @@
         "zero_sum.maximin_minimax"
       ],
       "used_by": [
+        "zero_sum.core.common_guarantee_value",
+        "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.von_neumann_minimax"
       ]
     },
@@ -5925,6 +5947,9 @@
         "zero_sum.mixed_matrix_payoff"
       ],
       "used_by": [
+        "zero_sum.core.duality_gap",
+        "zero_sum.core.optimal_strategy_sets",
+        "zero_sum.core.value",
         "zero_sum.lam_mu_existence",
         "zero_sum.maximin_le_minimax",
         "zero_sum.minimax.minimax_from_loomis"
@@ -6113,16 +6138,12 @@
       ],
       "used_by": [
         "strategic_games.dominance.strict_dominance_never_best_response",
-        "zero_sum.core.optimal_pairs_are_saddle_points",
-        "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.optimal_strategy_sets_are_polytopes",
-        "zero_sum.core.support_complementarity",
         "zero_sum.examples.antisymmetric_matrix_game_value",
         "zero_sum.examples.computation_three_by_two_example",
         "zero_sum.examples.diagonal_matrix_game_value",
         "zero_sum.examples.two_by_two_value_formula",
         "zero_sum.lp.zero_sum_lp_bridge",
-        "zero_sum.minimax.ordered_field_minimax",
         "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.minimax.ville_discretization_proof",
         "zero_sum.minimax.ville_theorem",
@@ -6133,7 +6154,7 @@
       "id": "zero_sum.minimax.ordered_field_minimax",
       "title": "Ordered-Field Minimax Statement",
       "kind": "theorem",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "zero-sum",
         "minimax",
@@ -6144,9 +6165,12 @@
         "zero_sum",
         "zero_sum.minimax"
       ],
+      "lean_declarations": [
+        "dantzig_minimax"
+      ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.minimax.minimax_theorem"
+        "zero_sum.von_neumann_minimax"
       ]
     },
     {
@@ -6407,7 +6431,12 @@
         "zero_sum.minimax.minimax_from_loomis"
       ],
       "used_by": [
-        "zero_sum.matrix_game_nash_equilibrium"
+        "zero_sum.core.common_guarantee_value",
+        "zero_sum.core.optimal_pairs_are_saddle_points",
+        "zero_sum.core.support_complementarity",
+        "zero_sum.core.value",
+        "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.ordered_field_minimax"
       ]
     },
     {
@@ -6436,9 +6465,7 @@
       "used_by": [
         "zero_sum.continuous.general_mixed_strategy_space",
         "zero_sum.continuous.sion_minimax_theorem",
-        "zero_sum.core.matrix_game_mfogt",
         "zero_sum.core.player_guarantee",
-        "zero_sum.core.zero_sum_nash_saddle",
         "zero_sum.matrix_game",
         "zero_sum.zero_sum_payoff_negation"
       ]
@@ -7979,15 +8006,19 @@
     },
     {
       "from": "zero_sum.core.common_guarantee_value",
-      "to": "zero_sum.core.maxmin_le_minmax"
-    },
-    {
-      "from": "zero_sum.core.common_guarantee_value",
       "to": "zero_sum.core.player_guarantee"
     },
     {
       "from": "zero_sum.core.common_guarantee_value",
       "to": "zero_sum.core.value"
+    },
+    {
+      "from": "zero_sum.core.common_guarantee_value",
+      "to": "zero_sum.maximin_le_minimax"
+    },
+    {
+      "from": "zero_sum.core.common_guarantee_value",
+      "to": "zero_sum.von_neumann_minimax"
     },
     {
       "from": "zero_sum.core.duality_gap",
@@ -7995,7 +8026,7 @@
     },
     {
       "from": "zero_sum.core.duality_gap",
-      "to": "zero_sum.core.optimal_strategy_sets"
+      "to": "zero_sum.maximin_minimax"
     },
     {
       "from": "zero_sum.core.epsilon_optimal_strategy",
@@ -8004,10 +8035,6 @@
     {
       "from": "zero_sum.core.epsilon_optimal_strategy",
       "to": "zero_sum.core.value"
-    },
-    {
-      "from": "zero_sum.core.matrix_game_mfogt",
-      "to": "zero_sum.zero_sum_game"
     },
     {
       "from": "zero_sum.core.maxmin_le_minmax",
@@ -8043,11 +8070,23 @@
     },
     {
       "from": "zero_sum.core.optimal_pairs_are_saddle_points",
-      "to": "zero_sum.minimax.minimax_theorem"
+      "to": "zero_sum.loomis_route_compactness"
+    },
+    {
+      "from": "zero_sum.core.optimal_pairs_are_saddle_points",
+      "to": "zero_sum.maximin_le_minimax"
+    },
+    {
+      "from": "zero_sum.core.optimal_pairs_are_saddle_points",
+      "to": "zero_sum.von_neumann_minimax"
     },
     {
       "from": "zero_sum.core.optimal_strategy_sets",
-      "to": "zero_sum.minimax.minimax_theorem"
+      "to": "zero_sum.core.value"
+    },
+    {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.maximin_minimax"
     },
     {
       "from": "zero_sum.core.optimal_strategy_sets_are_polytopes",
@@ -8059,6 +8098,10 @@
     },
     {
       "from": "zero_sum.core.player_guarantee",
+      "to": "zero_sum.matrix_game"
+    },
+    {
+      "from": "zero_sum.core.player_guarantee",
       "to": "zero_sum.zero_sum_game"
     },
     {
@@ -8067,7 +8110,7 @@
     },
     {
       "from": "zero_sum.core.saddle_point",
-      "to": "zero_sum.core.value"
+      "to": "zero_sum.matrix_game"
     },
     {
       "from": "zero_sum.core.strong_complementarity",
@@ -8087,19 +8130,23 @@
     },
     {
       "from": "zero_sum.core.support_complementarity",
+      "to": "zero_sum.core.optimal_pairs_are_saddle_points"
+    },
+    {
+      "from": "zero_sum.core.support_complementarity",
       "to": "zero_sum.core.optimal_strategy_sets"
     },
     {
       "from": "zero_sum.core.support_complementarity",
-      "to": "zero_sum.minimax.minimax_theorem"
+      "to": "zero_sum.von_neumann_minimax"
     },
     {
       "from": "zero_sum.core.value",
-      "to": "zero_sum.core.maxmin_minmax"
+      "to": "zero_sum.maximin_minimax"
     },
     {
-      "from": "zero_sum.core.zero_sum_nash_saddle",
-      "to": "strategic_games.nash_equilibrium"
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.von_neumann_minimax"
     },
     {
       "from": "zero_sum.core.zero_sum_nash_saddle",
@@ -8107,7 +8154,7 @@
     },
     {
       "from": "zero_sum.core.zero_sum_nash_saddle",
-      "to": "zero_sum.zero_sum_game"
+      "to": "zero_sum.matrix_game_nash_equilibrium"
     },
     {
       "from": "zero_sum.examples.antisymmetric_matrix_game_value",
@@ -8303,7 +8350,7 @@
     },
     {
       "from": "zero_sum.minimax.ordered_field_minimax",
-      "to": "zero_sum.minimax.minimax_theorem"
+      "to": "zero_sum.von_neumann_minimax"
     },
     {
       "from": "zero_sum.minimax.stochastic_matrix_invariant_distribution",

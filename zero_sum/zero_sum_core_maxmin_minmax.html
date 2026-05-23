@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -588,6 +586,13 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Maxmin And Minmax</h1>
+<blockquote>
+<p><strong>Scope.</strong> This node is the <strong>abstract / pure-strategy</strong> version: $I$ and $J$
+are arbitrary nonempty strategy sets, and the inner extremum ranges over pure
+strategies. The <strong>finite mixed-strategy</strong> instantiation (with $x \in \Delta(I)$,
+$y \in \Delta(J)$, and Mathlib's <code>Finset.inf'</code> / <code>Finset.sup'</code>) lives in
+<a class="node-ref" data-node-id="zero_sum.maximin_minimax" href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a> and is the one currently formalised.</p>
+</blockquote>
 <p>For a zero-sum game $(I,J,g)$, the maxmin is
 $$
   \underline v = \sup_{i \in I} \inf_{j \in J} g(i,j),
@@ -611,8 +616,6 @@ least amount player 2 can guarantee as an upper bound on player 1's payoff.</p>
     <ul>
       
       <li><a href="zero_sum_core_maxmin_le_minmax.html">Maxmin Is At Most Minmax</a></li>
-      
-      <li><a href="zero_sum_core_value.html">Value Of A Zero-Sum Game</a></li>
       
     </ul>
   </section>

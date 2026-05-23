@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Support Of A Mixed Strategy</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-mixed_support">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -585,13 +585,40 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L116"><code>MatrixGame.support</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="definition_thmcontent thm-content body">
     <h1>Support Of A Mixed Strategy</h1>
 <p>The support of a mixed strategy $x \in \Delta(I)$ is the set
 $$
   \operatorname{supp}(x)=\{i \in I : x_i&gt;0\}.
-$$</p>
+$$
+In Lean, <code>MatrixGame.support</code> returns this as a <code>Finset I</code> via
+<code>Finset.univ.filter (0 &lt; x.val ·)</code>. Marked <code>noncomputable</code> because strict
+inequality on <code>ℝ</code> is not decidable.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Support of a mixed strategy.</li>
@@ -618,6 +645,8 @@ $$</p>
       <li><a href="../zero_sum/index.html">Zero Sum</a></li>
       
       <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      
+      <li><a href="../mixed_strategy/index.html">Mixed Strategy</a></li>
       
     </ul>
   </section>

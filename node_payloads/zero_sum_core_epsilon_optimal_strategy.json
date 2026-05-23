@@ -2,14 +2,14 @@
   "id": "zero_sum.core.epsilon_optimal_strategy",
   "title": "Epsilon-Optimal Strategy",
   "kind": "definition",
-  "status": "staged",
+  "status": "formalized",
   "href": "zero_sum/zero_sum_core_epsilon_optimal_strategy.html",
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Epsilon-Optimal Strategy</h1>\n<p>Given $\\varepsilon&gt;0$, a strategy of player 1 is maxmin $\\varepsilon$-optimal\nif it guarantees $\\underline v-\\varepsilon$.  If the game has a value, such a\nstrategy is simply called $\\varepsilon$-optimal.  A $0$-optimal strategy is an\noptimal strategy.  The dual definition applies to player 2.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Epsilon-optimal and optimal strategies.</li>\n</ul>",
+  "body_html": "<h1>Epsilon-Optimal Strategy</h1>\n<p>Given $\\varepsilon&gt;0$, a row strategy $x \\in \\Delta(I)$ is <strong>maxmin\n$\\varepsilon$-optimal</strong> if its guarantee meets at least\n$\\operatorname{val}(A) - \\varepsilon$:\n$$\n  \\min_{j \\in J} E_A(x, j) \\ge \\operatorname{val}(A) - \\varepsilon.\n$$\nA $0$-optimal strategy is an optimal strategy. The dual definition (a column\nstrategy $y$ is $\\varepsilon$-optimal when\n$\\max_{i \\in I} E_A(i, y) \\le \\operatorname{val}(A) + \\varepsilon$) applies to\nplayer 2.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Epsilon-optimal and optimal strategies.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -24,5 +24,32 @@
     }
   ],
   "dependents": [],
-  "lean_refs": []
+  "lean_refs": [
+    {
+      "name": "MatrixGame.IsEpsilonOptimalRow",
+      "display_name": "MatrixGame.IsEpsilonOptimalRow",
+      "qualified_name": "MatrixGame.IsEpsilonOptimalRow",
+      "module": "GameTheoryLib.StrategicGame.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "d627d1b8efc5618c9f7c9187eed5f02c26672a1f",
+      "short_revision": "d627d1b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L98",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.IsEpsilonOptimalColumn",
+      "display_name": "MatrixGame.IsEpsilonOptimalColumn",
+      "qualified_name": "MatrixGame.IsEpsilonOptimalColumn",
+      "module": "GameTheoryLib.StrategicGame.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "d627d1b8efc5618c9f7c9187eed5f02c26672a1f",
+      "short_revision": "d627d1b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L102",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

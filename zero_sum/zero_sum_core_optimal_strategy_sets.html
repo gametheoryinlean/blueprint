@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Optimal Strategy Sets</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-optimal_strategy_sets">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -577,7 +577,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="zero_sum_minimax_minimax_theorem.html">Von Neumann Minimax Theorem</a></li>
+        <li><a href="zero_sum_core_value.html">Value Of A Zero-Sum Game</a></li>
+        
+        <li><a href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
         
       </ul>
     </div>
@@ -585,12 +587,55 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L89"><code>MatrixGame.optimalRowStrategies</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L94"><code>MatrixGame.optimalColumnStrategies</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="definition_thmcontent thm-content body">
     <h1>Optimal Strategy Sets</h1>
-<p>For a matrix game $A$, let $X(A)$ be the subset of $\Delta(I)$ consisting of
-optimal strategies of player 1, and let $Y(A)$ be the subset of $\Delta(J)$
-consisting of optimal strategies of player 2.</p>
+<p>For a finite matrix game $A$, the <strong>optimal row strategy set</strong>
+$X(A) \subseteq \Delta(I)$ contains the mixed row strategies that achieve the
+maximin value, i.e.
+$$
+  X(A) = \{ x \in \Delta(I) : \min_{j \in J} E_A(x,j) = \operatorname{val}(A) \}.
+$$
+The <strong>optimal column strategy set</strong> $Y(A) \subseteq \Delta(J)$ is defined
+symmetrically with the maximum over pure rows equal to the value.</p>
+<p>By the minimax theorem (<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) both sets are
+nonempty.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Prop. 2.4.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Definition of X(A) and Y(A), the optimal strategy sets.</li>
@@ -602,8 +647,6 @@ consisting of optimal strategies of player 2.</p>
   <section class="deps deps-used-by">
     <h2>Used by</h2>
     <ul>
-      
-      <li><a href="zero_sum_core_duality_gap.html">Duality Gap In A Matrix Game</a></li>
       
       <li><a href="zero_sum_core_optimal_pairs_are_saddle_points.html">Optimal Pairs Are Exactly Saddle Points</a></li>
       

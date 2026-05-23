@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Value Of A Zero-Sum Game</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-value">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -577,7 +577,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="zero_sum_core_maxmin_minmax.html">Maxmin And Minmax</a></li>
+        <li><a href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
+        
+        <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
         
       </ul>
     </div>
@@ -585,14 +587,66 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L75"><code>MatrixGame.value</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L77"><code>MatrixGame.value_eq_maximin</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L79"><code>MatrixGame.value_eq_minimax</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="definition_thmcontent thm-content body">
     <h1>Value Of A Zero-Sum Game</h1>
-<p>A zero-sum game has a value if its maxmin and minmax coincide.  In that case
-the common number is denoted
+<p>For a finite matrix game, the maxmin and minmax coincide
+(<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>); the common scalar is the <strong>value</strong>
+of the game:
 $$
-  \operatorname{val}(G)=\underline v=\overline v.
+  \operatorname{val}(A) = \underline v = \overline v.
 $$</p>
+<p>The Lean development defines <code>MatrixGame.value := A.maximin</code> and provides
+<code>value_eq_maximin</code> (definitional) and <code>value_eq_minimax</code> (via the minimax
+theorem).</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Def. 2.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. A zero-sum game has a value when maxmin equals minmax.</li>
@@ -627,7 +681,7 @@ $$</p>
       
       <li><a href="zero_sum_core_epsilon_optimal_strategy.html">Epsilon-Optimal Strategy</a></li>
       
-      <li><a href="zero_sum_core_saddle_point.html">Saddle Point</a></li>
+      <li><a href="zero_sum_core_optimal_strategy_sets.html">Optimal Strategy Sets</a></li>
       
       <li><a href="zero_sum_examples_antisymmetric_matrix_game_value.html">Antisymmetric Matrix Games Have Value</a></li>
       

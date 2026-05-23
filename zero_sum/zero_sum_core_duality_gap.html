@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Duality Gap In A Matrix Game</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-duality_gap">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -579,13 +579,37 @@
         
         <li><a href="zero_sum_core_mixed_extension.html">Mixed Extension Of A Matrix Game</a></li>
         
-        <li><a href="zero_sum_core_optimal_strategy_sets.html">Optimal Strategy Sets</a></li>
+        <li><a href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
         
       </ul>
     </div>
   </div>
   
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L84"><code>MatrixGame.dualityGap</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
   
 
   <div class="definition_thmcontent thm-content body">
@@ -596,14 +620,18 @@ $$
   \qquad
   M(x)=\min_{y'\in\Delta(J)} g(x,y').
 $$
-The duality gap at $(x,y)$ is
+The <strong>point-wise duality gap</strong> at $(x,y)$ is
 $$
-  W(x,y)=L(y)-M(x)\ge0.
+  W(x,y)=L(y)-M(x)\ge 0.
 $$</p>
-<p>The gap is zero exactly when $x$ and $y$ are optimal strategies. Indeed,
-$W(x,y)=0$ says that the best payoff player 1 can obtain against $y$ equals the
-worst payoff player 1 can secure with $x$, so the two one-sided guarantees meet
-at the value.</p>
+<p>The gap is zero exactly when $x$ and $y$ are optimal strategies: $W(x,y)=0$
+says the best payoff player I can obtain against $y$ equals the worst payoff
+player I can secure with $x$, so the two one-sided guarantees meet at the
+value.</p>
+<p>The Lean development uses the finite-mixed-strategy specialisation
+<code>L(y) = A.guarantee_II y</code> (maximum over pure rows) and
+<code>M(x) = A.guarantee_I x</code> (minimum over pure columns); the Loomis-style
+order-characterisation lemmas turn this into the full bilinear gap.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Section 2.7, proof of Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. L(y), M(x), and W(x,y)=L(y)-M(x) used for continuous fictitious play.</li>

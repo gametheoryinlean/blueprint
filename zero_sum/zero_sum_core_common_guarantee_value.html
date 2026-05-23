@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="lemma_thmcaption thm-caption">Lemma</span>
     <span class="lemma_thmtitle thm-title">Common Guarantee Gives The Value</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-common_guarantee_value">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -581,7 +581,9 @@
         
         <li><a href="zero_sum_core_value.html">Value Of A Zero-Sum Game</a></li>
         
-        <li><a href="zero_sum_core_maxmin_le_minmax.html">Maxmin Is At Most Minmax</a></li>
+        <li><a href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a></li>
+        
+        <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
         
       </ul>
     </div>
@@ -589,12 +591,36 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L283"><code>MatrixGame.common_guarantee_eq_value</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="lemma_thmcontent thm-content body">
     <h1>Common Guarantee Gives The Value</h1>
-<p>If player 1 and player 2 both guarantee the same number $w$, then $w$ is the
-unique value of the game, and the strategies witnessing the two guarantees are
-optimal.</p>
+<p>If player I and player II both guarantee the same number $w$, then $w$ is
+the unique value of the game, and the strategies witnessing the two
+guarantees are optimal.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -604,7 +630,9 @@ $$
   w \le \underline v \le \overline v \le w.
 $$
 Thus $\underline v=\overline v=w$, and the witnessing strategies attain the
-value. $\square$</p>
+value. The minimax theorem (<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) closes the
+inner two inequalities, the player-guarantee bound is the outer pair
+(<a class="node-ref" data-node-id="zero_sum.core.player_guarantee" href="core/zero_sum_core_player_guarantee.html">Player Guarantee</a>).</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Lem. 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. A common guarantee is unique and equal to the value.</li>

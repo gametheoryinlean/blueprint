@@ -2,20 +2,25 @@
   "id": "zero_sum.core.value",
   "title": "Value Of A Zero-Sum Game",
   "kind": "definition",
-  "status": "staged",
+  "status": "formalized",
   "href": "zero_sum/zero_sum_core_value.html",
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Value Of A Zero-Sum Game</h1>\n<p>A zero-sum game has a value if its maxmin and minmax coincide.  In that case\nthe common number is denoted\n$$\n  \\operatorname{val}(G)=\\underline v=\\overline v.\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. A zero-sum game has a value when maxmin equals minmax.</li>\n</ul>",
+  "body_html": "<h1>Value Of A Zero-Sum Game</h1>\n<p>For a finite matrix game, the maxmin and minmax coincide\n(<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>); the common scalar is the <strong>value</strong>\nof the game:\n$$\n  \\operatorname{val}(A) = \\underline v = \\overline v.\n$$</p>\n<p>The Lean development defines <code>MatrixGame.value := A.maximin</code> and provides\n<code>value_eq_maximin</code> (definitional) and <code>value_eq_minimax</code> (via the minimax\ntheorem).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. A zero-sum game has a value when maxmin equals minmax.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
-      "id": "zero_sum.core.maxmin_minmax",
-      "title": "Maxmin And Minmax",
-      "href": "zero_sum/zero_sum_core_maxmin_minmax.html"
+      "id": "zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "href": "zero_sum/zero_sum_maximin_minimax.html"
+    },
+    {
+      "id": "zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
     }
   ],
   "dependents": [
@@ -75,9 +80,9 @@
       "href": "zero_sum/zero_sum_core_epsilon_optimal_strategy.html"
     },
     {
-      "id": "zero_sum.core.saddle_point",
-      "title": "Saddle Point",
-      "href": "zero_sum/zero_sum_core_saddle_point.html"
+      "id": "zero_sum.core.optimal_strategy_sets",
+      "title": "Optimal Strategy Sets",
+      "href": "zero_sum/zero_sum_core_optimal_strategy_sets.html"
     },
     {
       "id": "zero_sum.examples.antisymmetric_matrix_game_value",
@@ -120,5 +125,45 @@
       "href": "zero_sum/zero_sum_operators_value_operator_general.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [
+    {
+      "name": "MatrixGame.value",
+      "display_name": "MatrixGame.value",
+      "qualified_name": "MatrixGame.value",
+      "module": "GameTheoryLib.StrategicGame.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "d627d1b8efc5618c9f7c9187eed5f02c26672a1f",
+      "short_revision": "d627d1b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L75",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.value_eq_maximin",
+      "display_name": "MatrixGame.value_eq_maximin",
+      "qualified_name": "MatrixGame.value_eq_maximin",
+      "module": "GameTheoryLib.StrategicGame.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "d627d1b8efc5618c9f7c9187eed5f02c26672a1f",
+      "short_revision": "d627d1b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L77",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.value_eq_minimax",
+      "display_name": "MatrixGame.value_eq_minimax",
+      "qualified_name": "MatrixGame.value_eq_minimax",
+      "module": "GameTheoryLib.StrategicGame.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "d627d1b8efc5618c9f7c9187eed5f02c26672a1f",
+      "short_revision": "d627d1b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L79",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

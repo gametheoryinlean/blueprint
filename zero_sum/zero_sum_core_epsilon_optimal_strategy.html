@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Epsilon-Optimal Strategy</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-epsilon_optimal_strategy">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -587,13 +587,55 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L98"><code>MatrixGame.IsEpsilonOptimalRow</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L102"><code>MatrixGame.IsEpsilonOptimalColumn</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="definition_thmcontent thm-content body">
     <h1>Epsilon-Optimal Strategy</h1>
-<p>Given $\varepsilon&gt;0$, a strategy of player 1 is maxmin $\varepsilon$-optimal
-if it guarantees $\underline v-\varepsilon$.  If the game has a value, such a
-strategy is simply called $\varepsilon$-optimal.  A $0$-optimal strategy is an
-optimal strategy.  The dual definition applies to player 2.</p>
+<p>Given $\varepsilon&gt;0$, a row strategy $x \in \Delta(I)$ is <strong>maxmin
+$\varepsilon$-optimal</strong> if its guarantee meets at least
+$\operatorname{val}(A) - \varepsilon$:
+$$
+  \min_{j \in J} E_A(x, j) \ge \operatorname{val}(A) - \varepsilon.
+$$
+A $0$-optimal strategy is an optimal strategy. The dual definition (a column
+strategy $y$ is $\varepsilon$-optimal when
+$\max_{i \in I} E_A(i, y) \le \operatorname{val}(A) + \varepsilon$) applies to
+player 2.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Def. 2.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Epsilon-optimal and optimal strategies.</li>

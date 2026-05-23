@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -553,20 +551,22 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-zero_sum-2e-core-2e-zero_sum_nash_saddle">
-  <header class="proposition_thmheading thm-heading">
-    <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Zero-Sum Nash Equilibria As Saddle Points</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-zero_sum-2e-core-2e-zero_sum_nash_saddle">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Zero-Sum Nash Equilibria As Saddle Points</span>
     <div class="thm_header_extras">
-      
-      <span class="badge kind-proposition">proposition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="checkmark">✓</span>
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-zero_sum_nash_saddle">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -579,9 +579,7 @@
         
         <li><a href="zero_sum_core_saddle_point.html">Saddle Point</a></li>
         
-        <li><a href="zero_sum_zero_sum_game.html">Zero-Sum Game</a></li>
-        
-        <li><a href="../strategic_games/strategic_games_nash_equilibrium.html">Nash Equilibrium</a></li>
+        <li><a href="zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a></li>
         
       </ul>
     </div>
@@ -589,8 +587,56 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L69"><code>MatrixGame.isMixedNashEq_iff_isSaddlePoint</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L63"><code>MatrixGame.IsSaddlePoint</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L54"><code>MatrixGame.IsMixedNashEq</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
-  <div class="proposition_thmcontent thm-content body">
+  <div class="theorem_thmcontent thm-content body">
     <h1>Zero-Sum Nash Equilibria As Saddle Points</h1>
 <p>In a zero-sum game, a pair of mixed strategies is a Nash equilibrium exactly
 when it is a saddle point of the matrix payoff.</p>
@@ -598,8 +644,8 @@ when it is a saddle point of the matrix payoff.</p>
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Write $u(x,y)=xAy$ for player $1$'s payoff and $-u(x,y)$ for player
-$2$'s payoff. A mixed pair $(x^*,y^*)$ is a Nash equilibrium exactly when
+        <p>Write $u(x,y)=xAy$ for player I's payoff and $-u(x,y)$ for player
+II's payoff. A mixed pair $(x^*,y^*)$ is a Nash equilibrium exactly when
 $$
   u(x,y^*)\le u(x^*,y^*)\quad\text{for all }x
 $$
@@ -607,9 +653,14 @@ and
 $$
   -u(x^*,y)\le -u(x^*,y^*)\quad\text{for all }y.
 $$
-The second inequality is equivalent to
-$u(x^*,y^*)\le u(x^*,y)$ for all $y$. Together these are precisely the saddle
-point inequalities.</p>
+The second inequality is equivalent to $u(x^*,y^*)\le u(x^*,y)$ for all
+$y$. Together these are precisely the saddle-point inequalities.</p>
+<p>In the Lean formalisation this equivalence is <em>definitional</em>: the predicate
+<code>MatrixGame.IsSaddlePoint</code> is an <code>abbrev</code> for <code>MatrixGame.IsMixedNashEq</code>, so
+<code>isMixedNashEq_iff_isSaddlePoint</code> is closed by <code>Iff.rfl</code>.  The
+strategic-game-level form (<a class="node-ref" data-node-id="zero_sum.matrix_game_nash_equilibrium" href="zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a>)
+follows from the same definitional identity combined with the profile
+expansion lemmas.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Prop. 2.4.1(d), proof paragraph] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Saddle points express the identity between optimal strategies and Nash equilibria.</li>
@@ -629,6 +680,8 @@ point inequalities.</p>
       <li><a href="../zero_sum/index.html">Zero Sum</a></li>
       
       <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      
+      <li><a href="../strategic_games/equilibrium/index.html">Strategic Games.Equilibrium</a></li>
       
     </ul>
   </section>

@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -553,20 +551,22 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-zero_sum-2e-core-2e-optimal_pairs_are_saddle_points">
-  <header class="proposition_thmheading thm-heading">
-    <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Optimal Pairs Are Exactly Saddle Points</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-zero_sum-2e-core-2e-optimal_pairs_are_saddle_points">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Optimal Pairs Are Exactly Saddle Points</span>
     <div class="thm_header_extras">
-      
-      <span class="badge kind-proposition">proposition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="checkmark">✓</span>
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-optimal_pairs_are_saddle_points">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -581,7 +581,11 @@
         
         <li><a href="zero_sum_core_saddle_point.html">Saddle Point</a></li>
         
-        <li><a href="zero_sum_minimax_minimax_theorem.html">Von Neumann Minimax Theorem</a></li>
+        <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
+        
+        <li><a href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a></li>
+        
+        <li><a href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a></li>
         
       </ul>
     </div>
@@ -589,11 +593,59 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L308"><code>MatrixGame.optimal_pairs_iff_saddle_point</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L123"><code>MatrixGame.mem_optimalRowStrategies_iff_E_ge</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/StrategicGame/MatrixGameNash.lean#L165"><code>MatrixGame.mem_optimalColumnStrategies_iff_E_le</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.StrategicGame.MatrixGameNash
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.StrategicGame.MatrixGameNash</code></p>
+      
+    </div>
+  </div>
+  
 
-  <div class="proposition_thmcontent thm-content body">
+  <div class="theorem_thmcontent thm-content body">
     <h1>Optimal Pairs Are Exactly Saddle Points</h1>
-<p>For a finite matrix game $A$, the product $X(A)\times Y(A)$ of optimal-strategy
-sets is exactly the set of saddle points of $A$.</p>
+<p>For a finite matrix game $A$, the product $X(A)\times Y(A)$ of
+optimal-strategy sets is exactly the set of saddle points of $A$.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -605,13 +657,19 @@ $$
   x'Ay\le xAy\le xAy'
 $$
 for all $x'$ and $y'$. Thus $(x,y)$ is a saddle point. Conversely, if
-$(x,y)$ is a saddle point, then
+$(x,y)$ is a saddle point, then taking $x'$ and $y'$ as pure strategies and
+applying the simplex-side order characterisations
+(<a class="node-ref" data-node-id="zero_sum.loomis_route_compactness" href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a>) gives
 $$
-  x'Ay\le xAy\le xAy'
+  E_A(x,y)\le \operatorname{guarantee}_I(x), \qquad
+  \operatorname{guarantee}_{II}(y)\le E_A(x,y).
 $$
-for all $x'$ and $y'$. Therefore $x$ guarantees at least $xAy$ and $y$ holds
-player $1$ to at most $xAy$. Weak duality forces this common bound to be the
-value, so $x\in X(A)$ and $y\in Y(A)$.</p>
+Weak duality <a class="node-ref" data-node-id="zero_sum.maximin_le_minimax" href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a> sandwiches both quantities
+between $v$ on the appropriate side, forcing equality. Hence $x\in X(A)$ and
+$y\in Y(A)$.</p>
+<p>The Lean formalisation factors through two characterisation iff-theorems
+(<code>mem_optimalRowStrategies_iff_E_ge</code> and <code>mem_optimalColumnStrategies_iff_E_le</code>),
+which then combine into <code>MatrixGame.optimal_pairs_iff_saddle_point</code>.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Prop. 2.4.1(d)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. X(A) x Y(A) is the set of saddle points.</li>
@@ -621,6 +679,15 @@ value, so $x\in X(A)$ and $y\in Y(A)$.</p>
     
   </div>
 
+  
+  <section class="deps deps-used-by">
+    <h2>Used by</h2>
+    <ul>
+      
+      <li><a href="zero_sum_core_support_complementarity.html">Support Complementarity</a></li>
+      
+    </ul>
+  </section>
   
 
   

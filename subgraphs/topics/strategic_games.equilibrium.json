@@ -4,20 +4,20 @@
     "title": "Strategic Games.Equilibrium",
     "href": "strategic_games/equilibrium/index.html",
     "parent": "strategic_games",
-    "node_count": 15,
-    "descendant_node_count": 15
+    "node_count": 16,
+    "descendant_node_count": 16
   },
   "counts": {
-    "internal_nodes": 15,
-    "descendant_nodes": 15,
+    "internal_nodes": 16,
+    "descendant_nodes": 16,
     "child_topics": 0,
-    "non_proof_plan_nodes": 15,
+    "non_proof_plan_nodes": 16,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 12,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 28,
-    "visible_nodes_with_selected_proof_plans": 28
+    "visible_nodes_without_proof_plans": 29,
+    "visible_nodes_with_selected_proof_plans": 29
   },
   "nodes": [
     {
@@ -125,6 +125,14 @@
       "payload": "node_payloads/strategic_games_equilibrium_strict_equilibrium_is_proper.json"
     },
     {
+      "id": "zero_sum.core.zero_sum_nash_saddle",
+      "title": "Zero-Sum Nash Equilibria As Saddle Points",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_core_zero_sum_nash_saddle.html",
+      "payload": "node_payloads/zero_sum_core_zero_sum_nash_saddle.json"
+    },
+    {
       "id": "zero_sum.matrix_game_nash_equilibrium",
       "title": "Mixed Nash Equilibrium of a Matrix Game",
       "kind": "theorem",
@@ -166,6 +174,11 @@
       "from": "strategic_games.equilibrium.strict_equilibrium",
       "to": "strategic_games.equilibrium.strict_equilibrium_is_proper",
       "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.core.zero_sum_nash_saddle",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -188,7 +201,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 134
+      "node_count": 135
     },
     {
       "id": "strategic_games.bayesian",
@@ -251,7 +264,7 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependency",
-      "node_count": 77
+      "node_count": 75
     }
   ],
   "boundary_edges": [
@@ -372,6 +385,13 @@
       "to": "strategic_games.equilibrium.strict_equilibrium_is_proper",
       "kind": "boundary_dependency",
       "topic": "strategic_games.refinements",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.core.zero_sum_nash_saddle",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
       "count": 1
     },
     {
@@ -558,13 +578,13 @@
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 9
+      "count": 10
     },
     {
       "id": "saddle-point",
       "title": "saddle-point",
       "href": "keywords/saddle-point.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "semi-algebraic",
@@ -606,7 +626,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 2
+      "count": 3
     }
   ],
   "proof_plan_attachments": [],

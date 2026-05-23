@@ -261,8 +261,6 @@
       
         <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
-        <li><a href="../keywords/definition.html">definition</a></li>
-      
         <li><a href="../keywords/derived-game.html">derived-game</a></li>
       
         <li><a href="../keywords/determinacy.html">determinacy</a></li>
@@ -558,15 +556,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Mixed Strategy Simplex</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-core-2e-mixed_strategy_simplex">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -585,6 +585,53 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <code>stdSimplex</code>
+          
+          
+          <span class="badge status-staged">Unresolved</span>
+          <span class="lean-source-meta">not found in configured Lean repository</span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/Topology/Simplex.lean#L25"><code>stdSimplex.pure</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.Topology.Simplex
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d627d1b8efc5618c9f7c9187eed5f02c26672a1f/GameTheoryLib/Core/Simplex.lean#L82"><code>wsum</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ d627d1b, GameTheoryLib.Core.Simplex
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>GameTheoryLib.Core.Simplex</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="definition_thmcontent thm-content body">
     <h1>Mixed Strategy Simplex</h1>
@@ -593,7 +640,11 @@ probability vectors on $S$:
 $$
   \Delta(S)=\{x \in \mathbb{R}^S : x_s \ge 0 \text{ for all } s,\ 
   \sum_{s \in S} x_s = 1\}.
-$$</p>
+$$
+The Lean library uses Mathlib's <code>stdSimplex ℝ S</code> for this set, with
+<code>stdSimplex.pure i</code> for the Dirac point mass at $i$ and <code>wsum x f</code> (a
+definitional abbreviation for the dot product <code>x ⬝ᵥ f</code>) for the weighted
+sum of a function $f \colon S \to \mathbb{R}$.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Delta(S) is the simplex of probabilities on a finite set S.</li>
@@ -626,6 +677,8 @@ $$</p>
       <li><a href="../zero_sum/index.html">Zero Sum</a></li>
       
       <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      
+      <li><a href="../mixed_strategy/index.html">Mixed Strategy</a></li>
       
     </ul>
   </section>
