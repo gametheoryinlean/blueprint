@@ -13,9 +13,9 @@
   "proof_html": "<p>If $A\\le B$ entrywise, then for every mixed row $x$ and mixed column\n$y$ one has $xAy\\le xBy$. Taking maxmin values gives\n$\\operatorname{val}(A)\\le\\operatorname{val}(B)$, so the value operator is\nmonotone. Let $\\delta=\\|A-B\\|_\\infty$. Then\n$$\n  A\\le B+\\delta\\mathbf 1\n  \\quad\\text{and}\\quad\n  B\\le A+\\delta\\mathbf 1.\n$$\nAdding the constant matrix $\\delta\\mathbf 1$ raises every mixed payoff, and\ntherefore the value, by $\\delta$. Monotonicity gives\n$$\n  \\operatorname{val}(A)\\le\\operatorname{val}(B)+\\delta\n  \\quad\\text{and}\\quad\n  \\operatorname{val}(B)\\le\\operatorname{val}(A)+\\delta,\n$$\nwhich is the non-expansive estimate. Non-expansiveness implies continuity.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3, after Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Continuity, monotonicity, and non-expansiveness of val.</li>\n</ul>",
   "deps": [
     {
-      "id": "zero_sum.minimax.minimax_theorem",
+      "id": "zero_sum.von_neumann_minimax",
       "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html"
+      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
     }
   ],
   "dependents": [],

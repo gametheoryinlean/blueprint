@@ -4,20 +4,20 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 75,
-    "descendant_node_count": 75
+    "node_count": 74,
+    "descendant_node_count": 74
   },
   "counts": {
-    "internal_nodes": 75,
-    "descendant_nodes": 75,
+    "internal_nodes": 74,
+    "descendant_nodes": 74,
     "child_topics": 7,
-    "non_proof_plan_nodes": 66,
+    "non_proof_plan_nodes": 65,
     "proof_plan_nodes": 9,
     "selected_proof_plan_nodes": 5,
     "boundary_topics": 9,
     "proof_plan_attachments": 9,
-    "visible_nodes_without_proof_plans": 76,
-    "visible_nodes_with_selected_proof_plans": 81
+    "visible_nodes_without_proof_plans": 75,
+    "visible_nodes_with_selected_proof_plans": 80
   },
   "nodes": [
     {
@@ -475,7 +475,7 @@
       "status": "staged",
       "href": "zero_sum/zero_sum_minimax_lp_duality_minimax_proof.html",
       "payload": "node_payloads/zero_sum_minimax_lp_duality_minimax_proof.json",
-      "target": "zero_sum.minimax.minimax_theorem",
+      "target": "zero_sum.von_neumann_minimax",
       "plan_status": "selected"
     },
     {
@@ -485,7 +485,7 @@
       "status": "staged",
       "href": "zero_sum/zero_sum_minimax_minimax_from_antisymmetric_games.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_from_antisymmetric_games.json",
-      "target": "zero_sum.minimax.minimax_theorem",
+      "target": "zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
     },
     {
@@ -495,7 +495,7 @@
       "status": "staged",
       "href": "zero_sum/zero_sum_minimax_minimax_from_deterministic_approachability.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_from_deterministic_approachability.json",
-      "target": "zero_sum.minimax.minimax_theorem",
+      "target": "zero_sum.von_neumann_minimax",
       "plan_status": "selected"
     },
     {
@@ -505,14 +505,6 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_minimax_minimax_from_loomis.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_from_loomis.json"
-    },
-    {
-      "id": "zero_sum.minimax.minimax_theorem",
-      "title": "Von Neumann Minimax Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "zero_sum/zero_sum_minimax_minimax_theorem.html",
-      "payload": "node_payloads/zero_sum_minimax_minimax_theorem.json"
     },
     {
       "id": "zero_sum.minimax.ordered_field_minimax",
@@ -846,7 +838,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.core.optimal_strategy_sets_are_polytopes",
       "kind": "uses"
     },
@@ -931,7 +923,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.examples.antisymmetric_matrix_game_value",
       "kind": "uses"
     },
@@ -946,7 +938,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.examples.computation_three_by_two_example",
       "kind": "uses"
     },
@@ -961,7 +953,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.examples.diagonal_matrix_game_value",
       "kind": "uses"
     },
@@ -996,7 +988,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.examples.two_by_two_value_formula",
       "kind": "uses"
     },
@@ -1081,11 +1073,6 @@
       "kind": "proof_plan_uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
-      "to": "zero_sum.lp.zero_sum_lp_bridge",
-      "kind": "proof_plan_uses"
-    },
-    {
       "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.matrix_game",
       "kind": "uses"
@@ -1141,37 +1128,22 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.mixed_extension",
-      "to": "zero_sum.minimax.minimax_theorem",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.minimax.minimax_theorem",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_theorem",
-      "to": "zero_sum.minimax.minimax_theorem",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ordered_field_minimax",
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ville_discretization_proof",
       "kind": "proof_plan_uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ville_theorem",
       "kind": "uses"
     },
@@ -1211,7 +1183,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.operators.value_operator_properties",
       "kind": "uses"
     },
@@ -1388,7 +1360,7 @@
       "count": 1
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependent",
       "topic": "strategic_games.dominance",
@@ -1569,7 +1541,7 @@
       "id": "minimax",
       "title": "minimax",
       "href": "keywords/minimax.html",
-      "count": 21
+      "count": 20
     },
     {
       "id": "minmax",
@@ -1701,7 +1673,7 @@
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 14
+      "count": 13
     },
     {
       "id": "value-operator",
@@ -1725,7 +1697,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 75
+      "count": 74
     }
   ],
   "proof_plan_attachments": [
@@ -1754,19 +1726,19 @@
       "plan_status": "selected"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.lp_duality_minimax_proof",
       "kind": "has_plan",
       "plan_status": "selected"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
       "kind": "has_plan",
       "plan_status": "candidate"
     },
     {
-      "from": "zero_sum.minimax.minimax_theorem",
+      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
       "kind": "has_plan",
       "plan_status": "selected"
@@ -1893,17 +1865,17 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 18,
-      "direct_node_count": 18,
+      "node_count": 17,
+      "direct_node_count": 17,
       "kind_counts": {
         "lemma": 2,
         "proof-plan": 7,
-        "theorem": 9
+        "theorem": 8
       },
       "status_counts": {
         "admitted": 2,
         "formalized": 6,
-        "staged": 10
+        "staged": 9
       },
       "href": "zero_sum/minimax/index.html",
       "children": []
@@ -1949,7 +1921,7 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.minimax",
       "kind": "topic_dependency",
-      "count": 11
+      "count": 9
     },
     {
       "from": "topic:zero_sum.core",
