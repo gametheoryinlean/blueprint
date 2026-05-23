@@ -78,7 +78,7 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependency",
-      "node_count": 85
+      "node_count": 84
     }
   ],
   "boundary_edges": [
@@ -157,20 +157,50 @@
       "title": "Linear Algebra.Alternatives",
       "depth": 2,
       "parent": "linear_algebra",
-      "node_count": 2,
-      "direct_node_count": 2,
+      "node_count": 3,
+      "direct_node_count": 3,
       "kind_counts": {
         "lemma": 1,
-        "theorem": 1
+        "theorem": 2
       },
       "status_counts": {
-        "staged": 2
+        "staged": 3
       },
       "href": "linear_algebra/alternatives/index.html",
       "children": []
     }
   ],
   "child_topic_edges": [],
-  "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_topics": [
+    {
+      "id": "linear_programming",
+      "title": "Linear Programming",
+      "href": "linear_programming/index.html",
+      "role": "dependent",
+      "node_count": 2
+    },
+    {
+      "id": "linear_programming.duality",
+      "title": "Linear Programming.Duality",
+      "href": "linear_programming/duality/index.html",
+      "role": "dependent",
+      "node_count": 1
+    }
+  ],
+  "child_boundary_edges": [
+    {
+      "from": "topic:linear_algebra.alternatives",
+      "to": "topic:linear_programming",
+      "kind": "boundary_dependent",
+      "topic": "linear_programming",
+      "count": 1
+    },
+    {
+      "from": "topic:linear_algebra.alternatives",
+      "to": "topic:linear_programming.duality",
+      "kind": "boundary_dependent",
+      "topic": "linear_programming.duality",
+      "count": 1
+    }
+  ]
 }

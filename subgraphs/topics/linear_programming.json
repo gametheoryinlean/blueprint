@@ -10,7 +10,7 @@
   "counts": {
     "internal_nodes": 2,
     "descendant_nodes": 2,
-    "child_topics": 0,
+    "child_topics": 1,
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -57,7 +57,7 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependent",
-      "node_count": 85
+      "node_count": 84
     }
   ],
   "boundary_edges": [
@@ -72,6 +72,13 @@
       "from": "linear_programming.strong_complementarity",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "linear_programming.strong_duality",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
       "topic": "zero_sum",
       "count": 1
     }
@@ -97,9 +104,58 @@
     }
   ],
   "proof_plan_attachments": [],
-  "child_topics": [],
-  "child_topic_nodes": [],
+  "child_topics": [
+    "linear_programming.duality"
+  ],
+  "child_topic_nodes": [
+    {
+      "id": "linear_programming.duality",
+      "title": "Linear Programming.Duality",
+      "depth": 2,
+      "parent": "linear_programming",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "linear_programming/duality/index.html",
+      "children": []
+    }
+  ],
   "child_topic_edges": [],
-  "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_topics": [
+    {
+      "id": "linear_algebra",
+      "title": "Linear Algebra",
+      "href": "linear_algebra/index.html",
+      "role": "dependency",
+      "node_count": 4
+    },
+    {
+      "id": "linear_algebra.alternatives",
+      "title": "Linear Algebra.Alternatives",
+      "href": "linear_algebra/alternatives/index.html",
+      "role": "dependency",
+      "node_count": 3
+    }
+  ],
+  "child_boundary_edges": [
+    {
+      "from": "topic:linear_algebra",
+      "to": "topic:linear_programming.duality",
+      "kind": "boundary_dependency",
+      "topic": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "topic:linear_algebra.alternatives",
+      "to": "topic:linear_programming.duality",
+      "kind": "boundary_dependency",
+      "topic": "linear_algebra.alternatives",
+      "count": 1
+    }
+  ]
 }

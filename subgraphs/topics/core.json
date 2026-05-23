@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 12,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 14,
-    "visible_nodes_with_selected_proof_plans": 14
+    "visible_nodes_without_proof_plans": 15,
+    "visible_nodes_with_selected_proof_plans": 15
   },
   "nodes": [
     {
@@ -80,7 +80,7 @@
       "id": "core.simplex.bounded_by_value",
       "title": "Pointwise Bounds Are Simplex Bounds",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "href": "core/simplex/core_simplex_bounded_by_value.html",
       "payload": "node_payloads/core_simplex_bounded_by_value.json"
     },
@@ -88,7 +88,7 @@
       "id": "core.simplex.continuity",
       "title": "Continuity on the Real Standard Simplex",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "href": "core/simplex/core_simplex_continuity.html",
       "payload": "node_payloads/core_simplex_continuity.json"
     },
@@ -96,7 +96,7 @@
       "id": "core.simplex.pure",
       "title": "Point Mass on the Standard Simplex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "core/simplex/core_simplex_pure.html",
       "payload": "node_payloads/core_simplex_pure.json"
     },
@@ -104,7 +104,7 @@
       "id": "core.simplex.wsum",
       "title": "Weighted Sum over the Standard Simplex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "href": "core/simplex/core_simplex_wsum.html",
       "payload": "node_payloads/core_simplex_wsum.json"
     },
@@ -166,6 +166,13 @@
       "href": "utility/index.html",
       "role": "dependent",
       "node_count": 9
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependent",
+      "node_count": 84
     }
   ],
   "boundary_edges": [
@@ -195,6 +202,41 @@
       "to": "topic:utility",
       "kind": "boundary_dependent",
       "topic": "utility",
+      "count": 1
+    },
+    {
+      "from": "core.simplex.bounded_by_value",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 4
+    },
+    {
+      "from": "core.simplex.continuity",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "core.simplex.bounded_by_value",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "core.simplex.continuity",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "core.simplex.pure",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
       "count": 1
     }
   ],
@@ -376,7 +418,8 @@
         "lemma": 3
       },
       "status_counts": {
-        "staged": 5
+        "admitted": 4,
+        "staged": 1
       },
       "href": "core/simplex/index.html",
       "children": []
@@ -392,20 +435,76 @@
   ],
   "child_boundary_topics": [
     {
+      "id": "strategic_games.equilibrium",
+      "title": "Strategic Games.Equilibrium",
+      "href": "strategic_games/equilibrium/index.html",
+      "role": "dependent",
+      "node_count": 16
+    },
+    {
       "id": "utility",
       "title": "Utility",
       "href": "utility/index.html",
       "role": "dependent",
       "node_count": 9
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependent",
+      "node_count": 84
+    },
+    {
+      "id": "zero_sum.core",
+      "title": "Zero Sum.Core",
+      "href": "zero_sum/core/index.html",
+      "role": "dependent",
+      "node_count": 23
+    },
+    {
+      "id": "zero_sum.minimax",
+      "title": "Zero Sum.Minimax",
+      "href": "zero_sum/minimax/index.html",
+      "role": "dependent",
+      "node_count": 24
     }
   ],
   "child_boundary_edges": [
+    {
+      "from": "topic:core.simplex",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
+    },
     {
       "from": "topic:core.preference",
       "to": "topic:utility",
       "kind": "boundary_dependent",
       "topic": "utility",
       "count": 4
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 6
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "topic:zero_sum.core",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.core",
+      "count": 1
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "topic:zero_sum.minimax",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.minimax",
+      "count": 5
     }
   ]
 }

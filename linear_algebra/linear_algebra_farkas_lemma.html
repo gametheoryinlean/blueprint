@@ -97,8 +97,13 @@
           </details>
         </li>
       
-        <li class="topic-leaf">
-          <a href="../linear_programming/index.html">Linear Programming</a>
+        <li class="topic-parent">
+          <details data-topic-root="linear_programming">
+            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-parent">
@@ -829,22 +834,135 @@
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Farkas Lemma</h1>
-<p>Let $A$ be an $m\times n$ real matrix, $b\in\mathbb R^m$,
-$c\in\mathbb R^n$, and $d\in\mathbb R$. Assume
+<h2>Setup</h2>
+<p>Fix a linearly ordered field $\mathbb{K}$ and a finite nonempty index type
+$I$. Let $A \colon I \times \mathrm{Fin}\,n \to \mathbb{K}$,
+$b \colon I \to \mathbb{K}$, $c \colon \mathrm{Fin}\,n \to \mathbb{K}$, and
+$d \in \mathbb{K}$. Set
 $$
-  S=\{x\in\mathbb R^n:Ax\ge b\}
+  S(A, b) \;=\; \{\, x \colon \mathrm{Fin}\,n \to \mathbb{K} \mid A x \ge b \,\}
 $$
-is nonempty. Then the following are equivalent:</p>
+(componentwise weak inequality) and assume $S(A, b) \ne \emptyset$.</p>
+<h2>Statement</h2>
+<p>The following are equivalent:</p>
 <ol>
-<li>for every $x\in\mathbb R^n$, if $Ax\ge b$ then
-   $\langle c,x\rangle\ge d$;</li>
-<li>there exists $u\in\mathbb R^m$ such that
-   $u\ge 0$, $uA=c$, and $\langle u,b\rangle\ge d$.</li>
+<li>
+<p>(Primal bound.) For every $x \in S(A, b)$, the objective $\langle c, x\rangle
+   \ge d$.</p>
+</li>
+<li>
+<p>(Dual certificate.) There exists $u \colon I \to \mathbb{K}$ with
+   $u \ge 0$, $u^{\mathsf T} A = c$, and $\langle u, b\rangle \ge d$.</p>
+</li>
 </ol>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>The two directions:</p>
+<p><em>(2) $\Rightarrow$ (1).</em> Let $x \in S(A, b)$ and $u$ as in (2). Weighting
+$A x \ge b$ by the nonnegative $u$ componentwise and summing,
+$\langle u, A x\rangle \ge \langle u, b\rangle$. The left-hand side
+rearranges to $\langle u^{\mathsf T} A, x\rangle = \langle c, x\rangle$ (by
+$u^{\mathsf T} A = c$). The right-hand side is $\ge d$. Therefore
+$\langle c, x\rangle \ge d$.</p>
+<p><em>(1) $\Rightarrow$ (2).</em> This is the substantive direction; the proof
+homogenises the system and applies the Theorem of the Alternative
+(<a class="node-ref" data-node-id="linear_algebra.theorem_of_alternative" href="linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>).</p>
+<p>Consider the augmented system on $(x, t) \in (\mathrm{Fin}\,n \to \mathbb{K})
+\times \mathbb{K}$ with row index $I \sqcup { t_+, c_+ }$ (the original $I$
+plus two extra rows):</p>
+<ul>
+<li>For each $i \in I$: $A_i x - b_i\, t \ge 0$.</li>
+<li>($t_+$) $t \ge 0$.</li>
+<li>($c_+$) $-\langle c, x\rangle + d\, t \ge 1$.</li>
+</ul>
+<p><strong>Claim.</strong> This augmented system is infeasible.</p>
+<p><em>Proof of claim.</em> Suppose $(x, t)$ satisfies all three. Two cases on $t$:</p>
+<ul>
+<li>
+<p>$t = 0$. Then $A x \ge 0$ and $-\langle c, x\rangle \ge 1$, hence
+  $\langle c, x\rangle \le -1$. Pick $y \in S(A, b)$ (using the hypothesis
+  $S \ne \emptyset$). For every $\lambda &gt; 0$ in $\mathbb{K}$,
+  $A(y + \lambda x) = A y + \lambda A x \ge b + 0 = b$, so
+  $y + \lambda x \in S(A, b)$. By (1),
+  $\langle c, y + \lambda x\rangle = \langle c, y\rangle + \lambda
+  \langle c, x\rangle \ge d$. But $\langle c, x\rangle \le -1$, so
+  $\langle c, y\rangle - \lambda \ge d$, i.e.,
+  $\lambda \le \langle c, y\rangle - d$. This bound is independent of
+  $\lambda$ — taking any $\lambda &gt; \langle c, y\rangle - d$ contradicts
+  the inequality. Hence the case $t = 0$ is impossible.</p>
+</li>
+<li>
+<p>$t &gt; 0$. Then $x' := x / t \in \mathrm{Fin}\,n \to \mathbb{K}$ satisfies
+  $A x' = A x / t \ge b$ (divide $A x \ge b\, t$ by $t &gt; 0$), so
+  $x' \in S(A, b)$. By (1), $\langle c, x'\rangle \ge d$. But $(c_+)$ gives
+  $-\langle c, x\rangle + d\, t \ge 1$, so
+  $\langle c, x'\rangle = \langle c, x\rangle / t \le d - 1/t &lt; d$ (since
+  $t &gt; 0$, so $1/t &gt; 0$). Contradiction.</p>
+</li>
+</ul>
+<p>Hence the augmented system is infeasible.</p>
+<p><strong>Apply ToA.</strong> By <a class="node-ref" data-node-id="linear_algebra.theorem_of_alternative" href="linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>, there is a
+Farkas-style certificate $u' \colon I \sqcup \{t_+, c_+\} \to \mathbb{K}$
+with $u' \ge 0$, $(u')^{\mathsf T} (A_{\mathrm{aug}}) = 0$ on every column
+of the augmented system, and $\langle u', b_{\mathrm{aug}}\rangle &gt; 0$
+(where $b_{\mathrm{aug}}$ has $0$ on the $I$ and $t_+$ rows and $1$ on the
+$c_+$ row).</p>
+<p>Decompose $u' = (u, \alpha, \beta)$ with $u \colon I \to \mathbb{K}$,
+$\alpha = u'(t_+)$, $\beta = u'(c_+)$.</p>
+<p>Read off the column conditions:</p>
+<ul>
+<li>(column $j$ for $x_j$, $j \in \mathrm{Fin}\,n$):
+  $\sum_i u_i A_{i,j} + \alpha \cdot 0 + \beta \cdot (-c_j) = 0$, i.e.,
+  $u^{\mathsf T} A = \beta \cdot c$.</li>
+<li>(column for $t$): $\sum_i u_i (-b_i) + \alpha \cdot 1 + \beta \cdot d = 0$,
+  i.e., $\langle u, b\rangle = \alpha + \beta\, d$.</li>
+</ul>
+<p>RHS positivity reads $\beta &gt; 0$ (the $I$ and $t_+$ rows contribute $0$
+to the inner product, and the $c_+$ row contributes $\beta \cdot 1$).</p>
+<p>Since $\beta &gt; 0$, divide: set $\tilde u := u / \beta$. Then</p>
+<ul>
+<li>$\tilde u \ge 0$ (from $u \ge 0$ and $\beta &gt; 0$),</li>
+<li>$\tilde u^{\mathsf T} A = c$ (from $u^{\mathsf T} A = \beta\, c$),</li>
+<li>$\langle \tilde u, b\rangle = \langle u, b\rangle / \beta
+  = \alpha / \beta + d \ge d$ (since $\alpha \ge 0$ and $\beta &gt; 0$).</li>
+</ul>
+<p>So $\tilde u$ witnesses (2). $\square$</p>
+<h2>Remarks</h2>
+<ul>
+<li>The proof is purely algebraic and constructive: the Farkas certificate
+  $\tilde u$ is built explicitly from the Theorem of the Alternative
+  witness produced by Fourier-Motzkin elimination.</li>
+<li>Works over any linearly ordered field, in particular over $\mathbb{Q}$
+  (with rational matrix and objective, the certificate is rational).</li>
+<li>The hypothesis $S(A, b) \ne \emptyset$ is essential: if $S$ is empty, the
+  primal-bound condition (1) is vacuously true for any $d$, but the dual
+  certificate (2) need not exist (it would need to additionally certify
+  infeasibility of the primal). The non-emptiness hypothesis is the
+  standard Farkas "feasibility precondition".</li>
+</ul>
+<h2>Consequences</h2>
+<p>This is the gateway to:</p>
+<ul>
+<li>LP strong duality: the primal LP $\min \langle c, x\rangle$ subject to
+  $A x \ge b$ has the same optimal value as the dual LP
+  $\max \langle u, b\rangle$ subject to $u \ge 0$, $u^{\mathsf T} A = c$.</li>
+<li>LP strong complementarity: existence of optimal primal-dual pairs with
+  strict complementary slackness.</li>
+<li>Matrix-game polytope structure: optimal strategy sets are polytopes
+  (intersections of the simplex with finitely many half-spaces, each of
+  which has a Farkas-style certificate).</li>
+</ul>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Section 2.8, Exercise 8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Farkas lemma derived from the theorem of the alternative.</li>
+<li>[MFoGT, Section 2.8, Exercise 8] Laraki, Renault, and Sorin,
+  <em>Mathematical Foundations of Game Theory</em>,
+  <code>references/MathFoundationsGameTheory.pdf</code>. Farkas lemma derived from
+  the theorem of the alternative.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -861,6 +979,17 @@ is nonempty. Then the following are equivalent:</p>
   </section>
   
 
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../linear_algebra/index.html">Linear Algebra</a></li>
+      
+      <li><a href="../linear_algebra/alternatives/index.html">Linear Algebra.Alternatives</a></li>
+      
+    </ul>
+  </section>
   
 
   

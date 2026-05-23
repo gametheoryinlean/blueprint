@@ -1,0 +1,99 @@
+{
+  "topic": {
+    "id": "linear_programming.duality",
+    "title": "Linear Programming.Duality",
+    "href": "linear_programming/duality/index.html",
+    "parent": "linear_programming",
+    "node_count": 1,
+    "descendant_node_count": 1
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 1,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 3,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "linear_programming.strong_duality",
+      "title": "Strong Duality For Linear Programming",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "linear_programming/linear_programming_strong_duality.html",
+      "payload": "node_payloads/linear_programming_strong_duality.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "linear_algebra",
+      "title": "Linear Algebra",
+      "href": "linear_algebra/index.html",
+      "role": "dependency",
+      "node_count": 4
+    },
+    {
+      "id": "linear_programming",
+      "title": "Linear Programming",
+      "href": "linear_programming/index.html",
+      "role": "dependent",
+      "node_count": 2
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependent",
+      "node_count": 84
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:linear_algebra",
+      "to": "linear_programming.strong_duality",
+      "kind": "boundary_dependency",
+      "topic": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "linear_programming.strong_duality",
+      "to": "topic:linear_programming",
+      "kind": "boundary_dependent",
+      "topic": "linear_programming",
+      "count": 1
+    },
+    {
+      "from": "linear_programming.strong_duality",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "duality",
+      "title": "duality",
+      "href": "keywords/duality.html",
+      "count": 1
+    },
+    {
+      "id": "linear-programming",
+      "title": "linear-programming",
+      "href": "keywords/linear-programming.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

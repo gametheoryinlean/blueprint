@@ -4,20 +4,20 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 85,
-    "descendant_node_count": 85
+    "node_count": 84,
+    "descendant_node_count": 84
   },
   "counts": {
-    "internal_nodes": 85,
-    "descendant_nodes": 85,
+    "internal_nodes": 84,
+    "descendant_nodes": 84,
     "child_topics": 7,
-    "non_proof_plan_nodes": 76,
+    "non_proof_plan_nodes": 75,
     "proof_plan_nodes": 9,
-    "selected_proof_plan_nodes": 5,
-    "boundary_topics": 9,
+    "selected_proof_plan_nodes": 3,
+    "boundary_topics": 10,
     "proof_plan_attachments": 9,
     "visible_nodes_without_proof_plans": 86,
-    "visible_nodes_with_selected_proof_plans": 91
+    "visible_nodes_with_selected_proof_plans": 89
   },
   "nodes": [
     {
@@ -423,14 +423,6 @@
       "payload": "node_payloads/zero_sum_lam_mu_existence.json"
     },
     {
-      "id": "zero_sum.loomis_route_compactness",
-      "title": "Compactness and Continuity Scaffold for the Loomis Route",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_loomis_route_compactness.html",
-      "payload": "node_payloads/zero_sum_loomis_route_compactness.json"
-    },
-    {
       "id": "zero_sum.lp.zero_sum_lp_bridge",
       "title": "Zero-Sum Linear Programming Bridge",
       "kind": "proof-plan",
@@ -546,7 +538,7 @@
       "href": "zero_sum/zero_sum_minimax_lp_duality_minimax_proof.html",
       "payload": "node_payloads/zero_sum_minimax_lp_duality_minimax_proof.json",
       "target": "zero_sum.von_neumann_minimax",
-      "plan_status": "selected"
+      "plan_status": "candidate"
     },
     {
       "id": "zero_sum.minimax.minimax_from_antisymmetric_games",
@@ -566,7 +558,7 @@
       "href": "zero_sum/zero_sum_minimax_minimax_from_deterministic_approachability.html",
       "payload": "node_payloads/zero_sum_minimax_minimax_from_deterministic_approachability.json",
       "target": "zero_sum.von_neumann_minimax",
-      "plan_status": "selected"
+      "plan_status": "candidate"
     },
     {
       "id": "zero_sum.minimax.minimax_from_loomis",
@@ -882,11 +874,6 @@
     },
     {
       "from": "zero_sum.core.saddle_point",
-      "to": "zero_sum.core.optimal_pairs_are_saddle_points",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.loomis_route_compactness",
       "to": "zero_sum.core.optimal_pairs_are_saddle_points",
       "kind": "uses"
     },
@@ -1216,11 +1203,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.loomis_route_compactness",
-      "to": "zero_sum.lam_mu_existence",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.matrix_game",
       "to": "zero_sum.lam_mu_existence",
       "kind": "uses"
@@ -1236,11 +1218,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.mixed_matrix_payoff",
-      "to": "zero_sum.loomis_route_compactness",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.dantzig_proof_spine",
       "to": "zero_sum.lp.zero_sum_lp_bridge",
       "kind": "proof_plan_uses"
@@ -1248,11 +1225,6 @@
     {
       "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.matrix_game",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.loomis_route_compactness",
-      "to": "zero_sum.matrix_game_nash_equilibrium",
       "kind": "uses"
     },
     {
@@ -1351,11 +1323,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.loomis_route_compactness",
-      "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
       "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
       "kind": "uses"
@@ -1406,17 +1373,17 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
       "from": "zero_sum.examples.antisymmetric_matrix_game_value",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
       "kind": "proof_plan_uses"
     },
     {
       "from": "zero_sum.lam_mu_existence",
-      "to": "zero_sum.minimax.minimax_from_loomis",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "zero_sum.loomis_route_compactness",
       "to": "zero_sum.minimax.minimax_from_loomis",
       "kind": "proof_plan_uses"
     },
@@ -1530,6 +1497,13 @@
       "node_count": 2
     },
     {
+      "id": "core.simplex",
+      "title": "Core.Simplex",
+      "href": "core/simplex/index.html",
+      "role": "dependency",
+      "node_count": 5
+    },
+    {
       "id": "extensive_game.examples",
       "title": "Extensive Game.Examples",
       "href": "extensive_game/examples/index.html",
@@ -1588,6 +1562,34 @@
   ],
   "boundary_edges": [
     {
+      "from": "topic:core.simplex",
+      "to": "zero_sum.core.optimal_pairs_are_saddle_points",
+      "kind": "boundary_dependency",
+      "topic": "core.simplex",
+      "count": 1
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "zero_sum.lam_mu_existence",
+      "kind": "boundary_dependency",
+      "topic": "core.simplex",
+      "count": 2
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "zero_sum.matrix_game_nash_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "core.simplex",
+      "count": 1
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "kind": "boundary_dependency",
+      "topic": "core.simplex",
+      "count": 2
+    },
+    {
       "from": "topic:linear_programming",
       "to": "zero_sum.core.strong_complementarity",
       "kind": "boundary_dependency",
@@ -1620,6 +1622,27 @@
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
       "kind": "boundary_proof_plan_dependency",
       "topic": "approachability",
+      "count": 1
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "core.simplex",
+      "count": 1
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "core.simplex",
+      "count": 3
+    },
+    {
+      "from": "topic:linear_programming",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "linear_programming",
       "count": 1
     },
     {
@@ -1701,7 +1724,7 @@
       "id": "compactness",
       "title": "compactness",
       "href": "keywords/compactness.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "complementarity",
@@ -1719,7 +1742,7 @@
       "id": "continuity",
       "title": "continuity",
       "href": "keywords/continuity.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "continuous-game",
@@ -1869,7 +1892,7 @@
       "id": "minimax",
       "title": "minimax",
       "href": "keywords/minimax.html",
-      "count": 20
+      "count": 19
     },
     {
       "id": "mixed-strategy",
@@ -1959,7 +1982,7 @@
       "id": "simplex",
       "title": "simplex",
       "href": "keywords/simplex.html",
-      "count": 4
+      "count": 3
     },
     {
       "id": "sion",
@@ -2037,7 +2060,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 84
+      "count": 83
     }
   ],
   "proof_plan_attachments": [
@@ -2063,7 +2086,7 @@
       "from": "zero_sum.minimax.lp_duality_minimax_proof",
       "to": "zero_sum.von_neumann_minimax",
       "kind": "has_plan",
-      "plan_status": "selected"
+      "plan_status": "candidate"
     },
     {
       "from": "zero_sum.minimax.minimax_from_antisymmetric_games",
@@ -2075,7 +2098,7 @@
       "from": "zero_sum.minimax.minimax_from_deterministic_approachability",
       "to": "zero_sum.von_neumann_minimax",
       "kind": "has_plan",
-      "plan_status": "selected"
+      "plan_status": "candidate"
     },
     {
       "from": "zero_sum.minimax.minimax_from_loomis",
@@ -2205,19 +2228,19 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 25,
-      "direct_node_count": 25,
+      "node_count": 24,
+      "direct_node_count": 24,
       "kind_counts": {
         "concept": 1,
         "definition": 1,
-        "lemma": 8,
+        "lemma": 7,
         "proof-plan": 8,
         "theorem": 7
       },
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 13,
+        "formalized": 12,
         "proved": 2,
         "staged": 7
       },
@@ -2265,7 +2288,7 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.minimax",
       "kind": "topic_dependency",
-      "count": 10
+      "count": 9
     },
     {
       "from": "topic:zero_sum.core",
@@ -2277,7 +2300,7 @@
       "from": "topic:zero_sum.minimax",
       "to": "topic:zero_sum.core",
       "kind": "topic_dependency",
-      "count": 9
+      "count": 8
     },
     {
       "from": "topic:zero_sum.minimax",
@@ -2299,6 +2322,20 @@
     }
   ],
   "child_boundary_topics": [
+    {
+      "id": "core",
+      "title": "Core",
+      "href": "core/index.html",
+      "role": "dependency",
+      "node_count": 12
+    },
+    {
+      "id": "core.simplex",
+      "title": "Core.Simplex",
+      "href": "core/simplex/index.html",
+      "role": "dependency",
+      "node_count": 5
+    },
     {
       "id": "extensive_game.examples",
       "title": "Extensive Game.Examples",
@@ -2332,7 +2369,7 @@
       "title": "Mixed Strategy",
       "href": "mixed_strategy/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 3
+      "node_count": 2
     },
     {
       "id": "strategic_games",
@@ -2386,6 +2423,34 @@
   ],
   "child_boundary_edges": [
     {
+      "from": "topic:core",
+      "to": "topic:zero_sum.core",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 1
+    },
+    {
+      "from": "topic:core",
+      "to": "topic:zero_sum.minimax",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 5
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "topic:zero_sum.core",
+      "kind": "boundary_dependency",
+      "topic": "core.simplex",
+      "count": 1
+    },
+    {
+      "from": "topic:core.simplex",
+      "to": "topic:zero_sum.minimax",
+      "kind": "boundary_dependency",
+      "topic": "core.simplex",
+      "count": 5
+    },
+    {
       "from": "topic:linear_programming",
       "to": "topic:zero_sum.core",
       "kind": "boundary_dependency",
@@ -2397,7 +2462,7 @@
       "to": "topic:zero_sum.core",
       "kind": "boundary_dependency",
       "topic": "mixed_strategy",
-      "count": 4
+      "count": 3
     },
     {
       "from": "topic:mixed_strategy",
@@ -2405,13 +2470,6 @@
       "kind": "boundary_dependency",
       "topic": "mixed_strategy",
       "count": 2
-    },
-    {
-      "from": "topic:mixed_strategy",
-      "to": "topic:zero_sum.minimax",
-      "kind": "boundary_dependency",
-      "topic": "mixed_strategy",
-      "count": 3
     },
     {
       "from": "topic:strategic_games",
@@ -2460,7 +2518,7 @@
       "to": "topic:mixed_strategy",
       "kind": "boundary_dependent",
       "topic": "mixed_strategy",
-      "count": 3
+      "count": 2
     },
     {
       "from": "topic:zero_sum.fictitious_play",
@@ -2502,7 +2560,7 @@
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
-      "count": 3
+      "count": 2
     },
     {
       "from": "topic:zero_sum.fictitious_play",

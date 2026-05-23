@@ -4,22 +4,30 @@
     "title": "Linear Algebra.Alternatives",
     "href": "linear_algebra/alternatives/index.html",
     "parent": "linear_algebra",
-    "node_count": 2,
-    "descendant_node_count": 2
+    "node_count": 3,
+    "descendant_node_count": 3
   },
   "counts": {
-    "internal_nodes": 2,
-    "descendant_nodes": 2,
+    "internal_nodes": 3,
+    "descendant_nodes": 3,
     "child_topics": 0,
-    "non_proof_plan_nodes": 2,
+    "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
+    {
+      "id": "linear_algebra.farkas_lemma",
+      "title": "Farkas Lemma",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "linear_algebra/linear_algebra_farkas_lemma.html",
+      "payload": "node_payloads/linear_algebra_farkas_lemma.json"
+    },
     {
       "id": "linear_algebra.theorem_of_alternative",
       "title": "Theorem Of The Alternative",
@@ -39,6 +47,11 @@
   ],
   "edges": [
     {
+      "from": "linear_algebra.theorem_of_alternative",
+      "to": "linear_algebra.farkas_lemma",
+      "kind": "uses"
+    },
+    {
       "from": "linear_algebra.theorem_of_alternative.fourier_motzkin",
       "to": "linear_algebra.theorem_of_alternative",
       "kind": "uses"
@@ -46,19 +59,19 @@
   ],
   "boundary_topics": [
     {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "href": "linear_algebra/index.html",
+      "id": "linear_programming",
+      "title": "Linear Programming",
+      "href": "linear_programming/index.html",
       "role": "dependent",
-      "node_count": 4
+      "node_count": 2
     }
   ],
   "boundary_edges": [
     {
-      "from": "linear_algebra.theorem_of_alternative",
-      "to": "topic:linear_algebra",
+      "from": "linear_algebra.farkas_lemma",
+      "to": "topic:linear_programming",
       "kind": "boundary_dependent",
-      "topic": "linear_algebra",
+      "topic": "linear_programming",
       "count": 1
     }
   ],
@@ -73,12 +86,18 @@
       "id": "convexity",
       "title": "convexity",
       "href": "keywords/convexity.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "elimination",
       "title": "elimination",
       "href": "keywords/elimination.html",
+      "count": 1
+    },
+    {
+      "id": "farkas",
+      "title": "farkas",
+      "href": "keywords/farkas.html",
       "count": 1
     },
     {
@@ -91,7 +110,7 @@
       "id": "linear-algebra",
       "title": "linear-algebra",
       "href": "keywords/linear-algebra.html",
-      "count": 2
+      "count": 3
     }
   ],
   "proof_plan_attachments": [],

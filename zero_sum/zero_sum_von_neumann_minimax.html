@@ -97,8 +97,13 @@
           </details>
         </li>
       
-        <li class="topic-leaf">
-          <a href="../linear_programming/index.html">Linear Programming</a>
+        <li class="topic-parent">
+          <details data-topic-root="linear_programming">
+            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-parent">
@@ -822,11 +827,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/df415e73c695d031c3b8d1e1f1871cb7824ba244/EconCSLib/StrategicGame/Minimax.lean#L188"><code>MatrixGame.maximin_le_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1f2704d8385e9553dcc8dc2ca3677344a87c0105/EconCSLib/StrategicGame/Minimax.lean#L188"><code>MatrixGame.maximin_le_minimax</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ df415e7, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ 1f2704d, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -834,11 +839,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/df415e73c695d031c3b8d1e1f1871cb7824ba244/EconCSLib/StrategicGame/Minimax.lean#L200"><code>MatrixGame.minimax_theorem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1f2704d8385e9553dcc8dc2ca3677344a87c0105/EconCSLib/StrategicGame/Minimax.lean#L200"><code>MatrixGame.minimax_theorem</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ df415e7, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ 1f2704d, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -846,11 +851,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/df415e73c695d031c3b8d1e1f1871cb7824ba244/EconCSLib/StrategicGame/Minimax.lean#L209"><code>MatrixGame.minimax_optimal_strategies</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1f2704d8385e9553dcc8dc2ca3677344a87c0105/EconCSLib/StrategicGame/Minimax.lean#L209"><code>MatrixGame.minimax_optimal_strategies</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ df415e7, EconCSLib.StrategicGame.Minimax
+            EconCSLib @ 1f2704d, EconCSLib.StrategicGame.Minimax
           </span>
           
           
@@ -879,10 +884,11 @@ player II holds player I to at most $v$ against every row.</p>
   (<code>EconCSLib.StrategicGame.MinimaxLoomis</code>), which inlines the $B = \mathbf{1}$
   case of the Loomis induction
   (<a class="node-ref" data-node-id="zero_sum.minimax.loomis_induction_proof" href="minimax/zero_sum_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>) rather than first porting
-  the general positive-$B$ Loomis statement. The compactness/continuity and
-  existence scaffolds it relies on live in
-  <a class="node-ref" data-node-id="zero_sum.loomis_route_compactness" href="zero_sum_loomis_route_compactness.html">Compactness and Continuity Scaffold for the Loomis Route</a> and
-  <a class="node-ref" data-node-id="zero_sum.lam_mu_existence" href="zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a>; weak duality
+  the general positive-$B$ Loomis statement. The compactness/continuity
+  building blocks it relies on live in the core simplex layer
+  (<a class="node-ref" data-node-id="core.simplex.pure" href="../core/simplex/core_simplex_pure.html">Point Mass on the Standard Simplex</a>, <a class="node-ref" data-node-id="core.simplex.continuity" href="../core/simplex/core_simplex_continuity.html">Continuity on the Real Standard Simplex</a>,
+  <a class="node-ref" data-node-id="core.simplex.bounded_by_value" href="../core/simplex/core_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>) and the existence + weak-duality
+  step is <a class="node-ref" data-node-id="zero_sum.lam_mu_existence" href="zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a>; weak duality
   (<a class="node-ref" data-node-id="zero_sum.maximin_le_minimax" href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a>) supplies one direction of the
   equality.</li>
 <li><a class="node-ref" data-node-id="zero_sum.dantzig_proof_spine" href="zero_sum_dantzig_proof_spine.html">Dantzig Proof Spine for Minimax (Ordered-Field Route)</a> (<strong>candidate</strong>, ordered-field-generic):

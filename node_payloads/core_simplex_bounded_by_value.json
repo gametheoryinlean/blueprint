@@ -2,7 +2,7 @@
   "id": "core.simplex.bounded_by_value",
   "title": "Pointwise Bounds Are Simplex Bounds",
   "kind": "lemma",
-  "status": "staged",
+  "status": "admitted",
   "href": "core/simplex/core_simplex_bounded_by_value.html",
   "primary_topic": "core.simplex",
   "topics": [
@@ -23,7 +23,38 @@
       "href": "core/simplex/core_simplex_pure.html"
     }
   ],
-  "dependents": [],
+  "dependents": [
+    {
+      "id": "zero_sum.core.optimal_pairs_are_saddle_points",
+      "title": "Optimal Pairs Are Exactly Saddle Points",
+      "href": "zero_sum/zero_sum_core_optimal_pairs_are_saddle_points.html"
+    },
+    {
+      "id": "zero_sum.lam_mu_existence",
+      "title": "Existence of Optimal Mixed Strategies (Loomis Foundations)",
+      "href": "zero_sum/zero_sum_lam_mu_existence.html"
+    },
+    {
+      "id": "zero_sum.matrix_game_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium of a Matrix Game",
+      "href": "zero_sum/zero_sum_matrix_game_nash_equilibrium.html"
+    },
+    {
+      "id": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "title": "Existence of Loomis Optimisers",
+      "href": "zero_sum/zero_sum_minimax_loomis_induction_proof_value_existence.html"
+    },
+    {
+      "id": "zero_sum.minimax.lp_duality_minimax_proof",
+      "title": "LP Duality Proof Of Minimax",
+      "href": "zero_sum/zero_sum_minimax_lp_duality_minimax_proof.html"
+    },
+    {
+      "id": "zero_sum.minimax.minimax_from_loomis",
+      "title": "Minimax via the All-Ones Specialization of Loomis",
+      "href": "zero_sum/zero_sum_minimax_minimax_from_loomis.html"
+    }
+  ],
   "lean_refs": [
     {
       "name": "ge_iff_simplex_ge",
@@ -31,9 +62,9 @@
       "qualified_name": "ge_iff_simplex_ge",
       "module": "EconCSLib.Core.Simplex",
       "repository_title": "EconCSLib",
-      "revision": "df415e73c695d031c3b8d1e1f1871cb7824ba244",
-      "short_revision": "df415e7",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/df415e73c695d031c3b8d1e1f1871cb7824ba244/EconCSLib/Core/Simplex.lean#L165",
+      "revision": "1f2704d8385e9553dcc8dc2ca3677344a87c0105",
+      "short_revision": "1f2704d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/1f2704d8385e9553dcc8dc2ca3677344a87c0105/EconCSLib/Core/Simplex.lean#L165",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -44,9 +75,9 @@
       "qualified_name": "le_iff_simplex_le",
       "module": "EconCSLib.Core.Simplex",
       "repository_title": "EconCSLib",
-      "revision": "df415e73c695d031c3b8d1e1f1871cb7824ba244",
-      "short_revision": "df415e7",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/df415e73c695d031c3b8d1e1f1871cb7824ba244/EconCSLib/Core/Simplex.lean#L174",
+      "revision": "1f2704d8385e9553dcc8dc2ca3677344a87c0105",
+      "short_revision": "1f2704d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/1f2704d8385e9553dcc8dc2ca3677344a87c0105/EconCSLib/Core/Simplex.lean#L174",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

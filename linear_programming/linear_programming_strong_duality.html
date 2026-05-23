@@ -97,8 +97,13 @@
           </details>
         </li>
       
-        <li class="topic-leaf topic-active">
-          <a href="../linear_programming/index.html">Linear Programming</a>
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="linear_programming">
+            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li>
       
         <li class="topic-parent">
@@ -829,22 +834,102 @@
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Strong Duality For Linear Programming</h1>
-<p>Consider the primal linear program
+<h2>Setup</h2>
+<p>Fix a linearly ordered field $\mathbb{K}$, a finite nonempty index type $I$,
+and $n \in \mathbb{N}$. Let $A \colon I \times \mathrm{Fin}\,n \to \mathbb{K}$,
+$b \colon I \to \mathbb{K}$, $c \colon \mathrm{Fin}\,n \to \mathbb{K}$.
+Consider the <strong>standard-form linear programming pair</strong>:</p>
+<ul>
+<li><strong>Primal</strong> $\mathrm{P}$:  $\min \langle c, x\rangle$ subject to
+  $A x \ge b$ and $x \ge 0$ (i.e. $x_j \ge 0$ for every $j \in \mathrm{Fin}\,n$).</li>
+<li><strong>Dual</strong> $\mathrm{D}$:  $\max \langle u, b\rangle$ subject to
+  $u^{\mathsf T} A \le c$ (componentwise, i.e. $\sum_i u_i A_{ij} \le c_j$ for
+  every $j$) and $u \ge 0$.</li>
+</ul>
+<h2>Statements</h2>
+<p><strong>Weak duality.</strong> For every primal-feasible $x$ and dual-feasible $u$,
+$\langle c, x\rangle \ge \langle u, b\rangle$.</p>
+<p><strong>Strong duality.</strong> If the primal is feasible and bounded below by
+$d \in \mathbb{K}$ (i.e. $\langle c, x\rangle \ge d$ for every primal-feasible
+$x$), then there exists a dual-feasible $u$ with $\langle u, b\rangle \ge d$.</p>
+<p>Combining the two yields that the optimal primal and dual values coincide when
+either exists.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <h3>Weak duality</h3>
+<p>Let $x$ be primal-feasible and $u$ dual-feasible. Weighting the primal
+constraints by $u \ge 0$:
 $$
-  \min \langle c,x\rangle
-  \quad\text{subject to } Ax\ge b,\ x\ge 0
+  \langle u, A x\rangle = \langle u^{\mathsf T} A, x\rangle \le \langle c, x\rangle
 $$
-and its dual
+(using $u^{\mathsf T} A \le c$ and $x \ge 0$, so weighting term by term
+preserves $\le$). And $\langle u, A x\rangle \ge \langle u, b\rangle$ from
+$A x \ge b$ and $u \ge 0$. Hence $\langle c, x\rangle \ge \langle u, b\rangle$.</p>
+<h3>Strong duality</h3>
+<p>Apply the Farkas lemma (<a class="node-ref" data-node-id="linear_algebra.farkas_lemma" href="../linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a>) to the
+<strong>augmented system</strong> that combines $A x \ge b$ and $x \ge 0$. Concretely,
+define $A_{\mathrm{aug}} \colon (I \sqcup \mathrm{Fin}\,n) \times \mathrm{Fin}\,n
+\to \mathbb{K}$ and $b_{\mathrm{aug}} \colon I \sqcup \mathrm{Fin}\,n \to \mathbb{K}$
+by</p>
+<ul>
+<li>$A_{\mathrm{aug}}(\mathrm{inl}\,i,\, j) = A_{i,j}$,
+  $b_{\mathrm{aug}}(\mathrm{inl}\,i) = b_i$ for $i \in I$ (the original rows);</li>
+<li>$A_{\mathrm{aug}}(\mathrm{inr}\,j',\, j) = [j = j']$
+  (Kronecker delta) and $b_{\mathrm{aug}}(\mathrm{inr}\,j') = 0$ for
+  $j' \in \mathrm{Fin}\,n$ (the unit rows $x_{j'} \ge 0$).</li>
+</ul>
+<p>Primal feasibility coincides with feasibility of $A_{\mathrm{aug}}\,x \ge
+b_{\mathrm{aug}}$. By hypothesis, the primal is feasible and bounded below by
+$d$. Farkas yields $u_{\mathrm{aug}} \colon I \sqcup \mathrm{Fin}\,n \to \mathbb{K}$
+with $u_{\mathrm{aug}} \ge 0$, $u_{\mathrm{aug}}^{\mathsf T} A_{\mathrm{aug}} = c$,
+and $\langle u_{\mathrm{aug}}, b_{\mathrm{aug}}\rangle \ge d$.</p>
+<p>Decompose $u_{\mathrm{aug}} = (u, v)$ with $u \colon I \to \mathbb{K}$ and
+$v \colon \mathrm{Fin}\,n \to \mathbb{K}$. The column conditions read</p>
+<ul>
+<li>For each $j \in \mathrm{Fin}\,n$:
+  $\sum_i u_i A_{i,j} + \sum_{j'} v_{j'} [j = j'] = c_j$, i.e.
+  $u^{\mathsf T} A\, j + v_j = c_j$, i.e. $u^{\mathsf T} A = c - v$. Since
+  $v \ge 0$, $u^{\mathsf T} A \le c$.</li>
+</ul>
+<p>The RHS condition reads
 $$
-  \max \langle u,b\rangle
-  \quad\text{subject to } uA\le c,\ u\ge 0.
-$$
-The primal has an optimal solution if and only if the dual has an optimal solution.
-When optimal solutions exist, the two programs have the same value.</p>
+  \langle u_{\mathrm{aug}}, b_{\mathrm{aug}}\rangle
+    = \langle u, b\rangle + \langle v, 0\rangle = \langle u, b\rangle \ge d.
+$$</p>
+<p>So $u \ge 0$, $u^{\mathsf T} A \le c$ (dual feasibility), and
+$\langle u, b\rangle \ge d$. This is the required dual-feasible point with
+dual objective at least $d$.</p>
+<h2>Remarks</h2>
+<ul>
+<li>The proof is purely algebraic and constructive: the dual certificate $u$ is
+  built explicitly from the Farkas certificate of the augmented system.</li>
+<li>Works over any linearly ordered field (in particular $\mathbb{Q}$).</li>
+<li>"Optimal value" is not used as a primitive; instead, the theorem is phrased
+  for any lower bound $d$. The primal optimum is recovered by combining strong
+  duality with weak duality:
+  $$
+    \sup_{u \text{ dual-feasible}} \langle u, b\rangle
+      \;\ge\; d \quad\text{whenever}\quad d \le \inf_{x \text{ primal-feasible}}\langle c, x\rangle,
+  $$
+  and weak duality gives the converse inequality.</li>
+</ul>
+<h2>Consequences</h2>
+<ul>
+<li><strong>Complementary slackness</strong>: optimal primal-dual pairs satisfy strict slack
+  conditions on every variable (downstream from this theorem).</li>
+<li><strong>Matrix-game value</strong>: zero-sum value computed via row and column LPs
+  (downstream from this theorem).</li>
+</ul>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Section 2.8, Exercise 9] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Primal-dual strong duality for linear programming.</li>
+<li>[MFoGT, Section 2.8, Exercise 9] Laraki, Renault, and Sorin, <em>Mathematical
+  Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>.
+  Primal-dual strong duality for linear programming.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -857,10 +942,23 @@ When optimal solutions exist, the two programs have the same value.</p>
       
       <li><a href="linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a></li>
       
+      <li><a href="../zero_sum/zero_sum_minimax_lp_duality_minimax_proof.html">LP Duality Proof Of Minimax</a></li>
+      
     </ul>
   </section>
   
 
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../linear_programming/index.html">Linear Programming</a></li>
+      
+      <li><a href="../linear_programming/duality/index.html">Linear Programming.Duality</a></li>
+      
+    </ul>
+  </section>
   
 
   

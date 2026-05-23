@@ -415,7 +415,7 @@
       "id": "core.simplex.bounded_by_value",
       "title": "Pointwise Bounds Are Simplex Bounds",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "core",
         "simplex",
@@ -434,13 +434,21 @@
       "uses": [
         "core.simplex.pure",
         "core.simplex.wsum"
+      ],
+      "used_by": [
+        "zero_sum.core.optimal_pairs_are_saddle_points",
+        "zero_sum.lam_mu_existence",
+        "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.lp_duality_minimax_proof",
+        "zero_sum.minimax.minimax_from_loomis"
       ]
     },
     {
       "id": "core.simplex.continuity",
       "title": "Continuity on the Real Standard Simplex",
       "kind": "lemma",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "core",
         "simplex",
@@ -459,13 +467,18 @@
       "topic": "simplex",
       "uses": [
         "core.simplex.wsum"
+      ],
+      "used_by": [
+        "zero_sum.lam_mu_existence",
+        "zero_sum.minimax.loomis_induction_proof.value_existence",
+        "zero_sum.minimax.minimax_from_loomis"
       ]
     },
     {
       "id": "core.simplex.pure",
       "title": "Point Mass on the Standard Simplex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "core",
         "simplex",
@@ -487,14 +500,15 @@
         "core.simplex.wsum"
       ],
       "used_by": [
-        "core.simplex.bounded_by_value"
+        "core.simplex.bounded_by_value",
+        "zero_sum.minimax.minimax_from_loomis"
       ]
     },
     {
       "id": "core.simplex.wsum",
       "title": "Weighted Sum over the Standard Simplex",
       "kind": "definition",
-      "status": "staged",
+      "status": "admitted",
       "tags": [
         "core",
         "simplex",
@@ -1681,6 +1695,11 @@
         "convexity",
         "farkas"
       ],
+      "primary_topic": "linear_algebra",
+      "topics": [
+        "linear_algebra",
+        "linear_algebra.alternatives"
+      ],
       "topic": "linear_algebra",
       "uses": [
         "linear_algebra.theorem_of_alternative"
@@ -1776,12 +1795,18 @@
         "linear-programming",
         "duality"
       ],
+      "primary_topic": "linear_programming",
+      "topics": [
+        "linear_programming",
+        "linear_programming.duality"
+      ],
       "topic": "linear_programming",
       "uses": [
         "linear_algebra.farkas_lemma"
       ],
       "used_by": [
-        "linear_programming.strong_complementarity"
+        "linear_programming.strong_complementarity",
+        "zero_sum.minimax.lp_duality_minimax_proof"
       ]
     },
     {
@@ -9314,9 +9339,9 @@
       ],
       "topic": "zero_sum",
       "uses": [
+        "core.simplex.bounded_by_value",
         "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.saddle_point",
-        "zero_sum.loomis_route_compactness",
         "zero_sum.maximin_le_minimax",
         "zero_sum.von_neumann_minimax"
       ],
@@ -10140,50 +10165,13 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.loomis_route_compactness",
+        "core.simplex.bounded_by_value",
+        "core.simplex.continuity",
         "zero_sum.matrix_game",
         "zero_sum.maximin_minimax",
         "zero_sum.mixed_matrix_payoff"
       ],
       "used_by": [
-        "zero_sum.minimax.loomis_induction_proof.value_existence",
-        "zero_sum.minimax.minimax_from_loomis"
-      ]
-    },
-    {
-      "id": "zero_sum.loomis_route_compactness",
-      "title": "Compactness and Continuity Scaffold for the Loomis Route",
-      "kind": "lemma",
-      "status": "formalized",
-      "tags": [
-        "zero-sum",
-        "minimax",
-        "simplex",
-        "compactness",
-        "continuity"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.minimax",
-        "mixed_strategy"
-      ],
-      "lean_declarations": [
-        "stdSimplex.pure",
-        "wsum_pure_apply",
-        "ge_iff_simplex_ge",
-        "le_iff_simplex_le",
-        "stdSimplex.continuous_coord",
-        "wsum_continuous"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "zero_sum.mixed_matrix_payoff"
-      ],
-      "used_by": [
-        "zero_sum.core.optimal_pairs_are_saddle_points",
-        "zero_sum.lam_mu_existence",
-        "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.minimax.loomis_induction_proof.value_existence",
         "zero_sum.minimax.minimax_from_loomis"
       ]
@@ -10284,7 +10272,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.loomis_route_compactness",
+        "core.simplex.bounded_by_value",
         "zero_sum.matrix_game",
         "zero_sum.mixed_matrix_payoff",
         "zero_sum.von_neumann_minimax"
@@ -10321,6 +10309,7 @@
         "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.examples.three_player_minimax_failure",
         "zero_sum.fictitious_play.continuous_fictitious_play_gap",
+        "zero_sum.minimax.lp_duality_minimax_proof",
         "zero_sum.minimax.minimax_from_loomis"
       ]
     },
@@ -10548,8 +10537,9 @@
       ],
       "topic": "zero_sum",
       "uses": [
+        "core.simplex.bounded_by_value",
+        "core.simplex.continuity",
         "zero_sum.lam_mu_existence",
-        "zero_sum.loomis_route_compactness",
         "zero_sum.minimax.loomis_induction_proof.positive_aggregate"
       ],
       "used_by": [
@@ -10644,8 +10634,13 @@
         "zero_sum.minimax"
       ],
       "target": "zero_sum.von_neumann_minimax",
-      "plan_status": "selected",
-      "topic": "zero_sum"
+      "plan_status": "candidate",
+      "topic": "zero_sum",
+      "uses": [
+        "core.simplex.bounded_by_value",
+        "linear_programming.strong_duality",
+        "zero_sum.maximin_le_minimax"
+      ]
     },
     {
       "id": "zero_sum.minimax.minimax_from_antisymmetric_games",
@@ -10687,7 +10682,7 @@
         "zero_sum.minimax"
       ],
       "target": "zero_sum.von_neumann_minimax",
-      "plan_status": "selected",
+      "plan_status": "candidate",
       "topic": "zero_sum",
       "uses": [
         "approachability.deterministic_blackwell_sequence"
@@ -10739,8 +10734,10 @@
       ],
       "topic": "zero_sum",
       "uses": [
+        "core.simplex.bounded_by_value",
+        "core.simplex.continuity",
+        "core.simplex.pure",
         "zero_sum.lam_mu_existence",
-        "zero_sum.loomis_route_compactness",
         "zero_sum.maximin_le_minimax",
         "zero_sum.minimax.loomis_theorem"
       ]
@@ -10906,7 +10903,6 @@
       ],
       "used_by": [
         "zero_sum.lam_mu_existence",
-        "zero_sum.loomis_route_compactness",
         "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.maximin_minimax"
       ]
@@ -13948,15 +13944,15 @@
       "to": "zero_sum.core.mixed_support"
     },
     {
+      "from": "core.simplex.bounded_by_value",
+      "to": "zero_sum.core.optimal_pairs_are_saddle_points"
+    },
+    {
       "from": "zero_sum.core.optimal_strategy_sets",
       "to": "zero_sum.core.optimal_pairs_are_saddle_points"
     },
     {
       "from": "zero_sum.core.saddle_point",
-      "to": "zero_sum.core.optimal_pairs_are_saddle_points"
-    },
-    {
-      "from": "zero_sum.loomis_route_compactness",
       "to": "zero_sum.core.optimal_pairs_are_saddle_points"
     },
     {
@@ -14224,7 +14220,11 @@
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window"
     },
     {
-      "from": "zero_sum.loomis_route_compactness",
+      "from": "core.simplex.bounded_by_value",
+      "to": "zero_sum.lam_mu_existence"
+    },
+    {
+      "from": "core.simplex.continuity",
       "to": "zero_sum.lam_mu_existence"
     },
     {
@@ -14240,10 +14240,6 @@
       "to": "zero_sum.lam_mu_existence"
     },
     {
-      "from": "zero_sum.mixed_matrix_payoff",
-      "to": "zero_sum.loomis_route_compactness"
-    },
-    {
       "from": "zero_sum.dantzig_proof_spine",
       "to": "zero_sum.lp.zero_sum_lp_bridge"
     },
@@ -14252,7 +14248,7 @@
       "to": "zero_sum.matrix_game"
     },
     {
-      "from": "zero_sum.loomis_route_compactness",
+      "from": "core.simplex.bounded_by_value",
       "to": "zero_sum.matrix_game_nash_equilibrium"
     },
     {
@@ -14328,11 +14324,15 @@
       "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
     },
     {
-      "from": "zero_sum.lam_mu_existence",
+      "from": "core.simplex.bounded_by_value",
       "to": "zero_sum.minimax.loomis_induction_proof.value_existence"
     },
     {
-      "from": "zero_sum.loomis_route_compactness",
+      "from": "core.simplex.continuity",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence"
+    },
+    {
+      "from": "zero_sum.lam_mu_existence",
       "to": "zero_sum.minimax.loomis_induction_proof.value_existence"
     },
     {
@@ -14376,6 +14376,18 @@
       "to": "zero_sum.minimax.loomis_theorem"
     },
     {
+      "from": "core.simplex.bounded_by_value",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof"
+    },
+    {
+      "from": "linear_programming.strong_duality",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof"
+    },
+    {
       "from": "zero_sum.examples.antisymmetric_matrix_game_value",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games"
     },
@@ -14384,11 +14396,19 @@
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability"
     },
     {
-      "from": "zero_sum.lam_mu_existence",
+      "from": "core.simplex.bounded_by_value",
       "to": "zero_sum.minimax.minimax_from_loomis"
     },
     {
-      "from": "zero_sum.loomis_route_compactness",
+      "from": "core.simplex.continuity",
+      "to": "zero_sum.minimax.minimax_from_loomis"
+    },
+    {
+      "from": "core.simplex.pure",
+      "to": "zero_sum.minimax.minimax_from_loomis"
+    },
+    {
+      "from": "zero_sum.lam_mu_existence",
       "to": "zero_sum.minimax.minimax_from_loomis"
     },
     {
