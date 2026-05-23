@@ -9,7 +9,7 @@
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Duality Gap In A Matrix Game</h1>\n<p>For a finite matrix game with bilinear payoff $g(x,y)=xAy$, define\n$$\n  L(y)=\\max_{x'\\in\\Delta(I)} g(x',y),\n  \\qquad\n  M(x)=\\min_{y'\\in\\Delta(J)} g(x,y').\n$$\nThe <strong>point-wise duality gap</strong> at $(x,y)$ is\n$$\n  W(x,y)=L(y)-M(x)\\ge 0.\n$$</p>\n<p>The gap is zero exactly when $x$ and $y$ are optimal strategies: $W(x,y)=0$\nsays the best payoff player I can obtain against $y$ equals the worst payoff\nplayer I can secure with $x$, so the two one-sided guarantees meet at the\nvalue.</p>\n<p>The Lean development uses the finite-mixed-strategy specialisation\n<code>L(y) = A.guarantee_II y</code> (maximum over pure rows) and\n<code>M(x) = A.guarantee_I x</code> (minimum over pure columns); the Loomis-style\norder-characterisation lemmas turn this into the full bilinear gap.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, proof of Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. L(y), M(x), and W(x,y)=L(y)-M(x) used for continuous fictitious play.</li>\n</ul>",
+  "body_html": "<h1>Duality Gap In A Matrix Game</h1>\n<p>For a finite matrix game with bilinear payoff $g(x,y)=xAy$, define\n$$\n  L(y)=\\max_{x'\\in\\Delta(I)} g(x',y),\n  \\qquad\n  M(x)=\\min_{y'\\in\\Delta(J)} g(x,y').\n$$\nThe <strong>point-wise duality gap</strong> at $(x,y)$ is\n$$\n  W(x,y)=L(y)-M(x)\\ge 0.\n$$</p>\n<p>The gap is zero exactly when $x$ and $y$ are optimal strategies: $W(x,y)=0$\nsays the best payoff player I can obtain against $y$ equals the worst payoff\nplayer I can secure with $x$, so the two one-sided guarantees meet at the\nvalue.</p>\n<p>The Lean development uses the finite-mixed-strategy specialisation\n<code>L(y) = A.guarantee_II y</code> (maximum over pure rows) and\n<code>M(x) = A.guarantee_I x</code> (minimum over pure columns); the Loomis-style\norder-characterisation lemmas turn this into the full bilinear gap.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, proof of Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. L(y), M(x), and W(x,y)=L(y)-M(x) used for continuous fictitious play.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -37,9 +37,9 @@
       "qualified_name": "MatrixGame.dualityGap",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/StrategicGame/MatrixGameNash.lean#L84",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/StrategicGame/MatrixGameNash.lean#L84",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

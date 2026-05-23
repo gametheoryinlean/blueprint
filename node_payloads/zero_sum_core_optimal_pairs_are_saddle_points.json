@@ -10,7 +10,7 @@
     "zero_sum.core"
   ],
   "body_html": "<h1>Optimal Pairs Are Exactly Saddle Points</h1>\n<p>For a finite matrix game $A$, the product $X(A)\\times Y(A)$ of\noptimal-strategy sets is exactly the set of saddle points of $A$.</p>",
-  "proof_html": "<p>Let $v=\\operatorname{val}(A)$. If $x\\in X(A)$ and $y\\in Y(A)$, then\n$xAy'\\ge v$ for every mixed column $y'$ and $x'Ay\\le v$ for every mixed row\n$x'$. Applying these inequalities to $y$ and $x$ gives $xAy=v$, so\n$$\n  x'Ay\\le xAy\\le xAy'\n$$\nfor all $x'$ and $y'$. Thus $(x,y)$ is a saddle point. Conversely, if\n$(x,y)$ is a saddle point, then taking $x'$ and $y'$ as pure strategies and\napplying the simplex-side order characterisations\n(<a class=\"node-ref\" data-node-id=\"zero_sum.loomis_route_compactness\" href=\"zero_sum_loomis_route_compactness.html\">Compactness and Continuity Scaffold for the Loomis Route</a>) gives\n$$\n  E_A(x,y)\\le \\operatorname{guarantee}_I(x), \\qquad\n  \\operatorname{guarantee}_{II}(y)\\le E_A(x,y).\n$$\nWeak duality <a class=\"node-ref\" data-node-id=\"zero_sum.maximin_le_minimax\" href=\"zero_sum_maximin_le_minimax.html\">Maximin is Bounded by Minimax</a> sandwiches both quantities\nbetween $v$ on the appropriate side, forcing equality. Hence $x\\in X(A)$ and\n$y\\in Y(A)$.</p>\n<p>The Lean formalisation factors through two characterisation iff-theorems\n(<code>mem_optimalRowStrategies_iff_E_ge</code> and <code>mem_optimalColumnStrategies_iff_E_le</code>),\nwhich then combine into <code>MatrixGame.optimal_pairs_iff_saddle_point</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(d)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. X(A) x Y(A) is the set of saddle points.</li>\n</ul>",
+  "proof_html": "<p>Let $v=\\operatorname{val}(A)$. If $x\\in X(A)$ and $y\\in Y(A)$, then\n$xAy'\\ge v$ for every mixed column $y'$ and $x'Ay\\le v$ for every mixed row\n$x'$. Applying these inequalities to $y$ and $x$ gives $xAy=v$, so\n$$\n  x'Ay\\le xAy\\le xAy'\n$$\nfor all $x'$ and $y'$. Thus $(x,y)$ is a saddle point. Conversely, if\n$(x,y)$ is a saddle point, then taking $x'$ and $y'$ as pure strategies and\napplying the simplex-side order characterisations\n(<a class=\"node-ref\" data-node-id=\"zero_sum.loomis_route_compactness\" href=\"zero_sum_loomis_route_compactness.html\">Compactness and Continuity Scaffold for the Loomis Route</a>) gives\n$$\n  E_A(x,y)\\le \\operatorname{guarantee}_I(x), \\qquad\n  \\operatorname{guarantee}_{II}(y)\\le E_A(x,y).\n$$\nWeak duality <a class=\"node-ref\" data-node-id=\"zero_sum.maximin_le_minimax\" href=\"zero_sum_maximin_le_minimax.html\">Maximin is Bounded by Minimax</a> sandwiches both quantities\nbetween $v$ on the appropriate side, forcing equality. Hence $x\\in X(A)$ and\n$y\\in Y(A)$.</p>\n<p>The Lean formalisation factors through two characterisation iff-theorems\n(<code>mem_optimalRowStrategies_iff_E_ge</code> and <code>mem_optimalColumnStrategies_iff_E_le</code>),\nwhich then combine into <code>MatrixGame.optimal_pairs_iff_saddle_point</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(d)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. X(A) x Y(A) is the set of saddle points.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.optimal_strategy_sets",
@@ -52,9 +52,9 @@
       "qualified_name": "MatrixGame.optimal_pairs_iff_saddle_point",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/StrategicGame/MatrixGameNash.lean#L308",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/StrategicGame/MatrixGameNash.lean#L308",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -65,9 +65,9 @@
       "qualified_name": "MatrixGame.mem_optimalRowStrategies_iff_E_ge",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/StrategicGame/MatrixGameNash.lean#L123",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/StrategicGame/MatrixGameNash.lean#L123",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -78,9 +78,9 @@
       "qualified_name": "MatrixGame.mem_optimalColumnStrategies_iff_E_le",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/StrategicGame/MatrixGameNash.lean#L165",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/StrategicGame/MatrixGameNash.lean#L165",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

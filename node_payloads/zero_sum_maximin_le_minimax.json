@@ -11,7 +11,7 @@
     "zero_sum.minimax"
   ],
   "body_html": "<h1>Maximin is Bounded by Minimax</h1>\n<p>For every finite matrix game,</p>\n<p>$$\\max_x \\min_j E_A(x,j) \\le \\min_y \\max_i E_A(i,y).$$</p>\n<p>This is the weak-duality inequality: player I's best guaranteed payoff cannot\nexceed player II's best upper bound on player I's payoff.</p>",
-  "proof_html": "<p>For every mixed row $x$ and mixed column $y$,\n$$\n  \\min_j E_A(x,j) \\le E_A(x,y) \\le \\max_i E_A(i,y).\n$$\nTaking the supremum over $x$ on the left preserves the first inequality against\nthe fixed upper bound $\\max_i E_A(i,y)$, so\n$$\n  \\max_x \\min_j E_A(x,j) \\le \\max_i E_A(i,y)\n$$\nfor every $y$. Taking the infimum over $y$ gives\n$$\n  \\max_x \\min_j E_A(x,j) \\le \\min_y \\max_i E_A(i,y).\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Lemmas 2.2.4 and 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. The lower value never exceeds the upper value.</li>\n</ul>",
+  "proof_html": "<p>For every mixed row $x$ and mixed column $y$,\n$$\n  \\min_j E_A(x,j) \\le E_A(x,y) \\le \\max_i E_A(i,y).\n$$\nTaking the supremum over $x$ on the left preserves the first inequality against\nthe fixed upper bound $\\max_i E_A(i,y)$, so\n$$\n  \\max_x \\min_j E_A(x,j) \\le \\max_i E_A(i,y)\n$$\nfor every $y$. Taking the infimum over $y$ gives\n$$\n  \\max_x \\min_j E_A(x,j) \\le \\min_y \\max_i E_A(i,y).\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Lemmas 2.2.4 and 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. The lower value never exceeds the upper value.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.maximin_minimax",
@@ -43,9 +43,9 @@
       "qualified_name": "MatrixGame.maximin_le_minimax",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/StrategicGame/Minimax.lean#L115",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/StrategicGame/Minimax.lean#L115",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

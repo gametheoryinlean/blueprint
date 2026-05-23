@@ -10,7 +10,7 @@
     "zero_sum.core"
   ],
   "body_html": "<h1>Maxmin Is At Most Minmax</h1>\n<blockquote>\n<p><strong>Scope.</strong> This is the <strong>abstract / pure-strategy</strong> weak duality on arbitrary\nstrategy sets. The <strong>finite mixed-strategy</strong> version with\n$\\Delta(I), \\Delta(J)$ lives in <a class=\"node-ref\" data-node-id=\"zero_sum.maximin_le_minimax\" href=\"zero_sum_maximin_le_minimax.html\">Maximin is Bounded by Minimax</a> and is\nformalised in Lean.</p>\n</blockquote>\n<p>For every zero-sum game, $\\underline v \\le \\overline v$.</p>",
-  "proof_html": "<p>For every pair $(i,j)$,\n$$\n  \\inf_{j' \\in J} g(i,j') \\le g(i,j) \\le \\sup_{i' \\in I} g(i',j).\n$$\nTaking the supremum over $i$ on the left and the infimum over $j$ on the right\ngives $\\underline v \\le \\overline v$. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lem. 2.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Weak duality for maxmin and minmax.</li>\n</ul>",
+  "proof_html": "<p>For every pair $(i,j)$,\n$$\n  \\inf_{j' \\in J} g(i,j') \\le g(i,j) \\le \\sup_{i' \\in I} g(i',j).\n$$\nTaking the supremum over $i$ on the left and the infimum over $j$ on the right\ngives $\\underline v \\le \\overline v$. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lem. 2.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Weak duality for maxmin and minmax.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.core.maxmin_minmax",

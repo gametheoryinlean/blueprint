@@ -10,7 +10,7 @@
     "zero_sum.core",
     "mixed_strategy"
   ],
-  "body_html": "<h1>Mixed Strategy Simplex</h1>\n<p>For a finite set $S$, the mixed strategy simplex $\\Delta(S)$ is the set of\nprobability vectors on $S$:\n$$\n  \\Delta(S)=\\{x \\in \\mathbb{R}^S : x_s \\ge 0 \\text{ for all } s,\\ \n  \\sum_{s \\in S} x_s = 1\\}.\n$$\nThe Lean library uses Mathlib's <code>stdSimplex ℝ S</code> for this set, with\n<code>stdSimplex.pure i</code> for the Dirac point mass at $i$ and <code>wsum x f</code> (a\ndefinitional abbreviation for the dot product <code>x ⬝ᵥ f</code>) for the weighted\nsum of a function $f \\colon S \\to \\mathbb{R}$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MechDesign.pdf</code>. Delta(S) is the simplex of probabilities on a finite set S.</li>\n</ul>",
+  "body_html": "<h1>Mixed Strategy Simplex</h1>\n<p>For a finite set $S$, the mixed strategy simplex $\\Delta(S)$ is the set of\nprobability vectors on $S$:\n$$\n  \\Delta(S)=\\{x \\in \\mathbb{R}^S : x_s \\ge 0 \\text{ for all } s,\\ \n  \\sum_{s \\in S} x_s = 1\\}.\n$$\nThe Lean library uses Mathlib's <code>stdSimplex ℝ S</code> for this set, with\n<code>stdSimplex.pure i</code> for the Dirac point mass at $i$ and <code>wsum x f</code> (a\ndefinitional abbreviation for the dot product <code>x ⬝ᵥ f</code>) for the weighted\nsum of a function $f \\colon S \\to \\mathbb{R}$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Delta(S) is the simplex of probabilities on a finite set S.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -61,9 +61,9 @@
       "qualified_name": "stdSimplex.pure",
       "module": "EconCSLib.Topology.Simplex",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/Topology/Simplex.lean#L25",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/Topology/Simplex.lean#L25",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -74,9 +74,9 @@
       "qualified_name": "wsum",
       "module": "EconCSLib.Core.Simplex",
       "repository_title": "EconCSLib",
-      "revision": "9853952a8c649eae46ba3c5019cb1ad2fb38cfd9",
-      "short_revision": "9853952",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/9853952a8c649eae46ba3c5019cb1ad2fb38cfd9/EconCSLib/Core/Simplex.lean#L82",
+      "revision": "f7a9f9929fe4497afe99acdd6e2dd92348970a8b",
+      "short_revision": "f7a9f99",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f7a9f9929fe4497afe99acdd6e2dd92348970a8b/EconCSLib/Core/Simplex.lean#L82",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
