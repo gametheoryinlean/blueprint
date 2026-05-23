@@ -9386,7 +9386,7 @@
       "id": "zero_sum.core.optimal_strategy_sets_are_polytopes",
       "title": "Optimal Strategy Sets Are Polytopes",
       "kind": "proposition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "optimal-strategy",
@@ -9396,6 +9396,22 @@
       "topics": [
         "zero_sum",
         "zero_sum.core"
+      ],
+      "lean_declarations": [
+        "MatrixGame.optimalRowSet",
+        "MatrixGame.optimalColumnSet",
+        "MatrixGame.image_optimalRowStrategies_eq",
+        "MatrixGame.image_optimalColumnStrategies_eq",
+        "MatrixGame.optimalRowSet_convex",
+        "MatrixGame.optimalRowSet_isClosed",
+        "MatrixGame.optimalRowSet_isCompact",
+        "MatrixGame.optimalRowSet_nonempty",
+        "MatrixGame.optimalColumnSet_convex",
+        "MatrixGame.optimalColumnSet_isClosed",
+        "MatrixGame.optimalColumnSet_isCompact",
+        "MatrixGame.optimalColumnSet_nonempty",
+        "MatrixGame.optimalRowStrategies_image_isPolytope",
+        "MatrixGame.optimalColumnStrategies_image_isPolytope"
       ],
       "topic": "zero_sum",
       "uses": [
