@@ -24,40 +24,40 @@
       "id": "core.preference.abstract_relation",
       "title": "Abstract Preference-Relation Axioms",
       "kind": "definition",
-      "status": "staged",
-      "href": "core/preference/core_preference_abstract_relation.html",
+      "status": "formalized",
+      "href": "core/core_preference_abstract_relation.html",
       "payload": "node_payloads/core_preference_abstract_relation.json"
     },
     {
       "id": "core.preference.indifferent",
       "title": "Indifference Relation",
       "kind": "definition",
-      "status": "staged",
-      "href": "core/preference/core_preference_indifferent.html",
+      "status": "formalized",
+      "href": "core/core_preference_indifferent.html",
       "payload": "node_payloads/core_preference_indifferent.json"
     },
     {
       "id": "core.preference.represents_preference",
       "title": "Utility Representation of a Preference",
       "kind": "definition",
-      "status": "staged",
-      "href": "core/preference/core_preference_represents_preference.html",
+      "status": "formalized",
+      "href": "core/core_preference_represents_preference.html",
       "payload": "node_payloads/core_preference_represents_preference.json"
     },
     {
       "id": "core.preference.strictly_preferred",
       "title": "Strict Preference Relation",
       "kind": "definition",
-      "status": "staged",
-      "href": "core/preference/core_preference_strictly_preferred.html",
+      "status": "formalized",
+      "href": "core/core_preference_strictly_preferred.html",
       "payload": "node_payloads/core_preference_strictly_preferred.json"
     },
     {
       "id": "core.preference.total_preorder",
       "title": "Total Preorder",
       "kind": "definition",
-      "status": "staged",
-      "href": "core/preference/core_preference_total_preorder.html",
+      "status": "formalized",
+      "href": "core/core_preference_total_preorder.html",
       "payload": "node_payloads/core_preference_total_preorder.json"
     }
   ],
@@ -75,11 +75,11 @@
   ],
   "boundary_topics": [
     {
-      "id": "core.argmax",
-      "title": "Core.Argmax",
-      "href": "core/argmax/index.html",
+      "id": "core",
+      "title": "Core",
+      "href": "core/index.html",
       "role": "dependent",
-      "node_count": 1
+      "node_count": 12
     },
     {
       "id": "utility",
@@ -92,9 +92,9 @@
   "boundary_edges": [
     {
       "from": "core.preference.total_preorder",
-      "to": "topic:core.argmax",
+      "to": "topic:core",
       "kind": "boundary_dependent",
-      "topic": "core.argmax",
+      "topic": "core",
       "count": 1
     },
     {
