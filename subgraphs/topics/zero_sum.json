@@ -216,7 +216,7 @@
       "id": "zero_sum.core.strong_complementarity",
       "title": "Strong Complementarity",
       "kind": "proposition",
-      "status": "staged",
+      "status": "formalized",
       "href": "zero_sum/zero_sum_core_strong_complementarity.html",
       "payload": "node_payloads/zero_sum_core_strong_complementarity.json"
     },
@@ -934,6 +934,11 @@
     },
     {
       "from": "zero_sum.core.support_complementarity",
+      "to": "zero_sum.core.strong_complementarity",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
       "to": "zero_sum.core.strong_complementarity",
       "kind": "uses"
     },
@@ -2165,8 +2170,7 @@
         "theorem": 4
       },
       "status_counts": {
-        "formalized": 22,
-        "staged": 1
+        "formalized": 23
       },
       "href": "zero_sum/core/index.html",
       "children": []
@@ -2302,7 +2306,7 @@
       "from": "topic:zero_sum.minimax",
       "to": "topic:zero_sum.core",
       "kind": "topic_dependency",
-      "count": 8
+      "count": 9
     },
     {
       "from": "topic:zero_sum.minimax",
@@ -2513,7 +2517,7 @@
       "to": "topic:zero_sum.core",
       "kind": "boundary_dependency",
       "topic": "strategic_games.equilibrium",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:zero_sum.core",

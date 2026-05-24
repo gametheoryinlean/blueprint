@@ -806,9 +806,9 @@
     <span class="theorem_thmcaption thm-caption">Theorem</span>
     <span class="theorem_thmtitle thm-title">Strong Complementarity For Linear Programming</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-linear_programming-2e-strong_complementarity">#</a>
@@ -844,11 +844,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L65"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_row</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d55796a25605ae23990a2bb2d85b8c5aca74b94f/EconCSLib/LinearProgramming/StrongComplementarity.lean#L65"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_row</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+            EconCSLib @ d55796a, EconCSLib.LinearProgramming.StrongComplementarity
           </span>
           
           
@@ -856,11 +856,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L114"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_col</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d55796a25605ae23990a2bb2d85b8c5aca74b94f/EconCSLib/LinearProgramming/StrongComplementarity.lean#L114"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_col</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+            EconCSLib @ d55796a, EconCSLib.LinearProgramming.StrongComplementarity
           </span>
           
           
@@ -868,11 +868,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L266"><code>EconCSLib.LinearProgramming.exists_row_strict_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d55796a25605ae23990a2bb2d85b8c5aca74b94f/EconCSLib/LinearProgramming/StrongComplementarity.lean#L266"><code>EconCSLib.LinearProgramming.exists_row_strict_pair</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+            EconCSLib @ d55796a, EconCSLib.LinearProgramming.StrongComplementarity
           </span>
           
           
@@ -880,11 +880,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L533"><code>EconCSLib.LinearProgramming.exists_col_strict_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d55796a25605ae23990a2bb2d85b8c5aca74b94f/EconCSLib/LinearProgramming/StrongComplementarity.lean#L533"><code>EconCSLib.LinearProgramming.exists_col_strict_pair</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+            EconCSLib @ d55796a, EconCSLib.LinearProgramming.StrongComplementarity
           </span>
           
           
@@ -892,11 +892,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L748"><code>EconCSLib.LinearProgramming.exists_strong_complementary_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d55796a25605ae23990a2bb2d85b8c5aca74b94f/EconCSLib/LinearProgramming/StrongComplementarity.lean#L748"><code>EconCSLib.LinearProgramming.exists_strong_complementary_pair</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+            EconCSLib @ d55796a, EconCSLib.LinearProgramming.StrongComplementarity
           </span>
           
           
@@ -939,7 +939,20 @@ satisfying the strict biconditional:</p>
 <li>for every column $j$: $(c_j - (u^*)^{\mathsf T} A_j) &gt; 0 \iff x^*_j = 0$.</li>
 </ul>
 <p>Equivalently, <strong>exactly one</strong> of each complementary pair is strictly
-positive in the strong pair.</p>
+positive in the strong pair. Combined with weak CS, this is the same as
+the "strict sum" form</p>
+<p>$$
+  (A_i x^* - b_i) + u^*_i &gt; 0
+  \quad \text{and} \quad
+  x^*_j + (c_j - (u^*)^{\mathsf T} A_j) &gt; 0
+  \quad \text{for every } i, j,
+$$</p>
+<p>which is the shape stated in the Lean theorem
+<code>EconCSLib.LinearProgramming.exists_strong_complementary_pair</code>. The Lean
+theorem is parametrized by an explicit optimal pair $(x_0, u_0)$ with
+matching value $v$ (rather than "P and D feasible") to keep the lemma
+reusable; the "feasibility" hypothesis form follows by composing with
+<a class="node-ref" data-node-id="linear_programming.strong_duality" href="linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1020,10 +1033,12 @@ biconditional. $\square$</p>
 </ul>
 <h2>Consequences</h2>
 <ul>
-<li><strong>Matrix-game strong complementarity</strong>
-  (<a class="node-ref" data-node-id="zero_sum.core.strong_complementarity" href="../zero_sum/core/zero_sum_core_strong_complementarity.html">Strong Complementarity</a>): in a finite zero-sum
-  matrix game, there is an optimal pair $(x^*, y^*)$ with the strict
-  biconditional <code>x*_i &gt; 0 ↔ row i is a best response to y*</code> and dually.</li>
+<li><strong>Matrix-game strong complementarity</strong> (downstream node
+  <code>zero_sum.core.strong_complementarity</code>, [MFoGT Prop. 2.4.1(c)]): in a
+  finite zero-sum matrix game, there is an optimal pair $(x^*, y^*)$
+  with the strict biconditional <code>x*_i &gt; 0 ↔ row i is a best response to y*</code>
+  and dually. Obtained by applying this theorem to the matrix-game LP
+  (after shifting payoffs to be positive and rescaling).</li>
 </ul>
 <h2>References</h2>
 <ul>
