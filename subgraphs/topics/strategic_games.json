@@ -4,20 +4,20 @@
     "title": "Strategic Games",
     "href": "strategic_games/index.html",
     "parent": null,
-    "node_count": 12,
+    "node_count": 11,
     "descendant_node_count": 131
   },
   "counts": {
-    "internal_nodes": 12,
+    "internal_nodes": 11,
     "descendant_nodes": 131,
     "child_topics": 16,
-    "non_proof_plan_nodes": 12,
+    "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 11,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 24,
-    "visible_nodes_with_selected_proof_plans": 24
+    "visible_nodes_without_proof_plans": 23,
+    "visible_nodes_with_selected_proof_plans": 23
   },
   "nodes": [
     {
@@ -43,14 +43,6 @@
       "status": "admitted",
       "href": "strategic_games/strategic_games_dominant_implies_nash.html",
       "payload": "node_payloads/strategic_games_dominant_implies_nash.json"
-    },
-    {
-      "id": "strategic_games.dynamics.stable_game_framework",
-      "title": "Stable Game Framework (Hofbauer–Sandholm)",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/strategic_games_dynamics_stable_game_framework.html",
-      "payload": "node_payloads/strategic_games_dynamics_stable_game_framework.json"
     },
     {
       "id": "strategic_games.nash_equilibrium",
@@ -318,20 +310,6 @@
       "to": "fixed_point.kakutani_from_two_player_nash",
       "kind": "boundary_dependency",
       "topic": "strategic_games.equilibrium",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.population",
-      "to": "strategic_games.dynamics.stable_game_framework",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.population",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.potential",
-      "to": "strategic_games.dynamics.stable_game_framework",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.potential",
       "count": 1
     },
     {
@@ -665,22 +643,10 @@
       "count": 1
     },
     {
-      "id": "deferred",
-      "title": "deferred",
-      "href": "keywords/deferred.html",
-      "count": 1
-    },
-    {
       "id": "dominance",
       "title": "dominance",
       "href": "keywords/dominance.html",
       "count": 4
-    },
-    {
-      "id": "dynamics",
-      "title": "dynamics",
-      "href": "keywords/dynamics.html",
-      "count": 1
     },
     {
       "id": "equilibrium",
@@ -713,21 +679,9 @@
       "count": 1
     },
     {
-      "id": "lyapunov",
-      "title": "lyapunov",
-      "href": "keywords/lyapunov.html",
-      "count": 1
-    },
-    {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 1
-    },
-    {
-      "id": "potential-game",
-      "title": "potential-game",
-      "href": "keywords/potential-game.html",
       "count": 1
     },
     {
@@ -740,13 +694,7 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 11
-    },
-    {
-      "id": "zero-sum",
-      "title": "zero-sum",
-      "href": "keywords/zero-sum.html",
-      "count": 1
+      "count": 10
     }
   ],
   "proof_plan_attachments": [],
@@ -1176,10 +1124,16 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.potential",
+      "from": "topic:strategic_games.population",
       "to": "topic:strategic_games.dynamics",
       "kind": "topic_dependency",
       "count": 1
+    },
+    {
+      "from": "topic:strategic_games.potential",
+      "to": "topic:strategic_games.dynamics",
+      "kind": "topic_dependency",
+      "count": 2
     },
     {
       "from": "topic:strategic_games.variational",

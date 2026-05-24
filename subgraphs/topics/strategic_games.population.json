@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -62,8 +62,15 @@
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
-      "role": "dependency_and_dependent",
+      "role": "dependency",
       "node_count": 131
+    },
+    {
+      "id": "strategic_games.dynamics",
+      "title": "Strategic Games.Dynamics",
+      "href": "strategic_games/dynamics/index.html",
+      "role": "dependent",
+      "node_count": 5
     }
   ],
   "boundary_edges": [
@@ -76,9 +83,9 @@
     },
     {
       "from": "strategic_games.population.population_game",
-      "to": "topic:strategic_games",
+      "to": "topic:strategic_games.dynamics",
       "kind": "boundary_dependent",
-      "topic": "strategic_games",
+      "topic": "strategic_games.dynamics",
       "count": 1
     }
   ],

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolutionarily Stable Strategy — EconCSLib Knowledge Blueprint</title>
+  <title>Stable Game Framework (Hofbauer–Sandholm) — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -183,11 +183,11 @@
           <a href="../../strategic_games/correlated/index.html">Correlated</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/dominance/index.html">Dominance</a>
-        </li><li class="topic-leaf">
+        </li><li class="topic-leaf topic-active">
           <a href="../../strategic_games/dynamics/index.html">Dynamics</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/equilibrium/index.html">Equilibrium</a>
-        </li><li class="topic-leaf topic-active">
+        </li><li class="topic-leaf">
           <a href="../../strategic_games/evolution/index.html">Evolution</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/learning/index.html">Learning</a>
@@ -793,22 +793,20 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-strategic_games-2e-evolution-2e-evolutionarily_stable_strategy">
-  <header class="definition_thmheading thm-heading">
-    <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Evolutionarily Stable Strategy</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-strategic_games-2e-dynamics-2e-stable_game_framework">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Stable Game Framework (Hofbauer–Sandholm)</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-definition">definition</span>
+      <span class="badge kind-theorem">theorem</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-strategic_games-2e-evolution-2e-evolutionarily_stable_strategy">#</a>
+      <a class="permalink" href="#node-strategic_games-2e-dynamics-2e-stable_game_framework">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -819,7 +817,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../core/strategic_games_core_symmetric_game.html">Symmetric Game</a></li>
+        <li><a href="../population/strategic_games_population_population_game.html">Population Game</a></li>
+        
+        <li><a href="../potential/strategic_games_potential_potential_game.html">Potential Game</a></li>
         
       </ul>
     </div>
@@ -827,60 +827,96 @@
   
 
   
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/974ab8bb5214198f59ffe35f874bde4ea6aea1b3/EconCSLib/StrategicGame/ESS.lean#L32"><code>IsESS</code></a>
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ 974ab8b, EconCSLib.StrategicGame.ESS
-          </span>
-          
-          
-        </li>
-        
-        <li>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/974ab8bb5214198f59ffe35f874bde4ea6aea1b3/EconCSLib/StrategicGame/ESS.lean#L39"><code>IsNSS</code></a>
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ 974ab8b, EconCSLib.StrategicGame.ESS
-          </span>
-          
-          
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules: <code>EconCSLib.StrategicGame.ESS</code></p>
-      
-    </div>
-  </div>
-  
 
-  <div class="definition_thmcontent thm-content body">
-    <h1>Evolutionarily Stable Strategy</h1>
-<p>For a symmetric two-player game with payoff matrix $A$, a mixed type
-$p\in\Delta(K)$ is an evolutionarily stable strategy if every mutant
-$q\ne p$ has a threshold $\epsilon(q)&gt;0$ such that, for all
-$0&lt;\epsilon\le\epsilon(q)$,
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Stable Game Framework (Hofbauer–Sandholm)</h1>
+<blockquote>
+<p><strong>Status: DEFERRED — do not implement.</strong>
+Parked pending sufficient Mathlib infrastructure (differential
+inclusions, LaSalle invariance principle, ω-limit sets for
+continuous-time set-valued dynamics). Tracked as
+<a href="https://github.com/gametheoryinlean/EconCSLib/issues/41">gametheoryinlean/EconCSLib#41</a>.</p>
+</blockquote>
+<h2>Statement</h2>
+<p>Let $F : X \to \mathbb{R}^n$ be the payoff field of a population game over a
+compact convex strategy space $X = \prod_i \Delta(S_i)$. The game is <strong>stable</strong>
+if
 $$
-  pA((1-\epsilon)p+\epsilon q)
-  &gt;
-  qA((1-\epsilon)p+\epsilon q).
-$$</p>
-<p>Equivalently, $p$ satisfies the symmetric Nash condition
-$pAp\ge qAp$ for every $q$, and when equality holds it satisfies the second-order
-stability condition $pAq&gt;qAq$.</p>
+  (x - y) \cdot (F(x) - F(y)) \le 0, \qquad \forall x, y \in X.
+$$
+It is <strong>strictly stable</strong> if equality forces $x = y$, and <strong>null stable</strong> if
+equality always holds.</p>
+<p><strong>Hofbauer–Sandholm (2009).</strong> Stable games admit a Lyapunov function for the
+best response dynamics
+$$
+  \dot x_t \in BR(x_t) - x_t,
+$$
+namely the <strong>maximum payoff gain</strong>
+$$
+  G(x) := \max_{y \in X} (y - x) \cdot F(x) \;\ge\; 0,
+$$
+which satisfies $\dot G(x_t) \le -G(x_t)$ wherever $F$ is sufficiently regular,
+and vanishes exactly on the Nash equilibrium set. By LaSalle's invariance
+principle, every solution converges to the set of Nash equilibria.</p>
+<h2>Why this unifies potential and zero-sum</h2>
+<ul>
+<li><strong>Potential games</strong> are stable with $G(x) = \max_y \Phi(y) - \Phi(x)$, where
+  $\Phi$ is the (concave) potential. See
+  [[strategic_games.potential.potential_game]] and
+  [[strategic_games.dynamics.potential_replicator_lyapunov]].</li>
+<li><strong>Two-player zero-sum games</strong>, viewed as a single population game over the
+  product simplex with $F = (Ay, -A^T x)$, are <strong>null stable</strong>. The Lyapunov
+  $G$ specialises to the duality gap
+  $$
+    G(x, y) = \max_i (Ay)_i - \min_j (x^T A)_j,
+  $$
+  recovering Hofbauer (1995) for continuous-time fictitious play; see
+  [[zero_sum.fictitious_play.continuous_fictitious_play_gap]].</li>
+</ul>
+<p>The discrete-time fictitious play convergence
+([[zero_sum.fictitious_play.fictitious_play_convergence]]) is <strong>not</strong> a direct
+consequence — the discrete duality gap is non-monotone — and continues to
+require Robinson's combinatorial argument
+([[zero_sum.fictitious_play.robinson_admissible_lemma]]).</p>
+<h2>Why deferred</h2>
+<p>Formalising the continuous-time half of the framework requires:</p>
+<ol>
+<li><strong>Differential inclusions</strong> (set-valued ODEs with upper-semicontinuous RHS)
+   — Filippov / Aubin–Cellina theory. Essentially absent from Mathlib.</li>
+<li><strong>LaSalle invariance principle</strong> for continuous-time dynamics on compact
+   manifolds. Absent from Mathlib.</li>
+<li><strong>ω-limit set machinery</strong> for set-valued flows on convex compact subsets of
+   $\mathbb{R}^n$. Mathlib has <code>Mathlib.Dynamics.OmegaLimit</code> for single-valued
+   topological dynamics; would need extension.</li>
+<li><strong>Sub-differential calculus</strong> on the simplex for the directional derivative
+   $\dot G$ along BR trajectories.</li>
+</ol>
+<p>Each is a multi-month project on its own. The full chain is at the scale of a
+PhD-grade formalisation effort and is out of scope for the current focus on
+classical zero-sum and matrix-game results.</p>
+<h2>What we keep instead</h2>
+<p>The current library treats potential and zero-sum dynamics as two separate
+classical instances:</p>
+<ul>
+<li><strong>Zero-sum.</strong> Robinson 1951 admissible-sequence proof in
+  [[zero_sum.fictitious_play.robinson_admissible_lemma]].</li>
+<li><strong>Potential.</strong> Monderer–Shapley-style discrete monotonicity of $\Phi$, with
+  the Lyapunov calculation already drafted in
+  [[strategic_games.dynamics.potential_replicator_lyapunov]].</li>
+</ul>
+<p>The unifying picture is recorded here for blueprint readers without taking on
+the formalisation cost.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Chapter 5, Def. 5.5.7] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Evolutionarily stable strategy in a symmetric two-player game.</li>
+<li>[Hofbauer–Sandholm 2009] J. Hofbauer and W. H. Sandholm, "Stable games and
+  their dynamics", <em>Econometrica</em> 77(5), 1665–1683, 2009.</li>
+<li>[Hofbauer 1995] J. Hofbauer, "Stability for the best response dynamics",
+  preprint, University of Vienna, 1995.</li>
+<li>[Sandholm 2010] W. H. Sandholm, <em>Population Games and Evolutionary Dynamics</em>,
+  MIT Press, 2010, Chapters 3 and 7.</li>
+<li>[Monderer–Shapley 1996] D. Monderer and L. S. Shapley, "Fictitious play
+  property for games with identical interests", <em>Journal of Economic Theory</em>
+  68(1), 258–265, 1996.</li>
 </ul>
     
   </div>
@@ -888,21 +924,23 @@ stability condition $pAq&gt;qAq$.</p>
   
 
   
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
+
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
     <ul>
       
-      <li><a href="strategic_games_evolution_ess_uniform_invasion_barrier.html">ESS Uniform Invasion Barrier</a></li>
+      <li><a href="../../strategic_games/dynamics/index.html">Strategic Games.Dynamics</a></li>
+      
+      <li><a href="../../strategic_games/potential/index.html">Strategic Games.Potential</a></li>
       
     </ul>
   </section>
   
 
   
-
-  
   <footer class="tags">
-    <span class="tag">strategic-game</span><span class="tag">evolution</span><span class="tag">ess</span>
+    <span class="tag">strategic-game</span><span class="tag">dynamics</span><span class="tag">potential-game</span><span class="tag">zero-sum</span><span class="tag">lyapunov</span><span class="tag">deferred</span>
   </footer>
   
 </article>
