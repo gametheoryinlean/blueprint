@@ -816,6 +816,8 @@
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
       
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
+      
     </div>
   </header>
 
@@ -827,28 +829,211 @@
         
         <li><a href="linear_programming_strong_duality.html">Strong Duality For Linear Programming</a></li>
         
+        <li><a href="../linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a></li>
+        
       </ul>
     </div>
   </div>
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L65"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_row</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L114"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_col</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L266"><code>EconCSLib.LinearProgramming.exists_row_strict_pair</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L533"><code>EconCSLib.LinearProgramming.exists_col_strict_pair</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1953d3e010cbb454239b4aedc7ae3b1e8e8b7789/EconCSLib/LinearProgramming/StrongComplementarity.lean#L748"><code>EconCSLib.LinearProgramming.exists_strong_complementary_pair</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 1953d3e, EconCSLib.LinearProgramming.StrongComplementarity
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>EconCSLib.LinearProgramming.StrongComplementarity</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Strong Complementarity For Linear Programming</h1>
-<p>If a primal linear program and its dual are feasible, then there exist optimal
-solutions $(x,u)$ satisfying strict complementary slackness:
+<h2>Setup</h2>
+<p>For the standard-form primal/dual pair over a linearly ordered field
+$\mathbb{K}$:</p>
+<ul>
+<li><strong>Primal</strong> $\mathrm{P}$: $\min \langle c, x\rangle$ subject to $Ax \ge b$ and $x \ge 0$.</li>
+<li><strong>Dual</strong> $\mathrm{D}$: $\max \langle u, b\rangle$ subject to $u^{\mathsf T} A \le c$ and $u \ge 0$.</li>
+</ul>
+<h2>Statements</h2>
+<h3>Weak complementary slackness</h3>
+<p>For <strong>every</strong> optimal primal–dual pair $(x, u)$ (i.e. $x$ primal-feasible,
+$u$ dual-feasible, $\langle c, x\rangle = \langle u, b\rangle$), the
+componentwise products vanish:</p>
+<ul>
+<li>for every row $i$: $u_i \cdot (A_i x - b_i) = 0$;</li>
+<li>for every column $j$: $x_j \cdot (c_j - u^{\mathsf T} A_j) = 0$.</li>
+</ul>
+<p>Equivalently, strict primal slack at row $i$ forces $u_i = 0$, and strict
+dual slack at column $j$ forces $x_j = 0$.</p>
+<h3>Strong complementary slackness</h3>
+<p>If both $\mathrm{P}$ and $\mathrm{D}$ are feasible (so that strong duality
+gives a matching optimal pair), then there <strong>exist</strong> optimal $(x^*, u^*)$
+satisfying the strict biconditional:</p>
+<ul>
+<li>for every row $i$: $(A_i x^* - b_i) &gt; 0 \iff u^*_i = 0$;</li>
+<li>for every column $j$: $(c_j - (u^*)^{\mathsf T} A_j) &gt; 0 \iff x^*_j = 0$.</li>
+</ul>
+<p>Equivalently, <strong>exactly one</strong> of each complementary pair is strictly
+positive in the strong pair.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <h3>Weak CS</h3>
+<p>Take any optimal pair $(x, u)$. Compute
 $$
-  A_i x-b_i&gt;0 \Longleftrightarrow u_i=0
+  \sum_i u_i\,(A_i x - b_i) + \sum_j x_j\,(c_j - u^{\mathsf T} A_j)
+   = \langle u, Ax\rangle - \langle u, b\rangle
+     + \langle c, x\rangle - \langle u^{\mathsf T} A, x\rangle
+   = \langle c, x\rangle - \langle u, b\rangle = 0,
 $$
-and
-$$
-  c_j-uA_j&gt;0 \Longleftrightarrow x_j=0.
+using bilinearity (the cross terms cancel) and primal/dual optimality.
+Each summand on the left is $\ge 0$ (a nonneg variable times a nonneg
+slack), so each is exactly $0$.</p>
+<h3>Strong CS</h3>
+<p>The proof has two parts: a <strong>per-index dichotomy</strong> (one optimal pair
+strictly positive on the chosen complementary pair) and an <strong>averaging
+step</strong> that combines $|I| + n$ per-index pairs.</p>
+<p><strong>Per-row dichotomy.</strong> Fix $i_0 \in I$. Consider the sub-LP</p>
+<p>$$
+  \alpha_{i_0} \;:=\; \sup\{\,(Ax - b)_{i_0} \;:\; Ax \ge b,\; x \ge 0,\; \langle c, x\rangle \le v^*\,\}
 $$</p>
+<p>where $v^*$ is the common primal–dual optimum. Either:</p>
+<ul>
+<li><strong>Case A</strong>: $\alpha_{i_0} &gt; 0$. Then there is a primal-optimal $x^*$
+  with $(A x^* - b)_{i_0} &gt; 0$. Pair $(x^*, u^0)$ with any dual-optimal
+  $u^0$.</li>
+<li><strong>Case B</strong>: $\alpha_{i_0} = 0$. Then $(Ax-b)_{i_0} \le 0$ on every
+  primal-optimal $x$. Apply
+  <a class="node-ref" data-node-id="linear_algebra.farkas_lemma" href="../linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a> to the system ${Ax \ge b,
+  x \ge 0, -\langle c, x\rangle \ge -v^*}$ with the implied bound
+  $(Ax - b)_{i_0} \le 0$. The Farkas certificate produces multipliers
+  $(\mu, \nu, \lambda) \ge 0$ with
+  $$
+    (\mu + e_{i_0})^{\mathsf T} A \le \lambda \cdot c, \quad
+    \langle \mu, b\rangle + b_{i_0} \ge \lambda \cdot v^*.
+  $$
+  If $\lambda &gt; 0$, set $u'' := (\mu + e_{i_0})/\lambda$: dual-feasible
+  with $u''_{i_0} \ge 1/\lambda &gt; 0$ and $\langle u'', b\rangle \ge v^*$.
+  If $\lambda = 0$, set $u' := u^0 + (\mu + e_{i_0})$ for any
+  dual-optimal $u^0$: dual-feasible with $u'_{i_0} \ge 1 &gt; 0$ and
+  $\langle u', b\rangle = v^* + \langle \mu, b\rangle + b_{i_0} \ge v^*$.
+  In each case, combined with weak duality the new $u$ is dual-optimal,
+  and pair $(x^0, u)$ with any primal-optimal $x^0$ is the desired pair.</li>
+</ul>
+<p><strong>Per-column dichotomy.</strong> Symmetric, exchanging roles of $x$ and $u$.</p>
+<p><strong>Averaging.</strong> Take the witness pairs $(x^{(i)}, u^{(i)})$ for each
+$i \in I$ and $(x^{(j)}, u^{(j)})$ for each $j \in \mathrm{Fin}\,n$ — a
+total of $|I| + n$ optimal pairs. Define</p>
+<p>$$
+  x^* := \frac{1}{|I| + n} \sum_{\text{indices}} x^{(\cdot)}, \qquad
+  u^* := \frac{1}{|I| + n} \sum_{\text{indices}} u^{(\cdot)}.
+$$</p>
+<p>Each set of optimal primal (resp. dual) solutions is convex (a polytope
+in the standard-form LP), so $x^*, u^*$ are optimal. For any fixed row
+$k$, at index $i_0 = k$ we picked a pair with
+$(Ax^{(k)} - b)_k + u^{(k)}_k &gt; 0$. Hence</p>
+<p>$$
+  (A x^* - b)_k + u^*_k \;=\; \frac{1}{|I|+n} \sum (A x^{(\cdot)} - b)_k + u^{(\cdot)}_k
+  \;\ge\; \frac{1}{|I|+n} \cdot \big((A x^{(k)} - b)_k + u^{(k)}_k\big) &gt; 0,
+$$</p>
+<p>with the other terms nonneg. Symmetric for columns. So $(x^*, u^*)$ is
+strictly complementary on every row and column pair. By weak CS, exactly
+one side of each complementary pair is positive — the desired
+biconditional. $\square$</p>
+<h2>Remarks</h2>
+<ul>
+<li>The proof is purely algebraic and constructive. The dual certificates
+  in the per-index step come from
+  <a class="node-ref" data-node-id="linear_algebra.farkas_lemma" href="../linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a> (which in turn rests on
+  Fourier–Motzkin elimination, in <code>EconCSLib.LinearAlgebra</code>).</li>
+<li>Works over any linearly ordered field — same generality as
+  <a class="node-ref" data-node-id="linear_programming.strong_duality" href="linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>.</li>
+<li>The weak-CS direction (<code>exactly one of each pair is positive</code>) is
+  immediate; the strong content is the <em>existence of a pair where
+  every complementary pair has at least one strict side</em>.</li>
+</ul>
+<h2>Consequences</h2>
+<ul>
+<li><strong>Matrix-game strong complementarity</strong>
+  (<a class="node-ref" data-node-id="zero_sum.core.strong_complementarity" href="../zero_sum/core/zero_sum_core_strong_complementarity.html">Strong Complementarity</a>): in a finite zero-sum
+  matrix game, there is an optimal pair $(x^*, y^*)$ with the strict
+  biconditional <code>x*_i &gt; 0 ↔ row i is a best response to y*</code> and dually.</li>
+</ul>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Section 2.8, Exercise 11] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strong complementarity for feasible primal-dual linear programs.</li>
+<li>[MFoGT, Section 2.8, Exercise 11] Laraki, Renault, and Sorin,
+  <em>Mathematical Foundations of Game Theory</em>,
+  <code>references/MathFoundationsGameTheory.pdf</code>. Strong complementarity
+  for feasible primal-dual linear programs.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
@@ -865,6 +1050,17 @@ $$</p>
   </section>
   
 
+  
+  <section class="topic-memberships">
+    <h2>Also in</h2>
+    <ul>
+      
+      <li><a href="../linear_programming/index.html">Linear Programming</a></li>
+      
+      <li><a href="../linear_programming/duality/index.html">Linear Programming.Duality</a></li>
+      
+    </ul>
+  </section>
   
 
   

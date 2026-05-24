@@ -1705,6 +1705,7 @@
         "linear_algebra.theorem_of_alternative"
       ],
       "used_by": [
+        "linear_programming.strong_complementarity",
         "linear_programming.strong_duality"
       ]
     },
@@ -1786,8 +1787,21 @@
         "duality",
         "complementarity"
       ],
+      "primary_topic": "linear_programming",
+      "topics": [
+        "linear_programming",
+        "linear_programming.duality"
+      ],
+      "lean_declarations": [
+        "EconCSLib.LinearProgramming.lp_weak_complementarity_row",
+        "EconCSLib.LinearProgramming.lp_weak_complementarity_col",
+        "EconCSLib.LinearProgramming.exists_row_strict_pair",
+        "EconCSLib.LinearProgramming.exists_col_strict_pair",
+        "EconCSLib.LinearProgramming.exists_strong_complementary_pair"
+      ],
       "topic": "linear_programming",
       "uses": [
+        "linear_algebra.farkas_lemma",
         "linear_programming.strong_duality"
       ],
       "used_by": [
@@ -9501,6 +9515,9 @@
         "zero_sum",
         "zero_sum.core"
       ],
+      "lean_declarations": [
+        "MatrixGame.exists_strong_complementary_pair"
+      ],
       "topic": "zero_sum",
       "uses": [
         "linear_programming.strong_complementarity",
@@ -11654,6 +11671,10 @@
     {
       "from": "linear_algebra.theorem_of_alternative.fourier_motzkin",
       "to": "linear_algebra.theorem_of_alternative"
+    },
+    {
+      "from": "linear_algebra.farkas_lemma",
+      "to": "linear_programming.strong_complementarity"
     },
     {
       "from": "linear_programming.strong_duality",

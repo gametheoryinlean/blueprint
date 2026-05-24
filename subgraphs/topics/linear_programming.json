@@ -63,6 +63,13 @@
   "boundary_edges": [
     {
       "from": "topic:linear_algebra",
+      "to": "linear_programming.strong_complementarity",
+      "kind": "boundary_dependency",
+      "topic": "linear_algebra",
+      "count": 1
+    },
+    {
+      "from": "topic:linear_algebra",
       "to": "linear_programming.strong_duality",
       "kind": "boundary_dependency",
       "topic": "linear_algebra",
@@ -113,13 +120,13 @@
       "title": "Linear Programming.Duality",
       "depth": 2,
       "parent": "linear_programming",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "node_count": 2,
+      "direct_node_count": 2,
       "kind_counts": {
-        "theorem": 1
+        "theorem": 2
       },
       "status_counts": {
-        "staged": 1
+        "staged": 2
       },
       "href": "linear_programming/duality/index.html",
       "children": []
@@ -140,6 +147,20 @@
       "href": "linear_algebra/alternatives/index.html",
       "role": "dependency",
       "node_count": 3
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependent",
+      "node_count": 84
+    },
+    {
+      "id": "zero_sum.core",
+      "title": "Zero Sum.Core",
+      "href": "zero_sum/core/index.html",
+      "role": "dependent",
+      "node_count": 23
     }
   ],
   "child_boundary_edges": [
@@ -148,13 +169,27 @@
       "to": "topic:linear_programming.duality",
       "kind": "boundary_dependency",
       "topic": "linear_algebra",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:linear_algebra.alternatives",
       "to": "topic:linear_programming.duality",
       "kind": "boundary_dependency",
       "topic": "linear_algebra.alternatives",
+      "count": 2
+    },
+    {
+      "from": "topic:linear_programming.duality",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:linear_programming.duality",
+      "to": "topic:zero_sum.core",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.core",
       "count": 1
     }
   ]
