@@ -51,6 +51,20 @@
             <summary><a href="../core/index.html">Core</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../core/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_algebra">
+            <summary><a href="../core/linear_algebra/index.html">Linear Algebra</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_algebra/alternatives/index.html">Alternatives</a>
+        </li></ul>
+          </details>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_programming">
+            <summary><a href="../core/linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="../core/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -91,24 +105,6 @@
         </li>
       
         <li class="topic-parent">
-          <details data-topic-root="linear_algebra">
-            <summary><a href="../linear_algebra/index.html">Linear Algebra</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
-          <details data-topic-root="linear_programming">
-            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_programming/duality/index.html">Duality</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
           <details data-topic-root="mechanism_design">
             <summary><a href="../mechanism_design/index.html">Mechanism Design</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -132,9 +128,7 @@
         <li class="topic-parent">
           <details data-topic-root="social_choice">
             <summary><a href="../social_choice/index.html">Social Choice</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../social_choice/core/index.html">Core</a>
-        </li><li class="topic-parent">
+            <ul class="topic-children"><li class="topic-parent">
           <details data-topic-root="social_choice.fair_division">
             <summary><a href="../social_choice/fair_division/index.html">Fair Division</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -803,9 +797,9 @@
 
 <div class="topic-meta">
   <div class="topic-stats">
-    <span class="topic-node-count">13 nodes</span>
+    <span class="topic-node-count">19 nodes</span>
     
-    <span class="badge status-formalized">13 formalized</span>
+    <span class="badge status-formalized">19 formalized</span>
     
   </div>
   
@@ -814,6 +808,10 @@
     <ul>
       
       <li><a href="../core/argmax/index.html">Core.Argmax</a></li>
+      
+      <li><a href="../core/linear_algebra/index.html">Core.Linear Algebra</a></li>
+      
+      <li><a href="../core/linear_programming/index.html">Core.Linear Programming</a></li>
       
       <li><a href="../core/preference/index.html">Core.Preference</a></li>
       
@@ -896,6 +894,22 @@ declarations; downstream topics (<code>utility</code>, <code>strategic_games</co
     </header>
   </article>
   
+  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
+    <header class="theorem_thmheading thm-heading">
+      <span class="theorem_thmcaption thm-caption">Theorem</span>
+      <a class="theorem_thmtitle thm-title" href="core_linear_algebra_farkas_lemma.html">Farkas Lemma</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
+  
+  <article class="lemma_thmwrapper theorem-style-lemma summary-node">
+    <header class="lemma_thmheading thm-heading">
+      <span class="lemma_thmcaption thm-caption">Lemma</span>
+      <a class="lemma_thmtitle thm-title" href="core_linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
+  
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
@@ -908,6 +922,14 @@ declarations; downstream topics (<code>utility</code>, <code>strategic_games</co
     <header class="lemma_thmheading thm-heading">
       <span class="lemma_thmcaption thm-caption">Lemma</span>
       <a class="lemma_thmtitle thm-title" href="core_simplex_wsum_comm.html">Iterated Weighted Sums Commute</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
+  
+  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
+    <header class="theorem_thmheading thm-heading">
+      <span class="theorem_thmcaption thm-caption">Theorem</span>
+      <a class="theorem_thmtitle thm-title" href="../zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -940,6 +962,30 @@ declarations; downstream topics (<code>utility</code>, <code>strategic_games</co
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
       <a class="definition_thmtitle thm-title" href="core_preference_strictly_preferred.html">Strict Preference Relation</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
+  
+  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
+    <header class="theorem_thmheading thm-heading">
+      <span class="theorem_thmcaption thm-caption">Theorem</span>
+      <a class="theorem_thmtitle thm-title" href="core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
+  
+  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
+    <header class="theorem_thmheading thm-heading">
+      <span class="theorem_thmcaption thm-caption">Theorem</span>
+      <a class="theorem_thmtitle thm-title" href="core_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
+  
+  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
+    <header class="theorem_thmheading thm-heading">
+      <span class="theorem_thmcaption thm-caption">Theorem</span>
+      <a class="theorem_thmtitle thm-title" href="core_linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>

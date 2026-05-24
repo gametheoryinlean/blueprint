@@ -51,6 +51,20 @@
             <summary><a href="../core/index.html">Core</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../core/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_algebra">
+            <summary><a href="../core/linear_algebra/index.html">Linear Algebra</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_algebra/alternatives/index.html">Alternatives</a>
+        </li></ul>
+          </details>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_programming">
+            <summary><a href="../core/linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="../core/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -91,24 +105,6 @@
         </li>
       
         <li class="topic-parent">
-          <details data-topic-root="linear_algebra">
-            <summary><a href="../linear_algebra/index.html">Linear Algebra</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
-          <details data-topic-root="linear_programming">
-            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_programming/duality/index.html">Duality</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
           <details data-topic-root="mechanism_design">
             <summary><a href="../mechanism_design/index.html">Mechanism Design</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -132,9 +128,7 @@
         <li class="topic-parent topic-active">
           <details open data-topic-root="social_choice">
             <summary><a href="../social_choice/index.html">Social Choice</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../social_choice/core/index.html">Core</a>
-        </li><li class="topic-parent">
+            <ul class="topic-children"><li class="topic-parent">
           <details data-topic-root="social_choice.fair_division">
             <summary><a href="../social_choice/fair_division/index.html">Fair Division</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -815,8 +809,6 @@
     <h2>Subtopics</h2>
     <ul>
       
-      <li><a href="../social_choice/core/index.html">Social Choice.Core</a></li>
-      
       <li><a href="../social_choice/fair_division/index.html">Social Choice.Fair Division</a></li>
       
       <li><a href="../social_choice/voting/index.html">Social Choice.Voting</a></li>
@@ -838,7 +830,7 @@ layer in <code>EconCSLib/SocialChoice/Basic.lean</code>, then voting and fair-di
 specializations on top.</p>
 <h2>Subtopics</h2>
 <ul>
-<li><code>social_choice.core</code> - bundled preference relations, preference profiles,
+<li><code>social_choice</code> - bundled preference relations, preference profiles,
   generic instances, solution concepts, and choice rules / correspondences.</li>
 <li><code>social_choice.voting</code> - social welfare functions, social choice functions,
   axioms (unanimity, IIA, monotonicity, strategy-proofness), decisive
@@ -1638,7 +1630,7 @@ under their own coalitional-game topics rather than <code>social_choice</code>.<
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="social_choice_core_preference_profile.html">Preference Profile</a>
+      <a class="definition_thmtitle thm-title" href="social_choice_preference_profile.html">Preference Profile</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1646,7 +1638,7 @@ under their own coalitional-game topics rather than <code>social_choice</code>.<
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="social_choice_core_preference.html">Preference Relation</a>
+      <a class="definition_thmtitle thm-title" href="social_choice_preference.html">Preference Relation</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1710,7 +1702,7 @@ under their own coalitional-game topics rather than <code>social_choice</code>.<
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="social_choice_core_instance.html">Social Choice Instance</a>
+      <a class="definition_thmtitle thm-title" href="social_choice_instance.html">Social Choice Instance</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1726,7 +1718,7 @@ under their own coalitional-game topics rather than <code>social_choice</code>.<
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="social_choice_core_solution_concept.html">Solution Concept, Rule, and Correspondence</a>
+      <a class="definition_thmtitle thm-title" href="social_choice_solution_concept.html">Solution Concept, Rule, and Correspondence</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1750,7 +1742,7 @@ under their own coalitional-game topics rather than <code>social_choice</code>.<
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="social_choice_core_strict_preference.html">Strict Preference</a>
+      <a class="definition_thmtitle thm-title" href="social_choice_strict_preference.html">Strict Preference</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>

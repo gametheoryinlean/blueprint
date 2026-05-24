@@ -14,26 +14,26 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 0,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 3,
+    "visible_nodes_with_selected_proof_plans": 3
   },
   "nodes": [
     {
       "id": "mechanism_design.vcg.truthfulness_and_ir",
       "title": "VCG Truthfulness And Individual Rationality",
       "kind": "theorem",
-      "status": "staged",
-      "href": "mechanism_design/vcg/mechanism_design_vcg_truthfulness_and_ir.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_truthfulness_and_ir.html",
       "payload": "node_payloads/mechanism_design_vcg_truthfulness_and_ir.json"
     },
     {
       "id": "mechanism_design.vcg.welfare_and_payments",
       "title": "VCG Welfare And Payments",
       "kind": "definition",
-      "status": "staged",
-      "href": "mechanism_design/vcg/mechanism_design_vcg_welfare_and_payments.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html",
       "payload": "node_payloads/mechanism_design_vcg_welfare_and_payments.json"
     }
   ],
@@ -44,24 +44,8 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [
-    {
-      "id": "mechanism_design.transfer",
-      "title": "Mechanism Design.Transfer",
-      "href": "mechanism_design/transfer/index.html",
-      "role": "dependency",
-      "node_count": 3
-    }
-  ],
-  "boundary_edges": [
-    {
-      "from": "topic:mechanism_design.transfer",
-      "to": "mechanism_design.vcg.welfare_and_payments",
-      "kind": "boundary_dependency",
-      "topic": "mechanism_design.transfer",
-      "count": 1
-    }
-  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
   "keywords": [
     {
       "id": "dsic",

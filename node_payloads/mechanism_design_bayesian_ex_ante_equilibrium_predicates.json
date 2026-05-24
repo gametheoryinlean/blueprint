@@ -2,10 +2,11 @@
   "id": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
   "title": "Ex-Ante Equilibrium Predicates",
   "kind": "definition",
-  "status": "staged",
-  "href": "mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html",
-  "primary_topic": "mechanism_design.bayesian",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html",
+  "primary_topic": "mechanism_design",
   "topics": [
+    "mechanism_design",
     "mechanism_design.bayesian"
   ],
   "body_html": "<h1>Ex-Ante Equilibrium Predicates</h1>\n<p>Bayesian mechanisms with transfers include integrability assumptions for\nex-ante expected utility and an ex-ante Bayesian Nash equilibrium predicate.</p>\n<p>The direct Bayesian transfer mechanism interface also provides the truthful\nstrategy profile used in revelation-principle statements.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Chapter 9, Section 9.6, Defs. 9.41-9.43] Nisan, Roughgarden,\n  Tardos, and Vazirani, <em>Algorithmic Game Theory</em>,\n  <code>references/AlgorithmicGameTheory.pdf</code>. Ex-ante equilibrium predicates for\n  Bayesian mechanisms.</li>\n<li>[MFoGT, Chapter 7, Section 7.4.1] Maschler, Solan, and Zamir, <em>Game\n  Theory</em>, <code>references/GameTheory.pdf</code>. Strategies, interim expectations, and\n  Bayesian Nash equilibrium.</li>\n</ul>\n<h2>Provenance</h2>\n<ul>\n<li>Migrated from EconCSLib pull request 27, old blueprint label\n  <code>def:md_ex_ante_equilibrium</code> in <code>blueprint/src/content.tex</code>.</li>\n</ul>",
@@ -14,14 +15,14 @@
     {
       "id": "mechanism_design.bayesian.bayesian_mechanisms",
       "title": "Bayesian Mechanisms",
-      "href": "mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html"
+      "href": "mechanism_design/mechanism_design_bayesian_bayesian_mechanisms.html"
     }
   ],
   "dependents": [
     {
       "id": "mechanism_design.bayesian.ex_ante_revelation_principle",
       "title": "Ex-Ante Revelation Principle Interface",
-      "href": "mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_revelation_principle.html"
+      "href": "mechanism_design/mechanism_design_bayesian_ex_ante_revelation_principle.html"
     }
   ],
   "lean_refs": [
@@ -31,9 +32,9 @@
       "qualified_name": "BayesianMechanismWithTransfers.IntegrableExAnteUtility",
       "module": "EconCSLib.MechanismDesign.Bayesian",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Bayesian.lean#L181",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Bayesian.lean#L181",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -44,9 +45,9 @@
       "qualified_name": "BayesianMechanismWithTransfers.IsExAnteBayesianNashEquilibrium",
       "module": "EconCSLib.MechanismDesign.Bayesian",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Bayesian.lean#L195",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Bayesian.lean#L195",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -57,9 +58,9 @@
       "qualified_name": "DirectBayesianMechanismWithTransfers",
       "module": "EconCSLib.MechanismDesign.Bayesian",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Bayesian.lean#L211",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Bayesian.lean#L211",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -70,9 +71,9 @@
       "qualified_name": "DirectBayesianMechanismWithTransfers.truthfulStrategy",
       "module": "EconCSLib.MechanismDesign.Bayesian",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Bayesian.lean#L220",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Bayesian.lean#L220",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

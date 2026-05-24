@@ -2,10 +2,11 @@
   "id": "mechanism_design.basic.induced_strategic_game",
   "title": "Induced Strategic Game",
   "kind": "definition",
-  "status": "staged",
-  "href": "mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html",
-  "primary_topic": "mechanism_design.basic",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_basic_induced_strategic_game.html",
+  "primary_topic": "mechanism_design",
   "topics": [
+    "mechanism_design",
     "mechanism_design.basic"
   ],
   "body_html": "<h1>Induced Strategic Game</h1>\n<p>Given a direct mechanism \\(M\\), a utility function, and a true type profile, the\ninduced strategic game takes each agent's report space as the agent's strategy\nspace. The payoff of a report profile is the utility of the outcome selected by\nthe mechanism under the true type profile.</p>\n<p>The induced game is the bridge that lets mechanism-design predicates reuse\nnormal-form equilibrium and dominance notions instead of duplicating them.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Chapter 9, Section 9.4.1, Def. 9.24] Nisan, Roughgarden,\n  Tardos, and Vazirani, <em>Algorithmic Game Theory</em>,\n  <code>references/AlgorithmicGameTheory.pdf</code>. Mechanisms induced as strategic\n  games.</li>\n<li>[AGT, Chapter 9, Prop. 9.25] Nisan, Roughgarden, Tardos, and\n  Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>.\n  The revelation-principle argument connecting induced games and direct\n  mechanisms.</li>\n</ul>\n<h2>Provenance</h2>\n<ul>\n<li>Migrated from EconCSLib pull request 27, old blueprint label\n  <code>def:md_basic_interface</code> in <code>blueprint/src/content.tex</code>.</li>\n</ul>",
@@ -14,7 +15,7 @@
     {
       "id": "mechanism_design.basic.direct_mechanism_interface",
       "title": "Direct Mechanism Interface",
-      "href": "mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html"
+      "href": "mechanism_design/mechanism_design_basic_direct_mechanism_interface.html"
     },
     {
       "id": "strategic_games.strategic_game",
@@ -26,17 +27,17 @@
     {
       "id": "mechanism_design.basic.dsic_predicate",
       "title": "DSIC Predicate",
-      "href": "mechanism_design/basic/mechanism_design_basic_dsic_predicate.html"
+      "href": "mechanism_design/mechanism_design_basic_dsic_predicate.html"
     },
     {
       "id": "mechanism_design.basic.truthfulness_from_dsic",
       "title": "Truthfulness From DSIC",
-      "href": "mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html"
+      "href": "mechanism_design/mechanism_design_basic_truthfulness_from_dsic.html"
     },
     {
       "id": "mechanism_design.bayesian.bayesian_mechanisms",
       "title": "Bayesian Mechanisms",
-      "href": "mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html"
+      "href": "mechanism_design/mechanism_design_bayesian_bayesian_mechanisms.html"
     }
   ],
   "lean_refs": [
@@ -46,9 +47,9 @@
       "qualified_name": "Mechanism.toStrategicGame",
       "module": "EconCSLib.MechanismDesign.Basic",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Basic.lean#L77",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Basic.lean#L77",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

@@ -51,6 +51,20 @@
             <summary><a href="core/index.html">Core</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="core/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_algebra">
+            <summary><a href="core/linear_algebra/index.html">Linear Algebra</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="core/linear_algebra/alternatives/index.html">Alternatives</a>
+        </li></ul>
+          </details>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_programming">
+            <summary><a href="core/linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="core/linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="core/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -91,24 +105,6 @@
         </li>
       
         <li class="topic-parent">
-          <details data-topic-root="linear_algebra">
-            <summary><a href="linear_algebra/index.html">Linear Algebra</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="linear_algebra/alternatives/index.html">Alternatives</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
-          <details data-topic-root="linear_programming">
-            <summary><a href="linear_programming/index.html">Linear Programming</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="linear_programming/duality/index.html">Duality</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
           <details data-topic-root="mechanism_design">
             <summary><a href="mechanism_design/index.html">Mechanism Design</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -132,9 +128,7 @@
         <li class="topic-parent">
           <details data-topic-root="social_choice">
             <summary><a href="social_choice/index.html">Social Choice</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="social_choice/core/index.html">Core</a>
-        </li><li class="topic-parent">
+            <ul class="topic-children"><li class="topic-parent">
           <details data-topic-root="social_choice.fair_division">
             <summary><a href="social_choice/fair_division/index.html">Fair Division</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -801,7 +795,7 @@
     
 <section class="blueprint-overview">
   <h1>EconCSLib Knowledge Blueprint</h1>
-  <p>452 nodes across 73 topics.</p>
+  <p>452 nodes across 72 topics.</p>
   <p><a href="dep_graph_document.html">Dependency graph</a></p>
 </section>
 
@@ -960,6 +954,18 @@
       </li>
       
       <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_farkas_lemma.html">Farkas Lemma</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
         <a class="outline-node-title" href="core/core_preference_indifferent.html">Indifference Relation</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-formalized">formalized</span>
@@ -968,6 +974,12 @@
       <li>
         <a class="outline-node-title" href="core/core_simplex_wsum_comm.html">Iterated Weighted Sums Commute</a>
         <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
         <span class="badge status-formalized">formalized</span>
       </li>
       
@@ -992,6 +1004,24 @@
       <li>
         <a class="outline-node-title" href="core/core_preference_strictly_preferred.html">Strict Preference Relation</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
         <span class="badge status-formalized">formalized</span>
       </li>
       
@@ -1023,6 +1053,100 @@
       <li>
         <a class="outline-node-title" href="core/core_argmax_list_arg_max_on.html">Argmax of a List under a Total Preorder</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="core/linear_algebra/index.html">Core.Linear Algebra</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_farkas_lemma.html">Farkas Lemma</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="core/linear_algebra/alternatives/index.html">Core.Linear Algebra.Alternatives</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_farkas_lemma.html">Farkas Lemma</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
+        <span class="lemma_thmcaption thm-caption">Lemma</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="core/linear_programming/index.html">Core.Linear Programming</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+    </ol>
+  </section>
+  
+  <section class="outline-topic">
+    <h2><a href="core/linear_programming/duality/index.html">Core.Linear Programming.Duality</a></h2>
+    <ol class="outline-node-list">
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
+        <span class="badge status-formalized">formalized</span>
+      </li>
+      
+      <li>
+        <a class="outline-node-title" href="core/core_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
+        <span class="theorem_thmcaption thm-caption">Theorem</span>
         <span class="badge status-formalized">formalized</span>
       </li>
       
@@ -1853,191 +1977,97 @@
   </section>
   
   <section class="outline-topic">
-    <h2><a href="linear_algebra/index.html">Linear Algebra</a></h2>
-    <ol class="outline-node-list">
-      
-      <li>
-        <a class="outline-node-title" href="linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="linear_algebra/linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
-        <span class="lemma_thmcaption thm-caption">Lemma</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="zero_sum/linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="linear_algebra/linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-    </ol>
-  </section>
-  
-  <section class="outline-topic">
-    <h2><a href="linear_algebra/alternatives/index.html">Linear Algebra.Alternatives</a></h2>
-    <ol class="outline-node-list">
-      
-      <li>
-        <a class="outline-node-title" href="linear_algebra/linear_algebra_farkas_lemma.html">Farkas Lemma</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="linear_algebra/linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
-        <span class="lemma_thmcaption thm-caption">Lemma</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="linear_algebra/linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-    </ol>
-  </section>
-  
-  <section class="outline-topic">
-    <h2><a href="linear_programming/index.html">Linear Programming</a></h2>
-    <ol class="outline-node-list">
-      
-      <li>
-        <a class="outline-node-title" href="linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="linear_programming/linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-    </ol>
-  </section>
-  
-  <section class="outline-topic">
-    <h2><a href="linear_programming/duality/index.html">Linear Programming.Duality</a></h2>
-    <ol class="outline-node-list">
-      
-      <li>
-        <a class="outline-node-title" href="linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="linear_programming/linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>
-        <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-    </ol>
-  </section>
-  
-  <section class="outline-topic">
     <h2><a href="mechanism_design/index.html">Mechanism Design</a></h2>
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html">Bayesian Mechanisms</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_bayesian_bayesian_mechanisms.html">Bayesian Mechanisms</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_dsic_predicate.html">DSIC Predicate</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_dsic_predicate.html">DSIC Predicate</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html">Direct Mechanism Interface</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_direct_mechanism_interface.html">Direct Mechanism Interface</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html">Ex-Ante Equilibrium Predicates</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html">Ex-Ante Equilibrium Predicates</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_revelation_principle.html">Ex-Ante Revelation Principle Interface</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_bayesian_ex_ante_revelation_principle.html">Ex-Ante Revelation Principle Interface</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_ex_post_ir_predicate.html">Ex-Post Individual Rationality Predicate</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_ex_post_ir_predicate.html">Ex-Post Individual Rationality Predicate</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html">Induced Strategic Game</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_induced_strategic_game.html">Induced Strategic Game</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/transfer/mechanism_design_transfer_multiple_parameter_transfer_layer.html">Multiple-Parameter Transfer Layer</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_transfer_multiple_parameter_transfer_layer.html">Multiple-Parameter Transfer Layer</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/myerson/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/transfer/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html">Truthfulness From DSIC</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_truthfulness_from_dsic.html">Truthfulness From DSIC</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/vcg/mechanism_design_vcg_truthfulness_and_ir.html">VCG Truthfulness And Individual Rationality</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_vcg_truthfulness_and_ir.html">VCG Truthfulness And Individual Rationality</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/vcg/mechanism_design_vcg_welfare_and_payments.html">VCG Welfare And Payments</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_vcg_welfare_and_payments.html">VCG Welfare And Payments</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -2048,33 +2078,33 @@
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_dsic_predicate.html">DSIC Predicate</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_dsic_predicate.html">DSIC Predicate</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_direct_mechanism_interface.html">Direct Mechanism Interface</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_direct_mechanism_interface.html">Direct Mechanism Interface</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_ex_post_ir_predicate.html">Ex-Post Individual Rationality Predicate</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_ex_post_ir_predicate.html">Ex-Post Individual Rationality Predicate</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_induced_strategic_game.html">Induced Strategic Game</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_induced_strategic_game.html">Induced Strategic Game</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/basic/mechanism_design_basic_truthfulness_from_dsic.html">Truthfulness From DSIC</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_basic_truthfulness_from_dsic.html">Truthfulness From DSIC</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -2085,21 +2115,21 @@
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html">Bayesian Mechanisms</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_bayesian_bayesian_mechanisms.html">Bayesian Mechanisms</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html">Ex-Ante Equilibrium Predicates</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html">Ex-Ante Equilibrium Predicates</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_revelation_principle.html">Ex-Ante Revelation Principle Interface</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_bayesian_ex_ante_revelation_principle.html">Ex-Ante Revelation Principle Interface</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -2110,15 +2140,15 @@
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/myerson/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -2129,21 +2159,21 @@
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/transfer/mechanism_design_transfer_multiple_parameter_transfer_layer.html">Multiple-Parameter Transfer Layer</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_transfer_multiple_parameter_transfer_layer.html">Multiple-Parameter Transfer Layer</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/transfer/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -2154,15 +2184,15 @@
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/vcg/mechanism_design_vcg_truthfulness_and_ir.html">VCG Truthfulness And Individual Rationality</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_vcg_truthfulness_and_ir.html">VCG Truthfulness And Individual Rationality</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="mechanism_design/vcg/mechanism_design_vcg_welfare_and_payments.html">VCG Welfare And Payments</a>
+        <a class="outline-node-title" href="mechanism_design/mechanism_design_vcg_welfare_and_payments.html">VCG Welfare And Payments</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-staged">staged</span>
+        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -2762,13 +2792,13 @@
       </li>
       
       <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_preference_profile.html">Preference Profile</a>
+        <a class="outline-node-title" href="social_choice/social_choice_preference_profile.html">Preference Profile</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-formalized">formalized</span>
       </li>
       
       <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_preference.html">Preference Relation</a>
+        <a class="outline-node-title" href="social_choice/social_choice_preference.html">Preference Relation</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-formalized">formalized</span>
       </li>
@@ -2816,7 +2846,7 @@
       </li>
       
       <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_instance.html">Social Choice Instance</a>
+        <a class="outline-node-title" href="social_choice/social_choice_instance.html">Social Choice Instance</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-formalized">formalized</span>
       </li>
@@ -2828,7 +2858,7 @@
       </li>
       
       <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_solution_concept.html">Solution Concept, Rule, and Correspondence</a>
+        <a class="outline-node-title" href="social_choice/social_choice_solution_concept.html">Solution Concept, Rule, and Correspondence</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-formalized">formalized</span>
       </li>
@@ -2846,7 +2876,7 @@
       </li>
       
       <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_strict_preference.html">Strict Preference</a>
+        <a class="outline-node-title" href="social_choice/social_choice_strict_preference.html">Strict Preference</a>
         <span class="definition_thmcaption thm-caption">Definition</span>
         <span class="badge status-formalized">formalized</span>
       </li>
@@ -2933,43 +2963,6 @@
         <a class="outline-node-title" href="social_choice/social_choice_fair_division_indivisible_alpha_mms_mono.html">α-MMS — Monotonicity and Endpoint Lemmas</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
         <span class="badge status-staged">staged</span>
-      </li>
-      
-    </ol>
-  </section>
-  
-  <section class="outline-topic">
-    <h2><a href="social_choice/core/index.html">Social Choice.Core</a></h2>
-    <ol class="outline-node-list">
-      
-      <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_preference_profile.html">Preference Profile</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_preference.html">Preference Relation</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_instance.html">Social Choice Instance</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_solution_concept.html">Solution Concept, Rule, and Correspondence</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
-      </li>
-      
-      <li>
-        <a class="outline-node-title" href="social_choice/social_choice_core_strict_preference.html">Strict Preference</a>
-        <span class="definition_thmcaption thm-caption">Definition</span>
-        <span class="badge status-formalized">formalized</span>
       </li>
       
     </ol>
@@ -6743,7 +6736,7 @@
       </li>
       
       <li>
-        <a class="outline-node-title" href="zero_sum/linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
+        <a class="outline-node-title" href="zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
         <span class="badge status-formalized">formalized</span>
       </li>
@@ -6930,7 +6923,7 @@
     <ol class="outline-node-list">
       
       <li>
-        <a class="outline-node-title" href="zero_sum/linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
+        <a class="outline-node-title" href="zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
         <span class="theorem_thmcaption thm-caption">Theorem</span>
         <span class="badge status-formalized">formalized</span>
       </li>

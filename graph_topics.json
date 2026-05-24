@@ -41,18 +41,21 @@
       "title": "Core",
       "depth": 1,
       "parent": null,
-      "node_count": 13,
-      "direct_node_count": 13,
+      "node_count": 19,
+      "direct_node_count": 18,
       "kind_counts": {
         "definition": 10,
-        "lemma": 3
+        "lemma": 4,
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 13
+        "formalized": 19
       },
       "href": "core/index.html",
       "children": [
         "core.argmax",
+        "core.linear_algebra",
+        "core.linear_programming",
         "core.preference",
         "core.profile",
         "core.simplex"
@@ -119,55 +122,18 @@
       "children": []
     },
     {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "depth": 1,
-      "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
-      "kind_counts": {
-        "lemma": 1,
-        "theorem": 3
-      },
-      "status_counts": {
-        "formalized": 4
-      },
-      "href": "linear_algebra/index.html",
-      "children": [
-        "linear_algebra.alternatives"
-      ]
-    },
-    {
-      "id": "linear_programming",
-      "title": "Linear Programming",
-      "depth": 1,
-      "parent": null,
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "linear_programming/index.html",
-      "children": [
-        "linear_programming.duality"
-      ]
-    },
-    {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "depth": 1,
       "parent": null,
       "node_count": 15,
-      "direct_node_count": 0,
+      "direct_node_count": 15,
       "kind_counts": {
         "definition": 11,
         "theorem": 4
       },
       "status_counts": {
-        "staged": 15
+        "formalized": 15
       },
       "href": "mechanism_design/index.html",
       "children": [
@@ -212,7 +178,6 @@
       },
       "href": "social_choice/index.html",
       "children": [
-        "social_choice.core",
         "social_choice.fair_division",
         "social_choice.voting"
       ]
@@ -320,7 +285,7 @@
     {
       "from": "core",
       "to": "zero_sum",
-      "count": 6
+      "count": 7
     },
     {
       "from": "fixed_point",
@@ -330,16 +295,6 @@
     {
       "from": "lattice",
       "to": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "linear_algebra",
-      "to": "linear_programming",
-      "count": 2
-    },
-    {
-      "from": "linear_programming",
-      "to": "zero_sum",
       "count": 1
     },
     {

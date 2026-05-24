@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 0,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
   },
   "nodes": [
     {
@@ -101,38 +101,8 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [
-    {
-      "id": "zero_sum",
-      "title": "Zero Sum",
-      "href": "zero_sum/index.html",
-      "role": "dependent",
-      "node_count": 86
-    }
-  ],
-  "boundary_edges": [
-    {
-      "from": "core.simplex.bounded_by_value",
-      "to": "topic:zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum",
-      "count": 4
-    },
-    {
-      "from": "core.simplex.continuity",
-      "to": "topic:zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum",
-      "count": 2
-    },
-    {
-      "from": "core.simplex.bounded_by_value",
-      "to": "topic:zero_sum",
-      "kind": "boundary_proof_plan_dependent",
-      "topic": "zero_sum",
-      "count": 1
-    }
-  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
   "keywords": [
     {
       "id": "continuity",

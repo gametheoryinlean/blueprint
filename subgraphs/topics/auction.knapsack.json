@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 4,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 7,
-    "visible_nodes_with_selected_proof_plans": 7
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -72,33 +72,26 @@
   ],
   "boundary_topics": [
     {
-      "id": "mechanism_design.myerson",
-      "title": "Mechanism Design.Myerson",
-      "href": "mechanism_design/myerson/index.html",
+      "id": "mechanism_design",
+      "title": "Mechanism Design",
+      "href": "mechanism_design/index.html",
       "role": "dependency",
-      "node_count": 2
-    },
-    {
-      "id": "mechanism_design.transfer",
-      "title": "Mechanism Design.Transfer",
-      "href": "mechanism_design/transfer/index.html",
-      "role": "dependency",
-      "node_count": 3
+      "node_count": 15
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:mechanism_design.myerson",
-      "to": "auction.knapsack.welfare_maximizing_mechanism",
+      "from": "topic:mechanism_design",
+      "to": "auction.knapsack.environment",
       "kind": "boundary_dependency",
-      "topic": "mechanism_design.myerson",
+      "topic": "mechanism_design",
       "count": 1
     },
     {
-      "from": "topic:mechanism_design.transfer",
-      "to": "auction.knapsack.environment",
+      "from": "topic:mechanism_design",
+      "to": "auction.knapsack.welfare_maximizing_mechanism",
       "kind": "boundary_dependency",
-      "topic": "mechanism_design.transfer",
+      "topic": "mechanism_design",
       "count": 1
     }
   ],

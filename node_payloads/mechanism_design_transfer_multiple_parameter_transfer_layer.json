@@ -2,10 +2,11 @@
   "id": "mechanism_design.transfer.multiple_parameter_transfer_layer",
   "title": "Multiple-Parameter Transfer Layer",
   "kind": "definition",
-  "status": "staged",
-  "href": "mechanism_design/transfer/mechanism_design_transfer_multiple_parameter_transfer_layer.html",
-  "primary_topic": "mechanism_design.transfer",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_transfer_multiple_parameter_transfer_layer.html",
+  "primary_topic": "mechanism_design",
   "topics": [
+    "mechanism_design",
     "mechanism_design.transfer"
   ],
   "body_html": "<h1>Multiple-Parameter Transfer Layer</h1>\n<p>In a multiple-parameter mechanism, each agent reports a valuation function over\nthe allocation space. This is the abstract transfer-mechanism layer used by\nVCG-style constructions.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Chapter 9, Sections 9.3.2-9.3.3] Nisan, Roughgarden, Tardos, and\n  Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>.\n  Multi-parameter valuation functions, outcomes, and transfer mechanisms.</li>\n<li>[AGT, Chapter 12, Section 12.3] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>.\n  Multidimensional mechanism-design domains in combinatorial-auction settings.</li>\n</ul>\n<h2>Provenance</h2>\n<ul>\n<li>Migrated from EconCSLib pull request 27, old blueprint label\n  <code>def:md_multiple_parameter_interface</code> in <code>blueprint/src/content.tex</code>.</li>\n</ul>",
@@ -14,14 +15,14 @@
     {
       "id": "mechanism_design.transfer.mechanisms_with_transfers",
       "title": "Mechanisms With Transfers",
-      "href": "mechanism_design/transfer/mechanism_design_transfer_mechanisms_with_transfers.html"
+      "href": "mechanism_design/mechanism_design_transfer_mechanisms_with_transfers.html"
     }
   ],
   "dependents": [
     {
       "id": "mechanism_design.vcg.welfare_and_payments",
       "title": "VCG Welfare And Payments",
-      "href": "mechanism_design/vcg/mechanism_design_vcg_welfare_and_payments.html"
+      "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html"
     }
   ],
   "lean_refs": [
@@ -31,9 +32,9 @@
       "qualified_name": "MultipleParameterMechanism",
       "module": "EconCSLib.MechanismDesign.Transfer",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Transfer.lean#L243",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Transfer.lean#L243",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -44,9 +45,9 @@
       "qualified_name": "MultipleParameterMechanism.Valuation",
       "module": "EconCSLib.MechanismDesign.Transfer",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Transfer.lean#L252",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Transfer.lean#L252",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -57,9 +58,9 @@
       "qualified_name": "MultipleParameterMechanism.valueOfAllocation",
       "module": "EconCSLib.MechanismDesign.Transfer",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/Transfer.lean#L256",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/Transfer.lean#L256",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

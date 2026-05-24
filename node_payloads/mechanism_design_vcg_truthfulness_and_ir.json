@@ -2,19 +2,20 @@
   "id": "mechanism_design.vcg.truthfulness_and_ir",
   "title": "VCG Truthfulness And Individual Rationality",
   "kind": "theorem",
-  "status": "staged",
-  "href": "mechanism_design/vcg/mechanism_design_vcg_truthfulness_and_ir.html",
-  "primary_topic": "mechanism_design.vcg",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_vcg_truthfulness_and_ir.html",
+  "primary_topic": "mechanism_design",
   "topics": [
+    "mechanism_design",
     "mechanism_design.vcg"
   ],
-  "body_html": "<h1>VCG Truthfulness And Individual Rationality</h1>\n<p>Under the stated nonnegativity hypotheses, the VCG mechanism gives\nnonnegative truthful quasi-linear utility, is ex-post individually rational,\nand is dominant-strategy incentive compatible.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Chapter 9, Thm. 9.17] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. VCG\n  mechanisms are incentive compatible.</li>\n<li>[AGT, Chapter 9, Lem. 9.20] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Clarke\n  pivot payments and individual rationality under nonnegative valuations.</li>\n</ul>\n<h2>Provenance</h2>\n<ul>\n<li>Migrated from EconCSLib pull request 27, old blueprint label\n  <code>thm:md_vcg_results</code> in <code>blueprint/src/content.tex</code>.</li>\n</ul>",
+  "body_html": "<h1>VCG Truthfulness And Individual Rationality</h1>\n<p>The VCG mechanism is dominant-strategy incentive compatible (DSIC)\nunconditionally for quasi-linear utilities, and — under the additional\nnonnegativity hypothesis on every valuation in the type space — gives every\nagent nonnegative truthful quasi-linear utility, which yields ex-post\nindividual rationality.</p>\n<p>That is: DSIC needs no sign assumption; IR and the nonnegative-utility bound\nrequire nonnegative valuations.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT, Chapter 9, Thm. 9.17] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. VCG\n  mechanisms are incentive compatible.</li>\n<li>[AGT, Chapter 9, Lem. 9.20] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Clarke\n  pivot payments and individual rationality under nonnegative valuations.</li>\n</ul>\n<h2>Provenance</h2>\n<ul>\n<li>Migrated from EconCSLib pull request 27, old blueprint label\n  <code>thm:md_vcg_results</code> in <code>blueprint/src/content.tex</code>.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
       "id": "mechanism_design.vcg.welfare_and_payments",
       "title": "VCG Welfare And Payments",
-      "href": "mechanism_design/vcg/mechanism_design_vcg_welfare_and_payments.html"
+      "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html"
     }
   ],
   "dependents": [],
@@ -25,9 +26,9 @@
       "qualified_name": "MultipleParameterMechanism.VCGMechanism_truthful_quasiLinearUtility_nonneg",
       "module": "EconCSLib.MechanismDesign.VCG",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/VCG.lean#L199",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/VCG.lean#L199",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -38,9 +39,9 @@
       "qualified_name": "MultipleParameterMechanism.VCGMechanism_truthful_profile_quasiLinearUtility_nonneg",
       "module": "EconCSLib.MechanismDesign.VCG",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/VCG.lean#L228",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/VCG.lean#L228",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -51,9 +52,9 @@
       "qualified_name": "MultipleParameterMechanism.VCGMechanism_isExPostIR_of_all_nonnegative",
       "module": "EconCSLib.MechanismDesign.VCG",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/VCG.lean#L241",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/VCG.lean#L241",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -64,9 +65,9 @@
       "qualified_name": "MultipleParameterMechanism.VCGMechanism_isDSIC",
       "module": "EconCSLib.MechanismDesign.VCG",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/MechanismDesign/VCG.lean#L265",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/MechanismDesign/VCG.lean#L265",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

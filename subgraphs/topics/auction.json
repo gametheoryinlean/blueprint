@@ -14,15 +14,38 @@
     "non_proof_plan_nodes": 0,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 1,
-    "visible_nodes_with_selected_proof_plans": 1
+    "visible_nodes_without_proof_plans": 2,
+    "visible_nodes_with_selected_proof_plans": 2
   },
   "nodes": [],
   "edges": [],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "mechanism_design",
+      "title": "Mechanism Design",
+      "href": "mechanism_design/index.html",
+      "role": "dependency",
+      "node_count": 15
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:mechanism_design",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 2
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 2
+    }
+  ],
   "keywords": [],
   "proof_plan_attachments": [],
   "child_topics": [
@@ -67,41 +90,27 @@
   "child_topic_edges": [],
   "child_boundary_topics": [
     {
-      "id": "mechanism_design.myerson",
-      "title": "Mechanism Design.Myerson",
-      "href": "mechanism_design/myerson/index.html",
+      "id": "mechanism_design",
+      "title": "Mechanism Design",
+      "href": "mechanism_design/index.html",
       "role": "dependency",
-      "node_count": 2
-    },
-    {
-      "id": "mechanism_design.transfer",
-      "title": "Mechanism Design.Transfer",
-      "href": "mechanism_design/transfer/index.html",
-      "role": "dependency",
-      "node_count": 3
+      "node_count": 15
     }
   ],
   "child_boundary_edges": [
     {
-      "from": "topic:mechanism_design.myerson",
-      "to": "topic:auction.knapsack",
-      "kind": "boundary_dependency",
-      "topic": "mechanism_design.myerson",
-      "count": 1
-    },
-    {
-      "from": "topic:mechanism_design.transfer",
+      "from": "topic:mechanism_design",
       "to": "topic:auction.basic",
       "kind": "boundary_dependency",
-      "topic": "mechanism_design.transfer",
+      "topic": "mechanism_design",
       "count": 2
     },
     {
-      "from": "topic:mechanism_design.transfer",
+      "from": "topic:mechanism_design",
       "to": "topic:auction.knapsack",
       "kind": "boundary_dependency",
-      "topic": "mechanism_design.transfer",
-      "count": 1
+      "topic": "mechanism_design",
+      "count": 2
     }
   ]
 }

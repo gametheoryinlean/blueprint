@@ -11,7 +11,7 @@
     "social_choice.voting.arrow"
   ],
   "body_html": "<h1>IIA on Strict Preference</h1>\n<p><strong>Lemma.</strong> If $F$ satisfies IIA ([[social_choice.voting.iia]]), and two\nprofiles $P$, $Q$ agree on the weak ranking of the pair $\\{a, b\\}$ in both\ndirections ($P_i(a,b) \\iff Q_i(a,b)$ and $P_i(b,a) \\iff Q_i(b,a)$ for all\n$i$), then society's <em>strict</em> preference between $a$ and $b$ is the same\nunder $P$ and $Q$:\n$$\na \\succ_{F(P)} b \\iff a \\succ_{F(Q)} b.\n$$</p>",
-  "proof_html": "<p>Strict preference $\\succ_R$ is defined as $R(a,b) \\wedge \\neg R(b,a)$\n([[social_choice.core.strict_preference]]). Both conjuncts are determined by\nthe IIA-controlled weak rankings, so the strict comparison transfers between\n$P$ and $Q$. $\\square$</p>\n<p>In Lean: <code>SocialChoice.Voting.iia_strict</code>.</p>\n<p>This is the workhorse algebraic lemma in the decisive-coalition Arrow proof\n([[social_choice.voting.arrow_of_unanimity_iia]]): every step where the\nproof modifies a profile while preserving the $\\{a,b\\}$ pair-restricted\nprofile invokes this lemma to keep society's strict $a$-vs-$b$ comparison\nfixed.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. IIA applied to strict comparisons.</li>\n</ul>",
+  "proof_html": "<p>Strict preference $\\succ_R$ is defined as $R(a,b) \\wedge \\neg R(b,a)$\n([[social_choice.strict_preference]]). Both conjuncts are determined by\nthe IIA-controlled weak rankings, so the strict comparison transfers between\n$P$ and $Q$. $\\square$</p>\n<p>In Lean: <code>SocialChoice.Voting.iia_strict</code>.</p>\n<p>This is the workhorse algebraic lemma in the decisive-coalition Arrow proof\n([[social_choice.voting.arrow_of_unanimity_iia]]): every step where the\nproof modifies a profile while preserving the $\\{a,b\\}$ pair-restricted\nprofile invokes this lemma to keep society's strict $a$-vs-$b$ comparison\nfixed.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. IIA applied to strict comparisons.</li>\n</ul>",
   "deps": [
     {
       "id": "social_choice.voting.iia",
@@ -19,9 +19,9 @@
       "href": "social_choice/social_choice_voting_iia.html"
     },
     {
-      "id": "social_choice.core.strict_preference",
+      "id": "social_choice.strict_preference",
       "title": "Strict Preference",
-      "href": "social_choice/social_choice_core_strict_preference.html"
+      "href": "social_choice/social_choice_strict_preference.html"
     }
   ],
   "dependents": [
@@ -38,9 +38,9 @@
       "qualified_name": "SocialChoice.Voting.iia_strict",
       "module": "EconCSLib.SocialChoice.Voting.Decisive",
       "repository_title": "EconCSLib",
-      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
-      "short_revision": "65f9506",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/Voting/Decisive.lean#L96",
+      "revision": "635460a53ab35db6ae541ff0c66525e89c766b20",
+      "short_revision": "635460a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/SocialChoice/Voting/Decisive.lean#L96",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

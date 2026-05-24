@@ -14,34 +14,34 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 0,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 6,
-    "visible_nodes_with_selected_proof_plans": 6
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
   },
   "nodes": [
     {
       "id": "mechanism_design.bayesian.bayesian_mechanisms",
       "title": "Bayesian Mechanisms",
       "kind": "definition",
-      "status": "staged",
-      "href": "mechanism_design/bayesian/mechanism_design_bayesian_bayesian_mechanisms.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_bayesian_bayesian_mechanisms.html",
       "payload": "node_payloads/mechanism_design_bayesian_bayesian_mechanisms.json"
     },
     {
       "id": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
       "title": "Ex-Ante Equilibrium Predicates",
       "kind": "definition",
-      "status": "staged",
-      "href": "mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_bayesian_ex_ante_equilibrium_predicates.html",
       "payload": "node_payloads/mechanism_design_bayesian_ex_ante_equilibrium_predicates.json"
     },
     {
       "id": "mechanism_design.bayesian.ex_ante_revelation_principle",
       "title": "Ex-Ante Revelation Principle Interface",
       "kind": "theorem",
-      "status": "staged",
-      "href": "mechanism_design/bayesian/mechanism_design_bayesian_ex_ante_revelation_principle.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_bayesian_ex_ante_revelation_principle.html",
       "payload": "node_payloads/mechanism_design_bayesian_ex_ante_revelation_principle.json"
     }
   ],
@@ -57,38 +57,8 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [
-    {
-      "id": "mechanism_design.basic",
-      "title": "Mechanism Design.Basic",
-      "href": "mechanism_design/basic/index.html",
-      "role": "dependency",
-      "node_count": 5
-    },
-    {
-      "id": "mechanism_design.transfer",
-      "title": "Mechanism Design.Transfer",
-      "href": "mechanism_design/transfer/index.html",
-      "role": "dependency",
-      "node_count": 3
-    }
-  ],
-  "boundary_edges": [
-    {
-      "from": "topic:mechanism_design.basic",
-      "to": "mechanism_design.bayesian.bayesian_mechanisms",
-      "kind": "boundary_dependency",
-      "topic": "mechanism_design.basic",
-      "count": 2
-    },
-    {
-      "from": "topic:mechanism_design.transfer",
-      "to": "mechanism_design.bayesian.bayesian_mechanisms",
-      "kind": "boundary_dependency",
-      "topic": "mechanism_design.transfer",
-      "count": 1
-    }
-  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
   "keywords": [
     {
       "id": "bayesian-mechanism",

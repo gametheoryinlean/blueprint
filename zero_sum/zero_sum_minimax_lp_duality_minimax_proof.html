@@ -51,6 +51,20 @@
             <summary><a href="../core/index.html">Core</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../core/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_algebra">
+            <summary><a href="../core/linear_algebra/index.html">Linear Algebra</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_algebra/alternatives/index.html">Alternatives</a>
+        </li></ul>
+          </details>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_programming">
+            <summary><a href="../core/linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="../core/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -91,24 +105,6 @@
         </li>
       
         <li class="topic-parent">
-          <details data-topic-root="linear_algebra">
-            <summary><a href="../linear_algebra/index.html">Linear Algebra</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
-          <details data-topic-root="linear_programming">
-            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_programming/duality/index.html">Duality</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
           <details data-topic-root="mechanism_design">
             <summary><a href="../mechanism_design/index.html">Mechanism Design</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -132,9 +128,7 @@
         <li class="topic-parent">
           <details data-topic-root="social_choice">
             <summary><a href="../social_choice/index.html">Social Choice</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../social_choice/core/index.html">Core</a>
-        </li><li class="topic-parent">
+            <ul class="topic-children"><li class="topic-parent">
           <details data-topic-root="social_choice.fair_division">
             <summary><a href="../social_choice/fair_division/index.html">Fair Division</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -823,7 +817,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../linear_programming/linear_programming_strong_duality.html">Strong Duality For Linear Programming</a></li>
+        <li><a href="../core/core_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a></li>
         
         <li><a href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a></li>
         
@@ -844,7 +838,7 @@
       <div class="proof-body">
         <p>Shift the matrix by adding a positive constant to every entry, so all entries
 are positive.  Apply finite-dimensional linear-programming duality
-(<a class="node-ref" data-node-id="linear_programming.strong_duality" href="../linear_programming/linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>) to the dual programs
+(<a class="node-ref" data-node-id="core.linear_programming.strong_duality" href="../core/linear_programming/core_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>) to the dual programs
 $$
   XA \ge \mathbf{1}, \quad X \ge 0
 $$

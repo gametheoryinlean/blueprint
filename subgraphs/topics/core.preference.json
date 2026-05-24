@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 0,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -73,59 +73,8 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [
-    {
-      "id": "core",
-      "title": "Core",
-      "href": "core/index.html",
-      "role": "dependent",
-      "node_count": 13
-    },
-    {
-      "id": "utility",
-      "title": "Utility",
-      "href": "utility/index.html",
-      "role": "dependent",
-      "node_count": 9
-    }
-  ],
-  "boundary_edges": [
-    {
-      "from": "core.preference.total_preorder",
-      "to": "topic:core",
-      "kind": "boundary_dependent",
-      "topic": "core",
-      "count": 1
-    },
-    {
-      "from": "core.preference.abstract_relation",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 1
-    },
-    {
-      "from": "core.preference.indifferent",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 1
-    },
-    {
-      "from": "core.preference.strictly_preferred",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 1
-    },
-    {
-      "from": "core.preference.total_preorder",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 1
-    }
-  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
   "keywords": [
     {
       "id": "core",

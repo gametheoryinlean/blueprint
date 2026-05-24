@@ -1,0 +1,146 @@
+{
+  "topic": {
+    "id": "core.linear_algebra",
+    "title": "Core.Linear Algebra",
+    "href": "core/linear_algebra/index.html",
+    "parent": "core",
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "descendant_nodes": 4,
+    "child_topics": 1,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 0,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "core.linear_algebra.farkas_lemma",
+      "title": "Farkas Lemma",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "core/core_linear_algebra_farkas_lemma.html",
+      "payload": "node_payloads/core_linear_algebra_farkas_lemma.json"
+    },
+    {
+      "id": "core.linear_algebra.theorem_of_alternative",
+      "title": "Theorem Of The Alternative",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "core/core_linear_algebra_theorem_of_alternative.html",
+      "payload": "node_payloads/core_linear_algebra_theorem_of_alternative.json"
+    },
+    {
+      "id": "core.linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "title": "Fourier-Motzkin Elimination Step",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "core/core_linear_algebra_theorem_of_alternative_fourier_motzkin.html",
+      "payload": "node_payloads/core_linear_algebra_theorem_of_alternative_fourier_motzkin.json"
+    },
+    {
+      "id": "zero_sum.applications.perron_frobenius_positive_matrix",
+      "title": "Perron-Frobenius For Positive Matrices",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html",
+      "payload": "node_payloads/zero_sum_applications_perron_frobenius_positive_matrix.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "core.linear_algebra.theorem_of_alternative",
+      "to": "core.linear_algebra.farkas_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "core.linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "to": "core.linear_algebra.theorem_of_alternative",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
+  "keywords": [
+    {
+      "id": "alternatives",
+      "title": "alternatives",
+      "href": "keywords/alternatives.html",
+      "count": 2
+    },
+    {
+      "id": "convexity",
+      "title": "convexity",
+      "href": "keywords/convexity.html",
+      "count": 2
+    },
+    {
+      "id": "elimination",
+      "title": "elimination",
+      "href": "keywords/elimination.html",
+      "count": 1
+    },
+    {
+      "id": "farkas",
+      "title": "farkas",
+      "href": "keywords/farkas.html",
+      "count": 1
+    },
+    {
+      "id": "fourier-motzkin",
+      "title": "fourier-motzkin",
+      "href": "keywords/fourier-motzkin.html",
+      "count": 2
+    },
+    {
+      "id": "linear-algebra",
+      "title": "linear-algebra",
+      "href": "keywords/linear-algebra.html",
+      "count": 4
+    },
+    {
+      "id": "perron-frobenius",
+      "title": "perron-frobenius",
+      "href": "keywords/perron-frobenius.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [
+    "core.linear_algebra.alternatives"
+  ],
+  "child_topic_nodes": [
+    {
+      "id": "core.linear_algebra.alternatives",
+      "title": "Core.Linear Algebra.Alternatives",
+      "depth": 3,
+      "parent": "core.linear_algebra",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "lemma": 1,
+        "theorem": 2
+      },
+      "status_counts": {
+        "formalized": 3
+      },
+      "href": "core/linear_algebra/alternatives/index.html",
+      "children": []
+    }
+  ],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

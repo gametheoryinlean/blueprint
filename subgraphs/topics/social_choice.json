@@ -10,7 +10,7 @@
   "counts": {
     "internal_nodes": 125,
     "descendant_nodes": 125,
-    "child_topics": 3,
+    "child_topics": 2,
     "non_proof_plan_nodes": 125,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -20,46 +20,6 @@
     "visible_nodes_with_selected_proof_plans": 126
   },
   "nodes": [
-    {
-      "id": "social_choice.core.instance",
-      "title": "Social Choice Instance",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "social_choice/social_choice_core_instance.html",
-      "payload": "node_payloads/social_choice_core_instance.json"
-    },
-    {
-      "id": "social_choice.core.preference",
-      "title": "Preference Relation",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "social_choice/social_choice_core_preference.html",
-      "payload": "node_payloads/social_choice_core_preference.json"
-    },
-    {
-      "id": "social_choice.core.preference_profile",
-      "title": "Preference Profile",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "social_choice/social_choice_core_preference_profile.html",
-      "payload": "node_payloads/social_choice_core_preference_profile.json"
-    },
-    {
-      "id": "social_choice.core.solution_concept",
-      "title": "Solution Concept, Rule, and Correspondence",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "social_choice/social_choice_core_solution_concept.html",
-      "payload": "node_payloads/social_choice_core_solution_concept.json"
-    },
-    {
-      "id": "social_choice.core.strict_preference",
-      "title": "Strict Preference",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "social_choice/social_choice_core_strict_preference.html",
-      "payload": "node_payloads/social_choice_core_strict_preference.json"
-    },
     {
       "id": "social_choice.fair_division.allocation",
       "title": "Allocation",
@@ -813,6 +773,46 @@
       "payload": "node_payloads/social_choice_fair_division_welfare_monotone.json"
     },
     {
+      "id": "social_choice.instance",
+      "title": "Social Choice Instance",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "social_choice/social_choice_instance.html",
+      "payload": "node_payloads/social_choice_instance.json"
+    },
+    {
+      "id": "social_choice.preference",
+      "title": "Preference Relation",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "social_choice/social_choice_preference.html",
+      "payload": "node_payloads/social_choice_preference.json"
+    },
+    {
+      "id": "social_choice.preference_profile",
+      "title": "Preference Profile",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "social_choice/social_choice_preference_profile.html",
+      "payload": "node_payloads/social_choice_preference_profile.json"
+    },
+    {
+      "id": "social_choice.solution_concept",
+      "title": "Solution Concept, Rule, and Correspondence",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "social_choice/social_choice_solution_concept.html",
+      "payload": "node_payloads/social_choice_solution_concept.json"
+    },
+    {
+      "id": "social_choice.strict_preference",
+      "title": "Strict Preference",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "social_choice/social_choice_strict_preference.html",
+      "payload": "node_payloads/social_choice_strict_preference.json"
+    },
+    {
       "id": "social_choice.voting.arrow_impossibility",
       "title": "Arrow's Impossibility Theorem",
       "kind": "theorem",
@@ -1022,26 +1022,6 @@
     }
   ],
   "edges": [
-    {
-      "from": "social_choice.core.preference",
-      "to": "social_choice.core.instance",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.core.preference",
-      "to": "social_choice.core.preference_profile",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.core.instance",
-      "to": "social_choice.core.solution_concept",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.core.preference",
-      "to": "social_choice.core.strict_preference",
-      "kind": "uses"
-    },
     {
       "from": "social_choice.fair_division.allocation",
       "to": "social_choice.fair_division.cardinal_instance",
@@ -1378,12 +1358,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference",
+      "from": "social_choice.fair_division.share_instance",
       "to": "social_choice.fair_division.divisible.ordinal_instance",
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.share_instance",
+      "from": "social_choice.preference",
       "to": "social_choice.fair_division.divisible.ordinal_instance",
       "kind": "uses"
     },
@@ -1938,17 +1918,17 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference",
-      "to": "social_choice.fair_division.indivisible.ordinal_instance",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.allocation",
       "to": "social_choice.fair_division.indivisible.ordinal_instance",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.share_instance",
+      "to": "social_choice.fair_division.indivisible.ordinal_instance",
+      "kind": "uses"
+    },
+    {
+      "from": "social_choice.preference",
       "to": "social_choice.fair_division.indivisible.ordinal_instance",
       "kind": "uses"
     },
@@ -2098,12 +2078,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference",
+      "from": "social_choice.fair_division.allocation",
       "to": "social_choice.fair_division.instance",
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.allocation",
+      "from": "social_choice.preference",
       "to": "social_choice.fair_division.instance",
       "kind": "uses"
     },
@@ -2118,17 +2098,17 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference",
-      "to": "social_choice.fair_division.share_instance",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.allocation",
       "to": "social_choice.fair_division.share_instance",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.instance",
+      "to": "social_choice.fair_division.share_instance",
+      "kind": "uses"
+    },
+    {
+      "from": "social_choice.preference",
       "to": "social_choice.fair_division.share_instance",
       "kind": "uses"
     },
@@ -2165,6 +2145,26 @@
     {
       "from": "social_choice.fair_division.utilitarian_welfare",
       "to": "social_choice.fair_division.welfare_monotone",
+      "kind": "uses"
+    },
+    {
+      "from": "social_choice.preference",
+      "to": "social_choice.instance",
+      "kind": "uses"
+    },
+    {
+      "from": "social_choice.preference",
+      "to": "social_choice.preference_profile",
+      "kind": "uses"
+    },
+    {
+      "from": "social_choice.instance",
+      "to": "social_choice.solution_concept",
+      "kind": "uses"
+    },
+    {
+      "from": "social_choice.preference",
+      "to": "social_choice.strict_preference",
       "kind": "uses"
     },
     {
@@ -2218,12 +2218,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference_profile",
+      "from": "social_choice.preference_profile",
       "to": "social_choice.voting.borda_score",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.borda_score",
       "kind": "uses"
     },
@@ -2288,7 +2288,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.dictatorial_scf",
       "kind": "uses"
     },
@@ -2298,7 +2298,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.dictatorial_swf",
       "kind": "uses"
     },
@@ -2343,7 +2343,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.iia_strict",
       "kind": "uses"
     },
@@ -2358,7 +2358,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.is_decisive_for",
       "kind": "uses"
     },
@@ -2373,12 +2373,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference_profile",
+      "from": "social_choice.preference_profile",
       "to": "social_choice.voting.majority_prefers",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.majority_prefers",
       "kind": "uses"
     },
@@ -2398,7 +2398,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.monotonic_scf",
       "kind": "uses"
     },
@@ -2433,22 +2433,22 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference_profile",
+      "from": "social_choice.preference_profile",
       "to": "social_choice.voting.plurality_score",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.plurality_score",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference_profile",
+      "from": "social_choice.preference_profile",
       "to": "social_choice.voting.scf",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.strategyproof",
       "kind": "uses"
     },
@@ -2468,17 +2468,17 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference",
+      "from": "social_choice.preference",
       "to": "social_choice.voting.swf",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.preference_profile",
+      "from": "social_choice.preference_profile",
       "to": "social_choice.voting.swf",
       "kind": "uses"
     },
     {
-      "from": "social_choice.core.strict_preference",
+      "from": "social_choice.strict_preference",
       "to": "social_choice.voting.unanimity",
       "kind": "uses"
     },
@@ -2995,27 +2995,10 @@
   ],
   "proof_plan_attachments": [],
   "child_topics": [
-    "social_choice.core",
     "social_choice.fair_division",
     "social_choice.voting"
   ],
   "child_topic_nodes": [
-    {
-      "id": "social_choice.core",
-      "title": "Social Choice.Core",
-      "depth": 2,
-      "parent": "social_choice",
-      "node_count": 5,
-      "direct_node_count": 5,
-      "kind_counts": {
-        "definition": 5
-      },
-      "status_counts": {
-        "formalized": 5
-      },
-      "href": "social_choice/core/index.html",
-      "children": []
-    },
     {
       "id": "social_choice.fair_division",
       "title": "Social Choice.Fair Division",

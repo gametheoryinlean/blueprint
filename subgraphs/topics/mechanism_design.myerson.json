@@ -14,26 +14,26 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 0,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 3,
+    "visible_nodes_with_selected_proof_plans": 3
   },
   "nodes": [
     {
       "id": "mechanism_design.myerson.monotonicity_characterization",
       "title": "Myerson Monotonicity Characterization",
       "kind": "theorem",
-      "status": "staged",
-      "href": "mechanism_design/myerson/mechanism_design_myerson_monotonicity_characterization.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_monotonicity_characterization.html",
       "payload": "node_payloads/mechanism_design_myerson_monotonicity_characterization.json"
     },
     {
       "id": "mechanism_design.myerson.payment_formula",
       "title": "Myerson Payment Formula",
       "kind": "definition",
-      "status": "staged",
-      "href": "mechanism_design/myerson/mechanism_design_myerson_payment_formula.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_payment_formula.html",
       "payload": "node_payloads/mechanism_design_myerson_payment_formula.json"
     }
   ],
@@ -44,38 +44,8 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [
-    {
-      "id": "auction.knapsack",
-      "title": "Auction.Knapsack",
-      "href": "auction/knapsack/index.html",
-      "role": "dependent",
-      "node_count": 4
-    },
-    {
-      "id": "mechanism_design.transfer",
-      "title": "Mechanism Design.Transfer",
-      "href": "mechanism_design/transfer/index.html",
-      "role": "dependency",
-      "node_count": 3
-    }
-  ],
-  "boundary_edges": [
-    {
-      "from": "topic:mechanism_design.transfer",
-      "to": "mechanism_design.myerson.payment_formula",
-      "kind": "boundary_dependency",
-      "topic": "mechanism_design.transfer",
-      "count": 1
-    },
-    {
-      "from": "mechanism_design.myerson.monotonicity_characterization",
-      "to": "topic:auction.knapsack",
-      "kind": "boundary_dependent",
-      "topic": "auction.knapsack",
-      "count": 1
-    }
-  ],
+  "boundary_topics": [],
+  "boundary_edges": [],
   "keywords": [
     {
       "id": "dsic",

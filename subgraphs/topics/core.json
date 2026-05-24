@@ -4,20 +4,20 @@
     "title": "Core",
     "href": "core/index.html",
     "parent": null,
-    "node_count": 13,
-    "descendant_node_count": 13
+    "node_count": 18,
+    "descendant_node_count": 19
   },
   "counts": {
-    "internal_nodes": 13,
-    "descendant_nodes": 13,
-    "child_topics": 4,
-    "non_proof_plan_nodes": 13,
+    "internal_nodes": 18,
+    "descendant_nodes": 19,
+    "child_topics": 6,
+    "non_proof_plan_nodes": 18,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 16,
-    "visible_nodes_with_selected_proof_plans": 16
+    "visible_nodes_without_proof_plans": 21,
+    "visible_nodes_with_selected_proof_plans": 21
   },
   "nodes": [
     {
@@ -27,6 +27,46 @@
       "status": "formalized",
       "href": "core/core_argmax_list_arg_max_on.html",
       "payload": "node_payloads/core_argmax_list_arg_max_on.json"
+    },
+    {
+      "id": "core.linear_algebra.farkas_lemma",
+      "title": "Farkas Lemma",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "core/core_linear_algebra_farkas_lemma.html",
+      "payload": "node_payloads/core_linear_algebra_farkas_lemma.json"
+    },
+    {
+      "id": "core.linear_algebra.theorem_of_alternative",
+      "title": "Theorem Of The Alternative",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "core/core_linear_algebra_theorem_of_alternative.html",
+      "payload": "node_payloads/core_linear_algebra_theorem_of_alternative.json"
+    },
+    {
+      "id": "core.linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "title": "Fourier-Motzkin Elimination Step",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "core/core_linear_algebra_theorem_of_alternative_fourier_motzkin.html",
+      "payload": "node_payloads/core_linear_algebra_theorem_of_alternative_fourier_motzkin.json"
+    },
+    {
+      "id": "core.linear_programming.strong_complementarity",
+      "title": "Strong Complementarity For Linear Programming",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "core/core_linear_programming_strong_complementarity.html",
+      "payload": "node_payloads/core_linear_programming_strong_complementarity.json"
+    },
+    {
+      "id": "core.linear_programming.strong_duality",
+      "title": "Strong Duality For Linear Programming",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "core/core_linear_programming_strong_duality.html",
+      "payload": "node_payloads/core_linear_programming_strong_duality.json"
     },
     {
       "id": "core.preference.abstract_relation",
@@ -132,6 +172,31 @@
       "kind": "uses"
     },
     {
+      "from": "core.linear_algebra.theorem_of_alternative",
+      "to": "core.linear_algebra.farkas_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "core.linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "to": "core.linear_algebra.theorem_of_alternative",
+      "kind": "uses"
+    },
+    {
+      "from": "core.linear_algebra.farkas_lemma",
+      "to": "core.linear_programming.strong_complementarity",
+      "kind": "uses"
+    },
+    {
+      "from": "core.linear_programming.strong_duality",
+      "to": "core.linear_programming.strong_complementarity",
+      "kind": "uses"
+    },
+    {
+      "from": "core.linear_algebra.farkas_lemma",
+      "to": "core.linear_programming.strong_duality",
+      "kind": "uses"
+    },
+    {
       "from": "core.preference.indifferent",
       "to": "core.preference.represents_preference",
       "kind": "uses"
@@ -218,6 +283,13 @@
       "count": 1
     },
     {
+      "from": "core.linear_programming.strong_complementarity",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
       "from": "core.simplex.bounded_by_value",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
@@ -232,6 +304,13 @@
       "count": 2
     },
     {
+      "from": "core.linear_programming.strong_duality",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
       "from": "core.simplex.bounded_by_value",
       "to": "topic:zero_sum",
       "kind": "boundary_proof_plan_dependent",
@@ -241,9 +320,21 @@
   ],
   "keywords": [
     {
+      "id": "alternatives",
+      "title": "alternatives",
+      "href": "keywords/alternatives.html",
+      "count": 2
+    },
+    {
       "id": "argmax",
       "title": "argmax",
       "href": "keywords/argmax.html",
+      "count": 1
+    },
+    {
+      "id": "complementarity",
+      "title": "complementarity",
+      "href": "keywords/complementarity.html",
       "count": 1
     },
     {
@@ -257,6 +348,12 @@
       "title": "convex-combination",
       "href": "keywords/convex-combination.html",
       "count": 1
+    },
+    {
+      "id": "convexity",
+      "title": "convexity",
+      "href": "keywords/convexity.html",
+      "count": 2
     },
     {
       "id": "core",
@@ -277,10 +374,34 @@
       "count": 1
     },
     {
+      "id": "duality",
+      "title": "duality",
+      "href": "keywords/duality.html",
+      "count": 2
+    },
+    {
+      "id": "elimination",
+      "title": "elimination",
+      "href": "keywords/elimination.html",
+      "count": 1
+    },
+    {
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
       "count": 1
+    },
+    {
+      "id": "farkas",
+      "title": "farkas",
+      "href": "keywords/farkas.html",
+      "count": 1
+    },
+    {
+      "id": "fourier-motzkin",
+      "title": "fourier-motzkin",
+      "href": "keywords/fourier-motzkin.html",
+      "count": 2
     },
     {
       "id": "fubini",
@@ -293,6 +414,18 @@
       "title": "indifference",
       "href": "keywords/indifference.html",
       "count": 1
+    },
+    {
+      "id": "linear-algebra",
+      "title": "linear-algebra",
+      "href": "keywords/linear-algebra.html",
+      "count": 3
+    },
+    {
+      "id": "linear-programming",
+      "title": "linear-programming",
+      "href": "keywords/linear-programming.html",
+      "count": 2
     },
     {
       "id": "minimax",
@@ -364,6 +497,8 @@
   "proof_plan_attachments": [],
   "child_topics": [
     "core.argmax",
+    "core.linear_algebra",
+    "core.linear_programming",
     "core.preference",
     "core.profile",
     "core.simplex"
@@ -384,6 +519,43 @@
       },
       "href": "core/argmax/index.html",
       "children": []
+    },
+    {
+      "id": "core.linear_algebra",
+      "title": "Core.Linear Algebra",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "lemma": 1,
+        "theorem": 3
+      },
+      "status_counts": {
+        "formalized": 4
+      },
+      "href": "core/linear_algebra/index.html",
+      "children": [
+        "core.linear_algebra.alternatives"
+      ]
+    },
+    {
+      "id": "core.linear_programming",
+      "title": "Core.Linear Programming",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "formalized": 2
+      },
+      "href": "core/linear_programming/index.html",
+      "children": [
+        "core.linear_programming.duality"
+      ]
     },
     {
       "id": "core.preference",

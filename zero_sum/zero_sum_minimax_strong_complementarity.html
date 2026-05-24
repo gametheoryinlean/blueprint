@@ -51,6 +51,20 @@
             <summary><a href="../core/index.html">Core</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../core/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_algebra">
+            <summary><a href="../core/linear_algebra/index.html">Linear Algebra</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_algebra/alternatives/index.html">Alternatives</a>
+        </li></ul>
+          </details>
+        </li><li class="topic-parent">
+          <details data-topic-root="core.linear_programming">
+            <summary><a href="../core/linear_programming/index.html">Linear Programming</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../core/linear_programming/duality/index.html">Duality</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="../core/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -91,24 +105,6 @@
         </li>
       
         <li class="topic-parent">
-          <details data-topic-root="linear_algebra">
-            <summary><a href="../linear_algebra/index.html">Linear Algebra</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
-          <details data-topic-root="linear_programming">
-            <summary><a href="../linear_programming/index.html">Linear Programming</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../linear_programming/duality/index.html">Duality</a>
-        </li></ul>
-          </details>
-        </li>
-      
-        <li class="topic-parent">
           <details data-topic-root="mechanism_design">
             <summary><a href="../mechanism_design/index.html">Mechanism Design</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -132,9 +128,7 @@
         <li class="topic-parent">
           <details data-topic-root="social_choice">
             <summary><a href="../social_choice/index.html">Social Choice</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
-          <a href="../social_choice/core/index.html">Core</a>
-        </li><li class="topic-parent">
+            <ul class="topic-children"><li class="topic-parent">
           <details data-topic-root="social_choice.fair_division">
             <summary><a href="../social_choice/fair_division/index.html">Fair Division</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -829,7 +823,7 @@
         
         <li><a href="zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a></li>
         
-        <li><a href="../linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a></li>
+        <li><a href="../core/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a></li>
         
       </ul>
     </div>
@@ -844,11 +838,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/StrategicGame/StrongComplementarity.lean#L69"><code>MatrixGame.exists_strong_complementary_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/635460a53ab35db6ae541ff0c66525e89c766b20/EconCSLib/StrategicGame/StrongComplementarity.lean#L69"><code>MatrixGame.exists_strong_complementary_pair</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 65f9506, EconCSLib.StrategicGame.StrongComplementarity
+            EconCSLib @ 635460a, EconCSLib.StrategicGame.StrongComplementarity
           </span>
           
           
@@ -883,7 +877,7 @@ holds for every optimal pair: if $x^*_i &gt; 0$, then row $i$ obtains the
 value against $y^*$; dually for columns.</p>
 <p><em>The reverse direction — existence of an optimal pair where every
 best-response row has positive probability</em> — comes from
-<a class="node-ref" data-node-id="linear_programming.strong_complementarity" href="../linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> applied to the
+<a class="node-ref" data-node-id="core.linear_programming.strong_complementarity" href="../core/linear_programming/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> applied to the
 matrix-game LP. The Lean implementation
 (<code>MatrixGame.exists_strong_complementary_pair</code>) carries out:</p>
 <h3>Step 1 — Shift to make payoffs strictly positive</h3>
@@ -907,7 +901,7 @@ $$</p>
 $x'^0 := x^0 / v'$ and $u'^0 := y^0 / v'$. Both have LP objective
 $1/v'$, hence are LP-optimal by weak duality.</p>
 <h3>Step 4 — Apply LP strong complementarity</h3>
-<p>Invoke <a class="node-ref" data-node-id="linear_programming.strong_complementarity" href="../linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> to obtain a
+<p>Invoke <a class="node-ref" data-node-id="core.linear_programming.strong_complementarity" href="../core/linear_programming/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> to obtain a
 strong-CS optimal LP pair $(x'^*, u'^*)$.</p>
 <h3>Step 5 — Rescale back and translate the biconditional</h3>
 <p>Set $x^*_i := x'^*(e\,i) \cdot v'$ and $y^*_j := u'^*_j \cdot v'$
@@ -937,7 +931,7 @@ then $x^*_i &gt; 0$. Symmetric argument for columns. $\square$</p>
 <li>The shift in Step 1 is essential for the standard-form LP reduction;
   without it the value LP "max $v$" has $v$ free, which doesn't fit
   the <code>min ⟨c, x⟩ s.t. Ax ≥ b, x ≥ 0</code> form of
-  <a class="node-ref" data-node-id="linear_programming.strong_complementarity" href="../linear_programming/linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>.</li>
+  <a class="node-ref" data-node-id="core.linear_programming.strong_complementarity" href="../core/linear_programming/core_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>.</li>
 <li>The Lean implementation restricts <code>I J : Type</code> (= <code>Type 0</code>) so the
   <code>Fintype.sum_equiv</code> adapter that bridges <code>I</code> and <code>Fin (#I)</code> lines up
   with the LP theorem's universe ($\mathbb{R} : \mathrm{Type}\,0$).</li>

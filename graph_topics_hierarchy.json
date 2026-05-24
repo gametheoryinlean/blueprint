@@ -41,18 +41,21 @@
       "title": "Core",
       "depth": 1,
       "parent": null,
-      "node_count": 13,
-      "direct_node_count": 13,
+      "node_count": 19,
+      "direct_node_count": 18,
       "kind_counts": {
         "definition": 10,
-        "lemma": 3
+        "lemma": 4,
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 13
+        "formalized": 19
       },
       "href": "core/index.html",
       "children": [
         "core.argmax",
+        "core.linear_algebra",
+        "core.linear_programming",
         "core.preference",
         "core.profile",
         "core.simplex"
@@ -119,55 +122,18 @@
       "children": []
     },
     {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "depth": 1,
-      "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
-      "kind_counts": {
-        "lemma": 1,
-        "theorem": 3
-      },
-      "status_counts": {
-        "formalized": 4
-      },
-      "href": "linear_algebra/index.html",
-      "children": [
-        "linear_algebra.alternatives"
-      ]
-    },
-    {
-      "id": "linear_programming",
-      "title": "Linear Programming",
-      "depth": 1,
-      "parent": null,
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "linear_programming/index.html",
-      "children": [
-        "linear_programming.duality"
-      ]
-    },
-    {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "depth": 1,
       "parent": null,
       "node_count": 15,
-      "direct_node_count": 0,
+      "direct_node_count": 15,
       "kind_counts": {
         "definition": 11,
         "theorem": 4
       },
       "status_counts": {
-        "staged": 15
+        "formalized": 15
       },
       "href": "mechanism_design/index.html",
       "children": [
@@ -212,7 +178,6 @@
       },
       "href": "social_choice/index.html",
       "children": [
-        "social_choice.core",
         "social_choice.fair_division",
         "social_choice.voting"
       ]
@@ -381,18 +346,21 @@
       "title": "Core",
       "depth": 1,
       "parent": null,
-      "node_count": 13,
-      "direct_node_count": 13,
+      "node_count": 19,
+      "direct_node_count": 18,
       "kind_counts": {
         "definition": 10,
-        "lemma": 3
+        "lemma": 4,
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 13
+        "formalized": 19
       },
       "href": "core/index.html",
       "children": [
         "core.argmax",
+        "core.linear_algebra",
+        "core.linear_programming",
         "core.preference",
         "core.profile",
         "core.simplex"
@@ -412,6 +380,76 @@
         "formalized": 1
       },
       "href": "core/argmax/index.html",
+      "children": []
+    },
+    "core.linear_algebra": {
+      "id": "core.linear_algebra",
+      "title": "Core.Linear Algebra",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "lemma": 1,
+        "theorem": 3
+      },
+      "status_counts": {
+        "formalized": 4
+      },
+      "href": "core/linear_algebra/index.html",
+      "children": [
+        "core.linear_algebra.alternatives"
+      ]
+    },
+    "core.linear_algebra.alternatives": {
+      "id": "core.linear_algebra.alternatives",
+      "title": "Core.Linear Algebra.Alternatives",
+      "depth": 3,
+      "parent": "core.linear_algebra",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "lemma": 1,
+        "theorem": 2
+      },
+      "status_counts": {
+        "formalized": 3
+      },
+      "href": "core/linear_algebra/alternatives/index.html",
+      "children": []
+    },
+    "core.linear_programming": {
+      "id": "core.linear_programming",
+      "title": "Core.Linear Programming",
+      "depth": 2,
+      "parent": "core",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "formalized": 2
+      },
+      "href": "core/linear_programming/index.html",
+      "children": [
+        "core.linear_programming.duality"
+      ]
+    },
+    "core.linear_programming.duality": {
+      "id": "core.linear_programming.duality",
+      "title": "Core.Linear Programming.Duality",
+      "depth": 3,
+      "parent": "core.linear_programming",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "formalized": 2
+      },
+      "href": "core/linear_programming/duality/index.html",
       "children": []
     },
     "core.preference": {
@@ -641,89 +679,19 @@
       "href": "lattice/index.html",
       "children": []
     },
-    "linear_algebra": {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "depth": 1,
-      "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
-      "kind_counts": {
-        "lemma": 1,
-        "theorem": 3
-      },
-      "status_counts": {
-        "formalized": 4
-      },
-      "href": "linear_algebra/index.html",
-      "children": [
-        "linear_algebra.alternatives"
-      ]
-    },
-    "linear_algebra.alternatives": {
-      "id": "linear_algebra.alternatives",
-      "title": "Linear Algebra.Alternatives",
-      "depth": 2,
-      "parent": "linear_algebra",
-      "node_count": 3,
-      "direct_node_count": 3,
-      "kind_counts": {
-        "lemma": 1,
-        "theorem": 2
-      },
-      "status_counts": {
-        "formalized": 3
-      },
-      "href": "linear_algebra/alternatives/index.html",
-      "children": []
-    },
-    "linear_programming": {
-      "id": "linear_programming",
-      "title": "Linear Programming",
-      "depth": 1,
-      "parent": null,
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "linear_programming/index.html",
-      "children": [
-        "linear_programming.duality"
-      ]
-    },
-    "linear_programming.duality": {
-      "id": "linear_programming.duality",
-      "title": "Linear Programming.Duality",
-      "depth": 2,
-      "parent": "linear_programming",
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "linear_programming/duality/index.html",
-      "children": []
-    },
     "mechanism_design": {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "depth": 1,
       "parent": null,
       "node_count": 15,
-      "direct_node_count": 0,
+      "direct_node_count": 15,
       "kind_counts": {
         "definition": 11,
         "theorem": 4
       },
       "status_counts": {
-        "staged": 15
+        "formalized": 15
       },
       "href": "mechanism_design/index.html",
       "children": [
@@ -746,7 +714,7 @@
         "theorem": 1
       },
       "status_counts": {
-        "staged": 5
+        "formalized": 5
       },
       "href": "mechanism_design/basic/index.html",
       "children": []
@@ -763,7 +731,7 @@
         "theorem": 1
       },
       "status_counts": {
-        "staged": 3
+        "formalized": 3
       },
       "href": "mechanism_design/bayesian/index.html",
       "children": []
@@ -780,7 +748,7 @@
         "theorem": 1
       },
       "status_counts": {
-        "staged": 2
+        "formalized": 2
       },
       "href": "mechanism_design/myerson/index.html",
       "children": []
@@ -796,7 +764,7 @@
         "definition": 3
       },
       "status_counts": {
-        "staged": 3
+        "formalized": 3
       },
       "href": "mechanism_design/transfer/index.html",
       "children": []
@@ -813,7 +781,7 @@
         "theorem": 1
       },
       "status_counts": {
-        "staged": 2
+        "formalized": 2
       },
       "href": "mechanism_design/vcg/index.html",
       "children": []
@@ -852,26 +820,9 @@
       },
       "href": "social_choice/index.html",
       "children": [
-        "social_choice.core",
         "social_choice.fair_division",
         "social_choice.voting"
       ]
-    },
-    "social_choice.core": {
-      "id": "social_choice.core",
-      "title": "Social Choice.Core",
-      "depth": 2,
-      "parent": "social_choice",
-      "node_count": 5,
-      "direct_node_count": 5,
-      "kind_counts": {
-        "definition": 5
-      },
-      "status_counts": {
-        "formalized": 5
-      },
-      "href": "social_choice/core/index.html",
-      "children": []
     },
     "social_choice.fair_division": {
       "id": "social_choice.fair_division",

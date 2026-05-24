@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 1,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 7,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -32,11 +32,39 @@
   "edges": [],
   "boundary_topics": [
     {
-      "id": "extensive_game.perfect_information",
-      "title": "Extensive Game.Perfect Information",
-      "href": "extensive_game/perfect_information/index.html",
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 131
+    },
+    {
+      "id": "strategic_games.core",
+      "title": "Strategic Games.Core",
+      "href": "strategic_games/core/index.html",
+      "role": "dependency",
+      "node_count": 10
+    },
+    {
+      "id": "strategic_games.dominance",
+      "title": "Strategic Games.Dominance",
+      "href": "strategic_games/dominance/index.html",
       "role": "dependency",
       "node_count": 9
+    },
+    {
+      "id": "strategic_games.equilibrium",
+      "title": "Strategic Games.Equilibrium",
+      "href": "strategic_games/equilibrium/index.html",
+      "role": "dependency",
+      "node_count": 14
+    },
+    {
+      "id": "strategic_games.refinements",
+      "title": "Strategic Games.Refinements",
+      "href": "strategic_games/refinements/index.html",
+      "role": "dependency",
+      "node_count": 15
     },
     {
       "id": "strategic_games.repeated",
@@ -44,6 +72,13 @@
       "href": "strategic_games/repeated/index.html",
       "role": "dependency",
       "node_count": 12
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 86
     }
   ],
   "boundary_edges": [
@@ -55,10 +90,80 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 5
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "topic:extensive_game.normal_form",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "topic:extensive_game.perfect_information",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.core",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.core",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.dominance",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.dominance",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.refinements",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.refinements",
+      "count": 3
+    },
+    {
+      "from": "topic:strategic_games.refinements",
+      "to": "topic:extensive_game.examples",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.refinements",
+      "count": 1
+    },
+    {
       "from": "topic:strategic_games.repeated",
       "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
       "kind": "boundary_dependency",
       "topic": "strategic_games.repeated",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:extensive_game.examples",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "topic:extensive_game.perfect_information",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
       "count": 1
     }
   ],
