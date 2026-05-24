@@ -1574,8 +1574,8 @@
       "used_by": [
         "fixed_point.kakutani_fixed_point",
         "strategic_games.continuous.convex_game_nash_exists",
-        "strategic_games.core.symmetric_mixed_equilibrium",
         "strategic_games.equilibrium.nash_existence_finite_games",
+        "strategic_games.equilibrium.symmetric_mixed_equilibrium",
         "strategic_games.variational.evaluation_game_equilibrium"
       ]
     },
@@ -6316,8 +6316,8 @@
         "extensive_game.equilibrium.local_characterization_behavioral_equilibrium",
         "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium",
         "strategic_games.continuous.supermodular_best_response_lattice",
-        "strategic_games.core.best_response_face",
         "strategic_games.core.br_invariance",
+        "strategic_games.correlated.best_response_face",
         "strategic_games.correlated.correlated_best_response_not_independent",
         "strategic_games.correlated.obedience_condition",
         "strategic_games.dominance.rationalizable_strategy",
@@ -6556,23 +6556,6 @@
       ]
     },
     {
-      "id": "strategic_games.core.best_response_face",
-      "title": "Best Response Face",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "best-response",
-        "correlation"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.best_response",
-        "strategic_games.core.mixed_strategy",
-        "strategic_games.correlated.correlated_strategy"
-      ]
-    },
-    {
       "id": "strategic_games.core.best_response_mfogt",
       "title": "Best Response",
       "kind": "definition",
@@ -6663,8 +6646,8 @@
       ],
       "used_by": [
         "strategic_games.bayesian.bayesian_strategy",
-        "strategic_games.core.best_response_face",
         "strategic_games.core.mixed_extension",
+        "strategic_games.correlated.best_response_face",
         "strategic_games.correlated.canonical_correlation_device",
         "strategic_games.correlated.correlated_best_response_not_independent",
         "strategic_games.correlated.correlated_equilibrium",
@@ -6741,26 +6724,9 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "strategic_games.core.symmetric_mixed_equilibrium",
         "strategic_games.dynamics.replicator_dynamics",
+        "strategic_games.equilibrium.symmetric_mixed_equilibrium",
         "strategic_games.evolution.evolutionarily_stable_strategy"
-      ]
-    },
-    {
-      "id": "strategic_games.core.symmetric_mixed_equilibrium",
-      "title": "Symmetric Mixed Equilibrium",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "symmetry",
-        "nash-equilibrium"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "fixed_point.brouwer_compact_convex",
-        "strategic_games.core.symmetric_game",
-        "strategic_games.equilibrium.nash_existence_finite_games"
       ]
     },
     {
@@ -6781,6 +6747,23 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.strategy_profile"
+      ]
+    },
+    {
+      "id": "strategic_games.correlated.best_response_face",
+      "title": "Best Response Face",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "best-response",
+        "correlation"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.best_response",
+        "strategic_games.core.mixed_strategy",
+        "strategic_games.correlated.correlated_strategy"
       ]
     },
     {
@@ -6889,7 +6872,7 @@
         "strategic_games.strategy_profile"
       ],
       "used_by": [
-        "strategic_games.core.best_response_face",
+        "strategic_games.correlated.best_response_face",
         "strategic_games.correlated.correlated_best_response_not_independent"
       ]
     },
@@ -7464,8 +7447,8 @@
         "extensive_game.equilibrium.behavioral_equilibrium_exists",
         "fixed_point.kakutani_from_two_player_nash",
         "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
-        "strategic_games.core.symmetric_mixed_equilibrium",
         "strategic_games.correlated.correlated_equilibrium_exists",
+        "strategic_games.equilibrium.symmetric_mixed_equilibrium",
         "strategic_games.refinements.perfect_equilibrium_exists"
       ]
     },
@@ -7499,23 +7482,24 @@
         "strategic_games.nash_equilibrium"
       ],
       "used_by": [
-        "strategic_games.equilibrium.strict_equilibrium_is_proper"
+        "strategic_games.refinements.strict_equilibrium_is_proper"
       ]
     },
     {
-      "id": "strategic_games.equilibrium.strict_equilibrium_is_proper",
-      "title": "Strict Equilibrium Is Proper",
-      "kind": "proposition",
+      "id": "strategic_games.equilibrium.symmetric_mixed_equilibrium",
+      "title": "Symmetric Mixed Equilibrium",
+      "kind": "theorem",
       "status": "staged",
       "tags": [
         "strategic-game",
-        "equilibrium-refinement",
-        "strict-equilibrium"
+        "symmetry",
+        "nash-equilibrium"
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.equilibrium.strict_equilibrium",
-        "strategic_games.refinements.proper_equilibrium"
+        "fixed_point.brouwer_compact_convex",
+        "strategic_games.core.symmetric_game",
+        "strategic_games.equilibrium.nash_existence_finite_games"
       ]
     },
     {
@@ -8202,9 +8186,9 @@
       "used_by": [
         "extensive_game.equilibrium.proper_equilibrium_induces_sequential",
         "extensive_game.equilibrium.strategic_stability",
-        "strategic_games.equilibrium.strict_equilibrium_is_proper",
         "strategic_games.refinements.proper_equilibrium_exists",
-        "strategic_games.refinements.proper_vs_perfect_equilibrium_examples"
+        "strategic_games.refinements.proper_vs_perfect_equilibrium_examples",
+        "strategic_games.refinements.strict_equilibrium_is_proper"
       ]
     },
     {
@@ -8278,6 +8262,22 @@
       ],
       "used_by": [
         "strategic_games.refinements.discontinuous_nash_existence"
+      ]
+    },
+    {
+      "id": "strategic_games.refinements.strict_equilibrium_is_proper",
+      "title": "Strict Equilibrium Is Proper",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "equilibrium-refinement",
+        "strict-equilibrium"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.equilibrium.strict_equilibrium",
+        "strategic_games.refinements.proper_equilibrium"
       ]
     },
     {
@@ -13059,18 +13059,6 @@
       "to": "strategic_games.continuous.supermodular_game_nash_exists"
     },
     {
-      "from": "strategic_games.best_response",
-      "to": "strategic_games.core.best_response_face"
-    },
-    {
-      "from": "strategic_games.core.mixed_strategy",
-      "to": "strategic_games.core.best_response_face"
-    },
-    {
-      "from": "strategic_games.correlated.correlated_strategy",
-      "to": "strategic_games.core.best_response_face"
-    },
-    {
       "from": "strategic_games.unilateral_deviation",
       "to": "strategic_games.core.best_response_mfogt"
     },
@@ -13103,20 +13091,20 @@
       "to": "strategic_games.core.symmetric_game"
     },
     {
-      "from": "fixed_point.brouwer_compact_convex",
-      "to": "strategic_games.core.symmetric_mixed_equilibrium"
-    },
-    {
-      "from": "strategic_games.core.symmetric_game",
-      "to": "strategic_games.core.symmetric_mixed_equilibrium"
-    },
-    {
-      "from": "strategic_games.equilibrium.nash_existence_finite_games",
-      "to": "strategic_games.core.symmetric_mixed_equilibrium"
-    },
-    {
       "from": "strategic_games.strategy_profile",
       "to": "strategic_games.core.unilateral_deviation_mfogt"
+    },
+    {
+      "from": "strategic_games.best_response",
+      "to": "strategic_games.correlated.best_response_face"
+    },
+    {
+      "from": "strategic_games.core.mixed_strategy",
+      "to": "strategic_games.correlated.best_response_face"
+    },
+    {
+      "from": "strategic_games.correlated.correlated_strategy",
+      "to": "strategic_games.correlated.best_response_face"
     },
     {
       "from": "strategic_games.core.mixed_strategy",
@@ -13387,12 +13375,16 @@
       "to": "strategic_games.equilibrium.strict_equilibrium"
     },
     {
-      "from": "strategic_games.equilibrium.strict_equilibrium",
-      "to": "strategic_games.equilibrium.strict_equilibrium_is_proper"
+      "from": "fixed_point.brouwer_compact_convex",
+      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium"
     },
     {
-      "from": "strategic_games.refinements.proper_equilibrium",
-      "to": "strategic_games.equilibrium.strict_equilibrium_is_proper"
+      "from": "strategic_games.core.symmetric_game",
+      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium"
+    },
+    {
+      "from": "strategic_games.equilibrium.nash_existence_finite_games",
+      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium"
     },
     {
       "from": "strategic_games.dynamics.replicator_dynamics",
@@ -13657,6 +13649,14 @@
     {
       "from": "strategic_games.refinements.reny_solution",
       "to": "strategic_games.refinements.reny_solution_exists"
+    },
+    {
+      "from": "strategic_games.equilibrium.strict_equilibrium",
+      "to": "strategic_games.refinements.strict_equilibrium_is_proper"
+    },
+    {
+      "from": "strategic_games.refinements.proper_equilibrium",
+      "to": "strategic_games.refinements.strict_equilibrium_is_proper"
     },
     {
       "from": "strategic_games.repeated.stochastic_game",

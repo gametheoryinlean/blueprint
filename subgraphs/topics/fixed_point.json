@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
     {
@@ -92,13 +92,6 @@
       "node_count": 13
     },
     {
-      "id": "strategic_games.core",
-      "title": "Strategic Games.Core",
-      "href": "strategic_games/core/index.html",
-      "role": "dependent",
-      "node_count": 12
-    },
-    {
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
@@ -110,7 +103,7 @@
       "title": "Strategic Games.Refinements",
       "href": "strategic_games/refinements/index.html",
       "role": "dependent",
-      "node_count": 14
+      "node_count": 15
     },
     {
       "id": "strategic_games.variational",
@@ -130,17 +123,10 @@
     },
     {
       "from": "fixed_point.brouwer_compact_convex",
-      "to": "topic:strategic_games.core",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
-      "from": "fixed_point.brouwer_compact_convex",
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
-      "count": 1
+      "count": 2
     },
     {
       "from": "fixed_point.kakutani_fixed_point",

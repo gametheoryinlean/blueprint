@@ -4,20 +4,20 @@
     "title": "Strategic Games.Refinements",
     "href": "strategic_games/refinements/index.html",
     "parent": "strategic_games",
-    "node_count": 14,
-    "descendant_node_count": 14
+    "node_count": 15,
+    "descendant_node_count": 15
   },
   "counts": {
-    "internal_nodes": 14,
-    "descendant_nodes": 14,
+    "internal_nodes": 15,
+    "descendant_nodes": 15,
     "child_topics": 0,
-    "non_proof_plan_nodes": 14,
+    "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 23,
-    "visible_nodes_with_selected_proof_plans": 23
+    "visible_nodes_without_proof_plans": 24,
+    "visible_nodes_with_selected_proof_plans": 24
   },
   "nodes": [
     {
@@ -131,6 +131,14 @@
       "status": "staged",
       "href": "strategic_games/refinements/strategic_games_refinements_reny_solution_exists.html",
       "payload": "node_payloads/strategic_games_refinements_reny_solution_exists.json"
+    },
+    {
+      "id": "strategic_games.refinements.strict_equilibrium_is_proper",
+      "title": "Strict Equilibrium Is Proper",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "strategic_games/refinements/strategic_games_refinements_strict_equilibrium_is_proper.html",
+      "payload": "node_payloads/strategic_games_refinements_strict_equilibrium_is_proper.json"
     }
   ],
   "edges": [
@@ -218,6 +226,11 @@
       "from": "strategic_games.refinements.reny_solution",
       "to": "strategic_games.refinements.reny_solution_exists",
       "kind": "uses"
+    },
+    {
+      "from": "strategic_games.refinements.proper_equilibrium",
+      "to": "strategic_games.refinements.strict_equilibrium_is_proper",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -261,7 +274,7 @@
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
       "role": "dependency",
-      "node_count": 12
+      "node_count": 10
     },
     {
       "id": "strategic_games.dominance",
@@ -274,7 +287,7 @@
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
-      "role": "dependency_and_dependent",
+      "role": "dependency",
       "node_count": 14
     }
   ],
@@ -364,6 +377,13 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "strategic_games.refinements.strict_equilibrium_is_proper",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
+    },
+    {
       "from": "strategic_games.refinements.perfect_equilibrium",
       "to": "topic:extensive_game.equilibrium",
       "kind": "boundary_dependent",
@@ -382,13 +402,6 @@
       "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
       "topic": "extensive_game.examples",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.refinements.proper_equilibrium",
-      "to": "topic:strategic_games.equilibrium",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.equilibrium",
       "count": 1
     }
   ],
@@ -415,7 +428,7 @@
       "id": "equilibrium-refinement",
       "title": "equilibrium-refinement",
       "href": "keywords/equilibrium-refinement.html",
-      "count": 8
+      "count": 9
     },
     {
       "id": "example",
@@ -451,7 +464,13 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 14
+      "count": 15
+    },
+    {
+      "id": "strict-equilibrium",
+      "title": "strict-equilibrium",
+      "href": "keywords/strict-equilibrium.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],

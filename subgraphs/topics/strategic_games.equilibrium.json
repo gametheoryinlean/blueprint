@@ -125,12 +125,12 @@
       "payload": "node_payloads/strategic_games_equilibrium_strict_equilibrium.json"
     },
     {
-      "id": "strategic_games.equilibrium.strict_equilibrium_is_proper",
-      "title": "Strict Equilibrium Is Proper",
-      "kind": "proposition",
+      "id": "strategic_games.equilibrium.symmetric_mixed_equilibrium",
+      "title": "Symmetric Mixed Equilibrium",
+      "kind": "theorem",
       "status": "staged",
-      "href": "strategic_games/equilibrium/strategic_games_equilibrium_strict_equilibrium_is_proper.html",
-      "payload": "node_payloads/strategic_games_equilibrium_strict_equilibrium_is_proper.json"
+      "href": "strategic_games/equilibrium/strategic_games_equilibrium_symmetric_mixed_equilibrium.html",
+      "payload": "node_payloads/strategic_games_equilibrium_symmetric_mixed_equilibrium.json"
     }
   ],
   "edges": [
@@ -160,8 +160,8 @@
       "kind": "uses"
     },
     {
-      "from": "strategic_games.equilibrium.strict_equilibrium",
-      "to": "strategic_games.equilibrium.strict_equilibrium_is_proper",
+      "from": "strategic_games.equilibrium.nash_existence_finite_games",
+      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium",
       "kind": "uses"
     }
   ],
@@ -205,15 +205,15 @@
       "id": "strategic_games.core",
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 12
+      "role": "dependency",
+      "node_count": 10
     },
     {
       "id": "strategic_games.correlated",
       "title": "Strategic Games.Correlated",
       "href": "strategic_games/correlated/index.html",
       "role": "dependent",
-      "node_count": 11
+      "node_count": 12
     },
     {
       "id": "strategic_games.dynamics",
@@ -240,8 +240,8 @@
       "id": "strategic_games.refinements",
       "title": "Strategic Games.Refinements",
       "href": "strategic_games/refinements/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 14
+      "role": "dependent",
+      "node_count": 15
     }
   ],
   "boundary_edges": [
@@ -262,6 +262,13 @@
     {
       "from": "topic:fixed_point",
       "to": "strategic_games.equilibrium.nash_existence_finite_games",
+      "kind": "boundary_dependency",
+      "topic": "fixed_point",
+      "count": 1
+    },
+    {
+      "from": "topic:fixed_point",
+      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium",
       "kind": "boundary_dependency",
       "topic": "fixed_point",
       "count": 1
@@ -351,17 +358,17 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games.core",
+      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.core",
+      "count": 1
+    },
+    {
       "from": "topic:strategic_games.payoff_geometry",
       "to": "strategic_games.equilibrium.nash_payoffs_are_individually_rational",
       "kind": "boundary_dependency",
       "topic": "strategic_games.payoff_geometry",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.refinements",
-      "to": "strategic_games.equilibrium.strict_equilibrium_is_proper",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.refinements",
       "count": 1
     },
     {
@@ -390,13 +397,6 @@
       "to": "topic:strategic_games.continuous",
       "kind": "boundary_dependent",
       "topic": "strategic_games.continuous",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.equilibrium.nash_existence_finite_games",
-      "to": "topic:strategic_games.core",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.core",
       "count": 1
     },
     {
@@ -454,6 +454,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.refinements",
       "count": 1
+    },
+    {
+      "from": "strategic_games.equilibrium.strict_equilibrium",
+      "to": "topic:strategic_games.refinements",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.refinements",
+      "count": 1
     }
   ],
   "keywords": [
@@ -474,12 +481,6 @@
       "title": "continuous-game",
       "href": "keywords/continuous-game.html",
       "count": 2
-    },
-    {
-      "id": "equilibrium-refinement",
-      "title": "equilibrium-refinement",
-      "href": "keywords/equilibrium-refinement.html",
-      "count": 1
     },
     {
       "id": "equilibrium-selection",
@@ -527,7 +528,7 @@
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 9
+      "count": 10
     },
     {
       "id": "semi-algebraic",
@@ -548,9 +549,9 @@
       "count": 13
     },
     {
-      "id": "strict-equilibrium",
-      "title": "strict-equilibrium",
-      "href": "keywords/strict-equilibrium.html",
+      "id": "symmetry",
+      "title": "symmetry",
+      "href": "keywords/symmetry.html",
       "count": 1
     },
     {

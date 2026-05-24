@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strict Equilibrium Is Proper — EconCSLib Knowledge Blueprint</title>
+  <title>Best Response Face — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -185,13 +185,13 @@
           <a href="../../strategic_games/continuous/index.html">Continuous</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/core/index.html">Core</a>
-        </li><li class="topic-leaf">
+        </li><li class="topic-leaf topic-active">
           <a href="../../strategic_games/correlated/index.html">Correlated</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/dominance/index.html">Dominance</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/dynamics/index.html">Dynamics</a>
-        </li><li class="topic-leaf topic-active">
+        </li><li class="topic-leaf">
           <a href="../../strategic_games/equilibrium/index.html">Equilibrium</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/evolution/index.html">Evolution</a>
@@ -797,17 +797,17 @@
   </nav>
   <main>
     
-<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-strategic_games-2e-equilibrium-2e-strict_equilibrium_is_proper">
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-strategic_games-2e-correlated-2e-best_response_face">
   <header class="proposition_thmheading thm-heading">
     <span class="proposition_thmcaption thm-caption">Proposition</span>
-    <span class="proposition_thmtitle thm-title">Strict Equilibrium Is Proper</span>
+    <span class="proposition_thmtitle thm-title">Best Response Face</span>
     <div class="thm_header_extras">
       
       <span class="badge kind-proposition">proposition</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-strategic_games-2e-equilibrium-2e-strict_equilibrium_is_proper">#</a>
+      <a class="permalink" href="#node-strategic_games-2e-correlated-2e-best_response_face">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -821,9 +821,11 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="strategic_games_equilibrium_strict_equilibrium.html">Strict Equilibrium</a></li>
+        <li><a href="../strategic_games_best_response.html">Best Response</a></li>
         
-        <li><a href="../refinements/strategic_games_refinements_proper_equilibrium.html">Proper Equilibrium</a></li>
+        <li><a href="strategic_games_correlated_correlated_strategy.html">Correlated Strategy</a></li>
+        
+        <li><a href="../core/strategic_games_core_mixed_strategy.html">Mixed Strategy</a></li>
         
       </ul>
     </div>
@@ -833,21 +835,23 @@
   
 
   <div class="proposition_thmcontent thm-content body">
-    <h1>Strict Equilibrium Is Proper</h1>
-<p>Every strict equilibrium of a finite normal-form game is a proper equilibrium.</p>
+    <h1>Best Response Face</h1>
+<p>For a finite strategic game and a correlated opponent strategy
+$\theta_{-i}\in\Delta(S_{-i})$, the best-response set
+$BR_i(\theta_{-i})$ is a face of the simplex $\Delta(S_i)$.</p>
+<p>The extreme points of this face are exactly the pure strategies of player $i$
+that are best responses against $\theta_{-i}$.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
         <p>Sketch</p>
-<p>If $s$ is strict, then for small perturbations of the opponents, each $s_i$
-remains the unique best response of player $i$. Using proper equilibria of the
-restricted game where each player is prevented from playing $s_i$, the profiles
-$\sigma^\epsilon=(1-\epsilon)s+\epsilon\tau^\epsilon$ are $\epsilon$-proper and
-converge to $s$.</p>
+<p>The expected payoff $m_i\mapsto g_i(m_i,\theta_{-i})$ is affine on
+$\Delta(S_i)$. Maximizers of an affine function over a simplex form the convex
+hull of the maximizing vertices, hence a simplex face.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Rem. 6.5.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Every strict equilibrium is proper.</li>
+<li>[MFoGT, Section 4.3, before Def. 4.3.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. BR_i(theta_{-i}) is a simplex face whose extreme points are pure best responses.</li>
 </ul>
       </div>
     </details>
@@ -862,7 +866,7 @@ converge to $s$.</p>
 
   
   <footer class="tags">
-    <span class="tag">strategic-game</span><span class="tag">equilibrium-refinement</span><span class="tag">strict-equilibrium</span>
+    <span class="tag">strategic-game</span><span class="tag">best-response</span><span class="tag">correlation</span>
   </footer>
   
 </article>

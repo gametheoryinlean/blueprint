@@ -4,22 +4,30 @@
     "title": "Strategic Games.Correlated",
     "href": "strategic_games/correlated/index.html",
     "parent": "strategic_games",
-    "node_count": 11,
-    "descendant_node_count": 11
+    "node_count": 12,
+    "descendant_node_count": 12
   },
   "counts": {
-    "internal_nodes": 11,
-    "descendant_nodes": 11,
+    "internal_nodes": 12,
+    "descendant_nodes": 12,
     "child_topics": 0,
-    "non_proof_plan_nodes": 11,
+    "non_proof_plan_nodes": 12,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 16,
-    "visible_nodes_with_selected_proof_plans": 16
+    "visible_nodes_without_proof_plans": 17,
+    "visible_nodes_with_selected_proof_plans": 17
   },
   "nodes": [
+    {
+      "id": "strategic_games.correlated.best_response_face",
+      "title": "Best Response Face",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "strategic_games/correlated/strategic_games_correlated_best_response_face.html",
+      "payload": "node_payloads/strategic_games_correlated_best_response_face.json"
+    },
     {
       "id": "strategic_games.correlated.canonical_correlation_device",
       "title": "Canonical Correlation Device",
@@ -112,6 +120,11 @@
   "edges": [
     {
       "from": "strategic_games.correlated.correlated_strategy",
+      "to": "strategic_games.correlated.best_response_face",
+      "kind": "uses"
+    },
+    {
+      "from": "strategic_games.correlated.correlated_strategy",
       "to": "strategic_games.correlated.correlated_best_response_not_independent",
       "kind": "uses"
     },
@@ -168,8 +181,8 @@
       "id": "strategic_games.core",
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 12
+      "role": "dependency",
+      "node_count": 10
     },
     {
       "id": "strategic_games.equilibrium",
@@ -187,6 +200,13 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "strategic_games.correlated.best_response_face",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
     {
       "from": "topic:strategic_games",
       "to": "strategic_games.correlated.canonical_correlation_device",
@@ -227,6 +247,13 @@
       "to": "strategic_games.correlated.obedience_condition",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.core",
+      "to": "strategic_games.correlated.best_response_face",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.core",
       "count": 1
     },
     {
@@ -272,13 +299,6 @@
       "count": 1
     },
     {
-      "from": "strategic_games.correlated.correlated_strategy",
-      "to": "topic:strategic_games.core",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
       "from": "strategic_games.correlated.correlated_equilibrium",
       "to": "topic:strategic_games.learning",
       "kind": "boundary_dependent",
@@ -291,7 +311,7 @@
       "id": "best-response",
       "title": "best-response",
       "href": "keywords/best-response.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "compactness",
@@ -315,7 +335,7 @@
       "id": "correlation",
       "title": "correlation",
       "href": "keywords/correlation.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "correlation-device",
@@ -357,7 +377,7 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 11
+      "count": 12
     }
   ],
   "proof_plan_attachments": [],

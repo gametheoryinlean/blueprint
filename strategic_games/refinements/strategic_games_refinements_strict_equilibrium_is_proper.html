@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symmetric Mixed Equilibrium — EconCSLib Knowledge Blueprint</title>
+  <title>Strict Equilibrium Is Proper — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -183,7 +183,7 @@
           <a href="../../strategic_games/bayesian/index.html">Bayesian</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/continuous/index.html">Continuous</a>
-        </li><li class="topic-leaf topic-active">
+        </li><li class="topic-leaf">
           <a href="../../strategic_games/core/index.html">Core</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/correlated/index.html">Correlated</a>
@@ -205,7 +205,7 @@
           <a href="../../strategic_games/population/index.html">Population</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/potential/index.html">Potential</a>
-        </li><li class="topic-leaf">
+        </li><li class="topic-leaf topic-active">
           <a href="../../strategic_games/refinements/index.html">Refinements</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/repeated/index.html">Repeated</a>
@@ -797,17 +797,17 @@
   </nav>
   <main>
     
-<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-strategic_games-2e-core-2e-symmetric_mixed_equilibrium">
-  <header class="theorem_thmheading thm-heading">
-    <span class="theorem_thmcaption thm-caption">Theorem</span>
-    <span class="theorem_thmtitle thm-title">Symmetric Mixed Equilibrium</span>
+<article class="proposition_thmwrapper theorem-style-proposition node-page" id="node-strategic_games-2e-refinements-2e-strict_equilibrium_is_proper">
+  <header class="proposition_thmheading thm-heading">
+    <span class="proposition_thmcaption thm-caption">Proposition</span>
+    <span class="proposition_thmtitle thm-title">Strict Equilibrium Is Proper</span>
     <div class="thm_header_extras">
       
-      <span class="badge kind-theorem">theorem</span>
+      <span class="badge kind-proposition">proposition</span>
       <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-strategic_games-2e-core-2e-symmetric_mixed_equilibrium">#</a>
+      <a class="permalink" href="#node-strategic_games-2e-refinements-2e-strict_equilibrium_is_proper">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -821,11 +821,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="../../fixed_point/fixed_point_brouwer_compact_convex.html">Brouwer Fixed Point Theorem</a></li>
+        <li><a href="../equilibrium/strategic_games_equilibrium_strict_equilibrium.html">Strict Equilibrium</a></li>
         
-        <li><a href="../equilibrium/strategic_games_equilibrium_nash_existence_finite_games.html">Nash Existence For Finite Games</a></li>
-        
-        <li><a href="strategic_games_core_symmetric_game.html">Symmetric Game</a></li>
+        <li><a href="strategic_games_refinements_proper_equilibrium.html">Proper Equilibrium</a></li>
         
       </ul>
     </div>
@@ -834,25 +832,22 @@
 
   
 
-  <div class="theorem_thmcontent thm-content body">
-    <h1>Symmetric Mixed Equilibrium</h1>
-<p>If a finite strategic game has a symmetry $\phi$, then it admits a mixed
-equilibrium $\sigma$ with the same symmetry:
-$$
-  \sigma=\phi(\sigma).
-$$</p>
+  <div class="proposition_thmcontent thm-content body">
+    <h1>Strict Equilibrium Is Proper</h1>
+<p>Every strict equilibrium of a finite normal-form game is a proper equilibrium.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
         <p>Sketch</p>
-<p>Let $X$ be the closed convex subset of mixed profiles fixed by $\phi$. The uniform
-mixed profile lies in $X$, so $X$ is nonempty. Nash's fixed-point map respects the
-symmetry, hence maps $X$ to itself. Brouwer's fixed point theorem applied on $X$
-gives a symmetric fixed point, which is a mixed equilibrium by Nash's argument.</p>
+<p>If $s$ is strict, then for small perturbations of the opponents, each $s_i$
+remains the unique best response of player $i$. Using proper equilibria of the
+restricted game where each player is prevented from playing $s_i$, the profiles
+$\sigma^\epsilon=(1-\epsilon)s+\epsilon\tau^\epsilon$ are $\epsilon$-proper and
+converge to $s$.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Thm. 4.6.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A finite game with symmetry admits a mixed equilibrium with that symmetry.</li>
+<li>[MFoGT, Rem. 6.5.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Every strict equilibrium is proper.</li>
 </ul>
       </div>
     </details>
@@ -867,7 +862,7 @@ gives a symmetric fixed point, which is a mixed equilibrium by Nash's argument.<
 
   
   <footer class="tags">
-    <span class="tag">strategic-game</span><span class="tag">symmetry</span><span class="tag">nash-equilibrium</span>
+    <span class="tag">strategic-game</span><span class="tag">equilibrium-refinement</span><span class="tag">strict-equilibrium</span>
   </footer>
   
 </article>

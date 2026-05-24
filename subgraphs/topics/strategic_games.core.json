@@ -4,30 +4,22 @@
     "title": "Strategic Games.Core",
     "href": "strategic_games/core/index.html",
     "parent": "strategic_games",
-    "node_count": 12,
-    "descendant_node_count": 12
+    "node_count": 10,
+    "descendant_node_count": 10
   },
   "counts": {
-    "internal_nodes": 12,
-    "descendant_nodes": 12,
+    "internal_nodes": 10,
+    "descendant_nodes": 10,
     "child_topics": 0,
-    "non_proof_plan_nodes": 12,
+    "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 11,
+    "boundary_topics": 10,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 24,
-    "visible_nodes_with_selected_proof_plans": 24
+    "visible_nodes_without_proof_plans": 21,
+    "visible_nodes_with_selected_proof_plans": 21
   },
   "nodes": [
-    {
-      "id": "strategic_games.core.best_response_face",
-      "title": "Best Response Face",
-      "kind": "proposition",
-      "status": "staged",
-      "href": "strategic_games/core/strategic_games_core_best_response_face.html",
-      "payload": "node_payloads/strategic_games_core_best_response_face.json"
-    },
     {
       "id": "strategic_games.core.best_response_mfogt",
       "title": "Best Response",
@@ -101,14 +93,6 @@
       "payload": "node_payloads/strategic_games_core_symmetric_game.json"
     },
     {
-      "id": "strategic_games.core.symmetric_mixed_equilibrium",
-      "title": "Symmetric Mixed Equilibrium",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/core/strategic_games_core_symmetric_mixed_equilibrium.html",
-      "payload": "node_payloads/strategic_games_core_symmetric_mixed_equilibrium.json"
-    },
-    {
       "id": "strategic_games.core.unilateral_deviation_mfogt",
       "title": "Unilateral Deviation",
       "kind": "definition",
@@ -120,17 +104,7 @@
   "edges": [
     {
       "from": "strategic_games.core.mixed_strategy",
-      "to": "strategic_games.core.best_response_face",
-      "kind": "uses"
-    },
-    {
-      "from": "strategic_games.core.mixed_strategy",
       "to": "strategic_games.core.mixed_extension",
-      "kind": "uses"
-    },
-    {
-      "from": "strategic_games.core.symmetric_game",
-      "to": "strategic_games.core.symmetric_mixed_equilibrium",
       "kind": "uses"
     }
   ],
@@ -141,13 +115,6 @@
       "href": "extensive_game/equilibrium/index.html",
       "role": "dependent",
       "node_count": 17
-    },
-    {
-      "id": "fixed_point",
-      "title": "Fixed Point",
-      "href": "fixed_point/index.html",
-      "role": "dependency",
-      "node_count": 5
     },
     {
       "id": "strategic_games",
@@ -167,8 +134,8 @@
       "id": "strategic_games.correlated",
       "title": "Strategic Games.Correlated",
       "href": "strategic_games/correlated/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 11
+      "role": "dependent",
+      "node_count": 12
     },
     {
       "id": "strategic_games.dynamics",
@@ -181,7 +148,7 @@
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
-      "role": "dependency_and_dependent",
+      "role": "dependent",
       "node_count": 14
     },
     {
@@ -203,7 +170,7 @@
       "title": "Strategic Games.Refinements",
       "href": "strategic_games/refinements/index.html",
       "role": "dependent",
-      "node_count": 14
+      "node_count": 15
     },
     {
       "id": "zero_sum",
@@ -214,20 +181,6 @@
     }
   ],
   "boundary_edges": [
-    {
-      "from": "topic:fixed_point",
-      "to": "strategic_games.core.symmetric_mixed_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "fixed_point",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.core.best_response_face",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
     {
       "from": "topic:strategic_games",
       "to": "strategic_games.core.best_response_mfogt",
@@ -285,20 +238,6 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.correlated",
-      "to": "strategic_games.core.best_response_face",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.correlated",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.equilibrium",
-      "to": "strategic_games.core.symmetric_mixed_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.equilibrium",
-      "count": 1
-    },
-    {
       "from": "strategic_games.core.br_invariance",
       "to": "topic:extensive_game.equilibrium",
       "kind": "boundary_dependent",
@@ -317,7 +256,7 @@
       "to": "topic:strategic_games.correlated",
       "kind": "boundary_dependent",
       "topic": "strategic_games.correlated",
-      "count": 4
+      "count": 5
     },
     {
       "from": "strategic_games.core.symmetric_game",
@@ -332,6 +271,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
       "count": 2
+    },
+    {
+      "from": "strategic_games.core.symmetric_game",
+      "to": "topic:strategic_games.equilibrium",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
     },
     {
       "from": "strategic_games.core.symmetric_game",
@@ -367,12 +313,6 @@
       "id": "best-response",
       "title": "best-response",
       "href": "keywords/best-response.html",
-      "count": 2
-    },
-    {
-      "id": "correlation",
-      "title": "correlation",
-      "href": "keywords/correlation.html",
       "count": 1
     },
     {
@@ -400,12 +340,6 @@
       "count": 3
     },
     {
-      "id": "nash-equilibrium",
-      "title": "nash-equilibrium",
-      "href": "keywords/nash-equilibrium.html",
-      "count": 1
-    },
-    {
       "id": "normal-form",
       "title": "normal-form",
       "href": "keywords/normal-form.html",
@@ -421,13 +355,13 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 12
+      "count": 10
     },
     {
       "id": "symmetry",
       "title": "symmetry",
       "href": "keywords/symmetry.html",
-      "count": 2
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],
