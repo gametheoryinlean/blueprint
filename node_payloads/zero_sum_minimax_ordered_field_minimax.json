@@ -10,7 +10,7 @@
     "zero_sum.minimax"
   ],
   "body_html": "<h1>Ordered-Field Minimax Statement</h1>\n<p>The finite minimax theorem admits an ordered-field form: if the payoff\nmatrix has entries in an ordered field and the proof is carried out\nalgebraically through finitely many weak linear inequalities, then the\nvalue and optimal mixed strategies can be taken over that ordered field.</p>",
-  "proof_html": "<p>Use an algebraic proof route for finite minimax, such as the\nlinear-programming or Dantzig route, whose steps are finite systems of weak\nlinear inequalities, pivot operations, and normalisations by positive\nelements. These operations make sense over any ordered field. The terminal\ninequalities are precisely the two minimax optimality systems, so the\nextracted mixed strategies and value lie in the same ordered field as the\nmatrix entries.</p>\n<p>The Lean statement is <code>MinimaxDantzig.dantzig_minimax</code>, polymorphic in\n<code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code>. Most of its proof is\ndone; the only remaining gap is the simplex-termination step (tracked by\nthe proof-plan node <code>zero_sum.dantzig_proof_spine</code>), so this node is\n<code>admitted</code> rather than <code>formalized</code>. The ℝ-specialisation is independently\nclosed by the Loomis route (<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3, paragraph after the proof of Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Ordered-field generalization via finite weak linear inequalities.</li>\n</ul>",
+  "proof_html": "<p>Use an algebraic proof route for finite minimax, such as the\nlinear-programming or Dantzig route, whose steps are finite systems of weak\nlinear inequalities, pivot operations, and normalisations by positive\nelements. These operations make sense over any ordered field. The terminal\ninequalities are precisely the two minimax optimality systems, so the\nextracted mixed strategies and value lie in the same ordered field as the\nmatrix entries.</p>\n<p>The Lean statement is <code>MinimaxDantzig.dantzig_minimax</code>, polymorphic in\n<code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code>. Most of its proof is\ndone; the only remaining gap is the simplex-termination step (tracked by\nthe proof-plan node <a class=\"node-ref\" data-node-id=\"zero_sum.dantzig_proof_spine\" href=\"zero_sum_dantzig_proof_spine.html\"><code>zero_sum.dantzig_proof_spine</code></a>), so this node is\n<code>admitted</code> rather than <code>formalized</code>. The ℝ-specialisation is independently\nclosed by the Loomis route (<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3, paragraph after the proof of Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Ordered-field generalization via finite weak linear inequalities.</li>\n</ul>",
   "deps": [
     {
       "id": "zero_sum.von_neumann_minimax",
@@ -26,9 +26,9 @@
       "qualified_name": "dantzig_minimax",
       "module": "EconCSLib.StrategicGame.MinimaxDantzig",
       "repository_title": "EconCSLib",
-      "revision": "fbb7008f11581005b249da0a824ddf9a5d2c8424",
-      "short_revision": "fbb7008",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/fbb7008f11581005b249da0a824ddf9a5d2c8424/EconCSLib/StrategicGame/MinimaxDantzig.lean#L492",
+      "revision": "357305aa370a1046cf451469ab718f481d947d62",
+      "short_revision": "357305a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/StrategicGame/MinimaxDantzig.lean#L480",
       "has_sorry": true,
       "status": "resolved",
       "reason": null

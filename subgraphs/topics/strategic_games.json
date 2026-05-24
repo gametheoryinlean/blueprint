@@ -1120,22 +1120,10 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.population",
-      "to": "topic:strategic_games.dynamics",
-      "kind": "topic_dependency",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.population",
-      "to": "topic:strategic_games.potential",
-      "kind": "topic_dependency",
-      "count": 1
-    },
-    {
       "from": "topic:strategic_games.potential",
       "to": "topic:strategic_games.dynamics",
       "kind": "topic_dependency",
-      "count": 2
+      "count": 1
     },
     {
       "from": "topic:strategic_games.variational",
@@ -1151,13 +1139,6 @@
       "href": "approachability/index.html",
       "role": "dependency",
       "node_count": 2
-    },
-    {
-      "id": "extensive_game",
-      "title": "Extensive Game",
-      "href": "extensive_game/index.html",
-      "role": "dependent",
-      "node_count": 52
     },
     {
       "id": "extensive_game.equilibrium",
@@ -1200,20 +1181,6 @@
       "href": "zero_sum/index.html",
       "role": "dependency_and_dependent",
       "node_count": 86
-    },
-    {
-      "id": "zero_sum.core",
-      "title": "Zero Sum.Core",
-      "href": "zero_sum/core/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 19
-    },
-    {
-      "id": "zero_sum.minimax",
-      "title": "Zero Sum.Minimax",
-      "href": "zero_sum/minimax/index.html",
-      "role": "dependency",
-      "node_count": 26
     },
     {
       "id": "zero_sum.repeated",
@@ -1274,27 +1241,6 @@
       "count": 2
     },
     {
-      "from": "topic:zero_sum.core",
-      "to": "topic:strategic_games.dominance",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum.core",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum.minimax",
-      "to": "topic:strategic_games.dominance",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum.minimax",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.repeated",
-      "to": "topic:extensive_game",
-      "kind": "boundary_dependent",
-      "topic": "extensive_game",
-      "count": 1
-    },
-    {
       "from": "topic:strategic_games.core",
       "to": "topic:extensive_game.equilibrium",
       "kind": "boundary_dependent",
@@ -1341,20 +1287,6 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.repeated",
-      "to": "topic:zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum",
-      "count": 2
-    },
-    {
-      "from": "topic:strategic_games.core",
-      "to": "topic:zero_sum.core",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.core",
       "count": 1
     },
     {

@@ -80,7 +80,7 @@
       "id": "core.simplex.bounded_by_value",
       "title": "Pointwise Bounds Are Simplex Bounds",
       "kind": "lemma",
-      "status": "admitted",
+      "status": "formalized",
       "href": "core/core_simplex_bounded_by_value.html",
       "payload": "node_payloads/core_simplex_bounded_by_value.json"
     },
@@ -88,7 +88,7 @@
       "id": "core.simplex.continuity",
       "title": "Continuity on the Real Standard Simplex",
       "kind": "lemma",
-      "status": "admitted",
+      "status": "formalized",
       "href": "core/core_simplex_continuity.html",
       "payload": "node_payloads/core_simplex_continuity.json"
     },
@@ -96,7 +96,7 @@
       "id": "core.simplex.pure",
       "title": "Point Mass on the Standard Simplex",
       "kind": "definition",
-      "status": "admitted",
+      "status": "formalized",
       "href": "core/core_simplex_pure.html",
       "payload": "node_payloads/core_simplex_pure.json"
     },
@@ -104,7 +104,7 @@
       "id": "core.simplex.wsum",
       "title": "Weighted Sum over the Standard Simplex",
       "kind": "definition",
-      "status": "admitted",
+      "status": "formalized",
       "href": "core/core_simplex_wsum.html",
       "payload": "node_payloads/core_simplex_wsum.json"
     },
@@ -404,79 +404,13 @@
         "lemma": 3
       },
       "status_counts": {
-        "admitted": 4,
-        "formalized": 1
+        "formalized": 5
       },
       "href": "core/simplex/index.html",
       "children": []
     }
   ],
-  "child_topic_edges": [
-    {
-      "from": "topic:core.preference",
-      "to": "topic:core.argmax",
-      "kind": "topic_dependency",
-      "count": 1
-    }
-  ],
-  "child_boundary_topics": [
-    {
-      "id": "utility",
-      "title": "Utility",
-      "href": "utility/index.html",
-      "role": "dependent",
-      "node_count": 9
-    },
-    {
-      "id": "zero_sum",
-      "title": "Zero Sum",
-      "href": "zero_sum/index.html",
-      "role": "dependent",
-      "node_count": 86
-    },
-    {
-      "id": "zero_sum.core",
-      "title": "Zero Sum.Core",
-      "href": "zero_sum/core/index.html",
-      "role": "dependent",
-      "node_count": 19
-    },
-    {
-      "id": "zero_sum.minimax",
-      "title": "Zero Sum.Minimax",
-      "href": "zero_sum/minimax/index.html",
-      "role": "dependent",
-      "node_count": 26
-    }
-  ],
-  "child_boundary_edges": [
-    {
-      "from": "topic:core.preference",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 4
-    },
-    {
-      "from": "topic:core.simplex",
-      "to": "topic:zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum",
-      "count": 6
-    },
-    {
-      "from": "topic:core.simplex",
-      "to": "topic:zero_sum.core",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.core",
-      "count": 1
-    },
-    {
-      "from": "topic:core.simplex",
-      "to": "topic:zero_sum.minimax",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.minimax",
-      "count": 5
-    }
-  ]
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
 }
