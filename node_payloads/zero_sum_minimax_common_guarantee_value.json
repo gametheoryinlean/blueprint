@@ -1,13 +1,13 @@
 {
-  "id": "zero_sum.core.common_guarantee_value",
+  "id": "zero_sum.minimax.common_guarantee_value",
   "title": "Common Guarantee Gives The Value",
   "kind": "lemma",
   "status": "formalized",
-  "href": "zero_sum/zero_sum_core_common_guarantee_value.html",
+  "href": "zero_sum/zero_sum_minimax_common_guarantee_value.html",
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
-    "zero_sum.core"
+    "zero_sum.minimax"
   ],
   "body_html": "<h1>Common Guarantee Gives The Value</h1>\n<p>If player I and player II both guarantee the same number $w$, then $w$ is\nthe unique value of the game, and the strategies witnessing the two\nguarantees are optimal.</p>",
   "proof_html": "<p>The two guarantees and weak duality give the chain\n$$\n  w \\le \\underline v \\le \\overline v \\le w.\n$$\nThus $\\underline v=\\overline v=w$, and the witnessing strategies attain the\nvalue. The minimax theorem (<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>) closes the\ninner two inequalities, the player-guarantee bound is the outer pair\n(<a class=\"node-ref\" data-node-id=\"zero_sum.core.player_guarantee\" href=\"core/zero_sum_core_player_guarantee.html\">Player Guarantee</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Lem. 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A common guarantee is unique and equal to the value.</li>\n</ul>",
@@ -41,9 +41,9 @@
       "qualified_name": "MatrixGame.common_guarantee_eq_value",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "f0a3469c177ba9e46ada6e440e8ba684bfb8b32f",
-      "short_revision": "f0a3469",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/StrategicGame/MatrixGameNash.lean#L312",
+      "revision": "a2bf16e1542647369e59d5bb7b842beaaf2fe3b7",
+      "short_revision": "a2bf16e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/a2bf16e1542647369e59d5bb7b842beaaf2fe3b7/EconCSLib/StrategicGame/MatrixGameNash.lean#L312",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

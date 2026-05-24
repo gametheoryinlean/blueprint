@@ -1833,7 +1833,7 @@
         "linear_programming.strong_duality"
       ],
       "used_by": [
-        "zero_sum.core.strong_complementarity"
+        "zero_sum.minimax.strong_complementarity"
       ]
     },
     {
@@ -9224,32 +9224,6 @@
       ]
     },
     {
-      "id": "zero_sum.core.common_guarantee_value",
-      "title": "Common Guarantee Gives The Value",
-      "kind": "lemma",
-      "status": "formalized",
-      "tags": [
-        "zero-sum",
-        "value",
-        "optimal-strategy"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.core"
-      ],
-      "lean_declarations": [
-        "MatrixGame.common_guarantee_eq_value"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "zero_sum.core.player_guarantee",
-        "zero_sum.core.value",
-        "zero_sum.maximin_le_minimax",
-        "zero_sum.von_neumann_minimax"
-      ]
-    },
-    {
       "id": "zero_sum.core.duality_gap",
       "title": "Duality Gap In A Matrix Game",
       "kind": "definition",
@@ -9505,8 +9479,8 @@
         "zero_sum.matrix_game"
       ],
       "used_by": [
-        "zero_sum.core.common_guarantee_value",
-        "zero_sum.core.epsilon_optimal_strategy"
+        "zero_sum.core.epsilon_optimal_strategy",
+        "zero_sum.minimax.common_guarantee_value"
       ]
     },
     {
@@ -9534,32 +9508,7 @@
       ],
       "used_by": [
         "zero_sum.core.optimal_pairs_are_saddle_points",
-        "zero_sum.core.zero_sum_nash_saddle"
-      ]
-    },
-    {
-      "id": "zero_sum.core.strong_complementarity",
-      "title": "Strong Complementarity",
-      "kind": "proposition",
-      "status": "formalized",
-      "tags": [
-        "zero-sum",
-        "complementarity",
-        "linear-programming"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.core"
-      ],
-      "lean_declarations": [
-        "MatrixGame.exists_strong_complementary_pair"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "linear_programming.strong_complementarity",
-        "zero_sum.core.support_complementarity",
-        "zero_sum.matrix_game_nash_equilibrium"
+        "zero_sum.minimax.zero_sum_nash_saddle"
       ]
     },
     {
@@ -9588,7 +9537,7 @@
       ],
       "used_by": [
         "strategic_games.dominance.weak_dominance_never_best_response",
-        "zero_sum.core.strong_complementarity"
+        "zero_sum.minimax.strong_complementarity"
       ]
     },
     {
@@ -9610,8 +9559,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.maximin_minimax",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.maximin_minimax"
       ],
       "used_by": [
         "extensive_game.examples.entrant_incomplete_information_value_example",
@@ -9622,7 +9570,6 @@
         "zero_sum.continuous.finite_opponent_separation_minimax",
         "zero_sum.continuous.monotone_decreasing_values_limit",
         "zero_sum.continuous.sion_minimax_theorem",
-        "zero_sum.core.common_guarantee_value",
         "zero_sum.core.epsilon_optimal_strategy",
         "zero_sum.core.optimal_strategy_sets",
         "zero_sum.examples.diagonal_matrix_game_value",
@@ -9630,31 +9577,8 @@
         "zero_sum.examples.noisy_duel_one_bullet_value",
         "zero_sum.examples.silent_duel_no_pure_value",
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+        "zero_sum.minimax.common_guarantee_value",
         "zero_sum.operators.value_operator_general"
-      ]
-    },
-    {
-      "id": "zero_sum.core.zero_sum_nash_saddle",
-      "title": "Zero-Sum Nash Equilibria As Saddle Points",
-      "kind": "theorem",
-      "status": "formalized",
-      "tags": [
-        "zero-sum",
-        "nash-equilibrium",
-        "saddle-point"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.core"
-      ],
-      "lean_declarations": [
-        "MatrixGame.isMixedNashEq_iff_isSaddlePoint"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "zero_sum.core.saddle_point",
-        "zero_sum.matrix_game_nash_equilibrium"
       ]
     },
     {
@@ -10322,10 +10246,10 @@
         "zero_sum.von_neumann_minimax"
       ],
       "used_by": [
-        "zero_sum.core.strong_complementarity",
-        "zero_sum.core.zero_sum_nash_saddle",
         "zero_sum.minimax.antisymmetric_matrix_game_value",
-        "zero_sum.minimax.stochastic_matrix_invariant_distribution"
+        "zero_sum.minimax.stochastic_matrix_invariant_distribution",
+        "zero_sum.minimax.strong_complementarity",
+        "zero_sum.minimax.zero_sum_nash_saddle"
       ]
     },
     {
@@ -10341,8 +10265,7 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core",
-        "zero_sum.minimax"
+        "zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.maximin_le_minimax"
@@ -10352,10 +10275,10 @@
         "zero_sum.maximin_minimax"
       ],
       "used_by": [
-        "zero_sum.core.common_guarantee_value",
         "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.examples.three_player_minimax_failure",
         "zero_sum.fictitious_play.continuous_fictitious_play_gap",
+        "zero_sum.minimax.common_guarantee_value",
         "zero_sum.minimax.lp_duality_minimax_proof",
         "zero_sum.minimax.minimax_from_loomis"
       ]
@@ -10419,6 +10342,32 @@
       ],
       "used_by": [
         "zero_sum.minimax.minimax_from_antisymmetric_games"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.common_guarantee_value",
+      "title": "Common Guarantee Gives The Value",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "value",
+        "optimal-strategy"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.common_guarantee_eq_value"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.player_guarantee",
+        "zero_sum.core.value",
+        "zero_sum.maximin_le_minimax",
+        "zero_sum.von_neumann_minimax"
       ]
     },
     {
@@ -10834,6 +10783,31 @@
       ]
     },
     {
+      "id": "zero_sum.minimax.strong_complementarity",
+      "title": "Strong Complementarity",
+      "kind": "proposition",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "complementarity",
+        "linear-programming"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.exists_strong_complementary_pair"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "linear_programming.strong_complementarity",
+        "zero_sum.core.support_complementarity",
+        "zero_sum.matrix_game_nash_equilibrium"
+      ]
+    },
+    {
       "id": "zero_sum.minimax.value_predicates",
       "title": "Field-Generic Value Predicates",
       "kind": "definition",
@@ -10847,7 +10821,6 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core",
         "zero_sum.minimax"
       ],
       "lean_declarations": [
@@ -10901,6 +10874,30 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.von_neumann_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.zero_sum_nash_saddle",
+      "title": "Zero-Sum Nash Equilibria As Saddle Points",
+      "kind": "theorem",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "nash-equilibrium",
+        "saddle-point"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "lean_declarations": [
+        "MatrixGame.isMixedNashEq_iff_isSaddlePoint"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.saddle_point",
+        "zero_sum.matrix_game_nash_equilibrium"
       ]
     },
     {
@@ -11089,10 +11086,9 @@
       "topic": "zero_sum",
       "used_by": [
         "strategic_games.dominance.strict_dominance_never_best_response",
-        "zero_sum.core.common_guarantee_value",
-        "zero_sum.core.value",
         "zero_sum.examples.two_by_two_value_formula",
         "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.common_guarantee_value",
         "zero_sum.minimax.ordered_field_minimax",
         "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.minimax.ville_discretization_proof",
@@ -13899,22 +13895,6 @@
       "to": "zero_sum.continuous.sion_wolfe_no_mixed_value"
     },
     {
-      "from": "zero_sum.core.player_guarantee",
-      "to": "zero_sum.core.common_guarantee_value"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.core.common_guarantee_value"
-    },
-    {
-      "from": "zero_sum.maximin_le_minimax",
-      "to": "zero_sum.core.common_guarantee_value"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.core.common_guarantee_value"
-    },
-    {
       "from": "zero_sum.core.mixed_extension",
       "to": "zero_sum.core.duality_gap"
     },
@@ -13975,18 +13955,6 @@
       "to": "zero_sum.core.saddle_point"
     },
     {
-      "from": "linear_programming.strong_complementarity",
-      "to": "zero_sum.core.strong_complementarity"
-    },
-    {
-      "from": "zero_sum.core.support_complementarity",
-      "to": "zero_sum.core.strong_complementarity"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.core.strong_complementarity"
-    },
-    {
       "from": "zero_sum.core.mixed_support",
       "to": "zero_sum.core.support_complementarity"
     },
@@ -13997,18 +13965,6 @@
     {
       "from": "zero_sum.maximin_minimax",
       "to": "zero_sum.core.value"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.core.value"
-    },
-    {
-      "from": "zero_sum.core.saddle_point",
-      "to": "zero_sum.core.zero_sum_nash_saddle"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.core.zero_sum_nash_saddle"
     },
     {
       "from": "zero_sum.examples.silent_duel_no_pure_value",
@@ -14155,6 +14111,22 @@
       "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
     },
     {
+      "from": "zero_sum.core.player_guarantee",
+      "to": "zero_sum.minimax.common_guarantee_value"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.minimax.common_guarantee_value"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.minimax.common_guarantee_value"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.minimax.common_guarantee_value"
+    },
+    {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
       "to": "zero_sum.minimax.loomis_induction_proof"
     },
@@ -14275,6 +14247,18 @@
       "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
     },
     {
+      "from": "linear_programming.strong_complementarity",
+      "to": "zero_sum.minimax.strong_complementarity"
+    },
+    {
+      "from": "zero_sum.core.support_complementarity",
+      "to": "zero_sum.minimax.strong_complementarity"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.minimax.strong_complementarity"
+    },
+    {
       "from": "zero_sum.maximin_minimax",
       "to": "zero_sum.minimax.value_predicates"
     },
@@ -14285,6 +14269,14 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ville_theorem"
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "zero_sum.minimax.zero_sum_nash_saddle"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.minimax.zero_sum_nash_saddle"
     },
     {
       "from": "strategic_games.core.mixed_strategy",

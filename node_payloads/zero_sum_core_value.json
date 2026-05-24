@@ -9,18 +9,13 @@
     "zero_sum",
     "zero_sum.core"
   ],
-  "body_html": "<h1>Value Of A Zero-Sum Game</h1>\n<p>For a finite matrix game, the maxmin and minmax coincide\n(<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>); the common scalar is the <strong>value</strong>\nof the game:\n$$\n  \\operatorname{val}(A) = \\underline v = \\overline v.\n$$</p>\n<p>The Lean development defines <code>MatrixGame.value := A.maximin</code> and provides\n<code>value_eq_maximin</code> (definitional) and <code>value_eq_minimax</code> (via the minimax\ntheorem).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A zero-sum game has a value when maxmin equals minmax.</li>\n</ul>",
+  "body_html": "<h1>Value Of A Zero-Sum Game</h1>\n<p>When the maxmin and minmax of a zero-sum game coincide, the common\nscalar is the <strong>value</strong> of the game:\n$$\n  \\operatorname{val}(A) = \\underline v = \\overline v.\n$$</p>\n<p>The Lean development defines <code>MatrixGame.value := A.maximin</code> and provides\n<code>value_eq_maximin</code> (definitional) and <code>value_eq_minimax</code> (via the minimax\ntheorem).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A zero-sum game has a value when maxmin equals minmax.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
       "id": "zero_sum.maximin_minimax",
       "title": "Maximin and Minimax Values",
       "href": "zero_sum/zero_sum_maximin_minimax.html"
-    },
-    {
-      "id": "zero_sum.von_neumann_minimax",
-      "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
     }
   ],
   "dependents": [
@@ -65,11 +60,6 @@
       "href": "zero_sum/zero_sum_continuous_sion_minimax_theorem.html"
     },
     {
-      "id": "zero_sum.core.common_guarantee_value",
-      "title": "Common Guarantee Gives The Value",
-      "href": "zero_sum/zero_sum_core_common_guarantee_value.html"
-    },
-    {
       "id": "zero_sum.core.epsilon_optimal_strategy",
       "title": "Epsilon-Optimal Strategy",
       "href": "zero_sum/zero_sum_core_epsilon_optimal_strategy.html"
@@ -105,6 +95,11 @@
       "href": "zero_sum/zero_sum_fictitious_play_cesaro_payoff_from_robinson.html"
     },
     {
+      "id": "zero_sum.minimax.common_guarantee_value",
+      "title": "Common Guarantee Gives The Value",
+      "href": "zero_sum/zero_sum_minimax_common_guarantee_value.html"
+    },
+    {
       "id": "zero_sum.operators.value_operator_general",
       "title": "General Value Operator",
       "href": "zero_sum/zero_sum_operators_value_operator_general.html"
@@ -117,9 +112,9 @@
       "qualified_name": "MatrixGame.value",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "f0a3469c177ba9e46ada6e440e8ba684bfb8b32f",
-      "short_revision": "f0a3469",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/StrategicGame/MatrixGameNash.lean#L86",
+      "revision": "a2bf16e1542647369e59d5bb7b842beaaf2fe3b7",
+      "short_revision": "a2bf16e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/a2bf16e1542647369e59d5bb7b842beaaf2fe3b7/EconCSLib/StrategicGame/MatrixGameNash.lean#L86",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

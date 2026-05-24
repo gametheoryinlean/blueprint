@@ -4,30 +4,22 @@
     "title": "Zero Sum.Core",
     "href": "zero_sum/core/index.html",
     "parent": "zero_sum",
-    "node_count": 23,
-    "descendant_node_count": 23
+    "node_count": 19,
+    "descendant_node_count": 19
   },
   "counts": {
-    "internal_nodes": 23,
-    "descendant_nodes": 23,
+    "internal_nodes": 19,
+    "descendant_nodes": 19,
     "child_topics": 0,
-    "non_proof_plan_nodes": 23,
+    "non_proof_plan_nodes": 19,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 9,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 33,
-    "visible_nodes_with_selected_proof_plans": 33
+    "visible_nodes_without_proof_plans": 28,
+    "visible_nodes_with_selected_proof_plans": 28
   },
   "nodes": [
-    {
-      "id": "zero_sum.core.common_guarantee_value",
-      "title": "Common Guarantee Gives The Value",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_common_guarantee_value.html",
-      "payload": "node_payloads/zero_sum_core_common_guarantee_value.json"
-    },
     {
       "id": "zero_sum.core.duality_gap",
       "title": "Duality Gap In A Matrix Game",
@@ -109,14 +101,6 @@
       "payload": "node_payloads/zero_sum_core_saddle_point.json"
     },
     {
-      "id": "zero_sum.core.strong_complementarity",
-      "title": "Strong Complementarity",
-      "kind": "proposition",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_strong_complementarity.html",
-      "payload": "node_payloads/zero_sum_core_strong_complementarity.json"
-    },
-    {
       "id": "zero_sum.core.support_complementarity",
       "title": "Support Complementarity",
       "kind": "theorem",
@@ -131,14 +115,6 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_core_value.html",
       "payload": "node_payloads/zero_sum_core_value.json"
-    },
-    {
-      "id": "zero_sum.core.zero_sum_nash_saddle",
-      "title": "Zero-Sum Nash Equilibria As Saddle Points",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_zero_sum_nash_saddle.html",
-      "payload": "node_payloads/zero_sum_core_zero_sum_nash_saddle.json"
     },
     {
       "id": "zero_sum.matrix_game",
@@ -163,14 +139,6 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_maximin_minimax.html",
       "payload": "node_payloads/zero_sum_maximin_minimax.json"
-    },
-    {
-      "id": "zero_sum.minimax.value_predicates",
-      "title": "Field-Generic Value Predicates",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_minimax_value_predicates.html",
-      "payload": "node_payloads/zero_sum_minimax_value_predicates.json"
     },
     {
       "id": "zero_sum.mixed_matrix_payoff",
@@ -206,21 +174,6 @@
     }
   ],
   "edges": [
-    {
-      "from": "zero_sum.core.player_guarantee",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.maximin_le_minimax",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
     {
       "from": "zero_sum.core.mixed_extension",
       "to": "zero_sum.core.duality_gap",
@@ -292,11 +245,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.support_complementarity",
-      "to": "zero_sum.core.strong_complementarity",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.core.mixed_support",
       "to": "zero_sum.core.support_complementarity",
       "kind": "uses"
@@ -312,11 +260,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.saddle_point",
-      "to": "zero_sum.core.zero_sum_nash_saddle",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.matrix_game",
       "kind": "uses"
@@ -329,11 +272,6 @@
     {
       "from": "zero_sum.mixed_matrix_payoff",
       "to": "zero_sum.maximin_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.maximin_minimax",
-      "to": "zero_sum.minimax.value_predicates",
       "kind": "uses"
     },
     {
@@ -375,13 +313,6 @@
       "node_count": 9
     },
     {
-      "id": "linear_programming",
-      "title": "Linear Programming",
-      "href": "linear_programming/index.html",
-      "role": "dependency",
-      "node_count": 2
-    },
-    {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
@@ -406,7 +337,7 @@
       "id": "zero_sum",
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
-      "role": "dependency_and_dependent",
+      "role": "dependent",
       "node_count": 86
     },
     {
@@ -423,13 +354,6 @@
       "to": "zero_sum.core.optimal_pairs_are_saddle_points",
       "kind": "boundary_dependency",
       "topic": "core.simplex",
-      "count": 1
-    },
-    {
-      "from": "topic:linear_programming",
-      "to": "zero_sum.core.strong_complementarity",
-      "kind": "boundary_dependency",
-      "topic": "linear_programming",
       "count": 1
     },
     {
@@ -451,34 +375,6 @@
       "to": "zero_sum.mixed_matrix_payoff",
       "kind": "boundary_dependency",
       "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.strong_complementarity",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.value",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.zero_sum_nash_saddle",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
       "count": 1
     },
     {
@@ -524,25 +420,46 @@
       "count": 5
     },
     {
+      "from": "zero_sum.core.player_guarantee",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.core.support_complementarity",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
       "from": "zero_sum.core.value",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 9
+      "count": 10
     },
     {
       "from": "zero_sum.maximin_le_minimax",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 2
+      "count": 3
     },
     {
       "from": "zero_sum.maximin_minimax",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 1
+      "count": 2
     },
     {
       "from": "zero_sum.mixed_matrix_payoff",
@@ -578,7 +495,7 @@
       "id": "complementarity",
       "title": "complementarity",
       "href": "keywords/complementarity.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "equilibrium",
@@ -596,12 +513,6 @@
       "id": "fictitious-play",
       "title": "fictitious-play",
       "href": "keywords/fictitious-play.html",
-      "count": 1
-    },
-    {
-      "id": "field-generic",
-      "title": "field-generic",
-      "href": "keywords/field-generic.html",
       "count": 1
     },
     {
@@ -623,12 +534,6 @@
       "count": 1
     },
     {
-      "id": "linear-programming",
-      "title": "linear-programming",
-      "href": "keywords/linear-programming.html",
-      "count": 1
-    },
-    {
       "id": "matrix-game",
       "title": "matrix-game",
       "href": "keywords/matrix-game.html",
@@ -647,16 +552,10 @@
       "count": 4
     },
     {
-      "id": "nash-equilibrium",
-      "title": "nash-equilibrium",
-      "href": "keywords/nash-equilibrium.html",
-      "count": 1
-    },
-    {
       "id": "optimal-strategy",
       "title": "optimal-strategy",
       "href": "keywords/optimal-strategy.html",
-      "count": 6
+      "count": 5
     },
     {
       "id": "payoff",
@@ -671,16 +570,10 @@
       "count": 1
     },
     {
-      "id": "predicate",
-      "title": "predicate",
-      "href": "keywords/predicate.html",
-      "count": 1
-    },
-    {
       "id": "saddle-point",
       "title": "saddle-point",
       "href": "keywords/saddle-point.html",
-      "count": 3
+      "count": 2
     },
     {
       "id": "simplex",
@@ -704,13 +597,13 @@
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 9
+      "count": 7
     },
     {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 23
+      "count": 19
     }
   ],
   "proof_plan_attachments": [],

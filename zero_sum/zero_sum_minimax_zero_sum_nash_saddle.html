@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Common Guarantee Gives The Value — EconCSLib Knowledge Blueprint</title>
+  <title>Zero-Sum Nash Equilibria As Saddle Points — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -797,17 +797,17 @@
   </nav>
   <main>
     
-<article class="lemma_thmwrapper theorem-style-lemma node-page" id="node-zero_sum-2e-core-2e-common_guarantee_value">
-  <header class="lemma_thmheading thm-heading">
-    <span class="lemma_thmcaption thm-caption">Lemma</span>
-    <span class="lemma_thmtitle thm-title">Common Guarantee Gives The Value</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-zero_sum-2e-minimax-2e-zero_sum_nash_saddle">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Zero-Sum Nash Equilibria As Saddle Points</span>
     <div class="thm_header_extras">
       <span class="checkmark">✓</span>
-      <span class="badge kind-lemma">lemma</span>
+      <span class="badge kind-theorem">theorem</span>
       <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-zero_sum-2e-core-2e-common_guarantee_value">#</a>
+      <a class="permalink" href="#node-zero_sum-2e-minimax-2e-zero_sum_nash_saddle">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -823,13 +823,9 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
+        <li><a href="zero_sum_core_saddle_point.html">Saddle Point</a></li>
         
-        <li><a href="zero_sum_core_player_guarantee.html">Player Guarantee</a></li>
-        
-        <li><a href="zero_sum_core_value.html">Value Of A Zero-Sum Game</a></li>
-        
-        <li><a href="zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a></li>
+        <li><a href="zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a></li>
         
       </ul>
     </div>
@@ -844,11 +840,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/StrategicGame/MatrixGameNash.lean#L312"><code>MatrixGame.common_guarantee_eq_value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/a2bf16e1542647369e59d5bb7b842beaaf2fe3b7/EconCSLib/StrategicGame/MatrixGameNash.lean#L75"><code>MatrixGame.isMixedNashEq_iff_isSaddlePoint</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f0a3469, EconCSLib.StrategicGame.MatrixGameNash
+            EconCSLib @ a2bf16e, EconCSLib.StrategicGame.MatrixGameNash
           </span>
           
           
@@ -862,26 +858,34 @@
   </div>
   
 
-  <div class="lemma_thmcontent thm-content body">
-    <h1>Common Guarantee Gives The Value</h1>
-<p>If player I and player II both guarantee the same number $w$, then $w$ is
-the unique value of the game, and the strategies witnessing the two
-guarantees are optimal.</p>
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Zero-Sum Nash Equilibria As Saddle Points</h1>
+<p>In a zero-sum game, a pair of mixed strategies is a Nash equilibrium exactly
+when it is a saddle point of the matrix payoff.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>The two guarantees and weak duality give the chain
+        <p>Write $u(x,y)=xAy$ for player I's payoff and $-u(x,y)$ for player
+II's payoff. A mixed pair $(x^*,y^*)$ is a Nash equilibrium exactly when
 $$
-  w \le \underline v \le \overline v \le w.
+  u(x,y^*)\le u(x^*,y^*)\quad\text{for all }x
 $$
-Thus $\underline v=\overline v=w$, and the witnessing strategies attain the
-value. The minimax theorem (<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) closes the
-inner two inequalities, the player-guarantee bound is the outer pair
-(<a class="node-ref" data-node-id="zero_sum.core.player_guarantee" href="core/zero_sum_core_player_guarantee.html">Player Guarantee</a>).</p>
+and
+$$
+  -u(x^*,y)\le -u(x^*,y^*)\quad\text{for all }y.
+$$
+The second inequality is equivalent to $u(x^*,y^*)\le u(x^*,y)$ for all
+$y$. Together these are precisely the saddle-point inequalities.</p>
+<p>In the Lean formalisation this equivalence is <em>definitional</em>: the predicate
+<code>MatrixGame.IsSaddlePoint</code> is an <code>abbrev</code> for <code>MatrixGame.IsMixedNashEq</code>, so
+<code>isMixedNashEq_iff_isSaddlePoint</code> is closed by <code>Iff.rfl</code>.  The
+strategic-game-level form (<a class="node-ref" data-node-id="zero_sum.matrix_game_nash_equilibrium" href="zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a>)
+follows from the same definitional identity combined with the profile
+expansion lemmas.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Lem. 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A common guarantee is unique and equal to the value.</li>
+<li>[MFoGT, Prop. 2.4.1(d), proof paragraph] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Saddle points express the identity between optimal strategies and Nash equilibria.</li>
 </ul>
       </div>
     </details>
@@ -899,7 +903,7 @@ inner two inequalities, the player-guarantee bound is the outer pair
       
       <li><a href="../zero_sum/index.html">Zero Sum</a></li>
       
-      <li><a href="../zero_sum/core/index.html">Zero Sum.Core</a></li>
+      <li><a href="../zero_sum/minimax/index.html">Zero Sum.Minimax</a></li>
       
     </ul>
   </section>
@@ -907,7 +911,7 @@ inner two inequalities, the player-guarantee bound is the outer pair
 
   
   <footer class="tags">
-    <span class="tag">zero-sum</span><span class="tag">value</span><span class="tag">optimal-strategy</span>
+    <span class="tag">zero-sum</span><span class="tag">nash-equilibrium</span><span class="tag">saddle-point</span>
   </footer>
   
 </article>

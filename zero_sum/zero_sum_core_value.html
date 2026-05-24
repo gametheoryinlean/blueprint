@@ -825,8 +825,6 @@
         
         <li><a href="zero_sum_maximin_minimax.html">Maximin and Minimax Values</a></li>
         
-        <li><a href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a></li>
-        
       </ul>
     </div>
   </div>
@@ -840,11 +838,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/StrategicGame/MatrixGameNash.lean#L86"><code>MatrixGame.value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/a2bf16e1542647369e59d5bb7b842beaaf2fe3b7/EconCSLib/StrategicGame/MatrixGameNash.lean#L86"><code>MatrixGame.value</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f0a3469, EconCSLib.StrategicGame.MatrixGameNash
+            EconCSLib @ a2bf16e, EconCSLib.StrategicGame.MatrixGameNash
           </span>
           
           
@@ -860,9 +858,8 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Value Of A Zero-Sum Game</h1>
-<p>For a finite matrix game, the maxmin and minmax coincide
-(<a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>); the common scalar is the <strong>value</strong>
-of the game:
+<p>When the maxmin and minmax of a zero-sum game coincide, the common
+scalar is the <strong>value</strong> of the game:
 $$
   \operatorname{val}(A) = \underline v = \overline v.
 $$</p>
@@ -899,8 +896,6 @@ theorem).</p>
       
       <li><a href="zero_sum_continuous_sion_minimax_theorem.html">Sion Minimax Theorem</a></li>
       
-      <li><a href="zero_sum_core_common_guarantee_value.html">Common Guarantee Gives The Value</a></li>
-      
       <li><a href="zero_sum_core_epsilon_optimal_strategy.html">Epsilon-Optimal Strategy</a></li>
       
       <li><a href="zero_sum_core_optimal_strategy_sets.html">Optimal Strategy Sets</a></li>
@@ -914,6 +909,8 @@ theorem).</p>
       <li><a href="zero_sum_examples_silent_duel_no_pure_value.html">Silent One-Bullet Duel Has No Pure Value</a></li>
       
       <li><a href="zero_sum_fictitious_play_cesaro_payoff_from_robinson.html">Cesàro Payoff Convergence From Robinson Lemma</a></li>
+      
+      <li><a href="zero_sum_minimax_common_guarantee_value.html">Common Guarantee Gives The Value</a></li>
       
       <li><a href="zero_sum_operators_value_operator_general.html">General Value Operator</a></li>
       

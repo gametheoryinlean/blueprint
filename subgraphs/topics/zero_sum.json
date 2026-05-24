@@ -149,14 +149,6 @@
       "payload": "node_payloads/zero_sum_continuous_sion_wolfe_no_mixed_value.json"
     },
     {
-      "id": "zero_sum.core.common_guarantee_value",
-      "title": "Common Guarantee Gives The Value",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_common_guarantee_value.html",
-      "payload": "node_payloads/zero_sum_core_common_guarantee_value.json"
-    },
-    {
       "id": "zero_sum.core.duality_gap",
       "title": "Duality Gap In A Matrix Game",
       "kind": "definition",
@@ -237,14 +229,6 @@
       "payload": "node_payloads/zero_sum_core_saddle_point.json"
     },
     {
-      "id": "zero_sum.core.strong_complementarity",
-      "title": "Strong Complementarity",
-      "kind": "proposition",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_strong_complementarity.html",
-      "payload": "node_payloads/zero_sum_core_strong_complementarity.json"
-    },
-    {
       "id": "zero_sum.core.support_complementarity",
       "title": "Support Complementarity",
       "kind": "theorem",
@@ -259,14 +243,6 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_core_value.html",
       "payload": "node_payloads/zero_sum_core_value.json"
-    },
-    {
-      "id": "zero_sum.core.zero_sum_nash_saddle",
-      "title": "Zero-Sum Nash Equilibria As Saddle Points",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_zero_sum_nash_saddle.html",
-      "payload": "node_payloads/zero_sum_core_zero_sum_nash_saddle.json"
     },
     {
       "id": "zero_sum.dantzig_proof_spine",
@@ -489,6 +465,14 @@
       "payload": "node_payloads/zero_sum_minimax_antisymmetric_matrix_game_value.json"
     },
     {
+      "id": "zero_sum.minimax.common_guarantee_value",
+      "title": "Common Guarantee Gives The Value",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_common_guarantee_value.html",
+      "payload": "node_payloads/zero_sum_minimax_common_guarantee_value.json"
+    },
+    {
       "id": "zero_sum.minimax.loomis_induction_proof",
       "title": "Direct Induction Proof Of Loomis Theorem",
       "kind": "proof-plan",
@@ -611,6 +595,14 @@
       "payload": "node_payloads/zero_sum_minimax_stochastic_matrix_invariant_distribution.json"
     },
     {
+      "id": "zero_sum.minimax.strong_complementarity",
+      "title": "Strong Complementarity",
+      "kind": "proposition",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_strong_complementarity.html",
+      "payload": "node_payloads/zero_sum_minimax_strong_complementarity.json"
+    },
+    {
       "id": "zero_sum.minimax.value_predicates",
       "title": "Field-Generic Value Predicates",
       "kind": "definition",
@@ -635,6 +627,14 @@
       "status": "staged",
       "href": "zero_sum/zero_sum_minimax_ville_theorem.html",
       "payload": "node_payloads/zero_sum_minimax_ville_theorem.json"
+    },
+    {
+      "id": "zero_sum.minimax.zero_sum_nash_saddle",
+      "title": "Zero-Sum Nash Equilibria As Saddle Points",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_minimax_zero_sum_nash_saddle.html",
+      "payload": "node_payloads/zero_sum_minimax_zero_sum_nash_saddle.json"
     },
     {
       "id": "zero_sum.mixed_matrix_payoff",
@@ -824,26 +824,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.player_guarantee",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.maximin_le_minimax",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.core.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.core.mixed_extension",
       "to": "zero_sum.core.duality_gap",
       "kind": "uses"
@@ -914,16 +894,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.support_complementarity",
-      "to": "zero_sum.core.strong_complementarity",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.core.strong_complementarity",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.core.mixed_support",
       "to": "zero_sum.core.support_complementarity",
       "kind": "uses"
@@ -936,21 +906,6 @@
     {
       "from": "zero_sum.maximin_minimax",
       "to": "zero_sum.core.value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.core.value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.saddle_point",
-      "to": "zero_sum.core.zero_sum_nash_saddle",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.core.zero_sum_nash_saddle",
       "kind": "uses"
     },
     {
@@ -1114,6 +1069,26 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.core.player_guarantee",
+      "to": "zero_sum.minimax.common_guarantee_value",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.minimax.common_guarantee_value",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.maximin_le_minimax",
+      "to": "zero_sum.minimax.common_guarantee_value",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.minimax.common_guarantee_value",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
       "to": "zero_sum.minimax.loomis_induction_proof",
       "kind": "proof_plan_uses"
@@ -1239,6 +1214,16 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.core.support_complementarity",
+      "to": "zero_sum.minimax.strong_complementarity",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.minimax.strong_complementarity",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.maximin_minimax",
       "to": "zero_sum.minimax.value_predicates",
       "kind": "uses"
@@ -1251,6 +1236,16 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ville_theorem",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "zero_sum.minimax.zero_sum_nash_saddle",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.minimax.zero_sum_nash_saddle",
       "kind": "uses"
     },
     {
@@ -1400,7 +1395,7 @@
     },
     {
       "from": "topic:linear_programming",
-      "to": "zero_sum.core.strong_complementarity",
+      "to": "zero_sum.minimax.strong_complementarity",
       "kind": "boundary_dependency",
       "topic": "linear_programming",
       "count": 1
@@ -1992,16 +1987,16 @@
       "title": "Zero Sum.Core",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 23,
-      "direct_node_count": 23,
+      "node_count": 19,
+      "direct_node_count": 19,
       "kind_counts": {
-        "definition": 14,
-        "lemma": 3,
-        "proposition": 2,
-        "theorem": 4
+        "definition": 13,
+        "lemma": 2,
+        "proposition": 1,
+        "theorem": 3
       },
       "status_counts": {
-        "formalized": 23
+        "formalized": 19
       },
       "href": "zero_sum/core/index.html",
       "children": []
@@ -2066,17 +2061,18 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 24,
-      "direct_node_count": 24,
+      "node_count": 26,
+      "direct_node_count": 26,
       "kind_counts": {
         "definition": 1,
         "lemma": 7,
         "proof-plan": 8,
-        "theorem": 8
+        "proposition": 1,
+        "theorem": 9
       },
       "status_counts": {
         "admitted": 2,
-        "formalized": 14,
+        "formalized": 16,
         "proved": 2,
         "staged": 6
       },
@@ -2140,7 +2136,7 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.minimax",
       "kind": "topic_dependency",
-      "count": 6
+      "count": 10
     },
     {
       "from": "topic:zero_sum.core",
@@ -2162,19 +2158,7 @@
     },
     {
       "from": "topic:zero_sum.minimax",
-      "to": "topic:zero_sum.core",
-      "kind": "topic_dependency",
-      "count": 6
-    },
-    {
-      "from": "topic:zero_sum.minimax",
       "to": "topic:zero_sum.examples",
-      "kind": "topic_dependency",
-      "count": 2
-    },
-    {
-      "from": "topic:zero_sum.minimax",
-      "to": "topic:zero_sum.fictitious_play",
       "kind": "topic_dependency",
       "count": 1
     },
@@ -2295,14 +2279,14 @@
     },
     {
       "from": "topic:linear_programming",
-      "to": "topic:zero_sum.core",
+      "to": "topic:zero_sum.minimax",
       "kind": "boundary_dependency",
       "topic": "linear_programming",
       "count": 1
     },
     {
       "from": "topic:linear_programming.duality",
-      "to": "topic:zero_sum.core",
+      "to": "topic:zero_sum.minimax",
       "kind": "boundary_dependency",
       "topic": "linear_programming.duality",
       "count": 1

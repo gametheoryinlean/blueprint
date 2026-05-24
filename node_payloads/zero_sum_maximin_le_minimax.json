@@ -7,8 +7,7 @@
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
-    "zero_sum.core",
-    "zero_sum.minimax"
+    "zero_sum.core"
   ],
   "body_html": "<h1>Maximin is Bounded by Minimax</h1>\n<p>For every finite matrix game,</p>\n<p>$$\\max_x \\min_j E_A(x,j) \\le \\min_y \\max_i E_A(i,y).$$</p>\n<p>This is the weak-duality inequality: player I's best guaranteed payoff cannot\nexceed player II's best upper bound on player I's payoff.</p>",
   "proof_html": "<p>For every mixed row $x$ and mixed column $y$,\n$$\n  \\min_j E_A(x,j) \\le E_A(x,y) \\le \\max_i E_A(i,y).\n$$\nTaking the supremum over $x$ on the left preserves the first inequality against\nthe fixed upper bound $\\max_i E_A(i,y)$, so\n$$\n  \\max_x \\min_j E_A(x,j) \\le \\max_i E_A(i,y)\n$$\nfor every $y$. Taking the infimum over $y$ gives\n$$\n  \\max_x \\min_j E_A(x,j) \\le \\min_y \\max_i E_A(i,y).\n$$</p>\n<h2>Abstract pure-strategy form</h2>\n<p>On arbitrary nonempty strategy sets $I, J$ with payoff $g : I \\times J \\to\n\\mathbb{R}$ and pure-strategy extrema (no mixing), the same argument gives\nweak duality</p>\n<p>$$\n  \\underline v = \\sup_{i \\in I} \\inf_{j \\in J} g(i,j)\n              \\;\\le\\; \\inf_{j \\in J} \\sup_{i \\in I} g(i,j) = \\overline v.\n$$</p>\n<p><em>Proof.</em> For every pair $(i,j)$,\n$$\n  \\inf_{j' \\in J} g(i,j') \\le g(i,j) \\le \\sup_{i' \\in I} g(i',j).\n$$\nTaking the supremum over $i$ on the left and the infimum over $j$ on the right\ngives $\\underline v \\le \\overline v$. $\\square$</p>\n<p>This abstract form is what nodes outside the finite-mixed setting cite. The\nLean formalisation lives in the finite-mixed instantiation above.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Lemmas 2.2.4 and 2.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. The lower value never exceeds the upper value.</li>\n<li>[MFoGT, Lem. 2.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Abstract pure-strategy weak duality (merged from <code>zero_sum.core.maxmin_le_minmax</code>).</li>\n</ul>",
@@ -20,11 +19,6 @@
     }
   ],
   "dependents": [
-    {
-      "id": "zero_sum.core.common_guarantee_value",
-      "title": "Common Guarantee Gives The Value",
-      "href": "zero_sum/zero_sum_core_common_guarantee_value.html"
-    },
     {
       "id": "zero_sum.core.optimal_pairs_are_saddle_points",
       "title": "Optimal Pairs Are Exactly Saddle Points",
@@ -39,6 +33,11 @@
       "id": "zero_sum.fictitious_play.continuous_fictitious_play_gap",
       "title": "Continuous Fictitious Play Closes The Duality Gap",
       "href": "zero_sum/zero_sum_fictitious_play_continuous_fictitious_play_gap.html"
+    },
+    {
+      "id": "zero_sum.minimax.common_guarantee_value",
+      "title": "Common Guarantee Gives The Value",
+      "href": "zero_sum/zero_sum_minimax_common_guarantee_value.html"
     },
     {
       "id": "zero_sum.minimax.lp_duality_minimax_proof",
@@ -58,9 +57,9 @@
       "qualified_name": "MatrixGame.maximin_le_minimax",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "f0a3469c177ba9e46ada6e440e8ba684bfb8b32f",
-      "short_revision": "f0a3469",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/StrategicGame/Minimax.lean#L188",
+      "revision": "a2bf16e1542647369e59d5bb7b842beaaf2fe3b7",
+      "short_revision": "a2bf16e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/a2bf16e1542647369e59d5bb7b842beaaf2fe3b7/EconCSLib/StrategicGame/Minimax.lean#L188",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
