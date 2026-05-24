@@ -440,13 +440,6 @@
       "node_count": 5
     },
     {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "href": "linear_algebra/index.html",
-      "role": "dependent",
-      "node_count": 4
-    },
-    {
       "id": "linear_programming",
       "title": "Linear Programming",
       "href": "linear_programming/index.html",
@@ -465,7 +458,14 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 84
+      "node_count": 87
+    },
+    {
+      "id": "zero_sum.applications",
+      "title": "Zero Sum.Applications",
+      "href": "zero_sum/applications/index.html",
+      "role": "dependent",
+      "node_count": 1
     }
   ],
   "boundary_edges": [
@@ -568,13 +568,6 @@
       "count": 1
     },
     {
-      "from": "zero_sum.minimax.loomis_theorem",
-      "to": "topic:linear_algebra",
-      "kind": "boundary_dependent",
-      "topic": "linear_algebra",
-      "count": 1
-    },
-    {
       "from": "zero_sum.von_neumann_minimax",
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependent",
@@ -601,6 +594,13 @@
       "kind": "boundary_dependent",
       "topic": "zero_sum",
       "count": 9
+    },
+    {
+      "from": "zero_sum.minimax.loomis_theorem",
+      "to": "topic:zero_sum.applications",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.applications",
+      "count": 1
     }
   ],
   "keywords": [

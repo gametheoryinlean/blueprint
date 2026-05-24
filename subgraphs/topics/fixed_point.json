@@ -4,20 +4,20 @@
     "title": "Fixed Point",
     "href": "fixed_point/index.html",
     "parent": null,
-    "node_count": 6,
-    "descendant_node_count": 6
+    "node_count": 5,
+    "descendant_node_count": 5
   },
   "counts": {
-    "internal_nodes": 6,
-    "descendant_nodes": 6,
+    "internal_nodes": 5,
+    "descendant_nodes": 5,
     "child_topics": 0,
-    "non_proof_plan_nodes": 6,
+    "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 12,
-    "visible_nodes_with_selected_proof_plans": 12
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -43,14 +43,6 @@
       "status": "staged",
       "href": "fixed_point/fixed_point_kakutani_fixed_point.html",
       "payload": "node_payloads/fixed_point_kakutani_fixed_point.json"
-    },
-    {
-      "id": "fixed_point.kakutani_from_two_player_nash",
-      "title": "Kakutani From Two-Player Nash Existence",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "fixed_point/fixed_point_kakutani_from_two_player_nash.html",
-      "payload": "node_payloads/fixed_point_kakutani_from_two_player_nash.json"
     },
     {
       "id": "fixed_point.retract_fixed_point",
@@ -86,11 +78,6 @@
       "kind": "uses"
     },
     {
-      "from": "fixed_point.kakutani_fixed_point",
-      "to": "fixed_point.kakutani_from_two_player_nash",
-      "kind": "uses"
-    },
-    {
       "from": "fixed_point.brouwer_simplex",
       "to": "fixed_point.retract_fixed_point",
       "kind": "uses"
@@ -115,8 +102,8 @@
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 16
+      "role": "dependent",
+      "node_count": 14
     },
     {
       "id": "strategic_games.refinements",
@@ -134,13 +121,6 @@
     }
   ],
   "boundary_edges": [
-    {
-      "from": "topic:strategic_games.equilibrium",
-      "to": "fixed_point.kakutani_from_two_player_nash",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.equilibrium",
-      "count": 1
-    },
     {
       "from": "fixed_point.brouwer_compact_convex",
       "to": "topic:strategic_games.continuous",
@@ -167,7 +147,7 @@
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
-      "count": 1
+      "count": 2
     },
     {
       "from": "fixed_point.kakutani_fixed_point",
@@ -201,18 +181,12 @@
       "id": "fixed-point",
       "title": "fixed-point",
       "href": "keywords/fixed-point.html",
-      "count": 6
+      "count": 5
     },
     {
       "id": "kakutani",
       "title": "kakutani",
       "href": "keywords/kakutani.html",
-      "count": 2
-    },
-    {
-      "id": "nash-equilibrium",
-      "title": "nash-equilibrium",
-      "href": "keywords/nash-equilibrium.html",
       "count": 1
     },
     {

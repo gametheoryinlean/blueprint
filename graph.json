@@ -1633,6 +1633,11 @@
         "kakutani",
         "nash-equilibrium"
       ],
+      "primary_topic": "strategic_games.equilibrium",
+      "topics": [
+        "strategic_games",
+        "strategic_games.equilibrium"
+      ],
       "topic": "fixed_point",
       "uses": [
         "fixed_point.kakutani_fixed_point",
@@ -1719,10 +1724,10 @@
         "perron-frobenius",
         "zero-sum"
       ],
-      "primary_topic": "linear_algebra",
+      "primary_topic": "zero_sum.applications",
       "topics": [
-        "linear_algebra",
-        "linear_algebra.perron_frobenius"
+        "zero_sum",
+        "zero_sum.applications"
       ],
       "lean_declarations": [
         "EconCSLib.LinearAlgebra.perron_frobenius"
@@ -7235,8 +7240,7 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.population.population_game",
-        "strategic_games.potential.potential_game",
-        "zero_sum.fictitious_play.fictitious_play_convergence"
+        "strategic_games.potential.potential_game"
       ]
     },
     {
@@ -8254,6 +8258,11 @@
         "stochastic-game",
         "zero-sum"
       ],
+      "primary_topic": "zero_sum.repeated",
+      "topics": [
+        "zero_sum",
+        "zero_sum.repeated"
+      ],
       "topic": "strategic_games",
       "uses": [
         "strategic_games.repeated.stochastic_game",
@@ -8270,6 +8279,11 @@
         "repeated-game",
         "incomplete-information",
         "zero-sum"
+      ],
+      "primary_topic": "zero_sum.repeated",
+      "topics": [
+        "zero_sum",
+        "zero_sum.repeated"
       ],
       "topic": "strategic_games",
       "uses": [
@@ -8468,6 +8482,11 @@
         "repeated-game",
         "folk-theorem",
         "subgame-perfect-equilibrium"
+      ],
+      "primary_topic": "extensive_game.repeated",
+      "topics": [
+        "extensive_game",
+        "extensive_game.repeated"
       ],
       "topic": "strategic_games",
       "uses": [
@@ -9294,8 +9313,7 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core",
-        "mixed_strategy"
+        "zero_sum.core"
       ],
       "lean_declarations": [
         "stdSimplex",
@@ -9326,8 +9344,7 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core",
-        "mixed_strategy"
+        "zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.support"
@@ -9618,8 +9635,7 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core",
-        "strategic_games.equilibrium"
+        "zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.isMixedNashEq_iff_isSaddlePoint",
@@ -10016,9 +10032,6 @@
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
         "zero_sum.fictitious_play.fictitious_play",
         "zero_sum.fictitious_play.robinson_admissible_lemma"
-      ],
-      "used_by": [
-        "strategic_games.dynamics.stable_game_framework"
       ]
     },
     {
@@ -10272,8 +10285,7 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax",
-        "strategic_games.equilibrium"
+        "zero_sum.minimax"
       ],
       "lean_declarations": [
         "MatrixGame.IsMixedNashEq",
@@ -11178,8 +11190,7 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.core",
-        "strategic_games.equilibrium"
+        "zero_sum.core"
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum.nash_payoff_eq",
@@ -13345,10 +13356,6 @@
     },
     {
       "from": "strategic_games.potential.potential_game",
-      "to": "strategic_games.dynamics.stable_game_framework"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play_convergence",
       "to": "strategic_games.dynamics.stable_game_framework"
     },
     {

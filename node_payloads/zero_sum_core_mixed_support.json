@@ -7,8 +7,7 @@
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
-    "zero_sum.core",
-    "mixed_strategy"
+    "zero_sum.core"
   ],
   "body_html": "<h1>Support Of A Mixed Strategy</h1>\n<p>The support of a mixed strategy $x \\in \\Delta(I)$ is the set\n$$\n  \\operatorname{supp}(x)=\\{i \\in I : x_i&gt;0\\}.\n$$\nIn Lean, <code>MatrixGame.support</code> returns this as a <code>Finset I</code> via\n<code>Finset.univ.filter (0 &lt; x.val ·)</code>. Marked <code>noncomputable</code> because strict\ninequality on <code>ℝ</code> is not decidable.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Support of a mixed strategy.</li>\n</ul>",
   "proof_html": null,
@@ -33,9 +32,9 @@
       "qualified_name": "MatrixGame.support",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "3a875f7dafcf362e389b4d2a8090e0b26d3d89fa",
-      "short_revision": "3a875f7",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/3a875f7dafcf362e389b4d2a8090e0b26d3d89fa/EconCSLib/StrategicGame/MatrixGameNash.lean#L144",
+      "revision": "62faa3c3681d042ef62448e571761e1f5373b939",
+      "short_revision": "62faa3c",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/62faa3c3681d042ef62448e571761e1f5373b939/EconCSLib/StrategicGame/MatrixGameNash.lean#L144",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

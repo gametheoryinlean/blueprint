@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subgame Perfect Uniform Folk Theorem — EconCSLib Knowledge Blueprint</title>
+  <title>zero_sum.applications — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -76,6 +76,8 @@
           <a href="../../extensive_game/normal_form/index.html">Normal Form</a>
         </li><li class="topic-leaf">
           <a href="../../extensive_game/perfect_information/index.html">Perfect Information</a>
+        </li><li class="topic-leaf">
+          <a href="../../extensive_game/repeated/index.html">Repeated</a>
         </li></ul>
           </details>
         </li>
@@ -93,8 +95,6 @@
             <summary><a href="../../linear_algebra/index.html">Linear Algebra</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li><li class="topic-leaf">
-          <a href="../../linear_algebra/perron_frobenius/index.html">Perron Frobenius</a>
         </li></ul>
           </details>
         </li>
@@ -123,10 +123,6 @@
           <a href="../../mechanism_design/vcg/index.html">Vcg</a>
         </li></ul>
           </details>
-        </li>
-      
-        <li class="topic-leaf">
-          <a href="../../mixed_strategy/index.html">Mixed Strategy</a>
         </li>
       
         <li class="topic-leaf">
@@ -180,8 +176,8 @@
           </details>
         </li>
       
-        <li class="topic-parent topic-active">
-          <details open data-topic-root="strategic_games">
+        <li class="topic-parent">
+          <details data-topic-root="strategic_games">
             <summary><a href="../../strategic_games/index.html">Strategic Games</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../../strategic_games/bayesian/index.html">Bayesian</a>
@@ -211,7 +207,7 @@
           <a href="../../strategic_games/potential/index.html">Potential</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/refinements/index.html">Refinements</a>
-        </li><li class="topic-leaf topic-active">
+        </li><li class="topic-leaf">
           <a href="../../strategic_games/repeated/index.html">Repeated</a>
         </li><li class="topic-leaf">
           <a href="../../strategic_games/variational/index.html">Variational</a>
@@ -223,10 +219,12 @@
           <a href="../../utility/index.html">Utility</a>
         </li>
       
-        <li class="topic-parent">
-          <details data-topic-root="zero_sum">
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="zero_sum">
             <summary><a href="../../zero_sum/index.html">Zero Sum</a></summary>
-            <ul class="topic-children"><li class="topic-leaf">
+            <ul class="topic-children"><li class="topic-leaf topic-active">
+          <a href="../../zero_sum/applications/index.html">Applications</a>
+        </li><li class="topic-leaf">
           <a href="../../zero_sum/continuous/index.html">Continuous</a>
         </li><li class="topic-leaf">
           <a href="../../zero_sum/core/index.html">Core</a>
@@ -240,6 +238,8 @@
           <a href="../../zero_sum/minimax/index.html">Minimax</a>
         </li><li class="topic-leaf">
           <a href="../../zero_sum/operators/index.html">Operators</a>
+        </li><li class="topic-leaf">
+          <a href="../../zero_sum/repeated/index.html">Repeated</a>
         </li></ul>
           </details>
         </li>
@@ -801,69 +801,31 @@
   </nav>
   <main>
     
-<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-strategic_games-2e-repeated-2e-subgame_perfect_uniform_folk_theorem">
-  <header class="theorem_thmheading thm-heading">
-    <span class="theorem_thmcaption thm-caption">Theorem</span>
-    <span class="theorem_thmtitle thm-title">Subgame Perfect Uniform Folk Theorem</span>
-    <div class="thm_header_extras">
-      
-      <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-staged">staged</span>
-    </div>
-    <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-strategic_games-2e-repeated-2e-subgame_perfect_uniform_folk_theorem">#</a>
-      
-      <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
-      
-      
-    </div>
-  </header>
+<h1>Zero Sum.Applications</h1>
 
-  
-  <div class="modal-container" id="uses-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li><a href="strategic_games_repeated_uniform_folk_theorem.html">Uniform Folk Theorem</a></li>
-        
-        <li><a href="../../extensive_game/perfect_information/extensive_game_perfect_information_subgame_perfect_equilibrium.html">Subgame-Perfect Equilibrium In Perfect-Information Games</a></li>
-        
-      </ul>
-    </div>
-  </div>
-  
-
-  
-
-  <div class="theorem_thmcontent thm-content body">
-    <h1>Subgame Perfect Uniform Folk Theorem</h1>
-<p>For standard repeated games, requiring subgame perfection does not change the
-uniform folk-theorem payoff set:
-$$
-  E_\infty' = E_\infty = E.
-$$</p>
-<p>MFoGT obtains this by replacing eternal punishment with finite punishment
-phases after which play restarts on the main path.</p>
-<h2>References</h2>
-<ul>
-<li>[MFoGT, Chapter 8, Thm. 8.5.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Perfect folk theorem for uniform equilibria.</li>
-</ul>
+<div class="topic-meta">
+  <div class="topic-stats">
+    <span class="topic-node-count">1 node</span>
+    
+    <span class="badge status-formalized">1 formalized</span>
     
   </div>
+  
+</div>
 
-  
 
-  
 
+<div class="blueprint-node-list">
   
-
+  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
+    <header class="theorem_thmheading thm-heading">
+      <span class="theorem_thmcaption thm-caption">Theorem</span>
+      <a class="theorem_thmtitle thm-title" href="linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
+      <span class="badge status-formalized">formalized</span>
+    </header>
+  </article>
   
-  <footer class="tags">
-    <span class="tag">strategic-game</span><span class="tag">repeated-game</span><span class="tag">folk-theorem</span><span class="tag">subgame-perfect-equilibrium</span>
-  </footer>
-  
-</article>
+</div>
 
   </main>
   <script src="../../graph.js"></script>

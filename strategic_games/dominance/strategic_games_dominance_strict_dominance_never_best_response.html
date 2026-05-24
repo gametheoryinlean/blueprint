@@ -76,6 +76,8 @@
           <a href="../../extensive_game/normal_form/index.html">Normal Form</a>
         </li><li class="topic-leaf">
           <a href="../../extensive_game/perfect_information/index.html">Perfect Information</a>
+        </li><li class="topic-leaf">
+          <a href="../../extensive_game/repeated/index.html">Repeated</a>
         </li></ul>
           </details>
         </li>
@@ -93,8 +95,6 @@
             <summary><a href="../../linear_algebra/index.html">Linear Algebra</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li><li class="topic-leaf">
-          <a href="../../linear_algebra/perron_frobenius/index.html">Perron Frobenius</a>
         </li></ul>
           </details>
         </li>
@@ -123,10 +123,6 @@
           <a href="../../mechanism_design/vcg/index.html">Vcg</a>
         </li></ul>
           </details>
-        </li>
-      
-        <li class="topic-leaf">
-          <a href="../../mixed_strategy/index.html">Mixed Strategy</a>
         </li>
       
         <li class="topic-leaf">
@@ -227,6 +223,8 @@
           <details data-topic-root="zero_sum">
             <summary><a href="../../zero_sum/index.html">Zero Sum</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
+          <a href="../../zero_sum/applications/index.html">Applications</a>
+        </li><li class="topic-leaf">
           <a href="../../zero_sum/continuous/index.html">Continuous</a>
         </li><li class="topic-leaf">
           <a href="../../zero_sum/core/index.html">Core</a>
@@ -240,6 +238,8 @@
           <a href="../../zero_sum/minimax/index.html">Minimax</a>
         </li><li class="topic-leaf">
           <a href="../../zero_sum/operators/index.html">Operators</a>
+        </li><li class="topic-leaf">
+          <a href="../../zero_sum/repeated/index.html">Repeated</a>
         </li></ul>
           </details>
         </li>
@@ -856,6 +856,16 @@ payoff of a pure action $t_i$ with the payoff of the fixed mixed strategy $m_i$.
 The hypothesis that $m_i$ is never a best response implies that the auxiliary
 zero-sum game has strictly positive value. An optimal strategy in that game then
 strictly dominates $m_i$ in the original game.</p>
+<h2>Why the zero-sum dependency</h2>
+<p>This proposition is a strategic-game result, but the MFoGT proof route is
+structural in <a class="node-ref" data-node-id="zero_sum.von_neumann_minimax" href="../../zero_sum/zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>: the "$m_i$ is never a best
+response $\Rightarrow$ strictly dominated" direction is established by constructing
+an auxiliary two-player zero-sum game and extracting a dominating strategy from
+its minimax-optimal strategy. The dependency therefore reflects the proof
+technique, not the statement. (A separation-theorem proof à la Pearce 1984 is
+available as an alternative and would substitute a Theorem-of-the-Alternative
+citation in <code>linear_algebra</code>; the MFoGT route is chosen here for alignment with
+the rest of the library's zero-sum infrastructure.)</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Prop. 4.3.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strict domination is equivalent to never being a best response against a correlated strategy.</li>

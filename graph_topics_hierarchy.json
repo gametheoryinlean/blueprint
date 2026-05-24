@@ -64,16 +64,16 @@
       "title": "Extensive Game",
       "depth": 1,
       "parent": null,
-      "node_count": 51,
-      "direct_node_count": 0,
+      "node_count": 52,
+      "direct_node_count": 1,
       "kind_counts": {
         "definition": 30,
         "example": 4,
         "proposition": 4,
-        "theorem": 13
+        "theorem": 14
       },
       "status_counts": {
-        "staged": 51
+        "staged": 52
       },
       "href": "extensive_game/index.html",
       "children": [
@@ -82,7 +82,8 @@
         "extensive_game.examples",
         "extensive_game.imperfect_information",
         "extensive_game.normal_form",
-        "extensive_game.perfect_information"
+        "extensive_game.perfect_information",
+        "extensive_game.repeated"
       ]
     },
     {
@@ -90,14 +91,14 @@
       "title": "Fixed Point",
       "depth": 1,
       "parent": null,
-      "node_count": 6,
-      "direct_node_count": 6,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
         "lemma": 2,
-        "theorem": 4
+        "theorem": 3
       },
       "status_counts": {
-        "staged": 6
+        "staged": 5
       },
       "href": "fixed_point/index.html",
       "children": []
@@ -123,20 +124,18 @@
       "title": "Linear Algebra",
       "depth": 1,
       "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 3,
+      "direct_node_count": 3,
       "kind_counts": {
         "lemma": 1,
-        "theorem": 3
+        "theorem": 2
       },
       "status_counts": {
-        "formalized": 1,
         "staged": 3
       },
       "href": "linear_algebra/index.html",
       "children": [
-        "linear_algebra.alternatives",
-        "linear_algebra.perron_frobenius"
+        "linear_algebra.alternatives"
       ]
     },
     {
@@ -182,22 +181,6 @@
       ]
     },
     {
-      "id": "mixed_strategy",
-      "title": "Mixed Strategy",
-      "depth": 1,
-      "parent": null,
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "definition": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "mixed_strategy/index.html",
-      "children": []
-    },
-    {
       "id": "order",
       "title": "Order",
       "depth": 1,
@@ -240,18 +223,17 @@
       "title": "Strategic Games",
       "depth": 1,
       "parent": null,
-      "node_count": 136,
-      "direct_node_count": 11,
+      "node_count": 131,
+      "direct_node_count": 12,
       "kind_counts": {
         "definition": 74,
         "example": 6,
         "proposition": 18,
-        "theorem": 38
+        "theorem": 33
       },
       "status_counts": {
         "admitted": 10,
-        "formalized": 3,
-        "staged": 123
+        "staged": 121
       },
       "href": "strategic_games/index.html",
       "children": [
@@ -295,8 +277,8 @@
       "title": "Zero Sum",
       "depth": 1,
       "parent": null,
-      "node_count": 84,
-      "direct_node_count": 84,
+      "node_count": 87,
+      "direct_node_count": 87,
       "kind_counts": {
         "concept": 1,
         "definition": 20,
@@ -304,24 +286,26 @@
         "lemma": 16,
         "proof-plan": 9,
         "proposition": 14,
-        "theorem": 16
+        "theorem": 19
       },
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 34,
+        "formalized": 35,
         "proved": 2,
-        "staged": 45
+        "staged": 47
       },
       "href": "zero_sum/index.html",
       "children": [
+        "zero_sum.applications",
         "zero_sum.continuous",
         "zero_sum.core",
         "zero_sum.examples",
         "zero_sum.fictitious_play",
         "zero_sum.lp",
         "zero_sum.minimax",
-        "zero_sum.operators"
+        "zero_sum.operators",
+        "zero_sum.repeated"
       ]
     }
   ],
@@ -489,16 +473,16 @@
       "title": "Extensive Game",
       "depth": 1,
       "parent": null,
-      "node_count": 51,
-      "direct_node_count": 0,
+      "node_count": 52,
+      "direct_node_count": 1,
       "kind_counts": {
         "definition": 30,
         "example": 4,
         "proposition": 4,
-        "theorem": 13
+        "theorem": 14
       },
       "status_counts": {
-        "staged": 51
+        "staged": 52
       },
       "href": "extensive_game/index.html",
       "children": [
@@ -507,7 +491,8 @@
         "extensive_game.examples",
         "extensive_game.imperfect_information",
         "extensive_game.normal_form",
-        "extensive_game.perfect_information"
+        "extensive_game.perfect_information",
+        "extensive_game.repeated"
       ]
     },
     "extensive_game.core": {
@@ -612,19 +597,35 @@
       "href": "extensive_game/perfect_information/index.html",
       "children": []
     },
+    "extensive_game.repeated": {
+      "id": "extensive_game.repeated",
+      "title": "Extensive Game.Repeated",
+      "depth": 2,
+      "parent": "extensive_game",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "extensive_game/repeated/index.html",
+      "children": []
+    },
     "fixed_point": {
       "id": "fixed_point",
       "title": "Fixed Point",
       "depth": 1,
       "parent": null,
-      "node_count": 6,
-      "direct_node_count": 6,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
         "lemma": 2,
-        "theorem": 4
+        "theorem": 3
       },
       "status_counts": {
-        "staged": 6
+        "staged": 5
       },
       "href": "fixed_point/index.html",
       "children": []
@@ -650,20 +651,18 @@
       "title": "Linear Algebra",
       "depth": 1,
       "parent": null,
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 3,
+      "direct_node_count": 3,
       "kind_counts": {
         "lemma": 1,
-        "theorem": 3
+        "theorem": 2
       },
       "status_counts": {
-        "formalized": 1,
         "staged": 3
       },
       "href": "linear_algebra/index.html",
       "children": [
-        "linear_algebra.alternatives",
-        "linear_algebra.perron_frobenius"
+        "linear_algebra.alternatives"
       ]
     },
     "linear_algebra.alternatives": {
@@ -681,22 +680,6 @@
         "staged": 3
       },
       "href": "linear_algebra/alternatives/index.html",
-      "children": []
-    },
-    "linear_algebra.perron_frobenius": {
-      "id": "linear_algebra.perron_frobenius",
-      "title": "Linear Algebra.Perron Frobenius",
-      "depth": 2,
-      "parent": "linear_algebra",
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "theorem": 1
-      },
-      "status_counts": {
-        "formalized": 1
-      },
-      "href": "linear_algebra/perron_frobenius/index.html",
       "children": []
     },
     "linear_programming": {
@@ -840,22 +823,6 @@
         "staged": 2
       },
       "href": "mechanism_design/vcg/index.html",
-      "children": []
-    },
-    "mixed_strategy": {
-      "id": "mixed_strategy",
-      "title": "Mixed Strategy",
-      "depth": 1,
-      "parent": null,
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "definition": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "mixed_strategy/index.html",
       "children": []
     },
     "order": {
@@ -1159,18 +1126,17 @@
       "title": "Strategic Games",
       "depth": 1,
       "parent": null,
-      "node_count": 136,
-      "direct_node_count": 11,
+      "node_count": 131,
+      "direct_node_count": 12,
       "kind_counts": {
         "definition": 74,
         "example": 6,
         "proposition": 18,
-        "theorem": 38
+        "theorem": 33
       },
       "status_counts": {
         "admitted": 10,
-        "formalized": 3,
-        "staged": 123
+        "staged": 121
       },
       "href": "strategic_games/index.html",
       "children": [
@@ -1302,17 +1268,16 @@
       "title": "Strategic Games.Equilibrium",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 16,
-      "direct_node_count": 16,
+      "node_count": 14,
+      "direct_node_count": 14,
       "kind_counts": {
         "definition": 4,
         "example": 2,
         "proposition": 3,
-        "theorem": 7
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 3,
-        "staged": 13
+        "staged": 14
       },
       "href": "strategic_games/equilibrium/index.html",
       "children": []
@@ -1444,14 +1409,14 @@
       "title": "Strategic Games.Repeated",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 15,
-      "direct_node_count": 15,
+      "node_count": 12,
+      "direct_node_count": 12,
       "kind_counts": {
         "definition": 9,
-        "theorem": 6
+        "theorem": 3
       },
       "status_counts": {
-        "staged": 15
+        "staged": 12
       },
       "href": "strategic_games/repeated/index.html",
       "children": []
@@ -1494,8 +1459,8 @@
       "title": "Zero Sum",
       "depth": 1,
       "parent": null,
-      "node_count": 84,
-      "direct_node_count": 84,
+      "node_count": 87,
+      "direct_node_count": 87,
       "kind_counts": {
         "concept": 1,
         "definition": 20,
@@ -1503,25 +1468,43 @@
         "lemma": 16,
         "proof-plan": 9,
         "proposition": 14,
-        "theorem": 16
+        "theorem": 19
       },
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 34,
+        "formalized": 35,
         "proved": 2,
-        "staged": 45
+        "staged": 47
       },
       "href": "zero_sum/index.html",
       "children": [
+        "zero_sum.applications",
         "zero_sum.continuous",
         "zero_sum.core",
         "zero_sum.examples",
         "zero_sum.fictitious_play",
         "zero_sum.lp",
         "zero_sum.minimax",
-        "zero_sum.operators"
+        "zero_sum.operators",
+        "zero_sum.repeated"
       ]
+    },
+    "zero_sum.applications": {
+      "id": "zero_sum.applications",
+      "title": "Zero Sum.Applications",
+      "depth": 2,
+      "parent": "zero_sum",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "formalized": 1
+      },
+      "href": "zero_sum/applications/index.html",
+      "children": []
     },
     "zero_sum.continuous": {
       "id": "zero_sum.continuous",
@@ -1655,6 +1638,22 @@
         "staged": 5
       },
       "href": "zero_sum/operators/index.html",
+      "children": []
+    },
+    "zero_sum.repeated": {
+      "id": "zero_sum.repeated",
+      "title": "Zero Sum.Repeated",
+      "depth": 2,
+      "parent": "zero_sum",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "zero_sum/repeated/index.html",
       "children": []
     }
   }

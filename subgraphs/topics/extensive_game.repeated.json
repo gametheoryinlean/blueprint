@@ -1,0 +1,97 @@
+{
+  "topic": {
+    "id": "extensive_game.repeated",
+    "title": "Extensive Game.Repeated",
+    "href": "extensive_game/repeated/index.html",
+    "parent": "extensive_game",
+    "node_count": 1,
+    "descendant_node_count": 1
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "descendant_nodes": 1,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
+  },
+  "nodes": [
+    {
+      "id": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
+      "title": "Subgame Perfect Uniform Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "extensive_game/repeated/strategic_games_repeated_subgame_perfect_uniform_folk_theorem.html",
+      "payload": "node_payloads/strategic_games_repeated_subgame_perfect_uniform_folk_theorem.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "extensive_game.perfect_information",
+      "title": "Extensive Game.Perfect Information",
+      "href": "extensive_game/perfect_information/index.html",
+      "role": "dependency",
+      "node_count": 9
+    },
+    {
+      "id": "strategic_games.repeated",
+      "title": "Strategic Games.Repeated",
+      "href": "strategic_games/repeated/index.html",
+      "role": "dependency",
+      "node_count": 12
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:extensive_game.perfect_information",
+      "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game.perfect_information",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.repeated",
+      "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.repeated",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "folk-theorem",
+      "title": "folk-theorem",
+      "href": "keywords/folk-theorem.html",
+      "count": 1
+    },
+    {
+      "id": "repeated-game",
+      "title": "repeated-game",
+      "href": "keywords/repeated-game.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 1
+    },
+    {
+      "id": "subgame-perfect-equilibrium",
+      "title": "subgame-perfect-equilibrium",
+      "href": "keywords/subgame-perfect-equilibrium.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

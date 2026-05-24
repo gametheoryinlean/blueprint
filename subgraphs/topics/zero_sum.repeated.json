@@ -1,0 +1,125 @@
+{
+  "topic": {
+    "id": "zero_sum.repeated",
+    "title": "Zero Sum.Repeated",
+    "href": "zero_sum/repeated/index.html",
+    "parent": "zero_sum",
+    "node_count": 2,
+    "descendant_node_count": 2
+  },
+  "counts": {
+    "internal_nodes": 2,
+    "descendant_nodes": 2,
+    "child_topics": 0,
+    "non_proof_plan_nodes": 2,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "strategic_games.repeated.big_match_uniform_value",
+      "title": "Big Match Uniform Value",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/repeated/strategic_games_repeated_big_match_uniform_value.html",
+      "payload": "node_payloads/strategic_games_repeated_big_match_uniform_value.json"
+    },
+    {
+      "id": "strategic_games.repeated.cav_u_theorem",
+      "title": "Cav U Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/repeated/strategic_games_repeated_cav_u_theorem.html",
+      "payload": "node_payloads/strategic_games_repeated_cav_u_theorem.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "strategic_games.repeated",
+      "title": "Strategic Games.Repeated",
+      "href": "strategic_games/repeated/index.html",
+      "role": "dependency",
+      "node_count": 12
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 87
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games.repeated",
+      "to": "strategic_games.repeated.big_match_uniform_value",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.repeated",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.repeated",
+      "to": "strategic_games.repeated.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.repeated",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "strategic_games.repeated.big_match_uniform_value",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "strategic_games.repeated.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "incomplete-information",
+      "title": "incomplete-information",
+      "href": "keywords/incomplete-information.html",
+      "count": 1
+    },
+    {
+      "id": "repeated-game",
+      "title": "repeated-game",
+      "href": "keywords/repeated-game.html",
+      "count": 2
+    },
+    {
+      "id": "stochastic-game",
+      "title": "stochastic-game",
+      "href": "keywords/stochastic-game.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 2
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 2
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "child_topic_edges": [],
+  "child_boundary_topics": [],
+  "child_boundary_edges": []
+}

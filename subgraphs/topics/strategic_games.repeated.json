@@ -4,38 +4,22 @@
     "title": "Strategic Games.Repeated",
     "href": "strategic_games/repeated/index.html",
     "parent": "strategic_games",
-    "node_count": 15,
-    "descendant_node_count": 15
+    "node_count": 12,
+    "descendant_node_count": 12
   },
   "counts": {
-    "internal_nodes": 15,
-    "descendant_nodes": 15,
+    "internal_nodes": 12,
+    "descendant_nodes": 12,
     "child_topics": 0,
-    "non_proof_plan_nodes": 15,
+    "non_proof_plan_nodes": 12,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 21,
-    "visible_nodes_with_selected_proof_plans": 21
+    "visible_nodes_without_proof_plans": 18,
+    "visible_nodes_with_selected_proof_plans": 18
   },
   "nodes": [
-    {
-      "id": "strategic_games.repeated.big_match_uniform_value",
-      "title": "Big Match Uniform Value",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/repeated/strategic_games_repeated_big_match_uniform_value.html",
-      "payload": "node_payloads/strategic_games_repeated_big_match_uniform_value.json"
-    },
-    {
-      "id": "strategic_games.repeated.cav_u_theorem",
-      "title": "Cav U Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/repeated/strategic_games_repeated_cav_u_theorem.html",
-      "payload": "node_payloads/strategic_games_repeated_cav_u_theorem.json"
-    },
     {
       "id": "strategic_games.repeated.discounted_folk_theorem",
       "title": "Discounted Folk Theorem",
@@ -117,14 +101,6 @@
       "payload": "node_payloads/strategic_games_repeated_strategy.json"
     },
     {
-      "id": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
-      "title": "Subgame Perfect Uniform Folk Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/repeated/strategic_games_repeated_subgame_perfect_uniform_folk_theorem.html",
-      "payload": "node_payloads/strategic_games_repeated_subgame_perfect_uniform_folk_theorem.json"
-    },
-    {
       "id": "strategic_games.repeated.uniform_equilibrium",
       "title": "Uniform Equilibrium",
       "kind": "definition",
@@ -142,16 +118,6 @@
     }
   ],
   "edges": [
-    {
-      "from": "strategic_games.repeated.stochastic_game",
-      "to": "strategic_games.repeated.big_match_uniform_value",
-      "kind": "uses"
-    },
-    {
-      "from": "strategic_games.repeated.incomplete_information",
-      "to": "strategic_games.repeated.cav_u_theorem",
-      "kind": "uses"
-    },
     {
       "from": "strategic_games.repeated.discounted_game",
       "to": "strategic_games.repeated.discounted_folk_theorem",
@@ -198,11 +164,6 @@
       "kind": "uses"
     },
     {
-      "from": "strategic_games.repeated.uniform_folk_theorem",
-      "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
-      "kind": "uses"
-    },
-    {
       "from": "strategic_games.repeated.discounted_game",
       "to": "strategic_games.repeated.uniform_equilibrium",
       "kind": "uses"
@@ -225,18 +186,18 @@
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.perfect_information",
-      "title": "Extensive Game.Perfect Information",
-      "href": "extensive_game/perfect_information/index.html",
-      "role": "dependency",
-      "node_count": 9
+      "id": "extensive_game.repeated",
+      "title": "Extensive Game.Repeated",
+      "href": "extensive_game/repeated/index.html",
+      "role": "dependent",
+      "node_count": 1
     },
     {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 136
+      "node_count": 131
     },
     {
       "id": "strategic_games.bayesian",
@@ -253,21 +214,14 @@
       "node_count": 5
     },
     {
-      "id": "zero_sum",
-      "title": "Zero Sum",
-      "href": "zero_sum/index.html",
-      "role": "dependency",
-      "node_count": 84
+      "id": "zero_sum.repeated",
+      "title": "Zero Sum.Repeated",
+      "href": "zero_sum/repeated/index.html",
+      "role": "dependent",
+      "node_count": 2
     }
   ],
   "boundary_edges": [
-    {
-      "from": "topic:extensive_game.perfect_information",
-      "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.perfect_information",
-      "count": 1
-    },
     {
       "from": "topic:strategic_games",
       "to": "strategic_games.repeated.standard_repeated_game",
@@ -297,17 +251,24 @@
       "count": 1
     },
     {
-      "from": "topic:zero_sum",
-      "to": "strategic_games.repeated.big_match_uniform_value",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
+      "from": "strategic_games.repeated.uniform_folk_theorem",
+      "to": "topic:extensive_game.repeated",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game.repeated",
       "count": 1
     },
     {
-      "from": "topic:zero_sum",
-      "to": "strategic_games.repeated.cav_u_theorem",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
+      "from": "strategic_games.repeated.incomplete_information",
+      "to": "topic:zero_sum.repeated",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.repeated",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.repeated.stochastic_game",
+      "to": "topic:zero_sum.repeated",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.repeated",
       "count": 1
     }
   ],
@@ -328,7 +289,7 @@
       "id": "folk-theorem",
       "title": "folk-theorem",
       "href": "keywords/folk-theorem.html",
-      "count": 4
+      "count": 3
     },
     {
       "id": "imperfect-monitoring",
@@ -340,13 +301,13 @@
       "id": "incomplete-information",
       "title": "incomplete-information",
       "href": "keywords/incomplete-information.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "repeated-game",
       "title": "repeated-game",
       "href": "keywords/repeated-game.html",
-      "count": 15
+      "count": 12
     },
     {
       "id": "signals",
@@ -358,13 +319,13 @@
       "id": "stochastic-game",
       "title": "stochastic-game",
       "href": "keywords/stochastic-game.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 15
+      "count": 12
     },
     {
       "id": "strategy",
@@ -373,22 +334,10 @@
       "count": 1
     },
     {
-      "id": "subgame-perfect-equilibrium",
-      "title": "subgame-perfect-equilibrium",
-      "href": "keywords/subgame-perfect-equilibrium.html",
-      "count": 1
-    },
-    {
       "id": "uniform-equilibrium",
       "title": "uniform-equilibrium",
       "href": "keywords/uniform-equilibrium.html",
       "count": 1
-    },
-    {
-      "id": "zero-sum",
-      "title": "zero-sum",
-      "href": "keywords/zero-sum.html",
-      "count": 2
     }
   ],
   "proof_plan_attachments": [],

@@ -4,22 +4,30 @@
     "title": "Strategic Games.Equilibrium",
     "href": "strategic_games/equilibrium/index.html",
     "parent": "strategic_games",
-    "node_count": 16,
-    "descendant_node_count": 16
+    "node_count": 14,
+    "descendant_node_count": 14
   },
   "counts": {
-    "internal_nodes": 16,
-    "descendant_nodes": 16,
+    "internal_nodes": 14,
+    "descendant_nodes": 14,
     "child_topics": 0,
-    "non_proof_plan_nodes": 16,
+    "non_proof_plan_nodes": 14,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 13,
+    "boundary_topics": 11,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 30,
-    "visible_nodes_with_selected_proof_plans": 30
+    "visible_nodes_without_proof_plans": 26,
+    "visible_nodes_with_selected_proof_plans": 26
   },
   "nodes": [
+    {
+      "id": "fixed_point.kakutani_from_two_player_nash",
+      "title": "Kakutani From Two-Player Nash Existence",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "strategic_games/equilibrium/fixed_point_kakutani_from_two_player_nash.html",
+      "payload": "node_payloads/fixed_point_kakutani_from_two_player_nash.json"
+    },
     {
       "id": "strategic_games.equilibrium.common_knowledge_equilibrium_filtering",
       "title": "Common Knowledge Can Filter Nash Equilibria",
@@ -123,33 +131,14 @@
       "status": "staged",
       "href": "strategic_games/equilibrium/strategic_games_equilibrium_strict_equilibrium_is_proper.html",
       "payload": "node_payloads/strategic_games_equilibrium_strict_equilibrium_is_proper.json"
-    },
-    {
-      "id": "zero_sum.core.zero_sum_nash_saddle",
-      "title": "Zero-Sum Nash Equilibria As Saddle Points",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_core_zero_sum_nash_saddle.html",
-      "payload": "node_payloads/zero_sum_core_zero_sum_nash_saddle.json"
-    },
-    {
-      "id": "zero_sum.matrix_game_nash_equilibrium",
-      "title": "Mixed Nash Equilibrium of a Matrix Game",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_matrix_game_nash_equilibrium.html",
-      "payload": "node_payloads/zero_sum_matrix_game_nash_equilibrium.json"
-    },
-    {
-      "id": "zero_sum.zero_sum_nash_value_unique",
-      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_zero_sum_nash_value_unique.html",
-      "payload": "node_payloads/zero_sum_zero_sum_nash_value_unique.json"
     }
   ],
   "edges": [
+    {
+      "from": "strategic_games.equilibrium.nash_existence_finite_games",
+      "to": "fixed_point.kakutani_from_two_player_nash",
+      "kind": "uses"
+    },
     {
       "from": "strategic_games.equilibrium.mixed_nash_equilibrium",
       "to": "strategic_games.equilibrium.finite_nash_computation_examples",
@@ -174,21 +163,9 @@
       "from": "strategic_games.equilibrium.strict_equilibrium",
       "to": "strategic_games.equilibrium.strict_equilibrium_is_proper",
       "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.core.zero_sum_nash_saddle",
-      "kind": "uses"
     }
   ],
   "boundary_topics": [
-    {
-      "id": "core.simplex",
-      "title": "Core.Simplex",
-      "href": "core/simplex/index.html",
-      "role": "dependency",
-      "node_count": 5
-    },
     {
       "id": "extensive_game.equilibrium",
       "title": "Extensive Game.Equilibrium",
@@ -200,15 +177,15 @@
       "id": "fixed_point",
       "title": "Fixed Point",
       "href": "fixed_point/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 6
+      "role": "dependency",
+      "node_count": 5
     },
     {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 136
+      "node_count": 131
     },
     {
       "id": "strategic_games.bayesian",
@@ -265,21 +242,14 @@
       "href": "strategic_games/refinements/index.html",
       "role": "dependency_and_dependent",
       "node_count": 14
-    },
-    {
-      "id": "zero_sum",
-      "title": "Zero Sum",
-      "href": "zero_sum/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 84
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:core.simplex",
-      "to": "zero_sum.matrix_game_nash_equilibrium",
+      "from": "topic:fixed_point",
+      "to": "fixed_point.kakutani_from_two_player_nash",
       "kind": "boundary_dependency",
-      "topic": "core.simplex",
+      "topic": "fixed_point",
       "count": 1
     },
     {
@@ -353,13 +323,6 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games",
-      "to": "zero_sum.zero_sum_nash_value_unique",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
       "from": "topic:strategic_games.continuous",
       "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
       "kind": "boundary_dependency",
@@ -402,38 +365,10 @@
       "count": 1
     },
     {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.zero_sum_nash_saddle",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.matrix_game_nash_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 3
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.zero_sum_nash_value_unique",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
       "from": "strategic_games.equilibrium.nash_existence_finite_games",
       "to": "topic:extensive_game.equilibrium",
       "kind": "boundary_dependent",
       "topic": "extensive_game.equilibrium",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.equilibrium.nash_existence_finite_games",
-      "to": "topic:fixed_point",
-      "kind": "boundary_dependent",
-      "topic": "fixed_point",
       "count": 1
     },
     {
@@ -519,13 +454,6 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.refinements",
       "count": 1
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "topic:zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum",
-      "count": 2
     }
   ],
   "keywords": [
@@ -546,12 +474,6 @@
       "title": "continuous-game",
       "href": "keywords/continuous-game.html",
       "count": 2
-    },
-    {
-      "id": "equilibrium",
-      "title": "equilibrium",
-      "href": "keywords/equilibrium.html",
-      "count": 1
     },
     {
       "id": "equilibrium-refinement",
@@ -584,28 +506,28 @@
       "count": 1
     },
     {
-      "id": "matrix-game",
-      "title": "matrix-game",
-      "href": "keywords/matrix-game.html",
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 1
+    },
+    {
+      "id": "kakutani",
+      "title": "kakutani",
+      "href": "keywords/kakutani.html",
       "count": 1
     },
     {
       "id": "mixed-strategy",
       "title": "mixed-strategy",
       "href": "keywords/mixed-strategy.html",
-      "count": 3
+      "count": 2
     },
     {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 10
-    },
-    {
-      "id": "saddle-point",
-      "title": "saddle-point",
-      "href": "keywords/saddle-point.html",
-      "count": 2
+      "count": 9
     },
     {
       "id": "semi-algebraic",
@@ -632,22 +554,10 @@
       "count": 1
     },
     {
-      "id": "value",
-      "title": "value",
-      "href": "keywords/value.html",
-      "count": 1
-    },
-    {
       "id": "variational-inequality",
       "title": "variational-inequality",
       "href": "keywords/variational-inequality.html",
       "count": 1
-    },
-    {
-      "id": "zero-sum",
-      "title": "zero-sum",
-      "href": "keywords/zero-sum.html",
-      "count": 3
     }
   ],
   "proof_plan_attachments": [],

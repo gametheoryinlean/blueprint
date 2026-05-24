@@ -76,6 +76,8 @@
           <a href="../extensive_game/normal_form/index.html">Normal Form</a>
         </li><li class="topic-leaf">
           <a href="../extensive_game/perfect_information/index.html">Perfect Information</a>
+        </li><li class="topic-leaf">
+          <a href="../extensive_game/repeated/index.html">Repeated</a>
         </li></ul>
           </details>
         </li>
@@ -93,8 +95,6 @@
             <summary><a href="../linear_algebra/index.html">Linear Algebra</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../linear_algebra/alternatives/index.html">Alternatives</a>
-        </li><li class="topic-leaf">
-          <a href="../linear_algebra/perron_frobenius/index.html">Perron Frobenius</a>
         </li></ul>
           </details>
         </li>
@@ -123,10 +123,6 @@
           <a href="../mechanism_design/vcg/index.html">Vcg</a>
         </li></ul>
           </details>
-        </li>
-      
-        <li class="topic-leaf">
-          <a href="../mixed_strategy/index.html">Mixed Strategy</a>
         </li>
       
         <li class="topic-leaf">
@@ -227,6 +223,8 @@
           <details data-topic-root="zero_sum">
             <summary><a href="../zero_sum/index.html">Zero Sum</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
+          <a href="../zero_sum/applications/index.html">Applications</a>
+        </li><li class="topic-leaf">
           <a href="../zero_sum/continuous/index.html">Continuous</a>
         </li><li class="topic-leaf">
           <a href="../zero_sum/core/index.html">Core</a>
@@ -240,6 +238,8 @@
           <a href="../zero_sum/minimax/index.html">Minimax</a>
         </li><li class="topic-leaf">
           <a href="../zero_sum/operators/index.html">Operators</a>
+        </li><li class="topic-leaf">
+          <a href="../zero_sum/repeated/index.html">Repeated</a>
         </li></ul>
           </details>
         </li>
@@ -805,9 +805,7 @@
 
 <div class="topic-meta">
   <div class="topic-stats">
-    <span class="topic-node-count">4 nodes</span>
-    
-    <span class="badge status-formalized">1 formalized</span>
+    <span class="topic-node-count">3 nodes</span>
     
     <span class="badge status-staged">3 staged</span>
     
@@ -818,8 +816,6 @@
     <ul>
       
       <li><a href="../linear_algebra/alternatives/index.html">Linear Algebra.Alternatives</a></li>
-      
-      <li><a href="../linear_algebra/perron_frobenius/index.html">Linear Algebra.Perron Frobenius</a></li>
       
     </ul>
   </nav>
@@ -833,11 +829,15 @@
 <h2>Subtopics</h2>
 <ul>
 <li><code>linear_algebra.alternatives</code> - Farkas-style alternatives and separation statements.</li>
-<li><code>linear_algebra.perron_frobenius</code> - Perron-Frobenius support statements.</li>
 </ul>
 <h2>Boundary</h2>
 <p>Put optimization-duality statements under <code>linear_programming</code> when the LP
 formulation is essential.</p>
+<p>Perron-Frobenius for positive matrices lives under <code>zero_sum.applications</code>
+because the EconCSLib proof goes via Loomis (see
+<code>docs/knowledge/nodes/linear_algebra/perron_frobenius_positive_matrix.md</code>,
+which keeps its physical location to track the Lean module
+<code>EconCSLib/LinearAlgebra/PerronFrobenius.lean</code>).</p>
 </div>
 
 
@@ -856,14 +856,6 @@ formulation is essential.</p>
       <span class="lemma_thmcaption thm-caption">Lemma</span>
       <a class="lemma_thmtitle thm-title" href="linear_algebra_theorem_of_alternative_fourier_motzkin.html">Fourier-Motzkin Elimination Step</a>
       <span class="badge status-staged">staged</span>
-    </header>
-  </article>
-  
-  <article class="theorem_thmwrapper theorem-style-theorem summary-node">
-    <header class="theorem_thmheading thm-heading">
-      <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="linear_algebra_perron_frobenius_positive_matrix.html">Perron-Frobenius For Positive Matrices</a>
-      <span class="badge status-formalized">formalized</span>
     </header>
   </article>
   

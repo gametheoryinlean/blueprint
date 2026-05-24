@@ -4,22 +4,46 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 84,
-    "descendant_node_count": 84
+    "node_count": 87,
+    "descendant_node_count": 87
   },
   "counts": {
-    "internal_nodes": 84,
-    "descendant_nodes": 84,
-    "child_topics": 7,
-    "non_proof_plan_nodes": 75,
+    "internal_nodes": 87,
+    "descendant_nodes": 87,
+    "child_topics": 9,
+    "non_proof_plan_nodes": 78,
     "proof_plan_nodes": 9,
     "selected_proof_plan_nodes": 3,
-    "boundary_topics": 10,
+    "boundary_topics": 9,
     "proof_plan_attachments": 9,
-    "visible_nodes_without_proof_plans": 86,
-    "visible_nodes_with_selected_proof_plans": 89
+    "visible_nodes_without_proof_plans": 88,
+    "visible_nodes_with_selected_proof_plans": 91
   },
   "nodes": [
+    {
+      "id": "linear_algebra.perron_frobenius_positive_matrix",
+      "title": "Perron-Frobenius For Positive Matrices",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/applications/linear_algebra_perron_frobenius_positive_matrix.html",
+      "payload": "node_payloads/linear_algebra_perron_frobenius_positive_matrix.json"
+    },
+    {
+      "id": "strategic_games.repeated.big_match_uniform_value",
+      "title": "Big Match Uniform Value",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/repeated/strategic_games_repeated_big_match_uniform_value.html",
+      "payload": "node_payloads/strategic_games_repeated_big_match_uniform_value.json"
+    },
+    {
+      "id": "strategic_games.repeated.cav_u_theorem",
+      "title": "Cav U Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/repeated/strategic_games_repeated_cav_u_theorem.html",
+      "payload": "node_payloads/strategic_games_repeated_cav_u_theorem.json"
+    },
     {
       "id": "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
       "title": "Compact Mixed Versus Finite-Support Minimax",
@@ -712,6 +736,21 @@
     }
   ],
   "edges": [
+    {
+      "from": "zero_sum.minimax.loomis_theorem",
+      "to": "linear_algebra.perron_frobenius_positive_matrix",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "strategic_games.repeated.big_match_uniform_value",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "strategic_games.repeated.cav_u_theorem",
+      "kind": "uses"
+    },
     {
       "from": "zero_sum.continuous.general_mixed_strategy_space",
       "to": "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
@@ -1528,13 +1567,6 @@
       "node_count": 9
     },
     {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "href": "linear_algebra/index.html",
-      "role": "dependent",
-      "node_count": 4
-    },
-    {
       "id": "linear_programming",
       "title": "Linear Programming",
       "href": "linear_programming/index.html",
@@ -1545,8 +1577,8 @@
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 136
+      "role": "dependency",
+      "node_count": 131
     },
     {
       "id": "strategic_games.core",
@@ -1566,8 +1598,8 @@
       "id": "strategic_games.repeated",
       "title": "Strategic Games.Repeated",
       "href": "strategic_games/repeated/index.html",
-      "role": "dependent",
-      "node_count": 15
+      "role": "dependency",
+      "node_count": 12
     }
   ],
   "boundary_edges": [
@@ -1628,6 +1660,20 @@
       "count": 1
     },
     {
+      "from": "topic:strategic_games.repeated",
+      "to": "strategic_games.repeated.big_match_uniform_value",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.repeated",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.repeated",
+      "to": "strategic_games.repeated.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.repeated",
+      "count": 1
+    },
+    {
       "from": "topic:approachability",
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
       "kind": "boundary_proof_plan_dependency",
@@ -1677,20 +1723,6 @@
       "count": 1
     },
     {
-      "from": "zero_sum.minimax.loomis_theorem",
-      "to": "topic:linear_algebra",
-      "kind": "boundary_dependent",
-      "topic": "linear_algebra",
-      "count": 1
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play_convergence",
-      "to": "topic:strategic_games",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
       "from": "zero_sum.core.support_complementarity",
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependent",
@@ -1703,13 +1735,6 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.dominance",
       "count": 1
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "topic:strategic_games.repeated",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.repeated",
-      "count": 2
     }
   ],
   "keywords": [
@@ -1858,6 +1883,12 @@
       "count": 1
     },
     {
+      "id": "incomplete-information",
+      "title": "incomplete-information",
+      "href": "keywords/incomplete-information.html",
+      "count": 1
+    },
+    {
       "id": "induction",
       "title": "induction",
       "href": "keywords/induction.html",
@@ -1886,6 +1917,12 @@
       "title": "limit",
       "href": "keywords/limit.html",
       "count": 2
+    },
+    {
+      "id": "linear-algebra",
+      "title": "linear-algebra",
+      "href": "keywords/linear-algebra.html",
+      "count": 1
     },
     {
       "id": "linear-programming",
@@ -1948,6 +1985,12 @@
       "count": 1
     },
     {
+      "id": "perron-frobenius",
+      "title": "perron-frobenius",
+      "href": "keywords/perron-frobenius.html",
+      "count": 1
+    },
+    {
       "id": "polytope",
       "title": "polytope",
       "href": "keywords/polytope.html",
@@ -1976,6 +2019,12 @@
       "title": "redirect",
       "href": "keywords/redirect.html",
       "count": 1
+    },
+    {
+      "id": "repeated-game",
+      "title": "repeated-game",
+      "href": "keywords/repeated-game.html",
+      "count": 2
     },
     {
       "id": "robinson",
@@ -2014,6 +2063,12 @@
       "count": 1
     },
     {
+      "id": "stochastic-game",
+      "title": "stochastic-game",
+      "href": "keywords/stochastic-game.html",
+      "count": 1
+    },
+    {
       "id": "stochastic-matrix",
       "title": "stochastic-matrix",
       "href": "keywords/stochastic-matrix.html",
@@ -2023,7 +2078,7 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "support",
@@ -2077,7 +2132,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 83
+      "count": 86
     }
   ],
   "proof_plan_attachments": [
@@ -2137,15 +2192,33 @@
     }
   ],
   "child_topics": [
+    "zero_sum.applications",
     "zero_sum.continuous",
     "zero_sum.core",
     "zero_sum.examples",
     "zero_sum.fictitious_play",
     "zero_sum.lp",
     "zero_sum.minimax",
-    "zero_sum.operators"
+    "zero_sum.operators",
+    "zero_sum.repeated"
   ],
   "child_topic_nodes": [
+    {
+      "id": "zero_sum.applications",
+      "title": "Zero Sum.Applications",
+      "depth": 2,
+      "parent": "zero_sum",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "formalized": 1
+      },
+      "href": "zero_sum/applications/index.html",
+      "children": []
+    },
     {
       "id": "zero_sum.continuous",
       "title": "Zero Sum.Continuous",
@@ -2279,6 +2352,22 @@
       },
       "href": "zero_sum/operators/index.html",
       "children": []
+    },
+    {
+      "id": "zero_sum.repeated",
+      "title": "Zero Sum.Repeated",
+      "depth": 2,
+      "parent": "zero_sum",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "zero_sum/repeated/index.html",
+      "children": []
     }
   ],
   "child_topic_edges": [
@@ -2311,6 +2400,18 @@
       "to": "topic:zero_sum.operators",
       "kind": "topic_dependency",
       "count": 2
+    },
+    {
+      "from": "topic:zero_sum.core",
+      "to": "topic:zero_sum.repeated",
+      "kind": "topic_dependency",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum.minimax",
+      "to": "topic:zero_sum.applications",
+      "kind": "topic_dependency",
+      "count": 1
     },
     {
       "from": "topic:zero_sum.minimax",
@@ -2367,20 +2468,6 @@
       "node_count": 9
     },
     {
-      "id": "linear_algebra",
-      "title": "Linear Algebra",
-      "href": "linear_algebra/index.html",
-      "role": "dependent",
-      "node_count": 4
-    },
-    {
-      "id": "linear_algebra.perron_frobenius",
-      "title": "Linear Algebra.Perron Frobenius",
-      "href": "linear_algebra/perron_frobenius/index.html",
-      "role": "dependent",
-      "node_count": 1
-    },
-    {
       "id": "linear_programming",
       "title": "Linear Programming",
       "href": "linear_programming/index.html",
@@ -2395,18 +2482,11 @@
       "node_count": 2
     },
     {
-      "id": "mixed_strategy",
-      "title": "Mixed Strategy",
-      "href": "mixed_strategy/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 2
-    },
-    {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 136
+      "role": "dependency",
+      "node_count": 131
     },
     {
       "id": "strategic_games.core",
@@ -2423,32 +2503,11 @@
       "node_count": 9
     },
     {
-      "id": "strategic_games.dynamics",
-      "title": "Strategic Games.Dynamics",
-      "href": "strategic_games/dynamics/index.html",
-      "role": "dependent",
-      "node_count": 5
-    },
-    {
-      "id": "strategic_games.equilibrium",
-      "title": "Strategic Games.Equilibrium",
-      "href": "strategic_games/equilibrium/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 16
-    },
-    {
-      "id": "strategic_games.potential",
-      "title": "Strategic Games.Potential",
-      "href": "strategic_games/potential/index.html",
-      "role": "dependent",
-      "node_count": 3
-    },
-    {
       "id": "strategic_games.repeated",
       "title": "Strategic Games.Repeated",
       "href": "strategic_games/repeated/index.html",
-      "role": "dependent",
-      "node_count": 15
+      "role": "dependency",
+      "node_count": 12
     }
   ],
   "child_boundary_edges": [
@@ -2495,20 +2554,6 @@
       "count": 1
     },
     {
-      "from": "topic:mixed_strategy",
-      "to": "topic:zero_sum.core",
-      "kind": "boundary_dependency",
-      "topic": "mixed_strategy",
-      "count": 3
-    },
-    {
-      "from": "topic:mixed_strategy",
-      "to": "topic:zero_sum.fictitious_play",
-      "kind": "boundary_dependency",
-      "topic": "mixed_strategy",
-      "count": 2
-    },
-    {
       "from": "topic:strategic_games",
       "to": "topic:zero_sum.core",
       "kind": "boundary_dependency",
@@ -2523,18 +2568,11 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.equilibrium",
-      "to": "topic:zero_sum.core",
+      "from": "topic:strategic_games.repeated",
+      "to": "topic:zero_sum.repeated",
       "kind": "boundary_dependency",
-      "topic": "strategic_games.equilibrium",
+      "topic": "strategic_games.repeated",
       "count": 2
-    },
-    {
-      "from": "topic:strategic_games.equilibrium",
-      "to": "topic:zero_sum.minimax",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.equilibrium",
-      "count": 1
     },
     {
       "from": "topic:zero_sum.core",
@@ -2551,34 +2589,6 @@
       "count": 1
     },
     {
-      "from": "topic:zero_sum.minimax",
-      "to": "topic:linear_algebra",
-      "kind": "boundary_dependent",
-      "topic": "linear_algebra",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum.minimax",
-      "to": "topic:linear_algebra.perron_frobenius",
-      "kind": "boundary_dependent",
-      "topic": "linear_algebra.perron_frobenius",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum.core",
-      "to": "topic:mixed_strategy",
-      "kind": "boundary_dependent",
-      "topic": "mixed_strategy",
-      "count": 2
-    },
-    {
-      "from": "topic:zero_sum.fictitious_play",
-      "to": "topic:strategic_games",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
       "from": "topic:zero_sum.core",
       "to": "topic:strategic_games.dominance",
       "kind": "boundary_dependent",
@@ -2591,41 +2601,6 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.dominance",
       "count": 1
-    },
-    {
-      "from": "topic:zero_sum.fictitious_play",
-      "to": "topic:strategic_games.dynamics",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.dynamics",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum.core",
-      "to": "topic:strategic_games.equilibrium",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.equilibrium",
-      "count": 4
-    },
-    {
-      "from": "topic:zero_sum.minimax",
-      "to": "topic:strategic_games.equilibrium",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.equilibrium",
-      "count": 2
-    },
-    {
-      "from": "topic:zero_sum.fictitious_play",
-      "to": "topic:strategic_games.potential",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.potential",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum.core",
-      "to": "topic:strategic_games.repeated",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.repeated",
-      "count": 2
     }
   ]
 }

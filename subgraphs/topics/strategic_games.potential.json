@@ -14,10 +14,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 4,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
   },
   "nodes": [
     {
@@ -63,7 +63,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 136
+      "node_count": 131
     },
     {
       "id": "strategic_games.dynamics",
@@ -78,13 +78,6 @@
       "href": "strategic_games/population/index.html",
       "role": "dependency",
       "node_count": 3
-    },
-    {
-      "id": "zero_sum",
-      "title": "Zero Sum",
-      "href": "zero_sum/index.html",
-      "role": "dependency",
-      "node_count": 84
     }
   ],
   "boundary_edges": [
@@ -107,13 +100,6 @@
       "to": "strategic_games.dynamics.stable_game_framework",
       "kind": "boundary_dependency",
       "topic": "strategic_games.population",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "strategic_games.dynamics.stable_game_framework",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
       "count": 1
     },
     {
