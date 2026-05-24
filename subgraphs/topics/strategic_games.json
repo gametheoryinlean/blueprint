@@ -1206,8 +1206,8 @@
       "id": "zero_sum.minimax",
       "title": "Zero Sum.Minimax",
       "href": "zero_sum/minimax/index.html",
-      "role": "dependency",
-      "node_count": 24
+      "role": "dependency_and_dependent",
+      "node_count": 25
     }
   ],
   "child_boundary_edges": [
@@ -1419,7 +1419,7 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 2
+      "count": 3
     },
     {
       "from": "topic:strategic_games.core",
@@ -1434,6 +1434,13 @@
       "kind": "boundary_dependent",
       "topic": "zero_sum.core",
       "count": 2
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "topic:zero_sum.minimax",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.minimax",
+      "count": 1
     }
   ]
 }

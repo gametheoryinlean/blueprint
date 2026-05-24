@@ -9402,6 +9402,7 @@
         "zero_sum.core.support_complementarity",
         "zero_sum.examples.computation_three_by_two_example",
         "zero_sum.fictitious_play.fictitious_play_convergence",
+        "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.operators.derived_game"
       ]
     },
@@ -9594,13 +9595,13 @@
         "zero_sum.core.common_guarantee_value",
         "zero_sum.core.epsilon_optimal_strategy",
         "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.examples.antisymmetric_matrix_game_value",
         "zero_sum.examples.diagonal_matrix_game_value",
         "zero_sum.examples.matching_pennies",
         "zero_sum.examples.noisy_duel_one_bullet_value",
         "zero_sum.examples.silent_duel_no_pure_value",
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
         "zero_sum.fictitious_play.fictitious_play_convergence",
+        "zero_sum.minimax.antisymmetric_matrix_game_value",
         "zero_sum.operators.value_operator_general"
       ]
     },
@@ -9693,31 +9694,6 @@
       "topic": "zero_sum",
       "used_by": [
         "zero_sum.simplex_termination"
-      ]
-    },
-    {
-      "id": "zero_sum.examples.antisymmetric_matrix_game_value",
-      "title": "Antisymmetric Matrix Games Have Value",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "zero-sum",
-        "matrix-game",
-        "antisymmetric"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.examples"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "zero_sum.core.value",
-        "zero_sum.matrix_game",
-        "zero_sum.von_neumann_minimax"
-      ],
-      "used_by": [
-        "zero_sum.minimax.minimax_from_antisymmetric_games"
       ]
     },
     {
@@ -10268,7 +10244,6 @@
         "zero_sum.core.mixed_strategy_simplex",
         "zero_sum.core.player_guarantee",
         "zero_sum.core.saddle_point",
-        "zero_sum.examples.antisymmetric_matrix_game_value",
         "zero_sum.examples.diagonal_matrix_game_value",
         "zero_sum.examples.matching_pennies",
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
@@ -10276,6 +10251,7 @@
         "zero_sum.fictitious_play.robinson_admissible_lemma",
         "zero_sum.lam_mu_existence",
         "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.antisymmetric_matrix_game_value",
         "zero_sum.minimax.loomis_theorem",
         "zero_sum.minimax.value_predicates",
         "zero_sum.mixed_matrix_payoff"
@@ -10321,7 +10297,8 @@
       ],
       "used_by": [
         "zero_sum.core.strong_complementarity",
-        "zero_sum.core.zero_sum_nash_saddle"
+        "zero_sum.core.zero_sum_nash_saddle",
+        "zero_sum.minimax.stochastic_matrix_invariant_distribution"
       ]
     },
     {
@@ -10388,6 +10365,31 @@
         "zero_sum.lam_mu_existence",
         "zero_sum.maximin_le_minimax",
         "zero_sum.minimax.value_predicates"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.antisymmetric_matrix_game_value",
+      "title": "Antisymmetric Matrix Games Have Value",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "matrix-game",
+        "antisymmetric"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.value",
+        "zero_sum.matrix_game",
+        "zero_sum.von_neumann_minimax"
+      ],
+      "used_by": [
+        "zero_sum.minimax.minimax_from_antisymmetric_games"
       ]
     },
     {
@@ -10705,7 +10707,7 @@
       "plan_status": "candidate",
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.examples.antisymmetric_matrix_game_value"
+        "zero_sum.minimax.antisymmetric_matrix_game_value"
       ]
     },
     {
@@ -10831,7 +10833,7 @@
       "id": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
       "title": "Stochastic Matrix Has An Invariant Distribution",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "stochastic-matrix",
@@ -10842,8 +10844,15 @@
         "zero_sum",
         "zero_sum.minimax"
       ],
+      "lean_declarations": [
+        "EconCSLib.StrategicGame.IsStochasticMatrix",
+        "EconCSLib.StrategicGame.uniformDist",
+        "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution"
+      ],
       "topic": "zero_sum",
       "uses": [
+        "zero_sum.core.optimal_strategy_sets",
+        "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.von_neumann_minimax"
       ]
     },
@@ -11112,11 +11121,11 @@
         "zero_sum.core.optimal_strategy_sets_are_polytopes",
         "zero_sum.core.support_complementarity",
         "zero_sum.core.value",
-        "zero_sum.examples.antisymmetric_matrix_game_value",
         "zero_sum.examples.computation_three_by_two_example",
         "zero_sum.examples.diagonal_matrix_game_value",
         "zero_sum.examples.two_by_two_value_formula",
         "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.minimax.antisymmetric_matrix_game_value",
         "zero_sum.minimax.minimax_theorem",
         "zero_sum.minimax.ordered_field_minimax",
         "zero_sum.minimax.stochastic_matrix_invariant_distribution",
@@ -14091,18 +14100,6 @@
       "to": "zero_sum.core.zero_sum_nash_saddle"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.examples.antisymmetric_matrix_game_value"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.examples.antisymmetric_matrix_game_value"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.examples.antisymmetric_matrix_game_value"
-    },
-    {
       "from": "zero_sum.examples.silent_duel_no_pure_value",
       "to": "zero_sum.examples.asymmetric_silent_noisy_duel_value"
     },
@@ -14323,6 +14320,18 @@
       "to": "zero_sum.maximin_minimax"
     },
     {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
+    },
+    {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
       "to": "zero_sum.minimax.loomis_induction_proof"
     },
@@ -14439,7 +14448,7 @@
       "to": "zero_sum.minimax.lp_duality_minimax_proof"
     },
     {
-      "from": "zero_sum.examples.antisymmetric_matrix_game_value",
+      "from": "zero_sum.minimax.antisymmetric_matrix_game_value",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games"
     },
     {
@@ -14477,6 +14486,14 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ordered_field_minimax"
+    },
+    {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
     },
     {
       "from": "zero_sum.von_neumann_minimax",

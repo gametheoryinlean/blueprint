@@ -255,14 +255,6 @@
       "plan_status": "candidate"
     },
     {
-      "id": "zero_sum.examples.antisymmetric_matrix_game_value",
-      "title": "Antisymmetric Matrix Games Have Value",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "zero_sum/zero_sum_examples_antisymmetric_matrix_game_value.html",
-      "payload": "node_payloads/zero_sum_examples_antisymmetric_matrix_game_value.json"
-    },
-    {
       "id": "zero_sum.examples.asymmetric_silent_noisy_duel_value",
       "title": "Silent Versus Noisy One-Bullet Duel Value",
       "kind": "proposition",
@@ -465,6 +457,14 @@
       "payload": "node_payloads/zero_sum_maximin_minimax.json"
     },
     {
+      "id": "zero_sum.minimax.antisymmetric_matrix_game_value",
+      "title": "Antisymmetric Matrix Games Have Value",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_minimax_antisymmetric_matrix_game_value.html",
+      "payload": "node_payloads/zero_sum_minimax_antisymmetric_matrix_game_value.json"
+    },
+    {
       "id": "zero_sum.minimax.loomis_induction_proof",
       "title": "Direct Induction Proof Of Loomis Theorem",
       "kind": "proof-plan",
@@ -590,7 +590,7 @@
       "id": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
       "title": "Stochastic Matrix Has An Invariant Distribution",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "href": "zero_sum/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
       "payload": "node_payloads/zero_sum_minimax_stochastic_matrix_invariant_distribution.json"
     },
@@ -983,21 +983,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.examples.antisymmetric_matrix_game_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.examples.antisymmetric_matrix_game_value",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.examples.antisymmetric_matrix_game_value",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.examples.silent_duel_no_pure_value",
       "to": "zero_sum.examples.asymmetric_silent_noisy_duel_value",
       "kind": "uses"
@@ -1253,6 +1238,21 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.minimax.antisymmetric_matrix_game_value",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game",
+      "to": "zero_sum.minimax.antisymmetric_matrix_game_value",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.minimax.antisymmetric_matrix_game_value",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
       "to": "zero_sum.minimax.loomis_induction_proof",
       "kind": "proof_plan_uses"
@@ -1378,7 +1378,7 @@
       "kind": "proof_plan_uses"
     },
     {
-      "from": "zero_sum.examples.antisymmetric_matrix_game_value",
+      "from": "zero_sum.minimax.antisymmetric_matrix_game_value",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
       "kind": "proof_plan_uses"
     },
@@ -1405,6 +1405,16 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ordered_field_minimax",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
       "kind": "uses"
     },
     {
@@ -2180,15 +2190,15 @@
       "title": "Zero Sum.Examples",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 10,
-      "direct_node_count": 10,
+      "node_count": 9,
+      "direct_node_count": 9,
       "kind_counts": {
         "example": 4,
         "proposition": 4,
-        "theorem": 2
+        "theorem": 1
       },
       "status_counts": {
-        "staged": 10
+        "staged": 9
       },
       "href": "zero_sum/examples/index.html",
       "children": []
@@ -2234,19 +2244,19 @@
       "title": "Zero Sum.Minimax",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 24,
-      "direct_node_count": 24,
+      "node_count": 25,
+      "direct_node_count": 25,
       "kind_counts": {
         "concept": 1,
         "definition": 1,
         "lemma": 7,
         "proof-plan": 8,
-        "theorem": 7
+        "theorem": 8
       },
       "status_counts": {
         "admitted": 2,
         "deprecated": 1,
-        "formalized": 12,
+        "formalized": 13,
         "proved": 2,
         "staged": 7
       },
@@ -2282,7 +2292,7 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.examples",
       "kind": "topic_dependency",
-      "count": 10
+      "count": 8
     },
     {
       "from": "topic:zero_sum.core",
@@ -2294,7 +2304,7 @@
       "from": "topic:zero_sum.core",
       "to": "topic:zero_sum.minimax",
       "kind": "topic_dependency",
-      "count": 9
+      "count": 12
     },
     {
       "from": "topic:zero_sum.core",
@@ -2312,7 +2322,7 @@
       "from": "topic:zero_sum.minimax",
       "to": "topic:zero_sum.examples",
       "kind": "topic_dependency",
-      "count": 5
+      "count": 4
     },
     {
       "from": "topic:zero_sum.minimax",
@@ -2518,6 +2528,13 @@
       "kind": "boundary_dependency",
       "topic": "strategic_games.equilibrium",
       "count": 2
+    },
+    {
+      "from": "topic:strategic_games.equilibrium",
+      "to": "topic:zero_sum.minimax",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.equilibrium",
+      "count": 1
     },
     {
       "from": "topic:zero_sum.core",
