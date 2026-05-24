@@ -885,63 +885,90 @@ for every admissible sequence on $A$.</p>
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>structure</p>
-<p>By induction on the matrix size $N := m + n$.</p>
-<p><strong>Base</strong> $N = 2$ (i.e., $1 \times 1$ matrix): $\mu(t) = 0$. Trivial.</p>
-<p><strong>Inductive step</strong> assumes the lemma for every strict submatrix of $A$.
-Given $\varepsilon &gt; 0$:</p>
+        <p>By induction on the matrix size $N := m + n$.</p>
+<p><strong>Base</strong> $N = 2$ (i.e., a $1 \times 1$ matrix): the entry is a constant $a$,
+so $\alpha(t) = \alpha(0) + t \cdot a$ and $\beta(t) = \beta(0) + t \cdot a$.
+Admissibility (i) gives $\beta(0) = \alpha(0)$, hence $\mu(t) \equiv 0$.</p>
+<p><strong>Inductive step.</strong> Assume the lemma for every strict submatrix of $A$ and
+fix $\varepsilon &gt; 0$. Set $\eta := \varepsilon / 3$. The proof orchestrates the
+three sub-lemmas, then applies the pasting lemma with $\varepsilon$ replaced by
+$2\eta = 2\varepsilon/3$ (this is the cleaner constant choice — see Note at end).</p>
 <ol>
 <li>
-<p><strong>Hypothesis transport.</strong> By induction, for every strict submatrix $A'$
-   there exists $s(A', \varepsilon / 2)$ bounding $\mu'(t) \le (\varepsilon/2) t$
-   on admissible sequences of $A'$. There are finitely many such submatrices, so
+<p><strong>Submatrix bound from the IH.</strong> For every strict submatrix $A' \subsetneq A$,
+   the inductive hypothesis supplies $s(A', \eta)$ such that $\mu_{A'}(t) \le \eta t$
+   for every admissible sequence on $A'$ and every $t \ge s(A', \eta)$. There
+   are finitely many strict submatrices, so
    $$
-     t^* := \max_{A' \subseteq A} s(A', \varepsilon/2)
+     t^* \;:=\; \max\!\left( \max_{A' \subsetneq A} s(A', \eta),\; \tfrac{6 \|A\|}{\varepsilon} \right)
    $$
-   is finite.</p>
+   is finite. (The second argument forces $2\|A\|/t^* \le \eta$, which is needed
+   to control the pasting residual.)</p>
 </li>
 <li>
-<p><strong>Window dichotomy.</strong> Fix any $s$ and look at the window $[s, s + t^*]$.
-   Two mutually exclusive cases:</p>
+<p><strong>Window dichotomy on every $[s, s + t^*]$.</strong> Either:</p>
 </li>
 <li>
-<p><strong>All rows and columns useful in the window.</strong> By
-     [[zero_sum.fictitious_play.robinson_admissible_lemma.useful_window]],
+<p><strong>(a)</strong> every row $i \in I$ and every column $j \in J$ is <em>useful</em> in
+     $[s, s + t^*]$ (i.e., each appears in $I(\beta(\cdot))$ or
+     $J(\alpha(\cdot))$ at some step inside the window). By
+     [[zero_sum.fictitious_play.robinson_admissible_lemma.useful_window]] —
+     which internally uses
+     [[zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant]] —
      $$
-       \mu(s + t^*) \le 4 t^* \|A\|
+       \mu(s + t^*) \;\le\; 4 t^* \|A\|
      $$
-     — an <em>absolute</em> bound that resets $\mu$ regardless of its value at $s$.</p>
+     (an <em>absolute</em> endpoint bound, independent of $\mu(s)$); <strong>or</strong></p>
 </li>
 <li>
-<p><strong>Some row $i$ or column $j$ is not useful in the window.</strong> By
-     [[zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction]],
-     the window is governed by admissible play on a strict submatrix; the
-     inductive hypothesis then gives
+<p><strong>(b)</strong> some row or column is not useful. By
+     [[zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction]]
+     the window is governed by admissible play on a strict submatrix $A'$, so
+     the submatrix bound from step 1 applies. Combined with admissibility's
+     $2\|A\|$ per-step Lipschitz control on $\mu$, this gives
      $$
-       \mu(s + t^*) - \mu(s) \le \frac{\varepsilon t^*}{2} + 2\|A\|.
-     $$</p>
+       \mu(s + t^*) - \mu(s) \;\le\; \eta t^* + 2 \|A\|
+     $$
+     (an <em>increment</em> bound).</p>
 </li>
 <li>
-<p><strong>Pasting.</strong> Decompose $t = q t^* + r$ with $0 \le r &lt; t^*$ and apply the
-   dichotomy to consecutive windows. By
-   [[zero_sum.fictitious_play.robinson_admissible_lemma.induction_step]],
+<p><strong>Pasting via Euclidean division.</strong> Write $t = q t^* + r$ with $0 \le r &lt; t^*$.
+   Apply
+   [[zero_sum.fictitious_play.robinson_admissible_lemma.induction_step]] with
+   $\varepsilon_{\text{step}} := 2\eta = 2\varepsilon/3$ (so that the step's
+   "$\frac{\varepsilon_{\text{step}} t^*}{2}$" matches the subgame-case increment
+   $\eta t^*$ from step 2). The pasting lemma yields, for all $t \ge t^*$,
    $$
-     \mu(t) \;\le\; 6 t^* \|A\| + \frac{\varepsilon t}{2} + \frac{2\|A\| t}{t^*}.
+     \mu(t) \;\le\; 6 t^* \|A\|
+       \;+\; \tfrac{\varepsilon_{\text{step}}\, t}{2}
+       \;+\; \tfrac{2 \|A\|\, t}{t^*}
+     \;=\; 6 t^* \|A\| \;+\; \tfrac{\varepsilon t}{3} \;+\; \tfrac{2 \|A\|\, t}{t^*}.
    $$</p>
 </li>
 <li>
-<p><strong>Constant selection.</strong> Replacing $t^*$ by $\max(t^*, 4\|A\|/\varepsilon)$
-   (still a valid bound from the inductive hypothesis), the last term is
-   bounded by $\varepsilon t / 2$. Choosing
-   $s_0 := \max(t^*, 12 t^* \|A\| / \varepsilon)$ then yields
-   $\mu(t) \le \frac{3\varepsilon}{2} t$ for $t \ge s_0$. Re-running the
-   argument with $\varepsilon / 2$ gives the stated bound $\mu(t) \le \varepsilon t$.</p>
+<p><strong>Constant absorption.</strong> By the choice $t^* \ge 6\|A\|/\varepsilon$,
+   the last term $\frac{2\|A\| t}{t^*} \le \frac{\varepsilon t}{3}$. Hence
+   $$
+     \mu(t) \;\le\; 6 t^* \|A\| + \tfrac{2 \varepsilon t}{3}.
+   $$
+   Setting
+   $$
+     s_0 \;:=\; \max\!\left(t^*,\; \tfrac{18\, t^* \|A\|}{\varepsilon}\right),
+   $$
+   the residual $6 t^* \|A\| \le \frac{\varepsilon t}{3}$ for every $t \ge s_0$,
+   giving the stated bound $\mu(t) \le \varepsilon t$. $\square$</p>
 </li>
 </ol>
-<p>The bracketing invariant
-[[zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant]]
-(namely $\min_i \beta^i(s) \le \max_j \alpha^j(s)$ for every admissible $s$)
-is used inside the useful-window estimate. $\square$</p>
+<h2>Note on the constant choice</h2>
+<p>The pasting lemma's "natural" constant ladder produces an end bound of
+$\frac{3 \varepsilon_{\text{step}}}{2} t$ for $t$ large enough. Solving
+$\frac{3 \varepsilon_{\text{step}}}{2} = \varepsilon$ for the step's $\varepsilon_{\text{step}}$
+gives $\varepsilon_{\text{step}} = 2\varepsilon/3$, hence $\eta = \varepsilon_{\text{step}}/2 = \varepsilon/3$
+for the IH (since the subgame-reduction increment uses the IH's $\eta$ directly).
+A looser choice such as $\eta = \varepsilon/4$ (with $\varepsilon_{\text{step}} = \varepsilon/2$)
+also works and gives the cleaner $\mu(t) \le \frac{3 \varepsilon}{4} t \le \varepsilon t$
+bound, at the cost of slightly larger $t^*$ and $s_0$. Either is fine; we
+record the tighter $\varepsilon/3$ choice for definiteness.</p>
 <h2>Consequence</h2>
 <p>Combined with the trivial bracket
 $\min_j x(t)Ay \le \underline v(A) \le \overline v(A) \le \max_i x(t) A^i$,
