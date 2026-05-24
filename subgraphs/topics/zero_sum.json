@@ -25,7 +25,7 @@
       "title": "Perron-Frobenius For Positive Matrices",
       "kind": "theorem",
       "status": "formalized",
-      "href": "zero_sum/applications/linear_algebra_perron_frobenius_positive_matrix.html",
+      "href": "zero_sum/linear_algebra_perron_frobenius_positive_matrix.html",
       "payload": "node_payloads/linear_algebra_perron_frobenius_positive_matrix.json"
     },
     {
@@ -2215,6 +2215,13 @@
       "node_count": 9
     },
     {
+      "id": "linear_algebra",
+      "title": "Linear Algebra",
+      "href": "linear_algebra/index.html",
+      "role": "dependent",
+      "node_count": 4
+    },
+    {
       "id": "linear_programming",
       "title": "Linear Programming",
       "href": "linear_programming/index.html",
@@ -2333,6 +2340,13 @@
       "to": "topic:extensive_game.perfect_information",
       "kind": "boundary_dependent",
       "topic": "extensive_game.perfect_information",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum.minimax",
+      "to": "topic:linear_algebra",
+      "kind": "boundary_dependent",
+      "topic": "linear_algebra",
       "count": 1
     },
     {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unanimity (Pareto Axiom) — EconCSLib Knowledge Blueprint</title>
+  <title>Perron-Frobenius For Positive Matrices — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -129,8 +129,8 @@
           <a href="../order/index.html">Order</a>
         </li>
       
-        <li class="topic-parent topic-active">
-          <details open data-topic-root="social_choice">
+        <li class="topic-parent">
+          <details data-topic-root="social_choice">
             <summary><a href="../social_choice/index.html">Social Choice</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../social_choice/core/index.html">Core</a>
@@ -219,8 +219,8 @@
           <a href="../utility/index.html">Utility</a>
         </li>
       
-        <li class="topic-parent">
-          <details data-topic-root="zero_sum">
+        <li class="topic-parent topic-active">
+          <details open data-topic-root="zero_sum">
             <summary><a href="../zero_sum/index.html">Zero Sum</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../zero_sum/applications/index.html">Applications</a>
@@ -797,17 +797,17 @@
   </nav>
   <main>
     
-<article class="definition_thmwrapper theorem-style-definition node-page" id="node-social_choice-2e-voting-2e-unanimity">
-  <header class="definition_thmheading thm-heading">
-    <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Unanimity (Pareto Axiom)</span>
+<article class="theorem_thmwrapper theorem-style-theorem node-page" id="node-linear_algebra-2e-perron_frobenius_positive_matrix">
+  <header class="theorem_thmheading thm-heading">
+    <span class="theorem_thmcaption thm-caption">Theorem</span>
+    <span class="theorem_thmtitle thm-title">Perron-Frobenius For Positive Matrices</span>
     <div class="thm_header_extras">
-      
-      <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="checkmark">✓</span>
+      <span class="badge kind-theorem">theorem</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
-      <a class="permalink" href="#node-social_choice-2e-voting-2e-unanimity">#</a>
+      <a class="permalink" href="#node-linear_algebra-2e-perron_frobenius_positive_matrix">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
@@ -823,11 +823,7 @@
       <header><h1>Uses</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li><a href="social_choice_voting_swf.html">Social Welfare Function</a></li>
-        
-        <li><a href="social_choice_voting_scf.html">Social Choice Function</a></li>
-        
-        <li><a href="social_choice_core_strict_preference.html">Strict Preference</a></li>
+        <li><a href="zero_sum_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a></li>
         
       </ul>
     </div>
@@ -842,23 +838,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/SocialChoice/Voting/Basic.lean#L44"><code>SocialChoice.Voting.SWF.Unanimity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/LinearAlgebra/PerronFrobenius.lean#L70"><code>EconCSLib.LinearAlgebra.perron_frobenius</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f0a3469, EconCSLib.SocialChoice.Voting.Basic
-          </span>
-          
-          
-        </li>
-        
-        <li>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f0a3469c177ba9e46ada6e440e8ba684bfb8b32f/EconCSLib/SocialChoice/Voting/Basic.lean#L74"><code>SocialChoice.Voting.SCF.Unanimity</code></a>
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f0a3469, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ f0a3469, EconCSLib.LinearAlgebra.PerronFrobenius
           </span>
           
           
@@ -866,64 +850,104 @@
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.Voting.Basic</code></p>
+      <p class="lean-modules">Modules: <code>EconCSLib.LinearAlgebra.PerronFrobenius</code></p>
       
     </div>
   </div>
   
 
-  <div class="definition_thmcontent thm-content body">
-    <h1>Unanimity (Pareto Axiom)</h1>
-<p>Unanimity asks that an aggregation rule respect unanimous individual strict
-rankings. Two parallel versions:</p>
-<p><strong>SWF unanimity.</strong> A social welfare function $F$ is <em>unanimous</em> if for every
-profile $P$ and every pair $a, b \in A$,
+  <div class="theorem_thmcontent thm-content body">
+    <h1>Perron-Frobenius For Positive Matrices</h1>
+<h2>Statement</h2>
+<p>Let $M \in \mathbb{R}^{n \times n}$ be a square matrix whose entries are
+strictly positive: $M_{ij} &gt; 0$ for every $i, j$. Then there exist
+$x \in \Delta(\mathrm{Fin}\,n)$, $y \in \Delta(\mathrm{Fin}\,n)$, and
+$\lambda &gt; 0$ such that</p>
+<ul>
+<li>$x$ and $y$ have <strong>strictly positive components</strong>;</li>
+<li>$xM = \lambda\, x$ (so $x$ is a left eigenvector of $M$ with eigenvalue $\lambda$);</li>
+<li>$My = \lambda\, y$ (so $y$ is a right eigenvector of $M$ with eigenvalue $\lambda$).</li>
+</ul>
+<p>The Loomis value $v$ of the pair $(I, M)$ (identity matrix vs. $M$)
+provides $\lambda = 1/v$.</p>
+    
+    <details class="proof-details">
+      <summary>Proof</summary>
+      <div class="proof-body">
+        <p>Apply the general-$B$ Loomis theorem
+(<a class="node-ref" data-node-id="zero_sum.minimax.loomis_theorem" href="minimax/zero_sum_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a>) with $A := I$ (the $n \times n$
+identity matrix) and $B := M$. Since $M_{ij} &gt; 0$, the hypothesis
+<code>IsPositive M</code> is satisfied. Loomis produces
+$x \in \Delta(\mathrm{Fin}\,n)$, $y \in \Delta(\mathrm{Fin}\,n)$, and
+$v \in \mathbb{R}$ such that</p>
+<ul>
+<li>$(1)\quad \forall j,\quad v \cdot (xM)_j \le x_j$  (from $xI \ge v \cdot xM$,
+  using $xI = x$);</li>
+<li>$(2)\quad \forall i,\quad y_i \le v \cdot (My)_i$  (from $Iy \le v \cdot My$,
+  using $Iy = y$).</li>
+</ul>
+<p><strong>Step 1: $v &gt; 0$.</strong> Pick $i_0$ with $y_{i_0} &gt; 0$ (which exists because
+$\sum y_i = 1$). Inequality (2) at $i_0$ gives
+$y_{i_0} \le v \cdot (My)_{i_0}$. Since $M &gt; 0$ entrywise and $y \ge 0$ has
+$y_{i_0} &gt; 0$ (hence $\sum y_j M_{i_0, j} &gt; 0$), $(My)_{i_0} &gt; 0$.
+Therefore $0 &lt; y_{i_0} \le v \cdot (My)_{i_0}$ forces $v &gt; 0$.</p>
+<p><strong>Step 2: $x$ and $y$ are strictly positive.</strong> For every $j$,
+$(xM)_j = \sum_i x_i M_{ij} &gt; 0$ because $x \in \Delta$ has at least one
+positive entry and $M &gt; 0$ entrywise. Combined with (1), $x_j \ge v \cdot
+(xM)_j &gt; 0$. So $x_j &gt; 0$ for all $j$. By the same argument applied to (2)
+and $y$, $(My)_i &gt; 0$ and $y_i &gt; 0$ for all $i$.</p>
+<p><strong>Step 3: Tight inner-product sandwich.</strong> Compute
 $$
-\bigl(\forall i \in N,\ a \succ_{P_i} b\bigr)
-\Rightarrow a \succ_{F(P)} b.
-$$</p>
-<p><strong>SCF unanimity.</strong> A social choice function $G$ is <em>unanimous</em> if for every
-profile $P$ and every $a \in A$,
+  \langle x, y\rangle - v\cdot \langle xM, y\rangle
+  = \sum_j (x_j - v \cdot (xM)_j) \cdot y_j \ge 0
 $$
-\bigl(\forall i \in N,\ \forall b \ne a,\ a \succ_{P_i} b\bigr)
-\Rightarrow G(P) = a.
-$$</p>
-<p>In Lean these are <code>SocialChoice.Voting.SWF.Unanimity</code> and
-<code>SocialChoice.Voting.SCF.Unanimity</code>, defined in terms of the bundled strict
-preference [[social_choice.core.strict_preference]].</p>
-<p>Unanimity is the weakest Paretian axiom in this hierarchy. It is the hypothesis
-for both Arrow's impossibility ([[social_choice.voting.arrow_impossibility]])
-and Muller-Satterthwaite ([[social_choice.voting.muller_satterthwaite]]).</p>
+(each summand is nonneg by (1) and $y_j \ge 0$). And by
+$\langle xM, y\rangle = \sum_j \sum_i x_i M_{ij} y_j = \langle x, My\rangle$,
+$$
+  v \cdot \langle x, My\rangle - \langle x, y\rangle
+  = v \cdot \langle x, My\rangle - \langle x, y\rangle.
+$$
+Weighting (2) by $x \ge 0$ and summing,
+$\langle x, y\rangle \le v \cdot \langle x, My\rangle$. Therefore
+$$
+  \langle x, y\rangle \;\ge\; v \cdot \langle xM, y\rangle \;=\; v \cdot \langle x, My\rangle \;\ge\; \langle x, y\rangle,
+$$
+so both inequalities are tight.</p>
+<p><strong>Step 4: Componentwise equality.</strong> From Step 3,
+$\sum_j (x_j - v \cdot (xM)_j) \cdot y_j = 0$. Each summand is nonneg (by
+(1)) and $y_j &gt; 0$ strict (by Step 2). For the nonneg sum to vanish, each
+summand must vanish, so $x_j - v \cdot (xM)_j = 0$, i.e., $x_j = v \cdot
+(xM)_j$ for every $j$. As a row-vector identity, $xM = (1/v) \cdot x$.</p>
+<p>Dually, $\sum_i (v \cdot (My)_i - y_i) \cdot x_i = 0$ with each summand
+nonneg and $x_i &gt; 0$ strict, so $y_i = v \cdot (My)_i$, i.e.,
+$My = (1/v) \cdot y$.</p>
+<p>Setting $\lambda := 1/v &gt; 0$, we have $xM = \lambda \cdot x$ (left
+eigenvector) and $My = \lambda \cdot y$ (right eigenvector), both with
+$x, y$ strictly positive. $\square$</p>
+<h2>Remarks</h2>
+<ul>
+<li>The argument is purely algebraic and works over $\mathbb{R}$ (where
+  general-$B$ Loomis is formalised in <code>EconCSLib.StrategicGame.LoomisGeneral</code>).</li>
+<li>Strict positivity of $x$ and $y$ is automatic given strict positivity of
+  $M$, <strong>without</strong> needing a separate "irreducibility" argument.</li>
+<li>The same Loomis instance simultaneously produces the <strong>left</strong> eigenvector
+  $x$ and the <strong>right</strong> eigenvector $y$ at the same eigenvalue $\lambda
+  = 1/v$. This eigenvalue is the **Perron-Frobenius eigenvalue** of $M$.</li>
+</ul>
 <h2>References</h2>
 <ul>
-<li>[MSZ 21.8, 21.26] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Unanimity / Pareto axioms.</li>
+<li>[MFoGT, Section 2.8, Exercise 1(2)] Laraki, Renault, and Sorin,
+  <em>Mathematical Foundations of Game Theory</em>,
+  <code>references/MathFoundationsGameTheory.pdf</code>. Application of Loomis theorem
+  to positive matrices.</li>
 </ul>
+      </div>
+    </details>
     
   </div>
 
   
 
-  
-  <section class="deps deps-used-by">
-    <h2>Used by</h2>
-    <ul>
-      
-      <li><a href="social_choice_voting_arrow_impossibility.html">Arrow&#39;s Impossibility Theorem</a></li>
-      
-      <li><a href="social_choice_voting_arrow_of_unanimity_iia.html">Arrow&#39;s Theorem via Decisive Coalitions</a></li>
-      
-      <li><a href="social_choice_voting_decisive_contraction.html">Coalition Contraction — Splitting a Decisive Coalition</a></li>
-      
-      <li><a href="social_choice_voting_decisive_spread.html">Field Expansion — Decisive on One Pair Implies Decisive Everywhere</a></li>
-      
-      <li><a href="social_choice_voting_gibbard_satterthwaite.html">Gibbard–Satterthwaite Theorem</a></li>
-      
-      <li><a href="social_choice_voting_muller_satterthwaite.html">Muller–Satterthwaite Theorem</a></li>
-      
-      <li><a href="social_choice_voting_unanimity_univ_decisive.html">Grand Coalition Is Decisive under Unanimity</a></li>
-      
-    </ul>
-  </section>
   
 
   
@@ -931,9 +955,11 @@ and Muller-Satterthwaite ([[social_choice.voting.muller_satterthwaite]]).</p>
     <h2>Also in</h2>
     <ul>
       
-      <li><a href="../social_choice/index.html">Social Choice</a></li>
+      <li><a href="../zero_sum/index.html">Zero Sum</a></li>
       
-      <li><a href="../social_choice/voting/index.html">Social Choice.Voting</a></li>
+      <li><a href="../zero_sum/applications/index.html">Zero Sum.Applications</a></li>
+      
+      <li><a href="../linear_algebra/index.html">Linear Algebra</a></li>
       
     </ul>
   </section>
@@ -941,7 +967,7 @@ and Muller-Satterthwaite ([[social_choice.voting.muller_satterthwaite]]).</p>
 
   
   <footer class="tags">
-    <span class="tag">social-choice</span><span class="tag">voting</span><span class="tag">axiom</span><span class="tag">pareto</span>
+    <span class="tag">linear-algebra</span><span class="tag">perron-frobenius</span><span class="tag">zero-sum</span>
   </footer>
   
 </article>

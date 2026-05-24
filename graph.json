@@ -1689,7 +1689,7 @@
       "id": "linear_algebra.farkas_lemma",
       "title": "Farkas Lemma",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "linear-algebra",
         "convexity",
@@ -1699,6 +1699,12 @@
       "topics": [
         "linear_algebra",
         "linear_algebra.alternatives"
+      ],
+      "lean_declarations": [
+        "FarkasAugRow",
+        "farkasAugA",
+        "farkasAugB",
+        "farkas_lemma"
       ],
       "topic": "linear_algebra",
       "uses": [
@@ -1719,15 +1725,16 @@
         "perron-frobenius",
         "zero-sum"
       ],
-      "primary_topic": "zero_sum.applications",
+      "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.applications"
+        "zero_sum.applications",
+        "linear_algebra"
       ],
       "lean_declarations": [
         "EconCSLib.LinearAlgebra.perron_frobenius"
       ],
-      "topic": "linear_algebra",
+      "topic": "applications",
       "uses": [
         "zero_sum.minimax.loomis_theorem"
       ]
@@ -1736,7 +1743,7 @@
       "id": "linear_algebra.theorem_of_alternative",
       "title": "Theorem Of The Alternative",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "linear-algebra",
         "convexity",
@@ -1747,6 +1754,14 @@
       "topics": [
         "linear_algebra",
         "linear_algebra.alternatives"
+      ],
+      "lean_declarations": [
+        "rowEval",
+        "IsFeasible",
+        "IsCertificate",
+        "HasCertificate",
+        "feas_cert_disjoint",
+        "theorem_of_alternative"
       ],
       "topic": "linear_algebra",
       "uses": [
@@ -1760,7 +1775,7 @@
       "id": "linear_algebra.theorem_of_alternative.fourier_motzkin",
       "title": "Fourier-Motzkin Elimination Step",
       "kind": "lemma",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "linear-algebra",
         "fourier-motzkin",
@@ -1771,6 +1786,19 @@
       "topics": [
         "linear_algebra",
         "linear_algebra.alternatives"
+      ],
+      "lean_declarations": [
+        "ZeroRows",
+        "PosRows",
+        "NegRows",
+        "FMRowIndex",
+        "fmA",
+        "fmB",
+        "fm_feasible_of_feasible",
+        "feasible_of_fm_feasible",
+        "liftCoeff",
+        "liftCert",
+        "fm_cert_lift"
       ],
       "topic": "linear_algebra",
       "used_by": [
@@ -1812,7 +1840,7 @@
       "id": "linear_programming.strong_duality",
       "title": "Strong Duality For Linear Programming",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "linear-programming",
         "duality"
@@ -1821,6 +1849,16 @@
       "topics": [
         "linear_programming",
         "linear_programming.duality"
+      ],
+      "lean_declarations": [
+        "EconCSLib.LinearProgramming.PrimalFeasible",
+        "EconCSLib.LinearProgramming.DualFeasible",
+        "EconCSLib.LinearProgramming.lp_weak_duality",
+        "EconCSLib.LinearProgramming.DualAugRow",
+        "EconCSLib.LinearProgramming.dualAugA",
+        "EconCSLib.LinearProgramming.dualAugB",
+        "EconCSLib.LinearProgramming.isFeasible_dualAug_iff",
+        "EconCSLib.LinearProgramming.lp_strong_duality"
       ],
       "topic": "linear_programming",
       "uses": [
