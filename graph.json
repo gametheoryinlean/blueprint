@@ -251,7 +251,7 @@
         "List.argMaxOn_ge",
         "List.le_argMaxOn_head"
       ],
-      "topic": "argmax",
+      "topic": "core",
       "uses": [
         "core.preference.total_preorder"
       ]
@@ -277,7 +277,7 @@
         "VNM.Completeness",
         "VNM.Transitivity"
       ],
-      "topic": "preference",
+      "topic": "core",
       "used_by": [
         "utility.preference_relation"
       ]
@@ -303,7 +303,7 @@
         "Indifferent.symm",
         "Indifferent.trans"
       ],
-      "topic": "preference",
+      "topic": "core",
       "used_by": [
         "core.preference.represents_preference",
         "utility.preference_relation"
@@ -329,7 +329,7 @@
         "RepresentsPreference.lt_iff",
         "RepresentsPreference.indifferent_iff"
       ],
-      "topic": "preference",
+      "topic": "core",
       "uses": [
         "core.preference.indifferent",
         "core.preference.strictly_preferred"
@@ -356,7 +356,7 @@
         "StrictlyPreferred.trans",
         "StrictlyPreferred.irrefl"
       ],
-      "topic": "preference",
+      "topic": "core",
       "used_by": [
         "core.preference.represents_preference",
         "utility.preference_relation"
@@ -381,7 +381,7 @@
         "TotalPreorder",
         "TotalPreorder.comparable"
       ],
-      "topic": "preference",
+      "topic": "core",
       "used_by": [
         "core.argmax.list_arg_max_on",
         "utility.preference_relation"
@@ -409,7 +409,7 @@
         "Profile.deviate_same",
         "Profile.deviate_of_ne"
       ],
-      "topic": "profile"
+      "topic": "core"
     },
     {
       "id": "core.simplex.bounded_by_value",
@@ -430,7 +430,7 @@
         "ge_iff_simplex_ge",
         "le_iff_simplex_le"
       ],
-      "topic": "simplex",
+      "topic": "core",
       "uses": [
         "core.simplex.pure",
         "core.simplex.wsum"
@@ -463,13 +463,47 @@
         "stdSimplex.continuous_coord",
         "wsum_continuous"
       ],
-      "topic": "simplex",
+      "topic": "core",
       "uses": [
         "core.simplex.wsum"
       ],
       "used_by": [
         "zero_sum.lam_mu_existence",
         "zero_sum.minimax.loomis_induction_proof.value_existence"
+      ]
+    },
+    {
+      "id": "core.simplex.mix",
+      "title": "Convex Combination of Simplex Points",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "core",
+        "simplex",
+        "convex-combination",
+        "mixed-strategy"
+      ],
+      "primary_topic": "core",
+      "topics": [
+        "core",
+        "core.simplex"
+      ],
+      "lean_declarations": [
+        "stdSimplex.mix",
+        "stdSimplex.mix_apply",
+        "wsum_mix",
+        "linear_comb_gt_left",
+        "linear_comb_gt_right",
+        "linear_comb_gt_of_ge_gt",
+        "linear_comb_lt_of_le_lt",
+        "wsum_mix_gt_of_ge_gt",
+        "wsum_mix_lt_of_le_lt",
+        "mix_gt_of_gt_nbh",
+        "mix_lt_of_lt_nbh"
+      ],
+      "topic": "core",
+      "uses": [
+        "core.simplex.wsum"
       ]
     },
     {
@@ -493,7 +527,7 @@
         "wsum_pure_apply",
         "wsum_pure"
       ],
-      "topic": "simplex",
+      "topic": "core",
       "uses": [
         "core.simplex.wsum"
       ],
@@ -521,14 +555,16 @@
         "wsum_const",
         "wsum_le_wsum",
         "wsum_nonneg",
+        "wsum_pos",
         "wsum_ge_wsum",
         "wsum_add",
         "wsum_smul"
       ],
-      "topic": "simplex",
+      "topic": "core",
       "used_by": [
         "core.simplex.bounded_by_value",
         "core.simplex.continuity",
+        "core.simplex.mix",
         "core.simplex.pure",
         "core.simplex.wsum_comm"
       ]
@@ -551,7 +587,7 @@
       "lean_declarations": [
         "wsum_wsum_comm"
       ],
-      "topic": "simplex",
+      "topic": "core",
       "uses": [
         "core.simplex.wsum"
       ]
@@ -3863,6 +3899,7 @@
         "social_choice.fair_division.indivisible.additive_instance",
         "social_choice.fair_division.indivisible.best_good",
         "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
+        "social_choice.fair_division.indivisible.efx_exists_two_agents",
         "social_choice.fair_division.indivisible.mms_value_bounds",
         "social_choice.fair_division.indivisible.proportional_alpha_mms_additive",
         "social_choice.fair_division.indivisible.proportional_implies_mms_additive",
@@ -4232,10 +4269,10 @@
       ],
       "topic": "indivisible",
       "uses": [
+        "social_choice.fair_division.indivisible.additive_valuation",
         "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.efx_of_no_envy_mono",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.efx_singleton_bundle"
       ]
     },
     {
@@ -4289,9 +4326,6 @@
         "social_choice.fair_division.indivisible.ef_implies_efx_mono",
         "social_choice.fair_division.indivisible.efx",
         "social_choice.fair_division.indivisible.envy_free"
-      ],
-      "used_by": [
-        "social_choice.fair_division.indivisible.efx_exists_two_agents"
       ]
     },
     {
@@ -4321,6 +4355,7 @@
         "social_choice.fair_division.indivisible.valuation"
       ],
       "used_by": [
+        "social_choice.fair_division.indivisible.efx_exists_two_agents",
         "social_choice.fair_division.indivisible.efx_two_agents_two_goods"
       ]
     },
@@ -5146,7 +5181,6 @@
         "social_choice.fair_division.indivisible.ef1",
         "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
         "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.efx_exists_two_agents",
         "social_choice.fair_division.indivisible.efx_singleton_bundle",
         "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
         "social_choice.fair_division.indivisible.egalitarian_welfare",
@@ -10467,7 +10501,6 @@
       ],
       "lean_declarations": [
         "LoomisGeneral.IsPositive.one",
-        "LoomisGeneral.wsum_pos",
         "LoomisGeneral.xB_pos",
         "LoomisGeneral.By_pos",
         "LoomisGeneral.xBy_pos"
@@ -10703,17 +10736,6 @@
       "target": "zero_sum.von_neumann_minimax",
       "plan_status": "selected",
       "lean_declarations": [
-        "MinimaxLoomis.Interval",
-        "MinimaxLoomis.linear_comb",
-        "MinimaxLoomis.wsum_comb_eq_comb_wsum",
-        "MinimaxLoomis.linear_comb_gt_of_ge_gt",
-        "MinimaxLoomis.linear_comb_lt_of_le_lt",
-        "MinimaxLoomis.wsum_linear_comb_gt_of_ge_gt",
-        "MinimaxLoomis.wsum_linear_comb_lt_of_le_lt",
-        "MinimaxLoomis.ContinuousAt_gt_of_gt_nbh",
-        "MinimaxLoomis.ContinuousAt_lt_of_lt_nbh",
-        "MinimaxLoomis.linear_comb_gt_of_gt_nbh'",
-        "MinimaxLoomis.linear_comb_lt_of_lt_nbh'",
         "MinimaxLoomis.singleton_of_card_one",
         "MinimaxLoomis.minmax'_IJ_2",
         "MinimaxLoomis.dropEquiv",
@@ -11241,6 +11263,10 @@
     {
       "from": "core.simplex.wsum",
       "to": "core.simplex.continuity"
+    },
+    {
+      "from": "core.simplex.wsum",
+      "to": "core.simplex.mix"
     },
     {
       "from": "core.simplex.wsum",
@@ -12291,6 +12317,10 @@
       "to": "social_choice.fair_division.indivisible.efx"
     },
     {
+      "from": "social_choice.fair_division.indivisible.additive_valuation",
+      "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
+    },
+    {
       "from": "social_choice.fair_division.indivisible.allocation",
       "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
     },
@@ -12299,11 +12329,7 @@
       "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
     },
     {
-      "from": "social_choice.fair_division.indivisible.efx_of_no_envy_mono",
-      "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
+      "from": "social_choice.fair_division.indivisible.efx_singleton_bundle",
       "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
     },
     {

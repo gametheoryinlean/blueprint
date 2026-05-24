@@ -10,8 +10,8 @@
     "social_choice.fair_division",
     "social_choice.fair_division.indivisible"
   ],
-  "body_html": "<h1>EFX from a Singleton-Bundle Sufficient Condition</h1>\n<p><strong>Lemma.</strong> If every bundle in an allocation $A$ has cardinality $\\le 1$\n(at most one item per agent), then $A$ is automatically EFX\n([[social_choice.fair_division.indivisible.efx]]).</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code>.</p>",
-  "proof_html": "<p>sketch</p>\n<p>For agents $i \\ne j$ and $g \\in A(j)$, since $|A(j)| \\le 1$ the\nbundle equality $A(j) = \\{g\\}$ holds. Removing $g$ gives\n$A(j) \\setminus \\{g\\} = \\emptyset$, and the EFX inequality becomes\n$v_i(\\emptyset) \\le v_i(A(i))$.</p>\n<p>For valuations satisfying the natural nonnegativity convention\n$v_i(\\emptyset) \\le v_i(S)$ for every $S$ — including additive\nvaluations with nonnegative weights or any monotone valuation — this\nholds for free. The actual lemma in Lean takes the relevant\nnonnegativity hypothesis as a parameter to keep the abstract <code>Valuation</code>\nAPI uncommitted to monotonicity.</p>\n<h2>Significance</h2>\n<p>This is the <em>base case</em> for several EFX existence proofs:</p>\n<ul>\n<li>\n<p>For 2 agents and 2 goods, an EFX allocation exists by giving each\n  agent one item (each bundle is a singleton, so the lemma applies\n  directly). See [[social_choice.fair_division.indivisible.efx_two_agents_two_goods]].</p>\n</li>\n<li>\n<p>For a finer item enumeration (giving items one-by-one to the agent\n  with strictly fewer items so far), the resulting allocation has\n  bundles of size at most one when $|G| \\le n$ — every agent gets a\n  singleton or empty bundle, again triggering this lemma.</p>\n</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. EFX special cases.</li>\n</ul>",
+  "body_html": "<h1>EFX from a Singleton-Bundle Sufficient Condition</h1>\n<p><strong>Lemma.</strong> In a 2-agent ($\\mathrm{Fin}\\ 2$) allocation where agent $i$'s\nbundle is <em>exactly</em> a singleton $\\{g\\}$, the EFX-style \"remove any item\"\ninequality for agent $j$ against $A(i)$ reduces to the empty-bundle\ncomparison: assuming $v_j(\\emptyset) \\le v_j(A(j))$,\n$$\n\\forall h \\in A(i),\\ v_j(A(i) \\setminus \\{h\\}) \\le v_j(A(j)).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code>.\nThe signature is pair-specific:\n$\\mathrm{Fin}\\ 2$, fixed agents $i, j$, and the hypothesis $A(i) = \\{g\\}$\nas data.</p>",
+  "proof_html": "<p>The only element of $A(i)$ is $g$, so the universal becomes\n\"$v_j(A(i) \\setminus \\{g\\}) \\le v_j(A(j))$\", which simplifies to\n$v_j(\\emptyset) \\le v_j(A(j))$ — exactly the supplied hypothesis. The\nlemma takes the relevant nonnegativity hypothesis as a parameter rather\nthan baking it into a typeclass.</p>\n<h2>Significance</h2>\n<p>This is a small <em>pair-helper</em> used inside the 2-agent EFX existence\nconstruction\n([[social_choice.fair_division.indivisible.efx_exists_two_agents]]) to\ndischarge one side of the EFX inequality when one agent's bundle has\ncollapsed to a singleton. It is <strong>not</strong> a stand-alone \"singleton\nbundles automatically give EFX\" theorem.</p>\n<p>A generic \"every bundle has cardinality $\\le 1 \\Rightarrow$ EFX\"\nstatement is not formalised in the library; if needed, it would be a\nshort corollary using one application of this lemma per envy direction.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. EFX special cases.</li>\n</ul>",
   "deps": [
     {
       "id": "social_choice.fair_division.indivisible.efx",
@@ -31,6 +31,11 @@
   ],
   "dependents": [
     {
+      "id": "social_choice.fair_division.indivisible.efx_exists_two_agents",
+      "title": "EFX Existence — Two Agents, Any Finite Good Set",
+      "href": "social_choice/social_choice_fair_division_indivisible_efx_exists_two_agents.html"
+    },
+    {
       "id": "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
       "title": "EFX Existence — 2 Agents, 2 Goods",
       "href": "social_choice/social_choice_fair_division_indivisible_efx_two_agents_two_goods.html"
@@ -43,9 +48,9 @@
       "qualified_name": "SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle",
       "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.EFX",
       "repository_title": "EconCSLib",
-      "revision": "357305aa370a1046cf451469ab718f481d947d62",
-      "short_revision": "357305a",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L85",
+      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
+      "short_revision": "65f9506",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L85",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

@@ -353,6 +353,8 @@
       
         <li><a href="../keywords/convergence.html">convergence</a></li>
       
+        <li><a href="../keywords/convex-combination.html">convex-combination</a></li>
+      
         <li><a href="../keywords/convex-game.html">convex-game</a></li>
       
         <li><a href="../keywords/convexity.html">convexity</a></li>
@@ -838,11 +840,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/LinearAlgebra/Farkas.lean#L61"><code>EconCSLib.LinearAlgebra.FarkasAugRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/LinearAlgebra/Farkas.lean#L61"><code>EconCSLib.LinearAlgebra.FarkasAugRow</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.LinearAlgebra.Farkas
+            EconCSLib @ 65f9506, EconCSLib.LinearAlgebra.Farkas
           </span>
           
           
@@ -850,11 +852,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/LinearAlgebra/Farkas.lean#L64"><code>EconCSLib.LinearAlgebra.farkasAugA</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/LinearAlgebra/Farkas.lean#L64"><code>EconCSLib.LinearAlgebra.farkasAugA</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.LinearAlgebra.Farkas
+            EconCSLib @ 65f9506, EconCSLib.LinearAlgebra.Farkas
           </span>
           
           
@@ -862,11 +864,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/LinearAlgebra/Farkas.lean#L71"><code>EconCSLib.LinearAlgebra.farkasAugB</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/LinearAlgebra/Farkas.lean#L71"><code>EconCSLib.LinearAlgebra.farkasAugB</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.LinearAlgebra.Farkas
+            EconCSLib @ 65f9506, EconCSLib.LinearAlgebra.Farkas
           </span>
           
           
@@ -874,11 +876,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/LinearAlgebra/Farkas.lean#L159"><code>EconCSLib.LinearAlgebra.farkas_lemma</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/LinearAlgebra/Farkas.lean#L159"><code>EconCSLib.LinearAlgebra.farkas_lemma</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.LinearAlgebra.Farkas
+            EconCSLib @ 65f9506, EconCSLib.LinearAlgebra.Farkas
           </span>
           
           
@@ -895,12 +897,12 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Farkas Lemma</h1>
 <h2>Setup</h2>
-<p>Fix a linearly ordered field $\mathbb{K}$ and a finite nonempty index type
-$I$. Let $A \colon I \times \mathrm{Fin}\,n \to \mathbb{K}$,
-$b \colon I \to \mathbb{K}$, $c \colon \mathrm{Fin}\,n \to \mathbb{K}$, and
+<p>Fix a linearly ordered field $\mathbb{K}$ and finite nonempty index types
+$I$ (rows) and $J$ (columns). Let $A \colon I \times J \to \mathbb{K}$,
+$b \colon I \to \mathbb{K}$, $c \colon J \to \mathbb{K}$, and
 $d \in \mathbb{K}$. Set
 $$
-  S(A, b) \;=\; \{\, x \colon \mathrm{Fin}\,n \to \mathbb{K} \mid A x \ge b \,\}
+  S(A, b) \;=\; \{\, x \colon J \to \mathbb{K} \mid A x \ge b \,\}
 $$
 (componentwise weak inequality) and assume $S(A, b) \ne \emptyset$.</p>
 <h2>Statement</h2>
@@ -929,7 +931,7 @@ $\langle c, x\rangle \ge d$.</p>
 <p><em>(1) $\Rightarrow$ (2).</em> This is the substantive direction; the proof
 homogenises the system and applies the Theorem of the Alternative
 (<a class="node-ref" data-node-id="linear_algebra.theorem_of_alternative" href="linear_algebra_theorem_of_alternative.html">Theorem Of The Alternative</a>).</p>
-<p>Consider the augmented system on $(x, t) \in (\mathrm{Fin}\,n \to \mathbb{K})
+<p>Consider the augmented system on $(x, t) \in (J \to \mathbb{K})
 \times \mathbb{K}$ with row index $I \sqcup { t_+, c_+ }$ (the original $I$
 plus two extra rows):</p>
 <ul>
@@ -954,7 +956,7 @@ plus two extra rows):</p>
   the inequality. Hence the case $t = 0$ is impossible.</p>
 </li>
 <li>
-<p>$t &gt; 0$. Then $x' := x / t \in \mathrm{Fin}\,n \to \mathbb{K}$ satisfies
+<p>$t &gt; 0$. Then $x' := x / t \colon J \to \mathbb{K}$ satisfies
   $A x' = A x / t \ge b$ (divide $A x \ge b\, t$ by $t &gt; 0$), so
   $x' \in S(A, b)$. By (1), $\langle c, x'\rangle \ge d$. But $(c_+)$ gives
   $-\langle c, x\rangle + d\, t \ge 1$, so
@@ -973,7 +975,7 @@ $c_+$ row).</p>
 $\alpha = u'(t_+)$, $\beta = u'(c_+)$.</p>
 <p>Read off the column conditions:</p>
 <ul>
-<li>(column $j$ for $x_j$, $j \in \mathrm{Fin}\,n$):
+<li>(column $j$ for $x_j$, $j \in J$):
   $\sum_i u_i A_{i,j} + \alpha \cdot 0 + \beta \cdot (-c_j) = 0$, i.e.,
   $u^{\mathsf T} A = \beta \cdot c$.</li>
 <li>(column for $t$): $\sum_i u_i (-b_i) + \alpha \cdot 1 + \beta \cdot d = 0$,

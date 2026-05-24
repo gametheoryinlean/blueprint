@@ -353,6 +353,8 @@
       
         <li><a href="../keywords/convergence.html">convergence</a></li>
       
+        <li><a href="../keywords/convex-combination.html">convex-combination</a></li>
+      
         <li><a href="../keywords/convex-game.html">convex-game</a></li>
       
         <li><a href="../keywords/convexity.html">convexity</a></li>
@@ -842,11 +844,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L85"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L85"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ 65f9506, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
@@ -862,40 +864,36 @@
 
   <div class="lemma_thmcontent thm-content body">
     <h1>EFX from a Singleton-Bundle Sufficient Condition</h1>
-<p><strong>Lemma.</strong> If every bundle in an allocation $A$ has cardinality $\le 1$
-(at most one item per agent), then $A$ is automatically EFX
-([[social_choice.fair_division.indivisible.efx]]).</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code>.</p>
+<p><strong>Lemma.</strong> In a 2-agent ($\mathrm{Fin}\ 2$) allocation where agent $i$'s
+bundle is <em>exactly</em> a singleton $\{g\}$, the EFX-style "remove any item"
+inequality for agent $j$ against $A(i)$ reduces to the empty-bundle
+comparison: assuming $v_j(\emptyset) \le v_j(A(j))$,
+$$
+\forall h \in A(i),\ v_j(A(i) \setminus \{h\}) \le v_j(A(j)).
+$$</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code>.
+The signature is pair-specific:
+$\mathrm{Fin}\ 2$, fixed agents $i, j$, and the hypothesis $A(i) = \{g\}$
+as data.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>sketch</p>
-<p>For agents $i \ne j$ and $g \in A(j)$, since $|A(j)| \le 1$ the
-bundle equality $A(j) = \{g\}$ holds. Removing $g$ gives
-$A(j) \setminus \{g\} = \emptyset$, and the EFX inequality becomes
-$v_i(\emptyset) \le v_i(A(i))$.</p>
-<p>For valuations satisfying the natural nonnegativity convention
-$v_i(\emptyset) \le v_i(S)$ for every $S$ — including additive
-valuations with nonnegative weights or any monotone valuation — this
-holds for free. The actual lemma in Lean takes the relevant
-nonnegativity hypothesis as a parameter to keep the abstract <code>Valuation</code>
-API uncommitted to monotonicity.</p>
+        <p>The only element of $A(i)$ is $g$, so the universal becomes
+"$v_j(A(i) \setminus \{g\}) \le v_j(A(j))$", which simplifies to
+$v_j(\emptyset) \le v_j(A(j))$ — exactly the supplied hypothesis. The
+lemma takes the relevant nonnegativity hypothesis as a parameter rather
+than baking it into a typeclass.</p>
 <h2>Significance</h2>
-<p>This is the <em>base case</em> for several EFX existence proofs:</p>
-<ul>
-<li>
-<p>For 2 agents and 2 goods, an EFX allocation exists by giving each
-  agent one item (each bundle is a singleton, so the lemma applies
-  directly). See [[social_choice.fair_division.indivisible.efx_two_agents_two_goods]].</p>
-</li>
-<li>
-<p>For a finer item enumeration (giving items one-by-one to the agent
-  with strictly fewer items so far), the resulting allocation has
-  bundles of size at most one when $|G| \le n$ — every agent gets a
-  singleton or empty bundle, again triggering this lemma.</p>
-</li>
-</ul>
+<p>This is a small <em>pair-helper</em> used inside the 2-agent EFX existence
+construction
+([[social_choice.fair_division.indivisible.efx_exists_two_agents]]) to
+discharge one side of the EFX inequality when one agent's bundle has
+collapsed to a singleton. It is <strong>not</strong> a stand-alone "singleton
+bundles automatically give EFX" theorem.</p>
+<p>A generic "every bundle has cardinality $\le 1 \Rightarrow$ EFX"
+statement is not formalised in the library; if needed, it would be a
+short corollary using one application of this lemma per envy direction.</p>
 <h2>References</h2>
 <ul>
 <li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. EFX special cases.</li>
@@ -911,6 +909,8 @@ API uncommitted to monotonicity.</p>
   <section class="deps deps-used-by">
     <h2>Used by</h2>
     <ul>
+      
+      <li><a href="social_choice_fair_division_indivisible_efx_exists_two_agents.html">EFX Existence — Two Agents, Any Finite Good Set</a></li>
       
       <li><a href="social_choice_fair_division_indivisible_efx_two_agents_two_goods.html">EFX Existence — 2 Agents, 2 Goods</a></li>
       

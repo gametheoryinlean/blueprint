@@ -353,6 +353,8 @@
       
         <li><a href="../keywords/convergence.html">convergence</a></li>
       
+        <li><a href="../keywords/convex-combination.html">convex-combination</a></li>
+      
         <li><a href="../keywords/convex-game.html">convex-game</a></li>
       
         <li><a href="../keywords/convexity.html">convexity</a></li>
@@ -842,11 +844,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L932"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation_isAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L932"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation_isAllocation</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 65f9506, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -854,11 +856,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L939"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation_isEF1</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L939"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation_isEF1</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 65f9506, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -866,11 +868,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L950"><code>SocialChoice.FairDivision.Indivisible.envyCycleRule_isEF1</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L950"><code>SocialChoice.FairDivision.Indivisible.envyCycleRule_isEF1</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 65f9506, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -886,8 +888,10 @@
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Envy-Cycle Elimination Produces EF1</h1>
-<p><strong>Theorem.</strong> For any valuation $v$ on indivisible goods and any finite
-<code>allGoods : Finset G</code>, the envy-cycle elimination algorithm
+<p><strong>Theorem.</strong> For an additive instance
+([[social_choice.fair_division.indivisible.additive_instance]]) with
+nonnegative weights on a finite nonempty agent type and a finite good
+set, the envy-cycle elimination algorithm
 ([[social_choice.fair_division.indivisible.envy_cycle_algorithm]])
 returns a complete EF1 allocation
 ([[social_choice.fair_division.indivisible.ef1]]).</p>
@@ -925,16 +929,25 @@ maintained throughout the loop:</p>
 <h2>Strength compared to round-robin</h2>
 <p>Both round-robin
 ([[social_choice.fair_division.indivisible.round_robin_ef1]]) and
-envy-cycle elimination produce EF1 allocations. The differences:</p>
+envy-cycle elimination produce EF1 allocations from an
+<code>AdditiveInstance</code> with nonneg weights. The differences:</p>
 <ul>
-<li><em>Round-robin</em> requires additive valuations; <em>envy-cycle elimination</em>
-  works for arbitrary valuations.</li>
-<li><em>Envy-cycle elimination</em> additionally produces a Pareto-improvement
-  along the way (the nondecreasing-utility lemma is built in), giving
-  EF1 + (weak) PO. The full <em>EF1 + PO</em> result requires further
-  refinement of the tie-breaking, formalised at the Lean level via the
-  Pareto-domination count.</li>
+<li><em>Round-robin</em> is non-adaptive: turn order is fixed in advance,
+  every agent picks their favourite remaining item on their turn.</li>
+<li><em>Envy-cycle elimination</em> is adaptive: it gives the next item to a
+  "source" agent in the current envy graph, after rotating bundles
+  along any envy cycles. The adaptive choice carries the additional
+  guarantee that no agent's utility ever decreases
+  ([[social_choice.fair_division.indivisible.rotate_bundles]]'s
+  <code>rotateBundles_nondecreasing</code> lifted through
+  [[social_choice.fair_division.indivisible.eliminate_all_cycles]]'s
+  <code>eliminateAllCycles_nondecreasing</code>).</li>
 </ul>
+<p>The original Lipton-Markakis-Mossel-Saberi (2004) theorem applies to
+arbitrary (not necessarily additive) valuations; the current Lean
+formalisation specialises to additive instances, mirroring round-robin
+and matching the bundled <code>AdditiveInstance</code> API. Lifting to general
+<code>Valuation</code> is a planned future refinement.</p>
 <h2>References</h2>
 <ul>
 <li>Lipton, Markakis, Mossel, and Saberi (2004). "On Approximately Fair Allocations of Indivisible Goods". <em>EC</em>. Original EF1 + Pareto-improvement theorem.</li>

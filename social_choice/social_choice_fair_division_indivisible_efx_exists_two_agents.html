@@ -353,6 +353,8 @@
       
         <li><a href="../keywords/convergence.html">convergence</a></li>
       
+        <li><a href="../keywords/convex-combination.html">convex-combination</a></li>
+      
         <li><a href="../keywords/convex-game.html">convex-game</a></li>
       
         <li><a href="../keywords/convexity.html">convexity</a></li>
@@ -825,11 +827,11 @@
         
         <li><a href="social_choice_fair_division_indivisible_efx.html">EFX — Envy-Free Up to Any Good</a></li>
         
-        <li><a href="social_choice_fair_division_indivisible_efx_of_no_envy_mono.html">EFX from No-Envy + Monotonicity</a></li>
+        <li><a href="social_choice_fair_division_indivisible_efx_singleton_bundle.html">EFX from a Singleton-Bundle Sufficient Condition</a></li>
+        
+        <li><a href="social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a></li>
         
         <li><a href="social_choice_fair_division_indivisible_allocation.html">Indivisible Allocation</a></li>
-        
-        <li><a href="social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a></li>
         
       </ul>
     </div>
@@ -844,11 +846,11 @@
         
         <li>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L228"><code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L228"><code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code></a>
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 357305a, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ 65f9506, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
@@ -865,41 +867,41 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>EFX Existence — Two Agents, Any Finite Good Set</h1>
 <p><strong>Theorem.</strong> For any two agents and any finite good set $G$, with an
-arbitrary monotone valuation $v$, there exists an EFX allocation
+<em>additive</em> valuation $w : \mathrm{Fin}\ 2 \to G \to \mathbb{R}$
+([[social_choice.fair_division.indivisible.additive_valuation]]) whose
+weights are nonnegative for each agent, there exists an EFX allocation
 ([[social_choice.fair_division.indivisible.efx]]).</p>
 <p>In Lean: <code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code>.
-Hypotheses: <code>[Fintype G]</code>, <code>[DecidableEq G]</code>, valuation monotonicity.</p>
+Hypotheses: <code>[Fintype G]</code>, <code>[DecidableEq G]</code>, <code>AdditiveValuation (Fin 2) G</code>,
+and per-agent nonnegativity (<code>∀ g, 0 ≤ w.weight i g</code> for $i \in \{0, 1\}$).</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
         <p>outline</p>
-<p>The standard "cut-and-choose"-style construction:</p>
+<p>A cut-and-choose-style construction:</p>
 <ol>
 <li>
-<p><strong>Maximin enumeration.</strong> Enumerate all partitions of <code>allGoods</code>
-   into two bundles. Pick the partition $(S, T)$ that maximizes the
-   minimum of agent 0's values for the two halves, breaking ties
-   leximin-style.</p>
+<p><strong>Enumerate allocations.</strong> Range over $2^{|G|}$ candidate splits of
+   <code>allGoods</code> into two bundles via the helper <code>mkAlloc</code>. The feasible
+   set is nonempty (<code>feasible_nonempty</code>).</p>
 </li>
 <li>
-<p><strong>Cut.</strong> This gives a partition where agent 0 is indifferent
-   between $S$ and $T$ up to "removing-any-one-item" perturbations.</p>
+<p><strong>Pick an optimal split.</strong> Choose a split that maximises agent $0$'s
+   value of their own bundle, subject to agent $1$ choosing the larger-
+   for-them side (<code>optimal_exists</code>). Additivity + nonneg weights make
+   this maximin choice well-defined on a finite set.</p>
 </li>
 <li>
-<p><strong>Choose.</strong> Agent 1 picks their preferred half; agent 0 receives the
-   other.</p>
+<p><strong>EFX verification.</strong> Closed by the two pair-specific lemmas:</p>
 </li>
-<li>
-<p><strong>EFX verification.</strong> The construction gives:</p>
-</li>
-<li><em>Agent 0 is EFX</em> by the maximin-leximin choice combined with
-     monotonicity — any single-item perturbation cannot improve agent
-     0's worst-piece value, so removing any item from agent 1's bundle
-     keeps it bounded by agent 0's own bundle value.</li>
-<li><em>Agent 1 is EFX</em> trivially: they chose the strictly preferred
-     side; removing any item from agent 0's bundle only decreases its
-     value (by monotonicity), so agent 1 still prefers their own.</li>
+<li><em>Agent 0 is EFX</em> (<code>agent0_efx</code>): removing any item from agent 1's
+     bundle, the maximin choice ensures agent 0's value of the
+     residual cannot exceed agent 0's own bundle value.</li>
+<li><em>Agent 1 is EFX</em> (<code>agent1_efx</code>): they took the better half by
+     construction; removing any item from agent 0's bundle only
+     decreases its value (by additivity + nonneg weights), so agent 1
+     still prefers their own.</li>
 </ol>
 <p>The Lean proof factors out <code>mkAlloc_isAllocation</code>, <code>feasible_nonempty</code>,
 <code>optimal_exists</code> for the partition-enumeration argument, then

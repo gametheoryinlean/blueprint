@@ -8,7 +8,7 @@
   "topics": [
     "utility"
   ],
-  "body_html": "<h1>Lottery</h1>\n<p>For a finite set of outcomes $O$, a lottery is a probability distribution on\n$O$. The degenerate lottery at $o\\in O$ assigns probability one to $o$.</p>\n<p>Given lotteries $L_1,L_2$ and a scalar $\\alpha\\in[0,1]$, the compound lottery\n$$\n  [\\alpha L_1,(1-\\alpha)L_2]\n$$\nis the lottery assigning each outcome the probability\n$$\n  \\alpha L_1(o)+(1-\\alpha)L_2(o).\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Definitions 2.9-2.11] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Lotteries, degenerate lotteries, and compound lotteries.</li>\n</ul>",
+  "body_html": "<h1>Lottery</h1>\n<p>For a finite set of outcomes $O$, a lottery is a probability distribution on\n$O$. The degenerate lottery at $o\\in O$ assigns probability one to $o$.</p>\n<p>Given lotteries $L_1,L_2$ and a scalar $\\alpha\\in[0,1]$, the compound lottery\n$$\n  [\\alpha L_1,(1-\\alpha)L_2]\n$$\nis the lottery assigning each outcome the probability\n$$\n  \\alpha L_1(o)+(1-\\alpha)L_2(o).\n$$</p>\n<h2>Implementation note</h2>\n<p><code>Lottery 𝕜 O</code> is a domain-flavored <code>abbrev</code> for <code>stdSimplex 𝕜 O</code>. The\nconstructors <code>Lottery.pure</code> and <code>Lottery.mix</code> are definitional aliases for\n<code>stdSimplex.pure</code> and <code>stdSimplex.mix</code> from <code>Core.Simplex</code>; the canonical\nalgebra (<code>Lottery.expectedValue_pure</code>, <code>Lottery.expectedValue_mix</code>,\n<code>Lottery.expectedValue_mono</code>, <code>Lottery.expectedValue_const</code>) is one-line\nwrappers over <code>wsum_pure_apply</code>, <code>wsum_mix</code>, <code>wsum_le_wsum</code>, <code>wsum_const</code>.\nSee [[core.simplex.mix]] for the underlying convex-combination vocabulary.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Definitions 2.9-2.11] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Lotteries, degenerate lotteries, and compound lotteries.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -36,9 +36,9 @@
       "qualified_name": "Lottery",
       "module": "EconCSLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "357305aa370a1046cf451469ab718f481d947d62",
-      "short_revision": "357305a",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/Utility/Lottery.lean#L43",
+      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
+      "short_revision": "65f9506",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/Utility/Lottery.lean#L43",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -49,9 +49,9 @@
       "qualified_name": "Lottery.pure",
       "module": "EconCSLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "357305aa370a1046cf451469ab718f481d947d62",
-      "short_revision": "357305a",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/Utility/Lottery.lean#L49",
+      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
+      "short_revision": "65f9506",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/Utility/Lottery.lean#L58",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -62,9 +62,9 @@
       "qualified_name": "Lottery.mix",
       "module": "EconCSLib.Utility.Lottery",
       "repository_title": "EconCSLib",
-      "revision": "357305aa370a1046cf451469ab718f481d947d62",
-      "short_revision": "357305a",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/357305aa370a1046cf451469ab718f481d947d62/EconCSLib/Utility/Lottery.lean#L58",
+      "revision": "65f95060944d10610acb45162a61190a5550c4d6",
+      "short_revision": "65f9506",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/65f95060944d10610acb45162a61190a5550c4d6/EconCSLib/Utility/Lottery.lean#L66",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

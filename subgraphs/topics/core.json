@@ -4,20 +4,20 @@
     "title": "Core",
     "href": "core/index.html",
     "parent": null,
-    "node_count": 12,
-    "descendant_node_count": 12
+    "node_count": 13,
+    "descendant_node_count": 13
   },
   "counts": {
-    "internal_nodes": 12,
-    "descendant_nodes": 12,
+    "internal_nodes": 13,
+    "descendant_nodes": 13,
     "child_topics": 4,
-    "non_proof_plan_nodes": 12,
+    "non_proof_plan_nodes": 13,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 15,
-    "visible_nodes_with_selected_proof_plans": 15
+    "visible_nodes_without_proof_plans": 16,
+    "visible_nodes_with_selected_proof_plans": 16
   },
   "nodes": [
     {
@@ -93,6 +93,14 @@
       "payload": "node_payloads/core_simplex_continuity.json"
     },
     {
+      "id": "core.simplex.mix",
+      "title": "Convex Combination of Simplex Points",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "core/core_simplex_mix.html",
+      "payload": "node_payloads/core_simplex_mix.json"
+    },
+    {
       "id": "core.simplex.pure",
       "title": "Point Mass on the Standard Simplex",
       "kind": "definition",
@@ -146,6 +154,11 @@
     {
       "from": "core.simplex.wsum",
       "to": "core.simplex.continuity",
+      "kind": "uses"
+    },
+    {
+      "from": "core.simplex.wsum",
+      "to": "core.simplex.mix",
       "kind": "uses"
     },
     {
@@ -240,10 +253,16 @@
       "count": 1
     },
     {
+      "id": "convex-combination",
+      "title": "convex-combination",
+      "href": "keywords/convex-combination.html",
+      "count": 1
+    },
+    {
       "id": "core",
       "title": "core",
       "href": "keywords/core.html",
-      "count": 12
+      "count": 13
     },
     {
       "id": "deviation",
@@ -282,6 +301,12 @@
       "count": 1
     },
     {
+      "id": "mixed-strategy",
+      "title": "mixed-strategy",
+      "href": "keywords/mixed-strategy.html",
+      "count": 1
+    },
+    {
       "id": "preference",
       "title": "preference",
       "href": "keywords/preference.html",
@@ -297,7 +322,7 @@
       "id": "simplex",
       "title": "simplex",
       "href": "keywords/simplex.html",
-      "count": 5
+      "count": 6
     },
     {
       "id": "strict-preference",
@@ -397,14 +422,14 @@
       "title": "Core.Simplex",
       "depth": 2,
       "parent": "core",
-      "node_count": 5,
-      "direct_node_count": 5,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "definition": 2,
+        "definition": 3,
         "lemma": 3
       },
       "status_counts": {
-        "formalized": 5
+        "formalized": 6
       },
       "href": "core/simplex/index.html",
       "children": []
