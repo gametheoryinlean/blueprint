@@ -806,15 +806,17 @@
     <span class="example_thmcaption thm-caption">Example</span>
     <span class="example_thmtitle thm-title">Two-By-Two Value Formula</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-example">example</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-zero_sum-2e-examples-2e-two_by_two_value_formula">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -833,9 +835,91 @@
   
 
   
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/6fefdc5bfe04527a75f8ecd51e6e8c60c2b0f3bb/EconCSLib/StrategicGame/Examples/TwoByTwo.lean#L39"><code>EconCSLib.StrategicGame.Examples.twoByTwo</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 6fefdc5, EconCSLib.StrategicGame.Examples.TwoByTwo
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/6fefdc5bfe04527a75f8ecd51e6e8c60c2b0f3bb/EconCSLib/StrategicGame/Examples/TwoByTwo.lean#L52"><code>EconCSLib.StrategicGame.Examples.twoByTwoRowMixed</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 6fefdc5, EconCSLib.StrategicGame.Examples.TwoByTwo
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/6fefdc5bfe04527a75f8ecd51e6e8c60c2b0f3bb/EconCSLib/StrategicGame/Examples/TwoByTwo.lean#L69"><code>EconCSLib.StrategicGame.Examples.twoByTwoColumnMixed</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 6fefdc5, EconCSLib.StrategicGame.Examples.TwoByTwo
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/6fefdc5bfe04527a75f8ecd51e6e8c60c2b0f3bb/EconCSLib/StrategicGame/Examples/TwoByTwo.lean#L86"><code>EconCSLib.StrategicGame.Examples.twoByTwoMixedValue</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 6fefdc5, EconCSLib.StrategicGame.Examples.TwoByTwo
+          </span>
+          
+          
+        </li>
+        
+        <li>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/6fefdc5bfe04527a75f8ecd51e6e8c60c2b0f3bb/EconCSLib/StrategicGame/Examples/TwoByTwo.lean#L152"><code>EconCSLib.StrategicGame.Examples.twoByTwo_value</code></a>
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ 6fefdc5, EconCSLib.StrategicGame.Examples.TwoByTwo
+          </span>
+          
+          
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules: <code>EconCSLib.StrategicGame.Examples.TwoByTwo</code></p>
+      
+    </div>
+  </div>
+  
 
   <div class="example_thmcontent thm-content body">
-    <h1>Two-By-Two Value Formula</h1>
+    <h2>Lean formalisation note</h2>
+<p>The Lean file formalises the <strong>mixed case</strong> of the value formula: under
+hypotheses
+<code>0 &lt; a + d - b - c</code>, <code>b ≤ a</code>, <code>c ≤ a</code>, <code>b ≤ d</code>, <code>c ≤ d</code>
+(which guarantee that the mixed strategies are valid probability vectors),
+the game value is <code>(a*d - b*c) / (a + d - b - c)</code>. The pure-optimal case
+disjunction described in the blueprint body falls out of dominance
+arguments on the matrix entries and is not separately formalised — when
+the mixed-case hypotheses fail, one of the rows/columns is dominated and
+the pure pair shows up via <code>MatrixGame.optimal_pairs_iff_saddle_point</code>.</p>
+<h1>Two-By-Two Value Formula</h1>
 <p>For a two-by-two matrix
 $$
   \begin{pmatrix}
