@@ -13,21 +13,6 @@
   "proof_html": "<p>The finite minimax theorem gives a mixed value for the square matrix\ngame. Since $B=-B^T$, every mixed strategy $z$ satisfies\n$$\n  zBz=0.\n$$\nFor any row mixed strategy $x$, the average of the column payoffs $xBe_j$ under\n$x$ is $xBx=0$, so some column gives payoff at most $0$ to player $1$ and the\nrow player cannot guarantee more than $0$. Dually, for any column mixed strategy\n$y$, the average of the row payoffs $e_iBy$ under $y$ is $yBy=0$, so some row\ngives payoff at least $0$ and the column player cannot hold the payoff below $0$.\nEquality of maxmin and minmax therefore forces the value to be $0$.</p>\n<p>If $x$ is an optimal column strategy for player $2$, then it holds every row\npayoff to at most $0$, i.e. $(Bx)_i\\le0$ for all $i$. This is the displayed\nequivalent form.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.8, Exercise 10(1)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Brown-von Neumann theorem for antisymmetric games.</li>\n</ul>",
   "deps": [
     {
-      "id": "zero_sum.matrix_game",
-      "title": "Matrix Game",
-      "href": "zero_sum/zero_sum_matrix_game.html"
-    },
-    {
-      "id": "zero_sum.core.value",
-      "title": "Value Of A Zero-Sum Game",
-      "href": "zero_sum/zero_sum_core_value.html"
-    },
-    {
-      "id": "zero_sum.von_neumann_minimax",
-      "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
-    },
-    {
       "id": "zero_sum.matrix_game_nash_equilibrium",
       "title": "Mixed Nash Equilibrium of a Matrix Game",
       "href": "zero_sum/zero_sum_matrix_game_nash_equilibrium.html"
@@ -47,27 +32,14 @@
   ],
   "lean_refs": [
     {
-      "name": "EconCSLib.StrategicGame.IsAntisymmetric",
-      "display_name": "EconCSLib.StrategicGame.IsAntisymmetric",
-      "qualified_name": "EconCSLib.StrategicGame.IsAntisymmetric",
-      "module": "EconCSLib.StrategicGame.Antisymmetric",
-      "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Antisymmetric.lean#L24",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
       "name": "EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero",
       "display_name": "EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero",
       "qualified_name": "EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero",
       "module": "EconCSLib.StrategicGame.Antisymmetric",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Antisymmetric.lean#L66",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/Antisymmetric.lean#L66",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -78,9 +50,9 @@
       "qualified_name": "EconCSLib.StrategicGame.MatrixGame.antisymmetric_exists_optimal_strategy",
       "module": "EconCSLib.StrategicGame.Antisymmetric",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Antisymmetric.lean#L136",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/Antisymmetric.lean#L136",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

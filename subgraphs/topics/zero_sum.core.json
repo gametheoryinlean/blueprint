@@ -248,11 +248,6 @@
     },
     {
       "from": "zero_sum.matrix_game",
-      "to": "zero_sum.core.mixed_extension",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game",
       "to": "zero_sum.core.mixed_strategy_simplex",
       "kind": "uses"
     },
@@ -282,11 +277,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.maximin_minimax",
-      "to": "zero_sum.core.optimal_strategy_sets",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.core.optimal_strategy_sets",
       "to": "zero_sum.core.optimal_strategy_sets_are_polytopes",
       "kind": "uses"
@@ -297,23 +287,8 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.zero_sum_game",
-      "to": "zero_sum.core.player_guarantee",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.core.mixed_extension",
       "to": "zero_sum.core.saddle_point",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.core.saddle_point",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.optimal_strategy_sets",
-      "to": "zero_sum.core.strong_complementarity",
       "kind": "uses"
     },
     {
@@ -328,11 +303,6 @@
     },
     {
       "from": "zero_sum.core.optimal_pairs_are_saddle_points",
-      "to": "zero_sum.core.support_complementarity",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.optimal_strategy_sets",
       "to": "zero_sum.core.support_complementarity",
       "kind": "uses"
     },
@@ -359,11 +329,6 @@
     {
       "from": "zero_sum.mixed_matrix_payoff",
       "to": "zero_sum.maximin_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.minimax.value_predicates",
       "kind": "uses"
     },
     {
@@ -497,28 +462,7 @@
     },
     {
       "from": "topic:zero_sum",
-      "to": "zero_sum.core.optimal_pairs_are_saddle_points",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.optimal_strategy_sets_are_polytopes",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
       "to": "zero_sum.core.strong_complementarity",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.core.support_complementarity",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 1
@@ -570,7 +514,7 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 2
+      "count": 1
     },
     {
       "from": "zero_sum.core.optimal_strategy_sets",
@@ -581,13 +525,6 @@
     },
     {
       "from": "zero_sum.core.value",
-      "to": "topic:zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum",
-      "count": 12
-    },
-    {
-      "from": "zero_sum.matrix_game",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
@@ -612,14 +549,14 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 2
+      "count": 1
     },
     {
       "from": "zero_sum.zero_sum_game",
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 2
+      "count": 1
     },
     {
       "from": "zero_sum.core.value",

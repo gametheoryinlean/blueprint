@@ -13,11 +13,6 @@
   "proof_html": "<p>Let $v=\\operatorname{val}(A)$. Since $y$ is optimal for player II,\neach pure row payoff satisfies $e_iAy\\le v$. Since $x$ is optimal for player\nI, the average of these row payoffs under $x$ is\n$$\n  xAy=\\sum_i x_i(e_iAy)=v.\n$$\nAn average of numbers all bounded above by $v$ can equal $v$ only if every\nterm with positive weight is equal to $v$. Hence $e_iAy=v$ for\n$i\\in\\operatorname{supp}(x)$. The column statement is dual: optimality of\n$x$ gives $xAe_j\\ge v$ for every $j$, while optimality of $y$ gives\n$$\n  xAy=\\sum_j y_j(xAe_j)=v.\n$$\nThus every positively weighted column in $y$ satisfies $xAe_j=v$.</p>\n<p>The Lean formalisation provides separate theorems for the two directions:\n<code>MatrixGame.support_complementarity_row</code> (rows in $\\operatorname{supp}(x)$\nhit the value) and <code>MatrixGame.support_complementarity_column</code> (columns in\n$\\operatorname{supp}(y)$ hit the value).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(b)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Complementarity on supports of optimal strategies.</li>\n</ul>",
   "deps": [
     {
-      "id": "zero_sum.core.optimal_strategy_sets",
-      "title": "Optimal Strategy Sets",
-      "href": "zero_sum/zero_sum_core_optimal_strategy_sets.html"
-    },
-    {
       "id": "zero_sum.core.mixed_support",
       "title": "Support Of A Mixed Strategy",
       "href": "zero_sum/zero_sum_core_mixed_support.html"
@@ -26,11 +21,6 @@
       "id": "zero_sum.core.optimal_pairs_are_saddle_points",
       "title": "Optimal Pairs Are Exactly Saddle Points",
       "href": "zero_sum/zero_sum_core_optimal_pairs_are_saddle_points.html"
-    },
-    {
-      "id": "zero_sum.von_neumann_minimax",
-      "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
     }
   ],
   "dependents": [
@@ -52,9 +42,9 @@
       "qualified_name": "MatrixGame.support_complementarity_row",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/MatrixGameNash.lean#L232",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/MatrixGameNash.lean#L232",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -65,9 +55,9 @@
       "qualified_name": "MatrixGame.support_complementarity_column",
       "module": "EconCSLib.StrategicGame.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/MatrixGameNash.lean#L269",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/MatrixGameNash.lean#L269",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

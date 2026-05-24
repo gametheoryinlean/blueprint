@@ -13,19 +13,9 @@
   "proof_html": "<p><strong>Telescoping identity.</strong> For every $n \\ge 1$,\n$$\n  R_n \\;=\\; U_n^{i_n} \\;+\\; \\sum_{p=1}^{n-1} (U_p^{i_p} - U_p^{i_{p+1}}).\n$$\n<em>Verification.</em> Note $U_n^{i_n} = \\sum_{k=1}^n A_{i_n, j_k}$. Then\n$$\n  R_n - U_n^{i_n}\n   = \\sum_{k=1}^n (A_{i_k, j_k} - A_{i_n, j_k})\n   = \\sum_{p=1}^{n-1} (U_p^{i_p} - U_p^{i_{p+1}})\n$$\nby reindexing — each term on the right corresponds to the \"switch\" from row\n$i_p$ to $i_{p+1}$ at step $p+1$, which redefines what the counterfactual\ncumulative would have been.</p>\n<p><strong>Sign of the telescoping increments.</strong> By the fictitious-play best-response\ncondition, $i_{p+1} \\in \\operatorname{argmax}_i (Ay_p)^i = \\operatorname{argmax}_i \\frac{1}{p} U_p^i$,\nhence $U_p^{i_{p+1}} \\ge U_p^{i_p}$. Therefore\n$$\n  U_p^{i_p} - U_p^{i_{p+1}} \\;\\le\\; 0, \\quad p = 1, \\ldots, n-1.\n$$</p>\n<p><strong>Upper bound on $R_n / n$.</strong> The telescoping identity together with the sign\ngives\n$$\n  R_n \\;\\le\\; U_n^{i_n}.\n$$\nSince $i_n \\in \\operatorname{argmax}_i U_n^i / n$ (with $U_n^i / n = (A y_n)^i$ where $y_n$\nis player II's empirical frequency), we have\n$U_n^{i_n} / n = \\max_i (A y_n)^i$. The minimax bracket together with\n$\\mu(n)/n \\to 0$ from\n[[zero_sum.fictitious_play.robinson_admissible_lemma]] yields\n$\\max_i (A y_n)^i \\to v$. Hence\n$$\n  \\limsup_{n \\to \\infty} \\frac{R_n}{n} \\;\\le\\; v.\n$$</p>\n<p><strong>Lower bound on $R_n / n$.</strong> Apply the dual telescoping identity (player II's\nperspective):\n$$\n  R_n = V_n^{j_n} + \\sum_{p=1}^{n-1} (V_p^{j_p} - V_p^{j_{p+1}}),\n$$\nwhere $V_m^j := \\sum_{k=1}^m A_{i_k, j}$. The best-response condition for II\nmakes the telescoping increments $\\ge 0$, giving $R_n \\ge V_n^{j_n}$. By the\nanalogous limit, $V_n^{j_n} / n = \\min_j (x_n A)^j \\to v$, hence\n$\\liminf R_n / n \\ge v$.</p>\n<p>Combining, $R_n / n \\to v$. $\\square$</p>\n<h2>Note</h2>\n<p>This proof is <strong>independent</strong> of the internal combinatorial structure of\nRobinson's induction\n([[zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant]],\n[[zero_sum.fictitious_play.robinson_admissible_lemma.useful_window]],\n[[zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction]],\n[[zero_sum.fictitious_play.robinson_admissible_lemma.induction_step]]). It uses\nthe parent lemma only via its conclusion $\\mu(n)/n \\to 0$.</p>\n<p>Practically, this makes it the <strong>shortest formalisable item</strong> in the Robinson\nchain — a natural first Lean target.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.7] Laraki, Renault, and Sorin,\n  <em>Mathematical Foundations of Game Theory</em>,\n  <code>references/MathFoundationsGameTheory.pdf</code>. Cesàro average-payoff\n  convergence along fictitious play; see the <code>source</code> block above for\n  the precise locator.</li>\n</ul>",
   "deps": [
     {
-      "id": "zero_sum.fictitious_play.fictitious_play",
-      "title": "Fictitious Play",
-      "href": "zero_sum/zero_sum_fictitious_play_fictitious_play.html"
-    },
-    {
       "id": "zero_sum.fictitious_play.robinson_admissible_lemma",
       "title": "Robinson Admissible Sequence Lemma",
       "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma.html"
-    },
-    {
-      "id": "zero_sum.matrix_game",
-      "title": "Matrix Game",
-      "href": "zero_sum/zero_sum_matrix_game.html"
     },
     {
       "id": "zero_sum.core.value",
@@ -47,23 +37,10 @@
       "qualified_name": "MatrixGame.cesaro_payoff_converges_to_value",
       "module": "EconCSLib.StrategicGame.FictitiousPlay.Cesaro",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/FictitiousPlay/Cesaro.lean#L41",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/FictitiousPlay/Cesaro.lean#L41",
       "has_sorry": true,
-      "status": "resolved",
-      "reason": null
-    },
-    {
-      "name": "MatrixGame.realisedCumPayoff",
-      "display_name": "MatrixGame.realisedCumPayoff",
-      "qualified_name": "MatrixGame.realisedCumPayoff",
-      "module": "EconCSLib.StrategicGame.FictitiousPlay.Cesaro",
-      "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/FictitiousPlay/Cesaro.lean#L29",
-      "has_sorry": false,
       "status": "resolved",
       "reason": null
     }

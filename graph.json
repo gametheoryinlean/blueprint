@@ -440,8 +440,7 @@
         "zero_sum.lam_mu_existence",
         "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.minimax.loomis_induction_proof.value_existence",
-        "zero_sum.minimax.lp_duality_minimax_proof",
-        "zero_sum.minimax.minimax_from_loomis"
+        "zero_sum.minimax.lp_duality_minimax_proof"
       ]
     },
     {
@@ -470,8 +469,7 @@
       ],
       "used_by": [
         "zero_sum.lam_mu_existence",
-        "zero_sum.minimax.loomis_induction_proof.value_existence",
-        "zero_sum.minimax.minimax_from_loomis"
+        "zero_sum.minimax.loomis_induction_proof.value_existence"
       ]
     },
     {
@@ -500,8 +498,7 @@
         "core.simplex.wsum"
       ],
       "used_by": [
-        "core.simplex.bounded_by_value",
-        "zero_sum.minimax.minimax_from_loomis"
+        "core.simplex.bounded_by_value"
       ]
     },
     {
@@ -1553,8 +1550,6 @@
         "value"
       ],
       "lean_declarations": [
-        "GameTree.IsZeroSum",
-        "GameTree.value₀",
         "GameTree.value₀_minimax_prop"
       ],
       "topic": "extensive_game",
@@ -8963,9 +8958,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
-        "zero_sum.continuous.general_mixed_strategy_space",
-        "zero_sum.core.value"
+        "zero_sum.continuous.compact_mixed_vs_finite_support_minimax"
       ],
       "used_by": [
         "zero_sum.continuous.sion_wolfe_no_mixed_value"
@@ -8993,7 +8986,6 @@
       "used_by": [
         "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
         "zero_sum.continuous.finite_opponent_separation_minimax",
-        "zero_sum.continuous.general_mixed_minimax_theorem",
         "zero_sum.continuous.mixed_extension_pathology"
       ]
     },
@@ -9166,8 +9158,7 @@
       "uses": [
         "zero_sum.continuous.intersection_lemma",
         "zero_sum.continuous.quasi_concavity_semicontinuity",
-        "zero_sum.core.value",
-        "zero_sum.zero_sum_game"
+        "zero_sum.core.value"
       ],
       "used_by": [
         "zero_sum.continuous.pure_minimax_compact_convex_one_sided",
@@ -9292,8 +9283,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.mixed_strategy_simplex",
-        "zero_sum.matrix_game"
+        "zero_sum.core.mixed_strategy_simplex"
       ],
       "used_by": [
         "zero_sum.core.duality_gap",
@@ -9327,8 +9317,7 @@
       "used_by": [
         "zero_sum.core.mixed_extension",
         "zero_sum.core.mixed_support",
-        "zero_sum.fictitious_play.empirical_frequency",
-        "zero_sum.fictitious_play.fictitious_play"
+        "zero_sum.fictitious_play.empirical_frequency"
       ]
     },
     {
@@ -9382,8 +9371,7 @@
         "core.simplex.bounded_by_value",
         "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.saddle_point",
-        "zero_sum.maximin_le_minimax",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.maximin_le_minimax"
       ],
       "used_by": [
         "zero_sum.core.support_complementarity"
@@ -9409,14 +9397,11 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.value",
-        "zero_sum.maximin_minimax"
+        "zero_sum.core.value"
       ],
       "used_by": [
         "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.core.optimal_strategy_sets_are_polytopes",
-        "zero_sum.core.strong_complementarity",
-        "zero_sum.core.support_complementarity",
         "zero_sum.examples.computation_three_by_two_example",
         "zero_sum.fictitious_play.fictitious_play_convergence",
         "zero_sum.minimax.antisymmetric_matrix_game_value",
@@ -9440,8 +9425,6 @@
         "zero_sum.core"
       ],
       "lean_declarations": [
-        "MatrixGame.optimalRowSet",
-        "MatrixGame.optimalColumnSet",
         "MatrixGame.image_optimalRowStrategies_eq",
         "MatrixGame.image_optimalColumnStrategies_eq",
         "MatrixGame.optimalRowSet_convex",
@@ -9457,8 +9440,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.core.optimal_strategy_sets"
       ]
     },
     {
@@ -9482,8 +9464,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.matrix_game",
-        "zero_sum.zero_sum_game"
+        "zero_sum.matrix_game"
       ],
       "used_by": [
         "zero_sum.core.common_guarantee_value",
@@ -9511,8 +9492,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.mixed_extension",
-        "zero_sum.matrix_game"
+        "zero_sum.core.mixed_extension"
       ],
       "used_by": [
         "zero_sum.core.optimal_pairs_are_saddle_points",
@@ -9540,7 +9520,6 @@
       "topic": "zero_sum",
       "uses": [
         "linear_programming.strong_complementarity",
-        "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.support_complementarity",
         "zero_sum.matrix_game_nash_equilibrium"
       ]
@@ -9567,9 +9546,7 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.mixed_support",
-        "zero_sum.core.optimal_pairs_are_saddle_points",
-        "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.core.optimal_pairs_are_saddle_points"
       ],
       "used_by": [
         "strategic_games.dominance.weak_dominance_never_best_response",
@@ -9591,9 +9568,7 @@
         "zero_sum.core"
       ],
       "lean_declarations": [
-        "MatrixGame.value",
-        "MatrixGame.value_eq_maximin",
-        "MatrixGame.value_eq_minimax"
+        "MatrixGame.value"
       ],
       "topic": "zero_sum",
       "uses": [
@@ -9607,7 +9582,6 @@
         "strategic_games.repeated.big_match_uniform_value",
         "strategic_games.repeated.cav_u_theorem",
         "zero_sum.continuous.finite_opponent_separation_minimax",
-        "zero_sum.continuous.general_mixed_minimax_theorem",
         "zero_sum.continuous.monotone_decreasing_values_limit",
         "zero_sum.continuous.sion_minimax_theorem",
         "zero_sum.core.common_guarantee_value",
@@ -9618,8 +9592,6 @@
         "zero_sum.examples.noisy_duel_one_bullet_value",
         "zero_sum.examples.silent_duel_no_pure_value",
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
-        "zero_sum.fictitious_play.fictitious_play_convergence",
-        "zero_sum.minimax.antisymmetric_matrix_game_value",
         "zero_sum.operators.value_operator_general"
       ]
     },
@@ -9639,9 +9611,7 @@
         "zero_sum.core"
       ],
       "lean_declarations": [
-        "MatrixGame.isMixedNashEq_iff_isSaddlePoint",
-        "MatrixGame.IsSaddlePoint",
-        "MatrixGame.IsMixedNashEq"
+        "MatrixGame.isMixedNashEq_iff_isSaddlePoint"
       ],
       "topic": "zero_sum",
       "uses": [
@@ -9758,8 +9728,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.core.optimal_strategy_sets"
       ]
     },
     {
@@ -9778,16 +9747,11 @@
         "zero_sum.examples"
       ],
       "lean_declarations": [
-        "EconCSLib.StrategicGame.Examples.diagonalGame",
-        "EconCSLib.StrategicGame.Examples.diagonalGameValue",
-        "EconCSLib.StrategicGame.Examples.diagonalGameStrategy",
         "EconCSLib.StrategicGame.Examples.diagonalGame_value"
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.value",
-        "zero_sum.matrix_game",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.core.value"
       ]
     },
     {
@@ -9813,9 +9777,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.value",
-        "zero_sum.matrix_game",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.core.value"
       ]
     },
     {
@@ -9956,15 +9918,12 @@
         "zero_sum.fictitious_play"
       ],
       "lean_declarations": [
-        "MatrixGame.cesaro_payoff_converges_to_value",
-        "MatrixGame.realisedCumPayoff"
+        "MatrixGame.cesaro_payoff_converges_to_value"
       ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.value",
-        "zero_sum.fictitious_play.fictitious_play",
-        "zero_sum.fictitious_play.robinson_admissible_lemma",
-        "zero_sum.matrix_game"
+        "zero_sum.fictitious_play.robinson_admissible_lemma"
       ],
       "used_by": [
         "zero_sum.fictitious_play.fictitious_play_convergence"
@@ -10041,19 +10000,12 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.mixed_strategy_simplex",
-        "zero_sum.fictitious_play.empirical_frequency",
-        "zero_sum.matrix_game"
+        "zero_sum.fictitious_play.empirical_frequency"
       ],
       "used_by": [
-        "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
         "zero_sum.fictitious_play.continuous_fictitious_play_gap",
-        "zero_sum.fictitious_play.fictitious_play_convergence",
-        "zero_sum.fictitious_play.robinson_admissible_lemma",
         "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window"
+        "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction"
       ]
     },
     {
@@ -10079,10 +10031,7 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.core.value",
-        "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
-        "zero_sum.fictitious_play.fictitious_play",
-        "zero_sum.fictitious_play.robinson_admissible_lemma"
+        "zero_sum.fictitious_play.cesaro_payoff_from_robinson"
       ]
     },
     {
@@ -10101,23 +10050,14 @@
         "zero_sum.fictitious_play"
       ],
       "lean_declarations": [
-        "MatrixGame.robinson_admissible_lemma",
-        "MatrixGame.AdmissibleSequence",
-        "MatrixGame.AdmissibleSequence.mu",
-        "MatrixGame.normMax"
+        "MatrixGame.robinson_admissible_lemma"
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.fictitious_play.fictitious_play",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
-        "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
-        "zero_sum.matrix_game"
+        "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step"
       ],
       "used_by": [
-        "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
-        "zero_sum.fictitious_play.fictitious_play_convergence"
+        "zero_sum.fictitious_play.cesaro_payoff_from_robinson"
       ]
     },
     {
@@ -10144,7 +10084,6 @@
         "zero_sum.fictitious_play.fictitious_play"
       ],
       "used_by": [
-        "zero_sum.fictitious_play.robinson_admissible_lemma",
         "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window"
       ]
     },
@@ -10168,7 +10107,6 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.fictitious_play.fictitious_play",
         "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
         "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window"
       ],
@@ -10199,7 +10137,6 @@
         "zero_sum.fictitious_play.fictitious_play"
       ],
       "used_by": [
-        "zero_sum.fictitious_play.robinson_admissible_lemma",
         "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step"
       ]
     },
@@ -10219,17 +10156,13 @@
         "zero_sum.fictitious_play"
       ],
       "lean_declarations": [
-        "MatrixGame.AdmissibleSequence.useful_window_bound",
-        "MatrixGame.AdmissibleSequence.IsRowUsefulInWindow",
-        "MatrixGame.AdmissibleSequence.IsColUsefulInWindow"
+        "MatrixGame.AdmissibleSequence.useful_window_bound"
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.fictitious_play.fictitious_play",
         "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant"
       ],
       "used_by": [
-        "zero_sum.fictitious_play.robinson_admissible_lemma",
         "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step"
       ]
     },
@@ -10250,11 +10183,6 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "MinimaxLoomis.E",
-        "MinimaxLoomis.lam.aux",
-        "MinimaxLoomis.mu.aux",
-        "MinimaxLoomis.lam0",
-        "MinimaxLoomis.mu0",
         "MinimaxLoomis.lam.aux.continuous",
         "MinimaxLoomis.mu.aux.continuous",
         "MinimaxLoomis.lam.aux.bddAbove",
@@ -10269,13 +10197,10 @@
       "uses": [
         "core.simplex.bounded_by_value",
         "core.simplex.continuity",
-        "zero_sum.matrix_game",
-        "zero_sum.maximin_minimax",
-        "zero_sum.mixed_matrix_payoff"
+        "zero_sum.maximin_minimax"
       ],
       "used_by": [
-        "zero_sum.minimax.loomis_induction_proof.value_existence",
-        "zero_sum.minimax.minimax_from_loomis"
+        "zero_sum.minimax.loomis_induction_proof.value_existence"
       ]
     },
     {
@@ -10324,20 +10249,8 @@
         "zero_sum.zero_sum_game"
       ],
       "used_by": [
-        "zero_sum.core.mixed_extension",
         "zero_sum.core.mixed_strategy_simplex",
         "zero_sum.core.player_guarantee",
-        "zero_sum.core.saddle_point",
-        "zero_sum.examples.diagonal_matrix_game_value",
-        "zero_sum.examples.matching_pennies",
-        "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
-        "zero_sum.fictitious_play.fictitious_play",
-        "zero_sum.fictitious_play.robinson_admissible_lemma",
-        "zero_sum.lam_mu_existence",
-        "zero_sum.matrix_game_nash_equilibrium",
-        "zero_sum.minimax.antisymmetric_matrix_game_value",
-        "zero_sum.minimax.loomis_theorem",
-        "zero_sum.minimax.value_predicates",
         "zero_sum.mixed_matrix_payoff"
       ]
     },
@@ -10359,22 +10272,14 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "MatrixGame.IsMixedNashEq",
         "MatrixGame.exists_mixed_nash_equilibrium",
-        "MatrixGame.toStrategicGame",
-        "MatrixGame.toMixedProfile",
         "MatrixGame.expectedPayoff_toStrategicGame_zero",
         "MatrixGame.expectedPayoff_toStrategicGame_one",
-        "MatrixGame.exists_strategic_game_nash_equilibrium",
-        "StrategicGame.MixedStrategy",
-        "StrategicGame.MixedProfile",
-        "StrategicGame.expectedPayoff",
-        "StrategicGame.IsMixedNashEq"
+        "MatrixGame.exists_strategic_game_nash_equilibrium"
       ],
       "topic": "zero_sum",
       "uses": [
         "core.simplex.bounded_by_value",
-        "zero_sum.matrix_game",
         "zero_sum.mixed_matrix_payoff",
         "zero_sum.von_neumann_minimax"
       ],
@@ -10444,7 +10349,6 @@
       ],
       "used_by": [
         "zero_sum.core.duality_gap",
-        "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.value",
         "zero_sum.lam_mu_existence",
         "zero_sum.maximin_le_minimax",
@@ -10467,17 +10371,13 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "EconCSLib.StrategicGame.IsAntisymmetric",
         "EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero",
         "EconCSLib.StrategicGame.MatrixGame.antisymmetric_exists_optimal_strategy"
       ],
       "topic": "zero_sum",
       "uses": [
         "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.core.value",
-        "zero_sum.matrix_game",
-        "zero_sum.matrix_game_nash_equilibrium",
-        "zero_sum.von_neumann_minimax"
+        "zero_sum.matrix_game_nash_equilibrium"
       ],
       "used_by": [
         "zero_sum.minimax.minimax_from_antisymmetric_games"
@@ -10506,11 +10406,7 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.minimax.loomis_induction_proof.base_case",
-        "zero_sum.minimax.loomis_induction_proof.column_drop",
-        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
-        "zero_sum.minimax.loomis_induction_proof.row_drop",
-        "zero_sum.minimax.loomis_induction_proof.value_existence",
-        "zero_sum.minimax.loomis_induction_proof.weak_duality"
+        "zero_sum.minimax.loomis_induction_proof.row_drop"
       ]
     },
     {
@@ -10562,7 +10458,6 @@
         "zero_sum.minimax.loomis_induction_proof.weak_duality"
       ],
       "used_by": [
-        "zero_sum.minimax.loomis_induction_proof",
         "zero_sum.minimax.loomis_induction_proof.row_drop",
         "zero_sum.minimax.loomis_theorem"
       ]
@@ -10584,20 +10479,14 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.IsPositive",
         "LoomisGeneral.IsPositive.one",
         "LoomisGeneral.wsum_pos",
-        "LoomisGeneral.xA",
-        "LoomisGeneral.xB",
-        "LoomisGeneral.Ay",
-        "LoomisGeneral.By",
         "LoomisGeneral.xB_pos",
         "LoomisGeneral.By_pos",
         "LoomisGeneral.xBy_pos"
       ],
       "topic": "zero_sum",
       "used_by": [
-        "zero_sum.minimax.loomis_induction_proof",
         "zero_sum.minimax.loomis_induction_proof.column_drop",
         "zero_sum.minimax.loomis_induction_proof.row_drop",
         "zero_sum.minimax.loomis_induction_proof.value_existence",
@@ -10626,9 +10515,7 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.minimax.loomis_induction_proof.column_drop",
-        "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
-        "zero_sum.minimax.loomis_induction_proof.value_existence",
-        "zero_sum.minimax.loomis_induction_proof.weak_duality"
+        "zero_sum.minimax.loomis_induction_proof.positive_aggregate"
       ],
       "used_by": [
         "zero_sum.minimax.loomis_induction_proof",
@@ -10652,12 +10539,6 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.colRatio",
-        "LoomisGeneral.rowRatio",
-        "LoomisGeneral.lamB.aux",
-        "LoomisGeneral.muB.aux",
-        "LoomisGeneral.lamB0",
-        "LoomisGeneral.muB0",
         "LoomisGeneral.lamB.aux_gt_iff_gt",
         "LoomisGeneral.muB.aux_lt_iff_lt",
         "LoomisGeneral.colRatio.continuous",
@@ -10679,9 +10560,7 @@
         "zero_sum.minimax.loomis_induction_proof.positive_aggregate"
       ],
       "used_by": [
-        "zero_sum.minimax.loomis_induction_proof",
         "zero_sum.minimax.loomis_induction_proof.column_drop",
-        "zero_sum.minimax.loomis_induction_proof.row_drop",
         "zero_sum.minimax.loomis_induction_proof.weak_duality",
         "zero_sum.minimax.loomis_theorem"
       ]
@@ -10710,9 +10589,7 @@
         "zero_sum.minimax.loomis_induction_proof.value_existence"
       ],
       "used_by": [
-        "zero_sum.minimax.loomis_induction_proof",
         "zero_sum.minimax.loomis_induction_proof.column_drop",
-        "zero_sum.minimax.loomis_induction_proof.row_drop",
         "zero_sum.minimax.loomis_theorem"
       ]
     },
@@ -10732,15 +10609,11 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.IsPositive",
-        "LoomisGeneral.lamB0",
-        "LoomisGeneral.muB0",
         "LoomisGeneral.loomis_value_eq",
         "LoomisGeneral.loomis_theorem"
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.matrix_game",
         "zero_sum.minimax.loomis_induction_proof.base_case",
         "zero_sum.minimax.loomis_induction_proof.column_drop",
         "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
@@ -10870,10 +10743,6 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "core.simplex.bounded_by_value",
-        "core.simplex.continuity",
-        "core.simplex.pure",
-        "zero_sum.lam_mu_existence",
         "zero_sum.maximin_le_minimax",
         "zero_sum.minimax.loomis_theorem"
       ]
@@ -10917,8 +10786,6 @@
         "zero_sum.minimax"
       ],
       "lean_declarations": [
-        "EconCSLib.StrategicGame.IsStochasticMatrix",
-        "EconCSLib.StrategicGame.uniformDist",
         "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution"
       ],
       "topic": "zero_sum",
@@ -10952,7 +10819,6 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.matrix_game",
         "zero_sum.maximin_minimax"
       ]
     },
@@ -11026,7 +10892,6 @@
         "zero_sum.matrix_game"
       ],
       "used_by": [
-        "zero_sum.lam_mu_existence",
         "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.maximin_minimax"
       ]
@@ -11072,8 +10937,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.operators.derived_game",
-        "zero_sum.operators.value_operator_general"
+        "zero_sum.operators.derived_game"
       ]
     },
     {
@@ -11096,7 +10960,6 @@
       ],
       "used_by": [
         "zero_sum.operators.derived_game",
-        "zero_sum.operators.value_directional_derivative",
         "zero_sum.operators.value_operator_nonexpansive_general"
       ]
     },
@@ -11189,16 +11052,9 @@
       "used_by": [
         "strategic_games.dominance.strict_dominance_never_best_response",
         "zero_sum.core.common_guarantee_value",
-        "zero_sum.core.optimal_pairs_are_saddle_points",
-        "zero_sum.core.optimal_strategy_sets_are_polytopes",
-        "zero_sum.core.support_complementarity",
         "zero_sum.core.value",
-        "zero_sum.examples.computation_three_by_two_example",
-        "zero_sum.examples.diagonal_matrix_game_value",
-        "zero_sum.examples.matching_pennies",
         "zero_sum.examples.two_by_two_value_formula",
         "zero_sum.matrix_game_nash_equilibrium",
-        "zero_sum.minimax.antisymmetric_matrix_game_value",
         "zero_sum.minimax.ordered_field_minimax",
         "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.minimax.ville_discretization_proof",
@@ -11231,8 +11087,6 @@
       ],
       "used_by": [
         "zero_sum.continuous.general_mixed_strategy_space",
-        "zero_sum.continuous.sion_minimax_theorem",
-        "zero_sum.core.player_guarantee",
         "zero_sum.matrix_game",
         "zero_sum.zero_sum_payoff_negation"
       ]
@@ -13963,14 +13817,6 @@
       "to": "zero_sum.continuous.general_mixed_minimax_theorem"
     },
     {
-      "from": "zero_sum.continuous.general_mixed_strategy_space",
-      "to": "zero_sum.continuous.general_mixed_minimax_theorem"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.continuous.general_mixed_minimax_theorem"
-    },
-    {
       "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.continuous.general_mixed_strategy_space"
     },
@@ -14008,10 +13854,6 @@
     },
     {
       "from": "zero_sum.core.value",
-      "to": "zero_sum.continuous.sion_minimax_theorem"
-    },
-    {
-      "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.continuous.sion_minimax_theorem"
     },
     {
@@ -14056,10 +13898,6 @@
     },
     {
       "from": "zero_sum.matrix_game",
-      "to": "zero_sum.core.mixed_extension"
-    },
-    {
-      "from": "zero_sum.matrix_game",
       "to": "zero_sum.core.mixed_strategy_simplex"
     },
     {
@@ -14083,15 +13921,7 @@
       "to": "zero_sum.core.optimal_pairs_are_saddle_points"
     },
     {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.core.optimal_pairs_are_saddle_points"
-    },
-    {
       "from": "zero_sum.core.value",
-      "to": "zero_sum.core.optimal_strategy_sets"
-    },
-    {
-      "from": "zero_sum.maximin_minimax",
       "to": "zero_sum.core.optimal_strategy_sets"
     },
     {
@@ -14099,15 +13929,7 @@
       "to": "zero_sum.core.optimal_strategy_sets_are_polytopes"
     },
     {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.core.optimal_strategy_sets_are_polytopes"
-    },
-    {
       "from": "zero_sum.matrix_game",
-      "to": "zero_sum.core.player_guarantee"
-    },
-    {
-      "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.core.player_guarantee"
     },
     {
@@ -14115,15 +13937,7 @@
       "to": "zero_sum.core.saddle_point"
     },
     {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.core.saddle_point"
-    },
-    {
       "from": "linear_programming.strong_complementarity",
-      "to": "zero_sum.core.strong_complementarity"
-    },
-    {
-      "from": "zero_sum.core.optimal_strategy_sets",
       "to": "zero_sum.core.strong_complementarity"
     },
     {
@@ -14140,14 +13954,6 @@
     },
     {
       "from": "zero_sum.core.optimal_pairs_are_saddle_points",
-      "to": "zero_sum.core.support_complementarity"
-    },
-    {
-      "from": "zero_sum.core.optimal_strategy_sets",
-      "to": "zero_sum.core.support_complementarity"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.core.support_complementarity"
     },
     {
@@ -14175,31 +13981,11 @@
       "to": "zero_sum.examples.computation_three_by_two_example"
     },
     {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.examples.computation_three_by_two_example"
-    },
-    {
       "from": "zero_sum.core.value",
       "to": "zero_sum.examples.diagonal_matrix_game_value"
     },
     {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.examples.diagonal_matrix_game_value"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.examples.diagonal_matrix_game_value"
-    },
-    {
       "from": "zero_sum.core.value",
-      "to": "zero_sum.examples.matching_pennies"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.examples.matching_pennies"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.examples.matching_pennies"
     },
     {
@@ -14227,15 +14013,7 @@
       "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson"
     },
     {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson"
-    },
-    {
       "from": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson"
-    },
-    {
-      "from": "zero_sum.matrix_game",
       "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson"
     },
     {
@@ -14255,15 +14033,7 @@
       "to": "zero_sum.fictitious_play.empirical_frequency"
     },
     {
-      "from": "zero_sum.core.mixed_strategy_simplex",
-      "to": "zero_sum.fictitious_play.fictitious_play"
-    },
-    {
       "from": "zero_sum.fictitious_play.empirical_frequency",
-      "to": "zero_sum.fictitious_play.fictitious_play"
-    },
-    {
-      "from": "zero_sum.matrix_game",
       "to": "zero_sum.fictitious_play.fictitious_play"
     },
     {
@@ -14271,52 +14041,16 @@
       "to": "zero_sum.fictitious_play.fictitious_play_convergence"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.fictitious_play.fictitious_play_convergence"
-    },
-    {
       "from": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
       "to": "zero_sum.fictitious_play.fictitious_play_convergence"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.fictitious_play_convergence"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "to": "zero_sum.fictitious_play.fictitious_play_convergence"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma"
     },
     {
       "from": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma"
     },
     {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma"
-    },
-    {
       "from": "zero_sum.fictitious_play.fictitious_play",
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step"
     },
     {
       "from": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
@@ -14331,10 +14065,6 @@
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction"
     },
     {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window"
-    },
-    {
       "from": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window"
     },
@@ -14347,15 +14077,7 @@
       "to": "zero_sum.lam_mu_existence"
     },
     {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.lam_mu_existence"
-    },
-    {
       "from": "zero_sum.maximin_minimax",
-      "to": "zero_sum.lam_mu_existence"
-    },
-    {
-      "from": "zero_sum.mixed_matrix_payoff",
       "to": "zero_sum.lam_mu_existence"
     },
     {
@@ -14368,10 +14090,6 @@
     },
     {
       "from": "core.simplex.bounded_by_value",
-      "to": "zero_sum.matrix_game_nash_equilibrium"
-    },
-    {
-      "from": "zero_sum.matrix_game",
       "to": "zero_sum.matrix_game_nash_equilibrium"
     },
     {
@@ -14395,19 +14113,7 @@
       "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
-    },
-    {
       "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.antisymmetric_matrix_game_value"
     },
     {
@@ -14415,26 +14121,10 @@
       "to": "zero_sum.minimax.loomis_induction_proof"
     },
     {
-      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
-      "to": "zero_sum.minimax.loomis_induction_proof"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "zero_sum.minimax.loomis_induction_proof"
-    },
-    {
       "from": "zero_sum.minimax.loomis_induction_proof.row_drop",
       "to": "zero_sum.minimax.loomis_induction_proof"
     },
     {
-      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
-      "to": "zero_sum.minimax.loomis_induction_proof"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
-      "to": "zero_sum.minimax.loomis_induction_proof"
-    },
-    {
       "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
       "to": "zero_sum.minimax.loomis_induction_proof.column_drop"
     },
@@ -14452,14 +14142,6 @@
     },
     {
       "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
-      "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
       "to": "zero_sum.minimax.loomis_induction_proof.row_drop"
     },
     {
@@ -14485,10 +14167,6 @@
     {
       "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
       "to": "zero_sum.minimax.loomis_induction_proof.weak_duality"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.minimax.loomis_theorem"
     },
     {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
@@ -14535,22 +14213,6 @@
       "to": "zero_sum.minimax.minimax_from_deterministic_approachability"
     },
     {
-      "from": "core.simplex.bounded_by_value",
-      "to": "zero_sum.minimax.minimax_from_loomis"
-    },
-    {
-      "from": "core.simplex.continuity",
-      "to": "zero_sum.minimax.minimax_from_loomis"
-    },
-    {
-      "from": "core.simplex.pure",
-      "to": "zero_sum.minimax.minimax_from_loomis"
-    },
-    {
-      "from": "zero_sum.lam_mu_existence",
-      "to": "zero_sum.minimax.minimax_from_loomis"
-    },
-    {
       "from": "zero_sum.maximin_le_minimax",
       "to": "zero_sum.minimax.minimax_from_loomis"
     },
@@ -14573,10 +14235,6 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
-    },
-    {
-      "from": "zero_sum.matrix_game",
-      "to": "zero_sum.minimax.value_predicates"
     },
     {
       "from": "zero_sum.maximin_minimax",
@@ -14608,10 +14266,6 @@
     },
     {
       "from": "zero_sum.operators.derived_game",
-      "to": "zero_sum.operators.value_directional_derivative"
-    },
-    {
-      "from": "zero_sum.operators.value_operator_general",
       "to": "zero_sum.operators.value_directional_derivative"
     },
     {

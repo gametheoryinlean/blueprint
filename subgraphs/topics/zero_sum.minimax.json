@@ -241,22 +241,7 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.minimax.antisymmetric_matrix_game_value",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
-      "to": "zero_sum.minimax.loomis_induction_proof",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
-      "to": "zero_sum.minimax.loomis_induction_proof",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
       "to": "zero_sum.minimax.loomis_induction_proof",
       "kind": "proof_plan_uses"
     },
@@ -266,16 +251,6 @@
       "kind": "proof_plan_uses"
     },
     {
-      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
-      "to": "zero_sum.minimax.loomis_induction_proof",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
-      "to": "zero_sum.minimax.loomis_induction_proof",
-      "kind": "proof_plan_uses"
-    },
-    {
       "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
       "to": "zero_sum.minimax.loomis_induction_proof.column_drop",
       "kind": "uses"
@@ -297,16 +272,6 @@
     },
     {
       "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
-      "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
       "to": "zero_sum.minimax.loomis_induction_proof.row_drop",
       "kind": "uses"
     },
@@ -368,11 +333,6 @@
     {
       "from": "zero_sum.minimax.antisymmetric_matrix_game_value",
       "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "zero_sum.lam_mu_existence",
-      "to": "zero_sum.minimax.minimax_from_loomis",
       "kind": "proof_plan_uses"
     },
     {
@@ -487,14 +447,14 @@
       "to": "zero_sum.lam_mu_existence",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
-      "count": 3
+      "count": 1
     },
     {
       "from": "topic:zero_sum",
       "to": "zero_sum.matrix_game_nash_equilibrium",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
-      "count": 2
+      "count": 1
     },
     {
       "from": "topic:zero_sum",
@@ -506,13 +466,6 @@
     {
       "from": "topic:zero_sum",
       "to": "zero_sum.minimax.antisymmetric_matrix_game_value",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 3
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.minimax.loomis_theorem",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 1
@@ -529,7 +482,7 @@
       "to": "zero_sum.minimax.value_predicates",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
-      "count": 2
+      "count": 1
     },
     {
       "from": "topic:approachability",
@@ -544,13 +497,6 @@
       "kind": "boundary_proof_plan_dependency",
       "topic": "core.simplex",
       "count": 1
-    },
-    {
-      "from": "topic:core.simplex",
-      "to": "zero_sum.minimax.minimax_from_loomis",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "core.simplex",
-      "count": 3
     },
     {
       "from": "topic:linear_programming",
@@ -585,7 +531,7 @@
       "to": "topic:zero_sum",
       "kind": "boundary_dependent",
       "topic": "zero_sum",
-      "count": 10
+      "count": 4
     },
     {
       "from": "zero_sum.minimax.loomis_theorem",

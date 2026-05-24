@@ -13,16 +13,6 @@
   "proof_html": "<p>The two conclusions decouple along independent technical chains.</p>\n<p><strong>Frequency convergence to optimal strategies.</strong> By\n[[zero_sum.fictitious_play.robinson_admissible_lemma]] the cumulative duality\ngap $\\mu(n) := \\max_i \\beta^i(n) - \\min_j \\alpha^j(n)$ is $o(n)$. Dividing by\n$n$ and using $\\alpha(n)/n = x_n A + O(1/n)$ and $\\beta(n)/n = A y_n + O(1/n)$,\nthe two eventual optimality inequalities follow, so the empirical frequencies\napproach $X(A) \\times Y(A)$.</p>\n<p><strong>Cesàro payoff convergence.</strong> This is a separate elementary telescoping\nargument; see [[zero_sum.fictitious_play.cesaro_payoff_from_robinson]] for the\nself-contained derivation $R_n / n \\to \\operatorname{val}(A)$ from the\n$o(n)$ gap bound.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 2.7.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Convergence of fictitious play in finite zero-sum games.</li>\n</ul>",
   "deps": [
     {
-      "id": "zero_sum.fictitious_play.fictitious_play",
-      "title": "Fictitious Play",
-      "href": "zero_sum/zero_sum_fictitious_play_fictitious_play.html"
-    },
-    {
-      "id": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "title": "Robinson Admissible Sequence Lemma",
-      "href": "zero_sum/zero_sum_fictitious_play_robinson_admissible_lemma.html"
-    },
-    {
       "id": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
       "title": "Cesàro Payoff Convergence From Robinson Lemma",
       "href": "zero_sum/zero_sum_fictitious_play_cesaro_payoff_from_robinson.html"
@@ -31,11 +21,6 @@
       "id": "zero_sum.core.optimal_strategy_sets",
       "title": "Optimal Strategy Sets",
       "href": "zero_sum/zero_sum_core_optimal_strategy_sets.html"
-    },
-    {
-      "id": "zero_sum.core.value",
-      "title": "Value Of A Zero-Sum Game",
-      "href": "zero_sum/zero_sum_core_value.html"
     }
   ],
   "dependents": [],
@@ -46,9 +31,9 @@
       "qualified_name": "MatrixGame.fictitious_play_convergence",
       "module": "EconCSLib.StrategicGame.FictitiousPlay.Convergence",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/FictitiousPlay/Convergence.lean#L62",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/FictitiousPlay/Convergence.lean#L62",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -59,9 +44,9 @@
       "qualified_name": "MatrixGame.fictitious_play_convergence_frequency",
       "module": "EconCSLib.StrategicGame.FictitiousPlay.Convergence",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/FictitiousPlay/Convergence.lean#L44",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/FictitiousPlay/Convergence.lean#L44",
       "has_sorry": true,
       "status": "resolved",
       "reason": null
@@ -72,9 +57,9 @@
       "qualified_name": "MatrixGame.fictitious_play_convergence_cesaro",
       "module": "EconCSLib.StrategicGame.FictitiousPlay.Convergence",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/FictitiousPlay/Convergence.lean#L54",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/FictitiousPlay/Convergence.lean#L54",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

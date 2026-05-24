@@ -13,71 +13,22 @@
   "proof_html": "<p>Let\n$$\n  c=\\left(\\sum_{k=1}^n a_k^{-1}\\right)^{-1}\n  \\quad\\text{and}\\quad\n  p_i=ca_i^{-1}.\n$$\nThen $p$ is a probability vector. Against any pure column $j$, the row player's\npayoff from $p$ is $p_ja_j=c$, so $p$ guarantees $c$. Against any pure row $i$,\nthe column player's mixed strategy $p$ gives payoff $a_ip_i=c$, so $p$ holds the\nrow player to $c$. By weak duality, the value is $c$ and $p$ is optimal for both\nplayers.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.8, Exercise 6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Compute value and optimal strategies for a positive diagonal matrix game.</li>\n</ul>",
   "deps": [
     {
-      "id": "zero_sum.matrix_game",
-      "title": "Matrix Game",
-      "href": "zero_sum/zero_sum_matrix_game.html"
-    },
-    {
       "id": "zero_sum.core.value",
       "title": "Value Of A Zero-Sum Game",
       "href": "zero_sum/zero_sum_core_value.html"
-    },
-    {
-      "id": "zero_sum.von_neumann_minimax",
-      "title": "Von Neumann Minimax Theorem",
-      "href": "zero_sum/zero_sum_von_neumann_minimax.html"
     }
   ],
   "dependents": [],
   "lean_refs": [
-    {
-      "name": "EconCSLib.StrategicGame.Examples.diagonalGame",
-      "display_name": "EconCSLib.StrategicGame.Examples.diagonalGame",
-      "qualified_name": "EconCSLib.StrategicGame.Examples.diagonalGame",
-      "module": "EconCSLib.StrategicGame.Examples.DiagonalGame",
-      "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Examples/DiagonalGame.lean#L26",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
-      "name": "EconCSLib.StrategicGame.Examples.diagonalGameValue",
-      "display_name": "EconCSLib.StrategicGame.Examples.diagonalGameValue",
-      "qualified_name": "EconCSLib.StrategicGame.Examples.diagonalGameValue",
-      "module": "EconCSLib.StrategicGame.Examples.DiagonalGame",
-      "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Examples/DiagonalGame.lean#L36",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
-    {
-      "name": "EconCSLib.StrategicGame.Examples.diagonalGameStrategy",
-      "display_name": "EconCSLib.StrategicGame.Examples.diagonalGameStrategy",
-      "qualified_name": "EconCSLib.StrategicGame.Examples.diagonalGameStrategy",
-      "module": "EconCSLib.StrategicGame.Examples.DiagonalGame",
-      "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Examples/DiagonalGame.lean#L49",
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null
-    },
     {
       "name": "EconCSLib.StrategicGame.Examples.diagonalGame_value",
       "display_name": "EconCSLib.StrategicGame.Examples.diagonalGame_value",
       "qualified_name": "EconCSLib.StrategicGame.Examples.diagonalGame_value",
       "module": "EconCSLib.StrategicGame.Examples.DiagonalGame",
       "repository_title": "EconCSLib",
-      "revision": "ffe89ef31dfcdda864c8543a264a4b5df5cbedf9",
-      "short_revision": "ffe89ef",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ffe89ef31dfcdda864c8543a264a4b5df5cbedf9/EconCSLib/StrategicGame/Examples/DiagonalGame.lean#L100",
+      "revision": "2fd7dec396220cbdf9d42b10152f61125e59422c",
+      "short_revision": "2fd7dec",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2fd7dec396220cbdf9d42b10152f61125e59422c/EconCSLib/StrategicGame/Examples/DiagonalGame.lean#L100",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

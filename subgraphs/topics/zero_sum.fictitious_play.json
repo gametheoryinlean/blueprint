@@ -103,11 +103,6 @@
   ],
   "edges": [
     {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.fictitious_play.robinson_admissible_lemma",
       "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
       "kind": "uses"
@@ -128,48 +123,13 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.fictitious_play_convergence",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "to": "zero_sum.fictitious_play.fictitious_play_convergence",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
       "kind": "uses"
     },
     {
       "from": "zero_sum.fictitious_play.fictitious_play",
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma.bracket_invariant",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.induction_step",
       "kind": "uses"
     },
     {
@@ -185,11 +145,6 @@
     {
       "from": "zero_sum.fictitious_play.fictitious_play",
       "to": "zero_sum.fictitious_play.robinson_admissible_lemma.subgame_reduction",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.fictitious_play.fictitious_play",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma.useful_window",
       "kind": "uses"
     },
     {
@@ -213,7 +168,7 @@
       "to": "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
-      "count": 2
+      "count": 1
     },
     {
       "from": "topic:zero_sum",
@@ -231,21 +186,7 @@
     },
     {
       "from": "topic:zero_sum",
-      "to": "zero_sum.fictitious_play.fictitious_play",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 2
-    },
-    {
-      "from": "topic:zero_sum",
       "to": "zero_sum.fictitious_play.fictitious_play_convergence",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 2
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "zero_sum.fictitious_play.robinson_admissible_lemma",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 1
