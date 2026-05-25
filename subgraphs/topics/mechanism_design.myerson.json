@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -128,6 +128,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "auction",
+      "title": "Auction",
+      "href": "auction/index.html",
+      "role": "dependent",
+      "node_count": 19
+    },
+    {
       "id": "auction.knapsack",
       "title": "Auction.Knapsack",
       "href": "auction/knapsack/index.html",
@@ -179,7 +186,35 @@
       "count": 2
     },
     {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.reserve_price",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 2
+    },
+    {
       "from": "mechanism_design.myerson.monotonicity_characterization",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependent",
+      "topic": "auction.knapsack",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
       "to": "topic:auction.knapsack",
       "kind": "boundary_dependent",
       "topic": "auction.knapsack",

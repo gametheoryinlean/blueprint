@@ -4,22 +4,22 @@
     "title": "Extensive Game.Perfect Information",
     "href": "extensive_game/perfect_information/index.html",
     "parent": "extensive_game",
-    "node_count": 11,
-    "descendant_node_count": 11
+    "node_count": 13,
+    "descendant_node_count": 13
   },
   "counts": {
-    "internal_nodes": 11,
+    "internal_nodes": 13,
     "inlined_nodes": 3,
-    "descendant_nodes": 11,
+    "descendant_nodes": 13,
     "child_topics": 0,
     "inlined_child_topics": 3,
-    "non_proof_plan_nodes": 11,
+    "non_proof_plan_nodes": 13,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 17,
-    "visible_nodes_with_selected_proof_plans": 17
+    "visible_nodes_without_proof_plans": 19,
+    "visible_nodes_with_selected_proof_plans": 19
   },
   "nodes": [
     {
@@ -39,12 +39,20 @@
       "payload": "node_payloads/extensive_game_perfect_information_generic_unique_spe.json"
     },
     {
-      "id": "extensive_game.perfect_information.kuhn_spe_existence",
-      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium",
+      "id": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
+      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium (No-Chance)",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_kuhn_spe_existence_no_chance.html",
+      "payload": "node_payloads/extensive_game_perfect_information_kuhn_spe_existence_no_chance.json"
+    },
+    {
+      "id": "extensive_game.perfect_information.kuhn_spe_existence_with_chance",
+      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium (With Chance)",
       "kind": "theorem",
       "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_kuhn_spe_existence.html",
-      "payload": "node_payloads/extensive_game_perfect_information_kuhn_spe_existence.json"
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_kuhn_spe_existence_with_chance.html",
+      "payload": "node_payloads/extensive_game_perfect_information_kuhn_spe_existence_with_chance.json"
     },
     {
       "id": "extensive_game.perfect_information.perfect_information_extensive_game",
@@ -103,12 +111,20 @@
       "payload": "node_payloads/extensive_game_perfect_information_zermelo_determinacy.json"
     },
     {
-      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value",
-      "title": "Value In Finite Zero-Sum Perfect-Information Games",
+      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+      "title": "Value In Finite Zero-Sum Perfect-Information Games (No-Chance)",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_zero_sum_perfect_information_value_no_chance.html",
+      "payload": "node_payloads/extensive_game_perfect_information_zero_sum_perfect_information_value_no_chance.json"
+    },
+    {
+      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
+      "title": "Value In Finite Zero-Sum Perfect-Information Games (With Chance)",
       "kind": "theorem",
       "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value.html",
-      "payload": "node_payloads/extensive_game_perfect_information_zero_sum_perfect_information_value.json"
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value_with_chance.html",
+      "payload": "node_payloads/extensive_game_perfect_information_zero_sum_perfect_information_value_with_chance.json"
     }
   ],
   "edges": [
@@ -118,13 +134,18 @@
       "kind": "uses"
     },
     {
-      "from": "extensive_game.perfect_information.kuhn_spe_existence",
+      "from": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
       "to": "extensive_game.perfect_information.generic_unique_spe",
       "kind": "uses"
     },
     {
       "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
-      "to": "extensive_game.perfect_information.kuhn_spe_existence",
+      "to": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
+      "kind": "uses"
+    },
+    {
+      "from": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
+      "to": "extensive_game.perfect_information.kuhn_spe_existence_with_chance",
       "kind": "uses"
     },
     {
@@ -151,6 +172,11 @@
       "from": "extensive_game.perfect_information.determined_game",
       "to": "extensive_game.perfect_information.zermelo_determinacy",
       "kind": "uses"
+    },
+    {
+      "from": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -159,7 +185,7 @@
       "title": "Extensive Game",
       "href": "extensive_game/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 51
+      "node_count": 53
     },
     {
       "id": "extensive_game.examples",
@@ -193,6 +219,13 @@
   "boundary_edges": [
     {
       "from": "topic:extensive_game",
+      "to": "extensive_game.perfect_information.kuhn_spe_existence_with_chance",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game",
+      "count": 1
+    },
+    {
+      "from": "topic:extensive_game",
       "to": "extensive_game.perfect_information.subgame_perfect_equilibrium",
       "kind": "boundary_dependency",
       "topic": "extensive_game",
@@ -200,7 +233,7 @@
     },
     {
       "from": "topic:extensive_game",
-      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value",
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
       "kind": "boundary_dependency",
       "topic": "extensive_game",
       "count": 1
@@ -214,7 +247,14 @@
     },
     {
       "from": "topic:zero_sum",
-      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value",
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
       "count": 1
@@ -227,7 +267,7 @@
       "count": 1
     },
     {
-      "from": "extensive_game.perfect_information.kuhn_spe_existence",
+      "from": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
       "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
       "topic": "extensive_game.examples",
@@ -260,7 +300,13 @@
       "id": "backward-induction",
       "title": "backward-induction",
       "href": "keywords/backward-induction.html",
-      "count": 1
+      "count": 2
+    },
+    {
+      "id": "chance",
+      "title": "chance",
+      "href": "keywords/chance.html",
+      "count": 2
     },
     {
       "id": "determinacy",
@@ -272,7 +318,7 @@
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 11
+      "count": 13
     },
     {
       "id": "genericity",
@@ -302,13 +348,13 @@
       "id": "subgame-perfect-equilibrium",
       "title": "subgame-perfect-equilibrium",
       "href": "keywords/subgame-perfect-equilibrium.html",
-      "count": 4
+      "count": 5
     },
     {
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "zermelo",
@@ -320,7 +366,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 2
+      "count": 3
     }
   ],
   "proof_plan_attachments": [],
@@ -331,7 +377,7 @@
   "child_boundary_edges": [],
   "inlined_child_topics": [
     "extensive_game.perfect_information.generic_unique_spe",
-    "extensive_game.perfect_information.kuhn_spe_existence",
-    "extensive_game.perfect_information.zero_sum_perfect_information_value"
+    "extensive_game.perfect_information.kuhn_spe_existence_with_chance",
+    "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance"
   ]
 }

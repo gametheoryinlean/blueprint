@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 12,
-    "visible_nodes_with_selected_proof_plans": 12
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -78,7 +78,7 @@
       "title": "Extensive Game",
       "href": "extensive_game/index.html",
       "role": "dependency",
-      "node_count": 51
+      "node_count": 53
     },
     {
       "id": "extensive_game.imperfect_information",
@@ -93,13 +93,6 @@
       "href": "extensive_game/normal_form/index.html",
       "role": "dependency",
       "node_count": 6
-    },
-    {
-      "id": "extensive_game.perfect_information",
-      "title": "Extensive Game.Perfect Information",
-      "href": "extensive_game/perfect_information/index.html",
-      "role": "dependency",
-      "node_count": 11
     },
     {
       "id": "zero_sum",
@@ -139,6 +132,13 @@
       "count": 2
     },
     {
+      "from": "topic:extensive_game",
+      "to": "extensive_game.examples.rubinstein_bargaining_spe",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game",
+      "count": 1
+    },
+    {
       "from": "topic:extensive_game.imperfect_information",
       "to": "extensive_game.examples.backward_forward_induction_incompatibility",
       "kind": "boundary_dependency",
@@ -150,13 +150,6 @@
       "to": "extensive_game.examples.normal_vs_extensive_perfection_difference",
       "kind": "boundary_dependency",
       "topic": "extensive_game.normal_form",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.perfect_information",
-      "to": "extensive_game.examples.rubinstein_bargaining_spe",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.perfect_information",
       "count": 1
     },
     {

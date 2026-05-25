@@ -56,6 +56,60 @@
       ]
     },
     {
+      "id": "auction.basic.first_price_mechanism",
+      "title": "First-Price Mechanism",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "first-price",
+        "mechanism"
+      ],
+      "lean_declarations": [
+        "Auction.FirstPrice.winner",
+        "Auction.FirstPrice.utility",
+        "Auction.FirstPrice.utility_winner",
+        "Auction.FirstPrice.utility_loser",
+        "Auction.FirstPrice.mechanism",
+        "Auction.FirstPrice.game",
+        "Auction.FirstPrice.game_eq_toStrategicGame"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.formats",
+        "auction.basic.ordered_bid_utilities",
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ],
+      "used_by": [
+        "auction.basic.first_price_no_dsic",
+        "auction.bayesian.dutch_first_price_equivalence",
+        "auction.bayesian.risk_aversion_comparison",
+        "auction.bayesian.symmetric_first_price_equilibrium"
+      ]
+    },
+    {
+      "id": "auction.basic.first_price_no_dsic",
+      "title": "First-Price Fails DSIC",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "first-price",
+        "dsic",
+        "counterexample"
+      ],
+      "lean_declarations": [
+        "Auction.FirstPrice.no_dominant_strategy",
+        "Auction.FirstPrice.mechanism_not_isDSIC"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.first_price_mechanism",
+        "mechanism_design.basic.dsic_predicate",
+        "strategic_games.weakly_dominant_strategy"
+      ]
+    },
+    {
       "id": "auction.basic.formats",
       "title": "Basic Auction Formats",
       "kind": "definition",
@@ -72,11 +126,15 @@
       ],
       "topic": "auction",
       "uses": [
+        "mechanism_design.transfer.mechanisms_with_transfers",
         "mechanism_design.transfer.single_parameter_transfer_layer"
       ],
       "used_by": [
         "auction.basic.bid_profile_supports",
-        "auction.basic.ordered_bid_utilities"
+        "auction.basic.first_price_mechanism",
+        "auction.basic.ordered_bid_utilities",
+        "auction.basic.second_price_mechanism",
+        "auction.bayesian.single_item_framework"
       ]
     },
     {
@@ -105,6 +163,297 @@
       "topic": "auction",
       "uses": [
         "auction.basic.formats"
+      ],
+      "used_by": [
+        "auction.basic.first_price_mechanism",
+        "auction.basic.second_price_mechanism"
+      ]
+    },
+    {
+      "id": "auction.basic.second_price_dsic",
+      "title": "Vickrey Truth-Telling Is Dominant",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "vickrey",
+        "dsic",
+        "weakly-dominant"
+      ],
+      "lean_declarations": [
+        "Auction.SecondPrice.valuation_is_dominant",
+        "Auction.SecondPrice.truthful_weakly_dominant",
+        "Auction.SecondPrice.mechanism_isDSIC"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.second_price_mechanism",
+        "mechanism_design.basic.dsic_predicate",
+        "strategic_games.weakly_dominant_strategy"
+      ],
+      "used_by": [
+        "auction.bayesian.english_second_price_equivalence"
+      ]
+    },
+    {
+      "id": "auction.basic.second_price_mechanism",
+      "title": "Second-Price (Vickrey) Mechanism",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "vickrey",
+        "second-price",
+        "mechanism"
+      ],
+      "lean_declarations": [
+        "Auction.SecondPrice.winner",
+        "Auction.SecondPrice.secondPrice",
+        "Auction.SecondPrice.secondPrice_le_bid_winner",
+        "Auction.SecondPrice.utility",
+        "Auction.SecondPrice.utility_winner",
+        "Auction.SecondPrice.utility_loser",
+        "Auction.SecondPrice.utility_nonneg",
+        "Auction.SecondPrice.mechanism",
+        "Auction.SecondPrice.game",
+        "Auction.SecondPrice.game_eq_toStrategicGame"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.formats",
+        "auction.basic.ordered_bid_utilities",
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ],
+      "used_by": [
+        "auction.basic.second_price_dsic",
+        "auction.bayesian.english_second_price_equivalence",
+        "auction.bayesian.risk_aversion_comparison"
+      ]
+    },
+    {
+      "id": "auction.bayesian.all_pay_equilibrium",
+      "title": "All-Pay Auction Symmetric Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "all-pay",
+        "bayes-nash",
+        "symmetric-equilibrium",
+        "ipv",
+        "revenue-equivalence"
+      ],
+      "primary_topic": "auction",
+      "topics": [
+        "auction",
+        "auction.bayesian"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.bayesian.single_item_framework",
+        "auction.bayesian.symmetric_first_price_equilibrium",
+        "mechanism_design.myerson.revenue_equivalence"
+      ],
+      "used_by": [
+        "auction.bayesian.risk_aversion_comparison"
+      ]
+    },
+    {
+      "id": "auction.bayesian.dutch_first_price_equivalence",
+      "title": "Dutch ≡ First-Price Strategic Equivalence",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "dutch-auction",
+        "first-price",
+        "strategic-equivalence"
+      ],
+      "primary_topic": "auction",
+      "topics": [
+        "auction",
+        "auction.bayesian"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.first_price_mechanism",
+        "auction.bayesian.single_item_framework"
+      ]
+    },
+    {
+      "id": "auction.bayesian.english_second_price_equivalence",
+      "title": "English ≡ Second-Price IPV Equivalence",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "english-auction",
+        "japanese-auction",
+        "second-price",
+        "strategic-equivalence",
+        "ipv"
+      ],
+      "primary_topic": "auction",
+      "topics": [
+        "auction",
+        "auction.bayesian"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.second_price_dsic",
+        "auction.basic.second_price_mechanism",
+        "auction.bayesian.single_item_framework"
+      ]
+    },
+    {
+      "id": "auction.bayesian.entry_fee_and_reserve_price",
+      "title": "Entry Fees And Reserve Prices In IPV Auctions",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "reserve-price",
+        "entry-fee",
+        "ipv",
+        "revenue-improvement"
+      ],
+      "primary_topic": "auction",
+      "topics": [
+        "auction",
+        "auction.bayesian"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.bayesian.single_item_framework",
+        "auction.bayesian.symmetric_first_price_equilibrium",
+        "mechanism_design.myerson.optimal_auction",
+        "mechanism_design.myerson.reserve_price"
+      ]
+    },
+    {
+      "id": "auction.bayesian.interim_and_ic",
+      "title": "Bayesian Single-Item Auction Interim Quantities And IC",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "bayesian",
+        "interim",
+        "incentive-compatibility",
+        "bnic"
+      ],
+      "lean_declarations": [
+        "BayesianSingleItemAuction.reportProfile",
+        "BayesianSingleItemAuction.interimAllocProb",
+        "BayesianSingleItemAuction.interimExpectedPayment",
+        "BayesianSingleItemAuction.interimQuasiLinearUtility",
+        "BayesianSingleItemAuction.equilibriumPayoff",
+        "BayesianSingleItemAuction.IsIncentiveCompatible"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.bayesian.single_item_framework",
+        "mechanism_design.bayesian.ex_ante_expected_utility"
+      ],
+      "used_by": [
+        "auction.bayesian.symmetric_first_price_equilibrium"
+      ]
+    },
+    {
+      "id": "auction.bayesian.risk_aversion_comparison",
+      "title": "Auction Comparisons Under Risk Aversion",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "risk-aversion",
+        "revenue-comparison",
+        "ipv",
+        "cara"
+      ],
+      "primary_topic": "auction",
+      "topics": [
+        "auction",
+        "auction.bayesian"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.first_price_mechanism",
+        "auction.basic.second_price_mechanism",
+        "auction.bayesian.all_pay_equilibrium",
+        "auction.bayesian.symmetric_first_price_equilibrium",
+        "mechanism_design.myerson.revenue_equivalence"
+      ]
+    },
+    {
+      "id": "auction.bayesian.single_item_framework",
+      "title": "Bayesian Single-Item Auction Framework",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "bayesian",
+        "single-item",
+        "ipv",
+        "cdf"
+      ],
+      "lean_declarations": [
+        "TypeCDF",
+        "ContinuousTypeProfile",
+        "OpponentTypeProfile",
+        "extendOpponentProfile",
+        "BayesianSingleItemAuction",
+        "BayesianSingleItemAuction.toDirectBayesianMechanismWithTransfers",
+        "BayesianSingleItemAuction.RespectsSingleItemCapacity",
+        "BayesianSingleItemAuction.IsFeasible",
+        "BayesianSingleItemAuction.allocationProbability",
+        "BayesianSingleItemAuction.payment",
+        "BayesianSingleItemAuction.typeDensity",
+        "BayesianSingleItemAuction.jointDensity",
+        "BayesianSingleItemAuction.truthfulStrategy"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.formats",
+        "mechanism_design.bayesian.bayesian_mechanisms",
+        "mechanism_design.transfer.single_parameter_transfer_layer"
+      ],
+      "used_by": [
+        "auction.bayesian.all_pay_equilibrium",
+        "auction.bayesian.dutch_first_price_equivalence",
+        "auction.bayesian.english_second_price_equivalence",
+        "auction.bayesian.entry_fee_and_reserve_price",
+        "auction.bayesian.interim_and_ic",
+        "auction.bayesian.symmetric_first_price_equilibrium"
+      ]
+    },
+    {
+      "id": "auction.bayesian.symmetric_first_price_equilibrium",
+      "title": "Symmetric IPV First-Price Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "auction",
+        "first-price",
+        "bayes-nash",
+        "symmetric-equilibrium",
+        "ipv"
+      ],
+      "primary_topic": "auction",
+      "topics": [
+        "auction",
+        "auction.bayesian"
+      ],
+      "topic": "auction",
+      "uses": [
+        "auction.basic.first_price_mechanism",
+        "auction.bayesian.interim_and_ic",
+        "auction.bayesian.single_item_framework"
+      ],
+      "used_by": [
+        "auction.bayesian.all_pay_equilibrium",
+        "auction.bayesian.entry_fee_and_reserve_price",
+        "auction.bayesian.risk_aversion_comparison"
       ]
     },
     {
@@ -222,7 +571,8 @@
       "topic": "auction",
       "uses": [
         "auction.knapsack.binary_allocations",
-        "mechanism_design.myerson.monotonicity_characterization"
+        "mechanism_design.myerson.monotonicity_characterization",
+        "mechanism_design.myerson.payment_formula"
       ],
       "used_by": [
         "auction.knapsack.relaxations_dynamic_programming"
@@ -444,7 +794,7 @@
       ],
       "topic": "core",
       "used_by": [
-        "utility.preference_relation"
+        "core.preference.relation"
       ]
     },
     {
@@ -470,8 +820,60 @@
       ],
       "topic": "core",
       "used_by": [
-        "core.preference.represents_preference",
-        "utility.preference_relation"
+        "core.preference.relation",
+        "core.preference.represents_preference"
+      ]
+    },
+    {
+      "id": "core.preference.relation",
+      "title": "Preference Relation (MSZ Ch.2 Narrative)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "preference"
+      ],
+      "primary_topic": "core",
+      "topics": [
+        "core",
+        "core.preference"
+      ],
+      "lean_declarations": [],
+      "topic": "preference",
+      "uses": [
+        "core.preference.abstract_relation",
+        "core.preference.indifferent",
+        "core.preference.strictly_preferred",
+        "core.preference.total_preorder"
+      ],
+      "used_by": [
+        "core.preference.representation",
+        "utility.lottery"
+      ]
+    },
+    {
+      "id": "core.preference.representation",
+      "title": "Utility Representation",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "preference"
+      ],
+      "primary_topic": "core",
+      "topics": [
+        "core",
+        "core.preference"
+      ],
+      "lean_declarations": [
+        "RepresentsPreference",
+        "RepresentsPreference.lt_iff",
+        "RepresentsPreference.indifferent_iff"
+      ],
+      "topic": "preference",
+      "uses": [
+        "core.preference.relation"
+      ],
+      "used_by": [
+        "utility.expected_utility_representation"
       ]
     },
     {
@@ -523,8 +925,8 @@
       ],
       "topic": "core",
       "used_by": [
-        "core.preference.represents_preference",
-        "utility.preference_relation"
+        "core.preference.relation",
+        "core.preference.represents_preference"
       ]
     },
     {
@@ -549,7 +951,7 @@
       "topic": "core",
       "used_by": [
         "core.argmax.list_arg_max_on",
-        "utility.preference_relation"
+        "core.preference.relation"
       ]
     },
     {
@@ -828,7 +1230,8 @@
       "used_by": [
         "extensive_game.examples.entrant_incomplete_information_value_example",
         "extensive_game.examples.poker_game_value_example",
-        "extensive_game.perfect_information.zero_sum_perfect_information_value"
+        "extensive_game.perfect_information.kuhn_spe_existence_with_chance",
+        "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance"
       ]
     },
     {
@@ -952,7 +1355,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.perfect_information.kuhn_spe_existence"
+        "extensive_game.perfect_information.kuhn_spe_existence_no_chance"
       ]
     },
     {
@@ -1625,30 +2028,53 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.perfect_information.kuhn_spe_existence"
+        "extensive_game.perfect_information.kuhn_spe_existence_no_chance"
       ]
     },
     {
-      "id": "extensive_game.perfect_information.kuhn_spe_existence",
-      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium",
+      "id": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
+      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium (No-Chance)",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "subgame-perfect-equilibrium",
         "backward-induction"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
       "lean_declarations": [
         "optStrategy_isSubgamePerfect",
         "Kuhn_exists_SPE"
       ],
-      "topic": "extensive_game",
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.subgame_perfect_equilibrium"
       ],
       "used_by": [
         "extensive_game.examples.rubinstein_bargaining_spe",
-        "extensive_game.perfect_information.generic_unique_spe"
+        "extensive_game.perfect_information.generic_unique_spe",
+        "extensive_game.perfect_information.kuhn_spe_existence_with_chance"
+      ]
+    },
+    {
+      "id": "extensive_game.perfect_information.kuhn_spe_existence_with_chance",
+      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium (With Chance)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "subgame-perfect-equilibrium",
+        "backward-induction",
+        "chance"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.core.nature_player",
+        "extensive_game.perfect_information.kuhn_spe_existence_no_chance"
       ]
     },
     {
@@ -1802,7 +2228,7 @@
       ],
       "used_by": [
         "extensive_game.examples.backward_forward_induction_incompatibility",
-        "extensive_game.perfect_information.kuhn_spe_existence",
+        "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
         "extensive_game.perfect_information.spe_implies_nash",
         "repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem"
       ]
@@ -1836,21 +2262,46 @@
       ]
     },
     {
-      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value",
-      "title": "Value In Finite Zero-Sum Perfect-Information Games",
+      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+      "title": "Value In Finite Zero-Sum Perfect-Information Games (No-Chance)",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "zero-sum",
         "value"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
       "lean_declarations": [
         "GameTree.value₀_minimax_prop"
+      ],
+      "topic": "perfect_information",
+      "uses": [
+        "zero_sum.core.value"
+      ],
+      "used_by": [
+        "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance"
+      ]
+    },
+    {
+      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
+      "title": "Value In Finite Zero-Sum Perfect-Information Games (With Chance)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "zero-sum",
+        "value",
+        "chance"
       ],
       "topic": "extensive_game",
       "uses": [
         "extensive_game.core.nature_player",
+        "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
         "zero_sum.core.value"
       ]
     },
@@ -2033,6 +2484,8 @@
         "strategic_games.weakly_dominant_strategy"
       ],
       "used_by": [
+        "auction.basic.first_price_no_dsic",
+        "auction.basic.second_price_dsic",
         "mechanism_design.basic.truthfulness_from_dsic",
         "mechanism_design.transfer.mechanisms_with_transfers"
       ]
@@ -2154,6 +2607,7 @@
         "mechanism_design.transfer.mechanisms_with_transfers"
       ],
       "used_by": [
+        "auction.bayesian.single_item_framework",
         "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
         "mechanism_design.bayesian.ex_ante_expected_utility",
         "mechanism_design.bayesian.selling_problem"
@@ -2214,6 +2668,7 @@
         "mechanism_design.transfer.mechanisms_with_transfers"
       ],
       "used_by": [
+        "auction.bayesian.interim_and_ic",
         "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
         "mechanism_design.myerson.revenue_equivalence"
       ]
@@ -2329,6 +2784,7 @@
         "mechanism_design.myerson.revenue_equivalence"
       ],
       "used_by": [
+        "auction.bayesian.entry_fee_and_reserve_price",
         "mechanism_design.myerson.reserve_price"
       ]
     },
@@ -2415,6 +2871,7 @@
         "mechanism_design.transfer.single_parameter_transfer_layer"
       ],
       "used_by": [
+        "auction.knapsack.welfare_maximizing_mechanism",
         "mechanism_design.myerson.monotonicity_characterization",
         "mechanism_design.myerson.optimal_auction",
         "mechanism_design.myerson.payment_construction",
@@ -2442,6 +2899,9 @@
       "topic": "mechanism_design",
       "uses": [
         "mechanism_design.myerson.optimal_auction"
+      ],
+      "used_by": [
+        "auction.bayesian.entry_fee_and_reserve_price"
       ]
     },
     {
@@ -2467,6 +2927,8 @@
         "mechanism_design.myerson.payment_formula"
       ],
       "used_by": [
+        "auction.bayesian.all_pay_equilibrium",
+        "auction.bayesian.risk_aversion_comparison",
         "mechanism_design.myerson.optimal_auction"
       ]
     },
@@ -2503,6 +2965,9 @@
         "mechanism_design.basic.ex_post_ir_predicate"
       ],
       "used_by": [
+        "auction.basic.first_price_mechanism",
+        "auction.basic.formats",
+        "auction.basic.second_price_mechanism",
         "mechanism_design.bayesian.bayesian_mechanisms",
         "mechanism_design.bayesian.ex_ante_expected_utility",
         "mechanism_design.bayesian.selling_problem",
@@ -2571,6 +3036,7 @@
       ],
       "used_by": [
         "auction.basic.formats",
+        "auction.bayesian.single_item_framework",
         "auction.knapsack.environment",
         "mechanism_design.myerson.payment_construction",
         "mechanism_design.myerson.payment_envelope",
@@ -9174,6 +9640,8 @@
         "strategic_games.weakly_dominates"
       ],
       "used_by": [
+        "auction.basic.first_price_no_dsic",
+        "auction.basic.second_price_dsic",
         "mechanism_design.basic.dsic_predicate",
         "strategic_games.dominant_implies_nash",
         "strategic_games.prisoners_dilemma"
@@ -9218,7 +9686,7 @@
       ],
       "topic": "utility",
       "uses": [
-        "utility.utility_representation",
+        "core.preference.representation",
         "utility.vnm_axioms"
       ],
       "used_by": [
@@ -9242,7 +9710,7 @@
       ],
       "topic": "utility",
       "uses": [
-        "utility.preference_relation"
+        "core.preference.relation"
       ],
       "used_by": [
         "utility.vnm_axioms"
@@ -9267,32 +9735,6 @@
       "topic": "utility",
       "uses": [
         "utility.expected_utility_representation"
-      ]
-    },
-    {
-      "id": "utility.preference_relation",
-      "title": "Preference Relation (MSZ Ch.2 Narrative)",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "utility",
-        "preference"
-      ],
-      "primary_topic": "utility",
-      "topics": [
-        "utility"
-      ],
-      "lean_declarations": [],
-      "topic": "utility",
-      "uses": [
-        "core.preference.abstract_relation",
-        "core.preference.indifferent",
-        "core.preference.strictly_preferred",
-        "core.preference.total_preorder"
-      ],
-      "used_by": [
-        "utility.lottery",
-        "utility.utility_representation"
       ]
     },
     {
@@ -9331,28 +9773,6 @@
       "topic": "utility",
       "uses": [
         "utility.vnm_axioms"
-      ]
-    },
-    {
-      "id": "utility.utility_representation",
-      "title": "Utility Representation",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "utility",
-        "preference"
-      ],
-      "lean_declarations": [
-        "RepresentsPreference",
-        "RepresentsPreference.lt_iff",
-        "RepresentsPreference.indifferent_iff"
-      ],
-      "topic": "utility",
-      "uses": [
-        "utility.preference_relation"
-      ],
-      "used_by": [
-        "utility.expected_utility_representation"
       ]
     },
     {
@@ -10141,7 +10561,8 @@
       "used_by": [
         "extensive_game.examples.entrant_incomplete_information_value_example",
         "extensive_game.examples.poker_game_value_example",
-        "extensive_game.perfect_information.zero_sum_perfect_information_value",
+        "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+        "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
         "repeated_game.incomplete_info.cav_u_theorem",
         "stochastic_game.value.discounted_value",
         "stochastic_game.value.shapley_operator",
@@ -11852,12 +12273,164 @@
       "to": "auction.basic.bid_profile_supports"
     },
     {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.first_price_mechanism"
+    },
+    {
+      "from": "auction.basic.ordered_bid_utilities",
+      "to": "auction.basic.first_price_mechanism"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "auction.basic.first_price_mechanism"
+    },
+    {
+      "from": "auction.basic.first_price_mechanism",
+      "to": "auction.basic.first_price_no_dsic"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "auction.basic.first_price_no_dsic"
+    },
+    {
+      "from": "strategic_games.weakly_dominant_strategy",
+      "to": "auction.basic.first_price_no_dsic"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "auction.basic.formats"
+    },
+    {
       "from": "mechanism_design.transfer.single_parameter_transfer_layer",
       "to": "auction.basic.formats"
     },
     {
       "from": "auction.basic.formats",
       "to": "auction.basic.ordered_bid_utilities"
+    },
+    {
+      "from": "auction.basic.second_price_mechanism",
+      "to": "auction.basic.second_price_dsic"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "auction.basic.second_price_dsic"
+    },
+    {
+      "from": "strategic_games.weakly_dominant_strategy",
+      "to": "auction.basic.second_price_dsic"
+    },
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.second_price_mechanism"
+    },
+    {
+      "from": "auction.basic.ordered_bid_utilities",
+      "to": "auction.basic.second_price_mechanism"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "auction.basic.second_price_mechanism"
+    },
+    {
+      "from": "auction.bayesian.single_item_framework",
+      "to": "auction.bayesian.all_pay_equilibrium"
+    },
+    {
+      "from": "auction.bayesian.symmetric_first_price_equilibrium",
+      "to": "auction.bayesian.all_pay_equilibrium"
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "auction.bayesian.all_pay_equilibrium"
+    },
+    {
+      "from": "auction.basic.first_price_mechanism",
+      "to": "auction.bayesian.dutch_first_price_equivalence"
+    },
+    {
+      "from": "auction.bayesian.single_item_framework",
+      "to": "auction.bayesian.dutch_first_price_equivalence"
+    },
+    {
+      "from": "auction.basic.second_price_dsic",
+      "to": "auction.bayesian.english_second_price_equivalence"
+    },
+    {
+      "from": "auction.basic.second_price_mechanism",
+      "to": "auction.bayesian.english_second_price_equivalence"
+    },
+    {
+      "from": "auction.bayesian.single_item_framework",
+      "to": "auction.bayesian.english_second_price_equivalence"
+    },
+    {
+      "from": "auction.bayesian.single_item_framework",
+      "to": "auction.bayesian.entry_fee_and_reserve_price"
+    },
+    {
+      "from": "auction.bayesian.symmetric_first_price_equilibrium",
+      "to": "auction.bayesian.entry_fee_and_reserve_price"
+    },
+    {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "auction.bayesian.entry_fee_and_reserve_price"
+    },
+    {
+      "from": "mechanism_design.myerson.reserve_price",
+      "to": "auction.bayesian.entry_fee_and_reserve_price"
+    },
+    {
+      "from": "auction.bayesian.single_item_framework",
+      "to": "auction.bayesian.interim_and_ic"
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "auction.bayesian.interim_and_ic"
+    },
+    {
+      "from": "auction.basic.first_price_mechanism",
+      "to": "auction.bayesian.risk_aversion_comparison"
+    },
+    {
+      "from": "auction.basic.second_price_mechanism",
+      "to": "auction.bayesian.risk_aversion_comparison"
+    },
+    {
+      "from": "auction.bayesian.all_pay_equilibrium",
+      "to": "auction.bayesian.risk_aversion_comparison"
+    },
+    {
+      "from": "auction.bayesian.symmetric_first_price_equilibrium",
+      "to": "auction.bayesian.risk_aversion_comparison"
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "auction.bayesian.risk_aversion_comparison"
+    },
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.bayesian.single_item_framework"
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "auction.bayesian.single_item_framework"
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "auction.bayesian.single_item_framework"
+    },
+    {
+      "from": "auction.basic.first_price_mechanism",
+      "to": "auction.bayesian.symmetric_first_price_equilibrium"
+    },
+    {
+      "from": "auction.bayesian.interim_and_ic",
+      "to": "auction.bayesian.symmetric_first_price_equilibrium"
+    },
+    {
+      "from": "auction.bayesian.single_item_framework",
+      "to": "auction.bayesian.symmetric_first_price_equilibrium"
     },
     {
       "from": "auction.knapsack.environment",
@@ -11877,6 +12450,10 @@
     },
     {
       "from": "mechanism_design.myerson.monotonicity_characterization",
+      "to": "auction.knapsack.welfare_maximizing_mechanism"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
       "to": "auction.knapsack.welfare_maximizing_mechanism"
     },
     {
@@ -11902,6 +12479,26 @@
     {
       "from": "core.linear_algebra.farkas_lemma",
       "to": "core.linear_programming.strong_duality"
+    },
+    {
+      "from": "core.preference.abstract_relation",
+      "to": "core.preference.relation"
+    },
+    {
+      "from": "core.preference.indifferent",
+      "to": "core.preference.relation"
+    },
+    {
+      "from": "core.preference.strictly_preferred",
+      "to": "core.preference.relation"
+    },
+    {
+      "from": "core.preference.total_preorder",
+      "to": "core.preference.relation"
+    },
+    {
+      "from": "core.preference.relation",
+      "to": "core.preference.representation"
     },
     {
       "from": "core.preference.indifferent",
@@ -11976,7 +12573,7 @@
       "to": "extensive_game.examples.poker_game_value_example"
     },
     {
-      "from": "extensive_game.perfect_information.kuhn_spe_existence",
+      "from": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
       "to": "extensive_game.examples.rubinstein_bargaining_spe"
     },
     {
@@ -12188,12 +12785,20 @@
       "to": "extensive_game.perfect_information.determined_game"
     },
     {
-      "from": "extensive_game.perfect_information.kuhn_spe_existence",
+      "from": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
       "to": "extensive_game.perfect_information.generic_unique_spe"
     },
     {
       "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
-      "to": "extensive_game.perfect_information.kuhn_spe_existence"
+      "to": "extensive_game.perfect_information.kuhn_spe_existence_no_chance"
+    },
+    {
+      "from": "extensive_game.core.nature_player",
+      "to": "extensive_game.perfect_information.kuhn_spe_existence_with_chance"
+    },
+    {
+      "from": "extensive_game.perfect_information.kuhn_spe_existence_no_chance",
+      "to": "extensive_game.perfect_information.kuhn_spe_existence_with_chance"
     },
     {
       "from": "extensive_game.perfect_information.perfect_information_extensive_game",
@@ -12224,12 +12829,20 @@
       "to": "extensive_game.perfect_information.zermelo_determinacy"
     },
     {
+      "from": "zero_sum.core.value",
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance"
+    },
+    {
       "from": "extensive_game.core.nature_player",
-      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value"
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance"
+    },
+    {
+      "from": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance"
     },
     {
       "from": "zero_sum.core.value",
-      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value"
+      "to": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance"
     },
     {
       "from": "fixed_point.retract_fixed_point",
@@ -14068,7 +14681,7 @@
       "to": "strategic_games.weakly_dominates"
     },
     {
-      "from": "utility.utility_representation",
+      "from": "core.preference.representation",
       "to": "utility.expected_utility_representation"
     },
     {
@@ -14076,28 +14689,12 @@
       "to": "utility.expected_utility_representation"
     },
     {
-      "from": "utility.preference_relation",
+      "from": "core.preference.relation",
       "to": "utility.lottery"
     },
     {
       "from": "utility.expected_utility_representation",
       "to": "utility.positive_affine_uniqueness"
-    },
-    {
-      "from": "core.preference.abstract_relation",
-      "to": "utility.preference_relation"
-    },
-    {
-      "from": "core.preference.indifferent",
-      "to": "utility.preference_relation"
-    },
-    {
-      "from": "core.preference.strictly_preferred",
-      "to": "utility.preference_relation"
-    },
-    {
-      "from": "core.preference.total_preorder",
-      "to": "utility.preference_relation"
     },
     {
       "from": "utility.expected_utility_representation",
@@ -14106,10 +14703,6 @@
     {
       "from": "utility.vnm_axioms",
       "to": "utility.sure_thing_principle"
-    },
-    {
-      "from": "utility.preference_relation",
-      "to": "utility.utility_representation"
     },
     {
       "from": "utility.vnm_axioms",

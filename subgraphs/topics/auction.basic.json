@@ -4,22 +4,22 @@
     "title": "Auction.Basic",
     "href": "auction/basic/index.html",
     "parent": "auction",
-    "node_count": 3,
-    "descendant_node_count": 3
+    "node_count": 7,
+    "descendant_node_count": 7
   },
   "counts": {
-    "internal_nodes": 3,
-    "inlined_nodes": 3,
-    "descendant_nodes": 3,
+    "internal_nodes": 7,
+    "inlined_nodes": 7,
+    "descendant_nodes": 7,
     "child_topics": 0,
-    "inlined_child_topics": 3,
-    "non_proof_plan_nodes": 3,
+    "inlined_child_topics": 7,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
   },
   "nodes": [
     {
@@ -29,6 +29,22 @@
       "status": "staged",
       "href": "auction/basic/auction_basic_bid_profile_supports.html",
       "payload": "node_payloads/auction_basic_bid_profile_supports.json"
+    },
+    {
+      "id": "auction.basic.first_price_mechanism",
+      "title": "First-Price Mechanism",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_first_price_mechanism.html",
+      "payload": "node_payloads/auction_basic_first_price_mechanism.json"
+    },
+    {
+      "id": "auction.basic.first_price_no_dsic",
+      "title": "First-Price Fails DSIC",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_first_price_no_dsic.html",
+      "payload": "node_payloads/auction_basic_first_price_no_dsic.json"
     },
     {
       "id": "auction.basic.formats",
@@ -45,6 +61,22 @@
       "status": "staged",
       "href": "auction/basic/auction_basic_ordered_bid_utilities.html",
       "payload": "node_payloads/auction_basic_ordered_bid_utilities.json"
+    },
+    {
+      "id": "auction.basic.second_price_dsic",
+      "title": "Vickrey Truth-Telling Is Dominant",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_second_price_dsic.html",
+      "payload": "node_payloads/auction_basic_second_price_dsic.json"
+    },
+    {
+      "id": "auction.basic.second_price_mechanism",
+      "title": "Second-Price (Vickrey) Mechanism",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_second_price_mechanism.html",
+      "payload": "node_payloads/auction_basic_second_price_mechanism.json"
     }
   ],
   "edges": [
@@ -55,25 +87,146 @@
     },
     {
       "from": "auction.basic.formats",
+      "to": "auction.basic.first_price_mechanism",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.ordered_bid_utilities",
+      "to": "auction.basic.first_price_mechanism",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.first_price_mechanism",
+      "to": "auction.basic.first_price_no_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.formats",
       "to": "auction.basic.ordered_bid_utilities",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.second_price_mechanism",
+      "to": "auction.basic.second_price_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.second_price_mechanism",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.ordered_bid_utilities",
+      "to": "auction.basic.second_price_mechanism",
       "kind": "uses"
     }
   ],
   "boundary_topics": [
+    {
+      "id": "auction",
+      "title": "Auction",
+      "href": "auction/index.html",
+      "role": "dependent",
+      "node_count": 19
+    },
+    {
+      "id": "auction.bayesian",
+      "title": "Auction.Bayesian",
+      "href": "auction/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 8
+    },
     {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
       "role": "dependency",
       "node_count": 25
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 112
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:mechanism_design",
+      "to": "auction.basic.first_price_mechanism",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "auction.basic.first_price_no_dsic",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
       "to": "auction.basic.formats",
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
+      "count": 2
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "auction.basic.second_price_dsic",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "auction.basic.second_price_mechanism",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "auction.basic.first_price_no_dsic",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "auction.basic.second_price_dsic",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "auction.basic.first_price_mechanism",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 3
+    },
+    {
+      "from": "auction.basic.second_price_dsic",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 1
+    },
+    {
+      "from": "auction.basic.second_price_mechanism",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 2
+    },
+    {
+      "from": "auction.basic.formats",
+      "to": "topic:auction.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "auction.bayesian",
       "count": 1
     }
   ],
@@ -88,7 +241,7 @@
       "id": "auction",
       "title": "auction",
       "href": "keywords/auction.html",
-      "count": 3
+      "count": 7
     },
     {
       "id": "bid-profile",
@@ -103,9 +256,39 @@
       "count": 1
     },
     {
+      "id": "counterexample",
+      "title": "counterexample",
+      "href": "keywords/counterexample.html",
+      "count": 1
+    },
+    {
+      "id": "dsic",
+      "title": "dsic",
+      "href": "keywords/dsic.html",
+      "count": 2
+    },
+    {
+      "id": "first-price",
+      "title": "first-price",
+      "href": "keywords/first-price.html",
+      "count": 2
+    },
+    {
+      "id": "mechanism",
+      "title": "mechanism",
+      "href": "keywords/mechanism.html",
+      "count": 2
+    },
+    {
       "id": "mechanism-design",
       "title": "mechanism-design",
       "href": "keywords/mechanism-design.html",
+      "count": 1
+    },
+    {
+      "id": "second-price",
+      "title": "second-price",
+      "href": "keywords/second-price.html",
       "count": 1
     },
     {
@@ -119,6 +302,18 @@
       "title": "transfers",
       "href": "keywords/transfers.html",
       "count": 1
+    },
+    {
+      "id": "vickrey",
+      "title": "vickrey",
+      "href": "keywords/vickrey.html",
+      "count": 2
+    },
+    {
+      "id": "weakly-dominant",
+      "title": "weakly-dominant",
+      "href": "keywords/weakly-dominant.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],
@@ -129,7 +324,11 @@
   "child_boundary_edges": [],
   "inlined_child_topics": [
     "auction.basic.bid_profile_supports",
+    "auction.basic.first_price_mechanism",
+    "auction.basic.first_price_no_dsic",
     "auction.basic.formats",
-    "auction.basic.ordered_bid_utilities"
+    "auction.basic.ordered_bid_utilities",
+    "auction.basic.second_price_dsic",
+    "auction.basic.second_price_mechanism"
   ]
 }

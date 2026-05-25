@@ -1,0 +1,112 @@
+{
+  "id": "auction.bayesian.interim_and_ic",
+  "title": "Bayesian Single-Item Auction Interim Quantities And IC",
+  "kind": "definition",
+  "status": "staged",
+  "href": "auction/bayesian/auction_bayesian_interim_and_ic.html",
+  "primary_topic": "auction.bayesian",
+  "topics": [
+    "auction.bayesian"
+  ],
+  "body_html": "<h1>Bayesian Single-Item Auction Interim Quantities And IC</h1>\n<p>This node assembles the <em>interim</em> quantities — winning probability,\nexpected payment, quasi-linear utility, equilibrium payoff — and the\nBayesian incentive-compatibility predicate for a Bayesian single-item\nauction ([[auction.bayesian.single_item_framework]]).</p>\n<p>Throughout, fix a <code>BayesianSingleItemAuction I</code> denoted $A$ and an agent\n$i \\in I$. All expectations are taken against the auction's explicit\nopponent-type prior $\\mu_i$, which is independent of any density-level\nindependence assumption.</p>\n<h2>Report profiles</h2>\n<p><code>reportProfile i z_i t</code> glues agent $i$'s report $z_i$ with an opponent\ntype profile $t : \\mathrm{OpponentTypeProfile}\\,I\\,i$ into a full report\nprofile in $\\prod_{j} \\mathbb{R}$, via <code>extendOpponentProfile</code>. It is the\ninput to the auction's allocation and payment rules when agent $i$ is\ndeviating to report $z_i$ while every opponent reports truthfully.</p>\n<h2>Interim winning probability and expected payment</h2>\n<p>Let $x_i(t) = A.\\mathrm{allocationRule}(t, i)$ and\n$p_i(t) = A.\\mathrm{paymentRule}(t, i)$.</p>\n<ul>\n<li><strong>Interim allocation probability</strong> (<code>interimAllocProb i z_i</code>):\n  $$q_i(z_i) \\;=\\; \\mathbb{E}_{t_{-i} \\sim \\mu_i}\\bigl[x_i(\\mathrm{reportProfile}(i, z_i, t_{-i}))\\bigr].$$</li>\n<li><strong>Interim expected payment</strong> (<code>interimExpectedPayment i z_i</code>):\n  $$m_i(z_i) \\;=\\; \\mathbb{E}_{t_{-i} \\sim \\mu_i}\\bigl[p_i(\\mathrm{reportProfile}(i, z_i, t_{-i}))\\bigr].$$</li>\n</ul>\n<p>Both are scalar functions $\\mathbb{R} \\to \\mathbb{R}$ of the report\n$z_i$, with the opponents' uncertainty integrated out.</p>\n<h2>Interim quasi-linear utility and equilibrium payoff</h2>\n<ul>\n<li><strong>Interim quasi-linear utility</strong> (<code>interimQuasiLinearUtility i t_i z_i</code>):\n  $$u_i(t_i, z_i) \\;=\\; q_i(z_i)\\, t_i \\;-\\; m_i(z_i),$$\n  the expected payoff to a type-$t_i$ agent who reports $z_i$ while\n  opponents report truthfully.</li>\n<li><strong>Equilibrium payoff</strong> (<code>equilibriumPayoff i t_i</code>):\n  $$U_i(t_i) \\;=\\; u_i(t_i, t_i) \\;=\\; q_i(t_i)\\, t_i - m_i(t_i),$$\n  the truthful payoff.</li>\n</ul>\n<p>These are the standard objects that appear in the Myerson envelope\nidentity and in the revenue-equivalence theorem.</p>\n<h2>Incentive compatibility</h2>\n<p><code>IsIncentiveCompatible A</code> asserts that for every agent $i$ and every\ntrue type $t_i$ and reported type $z_i$,\n$$u_i(t_i, z_i) \\;\\le\\; U_i(t_i),$$\ni.e. truthful reporting is interim-utility-maximising for every type.\nThis is the standard Bayesian-incentive-compatibility (BIC) predicate\nspecialised to the single-item setting.</p>\n<h2>Why these definitions</h2>\n<p>By integrating against an <em>explicit</em> opponent prior $\\mu_i$, the\ndefinitions stay valid in the absence of full joint independence at the\nmeasure-theoretic level. Density-based formulas (e.g.\n$q_i(z_i) = \\int x_i(z_i, t_{-i})\\, f_{-i}(t_{-i})\\, dt_{-i}$) can be\nderived as theorems on top, under independence assumptions encoded in\n$\\mu_i$ and <code>jointDensity</code>.</p>\n<h2>Position in the library</h2>\n<p>These interim quantities are the auction-side specialisation of the\ngeneric Bayesian ex-ante / interim machinery in\n([[mechanism_design.bayesian.ex_ante_expected_utility]]). They\nfeed into:</p>\n<ul>\n<li>The Myerson payment identity at the interim level\n  ([[mechanism_design.myerson.payment_formula]]).</li>\n<li>The revenue-equivalence theorem\n  ([[mechanism_design.myerson.revenue_equivalence]]).</li>\n<li>Myerson's optimal auction\n  ([[mechanism_design.myerson.optimal_auction]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 12, Section 12.2] Maschler, Solan, and Zamir, <em>Game\n  Theory</em>, <code>references/GameTheory.pdf</code>. Interim quantities and BIC in\n  Bayesian auctions.</li>\n<li>[Krishna, Chapter 5] Vijay Krishna, <em>Auction Theory</em>, 2nd ed.,\n  <code>references/AuctionTheory.pdf</code>. Mechanism design with interim\n  allocation and payment functions.</li>\n<li>[AGT, Chapter 9, Section 9.5.4] Nisan, Roughgarden, Tardos, and\n  Vazirani, <em>Algorithmic Game Theory</em>,\n  <code>references/AlgorithmicGameTheory.pdf</code>. Interim allocation rule and\n  BIC for single-parameter mechanisms.</li>\n<li>[Myerson 1981, Section 2] Roger Myerson, \"Optimal Auction Design\",\n  <em>Math. Oper. Res.</em> 6(1):58–73. Canonical interim characterisation.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "auction.bayesian.single_item_framework",
+      "title": "Bayesian Single-Item Auction Framework",
+      "href": "auction/bayesian/auction_bayesian_single_item_framework.html"
+    },
+    {
+      "id": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "title": "Ex-Ante Expected Utility (Bayesian Mechanisms)",
+      "href": "mechanism_design/mechanism_design_bayesian_ex_ante_expected_utility.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "auction.bayesian.symmetric_first_price_equilibrium",
+      "title": "Symmetric IPV First-Price Equilibrium",
+      "href": "auction/auction_bayesian_symmetric_first_price_equilibrium.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "BayesianSingleItemAuction.reportProfile",
+      "display_name": "BayesianSingleItemAuction.reportProfile",
+      "qualified_name": "BayesianSingleItemAuction.reportProfile",
+      "module": "EconCSLib.Auction.BayesianSingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Auction/BayesianSingleItemAuction.lean#L152",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "BayesianSingleItemAuction.interimAllocProb",
+      "display_name": "BayesianSingleItemAuction.interimAllocProb",
+      "qualified_name": "BayesianSingleItemAuction.interimAllocProb",
+      "module": "EconCSLib.Auction.BayesianSingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Auction/BayesianSingleItemAuction.lean#L161",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "BayesianSingleItemAuction.interimExpectedPayment",
+      "display_name": "BayesianSingleItemAuction.interimExpectedPayment",
+      "qualified_name": "BayesianSingleItemAuction.interimExpectedPayment",
+      "module": "EconCSLib.Auction.BayesianSingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Auction/BayesianSingleItemAuction.lean#L169",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "BayesianSingleItemAuction.interimQuasiLinearUtility",
+      "display_name": "BayesianSingleItemAuction.interimQuasiLinearUtility",
+      "qualified_name": "BayesianSingleItemAuction.interimQuasiLinearUtility",
+      "module": "EconCSLib.Auction.BayesianSingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Auction/BayesianSingleItemAuction.lean#L177",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "BayesianSingleItemAuction.equilibriumPayoff",
+      "display_name": "BayesianSingleItemAuction.equilibriumPayoff",
+      "qualified_name": "BayesianSingleItemAuction.equilibriumPayoff",
+      "module": "EconCSLib.Auction.BayesianSingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Auction/BayesianSingleItemAuction.lean#L183",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "BayesianSingleItemAuction.IsIncentiveCompatible",
+      "display_name": "BayesianSingleItemAuction.IsIncentiveCompatible",
+      "qualified_name": "BayesianSingleItemAuction.IsIncentiveCompatible",
+      "module": "EconCSLib.Auction.BayesianSingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Auction/BayesianSingleItemAuction.lean#L189",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

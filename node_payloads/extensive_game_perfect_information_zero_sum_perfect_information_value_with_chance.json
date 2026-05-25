@@ -1,0 +1,32 @@
+{
+  "id": "extensive_game.perfect_information.zero_sum_perfect_information_value_with_chance",
+  "title": "Value In Finite Zero-Sum Perfect-Information Games (With Chance)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "extensive_game/perfect_information/extensive_game_perfect_information_zero_sum_perfect_information_value_with_chance.html",
+  "primary_topic": "extensive_game.perfect_information",
+  "topics": [
+    "extensive_game.perfect_information"
+  ],
+  "body_html": "<h1>Value In Finite Zero-Sum Perfect-Information Games (With Chance)</h1>\n<p>Every finite zero-sum perfect-information game <strong>with Nature / chance moves</strong>\nhas a value, and both players have pure optimal strategies. At a chance node,\nthe value equals the probability-weighted average of the successor subgame\nvalues.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Same forward / backward induction as\n[[zero_sum_perfect_information_value_no_chance]], with one extra case: at a\nNature node the value is the probability-weighted expectation over the\nsuccessor values. The minimax / maximin equality at player nodes is unaffected\nbecause expectation is linear and player choice still optimizes over a finite\nset.</p>\n<h2>Lean status</h2>\n<p>Not yet implemented. Tracked by <a href=\"https://github.com/gametheoryinlean/EconCSLib/issues/181\">EG-L3\n(#181)</a>. Target\nmodule is <code>EconCSLib.ExtensiveGame.StochasticGameTree</code>, requiring the vNM\ntheorem in <code>EconCSLib/Utility/Lottery.lean</code> for the general utility case;\nℚ-valued payoffs admit a direct port.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 6.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Original \"with or without Nature\" form.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
+      "title": "Value In Finite Zero-Sum Perfect-Information Games (No-Chance)",
+      "href": "extensive_game/extensive_game_perfect_information_zero_sum_perfect_information_value_no_chance.html"
+    },
+    {
+      "id": "extensive_game.core.nature_player",
+      "title": "Nature In Extensive Games",
+      "href": "extensive_game/extensive_game_core_nature_player.html"
+    },
+    {
+      "id": "zero_sum.core.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "zero_sum/zero_sum_core_value.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

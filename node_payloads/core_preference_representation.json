@@ -1,20 +1,21 @@
 {
-  "id": "utility.utility_representation",
+  "id": "core.preference.representation",
   "title": "Utility Representation",
   "kind": "definition",
   "status": "staged",
-  "href": "utility/utility_utility_representation.html",
-  "primary_topic": "utility",
+  "href": "core/core_preference_representation.html",
+  "primary_topic": "core",
   "topics": [
-    "utility"
+    "core",
+    "core.preference"
   ],
   "body_html": "<h1>Utility Representation</h1>\n<p>A utility function $u$ represents a preference relation if it preserves and\nreflects weak preference:\n$$\n  x \\le y \\quad\\text{if and only if}\\quad u(x)\\le u(y).\n$$</p>\n<p>Consequently, the same utility representation also preserves strict preference\nand indifference.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Def. 2.7] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Utility function represents a preference relation.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
-      "id": "utility.preference_relation",
+      "id": "core.preference.relation",
       "title": "Preference Relation (MSZ Ch.2 Narrative)",
-      "href": "utility/utility_preference_relation.html"
+      "href": "core/core_preference_relation.html"
     }
   ],
   "dependents": [
@@ -31,9 +32,9 @@
       "qualified_name": "RepresentsPreference",
       "module": "EconCSLib.Core.Preference",
       "repository_title": "EconCSLib",
-      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
-      "short_revision": "2b4f326",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/Core/Preference.lean#L102",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Core/Preference.lean#L102",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -44,9 +45,9 @@
       "qualified_name": "RepresentsPreference.lt_iff",
       "module": "EconCSLib.Core.Preference",
       "repository_title": "EconCSLib",
-      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
-      "short_revision": "2b4f326",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/Core/Preference.lean#L107",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Core/Preference.lean#L107",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -57,9 +58,9 @@
       "qualified_name": "RepresentsPreference.indifferent_iff",
       "module": "EconCSLib.Core.Preference",
       "repository_title": "EconCSLib",
-      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
-      "short_revision": "2b4f326",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/Core/Preference.lean#L113",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Core/Preference.lean#L113",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

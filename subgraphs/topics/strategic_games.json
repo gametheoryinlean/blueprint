@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 69,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 11,
+    "boundary_topics": 12,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 81,
-    "visible_nodes_with_selected_proof_plans": 81
+    "visible_nodes_without_proof_plans": 82,
+    "visible_nodes_with_selected_proof_plans": 82
   },
   "nodes": [
     {
@@ -1006,11 +1006,18 @@
       "node_count": 2
     },
     {
+      "id": "auction.basic",
+      "title": "Auction.Basic",
+      "href": "auction/basic/index.html",
+      "role": "dependent",
+      "node_count": 7
+    },
+    {
       "id": "extensive_game",
       "title": "Extensive Game",
       "href": "extensive_game/index.html",
       "role": "dependent",
-      "node_count": 51
+      "node_count": 53
     },
     {
       "id": "extensive_game.imperfect_information",
@@ -1132,6 +1139,13 @@
       "kind": "boundary_dependency",
       "topic": "strategic_games.correlated",
       "count": 1
+    },
+    {
+      "from": "strategic_games.weakly_dominant_strategy",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependent",
+      "topic": "auction.basic",
+      "count": 2
     },
     {
       "from": "strategic_games.nash_equilibrium",

@@ -4,22 +4,22 @@
     "title": "Core.Preference",
     "href": "core/preference/index.html",
     "parent": "core",
-    "node_count": 5,
-    "descendant_node_count": 5
+    "node_count": 7,
+    "descendant_node_count": 7
   },
   "counts": {
-    "internal_nodes": 5,
+    "internal_nodes": 7,
     "inlined_nodes": 0,
-    "descendant_nodes": 5,
+    "descendant_nodes": 7,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 5,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
     {
@@ -37,6 +37,22 @@
       "status": "formalized",
       "href": "core/core_preference_indifferent.html",
       "payload": "node_payloads/core_preference_indifferent.json"
+    },
+    {
+      "id": "core.preference.relation",
+      "title": "Preference Relation (MSZ Ch.2 Narrative)",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/core_preference_relation.html",
+      "payload": "node_payloads/core_preference_relation.json"
+    },
+    {
+      "id": "core.preference.representation",
+      "title": "Utility Representation",
+      "kind": "definition",
+      "status": "staged",
+      "href": "core/core_preference_representation.html",
+      "payload": "node_payloads/core_preference_representation.json"
     },
     {
       "id": "core.preference.represents_preference",
@@ -65,6 +81,31 @@
   ],
   "edges": [
     {
+      "from": "core.preference.abstract_relation",
+      "to": "core.preference.relation",
+      "kind": "uses"
+    },
+    {
+      "from": "core.preference.indifferent",
+      "to": "core.preference.relation",
+      "kind": "uses"
+    },
+    {
+      "from": "core.preference.strictly_preferred",
+      "to": "core.preference.relation",
+      "kind": "uses"
+    },
+    {
+      "from": "core.preference.total_preorder",
+      "to": "core.preference.relation",
+      "kind": "uses"
+    },
+    {
+      "from": "core.preference.relation",
+      "to": "core.preference.representation",
+      "kind": "uses"
+    },
+    {
       "from": "core.preference.indifferent",
       "to": "core.preference.represents_preference",
       "kind": "uses"
@@ -81,14 +122,14 @@
       "title": "Core",
       "href": "core/index.html",
       "role": "dependent",
-      "node_count": 19
+      "node_count": 21
     },
     {
       "id": "utility",
       "title": "Utility",
       "href": "utility/index.html",
       "role": "dependent",
-      "node_count": 9
+      "node_count": 7
     }
   ],
   "boundary_edges": [
@@ -100,28 +141,14 @@
       "count": 1
     },
     {
-      "from": "core.preference.abstract_relation",
+      "from": "core.preference.relation",
       "to": "topic:utility",
       "kind": "boundary_dependent",
       "topic": "utility",
       "count": 1
     },
     {
-      "from": "core.preference.indifferent",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 1
-    },
-    {
-      "from": "core.preference.strictly_preferred",
-      "to": "topic:utility",
-      "kind": "boundary_dependent",
-      "topic": "utility",
-      "count": 1
-    },
-    {
-      "from": "core.preference.total_preorder",
+      "from": "core.preference.representation",
       "to": "topic:utility",
       "kind": "boundary_dependent",
       "topic": "utility",
@@ -145,7 +172,7 @@
       "id": "preference",
       "title": "preference",
       "href": "keywords/preference.html",
-      "count": 5
+      "count": 7
     },
     {
       "id": "strict-preference",

@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 19,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 9,
+    "boundary_topics": 10,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 29,
-    "visible_nodes_with_selected_proof_plans": 29
+    "visible_nodes_without_proof_plans": 30,
+    "visible_nodes_with_selected_proof_plans": 30
   },
   "nodes": [
     {
@@ -298,7 +298,14 @@
       "title": "Core",
       "href": "core/index.html",
       "role": "dependency",
-      "node_count": 19
+      "node_count": 21
+    },
+    {
+      "id": "extensive_game",
+      "title": "Extensive Game",
+      "href": "extensive_game/index.html",
+      "role": "dependent",
+      "node_count": 53
     },
     {
       "id": "extensive_game.examples",
@@ -312,7 +319,7 @@
       "title": "Extensive Game.Perfect Information",
       "href": "extensive_game/perfect_information/index.html",
       "role": "dependent",
-      "node_count": 11
+      "node_count": 13
     },
     {
       "id": "repeated_game",
@@ -384,6 +391,13 @@
       "to": "zero_sum.mixed_matrix_payoff",
       "kind": "boundary_dependency",
       "topic": "strategic_games.core",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "topic:extensive_game",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game",
       "count": 1
     },
     {

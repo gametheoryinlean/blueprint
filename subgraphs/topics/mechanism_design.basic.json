@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -92,6 +92,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "auction.basic",
+      "title": "Auction.Basic",
+      "href": "auction/basic/index.html",
+      "role": "dependent",
+      "node_count": 7
+    },
+    {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
@@ -134,6 +141,13 @@
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependent",
+      "topic": "auction.basic",
+      "count": 2
     },
     {
       "from": "mechanism_design.basic.direct_mechanism_interface",

@@ -4,22 +4,22 @@
     "title": "Utility",
     "href": "utility/index.html",
     "parent": null,
-    "node_count": 9,
-    "descendant_node_count": 9
+    "node_count": 7,
+    "descendant_node_count": 7
   },
   "counts": {
-    "internal_nodes": 9,
-    "inlined_nodes": 8,
-    "descendant_nodes": 9,
+    "internal_nodes": 7,
+    "inlined_nodes": 7,
+    "descendant_nodes": 7,
     "child_topics": 0,
-    "inlined_child_topics": 8,
-    "non_proof_plan_nodes": 9,
+    "inlined_child_topics": 7,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -47,14 +47,6 @@
       "payload": "node_payloads/utility_positive_affine_uniqueness.json"
     },
     {
-      "id": "utility.preference_relation",
-      "title": "Preference Relation (MSZ Ch.2 Narrative)",
-      "kind": "definition",
-      "status": "staged",
-      "href": "utility/utility_preference_relation.html",
-      "payload": "node_payloads/utility_preference_relation.json"
-    },
-    {
       "id": "utility.risk_neutrality",
       "title": "Risk Neutrality",
       "kind": "theorem",
@@ -69,14 +61,6 @@
       "status": "staged",
       "href": "utility/utility_sure_thing_principle.html",
       "payload": "node_payloads/utility_sure_thing_principle.json"
-    },
-    {
-      "id": "utility.utility_representation",
-      "title": "Utility Representation",
-      "kind": "definition",
-      "status": "staged",
-      "href": "utility/utility_utility_representation.html",
-      "payload": "node_payloads/utility_utility_representation.json"
     },
     {
       "id": "utility.vnm_axiom_independence",
@@ -97,18 +81,8 @@
   ],
   "edges": [
     {
-      "from": "utility.utility_representation",
-      "to": "utility.expected_utility_representation",
-      "kind": "uses"
-    },
-    {
       "from": "utility.vnm_axioms",
       "to": "utility.expected_utility_representation",
-      "kind": "uses"
-    },
-    {
-      "from": "utility.preference_relation",
-      "to": "utility.lottery",
       "kind": "uses"
     },
     {
@@ -124,11 +98,6 @@
     {
       "from": "utility.vnm_axioms",
       "to": "utility.sure_thing_principle",
-      "kind": "uses"
-    },
-    {
-      "from": "utility.preference_relation",
-      "to": "utility.utility_representation",
       "kind": "uses"
     },
     {
@@ -148,16 +117,23 @@
       "title": "Core",
       "href": "core/index.html",
       "role": "dependency",
-      "node_count": 19
+      "node_count": 21
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:core",
-      "to": "utility.preference_relation",
+      "to": "utility.expected_utility_representation",
       "kind": "boundary_dependency",
       "topic": "core",
-      "count": 4
+      "count": 1
+    },
+    {
+      "from": "topic:core",
+      "to": "utility.lottery",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 1
     }
   ],
   "keywords": [
@@ -192,12 +168,6 @@
       "count": 2
     },
     {
-      "id": "preference",
-      "title": "preference",
-      "href": "keywords/preference.html",
-      "count": 2
-    },
-    {
       "id": "risk",
       "title": "risk",
       "href": "keywords/risk.html",
@@ -207,7 +177,7 @@
       "id": "utility",
       "title": "utility",
       "href": "keywords/utility.html",
-      "count": 9
+      "count": 7
     },
     {
       "id": "vnm",
@@ -228,7 +198,6 @@
     "utility.positive_affine_uniqueness",
     "utility.risk_neutrality",
     "utility.sure_thing_principle",
-    "utility.utility_representation",
     "utility.vnm_axiom_independence",
     "utility.vnm_axioms"
   ]

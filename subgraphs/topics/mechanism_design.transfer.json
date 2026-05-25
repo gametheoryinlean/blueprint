@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 7,
-    "visible_nodes_with_selected_proof_plans": 7
+    "visible_nodes_without_proof_plans": 8,
+    "visible_nodes_with_selected_proof_plans": 8
   },
   "nodes": [
     {
@@ -65,7 +65,14 @@
       "title": "Auction.Basic",
       "href": "auction/basic/index.html",
       "role": "dependent",
-      "node_count": 3
+      "node_count": 7
+    },
+    {
+      "id": "auction.bayesian",
+      "title": "Auction.Bayesian",
+      "href": "auction/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 8
     },
     {
       "id": "auction.knapsack",
@@ -91,10 +98,24 @@
       "count": 3
     },
     {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependent",
+      "topic": "auction.basic",
+      "count": 3
+    },
+    {
       "from": "mechanism_design.transfer.single_parameter_transfer_layer",
       "to": "topic:auction.basic",
       "kind": "boundary_dependent",
       "topic": "auction.basic",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "topic:auction.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "auction.bayesian",
       "count": 1
     },
     {

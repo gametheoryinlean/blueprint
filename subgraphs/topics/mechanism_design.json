@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 25,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 29,
-    "visible_nodes_with_selected_proof_plans": 29
+    "visible_nodes_without_proof_plans": 31,
+    "visible_nodes_with_selected_proof_plans": 31
   },
   "nodes": [
     {
@@ -447,11 +447,25 @@
   ],
   "boundary_topics": [
     {
+      "id": "auction",
+      "title": "Auction",
+      "href": "auction/index.html",
+      "role": "dependent",
+      "node_count": 19
+    },
+    {
       "id": "auction.basic",
       "title": "Auction.Basic",
       "href": "auction/basic/index.html",
       "role": "dependent",
-      "node_count": 3
+      "node_count": 7
+    },
+    {
+      "id": "auction.bayesian",
+      "title": "Auction.Bayesian",
+      "href": "auction/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 8
     },
     {
       "id": "auction.knapsack",
@@ -498,6 +512,41 @@
       "count": 1
     },
     {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.reserve_price",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "topic:auction",
+      "kind": "boundary_dependent",
+      "topic": "auction",
+      "count": 2
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependent",
+      "topic": "auction.basic",
+      "count": 2
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "topic:auction.basic",
+      "kind": "boundary_dependent",
+      "topic": "auction.basic",
+      "count": 3
+    },
+    {
       "from": "mechanism_design.transfer.single_parameter_transfer_layer",
       "to": "topic:auction.basic",
       "kind": "boundary_dependent",
@@ -505,7 +554,35 @@
       "count": 1
     },
     {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "topic:auction.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "auction.bayesian",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "topic:auction.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "auction.bayesian",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "topic:auction.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "auction.bayesian",
+      "count": 1
+    },
+    {
       "from": "mechanism_design.myerson.monotonicity_characterization",
+      "to": "topic:auction.knapsack",
+      "kind": "boundary_dependent",
+      "topic": "auction.knapsack",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
       "to": "topic:auction.knapsack",
       "kind": "boundary_dependent",
       "topic": "auction.knapsack",

@@ -21,18 +21,19 @@
       "title": "Auction",
       "depth": 1,
       "parent": null,
-      "node_count": 7,
-      "direct_node_count": 0,
+      "node_count": 19,
+      "direct_node_count": 6,
       "kind_counts": {
-        "definition": 5,
-        "theorem": 2
+        "definition": 9,
+        "theorem": 10
       },
       "status_counts": {
-        "staged": 7
+        "staged": 19
       },
       "href": "auction/index.html",
       "children": [
         "auction.basic",
+        "auction.bayesian",
         "auction.knapsack"
       ]
     },
@@ -41,15 +42,16 @@
       "title": "Core",
       "depth": 1,
       "parent": null,
-      "node_count": 19,
-      "direct_node_count": 18,
+      "node_count": 21,
+      "direct_node_count": 20,
       "kind_counts": {
-        "definition": 10,
+        "definition": 12,
         "lemma": 4,
         "theorem": 5
       },
       "status_counts": {
-        "formalized": 19
+        "formalized": 19,
+        "staged": 2
       },
       "href": "core/index.html",
       "children": [
@@ -66,16 +68,16 @@
       "title": "Extensive Game",
       "depth": 1,
       "parent": null,
-      "node_count": 51,
-      "direct_node_count": 19,
+      "node_count": 53,
+      "direct_node_count": 21,
       "kind_counts": {
         "definition": 30,
         "example": 4,
         "proposition": 4,
-        "theorem": 13
+        "theorem": 15
       },
       "status_counts": {
-        "formalized": 19,
+        "formalized": 21,
         "staged": 32
       },
       "href": "extensive_game/index.html",
@@ -268,14 +270,14 @@
       "title": "Utility",
       "depth": 1,
       "parent": null,
-      "node_count": 9,
-      "direct_node_count": 9,
+      "node_count": 7,
+      "direct_node_count": 7,
       "kind_counts": {
-        "definition": 4,
+        "definition": 2,
         "theorem": 5
       },
       "status_counts": {
-        "staged": 9
+        "staged": 7
       },
       "href": "utility/index.html",
       "children": []
@@ -323,7 +325,7 @@
     {
       "from": "core",
       "to": "utility",
-      "count": 4
+      "count": 2
     },
     {
       "from": "core",
@@ -348,7 +350,12 @@
     {
       "from": "mechanism_design",
       "to": "auction",
-      "count": 3
+      "count": 16
+    },
+    {
+      "from": "strategic_games",
+      "to": "auction",
+      "count": 2
     },
     {
       "from": "strategic_games",
@@ -378,7 +385,7 @@
     {
       "from": "zero_sum",
       "to": "extensive_game",
-      "count": 3
+      "count": 4
     },
     {
       "from": "zero_sum",

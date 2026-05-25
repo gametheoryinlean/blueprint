@@ -9,7 +9,7 @@
     "core",
     "core.preference"
   ],
-  "body_html": "<h1>Utility Representation of a Preference</h1>\n<p>Given preorders on <code>α</code> and <code>β</code>, a function <code>u : α → β</code> <em>represents</em> the\npreference <code>≤</code> on <code>α</code> when it preserves and reflects weak preference:\n$$\n  \\forall a,\\,b,\\quad a \\le b \\;\\Longleftrightarrow\\; u(a) \\le u(b).\n$$</p>\n<p>A representation automatically preserves the derived strict preference and\nindifference relations, witnessed by <code>RepresentsPreference.lt_iff</code> and\n<code>RepresentsPreference.indifferent_iff</code>. This is the abstract scaffolding used\nby ordinal-utility statements in utility theory (<a class=\"node-ref\" data-node-id=\"utility.utility_representation\" href=\"../utility/utility_utility_representation.html\"><code>utility.utility_representation</code></a>)\nand by vNM-style expected-utility theorems.</p>\n<p>In Lean this is <code>structure RepresentsPreference (u : α → β) : Prop</code> carrying\nthe single field <code>le_iff</code>. The two derived <code>iff</code> lemmas are stated and proved\ndirectly from <code>le_iff</code> using the Mathlib <code>Preorder</code> API.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Def. 2.7] Maschler, Solan, and Zamir,\n  <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Utility representation of a\n  preference relation.</li>\n</ul>",
+  "body_html": "<h1>Utility Representation of a Preference</h1>\n<p>Given preorders on <code>α</code> and <code>β</code>, a function <code>u : α → β</code> <em>represents</em> the\npreference <code>≤</code> on <code>α</code> when it preserves and reflects weak preference:\n$$\n  \\forall a,\\,b,\\quad a \\le b \\;\\Longleftrightarrow\\; u(a) \\le u(b).\n$$</p>\n<p>A representation automatically preserves the derived strict preference and\nindifference relations, witnessed by <code>RepresentsPreference.lt_iff</code> and\n<code>RepresentsPreference.indifferent_iff</code>. This is the abstract scaffolding used\nby ordinal-utility statements in utility theory (<a class=\"node-ref\" data-node-id=\"core.preference.representation\" href=\"preference/core_preference_representation.html\"><code>core.preference.representation</code></a>)\nand by vNM-style expected-utility theorems.</p>\n<p>In Lean this is <code>structure RepresentsPreference (u : α → β) : Prop</code> carrying\nthe single field <code>le_iff</code>. The two derived <code>iff</code> lemmas are stated and proved\ndirectly from <code>le_iff</code> using the Mathlib <code>Preorder</code> API.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Def. 2.7] Maschler, Solan, and Zamir,\n  <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Utility representation of a\n  preference relation.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -31,9 +31,9 @@
       "qualified_name": "RepresentsPreference",
       "module": "EconCSLib.Core.Preference",
       "repository_title": "EconCSLib",
-      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
-      "short_revision": "2b4f326",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/Core/Preference.lean#L102",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Core/Preference.lean#L102",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -44,9 +44,9 @@
       "qualified_name": "RepresentsPreference.lt_iff",
       "module": "EconCSLib.Core.Preference",
       "repository_title": "EconCSLib",
-      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
-      "short_revision": "2b4f326",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/Core/Preference.lean#L107",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Core/Preference.lean#L107",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -57,9 +57,9 @@
       "qualified_name": "RepresentsPreference.indifferent_iff",
       "module": "EconCSLib.Core.Preference",
       "repository_title": "EconCSLib",
-      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
-      "short_revision": "2b4f326",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/Core/Preference.lean#L113",
+      "revision": "95fbde2fdbda55dc04089edfa4eccd84cc55552b",
+      "short_revision": "95fbde2",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/95fbde2fdbda55dc04089edfa4eccd84cc55552b/EconCSLib/Core/Preference.lean#L113",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
