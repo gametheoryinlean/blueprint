@@ -141,11 +141,6 @@
       "kind": "uses"
     },
     {
-      "from": "strategic_games.correlated.correlated_equilibrium",
-      "to": "strategic_games.correlated.correlated_equilibrium_exists",
-      "kind": "uses"
-    },
-    {
       "from": "strategic_games.correlated.nash_induces_correlated_equilibrium",
       "to": "strategic_games.correlated.correlated_equilibrium_exists",
       "kind": "uses"
@@ -177,21 +172,21 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.core",
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
       "role": "dependency",
-      "node_count": 10
+      "node_count": 6
     },
     {
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency",
-      "node_count": 11
+      "node_count": 10
     },
     {
       "id": "strategic_games.learning",
@@ -205,13 +200,6 @@
     {
       "from": "topic:strategic_games",
       "to": "strategic_games.correlated.best_response_face",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.correlated.canonical_correlation_device",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
@@ -242,7 +230,7 @@
       "to": "strategic_games.correlated.mediated_game",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
-      "count": 2
+      "count": 1
     },
     {
       "from": "topic:strategic_games",
@@ -253,21 +241,7 @@
     },
     {
       "from": "topic:strategic_games.core",
-      "to": "strategic_games.correlated.best_response_face",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.core",
       "to": "strategic_games.correlated.canonical_correlation_device",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.core",
-      "to": "strategic_games.correlated.correlated_best_response_not_independent",
       "kind": "boundary_dependency",
       "topic": "strategic_games.core",
       "count": 1
@@ -305,7 +279,7 @@
       "to": "topic:strategic_games.learning",
       "kind": "boundary_dependent",
       "topic": "strategic_games.learning",
-      "count": 2
+      "count": 1
     }
   ],
   "keywords": [

@@ -1025,11 +1025,6 @@
   ],
   "edges": [
     {
-      "from": "social_choice.fair_division.allocation",
-      "to": "social_choice.fair_division.cardinal_instance",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.share_instance",
       "to": "social_choice.fair_division.cardinal_instance",
       "kind": "uses"
@@ -1120,17 +1115,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_ef_exists",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.cut_and_choose_envy_free",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_ef_exists",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
       "to": "social_choice.fair_division.divisible.cut_and_choose_ef_exists",
       "kind": "uses"
     },
@@ -1147,16 +1132,6 @@
     {
       "from": "social_choice.fair_division.divisible.cutter_envy_free_of_fair",
       "to": "social_choice.fair_division.divisible.cut_and_choose_envy_free",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_envy_free",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_partition",
       "kind": "uses"
     },
     {
@@ -1185,11 +1160,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.ds_step",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.cut_exists",
       "to": "social_choice.fair_division.divisible.ds_step",
       "kind": "uses"
@@ -1197,25 +1167,10 @@
     {
       "from": "social_choice.fair_division.divisible.envy_free",
       "to": "social_choice.fair_division.divisible.ds_step",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.dubins_spanier_proportional",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.cut_exists",
-      "to": "social_choice.fair_division.divisible.dubins_spanier_proportional",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.divisible.ds_step",
-      "to": "social_choice.fair_division.divisible.dubins_spanier_proportional",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
       "to": "social_choice.fair_division.divisible.dubins_spanier_proportional",
       "kind": "uses"
     },
@@ -1230,22 +1185,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.ef_exists",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.ef_exists",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.stromquist_unusual_case",
-      "to": "social_choice.fair_division.divisible.ef_exists",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_usual_case",
       "to": "social_choice.fair_division.divisible.ef_exists",
       "kind": "uses"
     },
@@ -1257,11 +1197,6 @@
     {
       "from": "social_choice.fair_division.divisible.ef_implies_proportional",
       "to": "social_choice.fair_division.divisible.ef_exists_and_proportional",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.ef_implies_proportional",
       "kind": "uses"
     },
     {
@@ -1295,11 +1230,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.measure_instance",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.cardinal_instance",
       "to": "social_choice.fair_division.divisible.measure_instance",
       "kind": "uses"
@@ -1315,18 +1245,8 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.cardinal_instance",
-      "to": "social_choice.fair_division.divisible.measure_instance_ef_iff_real",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.measure_instance",
       "to": "social_choice.fair_division.divisible.measure_instance_ef_iff_real",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.ef_exists",
-      "to": "social_choice.fair_division.divisible.measure_instance_existence",
       "kind": "uses"
     },
     {
@@ -1350,11 +1270,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.cake_valuation",
-      "to": "social_choice.fair_division.divisible.normalized_iff_probability",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.measure_valuation",
       "to": "social_choice.fair_division.divisible.normalized_iff_probability",
       "kind": "uses"
@@ -1365,28 +1280,8 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.preference",
-      "to": "social_choice.fair_division.divisible.ordinal_instance",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.proportional_exists",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.dubins_spanier_proportional",
       "to": "social_choice.fair_division.divisible.proportional_exists",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.proportional_exists",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_pieces",
-      "to": "social_choice.fair_division.divisible.stromquist_U",
       "kind": "uses"
     },
     {
@@ -1405,18 +1300,8 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.divisible.stromquist_pieces",
-      "to": "social_choice.fair_division.divisible.stromquist_assignment",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.divisible.allocation",
       "to": "social_choice.fair_division.divisible.stromquist_pieces",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_pieces",
-      "to": "social_choice.fair_division.divisible.stromquist_preference_sets",
       "kind": "uses"
     },
     {
@@ -1431,22 +1316,7 @@
     },
     {
       "from": "social_choice.fair_division.divisible.stromquist_preference_sets",
-      "to": "social_choice.fair_division.divisible.stromquist_shifted_cells",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_preference_sets",
       "to": "social_choice.fair_division.divisible.stromquist_unique_preference_sets",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_value_continuous",
-      "to": "social_choice.fair_division.divisible.stromquist_unique_preference_sets",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.stromquist_unusual_case",
       "kind": "uses"
     },
     {
@@ -1457,16 +1327,6 @@
     {
       "from": "social_choice.fair_division.divisible.stromquist_usual_case",
       "to": "social_choice.fair_division.divisible.stromquist_unusual_case",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.stromquist_usual_case",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_U",
-      "to": "social_choice.fair_division.divisible.stromquist_usual_case",
       "kind": "uses"
     },
     {
@@ -1482,16 +1342,6 @@
     {
       "from": "social_choice.fair_division.divisible.stromquist_pieces",
       "to": "social_choice.fair_division.divisible.stromquist_value_continuous",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.egalitarian_welfare",
-      "to": "social_choice.fair_division.egal_le_util",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.utilitarian_welfare",
-      "to": "social_choice.fair_division.egal_le_util",
       "kind": "uses"
     },
     {
@@ -1515,11 +1365,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envies",
-      "to": "social_choice.fair_division.indivisible.acyclic_has_source",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_cycle",
       "to": "social_choice.fair_division.indivisible.acyclic_has_source",
       "kind": "uses"
@@ -1537,16 +1382,6 @@
     {
       "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.additive_valuation",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.is_alpha_mms",
-      "to": "social_choice.fair_division.indivisible.alpha_mms_mono",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.maximin_share",
-      "to": "social_choice.fair_division.indivisible.alpha_mms_mono",
       "kind": "uses"
     },
     {
@@ -1600,27 +1435,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.checker",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.proportional",
       "to": "social_choice.fair_division.indivisible.checker",
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.ef1",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.ef1",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.ef1",
       "kind": "uses"
     },
@@ -1630,17 +1450,7 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.ef_implies_efx_mono",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
       "to": "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
       "kind": "uses"
     },
@@ -1655,47 +1465,17 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
       "to": "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.valuation",
-      "to": "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.efx",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.efx",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.efx",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.efx_exists_two_agents",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.efx_exists_two_agents",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.efx",
       "to": "social_choice.fair_division.indivisible.efx_exists_two_agents",
       "kind": "uses"
     },
@@ -1721,41 +1501,11 @@
     },
     {
       "from": "social_choice.fair_division.indivisible.efx",
-      "to": "social_choice.fair_division.indivisible.efx_of_no_envy_mono",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.efx_of_no_envy_mono",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
       "to": "social_choice.fair_division.indivisible.efx_singleton_bundle",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.efx",
-      "to": "social_choice.fair_division.indivisible.efx_singleton_bundle",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
-      "to": "social_choice.fair_division.indivisible.efx_singleton_bundle",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.indivisible.efx_singleton_bundle",
-      "to": "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
       "kind": "uses"
     },
@@ -1775,27 +1525,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envy_cycle",
-      "to": "social_choice.fair_division.indivisible.eliminate_all_cycles",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.pareto_dom_count",
       "to": "social_choice.fair_division.indivisible.eliminate_all_cycles",
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.rotate_bundles",
-      "to": "social_choice.fair_division.indivisible.eliminate_all_cycles",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.envies",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.envies",
       "kind": "uses"
     },
@@ -1810,18 +1545,8 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.envy_cycle_algorithm",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.eliminate_all_cycles",
       "to": "social_choice.fair_division.indivisible.envy_cycle_algorithm",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.envy_cycle_ef1",
       "kind": "uses"
     },
     {
@@ -1865,11 +1590,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.is_alpha_mms",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.mms_value",
       "to": "social_choice.fair_division.indivisible.is_alpha_mms",
       "kind": "uses"
@@ -1891,11 +1611,6 @@
     },
     {
       "from": "social_choice.fair_division.indivisible.maximin_share",
-      "to": "social_choice.fair_division.indivisible.mms_iff_alpha_one",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.mms_value",
       "to": "social_choice.fair_division.indivisible.mms_iff_alpha_one",
       "kind": "uses"
     },
@@ -1927,16 +1642,6 @@
     {
       "from": "social_choice.fair_division.share_instance",
       "to": "social_choice.fair_division.indivisible.ordinal_instance",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.preference",
-      "to": "social_choice.fair_division.indivisible.ordinal_instance",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.pareto_dom_count",
       "kind": "uses"
     },
     {
@@ -1975,11 +1680,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.proportional_alpha_mms_additive",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.is_alpha_mms",
       "to": "social_choice.fair_division.indivisible.proportional_alpha_mms_additive",
       "kind": "uses"
@@ -2010,18 +1710,8 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.rotate_bundles",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_cycle",
       "to": "social_choice.fair_division.indivisible.rotate_bundles",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.round_robin_alloc",
       "kind": "uses"
     },
     {
@@ -2035,28 +1725,13 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.round_robin_ef1",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.ef1",
-      "to": "social_choice.fair_division.indivisible.round_robin_ef1",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.round_robin_alloc",
       "to": "social_choice.fair_division.indivisible.round_robin_ef1",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.indivisible.round_robin_partition",
       "to": "social_choice.fair_division.indivisible.round_robin_ef1",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.round_robin_partition",
       "kind": "uses"
     },
     {
@@ -2100,23 +1775,8 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.fair_division.allocation",
-      "to": "social_choice.fair_division.share_instance",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.instance",
       "to": "social_choice.fair_division.share_instance",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.preference",
-      "to": "social_choice.fair_division.share_instance",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.allocation",
-      "to": "social_choice.fair_division.solution_concept",
       "kind": "uses"
     },
     {
@@ -2131,11 +1791,6 @@
     },
     {
       "from": "social_choice.fair_division.cardinal_instance",
-      "to": "social_choice.fair_division.utility_represents",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.share_instance",
       "to": "social_choice.fair_division.utility_represents",
       "kind": "uses"
     },
@@ -2176,46 +1831,11 @@
     },
     {
       "from": "social_choice.voting.dictatorial_swf",
-      "to": "social_choice.voting.arrow_impossibility",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.arrow_impossibility",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.swf",
-      "to": "social_choice.voting.arrow_impossibility",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
-      "to": "social_choice.voting.arrow_impossibility",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.dictatorial_swf",
-      "to": "social_choice.voting.arrow_of_unanimity_iia",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.arrow_of_unanimity_iia",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.is_decisive",
       "to": "social_choice.voting.arrow_of_unanimity_iia",
       "kind": "uses"
     },
     {
       "from": "social_choice.voting.minimal_decisive_card_one",
-      "to": "social_choice.voting.arrow_of_unanimity_iia",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
       "to": "social_choice.voting.arrow_of_unanimity_iia",
       "kind": "uses"
     },
@@ -2236,37 +1856,12 @@
     },
     {
       "from": "social_choice.voting.majority_prefers",
-      "to": "social_choice.voting.condorcet_paradox",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.majority_prefers",
       "to": "social_choice.voting.condorcet_winner",
       "kind": "uses"
     },
     {
       "from": "social_choice.voting.decisive_spread",
       "to": "social_choice.voting.decisive_contraction",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.decisive_contraction",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.is_decisive",
-      "to": "social_choice.voting.decisive_contraction",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
-      "to": "social_choice.voting.decisive_contraction",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.decisive_spread",
       "kind": "uses"
     },
     {
@@ -2310,32 +1905,12 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.voting.dictatorial_scf",
-      "to": "social_choice.voting.gibbard_satterthwaite",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.voting.muller_satterthwaite",
       "to": "social_choice.voting.gibbard_satterthwaite",
       "kind": "uses"
     },
     {
-      "from": "social_choice.voting.scf",
-      "to": "social_choice.voting.gibbard_satterthwaite",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.strategyproof",
-      "to": "social_choice.voting.gibbard_satterthwaite",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.voting.strategyproof_implies_monotonic",
-      "to": "social_choice.voting.gibbard_satterthwaite",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
       "to": "social_choice.voting.gibbard_satterthwaite",
       "kind": "uses"
     },
@@ -2390,11 +1965,6 @@
       "kind": "uses"
     },
     {
-      "from": "social_choice.voting.is_decisive",
-      "to": "social_choice.voting.minimal_decisive_card_one",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.voting.unanimity_univ_decisive",
       "to": "social_choice.voting.minimal_decisive_card_one",
       "kind": "uses"
@@ -2421,16 +1991,6 @@
     },
     {
       "from": "social_choice.voting.monotonic_scf",
-      "to": "social_choice.voting.muller_satterthwaite",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.scf",
-      "to": "social_choice.voting.muller_satterthwaite",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
       "to": "social_choice.voting.muller_satterthwaite",
       "kind": "uses"
     },
@@ -2467,11 +2027,6 @@
     {
       "from": "social_choice.voting.strategyproof",
       "to": "social_choice.voting.strategyproof_implies_monotonic",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.preference",
-      "to": "social_choice.voting.swf",
       "kind": "uses"
     },
     {

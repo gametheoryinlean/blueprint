@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 9,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 25,
-    "visible_nodes_with_selected_proof_plans": 25
+    "visible_nodes_without_proof_plans": 24,
+    "visible_nodes_with_selected_proof_plans": 24
   },
   "nodes": [
     {
@@ -156,11 +156,6 @@
     },
     {
       "from": "strategic_games.refinements.reny_solution",
-      "to": "strategic_games.refinements.approximate_solution_is_reny",
-      "kind": "uses"
-    },
-    {
-      "from": "strategic_games.refinements.reny_solution",
       "to": "strategic_games.refinements.better_reply_secure_game",
       "kind": "uses"
     },
@@ -205,18 +200,8 @@
       "kind": "uses"
     },
     {
-      "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "strategic_games.refinements.proper_equilibrium_exists",
-      "kind": "uses"
-    },
-    {
       "from": "strategic_games.refinements.proper_equilibrium",
       "to": "strategic_games.refinements.proper_equilibrium_exists",
-      "kind": "uses"
-    },
-    {
-      "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "strategic_games.refinements.proper_vs_perfect_equilibrium_examples",
       "kind": "uses"
     },
     {
@@ -236,13 +221,6 @@
     }
   ],
   "boundary_topics": [
-    {
-      "id": "extensive_game.examples",
-      "title": "Extensive Game.Examples",
-      "href": "extensive_game/examples/index.html",
-      "role": "dependent",
-      "node_count": 6
-    },
     {
       "id": "extensive_game.imperfect_information",
       "title": "Extensive Game.Imperfect Information",
@@ -269,7 +247,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.continuous",
@@ -283,7 +261,7 @@
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
       "role": "dependency",
-      "node_count": 10
+      "node_count": 6
     },
     {
       "id": "strategic_games.dominance",
@@ -297,7 +275,7 @@
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency",
-      "node_count": 11
+      "node_count": 10
     }
   ],
   "boundary_edges": [
@@ -344,13 +322,6 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.core",
-      "to": "strategic_games.refinements.epsilon_proper_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
       "from": "topic:strategic_games.dominance",
       "to": "strategic_games.refinements.perfect_equilibrium_undominated_two_player",
       "kind": "boundary_dependency",
@@ -390,13 +361,6 @@
       "to": "strategic_games.refinements.strict_equilibrium_is_proper",
       "kind": "boundary_dependency",
       "topic": "strategic_games.equilibrium",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "topic:extensive_game.examples",
-      "kind": "boundary_dependent",
-      "topic": "extensive_game.examples",
       "count": 1
     },
     {

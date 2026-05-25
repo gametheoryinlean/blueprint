@@ -15,11 +15,6 @@
   "proof_html": "<p>sketch</p>\n<p>Standard finite-DAG argument: an irreflexive relation on a finite\nnonempty set with no cycles must have a minimal element. The Lean proof\nshows the contrapositive — if no agent is a source, follow envy edges\nbackwards from any starting agent; by finiteness and the pigeonhole\nprinciple, eventually the path revisits an agent, producing a cycle.</p>\n<h2>Computable witness</h2>\n<p><code>findSource</code> (noncomputable) — a deterministic procedure that returns\nan agent guaranteed to be a source whenever one exists. The companion\ncorrectness lemma <code>findSource_isSource</code> shows that the returned agent\nsatisfies <code>isSource</code>.</p>\n<h2>Use in the algorithm</h2>\n<p>After <code>eliminateAllCycles</code>\n([[social_choice.fair_division.indivisible.eliminate_all_cycles]])\nremoves all envy cycles, this theorem guarantees that some agent is a\nsource. That agent receives the next item to assign, ensuring no fresh\nenvy is created against them. This is the key invariant used in\nproving EF1 of the envy-cycle algorithm\n([[social_choice.fair_division.indivisible.envy_cycle_ef1]]).</p>\n<h2>References</h2>\n<ul>\n<li>Lipton, Markakis, Mossel, and Saberi (2004). \"On Approximately Fair Allocations of Indivisible Goods\". <em>EC</em>. Source existence in acyclic envy graphs.</li>\n</ul>",
   "deps": [
     {
-      "id": "social_choice.fair_division.indivisible.envies",
-      "title": "Envy Relation and Sources",
-      "href": "social_choice/social_choice_fair_division_indivisible_envies.html"
-    },
-    {
       "id": "social_choice.fair_division.indivisible.envy_cycle",
       "title": "Envy Cycle",
       "href": "social_choice/social_choice_fair_division_indivisible_envy_cycle.html"
@@ -39,9 +34,9 @@
       "qualified_name": "SocialChoice.FairDivision.Indivisible.acyclic_has_source",
       "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle",
       "repository_title": "EconCSLib",
-      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
-      "short_revision": "609636f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L580",
+      "revision": "0cf299c0e132e56c10a6463376c72b03911aa3fa",
+      "short_revision": "0cf299c",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0cf299c0e132e56c10a6463376c72b03911aa3fa/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L580",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -52,9 +47,9 @@
       "qualified_name": "SocialChoice.FairDivision.Indivisible.findSource",
       "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle",
       "repository_title": "EconCSLib",
-      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
-      "short_revision": "609636f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L632",
+      "revision": "0cf299c0e132e56c10a6463376c72b03911aa3fa",
+      "short_revision": "0cf299c",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0cf299c0e132e56c10a6463376c72b03911aa3fa/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L632",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -65,9 +60,9 @@
       "qualified_name": "SocialChoice.FairDivision.Indivisible.findSource_isSource",
       "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle",
       "repository_title": "EconCSLib",
-      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
-      "short_revision": "609636f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L638",
+      "revision": "0cf299c0e132e56c10a6463376c72b03911aa3fa",
+      "short_revision": "0cf299c",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0cf299c0e132e56c10a6463376c72b03911aa3fa/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L638",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

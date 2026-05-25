@@ -4,32 +4,24 @@
     "title": "Strategic Games.Core",
     "href": "strategic_games/core/index.html",
     "parent": "strategic_games",
-    "node_count": 10,
-    "descendant_node_count": 10
+    "node_count": 6,
+    "descendant_node_count": 6
   },
   "counts": {
-    "internal_nodes": 10,
+    "internal_nodes": 6,
     "inlined_nodes": 0,
-    "descendant_nodes": 10,
+    "descendant_nodes": 6,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 10,
+    "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 11,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 22,
-    "visible_nodes_with_selected_proof_plans": 22
+    "visible_nodes_without_proof_plans": 18,
+    "visible_nodes_with_selected_proof_plans": 18
   },
   "nodes": [
-    {
-      "id": "strategic_games.core.best_response_mfogt",
-      "title": "Best Response",
-      "kind": "definition",
-      "status": "staged",
-      "href": "strategic_games/core/strategic_games_core_best_response_mfogt.html",
-      "payload": "node_payloads/strategic_games_core_best_response_mfogt.json"
-    },
     {
       "id": "strategic_games.core.br_invariance",
       "title": "Best-Response Invariance",
@@ -71,36 +63,12 @@
       "payload": "node_payloads/strategic_games_core_mixed_strategy_mfogt.json"
     },
     {
-      "id": "strategic_games.core.strategic_game_mfogt",
-      "title": "Strategic Game In Normal Form",
-      "kind": "definition",
-      "status": "staged",
-      "href": "strategic_games/core/strategic_games_core_strategic_game_mfogt.html",
-      "payload": "node_payloads/strategic_games_core_strategic_game_mfogt.json"
-    },
-    {
-      "id": "strategic_games.core.strategy_profile_mfogt",
-      "title": "Strategy Profile",
-      "kind": "definition",
-      "status": "staged",
-      "href": "strategic_games/core/strategic_games_core_strategy_profile_mfogt.html",
-      "payload": "node_payloads/strategic_games_core_strategy_profile_mfogt.json"
-    },
-    {
       "id": "strategic_games.core.symmetric_game",
       "title": "Symmetric Game",
       "kind": "definition",
       "status": "staged",
       "href": "strategic_games/core/strategic_games_core_symmetric_game.html",
       "payload": "node_payloads/strategic_games_core_symmetric_game.json"
-    },
-    {
-      "id": "strategic_games.core.unilateral_deviation_mfogt",
-      "title": "Unilateral Deviation",
-      "kind": "definition",
-      "status": "staged",
-      "href": "strategic_games/core/strategic_games_core_unilateral_deviation_mfogt.html",
-      "payload": "node_payloads/strategic_games_core_unilateral_deviation_mfogt.json"
     }
   ],
   "edges": [
@@ -123,7 +91,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.bayesian",
@@ -158,7 +126,7 @@
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependent",
-      "node_count": 11
+      "node_count": 10
     },
     {
       "id": "strategic_games.evolution",
@@ -192,13 +160,6 @@
   "boundary_edges": [
     {
       "from": "topic:strategic_games",
-      "to": "strategic_games.core.best_response_mfogt",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
       "to": "strategic_games.core.br_invariance",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
@@ -227,21 +188,7 @@
     },
     {
       "from": "topic:strategic_games",
-      "to": "strategic_games.core.strategy_profile_mfogt",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
       "to": "strategic_games.core.symmetric_game",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.core.unilateral_deviation_mfogt",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
@@ -272,7 +219,7 @@
       "to": "topic:strategic_games.correlated",
       "kind": "boundary_dependent",
       "topic": "strategic_games.correlated",
-      "count": 5
+      "count": 3
     },
     {
       "from": "strategic_games.core.symmetric_game",
@@ -307,14 +254,14 @@
       "to": "topic:strategic_games.payoff_geometry",
       "kind": "boundary_dependent",
       "topic": "strategic_games.payoff_geometry",
-      "count": 3
+      "count": 2
     },
     {
       "from": "strategic_games.core.mixed_strategy",
       "to": "topic:strategic_games.refinements",
       "kind": "boundary_dependent",
       "topic": "strategic_games.refinements",
-      "count": 2
+      "count": 1
     },
     {
       "from": "strategic_games.core.mixed_strategy",
@@ -325,18 +272,6 @@
     }
   ],
   "keywords": [
-    {
-      "id": "best-response",
-      "title": "best-response",
-      "href": "keywords/best-response.html",
-      "count": 1
-    },
-    {
-      "id": "deviation",
-      "title": "deviation",
-      "href": "keywords/deviation.html",
-      "count": 1
-    },
     {
       "id": "dominance",
       "title": "dominance",
@@ -356,22 +291,10 @@
       "count": 3
     },
     {
-      "id": "normal-form",
-      "title": "normal-form",
-      "href": "keywords/normal-form.html",
-      "count": 1
-    },
-    {
-      "id": "profile",
-      "title": "profile",
-      "href": "keywords/profile.html",
-      "count": 1
-    },
-    {
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 10
+      "count": 6
     },
     {
       "id": "symmetry",

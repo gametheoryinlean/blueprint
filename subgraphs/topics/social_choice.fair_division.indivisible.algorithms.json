@@ -121,27 +121,12 @@
   ],
   "edges": [
     {
-      "from": "social_choice.fair_division.indivisible.envies",
-      "to": "social_choice.fair_division.indivisible.acyclic_has_source",
-      "kind": "uses"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_cycle",
       "to": "social_choice.fair_division.indivisible.acyclic_has_source",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.envy_cycle",
-      "to": "social_choice.fair_division.indivisible.eliminate_all_cycles",
       "kind": "uses"
     },
     {
       "from": "social_choice.fair_division.indivisible.pareto_dom_count",
-      "to": "social_choice.fair_division.indivisible.eliminate_all_cycles",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.rotate_bundles",
       "to": "social_choice.fair_division.indivisible.eliminate_all_cycles",
       "kind": "uses"
     },
@@ -178,11 +163,6 @@
     {
       "from": "social_choice.fair_division.indivisible.best_good",
       "to": "social_choice.fair_division.indivisible.round_robin_alloc",
-      "kind": "uses"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.round_robin_alloc",
-      "to": "social_choice.fair_division.indivisible.round_robin_ef1",
       "kind": "uses"
     },
     {

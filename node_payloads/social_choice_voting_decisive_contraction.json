@@ -14,24 +14,9 @@
   "proof_html": "<p>sketch</p>\n<p>Pick two distinct elements $i, j \\in C$ and split $C = C_1 \\cup C_2$ with\n$C_1 = \\{i\\}$ and $C_2 = C \\setminus \\{i\\}$.</p>\n<p>By the three-alternative hypothesis, fix distinct $x, y, z \\in A$ and\nbuild a <em>Condorcet-style profile</em> $P_0$ over the tripartition\n$(C_1, C^c, C_2)$:</p>\n<ul>\n<li>$C_1$ ranks $x \\succ y \\succ z$;</li>\n<li>$C^c$ ranks $y \\succ z \\succ x$;</li>\n<li>$C_2$ ranks $z \\succ x \\succ y$.</li>\n</ul>\n<p>Such a profile exists by an explicit construction\n(<code>exists_condorcet_profile'</code> in the source).</p>\n<p>Now branch on the social ranking of $x$ versus $z$ at $P_0$:</p>\n<ul>\n<li>\n<p><strong>Case $x \\succ_{F(P_0)} z$.</strong> Every voter in $C$ has\n  $x \\succ z$ in $P_0$, while every voter outside $C$ has the opposite.\n  Applying the field-expansion lemma\n  ([[social_choice.voting.decisive_spread]]) to the witness pair\n  $(x, z)$ shows $C_1$ is weakly decisive for $(x, z)$, hence decisive.\n  But $|C_1| = 1 &lt; |C|$, so $C_1$ is the smaller decisive coalition.</p>\n</li>\n<li>\n<p><strong>Case $\\neg (x \\succ_{F(P_0)} z)$.</strong> Use unanimity on the $C$-shared\n  preference $x \\succ y$ to obtain $x \\succ_{F(P_0)} y$. Combined with\n  the case hypothesis and totality of $F(P_0)$ we get\n  $z \\succ_{F(P_0)} y$. Then $C_2$ is the smaller decisive coalition by the\n  same field-expansion argument applied at the witness $(z, y)$.</p>\n</li>\n</ul>\n<p>Either way, we exhibit a nonempty decisive coalition strictly inside $C$.\nThe argument needs IIA to carry the conclusion from $P_0$ to arbitrary\n$C$-unanimous profiles and unanimity to derive the auxiliary social\nrankings used in the case split.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Contraction step in the decisive-coalitions proof.</li>\n</ul>",
   "deps": [
     {
-      "id": "social_choice.voting.is_decisive",
-      "title": "Decisive Coalition and Dictator",
-      "href": "social_choice/social_choice_voting_is_decisive.html"
-    },
-    {
       "id": "social_choice.voting.decisive_spread",
       "title": "Field Expansion — Decisive on One Pair Implies Decisive Everywhere",
       "href": "social_choice/social_choice_voting_decisive_spread.html"
-    },
-    {
-      "id": "social_choice.voting.unanimity",
-      "title": "Unanimity (Pareto Axiom)",
-      "href": "social_choice/social_choice_voting_unanimity.html"
-    },
-    {
-      "id": "social_choice.voting.iia",
-      "title": "Independence of Irrelevant Alternatives",
-      "href": "social_choice/social_choice_voting_iia.html"
     }
   ],
   "dependents": [
@@ -48,9 +33,9 @@
       "qualified_name": "SocialChoice.Voting.isDecisive_contraction",
       "module": "EconCSLib.SocialChoice.Voting.Decisive",
       "repository_title": "EconCSLib",
-      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
-      "short_revision": "609636f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/SocialChoice/Voting/Decisive.lean#L457",
+      "revision": "0cf299c0e132e56c10a6463376c72b03911aa3fa",
+      "short_revision": "0cf299c",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0cf299c0e132e56c10a6463376c72b03911aa3fa/EconCSLib/SocialChoice/Voting/Decisive.lean#L457",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

@@ -101,11 +101,6 @@
       "kind": "uses"
     },
     {
-      "from": "strategic_games.learning.external_regret",
-      "to": "strategic_games.learning.no_external_regret_hannan_convergence",
-      "kind": "uses"
-    },
-    {
       "from": "strategic_games.learning.hannan_set",
       "to": "strategic_games.learning.no_external_regret_hannan_convergence",
       "kind": "uses"
@@ -129,7 +124,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.correlated",
@@ -157,13 +152,6 @@
     {
       "from": "topic:strategic_games.correlated",
       "to": "strategic_games.learning.internal_regret",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.correlated",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.correlated",
-      "to": "strategic_games.learning.no_internal_regret_correlated_convergence",
       "kind": "boundary_dependency",
       "topic": "strategic_games.correlated",
       "count": 1

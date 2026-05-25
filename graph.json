@@ -72,7 +72,6 @@
       ],
       "topic": "auction",
       "uses": [
-        "mechanism_design.transfer.mechanisms_with_transfers",
         "mechanism_design.transfer.single_parameter_transfer_layer"
       ],
       "used_by": [
@@ -598,8 +597,7 @@
       ],
       "topic": "core",
       "uses": [
-        "core.simplex.pure",
-        "core.simplex.wsum"
+        "core.simplex.pure"
       ],
       "used_by": [
         "zero_sum.core.optimal_pairs_are_saddle_points",
@@ -728,7 +726,6 @@
       ],
       "topic": "core",
       "used_by": [
-        "core.simplex.bounded_by_value",
         "core.simplex.continuity",
         "core.simplex.mix",
         "core.simplex.pure",
@@ -868,7 +865,6 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.perfect_information.simple_perfect_information_game",
         "extensive_game.perfect_information.zermelo_determinacy"
       ]
     },
@@ -902,9 +898,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.normal_form.extensive_form_perfect_equilibrium",
-        "extensive_game.normal_form.normal_form_reduction",
-        "strategic_games.refinements.perfect_equilibrium"
+        "extensive_game.normal_form.extensive_form_perfect_equilibrium"
       ]
     },
     {
@@ -938,8 +932,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.perfect_information.kuhn_spe_existence",
-        "extensive_game.perfect_information.subgame_perfect_equilibrium"
+        "extensive_game.perfect_information.kuhn_spe_existence"
       ]
     },
     {
@@ -981,7 +974,6 @@
       ],
       "used_by": [
         "extensive_game.imperfect_information.behavioral_equilibrium_exists",
-        "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
         "extensive_game.imperfect_information.reached_information_set",
         "extensive_game.imperfect_information.spe_imperfect_information"
       ]
@@ -1113,11 +1105,9 @@
       "used_by": [
         "extensive_game.imperfect_information.action_at_information_set",
         "extensive_game.imperfect_information.belief_system",
-        "extensive_game.imperfect_information.information_set_refinement_equilibrium",
         "extensive_game.imperfect_information.linear_extensive_game",
         "extensive_game.imperfect_information.perfect_recall",
-        "extensive_game.imperfect_information.subroot_subgame",
-        "extensive_game.normal_form.agent_normal_form"
+        "extensive_game.imperfect_information.subroot_subgame"
       ]
     },
     {
@@ -1132,7 +1122,6 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.imperfect_information.information_set",
         "extensive_game.imperfect_information.perfect_recall",
         "strategic_games.nash_equilibrium"
       ]
@@ -1186,9 +1175,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.imperfect_information.behavioral_equilibrium",
-        "extensive_game.imperfect_information.reached_information_set",
-        "strategic_games.best_response"
+        "extensive_game.imperfect_information.reached_information_set"
       ]
     },
     {
@@ -1243,7 +1230,6 @@
       "used_by": [
         "extensive_game.imperfect_information.information_set_refinement_equilibrium",
         "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
-        "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
         "extensive_game.normal_form.agent_normal_form"
       ]
     },
@@ -1280,7 +1266,6 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.imperfect_information.perfect_recall",
         "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
         "extensive_game.imperfect_information.sequential_equilibrium",
         "strategic_games.refinements.proper_equilibrium"
@@ -1374,7 +1359,6 @@
       "topic": "extensive_game",
       "uses": [
         "extensive_game.imperfect_information.forward_induction",
-        "strategic_games.nash_equilibrium",
         "strategic_games.refinements.proper_equilibrium"
       ],
       "used_by": [
@@ -1413,8 +1397,7 @@
       "topic": "extensive_game",
       "uses": [
         "extensive_game.imperfect_information.belief_system",
-        "extensive_game.imperfect_information.reached_information_set",
-        "strategic_games.best_response"
+        "extensive_game.imperfect_information.reached_information_set"
       ],
       "used_by": [
         "extensive_game.imperfect_information.sequential_equilibrium"
@@ -1432,7 +1415,6 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.imperfect_information.information_set",
         "extensive_game.imperfect_information.perfect_recall",
         "extensive_game.normal_form.normal_form_reduction"
       ],
@@ -1497,7 +1479,6 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "extensive_game.examples.normal_vs_extensive_perfection_difference",
         "extensive_game.normal_form.agent_normal_form",
         "extensive_game.normal_form.extensive_normal_form_invariance",
         "extensive_game.normal_form.semi_reduced_normal_form"
@@ -1642,7 +1623,6 @@
         "extensive_game.perfect_information.perfect_information_extensive_game"
       ],
       "used_by": [
-        "extensive_game.examples.chomp_strategy_stealing",
         "extensive_game.perfect_information.determined_game"
       ]
     },
@@ -1698,7 +1678,6 @@
       ],
       "used_by": [
         "extensive_game.examples.backward_forward_induction_incompatibility",
-        "extensive_game.examples.rubinstein_bargaining_spe",
         "extensive_game.perfect_information.kuhn_spe_existence",
         "extensive_game.perfect_information.spe_implies_nash",
         "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
@@ -1763,7 +1742,6 @@
         "fixed_point.kakutani_fixed_point",
         "strategic_games.continuous.convex_game_nash_exists",
         "strategic_games.equilibrium.nash_existence_finite_games",
-        "strategic_games.equilibrium.symmetric_mixed_equilibrium",
         "strategic_games.variational.evaluation_game_equilibrium"
       ]
     },
@@ -2199,7 +2177,6 @@
         "mechanism_design.basic.ex_post_ir_predicate"
       ],
       "used_by": [
-        "auction.basic.formats",
         "mechanism_design.bayesian.bayesian_mechanisms",
         "mechanism_design.transfer.multiple_parameter_transfer_layer",
         "mechanism_design.transfer.single_parameter_transfer_layer"
@@ -2377,8 +2354,7 @@
       ],
       "topic": "repeated_game",
       "uses": [
-        "repeated_game.core.history",
-        "repeated_game.core.repeated_game"
+        "repeated_game.core.history"
       ],
       "used_by": [
         "repeated_game.folk_theorem.folk_theorem_baseline"
@@ -2403,8 +2379,6 @@
       ],
       "used_by": [
         "repeated_game.core.history",
-        "repeated_game.core.payoff_aggregation",
-        "repeated_game.folk_theorem.folk_theorem_baseline",
         "repeated_game.incomplete_info.cav_u_theorem"
       ]
     },
@@ -2424,8 +2398,7 @@
       ],
       "topic": "folk_theorem",
       "uses": [
-        "repeated_game.core.payoff_aggregation",
-        "repeated_game.core.repeated_game"
+        "repeated_game.core.payoff_aggregation"
       ]
     },
     {
@@ -2470,7 +2443,6 @@
       ],
       "topic": "fair_division",
       "used_by": [
-        "social_choice.fair_division.cardinal_instance",
         "social_choice.fair_division.divisible.allocation",
         "social_choice.fair_division.egalitarian_welfare",
         "social_choice.fair_division.envy_free",
@@ -2478,8 +2450,6 @@
         "social_choice.fair_division.instance",
         "social_choice.fair_division.pareto_optimal",
         "social_choice.fair_division.proportional",
-        "social_choice.fair_division.share_instance",
-        "social_choice.fair_division.solution_concept",
         "social_choice.fair_division.utilitarian_welfare"
       ]
     },
@@ -2506,7 +2476,6 @@
       ],
       "topic": "fair_division",
       "uses": [
-        "social_choice.fair_division.allocation",
         "social_choice.fair_division.share_instance"
       ],
       "used_by": [
@@ -2583,15 +2552,7 @@
       ],
       "used_by": [
         "social_choice.fair_division.divisible.cut_and_choose_alloc",
-        "social_choice.fair_division.divisible.cut_and_choose_ef_exists",
-        "social_choice.fair_division.divisible.cut_and_choose_partition",
-        "social_choice.fair_division.divisible.ds_step",
-        "social_choice.fair_division.divisible.dubins_spanier_proportional",
-        "social_choice.fair_division.divisible.ef_exists",
-        "social_choice.fair_division.divisible.ef_implies_proportional",
         "social_choice.fair_division.divisible.envy_free",
-        "social_choice.fair_division.divisible.measure_instance",
-        "social_choice.fair_division.divisible.proportional_exists",
         "social_choice.fair_division.divisible.stromquist_pieces"
       ]
     },
@@ -2619,8 +2580,7 @@
       "topic": "divisible",
       "used_by": [
         "social_choice.fair_division.divisible.envy_free",
-        "social_choice.fair_division.divisible.measure_valuation",
-        "social_choice.fair_division.divisible.normalized_iff_probability"
+        "social_choice.fair_division.divisible.measure_valuation"
       ]
     },
     {
@@ -2661,8 +2621,7 @@
         "social_choice.fair_division.utilitarian_welfare"
       ],
       "used_by": [
-        "social_choice.fair_division.divisible.measure_instance",
-        "social_choice.fair_division.divisible.measure_instance_ef_iff_real"
+        "social_choice.fair_division.divisible.measure_instance"
       ]
     },
     {
@@ -2779,9 +2738,7 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
         "social_choice.fair_division.divisible.cut_and_choose_envy_free",
-        "social_choice.fair_division.divisible.envy_free",
         "social_choice.fair_division.divisible.fair_cut_exists"
       ]
     },
@@ -2809,8 +2766,7 @@
       "topic": "divisible",
       "uses": [
         "social_choice.fair_division.divisible.chooser_envy_free",
-        "social_choice.fair_division.divisible.cutter_envy_free_of_fair",
-        "social_choice.fair_division.divisible.envy_free"
+        "social_choice.fair_division.divisible.cutter_envy_free_of_fair"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.cut_and_choose_ef_exists"
@@ -2838,7 +2794,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
         "social_choice.fair_division.divisible.cut_and_choose_alloc"
       ]
     },
@@ -2871,7 +2826,6 @@
       ],
       "used_by": [
         "social_choice.fair_division.divisible.ds_step",
-        "social_choice.fair_division.divisible.dubins_spanier_proportional",
         "social_choice.fair_division.divisible.fair_cut_exists"
       ]
     },
@@ -2929,7 +2883,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
         "social_choice.fair_division.divisible.cut_exists",
         "social_choice.fair_division.divisible.envy_free"
       ],
@@ -2961,10 +2914,7 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
-        "social_choice.fair_division.divisible.cut_exists",
-        "social_choice.fair_division.divisible.ds_step",
-        "social_choice.fair_division.divisible.envy_free"
+        "social_choice.fair_division.divisible.ds_step"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.dubins_spanier_rule",
@@ -3024,14 +2974,10 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
-        "social_choice.fair_division.divisible.envy_free",
-        "social_choice.fair_division.divisible.stromquist_unusual_case",
-        "social_choice.fair_division.divisible.stromquist_usual_case"
+        "social_choice.fair_division.divisible.stromquist_unusual_case"
       ],
       "used_by": [
-        "social_choice.fair_division.divisible.ef_exists_and_proportional",
-        "social_choice.fair_division.divisible.measure_instance_existence"
+        "social_choice.fair_division.divisible.ef_exists_and_proportional"
       ]
     },
     {
@@ -3087,7 +3033,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
         "social_choice.fair_division.divisible.envy_free",
         "social_choice.fair_division.divisible.measure_valuation"
       ],
@@ -3125,18 +3070,11 @@
       ],
       "used_by": [
         "social_choice.fair_division.divisible.chooser_envy_free",
-        "social_choice.fair_division.divisible.cut_and_choose_ef_exists",
-        "social_choice.fair_division.divisible.cut_and_choose_envy_free",
         "social_choice.fair_division.divisible.cutter_envy_free_of_fair",
         "social_choice.fair_division.divisible.ds_step",
-        "social_choice.fair_division.divisible.dubins_spanier_proportional",
-        "social_choice.fair_division.divisible.ef_exists",
         "social_choice.fair_division.divisible.ef_implies_proportional",
         "social_choice.fair_division.divisible.measure_instance",
-        "social_choice.fair_division.divisible.proportional_exists",
-        "social_choice.fair_division.divisible.stromquist_assignment",
-        "social_choice.fair_division.divisible.stromquist_unusual_case",
-        "social_choice.fair_division.divisible.stromquist_usual_case"
+        "social_choice.fair_division.divisible.stromquist_assignment"
       ]
     },
     {
@@ -3198,7 +3136,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
         "social_choice.fair_division.divisible.cardinal_instance",
         "social_choice.fair_division.divisible.envy_free",
         "social_choice.fair_division.divisible.measure_valuation"
@@ -3230,7 +3167,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.cardinal_instance",
         "social_choice.fair_division.divisible.measure_instance"
       ]
     },
@@ -3260,7 +3196,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.ef_exists",
         "social_choice.fair_division.divisible.ef_exists_and_proportional",
         "social_choice.fair_division.divisible.measure_instance",
         "social_choice.fair_division.divisible.proportional_exists"
@@ -3347,7 +3282,6 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.cake_valuation",
         "social_choice.fair_division.divisible.measure_valuation"
       ]
     },
@@ -3374,8 +3308,7 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.share_instance",
-        "social_choice.preference"
+        "social_choice.fair_division.share_instance"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.cardinal_instance"
@@ -3403,9 +3336,7 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.allocation",
-        "social_choice.fair_division.divisible.dubins_spanier_proportional",
-        "social_choice.fair_division.divisible.envy_free"
+        "social_choice.fair_division.divisible.dubins_spanier_proportional"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.measure_instance_existence"
@@ -3434,13 +3365,11 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.stromquist_pieces",
         "social_choice.fair_division.divisible.stromquist_unique_preference_sets"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.stromquist_assignment",
-        "social_choice.fair_division.divisible.stromquist_shifted_cells",
-        "social_choice.fair_division.divisible.stromquist_usual_case"
+        "social_choice.fair_division.divisible.stromquist_shifted_cells"
       ]
     },
     {
@@ -3465,8 +3394,7 @@
       "topic": "divisible",
       "uses": [
         "social_choice.fair_division.divisible.envy_free",
-        "social_choice.fair_division.divisible.stromquist_U",
-        "social_choice.fair_division.divisible.stromquist_pieces"
+        "social_choice.fair_division.divisible.stromquist_U"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.stromquist_usual_case"
@@ -3500,9 +3428,6 @@
         "social_choice.fair_division.divisible.allocation"
       ],
       "used_by": [
-        "social_choice.fair_division.divisible.stromquist_U",
-        "social_choice.fair_division.divisible.stromquist_assignment",
-        "social_choice.fair_division.divisible.stromquist_preference_sets",
         "social_choice.fair_division.divisible.stromquist_value_continuous"
       ]
     },
@@ -3531,11 +3456,9 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.stromquist_pieces",
         "social_choice.fair_division.divisible.stromquist_value_continuous"
       ],
       "used_by": [
-        "social_choice.fair_division.divisible.stromquist_shifted_cells",
         "social_choice.fair_division.divisible.stromquist_unique_preference_sets"
       ]
     },
@@ -3561,8 +3484,7 @@
       "lean_declarations": [],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.stromquist_U",
-        "social_choice.fair_division.divisible.stromquist_preference_sets"
+        "social_choice.fair_division.divisible.stromquist_U"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.stromquist_unusual_case"
@@ -3593,8 +3515,7 @@
       ],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.stromquist_preference_sets",
-        "social_choice.fair_division.divisible.stromquist_value_continuous"
+        "social_choice.fair_division.divisible.stromquist_preference_sets"
       ],
       "used_by": [
         "social_choice.fair_division.divisible.stromquist_U"
@@ -3622,7 +3543,6 @@
       "lean_declarations": [],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.envy_free",
         "social_choice.fair_division.divisible.stromquist_shifted_cells",
         "social_choice.fair_division.divisible.stromquist_usual_case"
       ],
@@ -3652,12 +3572,9 @@
       "lean_declarations": [],
       "topic": "divisible",
       "uses": [
-        "social_choice.fair_division.divisible.envy_free",
-        "social_choice.fair_division.divisible.stromquist_U",
         "social_choice.fair_division.divisible.stromquist_assignment"
       ],
       "used_by": [
-        "social_choice.fair_division.divisible.ef_exists",
         "social_choice.fair_division.divisible.stromquist_unusual_case"
       ]
     },
@@ -3689,8 +3606,7 @@
         "social_choice.fair_division.divisible.stromquist_pieces"
       ],
       "used_by": [
-        "social_choice.fair_division.divisible.stromquist_preference_sets",
-        "social_choice.fair_division.divisible.stromquist_unique_preference_sets"
+        "social_choice.fair_division.divisible.stromquist_preference_sets"
       ]
     },
     {
@@ -3713,8 +3629,6 @@
       ],
       "topic": "fair_division",
       "uses": [
-        "social_choice.fair_division.egalitarian_welfare",
-        "social_choice.fair_division.utilitarian_welfare",
         "social_choice.fair_division.welfare_monotone"
       ]
     },
@@ -3747,7 +3661,6 @@
       "used_by": [
         "social_choice.fair_division.cardinal_instance_wrappers",
         "social_choice.fair_division.divisible.cardinal_instance",
-        "social_choice.fair_division.egal_le_util",
         "social_choice.fair_division.indivisible.cardinal_instance",
         "social_choice.fair_division.indivisible.egalitarian_welfare",
         "social_choice.fair_division.welfare_monotone"
@@ -3837,7 +3750,6 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.envies",
         "social_choice.fair_division.indivisible.envy_cycle"
       ],
       "used_by": [
@@ -3909,10 +3821,7 @@
         "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
         "social_choice.fair_division.indivisible.efx_exists_two_agents",
         "social_choice.fair_division.indivisible.mms_value_bounds",
-        "social_choice.fair_division.indivisible.proportional_alpha_mms_additive",
-        "social_choice.fair_division.indivisible.proportional_implies_mms_additive",
-        "social_choice.fair_division.indivisible.round_robin_alloc",
-        "social_choice.fair_division.indivisible.round_robin_ef1"
+        "social_choice.fair_division.indivisible.proportional_implies_mms_additive"
       ]
     },
     {
@@ -3937,28 +3846,15 @@
       ],
       "topic": "indivisible",
       "used_by": [
-        "social_choice.fair_division.indivisible.ef1",
-        "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
-        "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
-        "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.efx_exists_two_agents",
-        "social_choice.fair_division.indivisible.efx_singleton_bundle",
-        "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
         "social_choice.fair_division.indivisible.egalitarian_welfare",
-        "social_choice.fair_division.indivisible.envy_cycle_algorithm",
-        "social_choice.fair_division.indivisible.envy_cycle_ef1",
         "social_choice.fair_division.indivisible.envy_free",
         "social_choice.fair_division.indivisible.equitable",
-        "social_choice.fair_division.indivisible.is_alpha_mms",
         "social_choice.fair_division.indivisible.maximin_share",
         "social_choice.fair_division.indivisible.mms_value",
         "social_choice.fair_division.indivisible.ordinal_instance",
-        "social_choice.fair_division.indivisible.pareto_dom_count",
         "social_choice.fair_division.indivisible.pareto_optimal",
         "social_choice.fair_division.indivisible.proportional",
-        "social_choice.fair_division.indivisible.rotate_bundles",
         "social_choice.fair_division.indivisible.round_robin_alloc",
-        "social_choice.fair_division.indivisible.round_robin_partition",
         "social_choice.fair_division.indivisible.utilitarian_welfare"
       ]
     },
@@ -3988,8 +3884,6 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.is_alpha_mms",
-        "social_choice.fair_division.indivisible.maximin_share",
         "social_choice.fair_division.indivisible.mms_iff_alpha_one"
       ]
     },
@@ -4096,7 +3990,6 @@
       "uses": [
         "social_choice.fair_division.indivisible.ef1",
         "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.envy_free",
         "social_choice.fair_division.indivisible.proportional"
       ]
     },
@@ -4122,9 +4015,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.indivisible.envy_free",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.envy_free"
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.checker",
@@ -4156,8 +4047,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.envy_free"
+        "social_choice.fair_division.indivisible.efx"
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.efx_of_no_envy_mono"
@@ -4187,7 +4077,6 @@
       "topic": "indivisible",
       "uses": [
         "social_choice.fair_division.indivisible.additive_valuation",
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.envy_free",
         "social_choice.fair_division.indivisible.proportional"
       ]
@@ -4215,9 +4104,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.indivisible.envy_free",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.envy_free"
       ]
     },
     {
@@ -4242,16 +4129,12 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.indivisible.envy_free",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.envy_free"
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.checker",
         "social_choice.fair_division.indivisible.ef_implies_efx_mono",
-        "social_choice.fair_division.indivisible.efx_exists_two_agents",
         "social_choice.fair_division.indivisible.efx_implies_ef1",
-        "social_choice.fair_division.indivisible.efx_of_no_envy_mono",
         "social_choice.fair_division.indivisible.efx_singleton_bundle"
       ]
     },
@@ -4278,8 +4161,6 @@
       "topic": "indivisible",
       "uses": [
         "social_choice.fair_division.indivisible.additive_valuation",
-        "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.indivisible.efx",
         "social_choice.fair_division.indivisible.efx_singleton_bundle"
       ]
     },
@@ -4331,9 +4212,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.ef_implies_efx_mono",
-        "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.envy_free"
+        "social_choice.fair_division.indivisible.ef_implies_efx_mono"
       ]
     },
     {
@@ -4358,9 +4237,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.efx"
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.efx_exists_two_agents",
@@ -4390,9 +4267,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.indivisible.efx_singleton_bundle",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.efx_singleton_bundle"
       ]
     },
     {
@@ -4453,9 +4328,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.envy_cycle",
-        "social_choice.fair_division.indivisible.pareto_dom_count",
-        "social_choice.fair_division.indivisible.rotate_bundles"
+        "social_choice.fair_division.indivisible.pareto_dom_count"
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.envy_cycle_algorithm"
@@ -4488,11 +4361,9 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.envy_free",
-        "social_choice.fair_division.indivisible.valuation"
+        "social_choice.fair_division.indivisible.envy_free"
       ],
       "used_by": [
-        "social_choice.fair_division.indivisible.acyclic_has_source",
         "social_choice.fair_division.indivisible.envy_cycle"
       ]
     },
@@ -4526,7 +4397,6 @@
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.acyclic_has_source",
-        "social_choice.fair_division.indivisible.eliminate_all_cycles",
         "social_choice.fair_division.indivisible.rotate_bundles"
       ]
     },
@@ -4555,7 +4425,6 @@
       "topic": "indivisible",
       "uses": [
         "social_choice.fair_division.indivisible.acyclic_has_source",
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.eliminate_all_cycles"
       ],
       "used_by": [
@@ -4588,7 +4457,6 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.ef1",
         "social_choice.fair_division.indivisible.envy_cycle_algorithm"
       ]
@@ -4620,13 +4488,10 @@
         "social_choice.fair_division.indivisible.valuation"
       ],
       "used_by": [
-        "social_choice.fair_division.indivisible.checker",
         "social_choice.fair_division.indivisible.ef1",
-        "social_choice.fair_division.indivisible.ef_implies_efx_mono",
         "social_choice.fair_division.indivisible.ef_implies_proportional_additive",
         "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
         "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.efx_of_no_envy_mono",
         "social_choice.fair_division.indivisible.envies"
       ]
     },
@@ -4681,11 +4546,9 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.mms_value"
       ],
       "used_by": [
-        "social_choice.fair_division.indivisible.alpha_mms_mono",
         "social_choice.fair_division.indivisible.mms_iff_alpha_one",
         "social_choice.fair_division.indivisible.proportional_alpha_mms_additive"
       ]
@@ -4718,7 +4581,6 @@
         "social_choice.fair_division.indivisible.valuation"
       ],
       "used_by": [
-        "social_choice.fair_division.indivisible.alpha_mms_mono",
         "social_choice.fair_division.indivisible.mms_iff_alpha_one",
         "social_choice.fair_division.indivisible.proportional_implies_mms_additive"
       ]
@@ -4748,8 +4610,7 @@
       "topic": "indivisible",
       "uses": [
         "social_choice.fair_division.indivisible.is_alpha_mms",
-        "social_choice.fair_division.indivisible.maximin_share",
-        "social_choice.fair_division.indivisible.mms_value"
+        "social_choice.fair_division.indivisible.maximin_share"
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.alpha_mms_mono"
@@ -4783,7 +4644,6 @@
       ],
       "used_by": [
         "social_choice.fair_division.indivisible.is_alpha_mms",
-        "social_choice.fair_division.indivisible.mms_iff_alpha_one",
         "social_choice.fair_division.indivisible.mms_value_bounds"
       ]
     },
@@ -4844,8 +4704,7 @@
       "topic": "indivisible",
       "uses": [
         "social_choice.fair_division.indivisible.allocation",
-        "social_choice.fair_division.share_instance",
-        "social_choice.preference"
+        "social_choice.fair_division.share_instance"
       ]
     },
     {
@@ -4876,7 +4735,6 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.rotate_bundles"
       ],
       "used_by": [
@@ -4967,7 +4825,6 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.additive_valuation",
         "social_choice.fair_division.indivisible.is_alpha_mms",
         "social_choice.fair_division.indivisible.mms_value_bounds",
         "social_choice.fair_division.indivisible.proportional"
@@ -5031,11 +4888,9 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.envy_cycle"
       ],
       "used_by": [
-        "social_choice.fair_division.indivisible.eliminate_all_cycles",
         "social_choice.fair_division.indivisible.pareto_dom_count"
       ]
     },
@@ -5064,12 +4919,10 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.additive_valuation",
         "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.best_good"
       ],
       "used_by": [
-        "social_choice.fair_division.indivisible.round_robin_ef1",
         "social_choice.fair_division.indivisible.round_robin_partition"
       ]
     },
@@ -5098,9 +4951,7 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.additive_valuation",
         "social_choice.fair_division.indivisible.ef1",
-        "social_choice.fair_division.indivisible.round_robin_alloc",
         "social_choice.fair_division.indivisible.round_robin_partition"
       ]
     },
@@ -5127,7 +4978,6 @@
       ],
       "topic": "indivisible",
       "uses": [
-        "social_choice.fair_division.indivisible.allocation",
         "social_choice.fair_division.indivisible.round_robin_alloc"
       ],
       "used_by": [
@@ -5186,13 +5036,7 @@
       "used_by": [
         "social_choice.fair_division.indivisible.additive_valuation",
         "social_choice.fair_division.indivisible.cardinal_instance",
-        "social_choice.fair_division.indivisible.ef1",
-        "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good",
-        "social_choice.fair_division.indivisible.efx",
-        "social_choice.fair_division.indivisible.efx_singleton_bundle",
-        "social_choice.fair_division.indivisible.efx_two_agents_two_goods",
         "social_choice.fair_division.indivisible.egalitarian_welfare",
-        "social_choice.fair_division.indivisible.envies",
         "social_choice.fair_division.indivisible.envy_free",
         "social_choice.fair_division.indivisible.equitable",
         "social_choice.fair_division.indivisible.maximin_share",
@@ -5310,15 +5154,12 @@
       ],
       "topic": "fair_division",
       "uses": [
-        "social_choice.fair_division.allocation",
-        "social_choice.fair_division.instance",
-        "social_choice.preference"
+        "social_choice.fair_division.instance"
       ],
       "used_by": [
         "social_choice.fair_division.cardinal_instance",
         "social_choice.fair_division.divisible.ordinal_instance",
-        "social_choice.fair_division.indivisible.ordinal_instance",
-        "social_choice.fair_division.utility_represents"
+        "social_choice.fair_division.indivisible.ordinal_instance"
       ]
     },
     {
@@ -5342,7 +5183,6 @@
       ],
       "topic": "fair_division",
       "uses": [
-        "social_choice.fair_division.allocation",
         "social_choice.fair_division.instance"
       ],
       "used_by": [
@@ -5377,7 +5217,6 @@
       "used_by": [
         "social_choice.fair_division.cardinal_instance_wrappers",
         "social_choice.fair_division.divisible.cardinal_instance",
-        "social_choice.fair_division.egal_le_util",
         "social_choice.fair_division.indivisible.cardinal_instance",
         "social_choice.fair_division.indivisible.utilitarian_welfare",
         "social_choice.fair_division.welfare_monotone"
@@ -5404,8 +5243,7 @@
       ],
       "topic": "fair_division",
       "uses": [
-        "social_choice.fair_division.cardinal_instance",
-        "social_choice.fair_division.share_instance"
+        "social_choice.fair_division.cardinal_instance"
       ]
     },
     {
@@ -5480,14 +5318,10 @@
       ],
       "topic": "social_choice",
       "used_by": [
-        "social_choice.fair_division.divisible.ordinal_instance",
-        "social_choice.fair_division.indivisible.ordinal_instance",
         "social_choice.fair_division.instance",
-        "social_choice.fair_division.share_instance",
         "social_choice.instance",
         "social_choice.preference_profile",
-        "social_choice.strict_preference",
-        "social_choice.voting.swf"
+        "social_choice.strict_preference"
       ]
     },
     {
@@ -5599,11 +5433,7 @@
       ],
       "topic": "voting",
       "uses": [
-        "social_choice.voting.arrow_of_unanimity_iia",
-        "social_choice.voting.dictatorial_swf",
-        "social_choice.voting.iia",
-        "social_choice.voting.swf",
-        "social_choice.voting.unanimity"
+        "social_choice.voting.arrow_of_unanimity_iia"
       ],
       "used_by": [
         "social_choice.voting.muller_satterthwaite"
@@ -5632,10 +5462,7 @@
       "topic": "voting",
       "uses": [
         "social_choice.voting.dictatorial_swf",
-        "social_choice.voting.iia",
-        "social_choice.voting.is_decisive",
-        "social_choice.voting.minimal_decisive_card_one",
-        "social_choice.voting.unanimity"
+        "social_choice.voting.minimal_decisive_card_one"
       ],
       "used_by": [
         "social_choice.voting.arrow_impossibility"
@@ -5691,8 +5518,7 @@
       ],
       "topic": "voting",
       "uses": [
-        "social_choice.voting.condorcet_winner",
-        "social_choice.voting.majority_prefers"
+        "social_choice.voting.condorcet_winner"
       ]
     },
     {
@@ -5746,10 +5572,7 @@
       ],
       "topic": "voting",
       "uses": [
-        "social_choice.voting.decisive_spread",
-        "social_choice.voting.iia",
-        "social_choice.voting.is_decisive",
-        "social_choice.voting.unanimity"
+        "social_choice.voting.decisive_spread"
       ],
       "used_by": [
         "social_choice.voting.minimal_decisive_card_one"
@@ -5778,7 +5601,6 @@
       ],
       "topic": "voting",
       "uses": [
-        "social_choice.voting.iia",
         "social_choice.voting.iia_strict",
         "social_choice.voting.is_decisive",
         "social_choice.voting.is_weakly_decisive_for",
@@ -5812,7 +5634,6 @@
         "social_choice.voting.scf"
       ],
       "used_by": [
-        "social_choice.voting.gibbard_satterthwaite",
         "social_choice.voting.muller_satterthwaite"
       ]
     },
@@ -5841,7 +5662,6 @@
         "social_choice.voting.swf"
       ],
       "used_by": [
-        "social_choice.voting.arrow_impossibility",
         "social_choice.voting.arrow_of_unanimity_iia"
       ]
     },
@@ -5868,12 +5688,8 @@
       ],
       "topic": "voting",
       "uses": [
-        "social_choice.voting.dictatorial_scf",
         "social_choice.voting.muller_satterthwaite",
-        "social_choice.voting.scf",
-        "social_choice.voting.strategyproof",
-        "social_choice.voting.strategyproof_implies_monotonic",
-        "social_choice.voting.unanimity"
+        "social_choice.voting.strategyproof_implies_monotonic"
       ]
     },
     {
@@ -5900,10 +5716,6 @@
         "social_choice.voting.swf"
       ],
       "used_by": [
-        "social_choice.voting.arrow_impossibility",
-        "social_choice.voting.arrow_of_unanimity_iia",
-        "social_choice.voting.decisive_contraction",
-        "social_choice.voting.decisive_spread",
         "social_choice.voting.iia_strict"
       ]
     },
@@ -5963,10 +5775,7 @@
         "social_choice.voting.is_decisive_for"
       ],
       "used_by": [
-        "social_choice.voting.arrow_of_unanimity_iia",
-        "social_choice.voting.decisive_contraction",
         "social_choice.voting.decisive_spread",
-        "social_choice.voting.minimal_decisive_card_one",
         "social_choice.voting.unanimity_univ_decisive"
       ]
     },
@@ -6054,7 +5863,6 @@
         "social_choice.strict_preference"
       ],
       "used_by": [
-        "social_choice.voting.condorcet_paradox",
         "social_choice.voting.condorcet_winner"
       ]
     },
@@ -6081,7 +5889,6 @@
       "topic": "voting",
       "uses": [
         "social_choice.voting.decisive_contraction",
-        "social_choice.voting.is_decisive",
         "social_choice.voting.unanimity_univ_decisive"
       ],
       "used_by": [
@@ -6142,9 +5949,7 @@
       "uses": [
         "social_choice.voting.arrow_impossibility",
         "social_choice.voting.dictatorial_scf",
-        "social_choice.voting.monotonic_scf",
-        "social_choice.voting.scf",
-        "social_choice.voting.unanimity"
+        "social_choice.voting.monotonic_scf"
       ],
       "used_by": [
         "social_choice.voting.gibbard_satterthwaite"
@@ -6200,9 +6005,7 @@
       ],
       "used_by": [
         "social_choice.voting.dictatorial_scf",
-        "social_choice.voting.gibbard_satterthwaite",
         "social_choice.voting.monotonic_scf",
-        "social_choice.voting.muller_satterthwaite",
         "social_choice.voting.strategyproof",
         "social_choice.voting.unanimity"
       ]
@@ -6233,7 +6036,6 @@
         "social_choice.voting.scf"
       ],
       "used_by": [
-        "social_choice.voting.gibbard_satterthwaite",
         "social_choice.voting.strategyproof_implies_monotonic"
       ]
     },
@@ -6287,11 +6089,9 @@
       ],
       "topic": "voting",
       "uses": [
-        "social_choice.preference",
         "social_choice.preference_profile"
       ],
       "used_by": [
-        "social_choice.voting.arrow_impossibility",
         "social_choice.voting.dictatorial_swf",
         "social_choice.voting.iia",
         "social_choice.voting.is_decisive_for",
@@ -6325,12 +6125,7 @@
         "social_choice.voting.swf"
       ],
       "used_by": [
-        "social_choice.voting.arrow_impossibility",
-        "social_choice.voting.arrow_of_unanimity_iia",
-        "social_choice.voting.decisive_contraction",
         "social_choice.voting.decisive_spread",
-        "social_choice.voting.gibbard_satterthwaite",
-        "social_choice.voting.muller_satterthwaite",
         "social_choice.voting.unanimity_univ_decisive"
       ]
     },
@@ -6381,7 +6176,6 @@
       ],
       "topic": "stochastic_game",
       "uses": [
-        "stochastic_game.value.discounted_value",
         "stochastic_game.value.discounted_value_fixed_point"
       ],
       "used_by": [
@@ -6406,8 +6200,7 @@
       ],
       "topic": "stochastic_game",
       "uses": [
-        "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
-        "stochastic_game.value.discounted_value"
+        "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value"
       ],
       "used_by": [
         "stochastic_game.examples.big_match_uniform_value"
@@ -6456,9 +6249,6 @@
       ],
       "used_by": [
         "stochastic_game.core.history",
-        "stochastic_game.equilibrium.fink_nash_existence",
-        "stochastic_game.examples.big_match_uniform_value",
-        "stochastic_game.value.discounted_value",
         "stochastic_game.value.shapley_operator"
       ]
     },
@@ -6480,8 +6270,7 @@
       ],
       "topic": "stochastic_game",
       "uses": [
-        "stochastic_game.core.history",
-        "stochastic_game.core.stochastic_game"
+        "stochastic_game.core.history"
       ]
     },
     {
@@ -6504,9 +6293,7 @@
       ],
       "topic": "examples",
       "uses": [
-        "stochastic_game.asymptotic.mertens_neyman_uniform_value",
-        "stochastic_game.core.stochastic_game",
-        "zero_sum.core.value"
+        "stochastic_game.asymptotic.mertens_neyman_uniform_value"
       ]
     },
     {
@@ -6527,12 +6314,9 @@
       "topic": "stochastic_game",
       "uses": [
         "stochastic_game.core.history",
-        "stochastic_game.core.stochastic_game",
         "zero_sum.core.value"
       ],
       "used_by": [
-        "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
-        "stochastic_game.asymptotic.mertens_neyman_uniform_value",
         "stochastic_game.value.discounted_value_fixed_point"
       ]
     },
@@ -6555,7 +6339,6 @@
       "topic": "stochastic_game",
       "uses": [
         "stochastic_game.value.discounted_value",
-        "stochastic_game.value.shapley_operator",
         "stochastic_game.value.shapley_operator_contraction"
       ],
       "used_by": [
@@ -6583,7 +6366,6 @@
         "zero_sum.core.value"
       ],
       "used_by": [
-        "stochastic_game.value.discounted_value_fixed_point",
         "stochastic_game.value.shapley_operator_contraction"
       ]
     },
@@ -6624,8 +6406,7 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.bayesian.bayesian_game",
-        "strategic_games.strategic_game"
+        "strategic_games.bayesian.bayesian_game"
       ],
       "used_by": [
         "strategic_games.bayesian.bayesian_equilibrium_as_nash"
@@ -6664,8 +6445,7 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.bayesian.agent_normal_form",
-        "strategic_games.bayesian.bayesian_equilibrium",
-        "strategic_games.nash_equilibrium"
+        "strategic_games.bayesian.bayesian_equilibrium"
       ],
       "used_by": [
         "strategic_games.bayesian.finite_bayesian_equilibrium_exists"
@@ -6744,17 +6524,13 @@
         "strategic_games.unilateral_deviation"
       ],
       "used_by": [
-        "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
-        "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium",
         "strategic_games.continuous.supermodular_best_response_lattice",
         "strategic_games.core.br_invariance",
         "strategic_games.correlated.best_response_face",
         "strategic_games.correlated.correlated_best_response_not_independent",
         "strategic_games.correlated.obedience_condition",
         "strategic_games.dominance.rationalizable_strategy",
-        "strategic_games.dominant_implies_nash",
         "strategic_games.equilibrium.epsilon_equilibrium",
-        "strategic_games.equilibrium.nash_equilibrium_mfogt",
         "strategic_games.nash_equilibrium",
         "strategic_games.refinements.epsilon_perfect_equilibrium",
         "zero_sum.applications.strict_dominance_never_best_response",
@@ -7044,23 +6820,6 @@
       ]
     },
     {
-      "id": "strategic_games.core.best_response_mfogt",
-      "title": "Best Response",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "best-response"
-      ],
-      "lean_declarations": [
-        "IsBestResponse"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.unilateral_deviation"
-      ]
-    },
-    {
       "id": "strategic_games.core.br_invariance",
       "title": "Best-Response Invariance",
       "kind": "definition",
@@ -7135,16 +6894,12 @@
       "used_by": [
         "strategic_games.bayesian.bayesian_strategy",
         "strategic_games.core.mixed_extension",
-        "strategic_games.correlated.best_response_face",
         "strategic_games.correlated.canonical_correlation_device",
-        "strategic_games.correlated.correlated_best_response_not_independent",
         "strategic_games.correlated.correlated_equilibrium",
         "strategic_games.correlated.correlated_strategy",
-        "strategic_games.payoff_geometry.feasible_payoffs",
         "strategic_games.payoff_geometry.prudent_strategy",
         "strategic_games.payoff_geometry.threat_point",
         "strategic_games.refinements.epsilon_perfect_equilibrium",
-        "strategic_games.refinements.epsilon_proper_equilibrium",
         "zero_sum.mixed_matrix_payoff"
       ]
     },
@@ -7161,37 +6916,6 @@
         "StrategicGame.MixedStrategy",
         "StrategicGame.MixedProfile",
         "StrategicGame.pureToMixed"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.strategic_game"
-      ]
-    },
-    {
-      "id": "strategic_games.core.strategic_game_mfogt",
-      "title": "Strategic Game In Normal Form",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "normal-form"
-      ],
-      "lean_declarations": [
-        "StrategicGame"
-      ],
-      "topic": "strategic_games"
-    },
-    {
-      "id": "strategic_games.core.strategy_profile_mfogt",
-      "title": "Strategy Profile",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "profile"
-      ],
-      "lean_declarations": [
-        "StrategicGame.Profile"
       ],
       "topic": "strategic_games",
       "uses": [
@@ -7218,26 +6942,6 @@
       ]
     },
     {
-      "id": "strategic_games.core.unilateral_deviation_mfogt",
-      "title": "Unilateral Deviation",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "deviation"
-      ],
-      "lean_declarations": [
-        "StrategicGame.deviate",
-        "StrategicGame.Profile.deviate_self",
-        "StrategicGame.Profile.deviate_same",
-        "StrategicGame.Profile.deviate_of_ne"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.strategy_profile"
-      ]
-    },
-    {
       "id": "strategic_games.correlated.best_response_face",
       "title": "Best Response Face",
       "kind": "proposition",
@@ -7250,7 +6954,6 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.best_response",
-        "strategic_games.core.mixed_strategy",
         "strategic_games.correlated.correlated_strategy"
       ]
     },
@@ -7266,8 +6969,7 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.core.mixed_strategy",
-        "strategic_games.strategic_game"
+        "strategic_games.core.mixed_strategy"
       ]
     },
     {
@@ -7284,7 +6986,6 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.best_response",
-        "strategic_games.core.mixed_strategy",
         "strategic_games.correlated.correlated_strategy"
       ]
     },
@@ -7304,11 +7005,9 @@
       ],
       "used_by": [
         "strategic_games.correlated.correlated_equilibrium_convex_compact",
-        "strategic_games.correlated.correlated_equilibrium_exists",
         "strategic_games.correlated.degenerate_correlated_equilibrium",
         "strategic_games.correlated.nash_induces_correlated_equilibrium",
-        "strategic_games.learning.internal_regret",
-        "strategic_games.learning.no_internal_regret_correlated_convergence"
+        "strategic_games.learning.internal_regret"
       ]
     },
     {
@@ -7339,7 +7038,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.correlated.correlated_equilibrium",
         "strategic_games.correlated.nash_induces_correlated_equilibrium",
         "strategic_games.equilibrium.nash_existence_finite_games"
       ]
@@ -7395,7 +7093,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.strategic_game",
         "strategic_games.strategy_profile"
       ],
       "used_by": [
@@ -7618,7 +7315,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.best_response",
         "strategic_games.nash_equilibrium",
         "strategic_games.weakly_dominant_strategy"
       ]
@@ -7807,24 +7503,6 @@
       ]
     },
     {
-      "id": "strategic_games.equilibrium.nash_equilibrium_mfogt",
-      "title": "Nash Equilibrium",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "nash-equilibrium"
-      ],
-      "lean_declarations": [
-        "IsNashEquilibrium"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.best_response",
-        "strategic_games.unilateral_deviation"
-      ]
-    },
-    {
       "id": "strategic_games.equilibrium.nash_existence_finite_games",
       "title": "Nash Existence For Finite Games",
       "kind": "theorem",
@@ -7893,7 +7571,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "fixed_point.brouwer_compact_convex",
         "strategic_games.core.symmetric_game",
         "strategic_games.equilibrium.nash_existence_finite_games"
       ]
@@ -8006,8 +7683,7 @@
       "used_by": [
         "strategic_games.learning.calibrated_strategy",
         "strategic_games.learning.hannan_set",
-        "strategic_games.learning.internal_regret",
-        "strategic_games.learning.no_external_regret_hannan_convergence"
+        "strategic_games.learning.internal_regret"
       ]
     },
     {
@@ -8061,7 +7737,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.learning.external_regret",
         "strategic_games.learning.hannan_set"
       ]
     },
@@ -8079,7 +7754,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.correlated.correlated_equilibrium",
         "strategic_games.learning.internal_regret"
       ]
     },
@@ -8175,11 +7849,9 @@
       "used_by": [
         "extensive_game.imperfect_information.behavioral_equilibrium",
         "extensive_game.imperfect_information.information_set_refinement_equilibrium",
-        "extensive_game.imperfect_information.strategic_stability",
         "extensive_game.perfect_information.subgame_perfect_equilibrium",
         "mechanism_design.basic.truthfulness_from_dsic",
         "strategic_games.bayesian.bayesian_equilibrium",
-        "strategic_games.bayesian.bayesian_equilibrium_as_nash",
         "strategic_games.continuous.compact_quasi_concave_nash_exists",
         "strategic_games.continuous.convex_game_variational_characterization",
         "strategic_games.continuous.cournot_fishermen_equilibria",
@@ -8210,7 +7882,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.core.mixed_strategy",
         "strategic_games.payoff_geometry.threat_point"
       ],
       "used_by": [
@@ -8395,7 +8066,6 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.nash_equilibrium",
-        "strategic_games.strategic_game",
         "strategic_games.weakly_dominant_strategy"
       ]
     },
@@ -8429,8 +8099,7 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.refinements.approximate_solution",
-        "strategic_games.refinements.reny_solution"
+        "strategic_games.refinements.approximate_solution"
       ]
     },
     {
@@ -8500,7 +8169,6 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.core.mixed_strategy",
         "strategic_games.refinements.epsilon_perfect_equilibrium"
       ],
       "used_by": [
@@ -8523,13 +8191,10 @@
         "strategic_games.refinements.epsilon_perfect_equilibrium"
       ],
       "used_by": [
-        "extensive_game.examples.normal_vs_extensive_perfection_difference",
         "extensive_game.normal_form.extensive_form_perfect_equilibrium",
         "strategic_games.refinements.perfect_equilibrium_exists",
         "strategic_games.refinements.perfect_equilibrium_undominated_two_player",
-        "strategic_games.refinements.proper_equilibrium",
-        "strategic_games.refinements.proper_equilibrium_exists",
-        "strategic_games.refinements.proper_vs_perfect_equilibrium_examples"
+        "strategic_games.refinements.proper_equilibrium"
       ]
     },
     {
@@ -8600,7 +8265,6 @@
       "topic": "strategic_games",
       "uses": [
         "fixed_point.kakutani_fixed_point",
-        "strategic_games.refinements.perfect_equilibrium",
         "strategic_games.refinements.proper_equilibrium"
       ]
     },
@@ -8617,7 +8281,6 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.dominance.dominated_strategy",
-        "strategic_games.refinements.perfect_equilibrium",
         "strategic_games.refinements.proper_equilibrium"
       ]
     },
@@ -8636,7 +8299,6 @@
       ],
       "used_by": [
         "strategic_games.refinements.approximate_solution",
-        "strategic_games.refinements.approximate_solution_is_reny",
         "strategic_games.refinements.better_reply_secure_game",
         "strategic_games.refinements.reny_solution_exists"
       ]
@@ -8915,7 +8577,6 @@
         "mechanism_design.basic.induced_strategic_game",
         "repeated_game.core.repeated_game",
         "stochastic_game.core.stochastic_game",
-        "strategic_games.bayesian.agent_normal_form",
         "strategic_games.bayesian.bayesian_game",
         "strategic_games.continuous.convex_game",
         "strategic_games.continuous.quasi_concave_game",
@@ -8924,15 +8585,11 @@
         "strategic_games.core.dominant_strategy",
         "strategic_games.core.mixed_strategy",
         "strategic_games.core.mixed_strategy_mfogt",
-        "strategic_games.core.strategy_profile_mfogt",
         "strategic_games.core.symmetric_game",
-        "strategic_games.correlated.canonical_correlation_device",
-        "strategic_games.correlated.mediated_game",
         "strategic_games.dominance.dominated_strategy",
         "strategic_games.learning.external_regret",
         "strategic_games.population.population_game",
         "strategic_games.potential.potential_game",
-        "strategic_games.prisoners_dilemma",
         "strategic_games.refinements.reny_solution",
         "strategic_games.repeated.standard_repeated_game",
         "strategic_games.strategy_profile",
@@ -8956,7 +8613,6 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "strategic_games.core.unilateral_deviation_mfogt",
         "strategic_games.correlated.correlated_strategy",
         "strategic_games.correlated.mediated_game",
         "strategic_games.unilateral_deviation"
@@ -8997,8 +8653,6 @@
       ],
       "used_by": [
         "strategic_games.best_response",
-        "strategic_games.core.best_response_mfogt",
-        "strategic_games.equilibrium.nash_equilibrium_mfogt",
         "strategic_games.strictly_dominates",
         "strategic_games.weakly_dominates"
       ]
@@ -9082,7 +8736,6 @@
       ],
       "topic": "utility",
       "uses": [
-        "utility.lottery",
         "utility.utility_representation",
         "utility.vnm_axioms"
       ],
@@ -9110,7 +8763,6 @@
         "utility.preference_relation"
       ],
       "used_by": [
-        "utility.expected_utility_representation",
         "utility.vnm_axioms"
       ]
     },
@@ -9283,8 +8935,7 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.applications.stochastic_matrix_invariant_distribution",
-        "zero_sum.core.value"
+        "zero_sum.applications.stochastic_matrix_invariant_distribution"
       ]
     },
     {
@@ -9770,9 +9421,7 @@
         "zero_sum.core.mixed_extension",
         "zero_sum.core.mixed_support",
         "zero_sum.fictitious_play.empirical_frequency",
-        "zero_sum.lp.player_1_lp",
-        "zero_sum.lp.player_2_lp",
-        "zero_sum.minimax.kakutani_minimax_proof"
+        "zero_sum.lp.player_1_lp"
       ]
     },
     {
@@ -10012,10 +9661,8 @@
         "extensive_game.examples.poker_game_value_example",
         "extensive_game.perfect_information.zero_sum_perfect_information_value",
         "repeated_game.incomplete_info.cav_u_theorem",
-        "stochastic_game.examples.big_match_uniform_value",
         "stochastic_game.value.discounted_value",
         "stochastic_game.value.shapley_operator",
-        "zero_sum.applications.markov_stationary_as_zero_sum_value",
         "zero_sum.continuous.finite_opponent_separation_minimax",
         "zero_sum.continuous.monotone_decreasing_values_limit",
         "zero_sum.continuous.sion_minimax_theorem",
@@ -10026,9 +9673,7 @@
         "zero_sum.examples.noisy_duel_one_bullet_value",
         "zero_sum.examples.silent_duel_no_pure_value",
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
-        "zero_sum.lp.lp_optimal_iff_optimal_strategy",
         "zero_sum.lp.player_1_lp",
-        "zero_sum.lp.player_2_lp",
         "zero_sum.minimax.common_guarantee_value",
         "zero_sum.operators.value_operator_general"
       ]
@@ -10639,8 +10284,6 @@
       "uses": [
         "zero_sum.core.optimal_strategy_sets",
         "zero_sum.core.saddle_point",
-        "zero_sum.core.value",
-        "zero_sum.lp.player_1_lp",
         "zero_sum.lp.player_2_lp"
       ]
     },
@@ -10665,7 +10308,6 @@
         "zero_sum.core.value"
       ],
       "used_by": [
-        "zero_sum.lp.lp_optimal_iff_optimal_strategy",
         "zero_sum.lp.player_2_lp"
       ]
     },
@@ -10686,8 +10328,6 @@
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.mixed_strategy_simplex",
-        "zero_sum.core.value",
         "zero_sum.lp.player_1_lp"
       ],
       "used_by": [
@@ -10924,7 +10564,6 @@
       "plan_status": "candidate",
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.core.mixed_strategy_simplex",
         "zero_sum.core.saddle_point"
       ]
     },
@@ -11731,10 +11370,6 @@
       "to": "auction.basic.bid_profile_supports"
     },
     {
-      "from": "mechanism_design.transfer.mechanisms_with_transfers",
-      "to": "auction.basic.formats"
-    },
-    {
       "from": "mechanism_design.transfer.single_parameter_transfer_layer",
       "to": "auction.basic.formats"
     },
@@ -11800,10 +11435,6 @@
     },
     {
       "from": "core.simplex.wsum",
-      "to": "core.simplex.bounded_by_value"
-    },
-    {
-      "from": "core.simplex.wsum",
       "to": "core.simplex.continuity"
     },
     {
@@ -11831,10 +11462,6 @@
       "to": "extensive_game.examples.backward_forward_induction_incompatibility"
     },
     {
-      "from": "extensive_game.perfect_information.simple_perfect_information_game",
-      "to": "extensive_game.examples.chomp_strategy_stealing"
-    },
-    {
       "from": "extensive_game.perfect_information.zermelo_determinacy",
       "to": "extensive_game.examples.chomp_strategy_stealing"
     },
@@ -11855,14 +11482,6 @@
       "to": "extensive_game.examples.normal_vs_extensive_perfection_difference"
     },
     {
-      "from": "extensive_game.normal_form.normal_form_reduction",
-      "to": "extensive_game.examples.normal_vs_extensive_perfection_difference"
-    },
-    {
-      "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "extensive_game.examples.normal_vs_extensive_perfection_difference"
-    },
-    {
       "from": "extensive_game.core.nature_player",
       "to": "extensive_game.examples.poker_game_value_example"
     },
@@ -11876,10 +11495,6 @@
     },
     {
       "from": "extensive_game.perfect_information.kuhn_spe_existence",
-      "to": "extensive_game.examples.rubinstein_bargaining_spe"
-    },
-    {
-      "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
       "to": "extensive_game.examples.rubinstein_bargaining_spe"
     },
     {
@@ -11935,10 +11550,6 @@
       "to": "extensive_game.imperfect_information.information_set"
     },
     {
-      "from": "extensive_game.imperfect_information.information_set",
-      "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium"
-    },
-    {
       "from": "extensive_game.imperfect_information.perfect_recall",
       "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium"
     },
@@ -11959,15 +11570,7 @@
       "to": "extensive_game.imperfect_information.linear_extensive_game"
     },
     {
-      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
-      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium"
-    },
-    {
       "from": "extensive_game.imperfect_information.reached_information_set",
-      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium"
-    },
-    {
-      "from": "strategic_games.best_response",
       "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium"
     },
     {
@@ -11993,10 +11596,6 @@
     {
       "from": "extensive_game.imperfect_information.perfect_recall",
       "to": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral"
-    },
-    {
-      "from": "extensive_game.imperfect_information.perfect_recall",
-      "to": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential"
     },
     {
       "from": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
@@ -12039,10 +11638,6 @@
       "to": "extensive_game.imperfect_information.strategic_stability"
     },
     {
-      "from": "strategic_games.nash_equilibrium",
-      "to": "extensive_game.imperfect_information.strategic_stability"
-    },
-    {
       "from": "strategic_games.refinements.proper_equilibrium",
       "to": "extensive_game.imperfect_information.strategic_stability"
     },
@@ -12061,14 +11656,6 @@
     {
       "from": "extensive_game.imperfect_information.reached_information_set",
       "to": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
-    },
-    {
-      "from": "strategic_games.best_response",
-      "to": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
-    },
-    {
-      "from": "extensive_game.imperfect_information.information_set",
-      "to": "extensive_game.normal_form.agent_normal_form"
     },
     {
       "from": "extensive_game.imperfect_information.perfect_recall",
@@ -12287,10 +11874,6 @@
       "to": "repeated_game.core.payoff_aggregation"
     },
     {
-      "from": "repeated_game.core.repeated_game",
-      "to": "repeated_game.core.payoff_aggregation"
-    },
-    {
       "from": "strategic_games.strategic_game",
       "to": "repeated_game.core.repeated_game"
     },
@@ -12300,19 +11883,11 @@
     },
     {
       "from": "repeated_game.core.repeated_game",
-      "to": "repeated_game.folk_theorem.folk_theorem_baseline"
-    },
-    {
-      "from": "repeated_game.core.repeated_game",
       "to": "repeated_game.incomplete_info.cav_u_theorem"
     },
     {
       "from": "zero_sum.core.value",
       "to": "repeated_game.incomplete_info.cav_u_theorem"
-    },
-    {
-      "from": "social_choice.fair_division.allocation",
-      "to": "social_choice.fair_division.cardinal_instance"
     },
     {
       "from": "social_choice.fair_division.share_instance",
@@ -12387,15 +11962,7 @@
       "to": "social_choice.fair_division.divisible.cut_and_choose_alloc"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_ef_exists"
-    },
-    {
       "from": "social_choice.fair_division.divisible.cut_and_choose_envy_free",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_ef_exists"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
       "to": "social_choice.fair_division.divisible.cut_and_choose_ef_exists"
     },
     {
@@ -12409,14 +11976,6 @@
     {
       "from": "social_choice.fair_division.divisible.cutter_envy_free_of_fair",
       "to": "social_choice.fair_division.divisible.cut_and_choose_envy_free"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_envy_free"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.cut_and_choose_partition"
     },
     {
       "from": "social_choice.fair_division.divisible.cut_and_choose_alloc",
@@ -12439,31 +11998,15 @@
       "to": "social_choice.fair_division.divisible.cutter_envy_free_of_fair"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.ds_step"
-    },
-    {
       "from": "social_choice.fair_division.divisible.cut_exists",
       "to": "social_choice.fair_division.divisible.ds_step"
     },
     {
       "from": "social_choice.fair_division.divisible.envy_free",
       "to": "social_choice.fair_division.divisible.ds_step"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.dubins_spanier_proportional"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.cut_exists",
-      "to": "social_choice.fair_division.divisible.dubins_spanier_proportional"
     },
     {
       "from": "social_choice.fair_division.divisible.ds_step",
-      "to": "social_choice.fair_division.divisible.dubins_spanier_proportional"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
       "to": "social_choice.fair_division.divisible.dubins_spanier_proportional"
     },
     {
@@ -12475,19 +12018,7 @@
       "to": "social_choice.fair_division.divisible.dubins_spanier_rule"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.ef_exists"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.ef_exists"
-    },
-    {
       "from": "social_choice.fair_division.divisible.stromquist_unusual_case",
-      "to": "social_choice.fair_division.divisible.ef_exists"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_usual_case",
       "to": "social_choice.fair_division.divisible.ef_exists"
     },
     {
@@ -12497,10 +12028,6 @@
     {
       "from": "social_choice.fair_division.divisible.ef_implies_proportional",
       "to": "social_choice.fair_division.divisible.ef_exists_and_proportional"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.ef_implies_proportional"
     },
     {
       "from": "social_choice.fair_division.divisible.envy_free",
@@ -12527,10 +12054,6 @@
       "to": "social_choice.fair_division.divisible.fair_cut_exists"
     },
     {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.measure_instance"
-    },
-    {
       "from": "social_choice.fair_division.divisible.cardinal_instance",
       "to": "social_choice.fair_division.divisible.measure_instance"
     },
@@ -12543,16 +12066,8 @@
       "to": "social_choice.fair_division.divisible.measure_instance"
     },
     {
-      "from": "social_choice.fair_division.divisible.cardinal_instance",
-      "to": "social_choice.fair_division.divisible.measure_instance_ef_iff_real"
-    },
-    {
       "from": "social_choice.fair_division.divisible.measure_instance",
       "to": "social_choice.fair_division.divisible.measure_instance_ef_iff_real"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.ef_exists",
-      "to": "social_choice.fair_division.divisible.measure_instance_existence"
     },
     {
       "from": "social_choice.fair_division.divisible.ef_exists_and_proportional",
@@ -12571,10 +12086,6 @@
       "to": "social_choice.fair_division.divisible.measure_valuation"
     },
     {
-      "from": "social_choice.fair_division.divisible.cake_valuation",
-      "to": "social_choice.fair_division.divisible.normalized_iff_probability"
-    },
-    {
       "from": "social_choice.fair_division.divisible.measure_valuation",
       "to": "social_choice.fair_division.divisible.normalized_iff_probability"
     },
@@ -12583,24 +12094,8 @@
       "to": "social_choice.fair_division.divisible.ordinal_instance"
     },
     {
-      "from": "social_choice.preference",
-      "to": "social_choice.fair_division.divisible.ordinal_instance"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.allocation",
-      "to": "social_choice.fair_division.divisible.proportional_exists"
-    },
-    {
       "from": "social_choice.fair_division.divisible.dubins_spanier_proportional",
       "to": "social_choice.fair_division.divisible.proportional_exists"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.proportional_exists"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_pieces",
-      "to": "social_choice.fair_division.divisible.stromquist_U"
     },
     {
       "from": "social_choice.fair_division.divisible.stromquist_unique_preference_sets",
@@ -12615,16 +12110,8 @@
       "to": "social_choice.fair_division.divisible.stromquist_assignment"
     },
     {
-      "from": "social_choice.fair_division.divisible.stromquist_pieces",
-      "to": "social_choice.fair_division.divisible.stromquist_assignment"
-    },
-    {
       "from": "social_choice.fair_division.divisible.allocation",
       "to": "social_choice.fair_division.divisible.stromquist_pieces"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_pieces",
-      "to": "social_choice.fair_division.divisible.stromquist_preference_sets"
     },
     {
       "from": "social_choice.fair_division.divisible.stromquist_value_continuous",
@@ -12636,19 +12123,7 @@
     },
     {
       "from": "social_choice.fair_division.divisible.stromquist_preference_sets",
-      "to": "social_choice.fair_division.divisible.stromquist_shifted_cells"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_preference_sets",
       "to": "social_choice.fair_division.divisible.stromquist_unique_preference_sets"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_value_continuous",
-      "to": "social_choice.fair_division.divisible.stromquist_unique_preference_sets"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.stromquist_unusual_case"
     },
     {
       "from": "social_choice.fair_division.divisible.stromquist_shifted_cells",
@@ -12657,14 +12132,6 @@
     {
       "from": "social_choice.fair_division.divisible.stromquist_usual_case",
       "to": "social_choice.fair_division.divisible.stromquist_unusual_case"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.envy_free",
-      "to": "social_choice.fair_division.divisible.stromquist_usual_case"
-    },
-    {
-      "from": "social_choice.fair_division.divisible.stromquist_U",
-      "to": "social_choice.fair_division.divisible.stromquist_usual_case"
     },
     {
       "from": "social_choice.fair_division.divisible.stromquist_assignment",
@@ -12677,14 +12144,6 @@
     {
       "from": "social_choice.fair_division.divisible.stromquist_pieces",
       "to": "social_choice.fair_division.divisible.stromquist_value_continuous"
-    },
-    {
-      "from": "social_choice.fair_division.egalitarian_welfare",
-      "to": "social_choice.fair_division.egal_le_util"
-    },
-    {
-      "from": "social_choice.fair_division.utilitarian_welfare",
-      "to": "social_choice.fair_division.egal_le_util"
     },
     {
       "from": "social_choice.fair_division.welfare_monotone",
@@ -12703,10 +12162,6 @@
       "to": "social_choice.fair_division.equitable"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envies",
-      "to": "social_choice.fair_division.indivisible.acyclic_has_source"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_cycle",
       "to": "social_choice.fair_division.indivisible.acyclic_has_source"
     },
@@ -12721,14 +12176,6 @@
     {
       "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.additive_valuation"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.is_alpha_mms",
-      "to": "social_choice.fair_division.indivisible.alpha_mms_mono"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.maximin_share",
-      "to": "social_choice.fair_division.indivisible.alpha_mms_mono"
     },
     {
       "from": "social_choice.fair_division.indivisible.mms_iff_alpha_one",
@@ -12771,23 +12218,11 @@
       "to": "social_choice.fair_division.indivisible.checker"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.checker"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.proportional",
       "to": "social_choice.fair_division.indivisible.checker"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.ef1"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.ef1"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.ef1"
     },
     {
@@ -12795,15 +12230,7 @@
       "to": "social_choice.fair_division.indivisible.ef_implies_efx_mono"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.ef_implies_efx_mono"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.ef_implies_proportional_additive"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
       "to": "social_choice.fair_division.indivisible.ef_implies_proportional_additive"
     },
     {
@@ -12815,39 +12242,15 @@
       "to": "social_choice.fair_division.indivisible.ef_implies_proportional_additive"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
       "to": "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good"
     },
     {
-      "from": "social_choice.fair_division.indivisible.valuation",
-      "to": "social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.efx"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.efx"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.efx"
     },
     {
       "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.efx",
       "to": "social_choice.fair_division.indivisible.efx_exists_two_agents"
     },
     {
@@ -12868,34 +12271,10 @@
     },
     {
       "from": "social_choice.fair_division.indivisible.efx",
-      "to": "social_choice.fair_division.indivisible.efx_of_no_envy_mono"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.efx_of_no_envy_mono"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
       "to": "social_choice.fair_division.indivisible.efx_singleton_bundle"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.efx",
-      "to": "social_choice.fair_division.indivisible.efx_singleton_bundle"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
-      "to": "social_choice.fair_division.indivisible.efx_singleton_bundle"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.efx_two_agents_two_goods"
     },
     {
       "from": "social_choice.fair_division.indivisible.efx_singleton_bundle",
-      "to": "social_choice.fair_division.indivisible.efx_two_agents_two_goods"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.efx_two_agents_two_goods"
     },
     {
@@ -12911,23 +12290,11 @@
       "to": "social_choice.fair_division.indivisible.egalitarian_welfare"
     },
     {
-      "from": "social_choice.fair_division.indivisible.envy_cycle",
-      "to": "social_choice.fair_division.indivisible.eliminate_all_cycles"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.pareto_dom_count",
       "to": "social_choice.fair_division.indivisible.eliminate_all_cycles"
     },
     {
-      "from": "social_choice.fair_division.indivisible.rotate_bundles",
-      "to": "social_choice.fair_division.indivisible.eliminate_all_cycles"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_free",
-      "to": "social_choice.fair_division.indivisible.envies"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.valuation",
       "to": "social_choice.fair_division.indivisible.envies"
     },
     {
@@ -12939,16 +12306,8 @@
       "to": "social_choice.fair_division.indivisible.envy_cycle_algorithm"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.envy_cycle_algorithm"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.eliminate_all_cycles",
       "to": "social_choice.fair_division.indivisible.envy_cycle_algorithm"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.envy_cycle_ef1"
     },
     {
       "from": "social_choice.fair_division.indivisible.ef1",
@@ -12983,10 +12342,6 @@
       "to": "social_choice.fair_division.indivisible.equitable"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.is_alpha_mms"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.mms_value",
       "to": "social_choice.fair_division.indivisible.is_alpha_mms"
     },
@@ -13004,10 +12359,6 @@
     },
     {
       "from": "social_choice.fair_division.indivisible.maximin_share",
-      "to": "social_choice.fair_division.indivisible.mms_iff_alpha_one"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.mms_value",
       "to": "social_choice.fair_division.indivisible.mms_iff_alpha_one"
     },
     {
@@ -13033,14 +12384,6 @@
     {
       "from": "social_choice.fair_division.share_instance",
       "to": "social_choice.fair_division.indivisible.ordinal_instance"
-    },
-    {
-      "from": "social_choice.preference",
-      "to": "social_choice.fair_division.indivisible.ordinal_instance"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.pareto_dom_count"
     },
     {
       "from": "social_choice.fair_division.indivisible.rotate_bundles",
@@ -13071,10 +12414,6 @@
       "to": "social_choice.fair_division.indivisible.proportional"
     },
     {
-      "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.proportional_alpha_mms_additive"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.is_alpha_mms",
       "to": "social_choice.fair_division.indivisible.proportional_alpha_mms_additive"
     },
@@ -13099,16 +12438,8 @@
       "to": "social_choice.fair_division.indivisible.proportional_implies_mms_additive"
     },
     {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.rotate_bundles"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.envy_cycle",
       "to": "social_choice.fair_division.indivisible.rotate_bundles"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.round_robin_alloc"
     },
     {
       "from": "social_choice.fair_division.indivisible.allocation",
@@ -13119,24 +12450,12 @@
       "to": "social_choice.fair_division.indivisible.round_robin_alloc"
     },
     {
-      "from": "social_choice.fair_division.indivisible.additive_valuation",
-      "to": "social_choice.fair_division.indivisible.round_robin_ef1"
-    },
-    {
       "from": "social_choice.fair_division.indivisible.ef1",
-      "to": "social_choice.fair_division.indivisible.round_robin_ef1"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.round_robin_alloc",
       "to": "social_choice.fair_division.indivisible.round_robin_ef1"
     },
     {
       "from": "social_choice.fair_division.indivisible.round_robin_partition",
       "to": "social_choice.fair_division.indivisible.round_robin_ef1"
-    },
-    {
-      "from": "social_choice.fair_division.indivisible.allocation",
-      "to": "social_choice.fair_division.indivisible.round_robin_partition"
     },
     {
       "from": "social_choice.fair_division.indivisible.round_robin_alloc",
@@ -13171,20 +12490,8 @@
       "to": "social_choice.fair_division.proportional"
     },
     {
-      "from": "social_choice.fair_division.allocation",
-      "to": "social_choice.fair_division.share_instance"
-    },
-    {
       "from": "social_choice.fair_division.instance",
       "to": "social_choice.fair_division.share_instance"
-    },
-    {
-      "from": "social_choice.preference",
-      "to": "social_choice.fair_division.share_instance"
-    },
-    {
-      "from": "social_choice.fair_division.allocation",
-      "to": "social_choice.fair_division.solution_concept"
     },
     {
       "from": "social_choice.fair_division.instance",
@@ -13196,10 +12503,6 @@
     },
     {
       "from": "social_choice.fair_division.cardinal_instance",
-      "to": "social_choice.fair_division.utility_represents"
-    },
-    {
-      "from": "social_choice.fair_division.share_instance",
       "to": "social_choice.fair_division.utility_represents"
     },
     {
@@ -13232,38 +12535,10 @@
     },
     {
       "from": "social_choice.voting.dictatorial_swf",
-      "to": "social_choice.voting.arrow_impossibility"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.arrow_impossibility"
-    },
-    {
-      "from": "social_choice.voting.swf",
-      "to": "social_choice.voting.arrow_impossibility"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
-      "to": "social_choice.voting.arrow_impossibility"
-    },
-    {
-      "from": "social_choice.voting.dictatorial_swf",
-      "to": "social_choice.voting.arrow_of_unanimity_iia"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.arrow_of_unanimity_iia"
-    },
-    {
-      "from": "social_choice.voting.is_decisive",
       "to": "social_choice.voting.arrow_of_unanimity_iia"
     },
     {
       "from": "social_choice.voting.minimal_decisive_card_one",
-      "to": "social_choice.voting.arrow_of_unanimity_iia"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
       "to": "social_choice.voting.arrow_of_unanimity_iia"
     },
     {
@@ -13280,31 +12555,11 @@
     },
     {
       "from": "social_choice.voting.majority_prefers",
-      "to": "social_choice.voting.condorcet_paradox"
-    },
-    {
-      "from": "social_choice.voting.majority_prefers",
       "to": "social_choice.voting.condorcet_winner"
     },
     {
       "from": "social_choice.voting.decisive_spread",
       "to": "social_choice.voting.decisive_contraction"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.decisive_contraction"
-    },
-    {
-      "from": "social_choice.voting.is_decisive",
-      "to": "social_choice.voting.decisive_contraction"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
-      "to": "social_choice.voting.decisive_contraction"
-    },
-    {
-      "from": "social_choice.voting.iia",
-      "to": "social_choice.voting.decisive_spread"
     },
     {
       "from": "social_choice.voting.iia_strict",
@@ -13339,27 +12594,11 @@
       "to": "social_choice.voting.dictatorial_swf"
     },
     {
-      "from": "social_choice.voting.dictatorial_scf",
-      "to": "social_choice.voting.gibbard_satterthwaite"
-    },
-    {
       "from": "social_choice.voting.muller_satterthwaite",
       "to": "social_choice.voting.gibbard_satterthwaite"
     },
     {
-      "from": "social_choice.voting.scf",
-      "to": "social_choice.voting.gibbard_satterthwaite"
-    },
-    {
-      "from": "social_choice.voting.strategyproof",
-      "to": "social_choice.voting.gibbard_satterthwaite"
-    },
-    {
       "from": "social_choice.voting.strategyproof_implies_monotonic",
-      "to": "social_choice.voting.gibbard_satterthwaite"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
       "to": "social_choice.voting.gibbard_satterthwaite"
     },
     {
@@ -13403,10 +12642,6 @@
       "to": "social_choice.voting.minimal_decisive_card_one"
     },
     {
-      "from": "social_choice.voting.is_decisive",
-      "to": "social_choice.voting.minimal_decisive_card_one"
-    },
-    {
       "from": "social_choice.voting.unanimity_univ_decisive",
       "to": "social_choice.voting.minimal_decisive_card_one"
     },
@@ -13428,14 +12663,6 @@
     },
     {
       "from": "social_choice.voting.monotonic_scf",
-      "to": "social_choice.voting.muller_satterthwaite"
-    },
-    {
-      "from": "social_choice.voting.scf",
-      "to": "social_choice.voting.muller_satterthwaite"
-    },
-    {
-      "from": "social_choice.voting.unanimity",
       "to": "social_choice.voting.muller_satterthwaite"
     },
     {
@@ -13467,10 +12694,6 @@
       "to": "social_choice.voting.strategyproof_implies_monotonic"
     },
     {
-      "from": "social_choice.preference",
-      "to": "social_choice.voting.swf"
-    },
-    {
       "from": "social_choice.preference_profile",
       "to": "social_choice.voting.swf"
     },
@@ -13495,19 +12718,11 @@
       "to": "social_choice.voting.unanimity_univ_decisive"
     },
     {
-      "from": "stochastic_game.value.discounted_value",
-      "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value"
-    },
-    {
       "from": "stochastic_game.value.discounted_value_fixed_point",
       "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value"
     },
     {
       "from": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
-      "to": "stochastic_game.asymptotic.mertens_neyman_uniform_value"
-    },
-    {
-      "from": "stochastic_game.value.discounted_value",
       "to": "stochastic_game.asymptotic.mertens_neyman_uniform_value"
     },
     {
@@ -13523,27 +12738,11 @@
       "to": "stochastic_game.equilibrium.fink_nash_existence"
     },
     {
-      "from": "stochastic_game.core.stochastic_game",
-      "to": "stochastic_game.equilibrium.fink_nash_existence"
-    },
-    {
       "from": "stochastic_game.asymptotic.mertens_neyman_uniform_value",
       "to": "stochastic_game.examples.big_match_uniform_value"
     },
     {
-      "from": "stochastic_game.core.stochastic_game",
-      "to": "stochastic_game.examples.big_match_uniform_value"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "stochastic_game.examples.big_match_uniform_value"
-    },
-    {
       "from": "stochastic_game.core.history",
-      "to": "stochastic_game.value.discounted_value"
-    },
-    {
-      "from": "stochastic_game.core.stochastic_game",
       "to": "stochastic_game.value.discounted_value"
     },
     {
@@ -13552,10 +12751,6 @@
     },
     {
       "from": "stochastic_game.value.discounted_value",
-      "to": "stochastic_game.value.discounted_value_fixed_point"
-    },
-    {
-      "from": "stochastic_game.value.shapley_operator",
       "to": "stochastic_game.value.discounted_value_fixed_point"
     },
     {
@@ -13583,10 +12778,6 @@
       "to": "strategic_games.bayesian.agent_normal_form"
     },
     {
-      "from": "strategic_games.strategic_game",
-      "to": "strategic_games.bayesian.agent_normal_form"
-    },
-    {
       "from": "strategic_games.bayesian.bayesian_strategy",
       "to": "strategic_games.bayesian.bayesian_equilibrium"
     },
@@ -13600,10 +12791,6 @@
     },
     {
       "from": "strategic_games.bayesian.bayesian_equilibrium",
-      "to": "strategic_games.bayesian.bayesian_equilibrium_as_nash"
-    },
-    {
-      "from": "strategic_games.nash_equilibrium",
       "to": "strategic_games.bayesian.bayesian_equilibrium_as_nash"
     },
     {
@@ -13735,10 +12922,6 @@
       "to": "strategic_games.continuous.supermodular_game_nash_exists"
     },
     {
-      "from": "strategic_games.unilateral_deviation",
-      "to": "strategic_games.core.best_response_mfogt"
-    },
-    {
       "from": "strategic_games.best_response",
       "to": "strategic_games.core.br_invariance"
     },
@@ -13760,22 +12943,10 @@
     },
     {
       "from": "strategic_games.strategic_game",
-      "to": "strategic_games.core.strategy_profile_mfogt"
-    },
-    {
-      "from": "strategic_games.strategic_game",
       "to": "strategic_games.core.symmetric_game"
     },
     {
-      "from": "strategic_games.strategy_profile",
-      "to": "strategic_games.core.unilateral_deviation_mfogt"
-    },
-    {
       "from": "strategic_games.best_response",
-      "to": "strategic_games.correlated.best_response_face"
-    },
-    {
-      "from": "strategic_games.core.mixed_strategy",
       "to": "strategic_games.correlated.best_response_face"
     },
     {
@@ -13787,15 +12958,7 @@
       "to": "strategic_games.correlated.canonical_correlation_device"
     },
     {
-      "from": "strategic_games.strategic_game",
-      "to": "strategic_games.correlated.canonical_correlation_device"
-    },
-    {
       "from": "strategic_games.best_response",
-      "to": "strategic_games.correlated.correlated_best_response_not_independent"
-    },
-    {
-      "from": "strategic_games.core.mixed_strategy",
       "to": "strategic_games.correlated.correlated_best_response_not_independent"
     },
     {
@@ -13813,10 +12976,6 @@
     {
       "from": "strategic_games.correlated.correlated_equilibrium",
       "to": "strategic_games.correlated.correlated_equilibrium_convex_compact"
-    },
-    {
-      "from": "strategic_games.correlated.correlated_equilibrium",
-      "to": "strategic_games.correlated.correlated_equilibrium_exists"
     },
     {
       "from": "strategic_games.correlated.nash_induces_correlated_equilibrium",
@@ -13841,10 +13000,6 @@
     {
       "from": "strategic_games.nash_equilibrium",
       "to": "strategic_games.correlated.degenerate_correlated_equilibrium"
-    },
-    {
-      "from": "strategic_games.strategic_game",
-      "to": "strategic_games.correlated.mediated_game"
     },
     {
       "from": "strategic_games.strategy_profile",
@@ -13907,10 +13062,6 @@
       "to": "strategic_games.dominance.solvable_unique_nash"
     },
     {
-      "from": "strategic_games.best_response",
-      "to": "strategic_games.dominant_implies_nash"
-    },
-    {
       "from": "strategic_games.nash_equilibrium",
       "to": "strategic_games.dominant_implies_nash"
     },
@@ -13971,14 +13122,6 @@
       "to": "strategic_games.equilibrium.mixed_nash_semialgebraic"
     },
     {
-      "from": "strategic_games.best_response",
-      "to": "strategic_games.equilibrium.nash_equilibrium_mfogt"
-    },
-    {
-      "from": "strategic_games.unilateral_deviation",
-      "to": "strategic_games.equilibrium.nash_equilibrium_mfogt"
-    },
-    {
       "from": "fixed_point.brouwer_compact_convex",
       "to": "strategic_games.equilibrium.nash_existence_finite_games"
     },
@@ -13997,10 +13140,6 @@
     {
       "from": "strategic_games.nash_equilibrium",
       "to": "strategic_games.equilibrium.strict_equilibrium"
-    },
-    {
-      "from": "fixed_point.brouwer_compact_convex",
-      "to": "strategic_games.equilibrium.symmetric_mixed_equilibrium"
     },
     {
       "from": "strategic_games.core.symmetric_game",
@@ -14055,16 +13194,8 @@
       "to": "strategic_games.learning.internal_regret"
     },
     {
-      "from": "strategic_games.learning.external_regret",
-      "to": "strategic_games.learning.no_external_regret_hannan_convergence"
-    },
-    {
       "from": "strategic_games.learning.hannan_set",
       "to": "strategic_games.learning.no_external_regret_hannan_convergence"
-    },
-    {
-      "from": "strategic_games.correlated.correlated_equilibrium",
-      "to": "strategic_games.learning.no_internal_regret_correlated_convergence"
     },
     {
       "from": "strategic_games.learning.internal_regret",
@@ -14097,10 +13228,6 @@
     {
       "from": "strategic_games.best_response",
       "to": "strategic_games.nash_equilibrium"
-    },
-    {
-      "from": "strategic_games.core.mixed_strategy",
-      "to": "strategic_games.payoff_geometry.feasible_payoffs"
     },
     {
       "from": "strategic_games.payoff_geometry.threat_point",
@@ -14151,10 +13278,6 @@
       "to": "strategic_games.prisoners_dilemma"
     },
     {
-      "from": "strategic_games.strategic_game",
-      "to": "strategic_games.prisoners_dilemma"
-    },
-    {
       "from": "strategic_games.weakly_dominant_strategy",
       "to": "strategic_games.prisoners_dilemma"
     },
@@ -14168,10 +13291,6 @@
     },
     {
       "from": "strategic_games.refinements.approximate_solution",
-      "to": "strategic_games.refinements.approximate_solution_is_reny"
-    },
-    {
-      "from": "strategic_games.refinements.reny_solution",
       "to": "strategic_games.refinements.approximate_solution_is_reny"
     },
     {
@@ -14197,10 +13316,6 @@
     {
       "from": "strategic_games.core.mixed_strategy",
       "to": "strategic_games.refinements.epsilon_perfect_equilibrium"
-    },
-    {
-      "from": "strategic_games.core.mixed_strategy",
-      "to": "strategic_games.refinements.epsilon_proper_equilibrium"
     },
     {
       "from": "strategic_games.refinements.epsilon_perfect_equilibrium",
@@ -14243,19 +13358,11 @@
       "to": "strategic_games.refinements.proper_equilibrium_exists"
     },
     {
-      "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "strategic_games.refinements.proper_equilibrium_exists"
-    },
-    {
       "from": "strategic_games.refinements.proper_equilibrium",
       "to": "strategic_games.refinements.proper_equilibrium_exists"
     },
     {
       "from": "strategic_games.dominance.dominated_strategy",
-      "to": "strategic_games.refinements.proper_vs_perfect_equilibrium_examples"
-    },
-    {
-      "from": "strategic_games.refinements.perfect_equilibrium",
       "to": "strategic_games.refinements.proper_vs_perfect_equilibrium_examples"
     },
     {
@@ -14379,10 +13486,6 @@
       "to": "strategic_games.weakly_dominates"
     },
     {
-      "from": "utility.lottery",
-      "to": "utility.expected_utility_representation"
-    },
-    {
       "from": "utility.utility_representation",
       "to": "utility.expected_utility_representation"
     },
@@ -14436,10 +13539,6 @@
     },
     {
       "from": "zero_sum.applications.stochastic_matrix_invariant_distribution",
-      "to": "zero_sum.applications.markov_stationary_as_zero_sum_value"
-    },
-    {
-      "from": "zero_sum.core.value",
       "to": "zero_sum.applications.markov_stationary_as_zero_sum_value"
     },
     {
@@ -14735,14 +13834,6 @@
       "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
-    },
-    {
-      "from": "zero_sum.lp.player_1_lp",
-      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
-    },
-    {
       "from": "zero_sum.lp.player_2_lp",
       "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
     },
@@ -14753,14 +13844,6 @@
     {
       "from": "zero_sum.core.value",
       "to": "zero_sum.lp.player_1_lp"
-    },
-    {
-      "from": "zero_sum.core.mixed_strategy_simplex",
-      "to": "zero_sum.lp.player_2_lp"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.lp.player_2_lp"
     },
     {
       "from": "zero_sum.lp.player_1_lp",
@@ -14817,10 +13900,6 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.common_guarantee_value"
-    },
-    {
-      "from": "zero_sum.core.mixed_strategy_simplex",
-      "to": "zero_sum.minimax.kakutani_minimax_proof"
     },
     {
       "from": "zero_sum.core.saddle_point",

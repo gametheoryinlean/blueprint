@@ -778,11 +778,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.applications.markov_stationary_as_zero_sum_value",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.minimax.loomis_theorem",
       "to": "zero_sum.applications.perron_frobenius_positive_matrix",
       "kind": "uses"
@@ -1113,16 +1108,6 @@
       "kind": "uses"
     },
     {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.lp.player_1_lp",
-      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
-      "kind": "uses"
-    },
-    {
       "from": "zero_sum.lp.player_2_lp",
       "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
       "kind": "uses"
@@ -1135,16 +1120,6 @@
     {
       "from": "zero_sum.core.value",
       "to": "zero_sum.lp.player_1_lp",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.mixed_strategy_simplex",
-      "to": "zero_sum.lp.player_2_lp",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "zero_sum.lp.player_2_lp",
       "kind": "uses"
     },
     {
@@ -1206,11 +1181,6 @@
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.common_guarantee_value",
       "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.mixed_strategy_simplex",
-      "to": "zero_sum.minimax.kakutani_minimax_proof",
-      "kind": "proof_plan_uses"
     },
     {
       "from": "zero_sum.core.saddle_point",
@@ -1461,14 +1431,14 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.core",
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
       "role": "dependency",
-      "node_count": 10
+      "node_count": 6
     },
     {
       "id": "strategic_games.dominance",
@@ -1610,7 +1580,7 @@
       "to": "topic:stochastic_game",
       "kind": "boundary_dependent",
       "topic": "stochastic_game",
-      "count": 3
+      "count": 2
     },
     {
       "from": "zero_sum.operators.value_operator_nonexpansive_general",
@@ -2261,7 +2231,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.dominance",

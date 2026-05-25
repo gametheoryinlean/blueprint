@@ -14,16 +14,6 @@
   "proof_html": "<p>plan (Arrow-reduction route)</p>\n<p>Given $G : \\mathrm{PrefProfile}(N, A) \\to A$ unanimous and monotonic, construct\nan auxiliary social welfare function $F : \\mathrm{PrefProfile}(N, A) \\to\n\\mathrm{Pref}(A)$ defined pairwise as: for each pair ${a, b}$,\n$F(P)$ ranks $a \\succ b$ iff $G$ selects $a$ at the <em>pair-restricted</em>\nprofile $P|_{\\{a,b\\}}$ that pushes both $a$ and $b$ to the top above all\nother alternatives in everyone's ranking.</p>\n<ol>\n<li>\n<p><strong>Well-definedness.</strong> Pair restriction yields a profile where $\\{a,b\\}$\n   are everyone's top two; by unanimity (and finite case analysis on the\n   structure of $P|_{\\{a,b\\}}$) the outcome must be $a$ or $b$.</p>\n</li>\n<li>\n<p><strong>$F$ satisfies unanimity.</strong> If everyone strictly prefers $a$ to $b$ in\n   $P$, the pair-restricted profile has $a$ above $b$ at every voter; by\n   unanimity of $G$ the outcome is $a$, hence $F(P)$ strictly ranks\n   $a \\succ b$.</p>\n</li>\n<li>\n<p><strong>$F$ satisfies IIA.</strong> Society's $\\{a,b\\}$ ranking depends only on\n   $P|_{\\{a,b\\}}$, which depends only on each voter's $\\{a,b\\}$ pair\n   ranking. (Monotonicity of $G$ is what makes this construction\n   independent of how voters rank irrelevant alternatives.)</p>\n</li>\n<li>\n<p><strong>$F$ is a <code>Pref</code>.</strong> Transitivity of $F(P)$ uses monotonicity plus a\n   third-alternative case analysis; reflexivity and totality follow from\n   the unanimous outcome.</p>\n</li>\n<li>\n<p><strong>Apply Arrow</strong> ([[social_choice.voting.arrow_impossibility]]) to\n   conclude $F$ is dictatorial: some voter $i$'s strict preference\n   determines $F(P)$ for every pair.</p>\n</li>\n<li>\n<p><strong>Transfer back to $G$.</strong> A pairwise dictator over $F$ is also a\n   top-pick dictator over $G$: at any profile, $G(P)$ must lie above\n   every other alternative in $i$'s ranking (else the pair-restricted\n   profile witnessing the contradiction would yield a different\n   $F$-ranking).</p>\n</li>\n</ol>\n<p>The argument needs <code>Fintype N</code>, <code>Nonempty N</code>, <code>Fintype A</code>, and the\nhypothesis $|A| \\ge 3$ to invoke Arrow.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.27] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Muller–Satterthwaite theorem and the SWF reduction.</li>\n</ul>",
   "deps": [
     {
-      "id": "social_choice.voting.scf",
-      "title": "Social Choice Function",
-      "href": "social_choice/social_choice_voting_scf.html"
-    },
-    {
-      "id": "social_choice.voting.unanimity",
-      "title": "Unanimity (Pareto Axiom)",
-      "href": "social_choice/social_choice_voting_unanimity.html"
-    },
-    {
       "id": "social_choice.voting.monotonic_scf",
       "title": "Monotonic Social Choice Function",
       "href": "social_choice/social_choice_voting_monotonic_scf.html"
@@ -53,9 +43,9 @@
       "qualified_name": "SocialChoice.Voting.muller_satterthwaite",
       "module": "EconCSLib.SocialChoice.Voting.GibbardSatterthwaite",
       "repository_title": "EconCSLib",
-      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
-      "short_revision": "609636f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L46",
+      "revision": "0cf299c0e132e56c10a6463376c72b03911aa3fa",
+      "short_revision": "0cf299c",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0cf299c0e132e56c10a6463376c72b03911aa3fa/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L46",
       "has_sorry": true,
       "status": "resolved",
       "reason": null

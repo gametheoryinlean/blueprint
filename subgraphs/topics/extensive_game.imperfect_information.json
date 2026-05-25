@@ -262,11 +262,6 @@
       "kind": "uses"
     },
     {
-      "from": "extensive_game.imperfect_information.information_set",
-      "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium",
-      "kind": "uses"
-    },
-    {
       "from": "extensive_game.imperfect_information.perfect_recall",
       "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium",
       "kind": "uses"
@@ -284,11 +279,6 @@
     {
       "from": "extensive_game.imperfect_information.information_set",
       "to": "extensive_game.imperfect_information.linear_extensive_game",
-      "kind": "uses"
-    },
-    {
-      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
-      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
       "kind": "uses"
     },
     {
@@ -319,11 +309,6 @@
     {
       "from": "extensive_game.imperfect_information.perfect_recall",
       "to": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
-      "kind": "uses"
-    },
-    {
-      "from": "extensive_game.imperfect_information.perfect_recall",
-      "to": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
       "kind": "uses"
     },
     {
@@ -421,14 +406,14 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "strategic_games.core",
       "title": "Strategic Games.Core",
       "href": "strategic_games/core/index.html",
       "role": "dependency",
-      "node_count": 10
+      "node_count": 6
     },
     {
       "id": "strategic_games.dominance",
@@ -442,7 +427,7 @@
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency",
-      "node_count": 11
+      "node_count": 10
     },
     {
       "id": "strategic_games.refinements",
@@ -477,27 +462,6 @@
     {
       "from": "topic:strategic_games",
       "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "extensive_game.imperfect_information.strategic_stability",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
@@ -553,13 +517,6 @@
     },
     {
       "from": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
-      "to": "topic:extensive_game.normal_form",
-      "kind": "boundary_dependent",
-      "topic": "extensive_game.normal_form",
-      "count": 1
-    },
-    {
-      "from": "extensive_game.imperfect_information.information_set",
       "to": "topic:extensive_game.normal_form",
       "kind": "boundary_dependent",
       "topic": "extensive_game.normal_form",

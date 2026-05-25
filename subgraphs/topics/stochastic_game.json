@@ -105,22 +105,12 @@
   ],
   "edges": [
     {
-      "from": "stochastic_game.value.discounted_value",
-      "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
-      "kind": "uses"
-    },
-    {
       "from": "stochastic_game.value.discounted_value_fixed_point",
       "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
       "kind": "uses"
     },
     {
       "from": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
-      "to": "stochastic_game.asymptotic.mertens_neyman_uniform_value",
-      "kind": "uses"
-    },
-    {
-      "from": "stochastic_game.value.discounted_value",
       "to": "stochastic_game.asymptotic.mertens_neyman_uniform_value",
       "kind": "uses"
     },
@@ -135,17 +125,7 @@
       "kind": "uses"
     },
     {
-      "from": "stochastic_game.core.stochastic_game",
-      "to": "stochastic_game.equilibrium.fink_nash_existence",
-      "kind": "uses"
-    },
-    {
       "from": "stochastic_game.asymptotic.mertens_neyman_uniform_value",
-      "to": "stochastic_game.examples.big_match_uniform_value",
-      "kind": "uses"
-    },
-    {
-      "from": "stochastic_game.core.stochastic_game",
       "to": "stochastic_game.examples.big_match_uniform_value",
       "kind": "uses"
     },
@@ -155,17 +135,7 @@
       "kind": "uses"
     },
     {
-      "from": "stochastic_game.core.stochastic_game",
-      "to": "stochastic_game.value.discounted_value",
-      "kind": "uses"
-    },
-    {
       "from": "stochastic_game.value.discounted_value",
-      "to": "stochastic_game.value.discounted_value_fixed_point",
-      "kind": "uses"
-    },
-    {
-      "from": "stochastic_game.value.shapley_operator",
       "to": "stochastic_game.value.discounted_value_fixed_point",
       "kind": "uses"
     },
@@ -191,7 +161,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 128
+      "node_count": 123
     },
     {
       "id": "zero_sum",
@@ -207,13 +177,6 @@
       "to": "stochastic_game.core.stochastic_game",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "stochastic_game.examples.big_match_uniform_value",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
       "count": 1
     },
     {
