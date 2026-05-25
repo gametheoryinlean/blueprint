@@ -4,22 +4,22 @@
     "title": "Mechanism Design",
     "href": "mechanism_design/index.html",
     "parent": null,
-    "node_count": 15,
-    "descendant_node_count": 15
+    "node_count": 25,
+    "descendant_node_count": 25
   },
   "counts": {
-    "internal_nodes": 15,
-    "inlined_nodes": 15,
-    "descendant_nodes": 15,
+    "internal_nodes": 25,
+    "inlined_nodes": 25,
+    "descendant_nodes": 25,
     "child_topics": 0,
     "inlined_child_topics": 5,
-    "non_proof_plan_nodes": 15,
+    "non_proof_plan_nodes": 25,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 19,
-    "visible_nodes_with_selected_proof_plans": 19
+    "visible_nodes_without_proof_plans": 29,
+    "visible_nodes_with_selected_proof_plans": 29
   },
   "nodes": [
     {
@@ -79,12 +79,28 @@
       "payload": "node_payloads/mechanism_design_bayesian_ex_ante_equilibrium_predicates.json"
     },
     {
+      "id": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "title": "Ex-Ante Expected Utility (Bayesian Mechanisms)",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_bayesian_ex_ante_expected_utility.html",
+      "payload": "node_payloads/mechanism_design_bayesian_ex_ante_expected_utility.json"
+    },
+    {
       "id": "mechanism_design.bayesian.ex_ante_revelation_principle",
       "title": "Ex-Ante Revelation Principle Interface",
       "kind": "theorem",
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_bayesian_ex_ante_revelation_principle.html",
       "payload": "node_payloads/mechanism_design_bayesian_ex_ante_revelation_principle.json"
+    },
+    {
+      "id": "mechanism_design.bayesian.selling_problem",
+      "title": "Bayesian Selling Problem (IPV)",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_bayesian_selling_problem.html",
+      "payload": "node_payloads/mechanism_design_bayesian_selling_problem.json"
     },
     {
       "id": "mechanism_design.myerson.monotonicity_characterization",
@@ -95,12 +111,52 @@
       "payload": "node_payloads/mechanism_design_myerson_monotonicity_characterization.json"
     },
     {
+      "id": "mechanism_design.myerson.optimal_auction",
+      "title": "Myerson Optimal Auction (Virtual Valuations)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_optimal_auction.html",
+      "payload": "node_payloads/mechanism_design_myerson_optimal_auction.json"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_construction",
+      "title": "Myerson Payment Construction (withMyersonPayment)",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_payment_construction.html",
+      "payload": "node_payloads/mechanism_design_myerson_payment_construction.json"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_envelope",
+      "title": "Myerson Payment Envelope Lemmas",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_payment_envelope.html",
+      "payload": "node_payloads/mechanism_design_myerson_payment_envelope.json"
+    },
+    {
       "id": "mechanism_design.myerson.payment_formula",
       "title": "Myerson Payment Formula",
       "kind": "definition",
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_myerson_payment_formula.html",
       "payload": "node_payloads/mechanism_design_myerson_payment_formula.json"
+    },
+    {
+      "id": "mechanism_design.myerson.reserve_price",
+      "title": "Myerson Reserve-Price Characterisation",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_reserve_price.html",
+      "payload": "node_payloads/mechanism_design_myerson_reserve_price.json"
+    },
+    {
+      "id": "mechanism_design.myerson.revenue_equivalence",
+      "title": "Revenue Equivalence Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_revenue_equivalence.html",
+      "payload": "node_payloads/mechanism_design_myerson_revenue_equivalence.json"
     },
     {
       "id": "mechanism_design.transfer.mechanisms_with_transfers",
@@ -127,6 +183,22 @@
       "payload": "node_payloads/mechanism_design_transfer_single_parameter_transfer_layer.json"
     },
     {
+      "id": "mechanism_design.vcg.payment_identity",
+      "title": "VCG Payment Identity",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_payment_identity.html",
+      "payload": "node_payloads/mechanism_design_vcg_payment_identity.json"
+    },
+    {
+      "id": "mechanism_design.vcg.social_welfare",
+      "title": "VCG Social Welfare",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_social_welfare.html",
+      "payload": "node_payloads/mechanism_design_vcg_social_welfare.json"
+    },
+    {
       "id": "mechanism_design.vcg.truthfulness_and_ir",
       "title": "VCG Truthfulness And Individual Rationality",
       "kind": "theorem",
@@ -141,6 +213,14 @@
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html",
       "payload": "node_payloads/mechanism_design_vcg_welfare_and_payments.json"
+    },
+    {
+      "id": "mechanism_design.vcg.welfare_without",
+      "title": "VCG Welfare Without Agent i",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_welfare_without.html",
+      "payload": "node_payloads/mechanism_design_vcg_welfare_without.json"
     }
   ],
   "edges": [
@@ -190,8 +270,43 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
       "to": "mechanism_design.bayesian.ex_ante_revelation_principle",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "mechanism_design.bayesian.selling_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.bayesian.selling_problem",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_construction",
+      "to": "mechanism_design.myerson.monotonicity_characterization",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_envelope",
+      "to": "mechanism_design.myerson.monotonicity_characterization",
       "kind": "uses"
     },
     {
@@ -200,8 +315,63 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.bayesian.selling_problem",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.payment_construction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "mechanism_design.myerson.payment_construction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.payment_envelope",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "mechanism_design.myerson.payment_envelope",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.transfer.single_parameter_transfer_layer",
       "to": "mechanism_design.myerson.payment_formula",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "mechanism_design.myerson.reserve_price",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "mechanism_design.myerson.revenue_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.bayesian.selling_problem",
+      "to": "mechanism_design.myerson.revenue_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.revenue_equivalence",
       "kind": "uses"
     },
     {
@@ -230,6 +400,21 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.payment_identity",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.welfare_without",
+      "to": "mechanism_design.vcg.payment_identity",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.multiple_parameter_transfer_layer",
+      "to": "mechanism_design.vcg.social_welfare",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.vcg.welfare_and_payments",
       "to": "mechanism_design.vcg.truthfulness_and_ir",
       "kind": "uses"
@@ -237,6 +422,26 @@
     {
       "from": "mechanism_design.transfer.multiple_parameter_transfer_layer",
       "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.payment_identity",
+      "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.welfare_without",
+      "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.welfare_without",
       "kind": "uses"
     }
   ],
@@ -316,6 +521,12 @@
   ],
   "keywords": [
     {
+      "id": "bayesian",
+      "title": "bayesian",
+      "href": "keywords/bayesian.html",
+      "count": 4
+    },
+    {
       "id": "bayesian-mechanism",
       "title": "bayesian-mechanism",
       "href": "keywords/bayesian-mechanism.html",
@@ -325,6 +536,12 @@
       "id": "bayesian-nash-equilibrium",
       "title": "bayesian-nash-equilibrium",
       "href": "keywords/bayesian-nash-equilibrium.html",
+      "count": 2
+    },
+    {
+      "id": "clarke-pivot",
+      "title": "clarke-pivot",
+      "href": "keywords/clarke-pivot.html",
       "count": 2
     },
     {
@@ -346,6 +563,24 @@
       "count": 5
     },
     {
+      "id": "envelope",
+      "title": "envelope",
+      "href": "keywords/envelope.html",
+      "count": 1
+    },
+    {
+      "id": "ex-ante",
+      "title": "ex-ante",
+      "href": "keywords/ex-ante.html",
+      "count": 1
+    },
+    {
+      "id": "expected-utility",
+      "title": "expected-utility",
+      "href": "keywords/expected-utility.html",
+      "count": 1
+    },
+    {
       "id": "incomplete-information",
       "title": "incomplete-information",
       "href": "keywords/incomplete-information.html",
@@ -358,10 +593,16 @@
       "count": 2
     },
     {
+      "id": "ipv",
+      "title": "ipv",
+      "href": "keywords/ipv.html",
+      "count": 1
+    },
+    {
       "id": "mechanism-design",
       "title": "mechanism-design",
       "href": "keywords/mechanism-design.html",
-      "count": 15
+      "count": 25
     },
     {
       "id": "monotonicity",
@@ -379,12 +620,30 @@
       "id": "myerson",
       "title": "myerson",
       "href": "keywords/myerson.html",
-      "count": 2
+      "count": 7
     },
     {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "optimal-auction",
+      "title": "optimal-auction",
+      "href": "keywords/optimal-auction.html",
+      "count": 1
+    },
+    {
+      "id": "payment-construction",
+      "title": "payment-construction",
+      "href": "keywords/payment-construction.html",
+      "count": 1
+    },
+    {
+      "id": "payment-identity",
+      "title": "payment-identity",
+      "href": "keywords/payment-identity.html",
       "count": 1
     },
     {
@@ -394,27 +653,57 @@
       "count": 1
     },
     {
+      "id": "reserve-price",
+      "title": "reserve-price",
+      "href": "keywords/reserve-price.html",
+      "count": 1
+    },
+    {
       "id": "revelation-principle",
       "title": "revelation-principle",
       "href": "keywords/revelation-principle.html",
       "count": 1
     },
     {
+      "id": "revenue-equivalence",
+      "title": "revenue-equivalence",
+      "href": "keywords/revenue-equivalence.html",
+      "count": 1
+    },
+    {
+      "id": "second-price-auction",
+      "title": "second-price-auction",
+      "href": "keywords/second-price-auction.html",
+      "count": 1
+    },
+    {
+      "id": "selling-problem",
+      "title": "selling-problem",
+      "href": "keywords/selling-problem.html",
+      "count": 1
+    },
+    {
       "id": "single-parameter",
       "title": "single-parameter",
       "href": "keywords/single-parameter.html",
-      "count": 2
+      "count": 4
     },
     {
       "id": "social-welfare",
       "title": "social-welfare",
       "href": "keywords/social-welfare.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
+      "count": 1
+    },
+    {
+      "id": "symmetric-ipv",
+      "title": "symmetric-ipv",
+      "href": "keywords/symmetric-ipv.html",
       "count": 1
     },
     {
@@ -427,7 +716,19 @@
       "id": "vcg",
       "title": "vcg",
       "href": "keywords/vcg.html",
-      "count": 2
+      "count": 5
+    },
+    {
+      "id": "virtual-valuation",
+      "title": "virtual-valuation",
+      "href": "keywords/virtual-valuation.html",
+      "count": 1
+    },
+    {
+      "id": "welfare-without",
+      "title": "welfare-without",
+      "href": "keywords/welfare-without.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],

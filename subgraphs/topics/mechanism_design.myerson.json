@@ -4,22 +4,22 @@
     "title": "Mechanism Design.Myerson",
     "href": "mechanism_design/myerson/index.html",
     "parent": "mechanism_design",
-    "node_count": 2,
-    "descendant_node_count": 2
+    "node_count": 7,
+    "descendant_node_count": 7
   },
   "counts": {
-    "internal_nodes": 2,
+    "internal_nodes": 7,
     "inlined_nodes": 0,
-    "descendant_nodes": 2,
+    "descendant_nodes": 7,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 2,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
     {
@@ -31,18 +31,98 @@
       "payload": "node_payloads/mechanism_design_myerson_monotonicity_characterization.json"
     },
     {
+      "id": "mechanism_design.myerson.optimal_auction",
+      "title": "Myerson Optimal Auction (Virtual Valuations)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_optimal_auction.html",
+      "payload": "node_payloads/mechanism_design_myerson_optimal_auction.json"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_construction",
+      "title": "Myerson Payment Construction (withMyersonPayment)",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_payment_construction.html",
+      "payload": "node_payloads/mechanism_design_myerson_payment_construction.json"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_envelope",
+      "title": "Myerson Payment Envelope Lemmas",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_payment_envelope.html",
+      "payload": "node_payloads/mechanism_design_myerson_payment_envelope.json"
+    },
+    {
       "id": "mechanism_design.myerson.payment_formula",
       "title": "Myerson Payment Formula",
       "kind": "definition",
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_myerson_payment_formula.html",
       "payload": "node_payloads/mechanism_design_myerson_payment_formula.json"
+    },
+    {
+      "id": "mechanism_design.myerson.reserve_price",
+      "title": "Myerson Reserve-Price Characterisation",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_reserve_price.html",
+      "payload": "node_payloads/mechanism_design_myerson_reserve_price.json"
+    },
+    {
+      "id": "mechanism_design.myerson.revenue_equivalence",
+      "title": "Revenue Equivalence Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_revenue_equivalence.html",
+      "payload": "node_payloads/mechanism_design_myerson_revenue_equivalence.json"
     }
   ],
   "edges": [
     {
+      "from": "mechanism_design.myerson.payment_construction",
+      "to": "mechanism_design.myerson.monotonicity_characterization",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_envelope",
+      "to": "mechanism_design.myerson.monotonicity_characterization",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.myerson.payment_formula",
       "to": "mechanism_design.myerson.monotonicity_characterization",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.payment_construction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.payment_envelope",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "mechanism_design.myerson.reserve_price",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.revenue_equivalence",
       "kind": "uses"
     }
   ],
@@ -59,16 +139,44 @@
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
       "role": "dependency",
-      "node_count": 15
+      "node_count": 25
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.myerson.payment_construction",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.myerson.payment_envelope",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
     {
       "from": "topic:mechanism_design",
       "to": "mechanism_design.myerson.payment_formula",
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
       "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.myerson.revenue_equivalence",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 2
     },
     {
       "from": "mechanism_design.myerson.monotonicity_characterization",
@@ -80,16 +188,28 @@
   ],
   "keywords": [
     {
+      "id": "bayesian",
+      "title": "bayesian",
+      "href": "keywords/bayesian.html",
+      "count": 2
+    },
+    {
       "id": "dsic",
       "title": "dsic",
       "href": "keywords/dsic.html",
       "count": 1
     },
     {
+      "id": "envelope",
+      "title": "envelope",
+      "href": "keywords/envelope.html",
+      "count": 1
+    },
+    {
       "id": "mechanism-design",
       "title": "mechanism-design",
       "href": "keywords/mechanism-design.html",
-      "count": 2
+      "count": 7
     },
     {
       "id": "monotonicity",
@@ -101,12 +221,54 @@
       "id": "myerson",
       "title": "myerson",
       "href": "keywords/myerson.html",
-      "count": 2
+      "count": 7
+    },
+    {
+      "id": "optimal-auction",
+      "title": "optimal-auction",
+      "href": "keywords/optimal-auction.html",
+      "count": 1
+    },
+    {
+      "id": "payment-construction",
+      "title": "payment-construction",
+      "href": "keywords/payment-construction.html",
+      "count": 1
+    },
+    {
+      "id": "reserve-price",
+      "title": "reserve-price",
+      "href": "keywords/reserve-price.html",
+      "count": 1
+    },
+    {
+      "id": "revenue-equivalence",
+      "title": "revenue-equivalence",
+      "href": "keywords/revenue-equivalence.html",
+      "count": 1
+    },
+    {
+      "id": "second-price-auction",
+      "title": "second-price-auction",
+      "href": "keywords/second-price-auction.html",
+      "count": 1
     },
     {
       "id": "single-parameter",
       "title": "single-parameter",
       "href": "keywords/single-parameter.html",
+      "count": 3
+    },
+    {
+      "id": "symmetric-ipv",
+      "title": "symmetric-ipv",
+      "href": "keywords/symmetric-ipv.html",
+      "count": 1
+    },
+    {
+      "id": "virtual-valuation",
+      "title": "virtual-valuation",
+      "href": "keywords/virtual-valuation.html",
       "count": 1
     }
   ],

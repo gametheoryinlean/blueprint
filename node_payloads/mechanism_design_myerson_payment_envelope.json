@@ -1,0 +1,61 @@
+{
+  "id": "mechanism_design.myerson.payment_envelope",
+  "title": "Myerson Payment Envelope Lemmas",
+  "kind": "lemma",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_myerson_payment_envelope.html",
+  "primary_topic": "mechanism_design",
+  "topics": [
+    "mechanism_design",
+    "mechanism_design.myerson"
+  ],
+  "body_html": "<h1>Myerson Payment Envelope Lemmas</h1>\n<p>Two technical lemmas central to Myerson's envelope-theorem argument for\nsingle-parameter mechanisms.</p>\n<h2><code>payment_sandwich</code></h2>\n<p>For a DSIC single-parameter mechanism with allocation rule $x$ and\npayments $p$, the payment $p_i(b)$ at bid $b$ is <strong>sandwiched</strong> between\nthe upper and lower integral bounds determined by $x_i$:\n$$\n\\int_0^{b_i} x_i(z, b_{-i}) \\, dz \\;\\le\\; p_i(b) - p_i(b_0)\n  \\;\\le\\; \\int_0^{b_i} x_i(z, b_{-i}) \\, dz\n$$\nwhere $b_0$ is the zero-bid reference. The collapsed equality is the\nMyerson payment formula\n([[mechanism_design.myerson.payment_formula]]).</p>\n<h2><code>payment_difference_bound</code></h2>\n<p>A Lipschitz-style bound on the payment difference between two bids:\n$$\n|p_i(b) - p_i(b')| \\;\\le\\; \\int \\big|x_i(z, b_{-i}) - x_i(z, b'_{-i})\\big| \\, dz,\n$$\ncontrolling how the payment moves when the bid profile changes.</p>\n<h2>Where these are used</h2>\n<ul>\n<li><strong>Implementability proof</strong> (<code>withMyersonPayment_isDSIC_of_isMonotone</code>,\n  in [[mechanism_design.myerson_monotonicity_characterization]]):\n  uses <code>payment_sandwich</code> to verify the Myerson-payment-attached\n  mechanism satisfies DSIC.</li>\n<li><strong>Payment-formula recovery</strong>\n  (<code>payment_formula_of_isDSIC_of_zeroNormalized</code>,\n  in [[mechanism_design.myerson.payment_formula]]): uses\n  <code>payment_difference_bound</code> to show that any DSIC zero-normalised\n  payment equals the Myerson integral.</li>\n</ul>\n<p>These are the technical mid-steps in the envelope-theorem derivation\nof the Myerson characterisation.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 9, §9.5.4, Thm 9.36] Nisan, Roughgarden, Tardos, and\n  Vazirani, <em>Algorithmic Game Theory</em>. Envelope characterisation of\n  single-parameter DSIC mechanisms.</li>\n<li>Myerson, R. B. (1981). \"Optimal Auction Design\".\n  <em>Math. Oper. Res.</em> 6: 58–73. Original envelope-theorem framing.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "title": "Single-Parameter Transfer Layer",
+      "href": "mechanism_design/mechanism_design_transfer_single_parameter_transfer_layer.html"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_formula",
+      "title": "Myerson Payment Formula",
+      "href": "mechanism_design/mechanism_design_myerson_payment_formula.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.myerson.monotonicity_characterization",
+      "title": "Myerson Monotonicity Characterization",
+      "href": "mechanism_design/mechanism_design_myerson_monotonicity_characterization.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "payment_sandwich",
+      "display_name": "SingleParameterMechanism.payment_sandwich",
+      "qualified_name": "SingleParameterMechanism.payment_sandwich",
+      "module": "EconCSLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/Myerson.lean#L97",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "payment_difference_bound",
+      "display_name": "SingleParameterMechanism.payment_difference_bound",
+      "qualified_name": "SingleParameterMechanism.payment_difference_bound",
+      "module": "EconCSLib.MechanismDesign.Myerson",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/Myerson.lean#L128",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

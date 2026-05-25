@@ -1,0 +1,105 @@
+{
+  "id": "mechanism_design.vcg.social_welfare",
+  "title": "VCG Social Welfare",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_vcg_social_welfare.html",
+  "primary_topic": "mechanism_design",
+  "topics": [
+    "mechanism_design",
+    "mechanism_design.vcg"
+  ],
+  "body_html": "<h1>VCG Social Welfare</h1>\n<p>For a multiple-parameter mechanism with valuation profile\n$v : I \\to (A \\to \\mathbb{R})$, the <strong>social welfare</strong> of allocation\n$a \\in A$ is\n$$\nW(v, a) \\;=\\; \\sum_{i \\in I} v_i(a).\n$$</p>\n<p><code>maxSocialWelfare v</code> is the supremum of $W(v, \\cdot)$ over $A$; for a\nfinite outcome set this maximum is attained, and <code>efficientAllocation v</code>\nis a chosen welfare-maximiser (noncomputable via choice). The\ncorrectness lemma <code>efficientAllocation_isOptimal</code> states\n$W(v, \\mathrm{efficientAllocation}\\ v) \\ge W(v, a)$ for every $a \\in A$.</p>\n<p>This is the welfare-maximisation layer that the VCG mechanism's\nallocation rule and Clarke-pivot payment construction both build on:</p>\n<ul>\n<li>The VCG allocation rule simply returns the efficient allocation.</li>\n<li>The Clarke-pivot payment for agent $i$ subtracts the\n  \"welfare-without-$i$\" max ([[mechanism_design.vcg.welfare_without]])\n  from the realised social welfare, giving the VCG identity\n  ([[mechanism_design.vcg.payment_identity]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 9, §9.3.3, Def 9.16] Nisan, Roughgarden, Tardos, and\n  Vazirani, <em>Algorithmic Game Theory</em>,\n  <code>references/AlgorithmicGameTheory.pdf</code>. Welfare-maximising allocation\n  rules for VCG.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.transfer.multiple_parameter_transfer_layer",
+      "title": "Multiple-Parameter Transfer Layer",
+      "href": "mechanism_design/mechanism_design_transfer_multiple_parameter_transfer_layer.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.vcg.payment_identity",
+      "title": "VCG Payment Identity",
+      "href": "mechanism_design/mechanism_design_vcg_payment_identity.html"
+    },
+    {
+      "id": "mechanism_design.vcg.welfare_and_payments",
+      "title": "VCG Welfare And Payments",
+      "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html"
+    },
+    {
+      "id": "mechanism_design.vcg.welfare_without",
+      "title": "VCG Welfare Without Agent i",
+      "href": "mechanism_design/mechanism_design_vcg_welfare_without.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "socialWelfare",
+      "display_name": "MultipleParameterMechanism.socialWelfare",
+      "qualified_name": "MultipleParameterMechanism.socialWelfare",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L36",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "maxSocialWelfare",
+      "display_name": "MultipleParameterMechanism.maxSocialWelfare",
+      "qualified_name": "MultipleParameterMechanism.maxSocialWelfare",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L40",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "exists_efficientAllocation",
+      "display_name": "MultipleParameterMechanism.exists_efficientAllocation",
+      "qualified_name": "MultipleParameterMechanism.exists_efficientAllocation",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L44",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "efficientAllocation",
+      "display_name": "MultipleParameterMechanism.efficientAllocation",
+      "qualified_name": "MultipleParameterMechanism.efficientAllocation",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L57",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "efficientAllocation_isOptimal",
+      "display_name": "MultipleParameterMechanism.efficientAllocation_isOptimal",
+      "qualified_name": "MultipleParameterMechanism.efficientAllocation_isOptimal",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L61",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

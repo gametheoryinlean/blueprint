@@ -2025,7 +2025,9 @@
         "mechanism_design.transfer.mechanisms_with_transfers"
       ],
       "used_by": [
-        "mechanism_design.bayesian.ex_ante_equilibrium_predicates"
+        "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
+        "mechanism_design.bayesian.ex_ante_expected_utility",
+        "mechanism_design.bayesian.selling_problem"
       ]
     },
     {
@@ -2044,7 +2046,6 @@
         "mechanism_design.bayesian"
       ],
       "lean_declarations": [
-        "BayesianMechanismWithTransfers.exAnteExpectedUtility",
         "BayesianMechanismWithTransfers.IntegrableExAnteUtility",
         "BayesianMechanismWithTransfers.IsExAnteBayesianNashEquilibrium",
         "DirectBayesianMechanismWithTransfers",
@@ -2052,10 +2053,40 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.bayesian.bayesian_mechanisms"
+        "mechanism_design.bayesian.bayesian_mechanisms",
+        "mechanism_design.bayesian.ex_ante_expected_utility"
       ],
       "used_by": [
         "mechanism_design.bayesian.ex_ante_revelation_principle"
+      ]
+    },
+    {
+      "id": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "title": "Ex-Ante Expected Utility (Bayesian Mechanisms)",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "bayesian",
+        "expected-utility",
+        "ex-ante"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.bayesian"
+      ],
+      "lean_declarations": [
+        "BayesianMechanismWithTransfers.exAnteExpectedUtility"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.bayesian.bayesian_mechanisms",
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ],
+      "used_by": [
+        "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
+        "mechanism_design.myerson.revenue_equivalence"
       ]
     },
     {
@@ -2084,6 +2115,32 @@
       ]
     },
     {
+      "id": "mechanism_design.bayesian.selling_problem",
+      "title": "Bayesian Selling Problem (IPV)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "bayesian",
+        "selling-problem",
+        "ipv"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.bayesian"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.bayesian.bayesian_mechanisms",
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.optimal_auction",
+        "mechanism_design.myerson.revenue_equivalence"
+      ]
+    },
+    {
       "id": "mechanism_design.myerson.monotonicity_characterization",
       "title": "Myerson Monotonicity Characterization",
       "kind": "theorem",
@@ -2101,8 +2158,6 @@
       ],
       "lean_declarations": [
         "isMonotone_of_isDSIC",
-        "payment_sandwich",
-        "payment_difference_bound",
         "withMyersonPayment_isDSIC_of_isMonotone",
         "isImplementable_of_isMonotone",
         "isImplementable_iff_isMonotone",
@@ -2113,10 +2168,97 @@
       ],
       "topic": "mechanism_design",
       "uses": [
+        "mechanism_design.myerson.payment_construction",
+        "mechanism_design.myerson.payment_envelope",
         "mechanism_design.myerson.payment_formula"
       ],
       "used_by": [
         "auction.knapsack.welfare_maximizing_mechanism"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.optimal_auction",
+      "title": "Myerson Optimal Auction (Virtual Valuations)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "optimal-auction",
+        "virtual-valuation",
+        "bayesian"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.bayesian.selling_problem",
+        "mechanism_design.myerson.payment_formula",
+        "mechanism_design.myerson.revenue_equivalence"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.reserve_price"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.payment_construction",
+      "title": "Myerson Payment Construction (withMyersonPayment)",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "single-parameter",
+        "payment-construction"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson"
+      ],
+      "lean_declarations": [
+        "withMyersonPayment",
+        "withMyersonPayment_quasiLinearUtility_eq"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.myerson.payment_formula",
+        "mechanism_design.transfer.single_parameter_transfer_layer"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.monotonicity_characterization"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.payment_envelope",
+      "title": "Myerson Payment Envelope Lemmas",
+      "kind": "lemma",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "envelope",
+        "single-parameter"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson"
+      ],
+      "lean_declarations": [
+        "payment_sandwich",
+        "payment_difference_bound"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.myerson.payment_formula",
+        "mechanism_design.transfer.single_parameter_transfer_layer"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.monotonicity_characterization"
       ]
     },
     {
@@ -2136,8 +2278,6 @@
       ],
       "lean_declarations": [
         "myersonPayment",
-        "withMyersonPayment",
-        "withMyersonPayment_quasiLinearUtility_eq",
         "ZeroNormalized",
         "myersonPayment_zeroNormalized"
       ],
@@ -2146,7 +2286,59 @@
         "mechanism_design.transfer.single_parameter_transfer_layer"
       ],
       "used_by": [
-        "mechanism_design.myerson.monotonicity_characterization"
+        "mechanism_design.myerson.monotonicity_characterization",
+        "mechanism_design.myerson.optimal_auction",
+        "mechanism_design.myerson.payment_construction",
+        "mechanism_design.myerson.payment_envelope",
+        "mechanism_design.myerson.revenue_equivalence"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.reserve_price",
+      "title": "Myerson Reserve-Price Characterisation",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "reserve-price",
+        "second-price-auction",
+        "symmetric-ipv"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.myerson.optimal_auction"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.revenue_equivalence",
+      "title": "Revenue Equivalence Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "revenue-equivalence",
+        "bayesian"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.bayesian.ex_ante_expected_utility",
+        "mechanism_design.bayesian.selling_problem",
+        "mechanism_design.myerson.payment_formula"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.optimal_auction"
       ]
     },
     {
@@ -2183,6 +2375,8 @@
       ],
       "used_by": [
         "mechanism_design.bayesian.bayesian_mechanisms",
+        "mechanism_design.bayesian.ex_ante_expected_utility",
+        "mechanism_design.bayesian.selling_problem",
         "mechanism_design.transfer.multiple_parameter_transfer_layer",
         "mechanism_design.transfer.single_parameter_transfer_layer"
       ]
@@ -2212,6 +2406,7 @@
         "mechanism_design.transfer.mechanisms_with_transfers"
       ],
       "used_by": [
+        "mechanism_design.vcg.social_welfare",
         "mechanism_design.vcg.welfare_and_payments"
       ]
     },
@@ -2248,7 +2443,69 @@
       "used_by": [
         "auction.basic.formats",
         "auction.knapsack.environment",
+        "mechanism_design.myerson.payment_construction",
+        "mechanism_design.myerson.payment_envelope",
         "mechanism_design.myerson.payment_formula"
+      ]
+    },
+    {
+      "id": "mechanism_design.vcg.payment_identity",
+      "title": "VCG Payment Identity",
+      "kind": "theorem",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "vcg",
+        "payment-identity",
+        "clarke-pivot"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.vcg"
+      ],
+      "lean_declarations": [
+        "VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.vcg.social_welfare",
+        "mechanism_design.vcg.welfare_without"
+      ],
+      "used_by": [
+        "mechanism_design.vcg.welfare_and_payments"
+      ]
+    },
+    {
+      "id": "mechanism_design.vcg.social_welfare",
+      "title": "VCG Social Welfare",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "vcg",
+        "social-welfare"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.vcg"
+      ],
+      "lean_declarations": [
+        "socialWelfare",
+        "maxSocialWelfare",
+        "exists_efficientAllocation",
+        "efficientAllocation",
+        "efficientAllocation_isOptimal"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.transfer.multiple_parameter_transfer_layer"
+      ],
+      "used_by": [
+        "mechanism_design.vcg.payment_identity",
+        "mechanism_design.vcg.welfare_and_payments",
+        "mechanism_design.vcg.welfare_without"
       ]
     },
     {
@@ -2294,11 +2551,38 @@
         "mechanism_design.vcg"
       ],
       "lean_declarations": [
-        "socialWelfare",
-        "maxSocialWelfare",
-        "exists_efficientAllocation",
-        "efficientAllocation",
-        "efficientAllocation_isOptimal",
+        "vcgPayment",
+        "VCGMechanism",
+        "VCGTransferMechanism"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.transfer.multiple_parameter_transfer_layer",
+        "mechanism_design.vcg.payment_identity",
+        "mechanism_design.vcg.social_welfare",
+        "mechanism_design.vcg.welfare_without"
+      ],
+      "used_by": [
+        "mechanism_design.vcg.truthfulness_and_ir"
+      ]
+    },
+    {
+      "id": "mechanism_design.vcg.welfare_without",
+      "title": "VCG Welfare Without Agent i",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "vcg",
+        "clarke-pivot",
+        "welfare-without"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.vcg"
+      ],
+      "lean_declarations": [
         "welfareWithout",
         "socialWelfare_eq_value_add_welfareWithout",
         "welfareWithout_le_socialWelfare",
@@ -2308,18 +2592,15 @@
         "maxWelfareWithout_update_self",
         "exists_withoutAllocation",
         "withoutAllocation",
-        "withoutAllocation_isOptimal",
-        "vcgPayment",
-        "VCGMechanism",
-        "VCGTransferMechanism",
-        "VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout"
+        "withoutAllocation_isOptimal"
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.transfer.multiple_parameter_transfer_layer"
+        "mechanism_design.vcg.social_welfare"
       ],
       "used_by": [
-        "mechanism_design.vcg.truthfulness_and_ir"
+        "mechanism_design.vcg.payment_identity",
+        "mechanism_design.vcg.welfare_and_payments"
       ]
     },
     {
@@ -11898,16 +12179,88 @@
       "to": "mechanism_design.bayesian.ex_ante_equilibrium_predicates"
     },
     {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "mechanism_design.bayesian.ex_ante_equilibrium_predicates"
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "mechanism_design.bayesian.ex_ante_expected_utility"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.bayesian.ex_ante_expected_utility"
+    },
+    {
       "from": "mechanism_design.bayesian.ex_ante_equilibrium_predicates",
       "to": "mechanism_design.bayesian.ex_ante_revelation_principle"
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "mechanism_design.bayesian.selling_problem"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.bayesian.selling_problem"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_construction",
+      "to": "mechanism_design.myerson.monotonicity_characterization"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_envelope",
+      "to": "mechanism_design.myerson.monotonicity_characterization"
     },
     {
       "from": "mechanism_design.myerson.payment_formula",
       "to": "mechanism_design.myerson.monotonicity_characterization"
     },
     {
+      "from": "mechanism_design.bayesian.selling_problem",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.payment_construction"
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "mechanism_design.myerson.payment_construction"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.payment_envelope"
+    },
+    {
+      "from": "mechanism_design.transfer.single_parameter_transfer_layer",
+      "to": "mechanism_design.myerson.payment_envelope"
+    },
+    {
       "from": "mechanism_design.transfer.single_parameter_transfer_layer",
       "to": "mechanism_design.myerson.payment_formula"
+    },
+    {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "mechanism_design.myerson.reserve_price"
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "mechanism_design.myerson.revenue_equivalence"
+    },
+    {
+      "from": "mechanism_design.bayesian.selling_problem",
+      "to": "mechanism_design.myerson.revenue_equivalence"
+    },
+    {
+      "from": "mechanism_design.myerson.payment_formula",
+      "to": "mechanism_design.myerson.revenue_equivalence"
     },
     {
       "from": "mechanism_design.basic.direct_mechanism_interface",
@@ -11930,12 +12283,40 @@
       "to": "mechanism_design.transfer.single_parameter_transfer_layer"
     },
     {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.payment_identity"
+    },
+    {
+      "from": "mechanism_design.vcg.welfare_without",
+      "to": "mechanism_design.vcg.payment_identity"
+    },
+    {
+      "from": "mechanism_design.transfer.multiple_parameter_transfer_layer",
+      "to": "mechanism_design.vcg.social_welfare"
+    },
+    {
       "from": "mechanism_design.vcg.welfare_and_payments",
       "to": "mechanism_design.vcg.truthfulness_and_ir"
     },
     {
       "from": "mechanism_design.transfer.multiple_parameter_transfer_layer",
       "to": "mechanism_design.vcg.welfare_and_payments"
+    },
+    {
+      "from": "mechanism_design.vcg.payment_identity",
+      "to": "mechanism_design.vcg.welfare_and_payments"
+    },
+    {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.welfare_and_payments"
+    },
+    {
+      "from": "mechanism_design.vcg.welfare_without",
+      "to": "mechanism_design.vcg.welfare_and_payments"
+    },
+    {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.welfare_without"
     },
     {
       "from": "repeated_game.core.strategy",

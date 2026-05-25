@@ -4,24 +4,40 @@
     "title": "Mechanism Design.Vcg",
     "href": "mechanism_design/vcg/index.html",
     "parent": "mechanism_design",
-    "node_count": 2,
-    "descendant_node_count": 2
+    "node_count": 5,
+    "descendant_node_count": 5
   },
   "counts": {
-    "internal_nodes": 2,
+    "internal_nodes": 5,
     "inlined_nodes": 0,
-    "descendant_nodes": 2,
+    "descendant_nodes": 5,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 2,
+    "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
   },
   "nodes": [
+    {
+      "id": "mechanism_design.vcg.payment_identity",
+      "title": "VCG Payment Identity",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_payment_identity.html",
+      "payload": "node_payloads/mechanism_design_vcg_payment_identity.json"
+    },
+    {
+      "id": "mechanism_design.vcg.social_welfare",
+      "title": "VCG Social Welfare",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_social_welfare.html",
+      "payload": "node_payloads/mechanism_design_vcg_social_welfare.json"
+    },
     {
       "id": "mechanism_design.vcg.truthfulness_and_ir",
       "title": "VCG Truthfulness And Individual Rationality",
@@ -37,12 +53,50 @@
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html",
       "payload": "node_payloads/mechanism_design_vcg_welfare_and_payments.json"
+    },
+    {
+      "id": "mechanism_design.vcg.welfare_without",
+      "title": "VCG Welfare Without Agent i",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_vcg_welfare_without.html",
+      "payload": "node_payloads/mechanism_design_vcg_welfare_without.json"
     }
   ],
   "edges": [
     {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.payment_identity",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.welfare_without",
+      "to": "mechanism_design.vcg.payment_identity",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.vcg.welfare_and_payments",
       "to": "mechanism_design.vcg.truthfulness_and_ir",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.payment_identity",
+      "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.welfare_without",
+      "to": "mechanism_design.vcg.welfare_and_payments",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.vcg.social_welfare",
+      "to": "mechanism_design.vcg.welfare_without",
       "kind": "uses"
     }
   ],
@@ -52,10 +106,17 @@
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
       "role": "dependency",
-      "node_count": 15
+      "node_count": 25
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.vcg.social_welfare",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
     {
       "from": "topic:mechanism_design",
       "to": "mechanism_design.vcg.welfare_and_payments",
@@ -65,6 +126,12 @@
     }
   ],
   "keywords": [
+    {
+      "id": "clarke-pivot",
+      "title": "clarke-pivot",
+      "href": "keywords/clarke-pivot.html",
+      "count": 2
+    },
     {
       "id": "dsic",
       "title": "dsic",
@@ -81,19 +148,31 @@
       "id": "mechanism-design",
       "title": "mechanism-design",
       "href": "keywords/mechanism-design.html",
-      "count": 2
+      "count": 5
+    },
+    {
+      "id": "payment-identity",
+      "title": "payment-identity",
+      "href": "keywords/payment-identity.html",
+      "count": 1
     },
     {
       "id": "social-welfare",
       "title": "social-welfare",
       "href": "keywords/social-welfare.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "vcg",
       "title": "vcg",
       "href": "keywords/vcg.html",
-      "count": 2
+      "count": 5
+    },
+    {
+      "id": "welfare-without",
+      "title": "welfare-without",
+      "href": "keywords/welfare-without.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],

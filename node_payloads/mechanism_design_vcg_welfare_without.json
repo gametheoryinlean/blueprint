@@ -1,0 +1,165 @@
+{
+  "id": "mechanism_design.vcg.welfare_without",
+  "title": "VCG Welfare Without Agent i",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "mechanism_design/mechanism_design_vcg_welfare_without.html",
+  "primary_topic": "mechanism_design",
+  "topics": [
+    "mechanism_design",
+    "mechanism_design.vcg"
+  ],
+  "body_html": "<h1>VCG Welfare Without Agent i</h1>\n<p>The \"welfare-without-$i$\" construction strips agent $i$'s own value\ncontribution from the social welfare functional, retaining only the\nother agents' valuations at the same allocation:\n$$\nW_{-i}(v, a) \\;=\\; \\sum_{j \\neq i} v_j(a).\n$$</p>\n<p>Together with <code>maxWelfareWithout v i := \\max_a W_{-i}(v, a)</code> it\nunderpins the Clarke-pivot payment $p_i(v) = \\max_a W_{-i}(v, a) - W_{-i}(v, a^*)$\n(see [[mechanism_design.vcg.payment_identity]]).</p>\n<h2>Core identities and bounds</h2>\n<ul>\n<li><strong>Decomposition</strong> (<code>socialWelfare_eq_value_add_welfareWithout</code>):\n  $W(v, a) = v_i(a) + W_{-i}(v, a)$ for every agent $i$ and allocation $a$.</li>\n<li><strong>Monotonicity</strong> (<code>welfareWithout_le_socialWelfare</code>):\n  $W_{-i}(v, a) \\le W(v, a)$ when $v_i(a) \\ge 0$, with a non-negativity\n  variant <code>welfareWithout_le_socialWelfare_of_nonneg_i</code>.</li>\n<li><strong>Report independence</strong> (<code>welfareWithout_update_self</code>,\n  <code>maxWelfareWithout_update_self</code>): replacing agent $i$'s reported\n  valuation does not change $W_{-i}$ or its max — by construction,\n  agent $i$'s report is the one term excluded from the sum. This is\n  the <em>strategic core</em> of the Clarke pivot: agent $i$ cannot influence\n  $\\max_a W_{-i}$.</li>\n<li><strong>Existence and choice</strong> (<code>exists_withoutAllocation</code>,\n  <code>withoutAllocation</code>, <code>withoutAllocation_isOptimal</code>): a welfare-\n  without-$i$-maximising allocation always exists for finite $A$ and is\n  selected noncomputably via choice.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 9, §9.3.4, Def 9.19] Nisan, Roughgarden, Tardos, and\n  Vazirani, <em>Algorithmic Game Theory</em>,\n  <code>references/AlgorithmicGameTheory.pdf</code>. Clarke-pivot payments.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.vcg.social_welfare",
+      "title": "VCG Social Welfare",
+      "href": "mechanism_design/mechanism_design_vcg_social_welfare.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.vcg.payment_identity",
+      "title": "VCG Payment Identity",
+      "href": "mechanism_design/mechanism_design_vcg_payment_identity.html"
+    },
+    {
+      "id": "mechanism_design.vcg.welfare_and_payments",
+      "title": "VCG Welfare And Payments",
+      "href": "mechanism_design/mechanism_design_vcg_welfare_and_payments.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "welfareWithout",
+      "display_name": "MultipleParameterMechanism.welfareWithout",
+      "qualified_name": "MultipleParameterMechanism.welfareWithout",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L68",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "socialWelfare_eq_value_add_welfareWithout",
+      "display_name": "MultipleParameterMechanism.socialWelfare_eq_value_add_welfareWithout",
+      "qualified_name": "MultipleParameterMechanism.socialWelfare_eq_value_add_welfareWithout",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L74",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "welfareWithout_le_socialWelfare",
+      "display_name": "MultipleParameterMechanism.welfareWithout_le_socialWelfare",
+      "qualified_name": "MultipleParameterMechanism.welfareWithout_le_socialWelfare",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L83",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "welfareWithout_le_socialWelfare_of_nonneg_i",
+      "display_name": "MultipleParameterMechanism.welfareWithout_le_socialWelfare_of_nonneg_i",
+      "qualified_name": "MultipleParameterMechanism.welfareWithout_le_socialWelfare_of_nonneg_i",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L96",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "welfareWithout_update_self",
+      "display_name": "MultipleParameterMechanism.welfareWithout_update_self",
+      "qualified_name": "MultipleParameterMechanism.welfareWithout_update_self",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L107",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "maxWelfareWithout",
+      "display_name": "MultipleParameterMechanism.maxWelfareWithout",
+      "qualified_name": "MultipleParameterMechanism.maxWelfareWithout",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L118",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "maxWelfareWithout_update_self",
+      "display_name": "MultipleParameterMechanism.maxWelfareWithout_update_self",
+      "qualified_name": "MultipleParameterMechanism.maxWelfareWithout_update_self",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L123",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "exists_withoutAllocation",
+      "display_name": "MultipleParameterMechanism.exists_withoutAllocation",
+      "qualified_name": "MultipleParameterMechanism.exists_withoutAllocation",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L132",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "withoutAllocation",
+      "display_name": "MultipleParameterMechanism.withoutAllocation",
+      "qualified_name": "MultipleParameterMechanism.withoutAllocation",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L145",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "withoutAllocation_isOptimal",
+      "display_name": "MultipleParameterMechanism.withoutAllocation_isOptimal",
+      "qualified_name": "MultipleParameterMechanism.withoutAllocation_isOptimal",
+      "module": "EconCSLib.MechanismDesign.VCG",
+      "repository_title": "EconCSLib",
+      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
+      "short_revision": "e5a5712",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/MechanismDesign/VCG.lean#L150",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

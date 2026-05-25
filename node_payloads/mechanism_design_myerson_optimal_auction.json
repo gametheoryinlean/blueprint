@@ -1,0 +1,39 @@
+{
+  "id": "mechanism_design.myerson.optimal_auction",
+  "title": "Myerson Optimal Auction (Virtual Valuations)",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "mechanism_design/mechanism_design_myerson_optimal_auction.html",
+  "primary_topic": "mechanism_design",
+  "topics": [
+    "mechanism_design",
+    "mechanism_design.myerson"
+  ],
+  "body_html": "<h1>Myerson Optimal Auction (Virtual Valuations)</h1>\n<p><strong>Theorem (Myerson 1981; MSZ Thm 12.26).</strong> For a <strong>regular</strong> IPV selling\nproblem ([[mechanism_design.bayesian.selling_problem]]) — meaning each\nbidder $i$'s <strong>virtual valuation</strong>\n$$\n\\psi_i(t_i) \\;=\\; t_i \\;-\\; \\frac{1 - F_i(t_i)}{f_i(t_i)}\n$$\nis non-decreasing in $t_i$ — the expected-revenue-maximising BIC\nselling mechanism is:</p>\n<ol>\n<li><strong>Allocate</strong> the object to the bidder $i^* = \\arg\\max_i \\psi_i(t_i)$\n   provided $\\psi_{i^*}(t_{i^*}) \\ge 0$; otherwise leave the object\n   unsold.</li>\n<li><strong>Charge</strong> the winner their <em>threshold bid</em>: the smallest type that\n   would have won given the others' reports.</li>\n</ol>\n<h2>Why virtual valuations</h2>\n<p>Combining revenue equivalence\n([[mechanism_design.myerson.revenue_equivalence]]) with the Myerson\npayment formula ([[mechanism_design.myerson.payment_formula]]) shows\nthat expected revenue equals expected <em>virtual welfare</em>:\n$$\n\\mathbb{E}\\Big[\\sum_i \\psi_i(t_i) \\cdot x_i(t)\\Big].\n$$\nSubject to monotonicity of $x_i(\\cdot, t_{-i})$ in own type (required\nfor incentive compatibility), this expectation is point-wise maximised\nby allocating to the bidder with highest non-negative virtual\nvaluation. Regularity ($\\psi_i$ monotone) ensures the resulting\nallocation rule is itself monotone, satisfying the BIC constraint\nautomatically.</p>\n<p>When some $\\psi_i$ is <strong>not</strong> monotone (non-regular case), the optimal\nsolution uses <em>ironing</em>: replace $\\psi_i$ on intervals where it would\ndecrease with a constant value chosen to preserve the integral. Ironing\nis non-trivial to formalise but the regular case is the headline result.</p>\n<h2>Specialisation</h2>\n<p>In the symmetric IPV setting (all $F_i = F$, all $v_i$ identical), the\noptimal auction is a <em>second-price auction with reserve price</em>\n$r^* = \\psi^{-1}(0)$ — see\n[[mechanism_design.myerson.reserve_price]].</p>\n<h2>Lean port (deferred — see #175)</h2>\n<p>Planned new module: <code>EconCSLib/MechanismDesign/MyersonOptimalAuction.lean</code>.</p>\n<p>Planned declarations:</p>\n<ul>\n<li><code>virtualValuation</code> (def)</li>\n<li><code>IsRegular</code> (monotone virtual valuations)</li>\n<li><code>myersonOptimalAuction</code> (the mechanism)</li>\n<li><code>myersonOptimalAuction_isBIC</code> (incentive compatibility)</li>\n<li><code>myersonOptimalAuction_maximises_expectedRevenue</code> (main theorem)</li>\n</ul>\n<p>Ironing for non-regular distributions is a separate, more delicate task\n(distinguished <code>kind: proof-plan</code> follow-up).</p>\n<p>This is the most mathematically dense item in the MSZ Ch.12 cluster;\nresearch-level Lean port expected.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Thm 12.26] Maschler, Solan, Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n<li>Myerson, R. B. (1981). \"Optimal Auction Design\".\n  <em>Math. Oper. Res.</em> 6: 58–73.</li>\n<li>Krishna, V. (2010). <em>Auction Theory</em>, Ch. 5.\n  <code>references/AuctionTheory.pdf</code>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.bayesian.selling_problem",
+      "title": "Bayesian Selling Problem (IPV)",
+      "href": "mechanism_design/mechanism_design_bayesian_selling_problem.html"
+    },
+    {
+      "id": "mechanism_design.myerson.revenue_equivalence",
+      "title": "Revenue Equivalence Theorem",
+      "href": "mechanism_design/mechanism_design_myerson_revenue_equivalence.html"
+    },
+    {
+      "id": "mechanism_design.myerson.payment_formula",
+      "title": "Myerson Payment Formula",
+      "href": "mechanism_design/mechanism_design_myerson_payment_formula.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.myerson.reserve_price",
+      "title": "Myerson Reserve-Price Characterisation",
+      "href": "mechanism_design/mechanism_design_myerson_reserve_price.html"
+    }
+  ],
+  "lean_refs": []
+}
