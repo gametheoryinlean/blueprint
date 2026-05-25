@@ -2044,6 +2044,7 @@
         "mechanism_design.bayesian"
       ],
       "lean_declarations": [
+        "BayesianMechanismWithTransfers.exAnteExpectedUtility",
         "BayesianMechanismWithTransfers.IntegrableExAnteUtility",
         "BayesianMechanismWithTransfers.IsExAnteBayesianNashEquilibrium",
         "DirectBayesianMechanismWithTransfers",
@@ -2100,6 +2101,8 @@
       ],
       "lean_declarations": [
         "isMonotone_of_isDSIC",
+        "payment_sandwich",
+        "payment_difference_bound",
         "withMyersonPayment_isDSIC_of_isMonotone",
         "isImplementable_of_isMonotone",
         "isImplementable_iff_isMonotone",
@@ -2133,6 +2136,8 @@
       ],
       "lean_declarations": [
         "myersonPayment",
+        "withMyersonPayment",
+        "withMyersonPayment_quasiLinearUtility_eq",
         "ZeroNormalized",
         "myersonPayment_zeroNormalized"
       ],
@@ -2290,12 +2295,24 @@
       ],
       "lean_declarations": [
         "socialWelfare",
+        "maxSocialWelfare",
+        "exists_efficientAllocation",
         "efficientAllocation",
         "efficientAllocation_isOptimal",
         "welfareWithout",
+        "socialWelfare_eq_value_add_welfareWithout",
+        "welfareWithout_le_socialWelfare",
+        "welfareWithout_le_socialWelfare_of_nonneg_i",
+        "welfareWithout_update_self",
+        "maxWelfareWithout",
+        "maxWelfareWithout_update_self",
+        "exists_withoutAllocation",
+        "withoutAllocation",
+        "withoutAllocation_isOptimal",
         "vcgPayment",
         "VCGMechanism",
-        "VCGTransferMechanism"
+        "VCGTransferMechanism",
+        "VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout"
       ],
       "topic": "mechanism_design",
       "uses": [
