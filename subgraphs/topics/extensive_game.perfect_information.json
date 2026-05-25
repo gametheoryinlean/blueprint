@@ -4,22 +4,32 @@
     "title": "Extensive Game.Perfect Information",
     "href": "extensive_game/perfect_information/index.html",
     "parent": "extensive_game",
-    "node_count": 9,
-    "descendant_node_count": 9
+    "node_count": 11,
+    "descendant_node_count": 11
   },
   "counts": {
-    "internal_nodes": 9,
-    "descendant_nodes": 9,
+    "internal_nodes": 11,
+    "inlined_nodes": 0,
+    "descendant_nodes": 11,
     "child_topics": 0,
-    "non_proof_plan_nodes": 9,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 16,
-    "visible_nodes_with_selected_proof_plans": 16
+    "visible_nodes_without_proof_plans": 18,
+    "visible_nodes_with_selected_proof_plans": 18
   },
   "nodes": [
+    {
+      "id": "extensive_game.perfect_information.determined_game",
+      "title": "Determined Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_determined_game.html",
+      "payload": "node_payloads/extensive_game_perfect_information_determined_game.json"
+    },
     {
       "id": "extensive_game.perfect_information.generic_unique_spe",
       "title": "Generic Uniqueness Of Subgame-Perfect Equilibrium",
@@ -51,6 +61,14 @@
       "status": "staged",
       "href": "extensive_game/perfect_information/extensive_game_perfect_information_perfect_information_strategy.html",
       "payload": "node_payloads/extensive_game_perfect_information_perfect_information_strategy.json"
+    },
+    {
+      "id": "extensive_game.perfect_information.simple_perfect_information_game",
+      "title": "Simple Perfect-Information Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "extensive_game/perfect_information/extensive_game_perfect_information_simple_perfect_information_game.html",
+      "payload": "node_payloads/extensive_game_perfect_information_simple_perfect_information_game.json"
     },
     {
       "id": "extensive_game.perfect_information.spe_implies_nash",
@@ -95,6 +113,11 @@
   ],
   "edges": [
     {
+      "from": "extensive_game.perfect_information.simple_perfect_information_game",
+      "to": "extensive_game.perfect_information.determined_game",
+      "kind": "uses"
+    },
+    {
       "from": "extensive_game.perfect_information.kuhn_spe_existence",
       "to": "extensive_game.perfect_information.generic_unique_spe",
       "kind": "uses"
@@ -110,6 +133,11 @@
       "kind": "uses"
     },
     {
+      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
+      "to": "extensive_game.perfect_information.simple_perfect_information_game",
+      "kind": "uses"
+    },
+    {
       "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
       "to": "extensive_game.perfect_information.spe_implies_nash",
       "kind": "uses"
@@ -118,6 +146,11 @@
       "from": "extensive_game.perfect_information.zermelo_determinacy",
       "to": "extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
       "kind": "uses"
+    },
+    {
+      "from": "extensive_game.perfect_information.determined_game",
+      "to": "extensive_game.perfect_information.zermelo_determinacy",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -125,8 +158,8 @@
       "id": "extensive_game.core",
       "title": "Extensive Game.Core",
       "href": "extensive_game/core/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 7
+      "role": "dependency",
+      "node_count": 4
     },
     {
       "id": "extensive_game.examples",
@@ -140,7 +173,7 @@
       "title": "Extensive Game.Imperfect Information",
       "href": "extensive_game/imperfect_information/index.html",
       "role": "dependent",
-      "node_count": 8
+      "node_count": 24
     },
     {
       "id": "extensive_game.repeated",
@@ -154,27 +187,20 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "zero_sum",
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependency",
-      "node_count": 86
+      "node_count": 91
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:extensive_game.core",
       "to": "extensive_game.perfect_information.subgame_perfect_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.core",
-      "to": "extensive_game.perfect_information.zermelo_determinacy",
       "kind": "boundary_dependency",
       "topic": "extensive_game.core",
       "count": 1
@@ -201,21 +227,14 @@
       "count": 1
     },
     {
-      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
-      "to": "topic:extensive_game.core",
+      "from": "extensive_game.perfect_information.kuhn_spe_existence",
+      "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.core",
-      "count": 3
-    },
-    {
-      "from": "extensive_game.perfect_information.perfect_information_strategy",
-      "to": "topic:extensive_game.core",
-      "kind": "boundary_dependent",
-      "topic": "extensive_game.core",
+      "topic": "extensive_game.examples",
       "count": 1
     },
     {
-      "from": "extensive_game.perfect_information.kuhn_spe_existence",
+      "from": "extensive_game.perfect_information.simple_perfect_information_game",
       "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
       "topic": "extensive_game.examples",
@@ -261,13 +280,13 @@
       "id": "determinacy",
       "title": "determinacy",
       "href": "keywords/determinacy.html",
-      "count": 2
+      "count": 4
     },
     {
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 9
+      "count": 11
     },
     {
       "id": "genericity",
@@ -323,5 +342,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

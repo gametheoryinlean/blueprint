@@ -9,18 +9,103 @@
   },
   "counts": {
     "internal_nodes": 0,
+    "inlined_nodes": 7,
     "descendant_nodes": 7,
-    "child_topics": 2,
-    "non_proof_plan_nodes": 0,
+    "child_topics": 0,
+    "inlined_child_topics": 2,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 2,
-    "visible_nodes_with_selected_proof_plans": 2
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
-  "nodes": [],
-  "edges": [],
+  "nodes": [
+    {
+      "id": "auction.basic.bid_profile_supports",
+      "title": "Bid-Profile Supports",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_bid_profile_supports.html",
+      "payload": "node_payloads/auction_basic_bid_profile_supports.json"
+    },
+    {
+      "id": "auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_formats.html",
+      "payload": "node_payloads/auction_basic_formats.json"
+    },
+    {
+      "id": "auction.basic.ordered_bid_utilities",
+      "title": "Ordered-Bid Utilities",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/basic/auction_basic_ordered_bid_utilities.html",
+      "payload": "node_payloads/auction_basic_ordered_bid_utilities.json"
+    },
+    {
+      "id": "auction.knapsack.binary_allocations",
+      "title": "Binary Knapsack Allocations",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/knapsack/auction_knapsack_binary_allocations.html",
+      "payload": "node_payloads/auction_knapsack_binary_allocations.json"
+    },
+    {
+      "id": "auction.knapsack.environment",
+      "title": "Knapsack Auction Environment",
+      "kind": "definition",
+      "status": "staged",
+      "href": "auction/knapsack/auction_knapsack_environment.html",
+      "payload": "node_payloads/auction_knapsack_environment.json"
+    },
+    {
+      "id": "auction.knapsack.relaxations_dynamic_programming",
+      "title": "Knapsack Relaxations And Dynamic Programming",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "auction/knapsack/auction_knapsack_relaxations_dynamic_programming.html",
+      "payload": "node_payloads/auction_knapsack_relaxations_dynamic_programming.json"
+    },
+    {
+      "id": "auction.knapsack.welfare_maximizing_mechanism",
+      "title": "Welfare-Maximizing Knapsack Mechanism",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "auction/knapsack/auction_knapsack_welfare_maximizing_mechanism.html",
+      "payload": "node_payloads/auction_knapsack_welfare_maximizing_mechanism.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.bid_profile_supports",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.basic.formats",
+      "to": "auction.basic.ordered_bid_utilities",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.knapsack.environment",
+      "to": "auction.knapsack.binary_allocations",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.knapsack.welfare_maximizing_mechanism",
+      "to": "auction.knapsack.relaxations_dynamic_programming",
+      "kind": "uses"
+    },
+    {
+      "from": "auction.knapsack.binary_allocations",
+      "to": "auction.knapsack.welfare_maximizing_mechanism",
+      "kind": "uses"
+    }
+  ],
   "boundary_topics": [
     {
       "id": "mechanism_design",
@@ -33,60 +118,115 @@
   "boundary_edges": [
     {
       "from": "topic:mechanism_design",
-      "to": "topic:auction.basic",
+      "to": "auction.basic.formats",
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
       "count": 2
     },
     {
       "from": "topic:mechanism_design",
-      "to": "topic:auction.knapsack",
+      "to": "auction.knapsack.environment",
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
-      "count": 2
-    }
-  ],
-  "keywords": [],
-  "proof_plan_attachments": [],
-  "child_topics": [
-    "auction.basic",
-    "auction.knapsack"
-  ],
-  "child_topic_nodes": [
-    {
-      "id": "auction.basic",
-      "title": "Auction.Basic",
-      "depth": 2,
-      "parent": "auction",
-      "node_count": 3,
-      "direct_node_count": 3,
-      "kind_counts": {
-        "definition": 3
-      },
-      "status_counts": {
-        "staged": 3
-      },
-      "href": "auction/basic/index.html",
-      "children": []
+      "count": 1
     },
     {
-      "id": "auction.knapsack",
-      "title": "Auction.Knapsack",
-      "depth": 2,
-      "parent": "auction",
-      "node_count": 4,
-      "direct_node_count": 4,
-      "kind_counts": {
-        "definition": 2,
-        "theorem": 2
-      },
-      "status_counts": {
-        "staged": 4
-      },
-      "href": "auction/knapsack/index.html",
-      "children": []
+      "from": "topic:mechanism_design",
+      "to": "auction.knapsack.welfare_maximizing_mechanism",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
     }
   ],
+  "keywords": [
+    {
+      "id": "approximation",
+      "title": "approximation",
+      "href": "keywords/approximation.html",
+      "count": 1
+    },
+    {
+      "id": "argmax",
+      "title": "argmax",
+      "href": "keywords/argmax.html",
+      "count": 1
+    },
+    {
+      "id": "auction",
+      "title": "auction",
+      "href": "keywords/auction.html",
+      "count": 7
+    },
+    {
+      "id": "bid-profile",
+      "title": "bid-profile",
+      "href": "keywords/bid-profile.html",
+      "count": 1
+    },
+    {
+      "id": "bids",
+      "title": "bids",
+      "href": "keywords/bids.html",
+      "count": 1
+    },
+    {
+      "id": "binary-allocation",
+      "title": "binary-allocation",
+      "href": "keywords/binary-allocation.html",
+      "count": 1
+    },
+    {
+      "id": "dsic",
+      "title": "dsic",
+      "href": "keywords/dsic.html",
+      "count": 1
+    },
+    {
+      "id": "dynamic-programming",
+      "title": "dynamic-programming",
+      "href": "keywords/dynamic-programming.html",
+      "count": 1
+    },
+    {
+      "id": "knapsack",
+      "title": "knapsack",
+      "href": "keywords/knapsack.html",
+      "count": 4
+    },
+    {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 1
+    },
+    {
+      "id": "myerson",
+      "title": "myerson",
+      "href": "keywords/myerson.html",
+      "count": 1
+    },
+    {
+      "id": "single-parameter",
+      "title": "single-parameter",
+      "href": "keywords/single-parameter.html",
+      "count": 1
+    },
+    {
+      "id": "support",
+      "title": "support",
+      "href": "keywords/support.html",
+      "count": 1
+    },
+    {
+      "id": "transfers",
+      "title": "transfers",
+      "href": "keywords/transfers.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [
     {
@@ -112,5 +252,9 @@
       "topic": "mechanism_design",
       "count": 2
     }
+  ],
+  "inlined_child_topics": [
+    "auction.basic",
+    "auction.knapsack"
   ]
 }

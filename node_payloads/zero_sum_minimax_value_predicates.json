@@ -7,7 +7,8 @@
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
-    "zero_sum.minimax"
+    "zero_sum.minimax",
+    "zero_sum.minimax.structure"
   ],
   "body_html": "<h1>Field-Generic Value Predicates</h1>\n<p>For a finite matrix game $A : I \\times J \\to \\mathbb{K}$ with payoff in any\nlinearly ordered field $\\mathbb{K}$, the maxmin / minmax / saddle-value\nnotions admit the following predicate characterisations that do <strong>not</strong>\ninvoke any <code>sSup</code> / <code>sInf</code>:</p>\n<p><strong>Maximin (predicate form).</strong> $v$ is a <em>maximin value</em> of $A$ when</p>\n<p>$$\n  \\bigl(\\exists x \\in \\Delta(I),\\ \\forall j \\in J,\\ v \\le \\sum_i x_i\\, A(i,j)\\bigr)\n  \\quad\\text{and}\\quad\n  \\bigl(\\forall w,\\ (\\exists x \\in \\Delta(I),\\ \\forall j,\\ w \\le \\sum_i x_i\\, A(i,j)) \\Rightarrow w \\le v\\bigr).\n$$</p>\n<p>That is: some row strategy guarantees at least $v$ against every column\n(existence), and no strictly larger value is achievable (maximality).</p>\n<p><strong>Minimax (predicate form).</strong> Dual: $v$ is a <em>minimax value</em> when some\ncolumn strategy caps player I's payoff at $v$, and no strictly smaller\ncap is achievable.</p>\n<p><strong>Value (saddle-point form).</strong> $v$ is <em>the value</em> of $A$ when there are\nrow and column strategies $x, y$ with</p>\n<p>$$\n  \\forall j,\\ v \\le \\sum_i x_i\\, A(i,j)\n  \\qquad\\text{and}\\qquad\n  \\forall i,\\ \\sum_j y_j\\, A(i,j) \\le v.\n$$</p>\n<p>The saddle-point form is the existential combination of the two one-sided\nguarantee statements; it is equivalent to \"value exists and equals $v$\"\nwithout invoking $\\sup$ / $\\inf$.</p>\n<h2>Relationship to <code>sSup</code>-based definitions</h2>\n<p>When $\\mathbb{K}$ admits order completeness (e.g. $\\mathbb{K} = \\mathbb{R}$\nvia <code>Real.instConditionallyCompleteLinearOrder</code>), the <code>sSup</code>-based\n<a class=\"node-ref\" data-node-id=\"zero_sum.maximin_minimax\" href=\"zero_sum_maximin_minimax.html\">Maximin and Minimax Values</a> definitions are available, and:</p>\n<ul>\n<li><code>IsMaximin A v ↔ v = A.maximin</code> (assuming the supremum is attained),</li>\n<li><code>IsMinimax A v ↔ v = A.minimax</code>,</li>\n<li><code>IsValue A v</code> is equivalent to the conjunction of the above when the\n  minimax theorem (<a class=\"node-ref\" data-node-id=\"zero_sum.von_neumann_minimax\" href=\"zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>) holds.</li>\n</ul>\n<p>The Lean library realises <code>IsMaximin</code>, <code>IsMinimax</code>, <code>IsValue</code> in\n<code>EconCSLib.StrategicGame.Minimax</code>. The bridge lemmas between the\npredicate and <code>sSup</code> forms are tracked as Phase 2 follow-up of #54.</p>\n<h2>Why this matters</h2>\n<p>The Dantzig route (<a class=\"node-ref\" data-node-id=\"zero_sum.dantzig_proof_spine\" href=\"zero_sum_dantzig_proof_spine.html\">Dantzig Proof Spine for Minimax (Ordered-Field Route)</a>) constructs the\nvalue as an LP-vertex witness over any linearly ordered field, not as a\nsupremum. Its existence statement (<code>MinimaxDantzig.dantzig_minimax</code>) is\nnaturally phrased via <code>IsValue</code>, not via <code>value</code>. Once the simplex-\ntermination step (<a class=\"node-ref\" data-node-id=\"zero_sum.simplex_termination\" href=\"zero_sum_simplex_termination.html\">Dantzig Simplex Termination (Open)</a>) closes, the\nDantzig route delivers <code>∃ v, IsValue A v</code> over any\n<code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code>, without requiring\norder completeness.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Saddle-point characterisation of value.</li>\n</ul>",
   "proof_html": null,
@@ -26,9 +27,9 @@
       "qualified_name": "MatrixGame.IsMaximin",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "974ab8bb5214198f59ffe35f874bde4ea6aea1b3",
-      "short_revision": "974ab8b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/974ab8bb5214198f59ffe35f874bde4ea6aea1b3/EconCSLib/StrategicGame/Minimax.lean#L123",
+      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
+      "short_revision": "609636f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/StrategicGame/Minimax.lean#L123",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -39,9 +40,9 @@
       "qualified_name": "MatrixGame.IsMinimax",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "974ab8bb5214198f59ffe35f874bde4ea6aea1b3",
-      "short_revision": "974ab8b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/974ab8bb5214198f59ffe35f874bde4ea6aea1b3/EconCSLib/StrategicGame/Minimax.lean#L130",
+      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
+      "short_revision": "609636f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/StrategicGame/Minimax.lean#L130",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -52,9 +53,9 @@
       "qualified_name": "MatrixGame.IsValue",
       "module": "EconCSLib.StrategicGame.Minimax",
       "repository_title": "EconCSLib",
-      "revision": "974ab8bb5214198f59ffe35f874bde4ea6aea1b3",
-      "short_revision": "974ab8b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/974ab8bb5214198f59ffe35f874bde4ea6aea1b3/EconCSLib/StrategicGame/Minimax.lean#L139",
+      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
+      "short_revision": "609636f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/StrategicGame/Minimax.lean#L139",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

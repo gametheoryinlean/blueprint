@@ -4,20 +4,22 @@
     "title": "Strategic Games.Equilibrium",
     "href": "strategic_games/equilibrium/index.html",
     "parent": "strategic_games",
-    "node_count": 14,
-    "descendant_node_count": 14
+    "node_count": 11,
+    "descendant_node_count": 11
   },
   "counts": {
-    "internal_nodes": 14,
-    "descendant_nodes": 14,
+    "internal_nodes": 11,
+    "inlined_nodes": 0,
+    "descendant_nodes": 11,
     "child_topics": 0,
-    "non_proof_plan_nodes": 14,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 11,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 26,
-    "visible_nodes_with_selected_proof_plans": 26
+    "visible_nodes_without_proof_plans": 23,
+    "visible_nodes_with_selected_proof_plans": 23
   },
   "nodes": [
     {
@@ -37,14 +39,6 @@
       "payload": "node_payloads/strategic_games_equilibrium_common_knowledge_equilibrium_filtering.json"
     },
     {
-      "id": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "title": "Nash Existence In Compact Quasi-Concave Games",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/equilibrium/strategic_games_equilibrium_compact_quasi_concave_nash_exists.html",
-      "payload": "node_payloads/strategic_games_equilibrium_compact_quasi_concave_nash_exists.json"
-    },
-    {
       "id": "strategic_games.equilibrium.epsilon_equilibrium",
       "title": "Epsilon Equilibrium",
       "kind": "definition",
@@ -59,22 +53,6 @@
       "status": "staged",
       "href": "strategic_games/equilibrium/strategic_games_equilibrium_finite_nash_computation_examples.html",
       "payload": "node_payloads/strategic_games_equilibrium_finite_nash_computation_examples.json"
-    },
-    {
-      "id": "strategic_games.equilibrium.first_order_nash_condition",
-      "title": "First-Order Nash Condition",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/equilibrium/strategic_games_equilibrium_first_order_nash_condition.html",
-      "payload": "node_payloads/strategic_games_equilibrium_first_order_nash_condition.json"
-    },
-    {
-      "id": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous",
-      "title": "Mixed Equilibrium In Compact Continuous Games",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "strategic_games/equilibrium/strategic_games_equilibrium_mixed_equilibrium_compact_continuous.html",
-      "payload": "node_payloads/strategic_games_equilibrium_mixed_equilibrium_compact_continuous.json"
     },
     {
       "id": "strategic_games.equilibrium.mixed_nash_equilibrium",
@@ -145,11 +123,6 @@
       "kind": "uses"
     },
     {
-      "from": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "to": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous",
-      "kind": "uses"
-    },
-    {
       "from": "strategic_games.equilibrium.mixed_nash_equilibrium",
       "to": "strategic_games.equilibrium.mixed_nash_semialgebraic",
       "kind": "uses"
@@ -167,11 +140,11 @@
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.equilibrium",
-      "title": "Extensive Game.Equilibrium",
-      "href": "extensive_game/equilibrium/index.html",
+      "id": "extensive_game.imperfect_information",
+      "title": "Extensive Game.Imperfect Information",
+      "href": "extensive_game/imperfect_information/index.html",
       "role": "dependent",
-      "node_count": 17
+      "node_count": 24
     },
     {
       "id": "fixed_point",
@@ -185,7 +158,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "strategic_games.bayesian",
@@ -198,8 +171,8 @@
       "id": "strategic_games.continuous",
       "title": "Strategic Games.Continuous",
       "href": "strategic_games/continuous/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 13
+      "role": "dependent",
+      "node_count": 16
     },
     {
       "id": "strategic_games.core",
@@ -254,13 +227,6 @@
     },
     {
       "from": "topic:fixed_point",
-      "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "kind": "boundary_dependency",
-      "topic": "fixed_point",
-      "count": 1
-    },
-    {
-      "from": "topic:fixed_point",
       "to": "strategic_games.equilibrium.nash_existence_finite_games",
       "kind": "boundary_dependency",
       "topic": "fixed_point",
@@ -282,21 +248,7 @@
     },
     {
       "from": "topic:strategic_games",
-      "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
       "to": "strategic_games.equilibrium.epsilon_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.equilibrium.first_order_nash_condition",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
@@ -330,27 +282,6 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.continuous",
-      "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.continuous",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.continuous",
-      "to": "strategic_games.equilibrium.first_order_nash_condition",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.continuous",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games.core",
-      "to": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games.core",
-      "count": 1
-    },
-    {
       "from": "topic:strategic_games.core",
       "to": "strategic_games.equilibrium.mixed_nash_equilibrium",
       "kind": "boundary_dependency",
@@ -373,9 +304,9 @@
     },
     {
       "from": "strategic_games.equilibrium.nash_existence_finite_games",
-      "to": "topic:extensive_game.equilibrium",
+      "to": "topic:extensive_game.imperfect_information",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.equilibrium",
+      "topic": "extensive_game.imperfect_information",
       "count": 1
     },
     {
@@ -383,13 +314,6 @@
       "to": "topic:strategic_games.bayesian",
       "kind": "boundary_dependent",
       "topic": "strategic_games.bayesian",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.equilibrium.first_order_nash_condition",
-      "to": "topic:strategic_games.continuous",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.continuous",
       "count": 1
     },
     {
@@ -477,12 +401,6 @@
       "count": 1
     },
     {
-      "id": "continuous-game",
-      "title": "continuous-game",
-      "href": "keywords/continuous-game.html",
-      "count": 2
-    },
-    {
       "id": "equilibrium-selection",
       "title": "equilibrium-selection",
       "href": "keywords/equilibrium-selection.html",
@@ -498,7 +416,7 @@
       "id": "existence",
       "title": "existence",
       "href": "keywords/existence.html",
-      "count": 3
+      "count": 1
     },
     {
       "id": "feasible-payoff",
@@ -522,13 +440,13 @@
       "id": "mixed-strategy",
       "title": "mixed-strategy",
       "href": "keywords/mixed-strategy.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 10
+      "count": 9
     },
     {
       "id": "semi-algebraic",
@@ -537,27 +455,15 @@
       "count": 1
     },
     {
-      "id": "smooth-game",
-      "title": "smooth-game",
-      "href": "keywords/smooth-game.html",
-      "count": 1
-    },
-    {
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 13
+      "count": 10
     },
     {
       "id": "symmetry",
       "title": "symmetry",
       "href": "keywords/symmetry.html",
-      "count": 1
-    },
-    {
-      "id": "variational-inequality",
-      "title": "variational-inequality",
-      "href": "keywords/variational-inequality.html",
       "count": 1
     }
   ],
@@ -566,5 +472,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

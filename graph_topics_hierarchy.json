@@ -80,7 +80,6 @@
       "href": "extensive_game/index.html",
       "children": [
         "extensive_game.core",
-        "extensive_game.equilibrium",
         "extensive_game.examples",
         "extensive_game.imperfect_information",
         "extensive_game.normal_form",
@@ -161,6 +160,27 @@
       "children": []
     },
     {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "depth": 1,
+      "parent": null,
+      "node_count": 5,
+      "direct_node_count": 5,
+      "kind_counts": {
+        "definition": 3,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 5
+      },
+      "href": "repeated_game/index.html",
+      "children": [
+        "repeated_game.core",
+        "repeated_game.folk_theorem",
+        "repeated_game.incomplete_info"
+      ]
+    },
+    {
       "id": "social_choice",
       "title": "Social Choice",
       "depth": 1,
@@ -183,21 +203,44 @@
       ]
     },
     {
+      "id": "stochastic_game",
+      "title": "Stochastic Game",
+      "depth": 1,
+      "parent": null,
+      "node_count": 10,
+      "direct_node_count": 10,
+      "kind_counts": {
+        "definition": 4,
+        "theorem": 6
+      },
+      "status_counts": {
+        "staged": 10
+      },
+      "href": "stochastic_game/index.html",
+      "children": [
+        "stochastic_game.asymptotic",
+        "stochastic_game.core",
+        "stochastic_game.equilibrium",
+        "stochastic_game.examples",
+        "stochastic_game.value"
+      ]
+    },
+    {
       "id": "strategic_games",
       "title": "Strategic Games",
       "depth": 1,
       "parent": null,
-      "node_count": 131,
+      "node_count": 128,
       "direct_node_count": 11,
       "kind_counts": {
-        "definition": 74,
+        "definition": 73,
         "example": 6,
-        "proposition": 18,
+        "proposition": 16,
         "theorem": 33
       },
       "status_counts": {
         "admitted": 10,
-        "staged": 121
+        "staged": 118
       },
       "href": "strategic_games/index.html",
       "children": [
@@ -241,21 +284,21 @@
       "title": "Zero Sum",
       "depth": 1,
       "parent": null,
-      "node_count": 86,
-      "direct_node_count": 86,
+      "node_count": 91,
+      "direct_node_count": 89,
       "kind_counts": {
-        "definition": 20,
+        "definition": 22,
         "example": 8,
-        "lemma": 16,
-        "proof-plan": 9,
-        "proposition": 14,
-        "theorem": 19
+        "lemma": 17,
+        "proof-plan": 10,
+        "proposition": 16,
+        "theorem": 18
       },
       "status_counts": {
         "admitted": 2,
         "formalized": 41,
         "proved": 2,
-        "staged": 41
+        "staged": 46
       },
       "href": "zero_sum/index.html",
       "children": [
@@ -266,8 +309,7 @@
         "zero_sum.fictitious_play",
         "zero_sum.lp",
         "zero_sum.minimax",
-        "zero_sum.operators",
-        "zero_sum.repeated"
+        "zero_sum.operators"
       ]
     }
   ],
@@ -520,7 +562,6 @@
       "href": "extensive_game/index.html",
       "children": [
         "extensive_game.core",
-        "extensive_game.equilibrium",
         "extensive_game.examples",
         "extensive_game.imperfect_information",
         "extensive_game.normal_form",
@@ -533,33 +574,15 @@
       "title": "Extensive Game.Core",
       "depth": 2,
       "parent": "extensive_game",
-      "node_count": 7,
-      "direct_node_count": 7,
+      "node_count": 4,
+      "direct_node_count": 4,
       "kind_counts": {
-        "definition": 7
+        "definition": 4
       },
       "status_counts": {
-        "staged": 7
+        "staged": 4
       },
       "href": "extensive_game/core/index.html",
-      "children": []
-    },
-    "extensive_game.equilibrium": {
-      "id": "extensive_game.equilibrium",
-      "title": "Extensive Game.Equilibrium",
-      "depth": 2,
-      "parent": "extensive_game",
-      "node_count": 17,
-      "direct_node_count": 17,
-      "kind_counts": {
-        "definition": 9,
-        "proposition": 1,
-        "theorem": 7
-      },
-      "status_counts": {
-        "staged": 17
-      },
-      "href": "extensive_game/equilibrium/index.html",
       "children": []
     },
     "extensive_game.examples": {
@@ -584,13 +607,15 @@
       "title": "Extensive Game.Imperfect Information",
       "depth": 2,
       "parent": "extensive_game",
-      "node_count": 8,
-      "direct_node_count": 8,
+      "node_count": 24,
+      "direct_node_count": 24,
       "kind_counts": {
-        "definition": 8
+        "definition": 17,
+        "proposition": 1,
+        "theorem": 6
       },
       "status_counts": {
-        "staged": 8
+        "staged": 24
       },
       "href": "extensive_game/imperfect_information/index.html",
       "children": []
@@ -600,14 +625,15 @@
       "title": "Extensive Game.Normal Form",
       "depth": 2,
       "parent": "extensive_game",
-      "node_count": 4,
-      "direct_node_count": 4,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "definition": 3,
-        "proposition": 1
+        "definition": 4,
+        "proposition": 1,
+        "theorem": 1
       },
       "status_counts": {
-        "staged": 4
+        "staged": 6
       },
       "href": "extensive_game/normal_form/index.html",
       "children": []
@@ -617,15 +643,15 @@
       "title": "Extensive Game.Perfect Information",
       "depth": 2,
       "parent": "extensive_game",
-      "node_count": 9,
-      "direct_node_count": 9,
+      "node_count": 11,
+      "direct_node_count": 11,
       "kind_counts": {
-        "definition": 3,
+        "definition": 5,
         "proposition": 2,
         "theorem": 4
       },
       "status_counts": {
-        "staged": 9
+        "staged": 11
       },
       "href": "extensive_game/perfect_information/index.html",
       "children": []
@@ -800,6 +826,75 @@
         "staged": 1
       },
       "href": "order/index.html",
+      "children": []
+    },
+    "repeated_game": {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "depth": 1,
+      "parent": null,
+      "node_count": 5,
+      "direct_node_count": 5,
+      "kind_counts": {
+        "definition": 3,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 5
+      },
+      "href": "repeated_game/index.html",
+      "children": [
+        "repeated_game.core",
+        "repeated_game.folk_theorem",
+        "repeated_game.incomplete_info"
+      ]
+    },
+    "repeated_game.core": {
+      "id": "repeated_game.core",
+      "title": "Repeated Game.Core",
+      "depth": 2,
+      "parent": "repeated_game",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "definition": 3
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "repeated_game/core/index.html",
+      "children": []
+    },
+    "repeated_game.folk_theorem": {
+      "id": "repeated_game.folk_theorem",
+      "title": "Repeated Game.Folk Theorem",
+      "depth": 2,
+      "parent": "repeated_game",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "repeated_game/folk_theorem/index.html",
+      "children": []
+    },
+    "repeated_game.incomplete_info": {
+      "id": "repeated_game.incomplete_info",
+      "title": "Repeated Game.Incomplete Info",
+      "depth": 2,
+      "parent": "repeated_game",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "repeated_game/incomplete_info/index.html",
       "children": []
     },
     "social_choice": {
@@ -1077,22 +1172,126 @@
       "href": "social_choice/voting/rules/index.html",
       "children": []
     },
+    "stochastic_game": {
+      "id": "stochastic_game",
+      "title": "Stochastic Game",
+      "depth": 1,
+      "parent": null,
+      "node_count": 10,
+      "direct_node_count": 10,
+      "kind_counts": {
+        "definition": 4,
+        "theorem": 6
+      },
+      "status_counts": {
+        "staged": 10
+      },
+      "href": "stochastic_game/index.html",
+      "children": [
+        "stochastic_game.asymptotic",
+        "stochastic_game.core",
+        "stochastic_game.equilibrium",
+        "stochastic_game.examples",
+        "stochastic_game.value"
+      ]
+    },
+    "stochastic_game.asymptotic": {
+      "id": "stochastic_game.asymptotic",
+      "title": "Stochastic Game.Asymptotic",
+      "depth": 2,
+      "parent": "stochastic_game",
+      "node_count": 3,
+      "direct_node_count": 3,
+      "kind_counts": {
+        "theorem": 3
+      },
+      "status_counts": {
+        "staged": 3
+      },
+      "href": "stochastic_game/asymptotic/index.html",
+      "children": []
+    },
+    "stochastic_game.core": {
+      "id": "stochastic_game.core",
+      "title": "Stochastic Game.Core",
+      "depth": 2,
+      "parent": "stochastic_game",
+      "node_count": 2,
+      "direct_node_count": 2,
+      "kind_counts": {
+        "definition": 2
+      },
+      "status_counts": {
+        "staged": 2
+      },
+      "href": "stochastic_game/core/index.html",
+      "children": []
+    },
+    "stochastic_game.equilibrium": {
+      "id": "stochastic_game.equilibrium",
+      "title": "Stochastic Game.Equilibrium",
+      "depth": 2,
+      "parent": "stochastic_game",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "stochastic_game/equilibrium/index.html",
+      "children": []
+    },
+    "stochastic_game.examples": {
+      "id": "stochastic_game.examples",
+      "title": "Stochastic Game.Examples",
+      "depth": 2,
+      "parent": "stochastic_game",
+      "node_count": 1,
+      "direct_node_count": 1,
+      "kind_counts": {
+        "theorem": 1
+      },
+      "status_counts": {
+        "staged": 1
+      },
+      "href": "stochastic_game/examples/index.html",
+      "children": []
+    },
+    "stochastic_game.value": {
+      "id": "stochastic_game.value",
+      "title": "Stochastic Game.Value",
+      "depth": 2,
+      "parent": "stochastic_game",
+      "node_count": 4,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "definition": 2,
+        "theorem": 2
+      },
+      "status_counts": {
+        "staged": 4
+      },
+      "href": "stochastic_game/value/index.html",
+      "children": []
+    },
     "strategic_games": {
       "id": "strategic_games",
       "title": "Strategic Games",
       "depth": 1,
       "parent": null,
-      "node_count": 131,
+      "node_count": 128,
       "direct_node_count": 11,
       "kind_counts": {
-        "definition": 74,
+        "definition": 73,
         "example": 6,
-        "proposition": 18,
+        "proposition": 16,
         "theorem": 33
       },
       "status_counts": {
         "admitted": 10,
-        "staged": 121
+        "staged": 118
       },
       "href": "strategic_games/index.html",
       "children": [
@@ -1136,15 +1335,15 @@
       "title": "Strategic Games.Continuous",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 13,
-      "direct_node_count": 13,
+      "node_count": 16,
+      "direct_node_count": 16,
       "kind_counts": {
         "definition": 5,
         "proposition": 5,
-        "theorem": 3
+        "theorem": 6
       },
       "status_counts": {
-        "staged": 13
+        "staged": 16
       },
       "href": "strategic_games/continuous/index.html",
       "children": []
@@ -1189,14 +1388,14 @@
       "title": "Strategic Games.Dominance",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 9,
-      "direct_node_count": 9,
+      "node_count": 7,
+      "direct_node_count": 7,
       "kind_counts": {
         "definition": 4,
-        "proposition": 5
+        "proposition": 3
       },
       "status_counts": {
-        "staged": 9
+        "staged": 7
       },
       "href": "strategic_games/dominance/index.html",
       "children": []
@@ -1223,16 +1422,16 @@
       "title": "Strategic Games.Equilibrium",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 14,
-      "direct_node_count": 14,
+      "node_count": 11,
+      "direct_node_count": 11,
       "kind_counts": {
         "definition": 4,
         "example": 2,
         "proposition": 2,
-        "theorem": 6
+        "theorem": 3
       },
       "status_counts": {
-        "staged": 14
+        "staged": 11
       },
       "href": "strategic_games/equilibrium/index.html",
       "children": []
@@ -1364,14 +1563,14 @@
       "title": "Strategic Games.Repeated",
       "depth": 2,
       "parent": "strategic_games",
-      "node_count": 12,
-      "direct_node_count": 12,
+      "node_count": 11,
+      "direct_node_count": 11,
       "kind_counts": {
-        "definition": 9,
+        "definition": 8,
         "theorem": 3
       },
       "status_counts": {
-        "staged": 12
+        "staged": 11
       },
       "href": "strategic_games/repeated/index.html",
       "children": []
@@ -1414,21 +1613,21 @@
       "title": "Zero Sum",
       "depth": 1,
       "parent": null,
-      "node_count": 86,
-      "direct_node_count": 86,
+      "node_count": 91,
+      "direct_node_count": 89,
       "kind_counts": {
-        "definition": 20,
+        "definition": 22,
         "example": 8,
-        "lemma": 16,
-        "proof-plan": 9,
-        "proposition": 14,
-        "theorem": 19
+        "lemma": 17,
+        "proof-plan": 10,
+        "proposition": 16,
+        "theorem": 18
       },
       "status_counts": {
         "admitted": 2,
         "formalized": 41,
         "proved": 2,
-        "staged": 41
+        "staged": 46
       },
       "href": "zero_sum/index.html",
       "children": [
@@ -1439,8 +1638,7 @@
         "zero_sum.fictitious_play",
         "zero_sum.lp",
         "zero_sum.minimax",
-        "zero_sum.operators",
-        "zero_sum.repeated"
+        "zero_sum.operators"
       ]
     },
     "zero_sum.applications": {
@@ -1448,13 +1646,16 @@
       "title": "Zero Sum.Applications",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 1,
-      "direct_node_count": 1,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
-        "theorem": 1
+        "lemma": 1,
+        "proposition": 2,
+        "theorem": 2
       },
       "status_counts": {
-        "formalized": 1
+        "formalized": 2,
+        "staged": 3
       },
       "href": "zero_sum/applications/index.html",
       "children": []
@@ -1541,14 +1742,16 @@
       "title": "Zero Sum.Lp",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 3,
-      "direct_node_count": 3,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "proof-plan": 3
+        "definition": 2,
+        "proof-plan": 3,
+        "theorem": 1
       },
       "status_counts": {
         "admitted": 1,
-        "staged": 2
+        "staged": 5
       },
       "href": "zero_sum/lp/index.html",
       "children": []
@@ -1563,17 +1766,62 @@
       "kind_counts": {
         "definition": 1,
         "lemma": 7,
-        "proof-plan": 8,
+        "proof-plan": 9,
         "proposition": 1,
-        "theorem": 9
+        "theorem": 8
       },
       "status_counts": {
         "admitted": 2,
-        "formalized": 16,
+        "formalized": 15,
         "proved": 2,
-        "staged": 6
+        "staged": 7
       },
       "href": "zero_sum/minimax/index.html",
+      "children": [
+        "zero_sum.minimax.proofs",
+        "zero_sum.minimax.structure"
+      ]
+    },
+    "zero_sum.minimax.proofs": {
+      "id": "zero_sum.minimax.proofs",
+      "title": "Zero Sum.Minimax.Proofs",
+      "depth": 3,
+      "parent": "zero_sum.minimax",
+      "node_count": 16,
+      "direct_node_count": 16,
+      "kind_counts": {
+        "lemma": 6,
+        "proof-plan": 9,
+        "theorem": 1
+      },
+      "status_counts": {
+        "admitted": 1,
+        "formalized": 9,
+        "staged": 6
+      },
+      "href": "zero_sum/minimax/proofs/index.html",
+      "children": []
+    },
+    "zero_sum.minimax.structure": {
+      "id": "zero_sum.minimax.structure",
+      "title": "Zero Sum.Minimax.Structure",
+      "depth": 3,
+      "parent": "zero_sum.minimax",
+      "node_count": 10,
+      "direct_node_count": 10,
+      "kind_counts": {
+        "definition": 1,
+        "lemma": 1,
+        "proposition": 1,
+        "theorem": 7
+      },
+      "status_counts": {
+        "admitted": 1,
+        "formalized": 6,
+        "proved": 2,
+        "staged": 1
+      },
+      "href": "zero_sum/minimax/structure/index.html",
       "children": []
     },
     "zero_sum.operators": {
@@ -1591,22 +1839,6 @@
         "staged": 5
       },
       "href": "zero_sum/operators/index.html",
-      "children": []
-    },
-    "zero_sum.repeated": {
-      "id": "zero_sum.repeated",
-      "title": "Zero Sum.Repeated",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "staged": 2
-      },
-      "href": "zero_sum/repeated/index.html",
       "children": []
     }
   }

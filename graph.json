@@ -759,23 +759,6 @@
       ]
     },
     {
-      "id": "extensive_game.core.determined_game",
-      "title": "Determined Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "determinacy"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.core.simple_perfect_information_game"
-      ],
-      "used_by": [
-        "extensive_game.perfect_information.zermelo_determinacy"
-      ]
-    },
-    {
       "id": "extensive_game.core.game_tree",
       "title": "Game Tree",
       "kind": "definition",
@@ -790,9 +773,6 @@
         "GameTree.size"
       ],
       "topic": "extensive_game",
-      "uses": [
-        "extensive_game.perfect_information.perfect_information_extensive_game"
-      ],
       "used_by": [
         "extensive_game.core.history_and_subgame"
       ]
@@ -820,24 +800,6 @@
       ]
     },
     {
-      "id": "extensive_game.core.linear_extensive_game",
-      "title": "Linear Extensive Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "perfect-recall",
-        "behavioral-strategy"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.imperfect_information.information_set"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.isbell_behavioral_to_mixed"
-      ]
-    },
-    {
       "id": "extensive_game.core.nature_player",
       "title": "Nature In Extensive Games",
       "kind": "definition",
@@ -851,31 +813,10 @@
         "ExtensiveGame.isChanceState"
       ],
       "topic": "extensive_game",
-      "uses": [
-        "extensive_game.perfect_information.perfect_information_extensive_game"
-      ],
       "used_by": [
         "extensive_game.examples.entrant_incomplete_information_value_example",
         "extensive_game.examples.poker_game_value_example",
         "extensive_game.perfect_information.zero_sum_perfect_information_value"
-      ]
-    },
-    {
-      "id": "extensive_game.core.simple_perfect_information_game",
-      "title": "Simple Perfect-Information Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "determinacy"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.perfect_information.perfect_information_extensive_game"
-      ],
-      "used_by": [
-        "extensive_game.core.determined_game",
-        "extensive_game.examples.chomp_strategy_stealing"
       ]
     },
     {
@@ -895,332 +836,8 @@
         "GameTree.outcome"
       ],
       "topic": "extensive_game",
-      "uses": [
-        "extensive_game.perfect_information.perfect_information_strategy"
-      ],
       "used_by": [
         "extensive_game.normal_form.normal_form_reduction"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.behavioral_equilibrium",
-      "title": "Behavioral Equilibrium",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "behavioral-strategy",
-        "nash-equilibrium"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
-        "strategic_games.nash_equilibrium"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.behavioral_equilibrium_exists",
-        "extensive_game.equilibrium.local_characterization_behavioral_equilibrium",
-        "extensive_game.equilibrium.spe_imperfect_information",
-        "extensive_game.imperfect_information.reached_information_set"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.behavioral_equilibrium_exists",
-      "title": "Existence Of Behavioral Equilibrium",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "behavioral-strategy",
-        "nash-equilibrium",
-        "existence"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.behavioral_equilibrium",
-        "extensive_game.equilibrium.isbell_behavioral_to_mixed",
-        "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral",
-        "strategic_games.equilibrium.nash_existence_finite_games"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.spe_exists_perfect_recall"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.belief_system",
-      "title": "Belief System",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "belief",
-        "refinement"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.imperfect_information.information_set"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.extensive_form_perfect_equilibrium",
-      "title": "Extensive Form Perfect Equilibrium",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "equilibrium-refinement",
-        "perfection"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.normal_form.agent_normal_form",
-        "strategic_games.refinements.perfect_equilibrium"
-      ],
-      "used_by": [
-        "extensive_game.examples.normal_vs_extensive_perfection_difference"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.forward_induction",
-      "title": "Forward Induction",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "forward-induction",
-        "refinement"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.sequential_equilibrium",
-        "strategic_games.dominance.dominated_strategy"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.strategic_stability",
-        "extensive_game.examples.backward_forward_induction_incompatibility"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.information_set_refinement_equilibrium",
-      "title": "Information Set Refinement And Equilibrium",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "information-set",
-        "exercise"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.imperfect_information.information_set",
-        "extensive_game.imperfect_information.perfect_recall",
-        "strategic_games.nash_equilibrium"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.isbell_behavioral_to_mixed",
-      "title": "Isbell Behavioral-To-Mixed Equivalence",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "behavioral-strategy",
-        "mixed-strategy"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.core.linear_extensive_game",
-        "extensive_game.imperfect_information.mixed_behavioral_general_strategies"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.behavioral_equilibrium_exists"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.local_characterization_behavioral_equilibrium",
-      "title": "Local Characterization Of Behavioral Equilibrium",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "behavioral-strategy",
-        "nash-equilibrium"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.behavioral_equilibrium",
-        "extensive_game.imperfect_information.reached_information_set",
-        "strategic_games.best_response"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.mertens_stable_sets",
-      "title": "Mertens Stable Sets",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "strategic-stability",
-        "mertens"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.strategic_stability",
-        "strategic_games.core.br_invariance"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral",
-      "title": "Kuhn Mixed-To-Behavioral Equivalence",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "perfect-recall",
-        "kuhn-theorem",
-        "behavioral-strategy"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
-        "extensive_game.imperfect_information.perfect_recall"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.behavioral_equilibrium_exists",
-        "extensive_game.equilibrium.proper_equilibrium_induces_sequential"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.proper_equilibrium_induces_sequential",
-      "title": "Proper Equilibrium Induces Sequential Equilibrium",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "sequential-equilibrium",
-        "proper-equilibrium"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral",
-        "extensive_game.equilibrium.sequential_equilibrium",
-        "extensive_game.imperfect_information.perfect_recall",
-        "strategic_games.refinements.proper_equilibrium"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.sequential_equilibrium",
-      "title": "Sequential Equilibrium",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "sequential-equilibrium",
-        "refinement"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.forward_induction",
-        "extensive_game.equilibrium.proper_equilibrium_induces_sequential",
-        "extensive_game.equilibrium.sequential_equilibrium_exists"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.sequential_equilibrium_exists",
-      "title": "Existence Of Sequential Equilibrium",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "sequential-equilibrium",
-        "existence"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.sequential_equilibrium",
-        "extensive_game.normal_form.agent_normal_form"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.spe_exists_perfect_recall",
-      "title": "Existence Of Subgame-Perfect Equilibrium With Perfect Recall",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "subgame-perfect-equilibrium",
-        "perfect-recall",
-        "existence"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.behavioral_equilibrium_exists",
-        "extensive_game.equilibrium.spe_imperfect_information"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.spe_imperfect_information",
-      "title": "Subgame-Perfect Equilibrium In Imperfect-Information Games",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "subgame-perfect-equilibrium",
-        "imperfect-information"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.behavioral_equilibrium",
-        "extensive_game.imperfect_information.subroot_subgame"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.spe_exists_perfect_recall"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.strategic_stability",
-      "title": "Strategic Stability",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "strategic-stability",
-        "equilibrium-refinement"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.forward_induction",
-        "strategic_games.nash_equilibrium",
-        "strategic_games.refinements.proper_equilibrium"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.mertens_stable_sets"
-      ]
-    },
-    {
-      "id": "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium",
-      "title": "Weak Bayesian Perfect Equilibrium",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "extensive-game",
-        "belief",
-        "refinement"
-      ],
-      "topic": "extensive_game",
-      "uses": [
-        "extensive_game.equilibrium.belief_system",
-        "extensive_game.imperfect_information.reached_information_set",
-        "strategic_games.best_response"
-      ],
-      "used_by": [
-        "extensive_game.equilibrium.sequential_equilibrium"
       ]
     },
     {
@@ -1235,7 +852,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.equilibrium.forward_induction",
+        "extensive_game.imperfect_information.forward_induction",
         "extensive_game.perfect_information.subgame_perfect_equilibrium"
       ]
     },
@@ -1251,7 +868,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.core.simple_perfect_information_game",
+        "extensive_game.perfect_information.simple_perfect_information_game",
         "extensive_game.perfect_information.zermelo_determinacy"
       ]
     },
@@ -1285,7 +902,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.equilibrium.extensive_form_perfect_equilibrium",
+        "extensive_game.normal_form.extensive_form_perfect_equilibrium",
         "extensive_game.normal_form.normal_form_reduction",
         "strategic_games.refinements.perfect_equilibrium"
       ]
@@ -1345,6 +962,88 @@
       ],
       "used_by": [
         "extensive_game.imperfect_information.imperfect_information_pure_strategy"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.behavioral_equilibrium",
+      "title": "Behavioral Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "behavioral-strategy",
+        "nash-equilibrium"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+        "strategic_games.nash_equilibrium"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.behavioral_equilibrium_exists",
+        "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
+        "extensive_game.imperfect_information.reached_information_set",
+        "extensive_game.imperfect_information.spe_imperfect_information"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.behavioral_equilibrium_exists",
+      "title": "Existence Of Behavioral Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "behavioral-strategy",
+        "nash-equilibrium",
+        "existence"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.behavioral_equilibrium",
+        "extensive_game.imperfect_information.isbell_behavioral_to_mixed",
+        "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+        "strategic_games.equilibrium.nash_existence_finite_games"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.spe_exists_perfect_recall"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.belief_system",
+      "title": "Belief System",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "belief",
+        "refinement"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.information_set"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.forward_induction",
+      "title": "Forward Induction",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "forward-induction",
+        "refinement"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.sequential_equilibrium",
+        "strategic_games.dominance.dominated_strategy"
+      ],
+      "used_by": [
+        "extensive_game.examples.backward_forward_induction_incompatibility",
+        "extensive_game.imperfect_information.strategic_stability"
       ]
     },
     {
@@ -1412,13 +1111,100 @@
         "extensive_game.imperfect_information.imperfect_information_extensive_game"
       ],
       "used_by": [
-        "extensive_game.core.linear_extensive_game",
-        "extensive_game.equilibrium.belief_system",
-        "extensive_game.equilibrium.information_set_refinement_equilibrium",
         "extensive_game.imperfect_information.action_at_information_set",
+        "extensive_game.imperfect_information.belief_system",
+        "extensive_game.imperfect_information.information_set_refinement_equilibrium",
+        "extensive_game.imperfect_information.linear_extensive_game",
         "extensive_game.imperfect_information.perfect_recall",
         "extensive_game.imperfect_information.subroot_subgame",
         "extensive_game.normal_form.agent_normal_form"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.information_set_refinement_equilibrium",
+      "title": "Information Set Refinement And Equilibrium",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "information-set",
+        "exercise"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.information_set",
+        "extensive_game.imperfect_information.perfect_recall",
+        "strategic_games.nash_equilibrium"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.isbell_behavioral_to_mixed",
+      "title": "Isbell Behavioral-To-Mixed Equivalence",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "behavioral-strategy",
+        "mixed-strategy"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.linear_extensive_game",
+        "extensive_game.imperfect_information.mixed_behavioral_general_strategies"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.behavioral_equilibrium_exists"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.linear_extensive_game",
+      "title": "Linear Extensive Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "perfect-recall",
+        "behavioral-strategy"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.information_set"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.isbell_behavioral_to_mixed"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
+      "title": "Local Characterization Of Behavioral Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "behavioral-strategy",
+        "nash-equilibrium"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.behavioral_equilibrium",
+        "extensive_game.imperfect_information.reached_information_set",
+        "strategic_games.best_response"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.mertens_stable_sets",
+      "title": "Mertens Stable Sets",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "strategic-stability",
+        "mertens"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.strategic_stability",
+        "strategic_games.core.br_invariance"
       ]
     },
     {
@@ -1436,9 +1222,9 @@
         "extensive_game.imperfect_information.imperfect_information_pure_strategy"
       ],
       "used_by": [
-        "extensive_game.equilibrium.behavioral_equilibrium",
-        "extensive_game.equilibrium.isbell_behavioral_to_mixed",
-        "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral"
+        "extensive_game.imperfect_information.behavioral_equilibrium",
+        "extensive_game.imperfect_information.isbell_behavioral_to_mixed",
+        "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral"
       ]
     },
     {
@@ -1455,10 +1241,49 @@
         "extensive_game.imperfect_information.information_set"
       ],
       "used_by": [
-        "extensive_game.equilibrium.information_set_refinement_equilibrium",
-        "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral",
-        "extensive_game.equilibrium.proper_equilibrium_induces_sequential",
+        "extensive_game.imperfect_information.information_set_refinement_equilibrium",
+        "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+        "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
         "extensive_game.normal_form.agent_normal_form"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+      "title": "Kuhn Mixed-To-Behavioral Equivalence",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "perfect-recall",
+        "kuhn-theorem",
+        "behavioral-strategy"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+        "extensive_game.imperfect_information.perfect_recall"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.behavioral_equilibrium_exists",
+        "extensive_game.imperfect_information.proper_equilibrium_induces_sequential"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
+      "title": "Proper Equilibrium Induces Sequential Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "sequential-equilibrium",
+        "proper-equilibrium"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.perfect_recall",
+        "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+        "extensive_game.imperfect_information.sequential_equilibrium",
+        "strategic_games.refinements.proper_equilibrium"
       ]
     },
     {
@@ -1473,11 +1298,87 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.equilibrium.behavioral_equilibrium"
+        "extensive_game.imperfect_information.behavioral_equilibrium"
       ],
       "used_by": [
-        "extensive_game.equilibrium.local_characterization_behavioral_equilibrium",
-        "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium"
+        "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
+        "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.sequential_equilibrium",
+      "title": "Sequential Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "sequential-equilibrium",
+        "refinement"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.forward_induction",
+        "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
+        "extensive_game.normal_form.sequential_equilibrium_exists"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.spe_exists_perfect_recall",
+      "title": "Existence Of Subgame-Perfect Equilibrium With Perfect Recall",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "subgame-perfect-equilibrium",
+        "perfect-recall",
+        "existence"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.behavioral_equilibrium_exists",
+        "extensive_game.imperfect_information.spe_imperfect_information"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.spe_imperfect_information",
+      "title": "Subgame-Perfect Equilibrium In Imperfect-Information Games",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "subgame-perfect-equilibrium",
+        "imperfect-information"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.behavioral_equilibrium",
+        "extensive_game.imperfect_information.subroot_subgame"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.spe_exists_perfect_recall"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.strategic_stability",
+      "title": "Strategic Stability",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "strategic-stability",
+        "equilibrium-refinement"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.forward_induction",
+        "strategic_games.nash_equilibrium",
+        "strategic_games.refinements.proper_equilibrium"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.mertens_stable_sets"
       ]
     },
     {
@@ -1496,7 +1397,27 @@
         "extensive_game.imperfect_information.information_set"
       ],
       "used_by": [
-        "extensive_game.equilibrium.spe_imperfect_information"
+        "extensive_game.imperfect_information.spe_imperfect_information"
+      ]
+    },
+    {
+      "id": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium",
+      "title": "Weak Bayesian Perfect Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "belief",
+        "refinement"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.belief_system",
+        "extensive_game.imperfect_information.reached_information_set",
+        "strategic_games.best_response"
+      ],
+      "used_by": [
+        "extensive_game.imperfect_information.sequential_equilibrium"
       ]
     },
     {
@@ -1516,8 +1437,27 @@
         "extensive_game.normal_form.normal_form_reduction"
       ],
       "used_by": [
-        "extensive_game.equilibrium.extensive_form_perfect_equilibrium",
-        "extensive_game.equilibrium.sequential_equilibrium_exists"
+        "extensive_game.normal_form.extensive_form_perfect_equilibrium",
+        "extensive_game.normal_form.sequential_equilibrium_exists"
+      ]
+    },
+    {
+      "id": "extensive_game.normal_form.extensive_form_perfect_equilibrium",
+      "title": "Extensive Form Perfect Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "equilibrium-refinement",
+        "perfection"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.normal_form.agent_normal_form",
+        "strategic_games.refinements.perfect_equilibrium"
+      ],
+      "used_by": [
+        "extensive_game.examples.normal_vs_extensive_perfection_difference"
       ]
     },
     {
@@ -1578,6 +1518,39 @@
       ]
     },
     {
+      "id": "extensive_game.normal_form.sequential_equilibrium_exists",
+      "title": "Existence Of Sequential Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "sequential-equilibrium",
+        "existence"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.imperfect_information.sequential_equilibrium",
+        "extensive_game.normal_form.agent_normal_form"
+      ]
+    },
+    {
+      "id": "extensive_game.perfect_information.determined_game",
+      "title": "Determined Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "determinacy"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.perfect_information.simple_perfect_information_game"
+      ],
+      "used_by": [
+        "extensive_game.perfect_information.zermelo_determinacy"
+      ]
+    },
+    {
       "id": "extensive_game.perfect_information.generic_unique_spe",
       "title": "Generic Uniqueness Of Subgame-Perfect Equilibrium",
       "kind": "proposition",
@@ -1632,11 +1605,9 @@
       ],
       "topic": "extensive_game",
       "used_by": [
-        "extensive_game.core.game_tree",
-        "extensive_game.core.nature_player",
-        "extensive_game.core.simple_perfect_information_game",
         "extensive_game.imperfect_information.imperfect_information_extensive_game",
-        "extensive_game.perfect_information.perfect_information_strategy"
+        "extensive_game.perfect_information.perfect_information_strategy",
+        "extensive_game.perfect_information.simple_perfect_information_game"
       ]
     },
     {
@@ -1655,9 +1626,24 @@
       "topic": "extensive_game",
       "uses": [
         "extensive_game.perfect_information.perfect_information_extensive_game"
+      ]
+    },
+    {
+      "id": "extensive_game.perfect_information.simple_perfect_information_game",
+      "title": "Simple Perfect-Information Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "determinacy"
+      ],
+      "topic": "extensive_game",
+      "uses": [
+        "extensive_game.perfect_information.perfect_information_extensive_game"
       ],
       "used_by": [
-        "extensive_game.core.strategy_profile_induced_outcome"
+        "extensive_game.examples.chomp_strategy_stealing",
+        "extensive_game.perfect_information.determined_game"
       ]
     },
     {
@@ -1734,7 +1720,7 @@
       ],
       "topic": "extensive_game",
       "uses": [
-        "extensive_game.core.determined_game"
+        "extensive_game.perfect_information.determined_game"
       ],
       "used_by": [
         "extensive_game.examples.chomp_strategy_stealing",
@@ -1816,7 +1802,7 @@
       ],
       "used_by": [
         "fixed_point.kakutani_from_two_player_nash",
-        "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
+        "strategic_games.continuous.compact_quasi_concave_nash_exists",
         "strategic_games.refinements.proper_equilibrium_exists"
       ]
     },
@@ -2352,6 +2338,117 @@
         "minimax"
       ],
       "topic": "order"
+    },
+    {
+      "id": "repeated_game.core.history",
+      "title": "Repeated Game History",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "repeated-game",
+        "history"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.repeated_game"
+      ],
+      "used_by": [
+        "repeated_game.core.payoff_aggregation"
+      ]
+    },
+    {
+      "id": "repeated_game.core.payoff_aggregation",
+      "title": "Repeated Game Payoff Aggregation",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "repeated-game",
+        "payoff-aggregation"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.history",
+        "repeated_game.core.repeated_game"
+      ],
+      "used_by": [
+        "repeated_game.folk_theorem.folk_theorem_baseline"
+      ]
+    },
+    {
+      "id": "repeated_game.core.repeated_game",
+      "title": "Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "repeated-game"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "repeated_game.core.history",
+        "repeated_game.core.payoff_aggregation",
+        "repeated_game.folk_theorem.folk_theorem_baseline",
+        "repeated_game.incomplete_info.cav_u_theorem"
+      ]
+    },
+    {
+      "id": "repeated_game.folk_theorem.folk_theorem_baseline",
+      "title": "Folk Theorem (Baseline Statement)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "repeated-game",
+        "folk-theorem"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.folk_theorem"
+      ],
+      "topic": "folk_theorem",
+      "uses": [
+        "repeated_game.core.payoff_aggregation",
+        "repeated_game.core.repeated_game"
+      ]
+    },
+    {
+      "id": "repeated_game.incomplete_info.cav_u_theorem",
+      "title": "Aumann-Maschler Cav-u Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "repeated-game",
+        "incomplete-information",
+        "zero-sum",
+        "aumann-maschler"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.incomplete_info"
+      ],
+      "topic": "incomplete_info",
+      "uses": [
+        "repeated_game.core.repeated_game",
+        "zero_sum.core.value"
+      ]
     },
     {
       "id": "social_choice.fair_division.allocation",
@@ -6267,6 +6364,255 @@
       ]
     },
     {
+      "id": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
+      "title": "Bewley-Kohlberg Asymptotic Value",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "asymptotic-value",
+        "bewley-kohlberg"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.asymptotic"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.value.discounted_value",
+        "stochastic_game.value.discounted_value_fixed_point"
+      ],
+      "used_by": [
+        "stochastic_game.asymptotic.mertens_neyman_uniform_value"
+      ]
+    },
+    {
+      "id": "stochastic_game.asymptotic.mertens_neyman_uniform_value",
+      "title": "Mertens-Neyman Uniform Value",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "uniform-value",
+        "mertens-neyman"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.asymptotic"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
+        "stochastic_game.value.discounted_value"
+      ],
+      "used_by": [
+        "stochastic_game.examples.big_match_uniform_value"
+      ]
+    },
+    {
+      "id": "stochastic_game.core.history",
+      "title": "Stochastic Game History",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "history"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.core"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.core.stochastic_game"
+      ],
+      "used_by": [
+        "stochastic_game.equilibrium.fink_nash_existence",
+        "stochastic_game.value.discounted_value"
+      ]
+    },
+    {
+      "id": "stochastic_game.core.stochastic_game",
+      "title": "Stochastic Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "state-dynamics"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.core"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "stochastic_game.core.history",
+        "stochastic_game.equilibrium.fink_nash_existence",
+        "stochastic_game.examples.big_match_uniform_value",
+        "stochastic_game.value.discounted_value",
+        "stochastic_game.value.shapley_operator"
+      ]
+    },
+    {
+      "id": "stochastic_game.equilibrium.fink_nash_existence",
+      "title": "Fink Nash Existence in Stochastic Games",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "general-sum",
+        "nash-equilibrium",
+        "existence"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.equilibrium"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.core.history",
+        "stochastic_game.core.stochastic_game"
+      ]
+    },
+    {
+      "id": "stochastic_game.examples.big_match_uniform_value",
+      "title": "Big Match Uniform Value",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "big-match",
+        "uniform-value",
+        "example"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.examples",
+        "stochastic_game.asymptotic"
+      ],
+      "topic": "examples",
+      "uses": [
+        "stochastic_game.asymptotic.mertens_neyman_uniform_value",
+        "stochastic_game.core.stochastic_game",
+        "zero_sum.core.value"
+      ]
+    },
+    {
+      "id": "stochastic_game.value.discounted_value",
+      "title": "Discounted Value of a Zero-Sum Stochastic Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "discounted-value"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.value"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.core.history",
+        "stochastic_game.core.stochastic_game",
+        "zero_sum.core.value"
+      ],
+      "used_by": [
+        "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
+        "stochastic_game.asymptotic.mertens_neyman_uniform_value",
+        "stochastic_game.value.discounted_value_fixed_point"
+      ]
+    },
+    {
+      "id": "stochastic_game.value.discounted_value_fixed_point",
+      "title": "Discounted Value Is the Unique Shapley Fixed Point",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "shapley-operator",
+        "fixed-point"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.value"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.value.discounted_value",
+        "stochastic_game.value.shapley_operator",
+        "stochastic_game.value.shapley_operator_contraction"
+      ],
+      "used_by": [
+        "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value"
+      ]
+    },
+    {
+      "id": "stochastic_game.value.shapley_operator",
+      "title": "Shapley Operator",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "shapley-operator"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.value"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.core.stochastic_game",
+        "zero_sum.core.value"
+      ],
+      "used_by": [
+        "stochastic_game.value.discounted_value_fixed_point",
+        "stochastic_game.value.shapley_operator_contraction"
+      ]
+    },
+    {
+      "id": "stochastic_game.value.shapley_operator_contraction",
+      "title": "Shapley Operator Is a γ-Contraction",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "stochastic-game",
+        "zero-sum",
+        "shapley-operator",
+        "contraction"
+      ],
+      "primary_topic": "stochastic_game",
+      "topics": [
+        "stochastic_game",
+        "stochastic_game.value"
+      ],
+      "topic": "stochastic_game",
+      "uses": [
+        "stochastic_game.value.shapley_operator",
+        "zero_sum.operators.value_operator_nonexpansive_general"
+      ],
+      "used_by": [
+        "stochastic_game.value.discounted_value_fixed_point"
+      ]
+    },
+    {
       "id": "strategic_games.bayesian.agent_normal_form",
       "title": "Agent Normal Form Of A Bayesian Game",
       "kind": "definition",
@@ -6398,21 +6744,42 @@
         "strategic_games.unilateral_deviation"
       ],
       "used_by": [
-        "extensive_game.equilibrium.local_characterization_behavioral_equilibrium",
-        "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium",
+        "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium",
+        "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium",
         "strategic_games.continuous.supermodular_best_response_lattice",
         "strategic_games.core.br_invariance",
         "strategic_games.correlated.best_response_face",
         "strategic_games.correlated.correlated_best_response_not_independent",
         "strategic_games.correlated.obedience_condition",
         "strategic_games.dominance.rationalizable_strategy",
-        "strategic_games.dominance.strict_dominance_never_best_response",
-        "strategic_games.dominance.weak_dominance_never_best_response",
         "strategic_games.dominant_implies_nash",
         "strategic_games.equilibrium.epsilon_equilibrium",
         "strategic_games.equilibrium.nash_equilibrium_mfogt",
         "strategic_games.nash_equilibrium",
-        "strategic_games.refinements.epsilon_perfect_equilibrium"
+        "strategic_games.refinements.epsilon_perfect_equilibrium",
+        "zero_sum.applications.strict_dominance_never_best_response",
+        "zero_sum.applications.weak_dominance_never_best_response"
+      ]
+    },
+    {
+      "id": "strategic_games.continuous.compact_quasi_concave_nash_exists",
+      "title": "Nash Existence In Compact Quasi-Concave Games",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "continuous-game",
+        "nash-equilibrium",
+        "existence"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "fixed_point.kakutani_fixed_point",
+        "strategic_games.continuous.quasi_concave_game",
+        "strategic_games.nash_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.continuous.mixed_equilibrium_compact_continuous"
       ]
     },
     {
@@ -6499,6 +6866,25 @@
       ]
     },
     {
+      "id": "strategic_games.continuous.first_order_nash_condition",
+      "title": "First-Order Nash Condition",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "smooth-game",
+        "variational-inequality"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.continuous.smooth_game",
+        "strategic_games.nash_equilibrium"
+      ],
+      "used_by": [
+        "strategic_games.continuous.monotone_game_nash_uniqueness"
+      ]
+    },
+    {
       "id": "strategic_games.continuous.minority_game_equilibrium_characterization",
       "title": "Three-Player Minority Game Equilibria",
       "kind": "proposition",
@@ -6511,6 +6897,23 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.equilibrium.mixed_nash_equilibrium"
+      ]
+    },
+    {
+      "id": "strategic_games.continuous.mixed_equilibrium_compact_continuous",
+      "title": "Mixed Equilibrium In Compact Continuous Games",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "continuous-game",
+        "mixed-strategy",
+        "existence"
+      ],
+      "topic": "strategic_games",
+      "uses": [
+        "strategic_games.continuous.compact_quasi_concave_nash_exists",
+        "strategic_games.core.mixed_extension"
       ]
     },
     {
@@ -6542,8 +6945,8 @@
       ],
       "topic": "strategic_games",
       "uses": [
-        "strategic_games.continuous.monotone_game",
-        "strategic_games.equilibrium.first_order_nash_condition"
+        "strategic_games.continuous.first_order_nash_condition",
+        "strategic_games.continuous.monotone_game"
       ]
     },
     {
@@ -6560,7 +6963,7 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
+        "strategic_games.continuous.compact_quasi_concave_nash_exists",
         "strategic_games.refinements.reny_solution_exists"
       ]
     },
@@ -6578,8 +6981,8 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "strategic_games.continuous.monotone_game",
-        "strategic_games.equilibrium.first_order_nash_condition"
+        "strategic_games.continuous.first_order_nash_condition",
+        "strategic_games.continuous.monotone_game"
       ]
     },
     {
@@ -6671,7 +7074,7 @@
         "strategic_games.best_response"
       ],
       "used_by": [
-        "extensive_game.equilibrium.mertens_stable_sets"
+        "extensive_game.imperfect_information.mertens_stable_sets"
       ]
     },
     {
@@ -6709,7 +7112,7 @@
         "strategic_games.core.mixed_strategy"
       ],
       "used_by": [
-        "strategic_games.equilibrium.mixed_equilibrium_compact_continuous",
+        "strategic_games.continuous.mixed_equilibrium_compact_continuous",
         "strategic_games.equilibrium.mixed_nash_equilibrium"
       ]
     },
@@ -7092,12 +7495,12 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
-        "extensive_game.equilibrium.forward_induction",
+        "extensive_game.imperfect_information.forward_induction",
         "strategic_games.dominance.iterated_elimination",
-        "strategic_games.dominance.strict_dominance_never_best_response",
-        "strategic_games.dominance.weak_dominance_never_best_response",
         "strategic_games.refinements.perfect_equilibrium_undominated_two_player",
-        "strategic_games.refinements.proper_vs_perfect_equilibrium_examples"
+        "strategic_games.refinements.proper_vs_perfect_equilibrium_examples",
+        "zero_sum.applications.strict_dominance_never_best_response",
+        "zero_sum.applications.weak_dominance_never_best_response"
       ]
     },
     {
@@ -7198,40 +7601,6 @@
       "uses": [
         "strategic_games.dominance.dominance_solvable_game",
         "strategic_games.dominance.nash_is_rationalizable"
-      ]
-    },
-    {
-      "id": "strategic_games.dominance.strict_dominance_never_best_response",
-      "title": "Strict Domination And Never Best Response",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "dominance",
-        "best-response"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.best_response",
-        "strategic_games.dominance.dominated_strategy",
-        "zero_sum.von_neumann_minimax"
-      ]
-    },
-    {
-      "id": "strategic_games.dominance.weak_dominance_never_best_response",
-      "title": "Weak Domination And Completely Mixed Tests",
-      "kind": "proposition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "dominance",
-        "best-response"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.best_response",
-        "strategic_games.dominance.dominated_strategy",
-        "zero_sum.core.support_complementarity"
       ]
     },
     {
@@ -7359,27 +7728,6 @@
       ]
     },
     {
-      "id": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "title": "Nash Existence In Compact Quasi-Concave Games",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "continuous-game",
-        "nash-equilibrium",
-        "existence"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "fixed_point.kakutani_fixed_point",
-        "strategic_games.continuous.quasi_concave_game",
-        "strategic_games.nash_equilibrium"
-      ],
-      "used_by": [
-        "strategic_games.equilibrium.mixed_equilibrium_compact_continuous"
-      ]
-    },
-    {
       "id": "strategic_games.equilibrium.epsilon_equilibrium",
       "title": "Epsilon Equilibrium",
       "kind": "definition",
@@ -7409,42 +7757,6 @@
       "topic": "strategic_games",
       "uses": [
         "strategic_games.equilibrium.mixed_nash_equilibrium"
-      ]
-    },
-    {
-      "id": "strategic_games.equilibrium.first_order_nash_condition",
-      "title": "First-Order Nash Condition",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "smooth-game",
-        "variational-inequality"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.continuous.smooth_game",
-        "strategic_games.nash_equilibrium"
-      ],
-      "used_by": [
-        "strategic_games.continuous.monotone_game_nash_uniqueness"
-      ]
-    },
-    {
-      "id": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous",
-      "title": "Mixed Equilibrium In Compact Continuous Games",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "continuous-game",
-        "mixed-strategy",
-        "existence"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.core.mixed_extension",
-        "strategic_games.equilibrium.compact_quasi_concave_nash_exists"
       ]
     },
     {
@@ -7528,7 +7840,7 @@
         "strategic_games.equilibrium.mixed_nash_equilibrium"
       ],
       "used_by": [
-        "extensive_game.equilibrium.behavioral_equilibrium_exists",
+        "extensive_game.imperfect_information.behavioral_equilibrium_exists",
         "fixed_point.kakutani_from_two_player_nash",
         "strategic_games.bayesian.finite_bayesian_equilibrium_exists",
         "strategic_games.correlated.correlated_equilibrium_exists",
@@ -7861,22 +8173,22 @@
         "strategic_games.best_response"
       ],
       "used_by": [
-        "extensive_game.equilibrium.behavioral_equilibrium",
-        "extensive_game.equilibrium.information_set_refinement_equilibrium",
-        "extensive_game.equilibrium.strategic_stability",
+        "extensive_game.imperfect_information.behavioral_equilibrium",
+        "extensive_game.imperfect_information.information_set_refinement_equilibrium",
+        "extensive_game.imperfect_information.strategic_stability",
         "extensive_game.perfect_information.subgame_perfect_equilibrium",
         "mechanism_design.basic.truthfulness_from_dsic",
         "strategic_games.bayesian.bayesian_equilibrium",
         "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+        "strategic_games.continuous.compact_quasi_concave_nash_exists",
         "strategic_games.continuous.convex_game_variational_characterization",
         "strategic_games.continuous.cournot_fishermen_equilibria",
+        "strategic_games.continuous.first_order_nash_condition",
         "strategic_games.continuous.supermodular_game_nash_exists",
         "strategic_games.correlated.degenerate_correlated_equilibrium",
         "strategic_games.dominance.nash_is_rationalizable",
         "strategic_games.dominant_implies_nash",
         "strategic_games.equilibrium.common_knowledge_equilibrium_filtering",
-        "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-        "strategic_games.equilibrium.first_order_nash_condition",
         "strategic_games.equilibrium.mixed_nash_equilibrium",
         "strategic_games.equilibrium.nash_payoffs_are_individually_rational",
         "strategic_games.equilibrium.strict_equilibrium",
@@ -8211,8 +8523,8 @@
         "strategic_games.refinements.epsilon_perfect_equilibrium"
       ],
       "used_by": [
-        "extensive_game.equilibrium.extensive_form_perfect_equilibrium",
         "extensive_game.examples.normal_vs_extensive_perfection_difference",
+        "extensive_game.normal_form.extensive_form_perfect_equilibrium",
         "strategic_games.refinements.perfect_equilibrium_exists",
         "strategic_games.refinements.perfect_equilibrium_undominated_two_player",
         "strategic_games.refinements.proper_equilibrium",
@@ -8268,8 +8580,8 @@
         "strategic_games.refinements.perfect_equilibrium"
       ],
       "used_by": [
-        "extensive_game.equilibrium.proper_equilibrium_induces_sequential",
-        "extensive_game.equilibrium.strategic_stability",
+        "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
+        "extensive_game.imperfect_information.strategic_stability",
         "strategic_games.refinements.proper_equilibrium_exists",
         "strategic_games.refinements.proper_vs_perfect_equilibrium_examples",
         "strategic_games.refinements.strict_equilibrium_is_proper"
@@ -8362,50 +8674,6 @@
       "uses": [
         "strategic_games.equilibrium.strict_equilibrium",
         "strategic_games.refinements.proper_equilibrium"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.big_match_uniform_value",
-      "title": "Big Match Uniform Value",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "stochastic-game",
-        "zero-sum"
-      ],
-      "primary_topic": "zero_sum.repeated",
-      "topics": [
-        "zero_sum",
-        "zero_sum.repeated"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.stochastic_game",
-        "zero_sum.core.value"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.cav_u_theorem",
-      "title": "Cav U Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "incomplete-information",
-        "zero-sum"
-      ],
-      "primary_topic": "zero_sum.repeated",
-      "topics": [
-        "zero_sum",
-        "zero_sum.repeated"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.incomplete_information",
-        "zero_sum.core.value"
       ]
     },
     {
@@ -8512,9 +8780,6 @@
       "uses": [
         "strategic_games.bayesian.bayesian_game",
         "strategic_games.repeated.standard_repeated_game"
-      ],
-      "used_by": [
-        "strategic_games.repeated.cav_u_theorem"
       ]
     },
     {
@@ -8549,24 +8814,6 @@
       "used_by": [
         "strategic_games.repeated.incomplete_information",
         "strategic_games.repeated.strategy"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.stochastic_game",
-      "title": "Stochastic Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "stochastic-game"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.strategic_game"
-      ],
-      "used_by": [
-        "strategic_games.repeated.big_match_uniform_value"
       ]
     },
     {
@@ -8666,6 +8913,8 @@
         "extensive_game.normal_form.normal_form_reduction",
         "mechanism_design.basic.direct_mechanism_interface",
         "mechanism_design.basic.induced_strategic_game",
+        "repeated_game.core.repeated_game",
+        "stochastic_game.core.stochastic_game",
         "strategic_games.bayesian.agent_normal_form",
         "strategic_games.bayesian.bayesian_game",
         "strategic_games.continuous.convex_game",
@@ -8686,7 +8935,6 @@
         "strategic_games.prisoners_dilemma",
         "strategic_games.refinements.reny_solution",
         "strategic_games.repeated.standard_repeated_game",
-        "strategic_games.repeated.stochastic_game",
         "strategic_games.strategy_profile",
         "zero_sum.zero_sum_game"
       ]
@@ -9018,6 +9266,28 @@
       ]
     },
     {
+      "id": "zero_sum.applications.markov_stationary_as_zero_sum_value",
+      "title": "Markov Stationary Distribution as Zero-Sum Game Value",
+      "kind": "lemma",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "applications",
+        "markov",
+        "stationary-distribution"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.applications"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.applications.stochastic_matrix_invariant_distribution",
+        "zero_sum.core.value"
+      ]
+    },
+    {
       "id": "zero_sum.applications.perron_frobenius_positive_matrix",
       "title": "Perron-Frobenius For Positive Matrices",
       "kind": "theorem",
@@ -9039,6 +9309,68 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.minimax.loomis_theorem"
+      ]
+    },
+    {
+      "id": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "title": "Stochastic Matrix Has An Invariant Distribution",
+      "kind": "theorem",
+      "status": "formalized",
+      "tags": [
+        "zero-sum",
+        "stochastic-matrix",
+        "invariant-distribution"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.applications"
+      ],
+      "lean_declarations": [
+        "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.optimal_strategy_sets",
+        "zero_sum.matrix_game_nash_equilibrium",
+        "zero_sum.von_neumann_minimax"
+      ],
+      "used_by": [
+        "zero_sum.applications.markov_stationary_as_zero_sum_value"
+      ]
+    },
+    {
+      "id": "zero_sum.applications.strict_dominance_never_best_response",
+      "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "dominance",
+        "best-response"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.best_response",
+        "strategic_games.dominance.dominated_strategy",
+        "zero_sum.von_neumann_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.applications.weak_dominance_never_best_response",
+      "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
+      "kind": "proposition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "dominance",
+        "best-response"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "strategic_games.best_response",
+        "strategic_games.dominance.dominated_strategy",
+        "zero_sum.core.support_complementarity"
       ]
     },
     {
@@ -9437,7 +9769,10 @@
       "used_by": [
         "zero_sum.core.mixed_extension",
         "zero_sum.core.mixed_support",
-        "zero_sum.fictitious_play.empirical_frequency"
+        "zero_sum.fictitious_play.empirical_frequency",
+        "zero_sum.lp.player_1_lp",
+        "zero_sum.lp.player_2_lp",
+        "zero_sum.minimax.kakutani_minimax_proof"
       ]
     },
     {
@@ -9520,12 +9855,13 @@
         "zero_sum.core.value"
       ],
       "used_by": [
+        "zero_sum.applications.stochastic_matrix_invariant_distribution",
         "zero_sum.core.optimal_pairs_are_saddle_points",
         "zero_sum.core.optimal_strategy_sets_are_polytopes",
         "zero_sum.examples.computation_three_by_two_example",
         "zero_sum.fictitious_play.fictitious_play_convergence",
+        "zero_sum.lp.lp_optimal_iff_optimal_strategy",
         "zero_sum.minimax.antisymmetric_matrix_game_value",
-        "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.operators.derived_game"
       ]
     },
@@ -9616,6 +9952,8 @@
       ],
       "used_by": [
         "zero_sum.core.optimal_pairs_are_saddle_points",
+        "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+        "zero_sum.minimax.kakutani_minimax_proof",
         "zero_sum.minimax.zero_sum_nash_saddle"
       ]
     },
@@ -9644,7 +9982,7 @@
         "zero_sum.core.optimal_pairs_are_saddle_points"
       ],
       "used_by": [
-        "strategic_games.dominance.weak_dominance_never_best_response",
+        "zero_sum.applications.weak_dominance_never_best_response",
         "zero_sum.minimax.strong_complementarity"
       ]
     },
@@ -9673,8 +10011,11 @@
         "extensive_game.examples.entrant_incomplete_information_value_example",
         "extensive_game.examples.poker_game_value_example",
         "extensive_game.perfect_information.zero_sum_perfect_information_value",
-        "strategic_games.repeated.big_match_uniform_value",
-        "strategic_games.repeated.cav_u_theorem",
+        "repeated_game.incomplete_info.cav_u_theorem",
+        "stochastic_game.examples.big_match_uniform_value",
+        "stochastic_game.value.discounted_value",
+        "stochastic_game.value.shapley_operator",
+        "zero_sum.applications.markov_stationary_as_zero_sum_value",
         "zero_sum.continuous.finite_opponent_separation_minimax",
         "zero_sum.continuous.monotone_decreasing_values_limit",
         "zero_sum.continuous.sion_minimax_theorem",
@@ -9685,6 +10026,9 @@
         "zero_sum.examples.noisy_duel_one_bullet_value",
         "zero_sum.examples.silent_duel_no_pure_value",
         "zero_sum.fictitious_play.cesaro_payoff_from_robinson",
+        "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+        "zero_sum.lp.player_1_lp",
+        "zero_sum.lp.player_2_lp",
         "zero_sum.minimax.common_guarantee_value",
         "zero_sum.operators.value_operator_general"
       ]
@@ -9706,6 +10050,7 @@
       "topics": [
         "zero_sum",
         "zero_sum.minimax",
+        "zero_sum.minimax.proofs",
         "zero_sum.lp"
       ],
       "target": "zero_sum.von_neumann_minimax",
@@ -10250,7 +10595,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "MinimaxLoomis.lam.aux.continuous",
@@ -10271,6 +10617,81 @@
       ],
       "used_by": [
         "zero_sum.minimax.loomis_induction_proof.value_existence"
+      ]
+    },
+    {
+      "id": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "title": "LP Optimum ↔ Game-Theoretic Optimal Strategy",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "linear-programming",
+        "optimal-strategy",
+        "bijection"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.lp"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.optimal_strategy_sets",
+        "zero_sum.core.saddle_point",
+        "zero_sum.core.value",
+        "zero_sum.lp.player_1_lp",
+        "zero_sum.lp.player_2_lp"
+      ]
+    },
+    {
+      "id": "zero_sum.lp.player_1_lp",
+      "title": "Player-1 LP Formulation of a Matrix Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "linear-programming",
+        "lp-primal"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.lp"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.mixed_strategy_simplex",
+        "zero_sum.core.value"
+      ],
+      "used_by": [
+        "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+        "zero_sum.lp.player_2_lp"
+      ]
+    },
+    {
+      "id": "zero_sum.lp.player_2_lp",
+      "title": "Player-2 LP Formulation of a Matrix Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "linear-programming",
+        "lp-dual"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.lp"
+      ],
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.mixed_strategy_simplex",
+        "zero_sum.core.value",
+        "zero_sum.lp.player_1_lp"
+      ],
+      "used_by": [
+        "zero_sum.lp.lp_optimal_iff_optimal_strategy"
       ]
     },
     {
@@ -10339,7 +10760,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "MatrixGame.exists_mixed_nash_equilibrium",
@@ -10354,8 +10776,8 @@
         "zero_sum.von_neumann_minimax"
       ],
       "used_by": [
+        "zero_sum.applications.stochastic_matrix_invariant_distribution",
         "zero_sum.minimax.antisymmetric_matrix_game_value",
-        "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.minimax.strong_complementarity",
         "zero_sum.minimax.zero_sum_nash_saddle"
       ]
@@ -10437,7 +10859,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero",
@@ -10465,7 +10888,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "MatrixGame.common_guarantee_eq_value"
@@ -10476,6 +10900,32 @@
         "zero_sum.core.value",
         "zero_sum.maximin_le_minimax",
         "zero_sum.von_neumann_minimax"
+      ]
+    },
+    {
+      "id": "zero_sum.minimax.kakutani_minimax_proof",
+      "title": "Kakutani Fixed-Point Proof of the Minimax Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "zero-sum",
+        "minimax",
+        "fixed-point",
+        "kakutani",
+        "proof-plan"
+      ],
+      "primary_topic": "zero_sum",
+      "topics": [
+        "zero_sum",
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
+      ],
+      "target": "zero_sum.minimax.von_neumann_minimax",
+      "plan_status": "candidate",
+      "topic": "zero_sum",
+      "uses": [
+        "zero_sum.core.mixed_strategy_simplex",
+        "zero_sum.core.saddle_point"
       ]
     },
     {
@@ -10491,7 +10941,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "target": "zero_sum.minimax.loomis_theorem",
       "plan_status": "selected",
@@ -10517,7 +10968,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "LoomisGeneral.loomis_value_IJ_2"
@@ -10541,7 +10993,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "LoomisGeneral.loomis_value_eq_aux"
@@ -10571,7 +11024,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "LoomisGeneral.IsPositive.one",
@@ -10601,7 +11055,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "LoomisGeneral.loomis_value_eq_aux"
@@ -10630,7 +11085,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "LoomisGeneral.lamB.aux_gt_iff_gt",
@@ -10672,7 +11128,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "lean_declarations": [
         "LoomisGeneral.lamB0_le_muB0"
@@ -10700,7 +11157,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "LoomisGeneral.loomis_value_eq",
@@ -10734,7 +11192,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "target": "zero_sum.von_neumann_minimax",
       "plan_status": "candidate",
@@ -10759,7 +11218,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "target": "zero_sum.von_neumann_minimax",
       "plan_status": "candidate",
@@ -10782,7 +11242,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "target": "zero_sum.von_neumann_minimax",
       "plan_status": "candidate",
@@ -10805,7 +11266,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "target": "zero_sum.von_neumann_minimax",
       "plan_status": "selected",
@@ -10843,38 +11305,14 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "dantzig_minimax"
       ],
       "topic": "zero_sum",
       "uses": [
-        "zero_sum.von_neumann_minimax"
-      ]
-    },
-    {
-      "id": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
-      "title": "Stochastic Matrix Has An Invariant Distribution",
-      "kind": "theorem",
-      "status": "formalized",
-      "tags": [
-        "zero-sum",
-        "stochastic-matrix",
-        "invariant-distribution"
-      ],
-      "primary_topic": "zero_sum",
-      "topics": [
-        "zero_sum",
-        "zero_sum.minimax"
-      ],
-      "lean_declarations": [
-        "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution"
-      ],
-      "topic": "zero_sum",
-      "uses": [
-        "zero_sum.core.optimal_strategy_sets",
-        "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.von_neumann_minimax"
       ]
     },
@@ -10891,7 +11329,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "MatrixGame.exists_strong_complementary_pair"
@@ -10917,7 +11356,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "MatrixGame.IsMaximin",
@@ -10943,7 +11383,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.proofs"
       ],
       "target": "zero_sum.minimax.ville_theorem",
       "plan_status": "selected",
@@ -10965,7 +11406,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "topic": "zero_sum",
       "uses": [
@@ -10985,7 +11427,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "MatrixGame.isMixedNashEq_iff_isSaddlePoint"
@@ -11111,6 +11554,9 @@
       "topic": "zero_sum",
       "uses": [
         "zero_sum.operators.value_operator_general"
+      ],
+      "used_by": [
+        "stochastic_game.value.shapley_operator_contraction"
       ]
     },
     {
@@ -11149,6 +11595,7 @@
       "topics": [
         "zero_sum",
         "zero_sum.minimax",
+        "zero_sum.minimax.proofs",
         "zero_sum.lp"
       ],
       "target": "zero_sum.von_neumann_minimax",
@@ -11172,7 +11619,8 @@
       "primary_topic": "zero_sum",
       "topics": [
         "zero_sum",
-        "zero_sum.minimax"
+        "zero_sum.minimax",
+        "zero_sum.minimax.structure"
       ],
       "lean_declarations": [
         "MatrixGame.maximin_le_minimax",
@@ -11181,12 +11629,12 @@
       ],
       "topic": "zero_sum",
       "used_by": [
-        "strategic_games.dominance.strict_dominance_never_best_response",
+        "zero_sum.applications.stochastic_matrix_invariant_distribution",
+        "zero_sum.applications.strict_dominance_never_best_response",
         "zero_sum.examples.two_by_two_value_formula",
         "zero_sum.matrix_game_nash_equilibrium",
         "zero_sum.minimax.common_guarantee_value",
         "zero_sum.minimax.ordered_field_minimax",
-        "zero_sum.minimax.stochastic_matrix_invariant_distribution",
         "zero_sum.minimax.ville_discretization_proof",
         "zero_sum.minimax.ville_theorem",
         "zero_sum.operators.value_operator_properties"
@@ -11371,195 +11819,11 @@
       "to": "core.simplex.wsum_comm"
     },
     {
-      "from": "extensive_game.core.simple_perfect_information_game",
-      "to": "extensive_game.core.determined_game"
-    },
-    {
-      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
-      "to": "extensive_game.core.game_tree"
-    },
-    {
       "from": "extensive_game.core.game_tree",
       "to": "extensive_game.core.history_and_subgame"
     },
     {
-      "from": "extensive_game.imperfect_information.information_set",
-      "to": "extensive_game.core.linear_extensive_game"
-    },
-    {
-      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
-      "to": "extensive_game.core.nature_player"
-    },
-    {
-      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
-      "to": "extensive_game.core.simple_perfect_information_game"
-    },
-    {
-      "from": "extensive_game.perfect_information.perfect_information_strategy",
-      "to": "extensive_game.core.strategy_profile_induced_outcome"
-    },
-    {
-      "from": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
-      "to": "extensive_game.equilibrium.behavioral_equilibrium"
-    },
-    {
-      "from": "strategic_games.nash_equilibrium",
-      "to": "extensive_game.equilibrium.behavioral_equilibrium"
-    },
-    {
-      "from": "extensive_game.equilibrium.behavioral_equilibrium",
-      "to": "extensive_game.equilibrium.behavioral_equilibrium_exists"
-    },
-    {
-      "from": "extensive_game.equilibrium.isbell_behavioral_to_mixed",
-      "to": "extensive_game.equilibrium.behavioral_equilibrium_exists"
-    },
-    {
-      "from": "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral",
-      "to": "extensive_game.equilibrium.behavioral_equilibrium_exists"
-    },
-    {
-      "from": "strategic_games.equilibrium.nash_existence_finite_games",
-      "to": "extensive_game.equilibrium.behavioral_equilibrium_exists"
-    },
-    {
-      "from": "extensive_game.imperfect_information.information_set",
-      "to": "extensive_game.equilibrium.belief_system"
-    },
-    {
-      "from": "extensive_game.normal_form.agent_normal_form",
-      "to": "extensive_game.equilibrium.extensive_form_perfect_equilibrium"
-    },
-    {
-      "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "extensive_game.equilibrium.extensive_form_perfect_equilibrium"
-    },
-    {
-      "from": "extensive_game.equilibrium.sequential_equilibrium",
-      "to": "extensive_game.equilibrium.forward_induction"
-    },
-    {
-      "from": "strategic_games.dominance.dominated_strategy",
-      "to": "extensive_game.equilibrium.forward_induction"
-    },
-    {
-      "from": "extensive_game.imperfect_information.information_set",
-      "to": "extensive_game.equilibrium.information_set_refinement_equilibrium"
-    },
-    {
-      "from": "extensive_game.imperfect_information.perfect_recall",
-      "to": "extensive_game.equilibrium.information_set_refinement_equilibrium"
-    },
-    {
-      "from": "strategic_games.nash_equilibrium",
-      "to": "extensive_game.equilibrium.information_set_refinement_equilibrium"
-    },
-    {
-      "from": "extensive_game.core.linear_extensive_game",
-      "to": "extensive_game.equilibrium.isbell_behavioral_to_mixed"
-    },
-    {
-      "from": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
-      "to": "extensive_game.equilibrium.isbell_behavioral_to_mixed"
-    },
-    {
-      "from": "extensive_game.equilibrium.behavioral_equilibrium",
-      "to": "extensive_game.equilibrium.local_characterization_behavioral_equilibrium"
-    },
-    {
-      "from": "extensive_game.imperfect_information.reached_information_set",
-      "to": "extensive_game.equilibrium.local_characterization_behavioral_equilibrium"
-    },
-    {
-      "from": "strategic_games.best_response",
-      "to": "extensive_game.equilibrium.local_characterization_behavioral_equilibrium"
-    },
-    {
-      "from": "extensive_game.equilibrium.strategic_stability",
-      "to": "extensive_game.equilibrium.mertens_stable_sets"
-    },
-    {
-      "from": "strategic_games.core.br_invariance",
-      "to": "extensive_game.equilibrium.mertens_stable_sets"
-    },
-    {
-      "from": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
-      "to": "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral"
-    },
-    {
-      "from": "extensive_game.imperfect_information.perfect_recall",
-      "to": "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral"
-    },
-    {
-      "from": "extensive_game.equilibrium.perfect_recall_mixed_to_behavioral",
-      "to": "extensive_game.equilibrium.proper_equilibrium_induces_sequential"
-    },
-    {
-      "from": "extensive_game.equilibrium.sequential_equilibrium",
-      "to": "extensive_game.equilibrium.proper_equilibrium_induces_sequential"
-    },
-    {
-      "from": "extensive_game.imperfect_information.perfect_recall",
-      "to": "extensive_game.equilibrium.proper_equilibrium_induces_sequential"
-    },
-    {
-      "from": "strategic_games.refinements.proper_equilibrium",
-      "to": "extensive_game.equilibrium.proper_equilibrium_induces_sequential"
-    },
-    {
-      "from": "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium",
-      "to": "extensive_game.equilibrium.sequential_equilibrium"
-    },
-    {
-      "from": "extensive_game.equilibrium.sequential_equilibrium",
-      "to": "extensive_game.equilibrium.sequential_equilibrium_exists"
-    },
-    {
-      "from": "extensive_game.normal_form.agent_normal_form",
-      "to": "extensive_game.equilibrium.sequential_equilibrium_exists"
-    },
-    {
-      "from": "extensive_game.equilibrium.behavioral_equilibrium_exists",
-      "to": "extensive_game.equilibrium.spe_exists_perfect_recall"
-    },
-    {
-      "from": "extensive_game.equilibrium.spe_imperfect_information",
-      "to": "extensive_game.equilibrium.spe_exists_perfect_recall"
-    },
-    {
-      "from": "extensive_game.equilibrium.behavioral_equilibrium",
-      "to": "extensive_game.equilibrium.spe_imperfect_information"
-    },
-    {
-      "from": "extensive_game.imperfect_information.subroot_subgame",
-      "to": "extensive_game.equilibrium.spe_imperfect_information"
-    },
-    {
-      "from": "extensive_game.equilibrium.forward_induction",
-      "to": "extensive_game.equilibrium.strategic_stability"
-    },
-    {
-      "from": "strategic_games.nash_equilibrium",
-      "to": "extensive_game.equilibrium.strategic_stability"
-    },
-    {
-      "from": "strategic_games.refinements.proper_equilibrium",
-      "to": "extensive_game.equilibrium.strategic_stability"
-    },
-    {
-      "from": "extensive_game.equilibrium.belief_system",
-      "to": "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium"
-    },
-    {
-      "from": "extensive_game.imperfect_information.reached_information_set",
-      "to": "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium"
-    },
-    {
-      "from": "strategic_games.best_response",
-      "to": "extensive_game.equilibrium.weak_bayesian_perfect_equilibrium"
-    },
-    {
-      "from": "extensive_game.equilibrium.forward_induction",
+      "from": "extensive_game.imperfect_information.forward_induction",
       "to": "extensive_game.examples.backward_forward_induction_incompatibility"
     },
     {
@@ -11567,7 +11831,7 @@
       "to": "extensive_game.examples.backward_forward_induction_incompatibility"
     },
     {
-      "from": "extensive_game.core.simple_perfect_information_game",
+      "from": "extensive_game.perfect_information.simple_perfect_information_game",
       "to": "extensive_game.examples.chomp_strategy_stealing"
     },
     {
@@ -11587,7 +11851,7 @@
       "to": "extensive_game.examples.entrant_incomplete_information_value_example"
     },
     {
-      "from": "extensive_game.equilibrium.extensive_form_perfect_equilibrium",
+      "from": "extensive_game.normal_form.extensive_form_perfect_equilibrium",
       "to": "extensive_game.examples.normal_vs_extensive_perfection_difference"
     },
     {
@@ -11623,6 +11887,42 @@
       "to": "extensive_game.imperfect_information.action_at_information_set"
     },
     {
+      "from": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+      "to": "extensive_game.imperfect_information.behavioral_equilibrium"
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "extensive_game.imperfect_information.behavioral_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
+      "to": "extensive_game.imperfect_information.behavioral_equilibrium_exists"
+    },
+    {
+      "from": "extensive_game.imperfect_information.isbell_behavioral_to_mixed",
+      "to": "extensive_game.imperfect_information.behavioral_equilibrium_exists"
+    },
+    {
+      "from": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+      "to": "extensive_game.imperfect_information.behavioral_equilibrium_exists"
+    },
+    {
+      "from": "strategic_games.equilibrium.nash_existence_finite_games",
+      "to": "extensive_game.imperfect_information.behavioral_equilibrium_exists"
+    },
+    {
+      "from": "extensive_game.imperfect_information.information_set",
+      "to": "extensive_game.imperfect_information.belief_system"
+    },
+    {
+      "from": "extensive_game.imperfect_information.sequential_equilibrium",
+      "to": "extensive_game.imperfect_information.forward_induction"
+    },
+    {
+      "from": "strategic_games.dominance.dominated_strategy",
+      "to": "extensive_game.imperfect_information.forward_induction"
+    },
+    {
       "from": "extensive_game.perfect_information.perfect_information_extensive_game",
       "to": "extensive_game.imperfect_information.imperfect_information_extensive_game"
     },
@@ -11635,6 +11935,50 @@
       "to": "extensive_game.imperfect_information.information_set"
     },
     {
+      "from": "extensive_game.imperfect_information.information_set",
+      "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.perfect_recall",
+      "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium"
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "extensive_game.imperfect_information.information_set_refinement_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.linear_extensive_game",
+      "to": "extensive_game.imperfect_information.isbell_behavioral_to_mixed"
+    },
+    {
+      "from": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+      "to": "extensive_game.imperfect_information.isbell_behavioral_to_mixed"
+    },
+    {
+      "from": "extensive_game.imperfect_information.information_set",
+      "to": "extensive_game.imperfect_information.linear_extensive_game"
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
+      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.reached_information_set",
+      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium"
+    },
+    {
+      "from": "strategic_games.best_response",
+      "to": "extensive_game.imperfect_information.local_characterization_behavioral_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.strategic_stability",
+      "to": "extensive_game.imperfect_information.mertens_stable_sets"
+    },
+    {
+      "from": "strategic_games.core.br_invariance",
+      "to": "extensive_game.imperfect_information.mertens_stable_sets"
+    },
+    {
       "from": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
       "to": "extensive_game.imperfect_information.mixed_behavioral_general_strategies"
     },
@@ -11643,8 +11987,64 @@
       "to": "extensive_game.imperfect_information.perfect_recall"
     },
     {
-      "from": "extensive_game.equilibrium.behavioral_equilibrium",
+      "from": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+      "to": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral"
+    },
+    {
+      "from": "extensive_game.imperfect_information.perfect_recall",
+      "to": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral"
+    },
+    {
+      "from": "extensive_game.imperfect_information.perfect_recall",
+      "to": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential"
+    },
+    {
+      "from": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+      "to": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential"
+    },
+    {
+      "from": "extensive_game.imperfect_information.sequential_equilibrium",
+      "to": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential"
+    },
+    {
+      "from": "strategic_games.refinements.proper_equilibrium",
+      "to": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential"
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
       "to": "extensive_game.imperfect_information.reached_information_set"
+    },
+    {
+      "from": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium",
+      "to": "extensive_game.imperfect_information.sequential_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium_exists",
+      "to": "extensive_game.imperfect_information.spe_exists_perfect_recall"
+    },
+    {
+      "from": "extensive_game.imperfect_information.spe_imperfect_information",
+      "to": "extensive_game.imperfect_information.spe_exists_perfect_recall"
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
+      "to": "extensive_game.imperfect_information.spe_imperfect_information"
+    },
+    {
+      "from": "extensive_game.imperfect_information.subroot_subgame",
+      "to": "extensive_game.imperfect_information.spe_imperfect_information"
+    },
+    {
+      "from": "extensive_game.imperfect_information.forward_induction",
+      "to": "extensive_game.imperfect_information.strategic_stability"
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "extensive_game.imperfect_information.strategic_stability"
+    },
+    {
+      "from": "strategic_games.refinements.proper_equilibrium",
+      "to": "extensive_game.imperfect_information.strategic_stability"
     },
     {
       "from": "extensive_game.core.history_and_subgame",
@@ -11653,6 +12053,18 @@
     {
       "from": "extensive_game.imperfect_information.information_set",
       "to": "extensive_game.imperfect_information.subroot_subgame"
+    },
+    {
+      "from": "extensive_game.imperfect_information.belief_system",
+      "to": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
+    },
+    {
+      "from": "extensive_game.imperfect_information.reached_information_set",
+      "to": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
+    },
+    {
+      "from": "strategic_games.best_response",
+      "to": "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
     },
     {
       "from": "extensive_game.imperfect_information.information_set",
@@ -11665,6 +12077,14 @@
     {
       "from": "extensive_game.normal_form.normal_form_reduction",
       "to": "extensive_game.normal_form.agent_normal_form"
+    },
+    {
+      "from": "extensive_game.normal_form.agent_normal_form",
+      "to": "extensive_game.normal_form.extensive_form_perfect_equilibrium"
+    },
+    {
+      "from": "strategic_games.refinements.perfect_equilibrium",
+      "to": "extensive_game.normal_form.extensive_form_perfect_equilibrium"
     },
     {
       "from": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
@@ -11687,6 +12107,18 @@
       "to": "extensive_game.normal_form.semi_reduced_normal_form"
     },
     {
+      "from": "extensive_game.imperfect_information.sequential_equilibrium",
+      "to": "extensive_game.normal_form.sequential_equilibrium_exists"
+    },
+    {
+      "from": "extensive_game.normal_form.agent_normal_form",
+      "to": "extensive_game.normal_form.sequential_equilibrium_exists"
+    },
+    {
+      "from": "extensive_game.perfect_information.simple_perfect_information_game",
+      "to": "extensive_game.perfect_information.determined_game"
+    },
+    {
       "from": "extensive_game.perfect_information.kuhn_spe_existence",
       "to": "extensive_game.perfect_information.generic_unique_spe"
     },
@@ -11697,6 +12129,10 @@
     {
       "from": "extensive_game.perfect_information.perfect_information_extensive_game",
       "to": "extensive_game.perfect_information.perfect_information_strategy"
+    },
+    {
+      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
+      "to": "extensive_game.perfect_information.simple_perfect_information_game"
     },
     {
       "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
@@ -11715,7 +12151,7 @@
       "to": "extensive_game.perfect_information.subgame_perfect_equilibrium"
     },
     {
-      "from": "extensive_game.core.determined_game",
+      "from": "extensive_game.perfect_information.determined_game",
       "to": "extensive_game.perfect_information.zermelo_determinacy"
     },
     {
@@ -11841,6 +12277,38 @@
     {
       "from": "mechanism_design.transfer.multiple_parameter_transfer_layer",
       "to": "mechanism_design.vcg.welfare_and_payments"
+    },
+    {
+      "from": "repeated_game.core.repeated_game",
+      "to": "repeated_game.core.history"
+    },
+    {
+      "from": "repeated_game.core.history",
+      "to": "repeated_game.core.payoff_aggregation"
+    },
+    {
+      "from": "repeated_game.core.repeated_game",
+      "to": "repeated_game.core.payoff_aggregation"
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "repeated_game.core.repeated_game"
+    },
+    {
+      "from": "repeated_game.core.payoff_aggregation",
+      "to": "repeated_game.folk_theorem.folk_theorem_baseline"
+    },
+    {
+      "from": "repeated_game.core.repeated_game",
+      "to": "repeated_game.folk_theorem.folk_theorem_baseline"
+    },
+    {
+      "from": "repeated_game.core.repeated_game",
+      "to": "repeated_game.incomplete_info.cav_u_theorem"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "repeated_game.incomplete_info.cav_u_theorem"
     },
     {
       "from": "social_choice.fair_division.allocation",
@@ -13027,6 +13495,90 @@
       "to": "social_choice.voting.unanimity_univ_decisive"
     },
     {
+      "from": "stochastic_game.value.discounted_value",
+      "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value"
+    },
+    {
+      "from": "stochastic_game.value.discounted_value_fixed_point",
+      "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value"
+    },
+    {
+      "from": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
+      "to": "stochastic_game.asymptotic.mertens_neyman_uniform_value"
+    },
+    {
+      "from": "stochastic_game.value.discounted_value",
+      "to": "stochastic_game.asymptotic.mertens_neyman_uniform_value"
+    },
+    {
+      "from": "stochastic_game.core.stochastic_game",
+      "to": "stochastic_game.core.history"
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "stochastic_game.core.stochastic_game"
+    },
+    {
+      "from": "stochastic_game.core.history",
+      "to": "stochastic_game.equilibrium.fink_nash_existence"
+    },
+    {
+      "from": "stochastic_game.core.stochastic_game",
+      "to": "stochastic_game.equilibrium.fink_nash_existence"
+    },
+    {
+      "from": "stochastic_game.asymptotic.mertens_neyman_uniform_value",
+      "to": "stochastic_game.examples.big_match_uniform_value"
+    },
+    {
+      "from": "stochastic_game.core.stochastic_game",
+      "to": "stochastic_game.examples.big_match_uniform_value"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "stochastic_game.examples.big_match_uniform_value"
+    },
+    {
+      "from": "stochastic_game.core.history",
+      "to": "stochastic_game.value.discounted_value"
+    },
+    {
+      "from": "stochastic_game.core.stochastic_game",
+      "to": "stochastic_game.value.discounted_value"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "stochastic_game.value.discounted_value"
+    },
+    {
+      "from": "stochastic_game.value.discounted_value",
+      "to": "stochastic_game.value.discounted_value_fixed_point"
+    },
+    {
+      "from": "stochastic_game.value.shapley_operator",
+      "to": "stochastic_game.value.discounted_value_fixed_point"
+    },
+    {
+      "from": "stochastic_game.value.shapley_operator_contraction",
+      "to": "stochastic_game.value.discounted_value_fixed_point"
+    },
+    {
+      "from": "stochastic_game.core.stochastic_game",
+      "to": "stochastic_game.value.shapley_operator"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "stochastic_game.value.shapley_operator"
+    },
+    {
+      "from": "stochastic_game.value.shapley_operator",
+      "to": "stochastic_game.value.shapley_operator_contraction"
+    },
+    {
+      "from": "zero_sum.operators.value_operator_nonexpansive_general",
+      "to": "stochastic_game.value.shapley_operator_contraction"
+    },
+    {
       "from": "strategic_games.bayesian.bayesian_game",
       "to": "strategic_games.bayesian.agent_normal_form"
     },
@@ -13079,6 +13631,18 @@
       "to": "strategic_games.best_response"
     },
     {
+      "from": "fixed_point.kakutani_fixed_point",
+      "to": "strategic_games.continuous.compact_quasi_concave_nash_exists"
+    },
+    {
+      "from": "strategic_games.continuous.quasi_concave_game",
+      "to": "strategic_games.continuous.compact_quasi_concave_nash_exists"
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "strategic_games.continuous.compact_quasi_concave_nash_exists"
+    },
+    {
       "from": "strategic_games.strategic_game",
       "to": "strategic_games.continuous.convex_game"
     },
@@ -13107,19 +13671,35 @@
       "to": "strategic_games.continuous.cournot_fishermen_equilibria"
     },
     {
+      "from": "strategic_games.continuous.smooth_game",
+      "to": "strategic_games.continuous.first_order_nash_condition"
+    },
+    {
+      "from": "strategic_games.nash_equilibrium",
+      "to": "strategic_games.continuous.first_order_nash_condition"
+    },
+    {
       "from": "strategic_games.equilibrium.mixed_nash_equilibrium",
       "to": "strategic_games.continuous.minority_game_equilibrium_characterization"
+    },
+    {
+      "from": "strategic_games.continuous.compact_quasi_concave_nash_exists",
+      "to": "strategic_games.continuous.mixed_equilibrium_compact_continuous"
+    },
+    {
+      "from": "strategic_games.core.mixed_extension",
+      "to": "strategic_games.continuous.mixed_equilibrium_compact_continuous"
     },
     {
       "from": "strategic_games.continuous.smooth_game",
       "to": "strategic_games.continuous.monotone_game"
     },
     {
-      "from": "strategic_games.continuous.monotone_game",
+      "from": "strategic_games.continuous.first_order_nash_condition",
       "to": "strategic_games.continuous.monotone_game_nash_uniqueness"
     },
     {
-      "from": "strategic_games.equilibrium.first_order_nash_condition",
+      "from": "strategic_games.continuous.monotone_game",
       "to": "strategic_games.continuous.monotone_game_nash_uniqueness"
     },
     {
@@ -13328,30 +13908,6 @@
     },
     {
       "from": "strategic_games.best_response",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response"
-    },
-    {
-      "from": "strategic_games.dominance.dominated_strategy",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response"
-    },
-    {
-      "from": "strategic_games.best_response",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response"
-    },
-    {
-      "from": "strategic_games.dominance.dominated_strategy",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response"
-    },
-    {
-      "from": "zero_sum.core.support_complementarity",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response"
-    },
-    {
-      "from": "strategic_games.best_response",
       "to": "strategic_games.dominant_implies_nash"
     },
     {
@@ -13395,40 +13951,12 @@
       "to": "strategic_games.equilibrium.common_knowledge_equilibrium_filtering"
     },
     {
-      "from": "fixed_point.kakutani_fixed_point",
-      "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists"
-    },
-    {
-      "from": "strategic_games.continuous.quasi_concave_game",
-      "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists"
-    },
-    {
-      "from": "strategic_games.nash_equilibrium",
-      "to": "strategic_games.equilibrium.compact_quasi_concave_nash_exists"
-    },
-    {
       "from": "strategic_games.best_response",
       "to": "strategic_games.equilibrium.epsilon_equilibrium"
     },
     {
       "from": "strategic_games.equilibrium.mixed_nash_equilibrium",
       "to": "strategic_games.equilibrium.finite_nash_computation_examples"
-    },
-    {
-      "from": "strategic_games.continuous.smooth_game",
-      "to": "strategic_games.equilibrium.first_order_nash_condition"
-    },
-    {
-      "from": "strategic_games.nash_equilibrium",
-      "to": "strategic_games.equilibrium.first_order_nash_condition"
-    },
-    {
-      "from": "strategic_games.core.mixed_extension",
-      "to": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous"
-    },
-    {
-      "from": "strategic_games.equilibrium.compact_quasi_concave_nash_exists",
-      "to": "strategic_games.equilibrium.mixed_equilibrium_compact_continuous"
     },
     {
       "from": "strategic_games.core.mixed_extension",
@@ -13755,22 +14283,6 @@
       "to": "strategic_games.refinements.strict_equilibrium_is_proper"
     },
     {
-      "from": "strategic_games.repeated.stochastic_game",
-      "to": "strategic_games.repeated.big_match_uniform_value"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "strategic_games.repeated.big_match_uniform_value"
-    },
-    {
-      "from": "strategic_games.repeated.incomplete_information",
-      "to": "strategic_games.repeated.cav_u_theorem"
-    },
-    {
-      "from": "zero_sum.core.value",
-      "to": "strategic_games.repeated.cav_u_theorem"
-    },
-    {
       "from": "strategic_games.repeated.discounted_game",
       "to": "strategic_games.repeated.discounted_folk_theorem"
     },
@@ -13813,10 +14325,6 @@
     {
       "from": "strategic_games.strategic_game",
       "to": "strategic_games.repeated.standard_repeated_game"
-    },
-    {
-      "from": "strategic_games.strategic_game",
-      "to": "strategic_games.repeated.stochastic_game"
     },
     {
       "from": "strategic_games.repeated.standard_repeated_game",
@@ -13927,8 +14435,52 @@
       "to": "utility.vnm_axioms"
     },
     {
+      "from": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "to": "zero_sum.applications.markov_stationary_as_zero_sum_value"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.applications.markov_stationary_as_zero_sum_value"
+    },
+    {
       "from": "zero_sum.minimax.loomis_theorem",
       "to": "zero_sum.applications.perron_frobenius_positive_matrix"
+    },
+    {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.applications.stochastic_matrix_invariant_distribution"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.applications.stochastic_matrix_invariant_distribution"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.applications.stochastic_matrix_invariant_distribution"
+    },
+    {
+      "from": "strategic_games.best_response",
+      "to": "zero_sum.applications.strict_dominance_never_best_response"
+    },
+    {
+      "from": "strategic_games.dominance.dominated_strategy",
+      "to": "zero_sum.applications.strict_dominance_never_best_response"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.applications.strict_dominance_never_best_response"
+    },
+    {
+      "from": "strategic_games.best_response",
+      "to": "zero_sum.applications.weak_dominance_never_best_response"
+    },
+    {
+      "from": "strategic_games.dominance.dominated_strategy",
+      "to": "zero_sum.applications.weak_dominance_never_best_response"
+    },
+    {
+      "from": "zero_sum.core.support_complementarity",
+      "to": "zero_sum.applications.weak_dominance_never_best_response"
     },
     {
       "from": "zero_sum.continuous.general_mixed_strategy_space",
@@ -14175,6 +14727,46 @@
       "to": "zero_sum.lam_mu_existence"
     },
     {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
+    },
+    {
+      "from": "zero_sum.lp.player_1_lp",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
+    },
+    {
+      "from": "zero_sum.lp.player_2_lp",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy"
+    },
+    {
+      "from": "zero_sum.core.mixed_strategy_simplex",
+      "to": "zero_sum.lp.player_1_lp"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.lp.player_1_lp"
+    },
+    {
+      "from": "zero_sum.core.mixed_strategy_simplex",
+      "to": "zero_sum.lp.player_2_lp"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.lp.player_2_lp"
+    },
+    {
+      "from": "zero_sum.lp.player_1_lp",
+      "to": "zero_sum.lp.player_2_lp"
+    },
+    {
       "from": "core.linear_programming.strong_duality",
       "to": "zero_sum.lp.zero_sum_lp_bridge"
     },
@@ -14225,6 +14817,14 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.common_guarantee_value"
+    },
+    {
+      "from": "zero_sum.core.mixed_strategy_simplex",
+      "to": "zero_sum.minimax.kakutani_minimax_proof"
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "zero_sum.minimax.kakutani_minimax_proof"
     },
     {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
@@ -14333,18 +14933,6 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ordered_field_minimax"
-    },
-    {
-      "from": "zero_sum.core.optimal_strategy_sets",
-      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution"
     },
     {
       "from": "core.linear_programming.strong_complementarity",

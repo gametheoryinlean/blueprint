@@ -9,8 +9,10 @@
   },
   "counts": {
     "internal_nodes": 5,
+    "inlined_nodes": 0,
     "descendant_nodes": 5,
     "child_topics": 0,
+    "inlined_child_topics": 0,
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -89,14 +91,14 @@
       "title": "Strategic Games.Continuous",
       "href": "strategic_games/continuous/index.html",
       "role": "dependent",
-      "node_count": 13
+      "node_count": 16
     },
     {
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependent",
-      "node_count": 14
+      "node_count": 11
     },
     {
       "id": "strategic_games.refinements",
@@ -122,6 +124,13 @@
       "count": 1
     },
     {
+      "from": "fixed_point.kakutani_fixed_point",
+      "to": "topic:strategic_games.continuous",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.continuous",
+      "count": 1
+    },
+    {
       "from": "fixed_point.brouwer_compact_convex",
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
@@ -133,7 +142,7 @@
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
-      "count": 2
+      "count": 1
     },
     {
       "from": "fixed_point.kakutani_fixed_point",
@@ -187,5 +196,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

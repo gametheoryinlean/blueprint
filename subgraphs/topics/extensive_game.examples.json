@@ -9,15 +9,17 @@
   },
   "counts": {
     "internal_nodes": 6,
+    "inlined_nodes": 0,
     "descendant_nodes": 6,
     "child_topics": 0,
+    "inlined_child_topics": 0,
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 7,
+    "boundary_topics": 6,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 14,
-    "visible_nodes_with_selected_proof_plans": 14
+    "visible_nodes_without_proof_plans": 13,
+    "visible_nodes_with_selected_proof_plans": 13
   },
   "nodes": [
     {
@@ -76,35 +78,28 @@
       "title": "Extensive Game.Core",
       "href": "extensive_game/core/index.html",
       "role": "dependency",
-      "node_count": 7
-    },
-    {
-      "id": "extensive_game.equilibrium",
-      "title": "Extensive Game.Equilibrium",
-      "href": "extensive_game/equilibrium/index.html",
-      "role": "dependency",
-      "node_count": 17
+      "node_count": 4
     },
     {
       "id": "extensive_game.imperfect_information",
       "title": "Extensive Game.Imperfect Information",
       "href": "extensive_game/imperfect_information/index.html",
       "role": "dependency",
-      "node_count": 8
+      "node_count": 24
     },
     {
       "id": "extensive_game.normal_form",
       "title": "Extensive Game.Normal Form",
       "href": "extensive_game/normal_form/index.html",
       "role": "dependency",
-      "node_count": 4
+      "node_count": 6
     },
     {
       "id": "extensive_game.perfect_information",
       "title": "Extensive Game.Perfect Information",
       "href": "extensive_game/perfect_information/index.html",
       "role": "dependency",
-      "node_count": 9
+      "node_count": 11
     },
     {
       "id": "strategic_games.refinements",
@@ -118,17 +113,10 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependency",
-      "node_count": 86
+      "node_count": 91
     }
   ],
   "boundary_edges": [
-    {
-      "from": "topic:extensive_game.core",
-      "to": "extensive_game.examples.chomp_strategy_stealing",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
-      "count": 1
-    },
     {
       "from": "topic:extensive_game.core",
       "to": "extensive_game.examples.entrant_incomplete_information_value_example",
@@ -144,17 +132,10 @@
       "count": 1
     },
     {
-      "from": "topic:extensive_game.equilibrium",
+      "from": "topic:extensive_game.imperfect_information",
       "to": "extensive_game.examples.backward_forward_induction_incompatibility",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.equilibrium",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.equilibrium",
-      "to": "extensive_game.examples.normal_vs_extensive_perfection_difference",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.equilibrium",
+      "topic": "extensive_game.imperfect_information",
       "count": 1
     },
     {
@@ -176,7 +157,7 @@
       "to": "extensive_game.examples.normal_vs_extensive_perfection_difference",
       "kind": "boundary_dependency",
       "topic": "extensive_game.normal_form",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:extensive_game.perfect_information",
@@ -190,7 +171,7 @@
       "to": "extensive_game.examples.chomp_strategy_stealing",
       "kind": "boundary_dependency",
       "topic": "extensive_game.perfect_information",
-      "count": 1
+      "count": 2
     },
     {
       "from": "topic:extensive_game.perfect_information",
@@ -294,5 +275,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

@@ -4,20 +4,22 @@
     "title": "Strategic Games.Repeated",
     "href": "strategic_games/repeated/index.html",
     "parent": "strategic_games",
-    "node_count": 12,
-    "descendant_node_count": 12
+    "node_count": 11,
+    "descendant_node_count": 11
   },
   "counts": {
-    "internal_nodes": 12,
-    "descendant_nodes": 12,
+    "internal_nodes": 11,
+    "inlined_nodes": 0,
+    "descendant_nodes": 11,
     "child_topics": 0,
-    "non_proof_plan_nodes": 12,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 18,
-    "visible_nodes_with_selected_proof_plans": 18
+    "visible_nodes_without_proof_plans": 16,
+    "visible_nodes_with_selected_proof_plans": 16
   },
   "nodes": [
     {
@@ -83,14 +85,6 @@
       "status": "staged",
       "href": "strategic_games/repeated/strategic_games_repeated_standard_repeated_game.html",
       "payload": "node_payloads/strategic_games_repeated_standard_repeated_game.json"
-    },
-    {
-      "id": "strategic_games.repeated.stochastic_game",
-      "title": "Stochastic Game",
-      "kind": "definition",
-      "status": "staged",
-      "href": "strategic_games/repeated/strategic_games_repeated_stochastic_game.html",
-      "payload": "node_payloads/strategic_games_repeated_stochastic_game.json"
     },
     {
       "id": "strategic_games.repeated.strategy",
@@ -197,7 +191,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "strategic_games.bayesian",
@@ -212,26 +206,12 @@
       "href": "strategic_games/payoff_geometry/index.html",
       "role": "dependency",
       "node_count": 5
-    },
-    {
-      "id": "zero_sum.repeated",
-      "title": "Zero Sum.Repeated",
-      "href": "zero_sum/repeated/index.html",
-      "role": "dependent",
-      "node_count": 2
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:strategic_games",
       "to": "strategic_games.repeated.standard_repeated_game",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.repeated.stochastic_game",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
       "count": 1
@@ -255,20 +235,6 @@
       "to": "topic:extensive_game.repeated",
       "kind": "boundary_dependent",
       "topic": "extensive_game.repeated",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.repeated.incomplete_information",
-      "to": "topic:zero_sum.repeated",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.repeated",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.repeated.stochastic_game",
-      "to": "topic:zero_sum.repeated",
-      "kind": "boundary_dependent",
-      "topic": "zero_sum.repeated",
       "count": 1
     }
   ],
@@ -307,7 +273,7 @@
       "id": "repeated-game",
       "title": "repeated-game",
       "href": "keywords/repeated-game.html",
-      "count": 12
+      "count": 11
     },
     {
       "id": "signals",
@@ -316,16 +282,10 @@
       "count": 1
     },
     {
-      "id": "stochastic-game",
-      "title": "stochastic-game",
-      "href": "keywords/stochastic-game.html",
-      "count": 1
-    },
-    {
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 12
+      "count": 11
     },
     {
       "id": "strategy",
@@ -345,5 +305,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

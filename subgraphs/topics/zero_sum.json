@@ -4,37 +4,31 @@
     "title": "Zero Sum",
     "href": "zero_sum/index.html",
     "parent": null,
-    "node_count": 86,
-    "descendant_node_count": 86
+    "node_count": 89,
+    "descendant_node_count": 91
   },
   "counts": {
-    "internal_nodes": 86,
-    "descendant_nodes": 86,
-    "child_topics": 9,
-    "non_proof_plan_nodes": 77,
-    "proof_plan_nodes": 9,
+    "internal_nodes": 89,
+    "inlined_nodes": 2,
+    "descendant_nodes": 91,
+    "child_topics": 7,
+    "inlined_child_topics": 1,
+    "non_proof_plan_nodes": 81,
+    "proof_plan_nodes": 10,
     "selected_proof_plan_nodes": 3,
-    "boundary_topics": 8,
+    "boundary_topics": 9,
     "proof_plan_attachments": 9,
-    "visible_nodes_without_proof_plans": 86,
-    "visible_nodes_with_selected_proof_plans": 89
+    "visible_nodes_without_proof_plans": 91,
+    "visible_nodes_with_selected_proof_plans": 94
   },
   "nodes": [
     {
-      "id": "strategic_games.repeated.big_match_uniform_value",
-      "title": "Big Match Uniform Value",
-      "kind": "theorem",
+      "id": "zero_sum.applications.markov_stationary_as_zero_sum_value",
+      "title": "Markov Stationary Distribution as Zero-Sum Game Value",
+      "kind": "lemma",
       "status": "staged",
-      "href": "zero_sum/repeated/strategic_games_repeated_big_match_uniform_value.html",
-      "payload": "node_payloads/strategic_games_repeated_big_match_uniform_value.json"
-    },
-    {
-      "id": "strategic_games.repeated.cav_u_theorem",
-      "title": "Cav U Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "zero_sum/repeated/strategic_games_repeated_cav_u_theorem.html",
-      "payload": "node_payloads/strategic_games_repeated_cav_u_theorem.json"
+      "href": "zero_sum/zero_sum_applications_markov_stationary_as_zero_sum_value.html",
+      "payload": "node_payloads/zero_sum_applications_markov_stationary_as_zero_sum_value.json"
     },
     {
       "id": "zero_sum.applications.perron_frobenius_positive_matrix",
@@ -43,6 +37,14 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_applications_perron_frobenius_positive_matrix.html",
       "payload": "node_payloads/zero_sum_applications_perron_frobenius_positive_matrix.json"
+    },
+    {
+      "id": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "title": "Stochastic Matrix Has An Invariant Distribution",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "zero_sum/zero_sum_applications_stochastic_matrix_invariant_distribution.html",
+      "payload": "node_payloads/zero_sum_applications_stochastic_matrix_invariant_distribution.json"
     },
     {
       "id": "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
@@ -415,6 +417,30 @@
       "payload": "node_payloads/zero_sum_lam_mu_existence.json"
     },
     {
+      "id": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "title": "LP Optimum ↔ Game-Theoretic Optimal Strategy",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_lp_lp_optimal_iff_optimal_strategy.html",
+      "payload": "node_payloads/zero_sum_lp_lp_optimal_iff_optimal_strategy.json"
+    },
+    {
+      "id": "zero_sum.lp.player_1_lp",
+      "title": "Player-1 LP Formulation of a Matrix Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_lp_player_1_lp.html",
+      "payload": "node_payloads/zero_sum_lp_player_1_lp.json"
+    },
+    {
+      "id": "zero_sum.lp.player_2_lp",
+      "title": "Player-2 LP Formulation of a Matrix Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_lp_player_2_lp.html",
+      "payload": "node_payloads/zero_sum_lp_player_2_lp.json"
+    },
+    {
       "id": "zero_sum.lp.zero_sum_lp_bridge",
       "title": "Zero-Sum Linear Programming Bridge",
       "kind": "proof-plan",
@@ -471,6 +497,16 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_minimax_common_guarantee_value.html",
       "payload": "node_payloads/zero_sum_minimax_common_guarantee_value.json"
+    },
+    {
+      "id": "zero_sum.minimax.kakutani_minimax_proof",
+      "title": "Kakutani Fixed-Point Proof of the Minimax Theorem",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_minimax_kakutani_minimax_proof.html",
+      "payload": "node_payloads/zero_sum_minimax_kakutani_minimax_proof.json",
+      "target": "zero_sum.minimax.von_neumann_minimax",
+      "plan_status": "candidate"
     },
     {
       "id": "zero_sum.minimax.loomis_induction_proof",
@@ -585,14 +621,6 @@
       "status": "admitted",
       "href": "zero_sum/zero_sum_minimax_ordered_field_minimax.html",
       "payload": "node_payloads/zero_sum_minimax_ordered_field_minimax.json"
-    },
-    {
-      "id": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
-      "title": "Stochastic Matrix Has An Invariant Distribution",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "zero_sum/zero_sum_minimax_stochastic_matrix_invariant_distribution.html",
-      "payload": "node_payloads/zero_sum_minimax_stochastic_matrix_invariant_distribution.json"
     },
     {
       "id": "zero_sum.minimax.strong_complementarity",
@@ -725,22 +753,63 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_zero_sum_payoff_negation.html",
       "payload": "node_payloads/zero_sum_zero_sum_payoff_negation.json"
+    },
+    {
+      "id": "zero_sum.applications.strict_dominance_never_best_response",
+      "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "zero_sum/applications/zero_sum_applications_strict_dominance_never_best_response.html",
+      "payload": "node_payloads/zero_sum_applications_strict_dominance_never_best_response.json"
+    },
+    {
+      "id": "zero_sum.applications.weak_dominance_never_best_response",
+      "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "zero_sum/applications/zero_sum_applications_weak_dominance_never_best_response.html",
+      "payload": "node_payloads/zero_sum_applications_weak_dominance_never_best_response.json"
     }
   ],
   "edges": [
     {
-      "from": "zero_sum.core.value",
-      "to": "strategic_games.repeated.big_match_uniform_value",
+      "from": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "to": "zero_sum.applications.markov_stationary_as_zero_sum_value",
       "kind": "uses"
     },
     {
       "from": "zero_sum.core.value",
-      "to": "strategic_games.repeated.cav_u_theorem",
+      "to": "zero_sum.applications.markov_stationary_as_zero_sum_value",
       "kind": "uses"
     },
     {
       "from": "zero_sum.minimax.loomis_theorem",
       "to": "zero_sum.applications.perron_frobenius_positive_matrix",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.matrix_game_nash_equilibrium",
+      "to": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.applications.stochastic_matrix_invariant_distribution",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.von_neumann_minimax",
+      "to": "zero_sum.applications.strict_dominance_never_best_response",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.support_complementarity",
+      "to": "zero_sum.applications.weak_dominance_never_best_response",
       "kind": "uses"
     },
     {
@@ -1034,6 +1103,56 @@
       "kind": "uses"
     },
     {
+      "from": "zero_sum.core.optimal_strategy_sets",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lp.player_1_lp",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lp.player_2_lp",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.mixed_strategy_simplex",
+      "to": "zero_sum.lp.player_1_lp",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.lp.player_1_lp",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.mixed_strategy_simplex",
+      "to": "zero_sum.lp.player_2_lp",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.value",
+      "to": "zero_sum.lp.player_2_lp",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lp.player_1_lp",
+      "to": "zero_sum.lp.player_2_lp",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.zero_sum_game",
       "to": "zero_sum.matrix_game",
       "kind": "uses"
@@ -1087,6 +1206,16 @@
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.common_guarantee_value",
       "kind": "uses"
+    },
+    {
+      "from": "zero_sum.core.mixed_strategy_simplex",
+      "to": "zero_sum.minimax.kakutani_minimax_proof",
+      "kind": "proof_plan_uses"
+    },
+    {
+      "from": "zero_sum.core.saddle_point",
+      "to": "zero_sum.minimax.kakutani_minimax_proof",
+      "kind": "proof_plan_uses"
     },
     {
       "from": "zero_sum.minimax.loomis_induction_proof.base_case",
@@ -1196,21 +1325,6 @@
     {
       "from": "zero_sum.von_neumann_minimax",
       "to": "zero_sum.minimax.ordered_field_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.core.optimal_strategy_sets",
-      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.matrix_game_nash_equilibrium",
-      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
-      "kind": "uses"
-    },
-    {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "zero_sum.minimax.stochastic_matrix_invariant_distribution",
       "kind": "uses"
     },
     {
@@ -1326,14 +1440,28 @@
       "title": "Extensive Game.Perfect Information",
       "href": "extensive_game/perfect_information/index.html",
       "role": "dependent",
-      "node_count": 9
+      "node_count": 11
+    },
+    {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "href": "repeated_game/index.html",
+      "role": "dependent",
+      "node_count": 5
+    },
+    {
+      "id": "stochastic_game",
+      "title": "Stochastic Game",
+      "href": "stochastic_game/index.html",
+      "role": "dependent",
+      "node_count": 10
     },
     {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "strategic_games.core",
@@ -1346,15 +1474,8 @@
       "id": "strategic_games.dominance",
       "title": "Strategic Games.Dominance",
       "href": "strategic_games/dominance/index.html",
-      "role": "dependent",
-      "node_count": 9
-    },
-    {
-      "id": "strategic_games.repeated",
-      "title": "Strategic Games.Repeated",
-      "href": "strategic_games/repeated/index.html",
       "role": "dependency",
-      "node_count": 12
+      "node_count": 7
     }
   ],
   "boundary_edges": [
@@ -1395,6 +1516,20 @@
     },
     {
       "from": "topic:strategic_games",
+      "to": "zero_sum.applications.strict_dominance_never_best_response",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "zero_sum.applications.weak_dominance_never_best_response",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
       "to": "zero_sum.zero_sum_game",
       "kind": "boundary_dependency",
       "topic": "strategic_games",
@@ -1415,17 +1550,17 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games.repeated",
-      "to": "strategic_games.repeated.big_match_uniform_value",
+      "from": "topic:strategic_games.dominance",
+      "to": "zero_sum.applications.strict_dominance_never_best_response",
       "kind": "boundary_dependency",
-      "topic": "strategic_games.repeated",
+      "topic": "strategic_games.dominance",
       "count": 1
     },
     {
-      "from": "topic:strategic_games.repeated",
-      "to": "strategic_games.repeated.cav_u_theorem",
+      "from": "topic:strategic_games.dominance",
+      "to": "zero_sum.applications.weak_dominance_never_best_response",
       "kind": "boundary_dependency",
-      "topic": "strategic_games.repeated",
+      "topic": "strategic_games.dominance",
       "count": 1
     },
     {
@@ -1464,17 +1599,24 @@
       "count": 1
     },
     {
-      "from": "zero_sum.core.support_complementarity",
-      "to": "topic:strategic_games.dominance",
+      "from": "zero_sum.core.value",
+      "to": "topic:repeated_game",
       "kind": "boundary_dependent",
-      "topic": "strategic_games.dominance",
+      "topic": "repeated_game",
       "count": 1
     },
     {
-      "from": "zero_sum.von_neumann_minimax",
-      "to": "topic:strategic_games.dominance",
+      "from": "zero_sum.core.value",
+      "to": "topic:stochastic_game",
       "kind": "boundary_dependent",
-      "topic": "strategic_games.dominance",
+      "topic": "stochastic_game",
+      "count": 3
+    },
+    {
+      "from": "zero_sum.operators.value_operator_nonexpansive_general",
+      "to": "topic:stochastic_game",
+      "kind": "boundary_dependent",
+      "topic": "stochastic_game",
       "count": 1
     }
   ],
@@ -1486,6 +1628,12 @@
       "count": 2
     },
     {
+      "id": "applications",
+      "title": "applications",
+      "href": "keywords/applications.html",
+      "count": 1
+    },
+    {
       "id": "approachability",
       "title": "approachability",
       "href": "keywords/approachability.html",
@@ -1495,6 +1643,18 @@
       "id": "base-case",
       "title": "base-case",
       "href": "keywords/base-case.html",
+      "count": 1
+    },
+    {
+      "id": "best-response",
+      "title": "best-response",
+      "href": "keywords/best-response.html",
+      "count": 2
+    },
+    {
+      "id": "bijection",
+      "title": "bijection",
+      "href": "keywords/bijection.html",
       "count": 1
     },
     {
@@ -1558,6 +1718,12 @@
       "count": 2
     },
     {
+      "id": "dominance",
+      "title": "dominance",
+      "href": "keywords/dominance.html",
+      "count": 2
+    },
+    {
       "id": "duel",
       "title": "duel",
       "href": "keywords/duel.html",
@@ -1606,6 +1772,12 @@
       "count": 1
     },
     {
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 1
+    },
+    {
       "id": "foundational",
       "title": "foundational",
       "href": "keywords/foundational.html",
@@ -1615,12 +1787,6 @@
       "id": "guarantee",
       "title": "guarantee",
       "href": "keywords/guarantee.html",
-      "count": 1
-    },
-    {
-      "id": "incomplete-information",
-      "title": "incomplete-information",
-      "href": "keywords/incomplete-information.html",
       "count": 1
     },
     {
@@ -1639,6 +1805,12 @@
       "id": "invariant-distribution",
       "title": "invariant-distribution",
       "href": "keywords/invariant-distribution.html",
+      "count": 1
+    },
+    {
+      "id": "kakutani",
+      "title": "kakutani",
+      "href": "keywords/kakutani.html",
       "count": 1
     },
     {
@@ -1663,13 +1835,31 @@
       "id": "linear-programming",
       "title": "linear-programming",
       "href": "keywords/linear-programming.html",
-      "count": 4
+      "count": 7
     },
     {
       "id": "loomis",
       "title": "loomis",
       "href": "keywords/loomis.html",
       "count": 9
+    },
+    {
+      "id": "lp-dual",
+      "title": "lp-dual",
+      "href": "keywords/lp-dual.html",
+      "count": 1
+    },
+    {
+      "id": "lp-primal",
+      "title": "lp-primal",
+      "href": "keywords/lp-primal.html",
+      "count": 1
+    },
+    {
+      "id": "markov",
+      "title": "markov",
+      "href": "keywords/markov.html",
+      "count": 1
     },
     {
       "id": "matrix-game",
@@ -1681,7 +1871,7 @@
       "id": "minimax",
       "title": "minimax",
       "href": "keywords/minimax.html",
-      "count": 19
+      "count": 20
     },
     {
       "id": "mixed-strategy",
@@ -1705,7 +1895,7 @@
       "id": "optimal-strategy",
       "title": "optimal-strategy",
       "href": "keywords/optimal-strategy.html",
-      "count": 6
+      "count": 7
     },
     {
       "id": "ordered-field",
@@ -1747,13 +1937,7 @@
       "id": "proof-plan",
       "title": "proof-plan",
       "href": "keywords/proof-plan.html",
-      "count": 7
-    },
-    {
-      "id": "repeated-game",
-      "title": "repeated-game",
-      "href": "keywords/repeated-game.html",
-      "count": 2
+      "count": 8
     },
     {
       "id": "robinson",
@@ -1792,9 +1976,9 @@
       "count": 1
     },
     {
-      "id": "stochastic-game",
-      "title": "stochastic-game",
-      "href": "keywords/stochastic-game.html",
+      "id": "stationary-distribution",
+      "title": "stationary-distribution",
+      "href": "keywords/stationary-distribution.html",
       "count": 1
     },
     {
@@ -1861,7 +2045,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 86
+      "count": 89
     }
   ],
   "proof_plan_attachments": [
@@ -1921,33 +2105,15 @@
     }
   ],
   "child_topics": [
-    "zero_sum.applications",
     "zero_sum.continuous",
     "zero_sum.core",
     "zero_sum.examples",
     "zero_sum.fictitious_play",
     "zero_sum.lp",
     "zero_sum.minimax",
-    "zero_sum.operators",
-    "zero_sum.repeated"
+    "zero_sum.operators"
   ],
   "child_topic_nodes": [
-    {
-      "id": "zero_sum.applications",
-      "title": "Zero Sum.Applications",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 1,
-      "direct_node_count": 1,
-      "kind_counts": {
-        "theorem": 1
-      },
-      "status_counts": {
-        "formalized": 1
-      },
-      "href": "zero_sum/applications/index.html",
-      "children": []
-    },
     {
       "id": "zero_sum.continuous",
       "title": "Zero Sum.Continuous",
@@ -2030,14 +2196,16 @@
       "title": "Zero Sum.Lp",
       "depth": 2,
       "parent": "zero_sum",
-      "node_count": 3,
-      "direct_node_count": 3,
+      "node_count": 6,
+      "direct_node_count": 6,
       "kind_counts": {
-        "proof-plan": 3
+        "definition": 2,
+        "proof-plan": 3,
+        "theorem": 1
       },
       "status_counts": {
         "admitted": 1,
-        "staged": 2
+        "staged": 5
       },
       "href": "zero_sum/lp/index.html",
       "children": []
@@ -2052,18 +2220,21 @@
       "kind_counts": {
         "definition": 1,
         "lemma": 7,
-        "proof-plan": 8,
+        "proof-plan": 9,
         "proposition": 1,
-        "theorem": 9
+        "theorem": 8
       },
       "status_counts": {
         "admitted": 2,
-        "formalized": 16,
+        "formalized": 15,
         "proved": 2,
-        "staged": 6
+        "staged": 7
       },
       "href": "zero_sum/minimax/index.html",
-      "children": []
+      "children": [
+        "zero_sum.minimax.proofs",
+        "zero_sum.minimax.structure"
+      ]
     },
     {
       "id": "zero_sum.operators",
@@ -2081,41 +2252,42 @@
       },
       "href": "zero_sum/operators/index.html",
       "children": []
-    },
-    {
-      "id": "zero_sum.repeated",
-      "title": "Zero Sum.Repeated",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "staged": 2
-      },
-      "href": "zero_sum/repeated/index.html",
-      "children": []
     }
   ],
   "child_topic_edges": [],
   "child_boundary_topics": [
     {
-      "id": "strategic_games.repeated",
-      "title": "Strategic Games.Repeated",
-      "href": "strategic_games/repeated/index.html",
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 12
+      "node_count": 128
+    },
+    {
+      "id": "strategic_games.dominance",
+      "title": "Strategic Games.Dominance",
+      "href": "strategic_games/dominance/index.html",
+      "role": "dependency",
+      "node_count": 7
     }
   ],
   "child_boundary_edges": [
     {
-      "from": "topic:strategic_games.repeated",
-      "to": "topic:zero_sum.repeated",
+      "from": "topic:strategic_games",
+      "to": "topic:zero_sum.applications",
       "kind": "boundary_dependency",
-      "topic": "strategic_games.repeated",
+      "topic": "strategic_games",
+      "count": 2
+    },
+    {
+      "from": "topic:strategic_games.dominance",
+      "to": "topic:zero_sum.applications",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.dominance",
       "count": 2
     }
+  ],
+  "inlined_child_topics": [
+    "zero_sum.applications"
   ]
 }

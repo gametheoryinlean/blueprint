@@ -4,20 +4,22 @@
     "title": "Zero Sum.Lp",
     "href": "zero_sum/lp/index.html",
     "parent": "zero_sum",
-    "node_count": 3,
-    "descendant_node_count": 3
+    "node_count": 6,
+    "descendant_node_count": 6
   },
   "counts": {
-    "internal_nodes": 3,
-    "descendant_nodes": 3,
+    "internal_nodes": 6,
+    "inlined_nodes": 0,
+    "descendant_nodes": 6,
     "child_topics": 0,
-    "non_proof_plan_nodes": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 3,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 0,
     "proof_plan_attachments": 3,
-    "visible_nodes_without_proof_plans": 1,
-    "visible_nodes_with_selected_proof_plans": 1
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
   },
   "nodes": [
     {
@@ -29,6 +31,30 @@
       "payload": "node_payloads/zero_sum_dantzig_proof_spine.json",
       "target": "zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
+    },
+    {
+      "id": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "title": "LP Optimum ↔ Game-Theoretic Optimal Strategy",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_lp_lp_optimal_iff_optimal_strategy.html",
+      "payload": "node_payloads/zero_sum_lp_lp_optimal_iff_optimal_strategy.json"
+    },
+    {
+      "id": "zero_sum.lp.player_1_lp",
+      "title": "Player-1 LP Formulation of a Matrix Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_lp_player_1_lp.html",
+      "payload": "node_payloads/zero_sum_lp_player_1_lp.json"
+    },
+    {
+      "id": "zero_sum.lp.player_2_lp",
+      "title": "Player-2 LP Formulation of a Matrix Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "zero_sum/zero_sum_lp_player_2_lp.html",
+      "payload": "node_payloads/zero_sum_lp_player_2_lp.json"
     },
     {
       "id": "zero_sum.lp.zero_sum_lp_bridge",
@@ -53,6 +79,21 @@
   ],
   "edges": [
     {
+      "from": "zero_sum.lp.player_1_lp",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lp.player_2_lp",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "zero_sum.lp.player_1_lp",
+      "to": "zero_sum.lp.player_2_lp",
+      "kind": "uses"
+    },
+    {
       "from": "zero_sum.dantzig_proof_spine",
       "to": "zero_sum.simplex_termination",
       "kind": "proof_plan_uses"
@@ -61,6 +102,12 @@
   "boundary_topics": [],
   "boundary_edges": [],
   "keywords": [
+    {
+      "id": "bijection",
+      "title": "bijection",
+      "href": "keywords/bijection.html",
+      "count": 1
+    },
     {
       "id": "dantzig",
       "title": "dantzig",
@@ -71,7 +118,19 @@
       "id": "linear-programming",
       "title": "linear-programming",
       "href": "keywords/linear-programming.html",
-      "count": 2
+      "count": 5
+    },
+    {
+      "id": "lp-dual",
+      "title": "lp-dual",
+      "href": "keywords/lp-dual.html",
+      "count": 1
+    },
+    {
+      "id": "lp-primal",
+      "title": "lp-primal",
+      "href": "keywords/lp-primal.html",
+      "count": 1
     },
     {
       "id": "minimax",
@@ -89,6 +148,12 @@
       "id": "open-issue",
       "title": "open-issue",
       "href": "keywords/open-issue.html",
+      "count": 1
+    },
+    {
+      "id": "optimal-strategy",
+      "title": "optimal-strategy",
+      "href": "keywords/optimal-strategy.html",
       "count": 1
     },
     {
@@ -119,7 +184,7 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 3
+      "count": 6
     }
   ],
   "proof_plan_attachments": [
@@ -146,5 +211,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

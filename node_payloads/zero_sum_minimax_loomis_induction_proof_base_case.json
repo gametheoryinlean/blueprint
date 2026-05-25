@@ -7,7 +7,8 @@
   "primary_topic": "zero_sum",
   "topics": [
     "zero_sum",
-    "zero_sum.minimax"
+    "zero_sum.minimax",
+    "zero_sum.minimax.proofs"
   ],
   "body_html": "<h1>Base Case of Loomis Induction</h1>\n<p>The base case of the induction in\n<a class=\"node-ref\" data-node-id=\"zero_sum.minimax.loomis_induction_proof\" href=\"minimax/zero_sum_minimax_loomis_induction_proof.html\">Direct Induction Proof Of Loomis Theorem</a>: when $|I| + |J| = 2$ the\nmatrices are $1 \\times 1$ and the Loomis values reduce to a single ratio.</p>\n<h2>Statement</h2>\n<p>Let $I$ and $J$ be finite nonempty index types with $|I| + |J| = 2$, so\n$|I| = |J| = 1$ with single elements $i_0 \\in I$ and $j_0 \\in J$. Let\n$A, B \\colon I \\times J \\to \\mathbb{R}$ with $B_{i_0, j_0} &gt; 0$. Then\n$$\n  \\lambda_0 \\;=\\; \\mu_0 \\;=\\; \\frac{A_{i_0, j_0}}{B_{i_0, j_0}}.\n$$</p>",
   "proof_html": "<p>Both simplices are singletons: $\\Delta(I) = \\{e_{i_0}\\}$ and\n$\\Delta(J) = \\{e_{j_0}\\}$, where $e_{i_0}$, $e_{j_0}$ are the unique unit\nmass strategies. For the unique $x = e_{i_0}$ and $j = j_0$ we have\n$(xA)_{j_0} = A_{i_0, j_0}$ and $(xB)_{j_0} = B_{i_0, j_0}$, so\n$$\n  \\lambda_\\mathrm{aux}(e_{i_0}) = \\frac{A_{i_0, j_0}}{B_{i_0, j_0}}.\n$$\nTaking the supremum over the singleton $\\Delta(I)$ gives $\\lambda_0 = A_{i_0,\nj_0} / B_{i_0, j_0}$. The argument for $\\mu_0$ is identical. $\\square$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.8, Exercise 1] Laraki, Renault, and Sorin, <em>Mathematical\n  Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>.\n  Base case of the Loomis induction.</li>\n</ul>",
@@ -31,9 +32,9 @@
       "qualified_name": "LoomisGeneral.loomis_value_IJ_2",
       "module": "EconCSLib.StrategicGame.LoomisGeneral",
       "repository_title": "EconCSLib",
-      "revision": "974ab8bb5214198f59ffe35f874bde4ea6aea1b3",
-      "short_revision": "974ab8b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/974ab8bb5214198f59ffe35f874bde4ea6aea1b3/EconCSLib/StrategicGame/LoomisGeneral.lean#L299",
+      "revision": "609636fb2ace3eb6e9bb37e510880c2ceb96f5e2",
+      "short_revision": "609636f",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/609636fb2ace3eb6e9bb37e510880c2ceb96f5e2/EconCSLib/StrategicGame/LoomisGeneral.lean#L299",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

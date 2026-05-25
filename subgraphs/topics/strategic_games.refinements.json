@@ -9,15 +9,17 @@
   },
   "counts": {
     "internal_nodes": 15,
+    "inlined_nodes": 0,
     "descendant_nodes": 15,
     "child_topics": 0,
+    "inlined_child_topics": 0,
     "non_proof_plan_nodes": 15,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 8,
+    "boundary_topics": 9,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 24,
-    "visible_nodes_with_selected_proof_plans": 24
+    "visible_nodes_without_proof_plans": 25,
+    "visible_nodes_with_selected_proof_plans": 25
   },
   "nodes": [
     {
@@ -235,16 +237,23 @@
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.equilibrium",
-      "title": "Extensive Game.Equilibrium",
-      "href": "extensive_game/equilibrium/index.html",
-      "role": "dependent",
-      "node_count": 17
-    },
-    {
       "id": "extensive_game.examples",
       "title": "Extensive Game.Examples",
       "href": "extensive_game/examples/index.html",
+      "role": "dependent",
+      "node_count": 6
+    },
+    {
+      "id": "extensive_game.imperfect_information",
+      "title": "Extensive Game.Imperfect Information",
+      "href": "extensive_game/imperfect_information/index.html",
+      "role": "dependent",
+      "node_count": 24
+    },
+    {
+      "id": "extensive_game.normal_form",
+      "title": "Extensive Game.Normal Form",
+      "href": "extensive_game/normal_form/index.html",
       "role": "dependent",
       "node_count": 6
     },
@@ -260,14 +269,14 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "strategic_games.continuous",
       "title": "Strategic Games.Continuous",
       "href": "strategic_games/continuous/index.html",
       "role": "dependency",
-      "node_count": 13
+      "node_count": 16
     },
     {
       "id": "strategic_games.core",
@@ -281,14 +290,14 @@
       "title": "Strategic Games.Dominance",
       "href": "strategic_games/dominance/index.html",
       "role": "dependency",
-      "node_count": 9
+      "node_count": 7
     },
     {
       "id": "strategic_games.equilibrium",
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency",
-      "node_count": 14
+      "node_count": 11
     }
   ],
   "boundary_edges": [
@@ -385,23 +394,23 @@
     },
     {
       "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "topic:extensive_game.equilibrium",
+      "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.equilibrium",
+      "topic": "extensive_game.examples",
       "count": 1
     },
     {
       "from": "strategic_games.refinements.proper_equilibrium",
-      "to": "topic:extensive_game.equilibrium",
+      "to": "topic:extensive_game.imperfect_information",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.equilibrium",
+      "topic": "extensive_game.imperfect_information",
       "count": 2
     },
     {
       "from": "strategic_games.refinements.perfect_equilibrium",
-      "to": "topic:extensive_game.examples",
+      "to": "topic:extensive_game.normal_form",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.examples",
+      "topic": "extensive_game.normal_form",
       "count": 1
     }
   ],
@@ -478,5 +487,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

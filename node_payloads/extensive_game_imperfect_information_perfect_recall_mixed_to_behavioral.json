@@ -1,0 +1,38 @@
+{
+  "id": "extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
+  "title": "Kuhn Mixed-To-Behavioral Equivalence",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_perfect_recall_mixed_to_behavioral.html",
+  "primary_topic": "extensive_game.imperfect_information",
+  "topics": [
+    "extensive_game.imperfect_information"
+  ],
+  "body_html": "<h1>Kuhn Mixed-To-Behavioral Equivalence</h1>\n<p>If an extensive game has perfect recall for player $i$, then for every mixed\nstrategy $\\sigma_i$ there exists a behavioral strategy $\\beta_i$ such that, against\nevery general strategy of the other players, the induced probability distributions\non terminal nodes coincide.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>For each information set reached with positive probability under $\\sigma_i$, define\nthe behavioral probability of an action by conditioning $\\sigma_i$ on pure\nstrategies that reach the information set and choose that action. Perfect recall\nmakes the probabilities along a reached history telescope: reaching the next\ninformation set is determined by the previous remembered action. Thus the\nbehavioral strategy reproduces the same terminal probabilities as the original\nmixed strategy.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 6.3.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. With perfect recall, every mixed strategy is outcome equivalent to a behavioral strategy.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "extensive_game.imperfect_information.perfect_recall",
+      "title": "Perfect Recall",
+      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_perfect_recall.html"
+    },
+    {
+      "id": "extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+      "title": "Mixed Behavioral And General Strategies",
+      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_mixed_behavioral_general_strategies.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "extensive_game.imperfect_information.behavioral_equilibrium_exists",
+      "title": "Existence Of Behavioral Equilibrium",
+      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_behavioral_equilibrium_exists.html"
+    },
+    {
+      "id": "extensive_game.imperfect_information.proper_equilibrium_induces_sequential",
+      "title": "Proper Equilibrium Induces Sequential Equilibrium",
+      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_proper_equilibrium_induces_sequential.html"
+    }
+  ],
+  "lean_refs": []
+}

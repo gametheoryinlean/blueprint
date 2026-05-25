@@ -4,20 +4,22 @@
     "title": "Strategic Games.Dominance",
     "href": "strategic_games/dominance/index.html",
     "parent": "strategic_games",
-    "node_count": 9,
-    "descendant_node_count": 9
+    "node_count": 7,
+    "descendant_node_count": 7
   },
   "counts": {
-    "internal_nodes": 9,
-    "descendant_nodes": 9,
+    "internal_nodes": 7,
+    "inlined_nodes": 0,
+    "descendant_nodes": 7,
     "child_topics": 0,
-    "non_proof_plan_nodes": 9,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 14,
-    "visible_nodes_with_selected_proof_plans": 14
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
   },
   "nodes": [
     {
@@ -75,22 +77,6 @@
       "status": "staged",
       "href": "strategic_games/dominance/strategic_games_dominance_solvable_unique_nash.html",
       "payload": "node_payloads/strategic_games_dominance_solvable_unique_nash.json"
-    },
-    {
-      "id": "strategic_games.dominance.strict_dominance_never_best_response",
-      "title": "Strict Domination And Never Best Response",
-      "kind": "proposition",
-      "status": "staged",
-      "href": "strategic_games/dominance/strategic_games_dominance_strict_dominance_never_best_response.html",
-      "payload": "node_payloads/strategic_games_dominance_strict_dominance_never_best_response.json"
-    },
-    {
-      "id": "strategic_games.dominance.weak_dominance_never_best_response",
-      "title": "Weak Domination And Completely Mixed Tests",
-      "kind": "proposition",
-      "status": "staged",
-      "href": "strategic_games/dominance/strategic_games_dominance_weak_dominance_never_best_response.html",
-      "payload": "node_payloads/strategic_games_dominance_weak_dominance_never_best_response.json"
     }
   ],
   "edges": [
@@ -123,32 +109,22 @@
       "from": "strategic_games.dominance.nash_is_rationalizable",
       "to": "strategic_games.dominance.solvable_unique_nash",
       "kind": "uses"
-    },
-    {
-      "from": "strategic_games.dominance.dominated_strategy",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response",
-      "kind": "uses"
-    },
-    {
-      "from": "strategic_games.dominance.dominated_strategy",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response",
-      "kind": "uses"
     }
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.equilibrium",
-      "title": "Extensive Game.Equilibrium",
-      "href": "extensive_game/equilibrium/index.html",
+      "id": "extensive_game.imperfect_information",
+      "title": "Extensive Game.Imperfect Information",
+      "href": "extensive_game/imperfect_information/index.html",
       "role": "dependent",
-      "node_count": 17
+      "node_count": 24
     },
     {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "strategic_games.refinements",
@@ -158,11 +134,11 @@
       "node_count": 15
     },
     {
-      "id": "zero_sum",
-      "title": "Zero Sum",
-      "href": "zero_sum/index.html",
-      "role": "dependency",
-      "node_count": 86
+      "id": "zero_sum.applications",
+      "title": "Zero Sum.Applications",
+      "href": "zero_sum/applications/index.html",
+      "role": "dependent",
+      "node_count": 5
     }
   ],
   "boundary_edges": [
@@ -188,38 +164,10 @@
       "count": 1
     },
     {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:strategic_games",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "strategic_games",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "strategic_games.dominance.strict_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:zero_sum",
-      "to": "strategic_games.dominance.weak_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "zero_sum",
-      "count": 1
-    },
-    {
       "from": "strategic_games.dominance.dominated_strategy",
-      "to": "topic:extensive_game.equilibrium",
+      "to": "topic:extensive_game.imperfect_information",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.equilibrium",
+      "topic": "extensive_game.imperfect_information",
       "count": 1
     },
     {
@@ -228,6 +176,13 @@
       "kind": "boundary_dependent",
       "topic": "strategic_games.refinements",
       "count": 2
+    },
+    {
+      "from": "strategic_games.dominance.dominated_strategy",
+      "to": "topic:zero_sum.applications",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum.applications",
+      "count": 2
     }
   ],
   "keywords": [
@@ -235,13 +190,13 @@
       "id": "best-response",
       "title": "best-response",
       "href": "keywords/best-response.html",
-      "count": 3
+      "count": 1
     },
     {
       "id": "dominance",
       "title": "dominance",
       "href": "keywords/dominance.html",
-      "count": 4
+      "count": 2
     },
     {
       "id": "fixed-point",
@@ -271,7 +226,7 @@
       "id": "strategic-game",
       "title": "strategic-game",
       "href": "keywords/strategic-game.html",
-      "count": 9
+      "count": 7
     }
   ],
   "proof_plan_attachments": [],
@@ -279,5 +234,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }

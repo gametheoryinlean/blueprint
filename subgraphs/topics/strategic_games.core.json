@@ -9,15 +9,17 @@
   },
   "counts": {
     "internal_nodes": 10,
+    "inlined_nodes": 0,
     "descendant_nodes": 10,
     "child_topics": 0,
+    "inlined_child_topics": 0,
     "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 10,
+    "boundary_topics": 11,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 21,
-    "visible_nodes_with_selected_proof_plans": 21
+    "visible_nodes_without_proof_plans": 22,
+    "visible_nodes_with_selected_proof_plans": 22
   },
   "nodes": [
     {
@@ -110,18 +112,18 @@
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.equilibrium",
-      "title": "Extensive Game.Equilibrium",
-      "href": "extensive_game/equilibrium/index.html",
+      "id": "extensive_game.imperfect_information",
+      "title": "Extensive Game.Imperfect Information",
+      "href": "extensive_game/imperfect_information/index.html",
       "role": "dependent",
-      "node_count": 17
+      "node_count": 24
     },
     {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 131
+      "node_count": 128
     },
     {
       "id": "strategic_games.bayesian",
@@ -129,6 +131,13 @@
       "href": "strategic_games/bayesian/index.html",
       "role": "dependent",
       "node_count": 6
+    },
+    {
+      "id": "strategic_games.continuous",
+      "title": "Strategic Games.Continuous",
+      "href": "strategic_games/continuous/index.html",
+      "role": "dependent",
+      "node_count": 16
     },
     {
       "id": "strategic_games.correlated",
@@ -149,7 +158,7 @@
       "title": "Strategic Games.Equilibrium",
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependent",
-      "node_count": 14
+      "node_count": 11
     },
     {
       "id": "strategic_games.evolution",
@@ -177,7 +186,7 @@
       "title": "Zero Sum",
       "href": "zero_sum/index.html",
       "role": "dependent",
-      "node_count": 86
+      "node_count": 91
     }
   ],
   "boundary_edges": [
@@ -239,9 +248,9 @@
     },
     {
       "from": "strategic_games.core.br_invariance",
-      "to": "topic:extensive_game.equilibrium",
+      "to": "topic:extensive_game.imperfect_information",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.equilibrium",
+      "topic": "extensive_game.imperfect_information",
       "count": 1
     },
     {
@@ -249,6 +258,13 @@
       "to": "topic:strategic_games.bayesian",
       "kind": "boundary_dependent",
       "topic": "strategic_games.bayesian",
+      "count": 1
+    },
+    {
+      "from": "strategic_games.core.mixed_extension",
+      "to": "topic:strategic_games.continuous",
+      "kind": "boundary_dependent",
+      "topic": "strategic_games.continuous",
       "count": 1
     },
     {
@@ -270,7 +286,7 @@
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
-      "count": 2
+      "count": 1
     },
     {
       "from": "strategic_games.core.symmetric_game",
@@ -369,5 +385,6 @@
   "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
-  "child_boundary_edges": []
+  "child_boundary_edges": [],
+  "inlined_child_topics": []
 }
