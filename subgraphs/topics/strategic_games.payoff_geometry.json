@@ -9,10 +9,10 @@
   },
   "counts": {
     "internal_nodes": 5,
-    "inlined_nodes": 0,
+    "inlined_nodes": 5,
     "descendant_nodes": 5,
     "child_topics": 0,
-    "inlined_child_topics": 0,
+    "inlined_child_topics": 5,
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -77,11 +77,18 @@
   ],
   "boundary_topics": [
     {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "href": "repeated_game/index.html",
+      "role": "dependent",
+      "node_count": 17
+    },
+    {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 123
+      "node_count": 112
     },
     {
       "id": "strategic_games.core",
@@ -96,13 +103,6 @@
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependent",
       "node_count": 10
-    },
-    {
-      "id": "strategic_games.repeated",
-      "title": "Strategic Games.Repeated",
-      "href": "strategic_games/repeated/index.html",
-      "role": "dependent",
-      "node_count": 11
     }
   ],
   "boundary_edges": [
@@ -128,17 +128,17 @@
       "count": 1
     },
     {
+      "from": "strategic_games.payoff_geometry.threat_point",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
       "from": "strategic_games.payoff_geometry.feasible_payoffs",
       "to": "topic:strategic_games.equilibrium",
       "kind": "boundary_dependent",
       "topic": "strategic_games.equilibrium",
-      "count": 1
-    },
-    {
-      "from": "strategic_games.payoff_geometry.threat_point",
-      "to": "topic:strategic_games.repeated",
-      "kind": "boundary_dependent",
-      "topic": "strategic_games.repeated",
       "count": 1
     }
   ],
@@ -198,5 +198,11 @@
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "strategic_games.payoff_geometry.feasible_payoffs",
+    "strategic_games.payoff_geometry.focal_point",
+    "strategic_games.payoff_geometry.noncontractible_feasible_payoff_example",
+    "strategic_games.payoff_geometry.prudent_strategy",
+    "strategic_games.payoff_geometry.threat_point"
+  ]
 }

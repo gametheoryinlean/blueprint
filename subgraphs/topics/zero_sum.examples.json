@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -107,8 +107,66 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 91
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.computation_three_by_two_example",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.diagonal_matrix_game_value",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.matching_pennies",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.noisy_duel_one_bullet_value",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.silent_duel_no_pure_value",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.three_player_minimax_failure",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.examples.two_by_two_value_formula",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "computation",

@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -59,8 +59,24 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "mechanism_design",
+      "title": "Mechanism Design",
+      "href": "mechanism_design/index.html",
+      "role": "dependency",
+      "node_count": 15
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.bayesian.bayesian_mechanisms",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 3
+    }
+  ],
   "keywords": [
     {
       "id": "bayesian-mechanism",

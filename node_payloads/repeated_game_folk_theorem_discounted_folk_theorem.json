@@ -1,25 +1,26 @@
 {
-  "id": "strategic_games.repeated.discounted_folk_theorem",
+  "id": "repeated_game.folk_theorem.discounted_folk_theorem",
   "title": "Discounted Folk Theorem",
   "kind": "theorem",
   "status": "staged",
-  "href": "strategic_games/repeated/strategic_games_repeated_discounted_folk_theorem.html",
-  "primary_topic": "strategic_games.repeated",
+  "href": "repeated_game/repeated_game_folk_theorem_discounted_folk_theorem.html",
+  "primary_topic": "repeated_game",
   "topics": [
-    "strategic_games.repeated"
+    "repeated_game",
+    "repeated_game.folk_theorem"
   ],
   "body_html": "<h1>Discounted Folk Theorem</h1>\n<p>Let $E_\\lambda$ be the set of Nash equilibrium payoffs of the discounted repeated\ngame. If either there are two players or there exists a feasible individually\nrational payoff that is strictly above every player's minmax level, then\n$$\n  E_\\lambda\\to E\n  \\quad\\text{as }\\lambda\\to 0\n$$\nin Hausdorff distance.</p>\n<p>MFoGT emphasizes that the stated hypotheses matter: without them, convergence\ncan fail in games with three or more players.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 8, Thm. 8.5.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Hausdorff convergence of discounted equilibrium payoffs under MFoGT hypotheses.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
-      "id": "strategic_games.repeated.discounted_game",
+      "id": "repeated_game.core.discounted_game",
       "title": "Discounted Repeated Game",
-      "href": "strategic_games/repeated/strategic_games_repeated_discounted_game.html"
+      "href": "repeated_game/repeated_game_core_discounted_game.html"
     },
     {
-      "id": "strategic_games.repeated.feasible_individually_rational_payoffs",
+      "id": "repeated_game.core.feasible_individually_rational_payoffs",
       "title": "Repeated Feasible Individually Rational Payoffs",
-      "href": "strategic_games/repeated/strategic_games_repeated_feasible_individually_rational_payoffs.html"
+      "href": "repeated_game/repeated_game_core_feasible_individually_rational_payoffs.html"
     }
   ],
   "dependents": [],

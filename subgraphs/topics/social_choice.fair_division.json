@@ -9,17 +9,17 @@
   },
   "counts": {
     "internal_nodes": 94,
-    "inlined_nodes": 0,
+    "inlined_nodes": 94,
     "descendant_nodes": 94,
-    "child_topics": 3,
-    "inlined_child_topics": 0,
+    "child_topics": 0,
+    "inlined_child_topics": 3,
     "non_proof_plan_nodes": 94,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 95,
-    "visible_nodes_with_selected_proof_plans": 95
+    "visible_nodes_without_proof_plans": 96,
+    "visible_nodes_with_selected_proof_plans": 96
   },
   "nodes": [
     {
@@ -1552,8 +1552,24 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "social_choice",
+      "title": "Social Choice",
+      "href": "social_choice/index.html",
+      "role": "dependency",
+      "node_count": 125
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.instance",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "acyclic",
@@ -1911,78 +1927,14 @@
     }
   ],
   "proof_plan_attachments": [],
-  "child_topics": [
-    "social_choice.fair_division.core",
-    "social_choice.fair_division.divisible",
-    "social_choice.fair_division.indivisible"
-  ],
-  "child_topic_nodes": [
-    {
-      "id": "social_choice.fair_division.core",
-      "title": "Social Choice.Fair Division.Core",
-      "depth": 3,
-      "parent": "social_choice.fair_division",
-      "node_count": 15,
-      "direct_node_count": 15,
-      "kind_counts": {
-        "definition": 13,
-        "lemma": 2
-      },
-      "status_counts": {
-        "formalized": 13,
-        "staged": 2
-      },
-      "href": "social_choice/fair_division/core/index.html",
-      "children": []
-    },
-    {
-      "id": "social_choice.fair_division.divisible",
-      "title": "Social Choice.Fair Division.Divisible",
-      "depth": 3,
-      "parent": "social_choice.fair_division",
-      "node_count": 36,
-      "direct_node_count": 36,
-      "kind_counts": {
-        "definition": 13,
-        "lemma": 7,
-        "theorem": 16
-      },
-      "status_counts": {
-        "formalized": 12,
-        "staged": 24
-      },
-      "href": "social_choice/fair_division/divisible/index.html",
-      "children": [
-        "social_choice.fair_division.divisible.cut_and_choose",
-        "social_choice.fair_division.divisible.dubins_spanier",
-        "social_choice.fair_division.divisible.stromquist"
-      ]
-    },
-    {
-      "id": "social_choice.fair_division.indivisible",
-      "title": "Social Choice.Fair Division.Indivisible",
-      "depth": 3,
-      "parent": "social_choice.fair_division",
-      "node_count": 43,
-      "direct_node_count": 43,
-      "kind_counts": {
-        "definition": 25,
-        "lemma": 2,
-        "theorem": 16
-      },
-      "status_counts": {
-        "formalized": 25,
-        "staged": 18
-      },
-      "href": "social_choice/fair_division/indivisible/index.html",
-      "children": [
-        "social_choice.fair_division.indivisible.algorithms",
-        "social_choice.fair_division.indivisible.mms"
-      ]
-    }
-  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "social_choice.fair_division.core",
+    "social_choice.fair_division.divisible",
+    "social_choice.fair_division.indivisible"
+  ]
 }

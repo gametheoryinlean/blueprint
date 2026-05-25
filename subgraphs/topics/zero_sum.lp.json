@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 3,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 2,
     "proof_plan_attachments": 3,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -94,8 +94,45 @@
       "kind": "proof_plan_uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "core",
+      "title": "Core",
+      "href": "core/index.html",
+      "role": "dependency",
+      "node_count": 19
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 91
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.lp.lp_optimal_iff_optimal_strategy",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.lp.player_1_lp",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "topic:core",
+      "to": "zero_sum.lp.zero_sum_lp_bridge",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "core",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "bijection",

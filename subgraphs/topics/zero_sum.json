@@ -9,10 +9,10 @@
   },
   "counts": {
     "internal_nodes": 89,
-    "inlined_nodes": 2,
+    "inlined_nodes": 91,
     "descendant_nodes": 91,
-    "child_topics": 7,
-    "inlined_child_topics": 1,
+    "child_topics": 0,
+    "inlined_child_topics": 8,
     "non_proof_plan_nodes": 81,
     "proof_plan_nodes": 10,
     "selected_proof_plan_nodes": 3,
@@ -45,6 +45,22 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_applications_stochastic_matrix_invariant_distribution.html",
       "payload": "node_payloads/zero_sum_applications_stochastic_matrix_invariant_distribution.json"
+    },
+    {
+      "id": "zero_sum.applications.strict_dominance_never_best_response",
+      "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "zero_sum/applications/zero_sum_applications_strict_dominance_never_best_response.html",
+      "payload": "node_payloads/zero_sum_applications_strict_dominance_never_best_response.json"
+    },
+    {
+      "id": "zero_sum.applications.weak_dominance_never_best_response",
+      "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "zero_sum/applications/zero_sum_applications_weak_dominance_never_best_response.html",
+      "payload": "node_payloads/zero_sum_applications_weak_dominance_never_best_response.json"
     },
     {
       "id": "zero_sum.continuous.compact_mixed_vs_finite_support_minimax",
@@ -753,22 +769,6 @@
       "status": "formalized",
       "href": "zero_sum/zero_sum_zero_sum_payoff_negation.html",
       "payload": "node_payloads/zero_sum_zero_sum_payoff_negation.json"
-    },
-    {
-      "id": "zero_sum.applications.strict_dominance_never_best_response",
-      "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
-      "kind": "proposition",
-      "status": "staged",
-      "href": "zero_sum/applications/zero_sum_applications_strict_dominance_never_best_response.html",
-      "payload": "node_payloads/zero_sum_applications_strict_dominance_never_best_response.json"
-    },
-    {
-      "id": "zero_sum.applications.weak_dominance_never_best_response",
-      "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
-      "kind": "proposition",
-      "status": "staged",
-      "href": "zero_sum/applications/zero_sum_applications_weak_dominance_never_best_response.html",
-      "payload": "node_payloads/zero_sum_applications_weak_dominance_never_best_response.json"
     }
   ],
   "edges": [
@@ -1417,7 +1417,7 @@
       "title": "Repeated Game",
       "href": "repeated_game/index.html",
       "role": "dependent",
-      "node_count": 5
+      "node_count": 17
     },
     {
       "id": "stochastic_game",
@@ -1431,7 +1431,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 123
+      "node_count": 112
     },
     {
       "id": "strategic_games.core",
@@ -2074,156 +2074,8 @@
       "plan_status": "candidate"
     }
   ],
-  "child_topics": [
-    "zero_sum.continuous",
-    "zero_sum.core",
-    "zero_sum.examples",
-    "zero_sum.fictitious_play",
-    "zero_sum.lp",
-    "zero_sum.minimax",
-    "zero_sum.operators"
-  ],
-  "child_topic_nodes": [
-    {
-      "id": "zero_sum.continuous",
-      "title": "Zero Sum.Continuous",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 13,
-      "direct_node_count": 13,
-      "kind_counts": {
-        "definition": 2,
-        "example": 4,
-        "lemma": 1,
-        "proposition": 4,
-        "theorem": 2
-      },
-      "status_counts": {
-        "staged": 13
-      },
-      "href": "zero_sum/continuous/index.html",
-      "children": []
-    },
-    {
-      "id": "zero_sum.core",
-      "title": "Zero Sum.Core",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 19,
-      "direct_node_count": 19,
-      "kind_counts": {
-        "definition": 13,
-        "lemma": 2,
-        "proposition": 1,
-        "theorem": 3
-      },
-      "status_counts": {
-        "formalized": 19
-      },
-      "href": "zero_sum/core/index.html",
-      "children": []
-    },
-    {
-      "id": "zero_sum.examples",
-      "title": "Zero Sum.Examples",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 9,
-      "direct_node_count": 9,
-      "kind_counts": {
-        "example": 4,
-        "proposition": 4,
-        "theorem": 1
-      },
-      "status_counts": {
-        "formalized": 5,
-        "staged": 4
-      },
-      "href": "zero_sum/examples/index.html",
-      "children": []
-    },
-    {
-      "id": "zero_sum.fictitious_play",
-      "title": "Zero Sum.Fictitious Play",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 10,
-      "direct_node_count": 10,
-      "kind_counts": {
-        "definition": 2,
-        "lemma": 6,
-        "proposition": 1,
-        "theorem": 1
-      },
-      "status_counts": {
-        "staged": 10
-      },
-      "href": "zero_sum/fictitious_play/index.html",
-      "children": []
-    },
-    {
-      "id": "zero_sum.lp",
-      "title": "Zero Sum.Lp",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 6,
-      "direct_node_count": 6,
-      "kind_counts": {
-        "definition": 2,
-        "proof-plan": 3,
-        "theorem": 1
-      },
-      "status_counts": {
-        "admitted": 1,
-        "staged": 5
-      },
-      "href": "zero_sum/lp/index.html",
-      "children": []
-    },
-    {
-      "id": "zero_sum.minimax",
-      "title": "Zero Sum.Minimax",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 26,
-      "direct_node_count": 26,
-      "kind_counts": {
-        "definition": 1,
-        "lemma": 7,
-        "proof-plan": 9,
-        "proposition": 1,
-        "theorem": 8
-      },
-      "status_counts": {
-        "admitted": 2,
-        "formalized": 15,
-        "proved": 2,
-        "staged": 7
-      },
-      "href": "zero_sum/minimax/index.html",
-      "children": [
-        "zero_sum.minimax.proofs",
-        "zero_sum.minimax.structure"
-      ]
-    },
-    {
-      "id": "zero_sum.operators",
-      "title": "Zero Sum.Operators",
-      "depth": 2,
-      "parent": "zero_sum",
-      "node_count": 5,
-      "direct_node_count": 5,
-      "kind_counts": {
-        "definition": 2,
-        "proposition": 3
-      },
-      "status_counts": {
-        "staged": 5
-      },
-      "href": "zero_sum/operators/index.html",
-      "children": []
-    }
-  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [
     {
@@ -2231,7 +2083,7 @@
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 123
+      "node_count": 112
     },
     {
       "id": "strategic_games.dominance",
@@ -2258,6 +2110,13 @@
     }
   ],
   "inlined_child_topics": [
-    "zero_sum.applications"
+    "zero_sum.applications",
+    "zero_sum.continuous",
+    "zero_sum.core",
+    "zero_sum.examples",
+    "zero_sum.fictitious_play",
+    "zero_sum.lp",
+    "zero_sum.minimax",
+    "zero_sum.operators"
   ]
 }

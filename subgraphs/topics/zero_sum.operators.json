@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 6,
-    "visible_nodes_with_selected_proof_plans": 6
+    "visible_nodes_without_proof_plans": 8,
+    "visible_nodes_with_selected_proof_plans": 8
   },
   "nodes": [
     {
@@ -80,8 +80,52 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "stochastic_game",
+      "title": "Stochastic Game",
+      "href": "stochastic_game/index.html",
+      "role": "dependent",
+      "node_count": 10
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 91
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.operators.derived_game",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.operators.value_operator_general",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.operators.value_operator_properties",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.operators.value_operator_nonexpansive_general",
+      "to": "topic:stochastic_game",
+      "kind": "boundary_dependent",
+      "topic": "stochastic_game",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "continuity",

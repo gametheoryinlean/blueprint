@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 9,
     "selected_proof_plan_nodes": 3,
-    "boundary_topics": 0,
+    "boundary_topics": 3,
     "proof_plan_attachments": 8,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 14
   },
   "nodes": [
     {
@@ -231,8 +231,143 @@
       "kind": "proof_plan_uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "approachability",
+      "title": "Approachability",
+      "href": "approachability/index.html",
+      "role": "dependency",
+      "node_count": 2
+    },
+    {
+      "id": "core",
+      "title": "Core",
+      "href": "core/index.html",
+      "role": "dependency",
+      "node_count": 19
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 91
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:core",
+      "to": "zero_sum.lam_mu_existence",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 2
+    },
+    {
+      "from": "topic:core",
+      "to": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.lam_mu_existence",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:approachability",
+      "to": "zero_sum.minimax.minimax_from_deterministic_approachability",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "approachability",
+      "count": 1
+    },
+    {
+      "from": "topic:core",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "core",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.kakutani_minimax_proof",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.lp_duality_minimax_proof",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.minimax_from_antisymmetric_games",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.minimax_from_loomis",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum",
+      "count": 2
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "zero_sum.minimax.ville_discretization_proof",
+      "kind": "boundary_proof_plan_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.base_case",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.column_drop",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.positive_aggregate",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.row_drop",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.value_existence",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "zero_sum.minimax.loomis_induction_proof.weak_duality",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "antisymmetric",

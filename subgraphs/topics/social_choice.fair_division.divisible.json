@@ -9,17 +9,17 @@
   },
   "counts": {
     "internal_nodes": 36,
-    "inlined_nodes": 0,
+    "inlined_nodes": 21,
     "descendant_nodes": 36,
-    "child_topics": 3,
-    "inlined_child_topics": 0,
+    "child_topics": 0,
+    "inlined_child_topics": 3,
     "non_proof_plan_nodes": 36,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 37,
-    "visible_nodes_with_selected_proof_plans": 37
+    "visible_nodes_without_proof_plans": 38,
+    "visible_nodes_with_selected_proof_plans": 38
   },
   "nodes": [
     {
@@ -553,8 +553,45 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "social_choice",
+      "title": "Social Choice",
+      "href": "social_choice/index.html",
+      "role": "dependency",
+      "node_count": 125
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.divisible.allocation",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.divisible.cardinal_instance",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 5
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.divisible.dubins_spanier_rule",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.divisible.ordinal_instance",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "allocation",
@@ -702,69 +739,14 @@
     }
   ],
   "proof_plan_attachments": [],
-  "child_topics": [
-    "social_choice.fair_division.divisible.cut_and_choose",
-    "social_choice.fair_division.divisible.dubins_spanier",
-    "social_choice.fair_division.divisible.stromquist"
-  ],
-  "child_topic_nodes": [
-    {
-      "id": "social_choice.fair_division.divisible.cut_and_choose",
-      "title": "Social Choice.Fair Division.Divisible.Cut And Choose",
-      "depth": 4,
-      "parent": "social_choice.fair_division.divisible",
-      "node_count": 7,
-      "direct_node_count": 7,
-      "kind_counts": {
-        "definition": 1,
-        "theorem": 6
-      },
-      "status_counts": {
-        "formalized": 1,
-        "staged": 6
-      },
-      "href": "social_choice/fair_division/divisible/cut_and_choose/index.html",
-      "children": []
-    },
-    {
-      "id": "social_choice.fair_division.divisible.dubins_spanier",
-      "title": "Social Choice.Fair Division.Divisible.Dubins Spanier",
-      "depth": 4,
-      "parent": "social_choice.fair_division.divisible",
-      "node_count": 4,
-      "direct_node_count": 4,
-      "kind_counts": {
-        "lemma": 2,
-        "theorem": 2
-      },
-      "status_counts": {
-        "staged": 4
-      },
-      "href": "social_choice/fair_division/divisible/dubins_spanier/index.html",
-      "children": []
-    },
-    {
-      "id": "social_choice.fair_division.divisible.stromquist",
-      "title": "Social Choice.Fair Division.Divisible.Stromquist",
-      "depth": 4,
-      "parent": "social_choice.fair_division.divisible",
-      "node_count": 10,
-      "direct_node_count": 10,
-      "kind_counts": {
-        "definition": 5,
-        "lemma": 2,
-        "theorem": 3
-      },
-      "status_counts": {
-        "formalized": 4,
-        "staged": 6
-      },
-      "href": "social_choice/fair_division/divisible/stromquist/index.html",
-      "children": []
-    }
-  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "social_choice.fair_division.divisible.cut_and_choose",
+    "social_choice.fair_division.divisible.dubins_spanier",
+    "social_choice.fair_division.divisible.stromquist"
+  ]
 }

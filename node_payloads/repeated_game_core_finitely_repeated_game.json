@@ -1,32 +1,33 @@
 {
-  "id": "strategic_games.repeated.finitely_repeated_game",
+  "id": "repeated_game.core.finitely_repeated_game",
   "title": "Finitely Repeated Game",
   "kind": "definition",
   "status": "staged",
-  "href": "strategic_games/repeated/strategic_games_repeated_finitely_repeated_game.html",
-  "primary_topic": "strategic_games.repeated",
+  "href": "repeated_game/repeated_game_core_finitely_repeated_game.html",
+  "primary_topic": "repeated_game",
   "topics": [
-    "strategic_games.repeated"
+    "repeated_game",
+    "repeated_game.core"
   ],
   "body_html": "<h1>Finitely Repeated Game</h1>\n<p>For $T\\ge 1$, the $T$-stage repeated game $G^T$ evaluates a strategy profile by\nthe expected average payoff\n$$\n  \\gamma_T^i(\\sigma)\n  =\n  \\mathbb E_\\sigma\\left[\n    \\frac1T\\sum_{t=1}^T g_i(a_t)\n  \\right].\n$$</p>\n<p>Because only the first $T$ stages matter, $G^T$ may be treated as a finite\nextensive-form game.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 8, Def. 8.3.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. T-stage repeated game with average payoff.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
-      "id": "strategic_games.repeated.strategy",
+      "id": "repeated_game.core.strategy",
       "title": "Repeated Game Strategy",
-      "href": "strategic_games/repeated/strategic_games_repeated_strategy.html"
+      "href": "repeated_game/repeated_game_core_strategy.html"
     }
   ],
   "dependents": [
     {
-      "id": "strategic_games.repeated.finitely_repeated_folk_theorem",
-      "title": "Finitely Repeated Folk Theorem",
-      "href": "strategic_games/repeated/strategic_games_repeated_finitely_repeated_folk_theorem.html"
+      "id": "repeated_game.core.uniform_equilibrium",
+      "title": "Uniform Equilibrium",
+      "href": "repeated_game/repeated_game_core_uniform_equilibrium.html"
     },
     {
-      "id": "strategic_games.repeated.uniform_equilibrium",
-      "title": "Uniform Equilibrium",
-      "href": "strategic_games/repeated/strategic_games_repeated_uniform_equilibrium.html"
+      "id": "repeated_game.folk_theorem.finitely_repeated_folk_theorem",
+      "title": "Finitely Repeated Folk Theorem",
+      "href": "repeated_game/repeated_game_folk_theorem_finitely_repeated_folk_theorem.html"
     }
   ],
   "lean_refs": []

@@ -1,12 +1,13 @@
 {
-  "id": "strategic_games.repeated.standard_repeated_game",
+  "id": "repeated_game.core.standard_repeated_game",
   "title": "Standard Repeated Game",
   "kind": "definition",
   "status": "staged",
-  "href": "strategic_games/repeated/strategic_games_repeated_standard_repeated_game.html",
-  "primary_topic": "strategic_games.repeated",
+  "href": "repeated_game/repeated_game_core_standard_repeated_game.html",
+  "primary_topic": "repeated_game",
   "topics": [
-    "strategic_games.repeated"
+    "repeated_game",
+    "repeated_game.core"
   ],
   "body_html": "<h1>Standard Repeated Game</h1>\n<p>A standard repeated game fixes a finite stage game\n$G=(N,(A_i)_{i\\in N},(g_i)_{i\\in N})$. At every stage, players choose actions\nsimultaneously, the action profile is publicly observed, and the same stage game\nis played again.</p>\n<p>A history of length $t$ is an element of $H_t=A^t$, where\n$A=\\prod_i A_i$. A play is an infinite sequence in $A^\\mathbb N$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 8, Sections 8.1 and 8.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Standard repeated games with complete information and perfect observation.</li>\n</ul>",
   "proof_html": null,
@@ -19,14 +20,14 @@
   ],
   "dependents": [
     {
-      "id": "strategic_games.repeated.incomplete_information",
-      "title": "Repeated Game With Incomplete Information",
-      "href": "strategic_games/repeated/strategic_games_repeated_incomplete_information.html"
+      "id": "repeated_game.core.strategy",
+      "title": "Repeated Game Strategy",
+      "href": "repeated_game/repeated_game_core_strategy.html"
     },
     {
-      "id": "strategic_games.repeated.strategy",
-      "title": "Repeated Game Strategy",
-      "href": "strategic_games/repeated/strategic_games_repeated_strategy.html"
+      "id": "repeated_game.incomplete_info.repeated_game_incomplete_information",
+      "title": "Repeated Game With Incomplete Information",
+      "href": "repeated_game/repeated_game_incomplete_info_repeated_game_incomplete_information.html"
     }
   ],
   "lean_refs": []

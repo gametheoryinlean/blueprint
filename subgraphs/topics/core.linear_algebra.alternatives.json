@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -59,8 +59,24 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "core",
+      "title": "Core",
+      "href": "core/index.html",
+      "role": "dependent",
+      "node_count": 19
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "core.linear_algebra.farkas_lemma",
+      "to": "topic:core",
+      "kind": "boundary_dependent",
+      "topic": "core",
+      "count": 2
+    }
+  ],
   "keywords": [
     {
       "id": "alternatives",

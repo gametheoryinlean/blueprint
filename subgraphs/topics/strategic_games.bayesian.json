@@ -9,10 +9,10 @@
   },
   "counts": {
     "internal_nodes": 6,
-    "inlined_nodes": 0,
+    "inlined_nodes": 6,
     "descendant_nodes": 6,
     "child_topics": 0,
-    "inlined_child_topics": 0,
+    "inlined_child_topics": 6,
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -105,11 +105,18 @@
   ],
   "boundary_topics": [
     {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "href": "repeated_game/index.html",
+      "role": "dependent",
+      "node_count": 17
+    },
+    {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 123
+      "node_count": 112
     },
     {
       "id": "strategic_games.core",
@@ -124,13 +131,6 @@
       "href": "strategic_games/equilibrium/index.html",
       "role": "dependency",
       "node_count": 10
-    },
-    {
-      "id": "strategic_games.repeated",
-      "title": "Strategic Games.Repeated",
-      "href": "strategic_games/repeated/index.html",
-      "role": "dependent",
-      "node_count": 11
     }
   ],
   "boundary_edges": [
@@ -164,9 +164,9 @@
     },
     {
       "from": "strategic_games.bayesian.bayesian_game",
-      "to": "topic:strategic_games.repeated",
+      "to": "topic:repeated_game",
       "kind": "boundary_dependent",
-      "topic": "strategic_games.repeated",
+      "topic": "repeated_game",
       "count": 1
     }
   ],
@@ -226,5 +226,12 @@
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "strategic_games.bayesian.agent_normal_form",
+    "strategic_games.bayesian.bayesian_equilibrium",
+    "strategic_games.bayesian.bayesian_equilibrium_as_nash",
+    "strategic_games.bayesian.bayesian_game",
+    "strategic_games.bayesian.bayesian_strategy",
+    "strategic_games.bayesian.finite_bayesian_equilibrium_exists"
+  ]
 }

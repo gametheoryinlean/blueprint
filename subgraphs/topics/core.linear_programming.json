@@ -9,17 +9,17 @@
   },
   "counts": {
     "internal_nodes": 2,
-    "inlined_nodes": 0,
+    "inlined_nodes": 2,
     "descendant_nodes": 2,
-    "child_topics": 1,
-    "inlined_child_topics": 0,
+    "child_topics": 0,
+    "inlined_child_topics": 1,
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 3,
-    "visible_nodes_with_selected_proof_plans": 3
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -46,8 +46,52 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "core",
+      "title": "Core",
+      "href": "core/index.html",
+      "role": "dependency",
+      "node_count": 19
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependent",
+      "node_count": 91
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:core",
+      "to": "core.linear_programming.strong_complementarity",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 1
+    },
+    {
+      "from": "topic:core",
+      "to": "core.linear_programming.strong_duality",
+      "kind": "boundary_dependency",
+      "topic": "core",
+      "count": 1
+    },
+    {
+      "from": "core.linear_programming.strong_complementarity",
+      "to": "topic:zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "core.linear_programming.strong_duality",
+      "to": "topic:zero_sum",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "zero_sum",
+      "count": 2
+    }
+  ],
   "keywords": [
     {
       "id": "complementarity",
@@ -69,29 +113,12 @@
     }
   ],
   "proof_plan_attachments": [],
-  "child_topics": [
-    "core.linear_programming.duality"
-  ],
-  "child_topic_nodes": [
-    {
-      "id": "core.linear_programming.duality",
-      "title": "Core.Linear Programming.Duality",
-      "depth": 3,
-      "parent": "core.linear_programming",
-      "node_count": 2,
-      "direct_node_count": 2,
-      "kind_counts": {
-        "theorem": 2
-      },
-      "status_counts": {
-        "formalized": 2
-      },
-      "href": "core/linear_programming/duality/index.html",
-      "children": []
-    }
-  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "core.linear_programming.duality"
+  ]
 }

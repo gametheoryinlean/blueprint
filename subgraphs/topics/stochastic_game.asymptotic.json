@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 3,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -59,8 +59,24 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "stochastic_game",
+      "title": "Stochastic Game",
+      "href": "stochastic_game/index.html",
+      "role": "dependency",
+      "node_count": 10
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:stochastic_game",
+      "to": "stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
+      "kind": "boundary_dependency",
+      "topic": "stochastic_game",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "asymptotic-value",

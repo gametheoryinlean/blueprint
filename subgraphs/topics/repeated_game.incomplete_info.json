@@ -4,22 +4,22 @@
     "title": "Repeated Game.Incomplete Info",
     "href": "repeated_game/incomplete_info/index.html",
     "parent": "repeated_game",
-    "node_count": 1,
-    "descendant_node_count": 1
+    "node_count": 2,
+    "descendant_node_count": 2
   },
   "counts": {
-    "internal_nodes": 1,
+    "internal_nodes": 2,
     "inlined_nodes": 0,
-    "descendant_nodes": 1,
+    "descendant_nodes": 2,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 1,
+    "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 2,
-    "visible_nodes_with_selected_proof_plans": 2
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -29,11 +29,70 @@
       "status": "staged",
       "href": "repeated_game/repeated_game_incomplete_info_cav_u_theorem.html",
       "payload": "node_payloads/repeated_game_incomplete_info_cav_u_theorem.json"
+    },
+    {
+      "id": "repeated_game.incomplete_info.repeated_game_incomplete_information",
+      "title": "Repeated Game With Incomplete Information",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_incomplete_info_repeated_game_incomplete_information.html",
+      "payload": "node_payloads/repeated_game_incomplete_info_repeated_game_incomplete_information.json"
     }
   ],
   "edges": [],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "href": "repeated_game/index.html",
+      "role": "dependency",
+      "node_count": 17
+    },
+    {
+      "id": "strategic_games.bayesian",
+      "title": "Strategic Games.Bayesian",
+      "href": "strategic_games/bayesian/index.html",
+      "role": "dependency",
+      "node_count": 6
+    },
+    {
+      "id": "zero_sum",
+      "title": "Zero Sum",
+      "href": "zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 91
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:repeated_game",
+      "to": "repeated_game.incomplete_info.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "topic:repeated_game",
+      "to": "repeated_game.incomplete_info.repeated_game_incomplete_information",
+      "kind": "boundary_dependency",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.bayesian",
+      "to": "repeated_game.incomplete_info.repeated_game_incomplete_information",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.bayesian",
+      "count": 1
+    },
+    {
+      "from": "topic:zero_sum",
+      "to": "repeated_game.incomplete_info.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "zero_sum",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "aumann-maschler",
@@ -45,12 +104,18 @@
       "id": "incomplete-information",
       "title": "incomplete-information",
       "href": "keywords/incomplete-information.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "repeated-game",
       "title": "repeated-game",
       "href": "keywords/repeated-game.html",
+      "count": 2
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
       "count": 1
     },
     {

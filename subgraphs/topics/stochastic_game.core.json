@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 3,
-    "visible_nodes_with_selected_proof_plans": 3
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -46,8 +46,45 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "stochastic_game",
+      "title": "Stochastic Game",
+      "href": "stochastic_game/index.html",
+      "role": "dependent",
+      "node_count": 10
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 112
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "stochastic_game.core.stochastic_game",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "stochastic_game.core.history",
+      "to": "topic:stochastic_game",
+      "kind": "boundary_dependent",
+      "topic": "stochastic_game",
+      "count": 2
+    },
+    {
+      "from": "stochastic_game.core.stochastic_game",
+      "to": "topic:stochastic_game",
+      "kind": "boundary_dependent",
+      "topic": "stochastic_game",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "history",

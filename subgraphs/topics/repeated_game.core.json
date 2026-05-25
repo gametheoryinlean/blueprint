@@ -4,24 +4,48 @@
     "title": "Repeated Game.Core",
     "href": "repeated_game/core/index.html",
     "parent": "repeated_game",
-    "node_count": 3,
-    "descendant_node_count": 3
+    "node_count": 10,
+    "descendant_node_count": 10
   },
   "counts": {
-    "internal_nodes": 3,
+    "internal_nodes": 10,
     "inlined_nodes": 0,
-    "descendant_nodes": 3,
+    "descendant_nodes": 10,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 3,
+    "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 4,
-    "visible_nodes_with_selected_proof_plans": 4
+    "visible_nodes_without_proof_plans": 14,
+    "visible_nodes_with_selected_proof_plans": 14
   },
   "nodes": [
+    {
+      "id": "repeated_game.core.discounted_game",
+      "title": "Discounted Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_discounted_game.html",
+      "payload": "node_payloads/repeated_game_core_discounted_game.json"
+    },
+    {
+      "id": "repeated_game.core.feasible_individually_rational_payoffs",
+      "title": "Repeated Feasible Individually Rational Payoffs",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_feasible_individually_rational_payoffs.html",
+      "payload": "node_payloads/repeated_game_core_feasible_individually_rational_payoffs.json"
+    },
+    {
+      "id": "repeated_game.core.finitely_repeated_game",
+      "title": "Finitely Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_finitely_repeated_game.html",
+      "payload": "node_payloads/repeated_game_core_finitely_repeated_game.json"
+    },
     {
       "id": "repeated_game.core.history",
       "title": "Repeated Game History",
@@ -45,9 +69,51 @@
       "status": "staged",
       "href": "repeated_game/repeated_game_core_repeated_game.html",
       "payload": "node_payloads/repeated_game_core_repeated_game.json"
+    },
+    {
+      "id": "repeated_game.core.signals",
+      "title": "Repeated Game With Signals",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_signals.html",
+      "payload": "node_payloads/repeated_game_core_signals.json"
+    },
+    {
+      "id": "repeated_game.core.standard_repeated_game",
+      "title": "Standard Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_standard_repeated_game.html",
+      "payload": "node_payloads/repeated_game_core_standard_repeated_game.json"
+    },
+    {
+      "id": "repeated_game.core.strategy",
+      "title": "Repeated Game Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_strategy.html",
+      "payload": "node_payloads/repeated_game_core_strategy.json"
+    },
+    {
+      "id": "repeated_game.core.uniform_equilibrium",
+      "title": "Uniform Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "repeated_game/repeated_game_core_uniform_equilibrium.html",
+      "payload": "node_payloads/repeated_game_core_uniform_equilibrium.json"
     }
   ],
   "edges": [
+    {
+      "from": "repeated_game.core.strategy",
+      "to": "repeated_game.core.discounted_game",
+      "kind": "uses"
+    },
+    {
+      "from": "repeated_game.core.strategy",
+      "to": "repeated_game.core.finitely_repeated_game",
+      "kind": "uses"
+    },
     {
       "from": "repeated_game.core.repeated_game",
       "to": "repeated_game.core.history",
@@ -57,15 +123,146 @@
       "from": "repeated_game.core.history",
       "to": "repeated_game.core.payoff_aggregation",
       "kind": "uses"
+    },
+    {
+      "from": "repeated_game.core.strategy",
+      "to": "repeated_game.core.signals",
+      "kind": "uses"
+    },
+    {
+      "from": "repeated_game.core.standard_repeated_game",
+      "to": "repeated_game.core.strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "repeated_game.core.discounted_game",
+      "to": "repeated_game.core.uniform_equilibrium",
+      "kind": "uses"
+    },
+    {
+      "from": "repeated_game.core.finitely_repeated_game",
+      "to": "repeated_game.core.uniform_equilibrium",
+      "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "href": "repeated_game/index.html",
+      "role": "dependent",
+      "node_count": 17
+    },
+    {
+      "id": "strategic_games",
+      "title": "Strategic Games",
+      "href": "strategic_games/index.html",
+      "role": "dependency",
+      "node_count": 112
+    },
+    {
+      "id": "strategic_games.payoff_geometry",
+      "title": "Strategic Games.Payoff Geometry",
+      "href": "strategic_games/payoff_geometry/index.html",
+      "role": "dependency",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:strategic_games",
+      "to": "repeated_game.core.repeated_game",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games",
+      "to": "repeated_game.core.standard_repeated_game",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games",
+      "count": 1
+    },
+    {
+      "from": "topic:strategic_games.payoff_geometry",
+      "to": "repeated_game.core.feasible_individually_rational_payoffs",
+      "kind": "boundary_dependency",
+      "topic": "strategic_games.payoff_geometry",
+      "count": 1
+    },
+    {
+      "from": "repeated_game.core.discounted_game",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "repeated_game.core.feasible_individually_rational_payoffs",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 3
+    },
+    {
+      "from": "repeated_game.core.finitely_repeated_game",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "repeated_game.core.payoff_aggregation",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "repeated_game.core.repeated_game",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "repeated_game.core.standard_repeated_game",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    },
+    {
+      "from": "repeated_game.core.uniform_equilibrium",
+      "to": "topic:repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "repeated_game",
+      "count": 1
+    }
+  ],
   "keywords": [
+    {
+      "id": "discounting",
+      "title": "discounting",
+      "href": "keywords/discounting.html",
+      "count": 1
+    },
+    {
+      "id": "feasible-payoff",
+      "title": "feasible-payoff",
+      "href": "keywords/feasible-payoff.html",
+      "count": 1
+    },
     {
       "id": "history",
       "title": "history",
       "href": "keywords/history.html",
+      "count": 1
+    },
+    {
+      "id": "imperfect-monitoring",
+      "title": "imperfect-monitoring",
+      "href": "keywords/imperfect-monitoring.html",
       "count": 1
     },
     {
@@ -78,7 +275,31 @@
       "id": "repeated-game",
       "title": "repeated-game",
       "href": "keywords/repeated-game.html",
-      "count": 3
+      "count": 10
+    },
+    {
+      "id": "signals",
+      "title": "signals",
+      "href": "keywords/signals.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 7
+    },
+    {
+      "id": "strategy",
+      "title": "strategy",
+      "href": "keywords/strategy.html",
+      "count": 1
+    },
+    {
+      "id": "uniform-equilibrium",
+      "title": "uniform-equilibrium",
+      "href": "keywords/uniform-equilibrium.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],

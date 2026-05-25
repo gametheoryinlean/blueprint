@@ -9,10 +9,10 @@
   },
   "counts": {
     "internal_nodes": 11,
-    "inlined_nodes": 0,
+    "inlined_nodes": 11,
     "descendant_nodes": 11,
     "child_topics": 0,
-    "inlined_child_topics": 0,
+    "inlined_child_topics": 11,
     "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
@@ -176,18 +176,18 @@
       "node_count": 24
     },
     {
-      "id": "extensive_game.repeated",
-      "title": "Extensive Game.Repeated",
-      "href": "extensive_game/repeated/index.html",
+      "id": "repeated_game",
+      "title": "Repeated Game",
+      "href": "repeated_game/index.html",
       "role": "dependent",
-      "node_count": 1
+      "node_count": 17
     },
     {
       "id": "strategic_games",
       "title": "Strategic Games",
       "href": "strategic_games/index.html",
       "role": "dependency",
-      "node_count": 123
+      "node_count": 112
     },
     {
       "id": "zero_sum",
@@ -256,9 +256,9 @@
     },
     {
       "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
-      "to": "topic:extensive_game.repeated",
+      "to": "topic:repeated_game",
       "kind": "boundary_dependent",
-      "topic": "extensive_game.repeated",
+      "topic": "repeated_game",
       "count": 1
     }
   ],
@@ -336,5 +336,17 @@
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "extensive_game.perfect_information.determined_game",
+    "extensive_game.perfect_information.generic_unique_spe",
+    "extensive_game.perfect_information.kuhn_spe_existence",
+    "extensive_game.perfect_information.perfect_information_extensive_game",
+    "extensive_game.perfect_information.perfect_information_strategy",
+    "extensive_game.perfect_information.simple_perfect_information_game",
+    "extensive_game.perfect_information.spe_implies_nash",
+    "extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
+    "extensive_game.perfect_information.subgame_perfect_equilibrium",
+    "extensive_game.perfect_information.zermelo_determinacy",
+    "extensive_game.perfect_information.zero_sum_perfect_information_value"
+  ]
 }

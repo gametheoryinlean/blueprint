@@ -1680,7 +1680,7 @@
         "extensive_game.examples.backward_forward_induction_incompatibility",
         "extensive_game.perfect_information.kuhn_spe_existence",
         "extensive_game.perfect_information.spe_implies_nash",
-        "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
+        "repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem"
       ]
     },
     {
@@ -2317,6 +2317,78 @@
       "topic": "order"
     },
     {
+      "id": "repeated_game.core.discounted_game",
+      "title": "Discounted Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "discounting"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.strategy"
+      ],
+      "used_by": [
+        "repeated_game.core.uniform_equilibrium",
+        "repeated_game.folk_theorem.discounted_folk_theorem"
+      ]
+    },
+    {
+      "id": "repeated_game.core.feasible_individually_rational_payoffs",
+      "title": "Repeated Feasible Individually Rational Payoffs",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "feasible-payoff"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "strategic_games.payoff_geometry.threat_point"
+      ],
+      "used_by": [
+        "repeated_game.folk_theorem.discounted_folk_theorem",
+        "repeated_game.folk_theorem.finitely_repeated_folk_theorem",
+        "repeated_game.folk_theorem.uniform_folk_theorem"
+      ]
+    },
+    {
+      "id": "repeated_game.core.finitely_repeated_game",
+      "title": "Finitely Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.strategy"
+      ],
+      "used_by": [
+        "repeated_game.core.uniform_equilibrium",
+        "repeated_game.folk_theorem.finitely_repeated_folk_theorem"
+      ]
+    },
+    {
       "id": "repeated_game.core.history",
       "title": "Repeated Game History",
       "kind": "definition",
@@ -2383,6 +2455,142 @@
       ]
     },
     {
+      "id": "repeated_game.core.signals",
+      "title": "Repeated Game With Signals",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "signals",
+        "imperfect-monitoring"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.strategy"
+      ]
+    },
+    {
+      "id": "repeated_game.core.standard_repeated_game",
+      "title": "Standard Repeated Game",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "strategic_games.strategic_game"
+      ],
+      "used_by": [
+        "repeated_game.core.strategy",
+        "repeated_game.incomplete_info.repeated_game_incomplete_information"
+      ]
+    },
+    {
+      "id": "repeated_game.core.strategy",
+      "title": "Repeated Game Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "strategy"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.standard_repeated_game"
+      ],
+      "used_by": [
+        "repeated_game.core.discounted_game",
+        "repeated_game.core.finitely_repeated_game",
+        "repeated_game.core.signals"
+      ]
+    },
+    {
+      "id": "repeated_game.core.uniform_equilibrium",
+      "title": "Uniform Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "uniform-equilibrium"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.core"
+      ],
+      "topic": "repeated_game",
+      "uses": [
+        "repeated_game.core.discounted_game",
+        "repeated_game.core.finitely_repeated_game"
+      ],
+      "used_by": [
+        "repeated_game.folk_theorem.uniform_folk_theorem"
+      ]
+    },
+    {
+      "id": "repeated_game.folk_theorem.discounted_folk_theorem",
+      "title": "Discounted Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem",
+        "discounting"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.folk_theorem"
+      ],
+      "topic": "folk_theorem",
+      "uses": [
+        "repeated_game.core.discounted_game",
+        "repeated_game.core.feasible_individually_rational_payoffs"
+      ]
+    },
+    {
+      "id": "repeated_game.folk_theorem.finitely_repeated_folk_theorem",
+      "title": "Finitely Repeated Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.folk_theorem"
+      ],
+      "topic": "folk_theorem",
+      "uses": [
+        "repeated_game.core.feasible_individually_rational_payoffs",
+        "repeated_game.core.finitely_repeated_game"
+      ]
+    },
+    {
       "id": "repeated_game.folk_theorem.folk_theorem_baseline",
       "title": "Folk Theorem (Baseline Statement)",
       "kind": "theorem",
@@ -2399,6 +2607,52 @@
       "topic": "folk_theorem",
       "uses": [
         "repeated_game.core.payoff_aggregation"
+      ]
+    },
+    {
+      "id": "repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem",
+      "title": "Subgame Perfect Uniform Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem",
+        "subgame-perfect-equilibrium"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.folk_theorem"
+      ],
+      "topic": "folk_theorem",
+      "uses": [
+        "extensive_game.perfect_information.subgame_perfect_equilibrium",
+        "repeated_game.folk_theorem.uniform_folk_theorem"
+      ]
+    },
+    {
+      "id": "repeated_game.folk_theorem.uniform_folk_theorem",
+      "title": "Uniform Folk Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "folk-theorem"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.folk_theorem"
+      ],
+      "topic": "folk_theorem",
+      "uses": [
+        "repeated_game.core.feasible_individually_rational_payoffs",
+        "repeated_game.core.uniform_equilibrium"
+      ],
+      "used_by": [
+        "repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem"
       ]
     },
     {
@@ -2421,6 +2675,27 @@
       "uses": [
         "repeated_game.core.repeated_game",
         "zero_sum.core.value"
+      ]
+    },
+    {
+      "id": "repeated_game.incomplete_info.repeated_game_incomplete_information",
+      "title": "Repeated Game With Incomplete Information",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "strategic-game",
+        "repeated-game",
+        "incomplete-information"
+      ],
+      "primary_topic": "repeated_game",
+      "topics": [
+        "repeated_game",
+        "repeated_game.incomplete_info"
+      ],
+      "topic": "incomplete_info",
+      "uses": [
+        "repeated_game.core.standard_repeated_game",
+        "strategic_games.bayesian.bayesian_game"
       ]
     },
     {
@@ -6466,9 +6741,9 @@
         "strategic_games.strategic_game"
       ],
       "used_by": [
+        "repeated_game.incomplete_info.repeated_game_incomplete_information",
         "strategic_games.bayesian.agent_normal_form",
-        "strategic_games.bayesian.bayesian_strategy",
-        "strategic_games.repeated.incomplete_information"
+        "strategic_games.bayesian.bayesian_strategy"
       ]
     },
     {
@@ -7949,8 +8224,8 @@
         "strategic_games.core.mixed_strategy"
       ],
       "used_by": [
-        "strategic_games.payoff_geometry.feasible_payoffs",
-        "strategic_games.repeated.feasible_individually_rational_payoffs"
+        "repeated_game.core.feasible_individually_rational_payoffs",
+        "strategic_games.payoff_geometry.feasible_payoffs"
       ]
     },
     {
@@ -8339,226 +8614,6 @@
       ]
     },
     {
-      "id": "strategic_games.repeated.discounted_folk_theorem",
-      "title": "Discounted Folk Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "folk-theorem",
-        "discounting"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.discounted_game",
-        "strategic_games.repeated.feasible_individually_rational_payoffs"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.discounted_game",
-      "title": "Discounted Repeated Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "discounting"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.strategy"
-      ],
-      "used_by": [
-        "strategic_games.repeated.discounted_folk_theorem",
-        "strategic_games.repeated.uniform_equilibrium"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.feasible_individually_rational_payoffs",
-      "title": "Repeated Feasible Individually Rational Payoffs",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "feasible-payoff"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.payoff_geometry.threat_point"
-      ],
-      "used_by": [
-        "strategic_games.repeated.discounted_folk_theorem",
-        "strategic_games.repeated.finitely_repeated_folk_theorem",
-        "strategic_games.repeated.uniform_folk_theorem"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.finitely_repeated_folk_theorem",
-      "title": "Finitely Repeated Folk Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "folk-theorem"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.feasible_individually_rational_payoffs",
-        "strategic_games.repeated.finitely_repeated_game"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.finitely_repeated_game",
-      "title": "Finitely Repeated Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.strategy"
-      ],
-      "used_by": [
-        "strategic_games.repeated.finitely_repeated_folk_theorem",
-        "strategic_games.repeated.uniform_equilibrium"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.incomplete_information",
-      "title": "Repeated Game With Incomplete Information",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "incomplete-information"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.bayesian.bayesian_game",
-        "strategic_games.repeated.standard_repeated_game"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.signals",
-      "title": "Repeated Game With Signals",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "signals",
-        "imperfect-monitoring"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.strategy"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.standard_repeated_game",
-      "title": "Standard Repeated Game",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.strategic_game"
-      ],
-      "used_by": [
-        "strategic_games.repeated.incomplete_information",
-        "strategic_games.repeated.strategy"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.strategy",
-      "title": "Repeated Game Strategy",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "strategy"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.standard_repeated_game"
-      ],
-      "used_by": [
-        "strategic_games.repeated.discounted_game",
-        "strategic_games.repeated.finitely_repeated_game",
-        "strategic_games.repeated.signals"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem",
-      "title": "Subgame Perfect Uniform Folk Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "folk-theorem",
-        "subgame-perfect-equilibrium"
-      ],
-      "primary_topic": "extensive_game.repeated",
-      "topics": [
-        "extensive_game",
-        "extensive_game.repeated"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "extensive_game.perfect_information.subgame_perfect_equilibrium",
-        "strategic_games.repeated.uniform_folk_theorem"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.uniform_equilibrium",
-      "title": "Uniform Equilibrium",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "uniform-equilibrium"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.discounted_game",
-        "strategic_games.repeated.finitely_repeated_game"
-      ],
-      "used_by": [
-        "strategic_games.repeated.uniform_folk_theorem"
-      ]
-    },
-    {
-      "id": "strategic_games.repeated.uniform_folk_theorem",
-      "title": "Uniform Folk Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "repeated-game",
-        "folk-theorem"
-      ],
-      "topic": "strategic_games",
-      "uses": [
-        "strategic_games.repeated.feasible_individually_rational_payoffs",
-        "strategic_games.repeated.uniform_equilibrium"
-      ],
-      "used_by": [
-        "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
-      ]
-    },
-    {
       "id": "strategic_games.strategic_game",
       "title": "Strategic Game",
       "kind": "definition",
@@ -8576,6 +8631,7 @@
         "mechanism_design.basic.direct_mechanism_interface",
         "mechanism_design.basic.induced_strategic_game",
         "repeated_game.core.repeated_game",
+        "repeated_game.core.standard_repeated_game",
         "stochastic_game.core.stochastic_game",
         "strategic_games.bayesian.bayesian_game",
         "strategic_games.continuous.convex_game",
@@ -8591,7 +8647,6 @@
         "strategic_games.population.population_game",
         "strategic_games.potential.potential_game",
         "strategic_games.refinements.reny_solution",
-        "strategic_games.repeated.standard_repeated_game",
         "strategic_games.strategy_profile",
         "zero_sum.zero_sum_game"
       ]
@@ -11866,6 +11921,18 @@
       "to": "mechanism_design.vcg.welfare_and_payments"
     },
     {
+      "from": "repeated_game.core.strategy",
+      "to": "repeated_game.core.discounted_game"
+    },
+    {
+      "from": "strategic_games.payoff_geometry.threat_point",
+      "to": "repeated_game.core.feasible_individually_rational_payoffs"
+    },
+    {
+      "from": "repeated_game.core.strategy",
+      "to": "repeated_game.core.finitely_repeated_game"
+    },
+    {
       "from": "repeated_game.core.repeated_game",
       "to": "repeated_game.core.history"
     },
@@ -11878,8 +11945,60 @@
       "to": "repeated_game.core.repeated_game"
     },
     {
+      "from": "repeated_game.core.strategy",
+      "to": "repeated_game.core.signals"
+    },
+    {
+      "from": "strategic_games.strategic_game",
+      "to": "repeated_game.core.standard_repeated_game"
+    },
+    {
+      "from": "repeated_game.core.standard_repeated_game",
+      "to": "repeated_game.core.strategy"
+    },
+    {
+      "from": "repeated_game.core.discounted_game",
+      "to": "repeated_game.core.uniform_equilibrium"
+    },
+    {
+      "from": "repeated_game.core.finitely_repeated_game",
+      "to": "repeated_game.core.uniform_equilibrium"
+    },
+    {
+      "from": "repeated_game.core.discounted_game",
+      "to": "repeated_game.folk_theorem.discounted_folk_theorem"
+    },
+    {
+      "from": "repeated_game.core.feasible_individually_rational_payoffs",
+      "to": "repeated_game.folk_theorem.discounted_folk_theorem"
+    },
+    {
+      "from": "repeated_game.core.feasible_individually_rational_payoffs",
+      "to": "repeated_game.folk_theorem.finitely_repeated_folk_theorem"
+    },
+    {
+      "from": "repeated_game.core.finitely_repeated_game",
+      "to": "repeated_game.folk_theorem.finitely_repeated_folk_theorem"
+    },
+    {
       "from": "repeated_game.core.payoff_aggregation",
       "to": "repeated_game.folk_theorem.folk_theorem_baseline"
+    },
+    {
+      "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
+      "to": "repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem"
+    },
+    {
+      "from": "repeated_game.folk_theorem.uniform_folk_theorem",
+      "to": "repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem"
+    },
+    {
+      "from": "repeated_game.core.feasible_individually_rational_payoffs",
+      "to": "repeated_game.folk_theorem.uniform_folk_theorem"
+    },
+    {
+      "from": "repeated_game.core.uniform_equilibrium",
+      "to": "repeated_game.folk_theorem.uniform_folk_theorem"
     },
     {
       "from": "repeated_game.core.repeated_game",
@@ -11888,6 +12007,14 @@
     {
       "from": "zero_sum.core.value",
       "to": "repeated_game.incomplete_info.cav_u_theorem"
+    },
+    {
+      "from": "repeated_game.core.standard_repeated_game",
+      "to": "repeated_game.incomplete_info.repeated_game_incomplete_information"
+    },
+    {
+      "from": "strategic_games.bayesian.bayesian_game",
+      "to": "repeated_game.incomplete_info.repeated_game_incomplete_information"
     },
     {
       "from": "social_choice.fair_division.share_instance",
@@ -13388,78 +13515,6 @@
     {
       "from": "strategic_games.refinements.proper_equilibrium",
       "to": "strategic_games.refinements.strict_equilibrium_is_proper"
-    },
-    {
-      "from": "strategic_games.repeated.discounted_game",
-      "to": "strategic_games.repeated.discounted_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.feasible_individually_rational_payoffs",
-      "to": "strategic_games.repeated.discounted_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.strategy",
-      "to": "strategic_games.repeated.discounted_game"
-    },
-    {
-      "from": "strategic_games.payoff_geometry.threat_point",
-      "to": "strategic_games.repeated.feasible_individually_rational_payoffs"
-    },
-    {
-      "from": "strategic_games.repeated.feasible_individually_rational_payoffs",
-      "to": "strategic_games.repeated.finitely_repeated_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.finitely_repeated_game",
-      "to": "strategic_games.repeated.finitely_repeated_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.strategy",
-      "to": "strategic_games.repeated.finitely_repeated_game"
-    },
-    {
-      "from": "strategic_games.bayesian.bayesian_game",
-      "to": "strategic_games.repeated.incomplete_information"
-    },
-    {
-      "from": "strategic_games.repeated.standard_repeated_game",
-      "to": "strategic_games.repeated.incomplete_information"
-    },
-    {
-      "from": "strategic_games.repeated.strategy",
-      "to": "strategic_games.repeated.signals"
-    },
-    {
-      "from": "strategic_games.strategic_game",
-      "to": "strategic_games.repeated.standard_repeated_game"
-    },
-    {
-      "from": "strategic_games.repeated.standard_repeated_game",
-      "to": "strategic_games.repeated.strategy"
-    },
-    {
-      "from": "extensive_game.perfect_information.subgame_perfect_equilibrium",
-      "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.uniform_folk_theorem",
-      "to": "strategic_games.repeated.subgame_perfect_uniform_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.discounted_game",
-      "to": "strategic_games.repeated.uniform_equilibrium"
-    },
-    {
-      "from": "strategic_games.repeated.finitely_repeated_game",
-      "to": "strategic_games.repeated.uniform_equilibrium"
-    },
-    {
-      "from": "strategic_games.repeated.feasible_individually_rational_payoffs",
-      "to": "strategic_games.repeated.uniform_folk_theorem"
-    },
-    {
-      "from": "strategic_games.repeated.uniform_equilibrium",
-      "to": "strategic_games.repeated.uniform_folk_theorem"
     },
     {
       "from": "strategic_games.strategic_game",

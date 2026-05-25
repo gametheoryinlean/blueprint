@@ -9,17 +9,17 @@
   },
   "counts": {
     "internal_nodes": 43,
-    "inlined_nodes": 0,
+    "inlined_nodes": 20,
     "descendant_nodes": 43,
-    "child_topics": 2,
-    "inlined_child_topics": 0,
+    "child_topics": 0,
+    "inlined_child_topics": 2,
     "non_proof_plan_nodes": 43,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 0,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 44,
-    "visible_nodes_with_selected_proof_plans": 44
+    "visible_nodes_without_proof_plans": 45,
+    "visible_nodes_with_selected_proof_plans": 45
   },
   "nodes": [
     {
@@ -699,8 +699,73 @@
       "kind": "uses"
     }
   ],
-  "boundary_topics": [],
-  "boundary_edges": [],
+  "boundary_topics": [
+    {
+      "id": "social_choice",
+      "title": "Social Choice",
+      "href": "social_choice/index.html",
+      "role": "dependency",
+      "node_count": 125
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.cardinal_instance",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 5
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.egalitarian_welfare",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.envy_free",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.equitable",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.ordinal_instance",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.pareto_optimal",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.proportional",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    },
+    {
+      "from": "topic:social_choice",
+      "to": "social_choice.fair_division.indivisible.utilitarian_welfare",
+      "kind": "boundary_dependency",
+      "topic": "social_choice",
+      "count": 1
+    }
+  ],
   "keywords": [
     {
       "id": "acyclic",
@@ -956,51 +1021,13 @@
     }
   ],
   "proof_plan_attachments": [],
-  "child_topics": [
-    "social_choice.fair_division.indivisible.algorithms",
-    "social_choice.fair_division.indivisible.mms"
-  ],
-  "child_topic_nodes": [
-    {
-      "id": "social_choice.fair_division.indivisible.algorithms",
-      "title": "Social Choice.Fair Division.Indivisible.Algorithms",
-      "depth": 4,
-      "parent": "social_choice.fair_division.indivisible",
-      "node_count": 12,
-      "direct_node_count": 12,
-      "kind_counts": {
-        "definition": 8,
-        "theorem": 4
-      },
-      "status_counts": {
-        "formalized": 8,
-        "staged": 4
-      },
-      "href": "social_choice/fair_division/indivisible/algorithms/index.html",
-      "children": []
-    },
-    {
-      "id": "social_choice.fair_division.indivisible.mms",
-      "title": "Social Choice.Fair Division.Indivisible.Mms",
-      "depth": 4,
-      "parent": "social_choice.fair_division.indivisible",
-      "node_count": 8,
-      "direct_node_count": 8,
-      "kind_counts": {
-        "definition": 3,
-        "lemma": 1,
-        "theorem": 4
-      },
-      "status_counts": {
-        "formalized": 3,
-        "staged": 5
-      },
-      "href": "social_choice/fair_division/indivisible/mms/index.html",
-      "children": []
-    }
-  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
   "child_topic_edges": [],
   "child_boundary_topics": [],
   "child_boundary_edges": [],
-  "inlined_child_topics": []
+  "inlined_child_topics": [
+    "social_choice.fair_division.indivisible.algorithms",
+    "social_choice.fair_division.indivisible.mms"
+  ]
 }
