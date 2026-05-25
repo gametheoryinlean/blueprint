@@ -1,0 +1,92 @@
+{
+  "id": "game_theory.strategic_game.best_response",
+  "title": "Best Response",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_best_response.html",
+  "primary_topic": "game_theory.strategic_game",
+  "topics": [
+    "game_theory.strategic_game"
+  ],
+  "body_html": "<h1>Best Response</h1>\n<p>A strategy $\\sigma_i$ is a best response for player $i$ to the profile $\\sigma$ if\nno unilateral deviation can improve $i$'s payoff:</p>\n<p>$$\\forall s'_i \\in S_i, \\quad u_i(\\sigma[i \\mapsto s'_i]) \\le u_i(\\sigma).$$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Section 2.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of best response.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.unilateral_deviation",
+      "title": "Unilateral Deviation",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_unilateral_deviation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.continuous.supermodular_best_response_lattice",
+      "title": "Supermodular Best Responses Are Lattices",
+      "href": "game_theory/strategic_game/continuous/game_theory_strategic_game_continuous_supermodular_best_response_lattice.html"
+    },
+    {
+      "id": "game_theory.strategic_game.core.br_invariance",
+      "title": "Best-Response Invariance",
+      "href": "game_theory/strategic_game/core/game_theory_strategic_game_core_br_invariance.html"
+    },
+    {
+      "id": "game_theory.strategic_game.correlated.best_response_face",
+      "title": "Best Response Face",
+      "href": "game_theory/strategic_game/correlated/game_theory_strategic_game_correlated_best_response_face.html"
+    },
+    {
+      "id": "game_theory.strategic_game.correlated.correlated_best_response_not_independent",
+      "title": "Correlated Best Response Need Not Be Independent",
+      "href": "game_theory/strategic_game/correlated/game_theory_strategic_game_correlated_correlated_best_response_not_independent.html"
+    },
+    {
+      "id": "game_theory.strategic_game.correlated.obedience_condition",
+      "title": "Obedience Condition",
+      "href": "game_theory/strategic_game/correlated/game_theory_strategic_game_correlated_obedience_condition.html"
+    },
+    {
+      "id": "game_theory.strategic_game.dominance.rationalizable_strategy",
+      "title": "Rationalizable Strategy",
+      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_rationalizable_strategy.html"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.epsilon_equilibrium",
+      "title": "Epsilon Equilibrium",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_epsilon_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_nash_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.refinements.epsilon_perfect_equilibrium",
+      "title": "Epsilon Perfect Equilibrium",
+      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_epsilon_perfect_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
+      "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
+      "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "IsBestResponse",
+      "display_name": "IsBestResponse",
+      "qualified_name": "IsBestResponse",
+      "module": "EconCSLib.GameTheory.StrategicGame.BestResponse",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/BestResponse.lean#L19",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

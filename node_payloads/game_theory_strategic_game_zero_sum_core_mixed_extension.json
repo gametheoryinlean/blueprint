@@ -1,0 +1,48 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.core.mixed_extension",
+  "title": "Mixed Extension Of A Matrix Game",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_mixed_extension.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.core"
+  ],
+  "body_html": "<h1>Mixed Extension Of A Matrix Game</h1>\n<p>For a finite matrix game $A : I \\times J \\to \\mathbb{R}$, the mixed extension\nhas strategy spaces $\\Delta(I)$ and $\\Delta(J)$.  Its payoff is the bilinear\nextension\n$$\n  g(x,y)=\\sum_{i \\in I}\\sum_{j \\in J} x_i y_j A_{ij}.\n$$\nPure strategies are identified with Dirac measures in the corresponding\nsimplex.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Mixed extension and multilinear payoff.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex",
+      "title": "Mixed Strategy Simplex",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_mixed_strategy_simplex.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.duality_gap",
+      "title": "Duality Gap In A Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_duality_gap.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.saddle_point",
+      "title": "Saddle Point",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_saddle_point.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "expectedPayoffMatrix",
+      "display_name": "expectedPayoffMatrix",
+      "qualified_name": "expectedPayoffMatrix",
+      "module": "EconCSLib.Math.Simplex",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Simplex.lean#L397",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

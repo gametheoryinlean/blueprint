@@ -1,0 +1,41 @@
+{
+  "id": "game_theory.strategic_game.potential.potential_maximizer_nash",
+  "title": "Potential Maximizer Is Nash",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "game_theory/strategic_game/potential/game_theory_strategic_game_potential_potential_maximizer_nash.html",
+  "primary_topic": "game_theory.strategic_game.potential",
+  "topics": [
+    "game_theory.strategic_game.potential"
+  ],
+  "body_html": "<h1>Potential Maximizer Is Nash</h1>\n<p>In a finite exact potential game, every global maximizer of the potential is a\npure Nash equilibrium.</p>\n<p>The proof is local: if a unilateral deviation from a potential maximizer were\nprofitable, exactness would make the same deviation increase the potential,\ncontradicting maximality.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Section 5.6, Exercise 1(1)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite potential games have pure equilibria by maximizing the potential.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.potential.potential_game",
+      "title": "Potential Game",
+      "href": "game_theory/strategic_game/potential/game_theory_strategic_game_potential_potential_game.html"
+    },
+    {
+      "id": "game_theory.strategic_game.nash_equilibrium",
+      "title": "Nash Equilibrium",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_nash_equilibrium.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "IsExactPotential.maximizer_is_nash",
+      "display_name": "StrategicGame.IsExactPotential.maximizer_is_nash",
+      "qualified_name": "StrategicGame.IsExactPotential.maximizer_is_nash",
+      "module": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L59",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

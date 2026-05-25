@@ -1,0 +1,38 @@
+{
+  "id": "game_theory.strategic_game.refinements.epsilon_perfect_equilibrium",
+  "title": "Epsilon Perfect Equilibrium",
+  "kind": "definition",
+  "status": "staged",
+  "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_epsilon_perfect_equilibrium.html",
+  "primary_topic": "game_theory.strategic_game.refinements",
+  "topics": [
+    "game_theory.strategic_game.refinements"
+  ],
+  "body_html": "<h1>Epsilon Perfect Equilibrium</h1>\n<p>Let $G$ be a finite normal-form game and let\n$\\Sigma_i=\\Delta(S_i)$. For $\\epsilon&gt;0$, a completely mixed profile\n$\\sigma^\\epsilon\\in\\operatorname{int}\\Sigma$ is $\\epsilon$-perfect if, for every\nplayer $i$ and every pure strategy $s_i\\in S_i$,\n$$\n  s_i\\notin BR_i(\\sigma^\\epsilon_{-i})\n  \\quad\\Rightarrow\\quad\n  \\sigma^\\epsilon_i(s_i)\\le \\epsilon.\n$$</p>\n<p>Suboptimal pure strategies may still be played, but only with very small\nprobability.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 6.5.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Completely mixed epsilon-perfect profiles in finite normal-form games.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.best_response",
+      "title": "Best Response",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_best_response.html"
+    },
+    {
+      "id": "game_theory.strategic_game.core.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "game_theory/strategic_game/core/game_theory_strategic_game_core_mixed_strategy.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.refinements.epsilon_proper_equilibrium",
+      "title": "Epsilon Proper Equilibrium",
+      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_epsilon_proper_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.refinements.perfect_equilibrium",
+      "title": "Perfect Equilibrium",
+      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_perfect_equilibrium.html"
+    }
+  ],
+  "lean_refs": []
+}

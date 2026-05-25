@@ -1,0 +1,95 @@
+{
+  "id": "game_theory.extensive_game.perfect_information.simple_perfect_information_game",
+  "title": "Simple Perfect-Information Game",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_simple_perfect_information_game.html",
+  "primary_topic": "game_theory.extensive_game",
+  "topics": [
+    "game_theory.extensive_game",
+    "game_theory.extensive_game.perfect_information"
+  ],
+  "body_html": "<h1>Simple Perfect-Information Game</h1>\n<p>A two-player perfect-information game is simple if its terminal outcomes are\npartitioned into winning sets $(R_1,R_2)$, where reaching a terminal node in $R_i$\nmeans player $i$ wins and the other player loses.</p>\n<p>A winning strategy for player $i$ is a strategy $\\sigma_i$ such that, for every\nopponent strategy $\\sigma_{-i}$,\n$$\n  F(\\sigma_i,\\sigma_{-i})\\in R_i.\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 6.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Two-player simple game with terminal outcomes partitioned into winners.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.extensive_game.perfect_information.perfect_information_extensive_game",
+      "title": "Finite Extensive Game With Perfect Information",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_perfect_information_extensive_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.extensive_game.perfect_information.determined_game",
+      "title": "Determined Game",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_determined_game.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Examples.SimpleGameTree.sample",
+      "display_name": "Examples.SimpleGameTree.sample",
+      "qualified_name": "Examples.SimpleGameTree.sample",
+      "module": "EconCSLib.Examples.SimpleGameTree",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/SimpleGameTree.lean#L48",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Examples.SimpleGameTree.sample_zero_sum",
+      "display_name": "Examples.SimpleGameTree.sample_zero_sum",
+      "qualified_name": "Examples.SimpleGameTree.sample_zero_sum",
+      "module": "EconCSLib.Examples.SimpleGameTree",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/SimpleGameTree.lean#L60",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Examples.SimpleGameTree.sample_zermelo_spe",
+      "display_name": "Examples.SimpleGameTree.sample_zermelo_spe",
+      "qualified_name": "Examples.SimpleGameTree.sample_zermelo_spe",
+      "module": "EconCSLib.Examples.SimpleGameTree",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/SimpleGameTree.lean#L67",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Examples.SimpleGameTree.sample_zermelo_ne",
+      "display_name": "Examples.SimpleGameTree.sample_zermelo_ne",
+      "qualified_name": "Examples.SimpleGameTree.sample_zermelo_ne",
+      "module": "EconCSLib.Examples.SimpleGameTree",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/SimpleGameTree.lean#L71",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Examples.SimpleGameTree.sample_value_zero_sum",
+      "display_name": "Examples.SimpleGameTree.sample_value_zero_sum",
+      "qualified_name": "Examples.SimpleGameTree.sample_value_zero_sum",
+      "module": "EconCSLib.Examples.SimpleGameTree",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/SimpleGameTree.lean#L91",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

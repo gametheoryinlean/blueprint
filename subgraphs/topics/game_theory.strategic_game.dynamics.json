@@ -1,0 +1,227 @@
+{
+  "topic": {
+    "id": "game_theory.strategic_game.dynamics",
+    "title": "Game Theory.Strategic Game.Dynamics",
+    "href": "game_theory/strategic_game/dynamics/index.html",
+    "parent": "game_theory.strategic_game",
+    "node_count": 5,
+    "descendant_node_count": 5
+  },
+  "counts": {
+    "internal_nodes": 5,
+    "inlined_nodes": 4,
+    "descendant_nodes": 5,
+    "child_topics": 0,
+    "inlined_child_topics": 4,
+    "non_proof_plan_nodes": 5,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 6,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.dynamics.nash_field",
+      "title": "Nash Field",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_nash_field.html",
+      "payload": "node_payloads/game_theory_strategic_game_dynamics_nash_field.json"
+    },
+    {
+      "id": "game_theory.strategic_game.dynamics.positive_correlation",
+      "title": "Positive Correlation Dynamics",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_positive_correlation.html",
+      "payload": "node_payloads/game_theory_strategic_game_dynamics_positive_correlation.json"
+    },
+    {
+      "id": "game_theory.strategic_game.dynamics.potential_replicator_lyapunov",
+      "title": "Potential Is Lyapunov For Replicator Dynamics",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_potential_replicator_lyapunov.html",
+      "payload": "node_payloads/game_theory_strategic_game_dynamics_potential_replicator_lyapunov.json"
+    },
+    {
+      "id": "game_theory.strategic_game.dynamics.replicator_dynamics",
+      "title": "Replicator Dynamics",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_replicator_dynamics.html",
+      "payload": "node_payloads/game_theory_strategic_game_dynamics_replicator_dynamics.json"
+    },
+    {
+      "id": "game_theory.strategic_game.dynamics.stable_game_framework",
+      "title": "Stable Game Framework (Hofbauer–Sandholm)",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_stable_game_framework.html",
+      "payload": "node_payloads/game_theory_strategic_game_dynamics_stable_game_framework.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "game_theory.strategic_game.dynamics.replicator_dynamics",
+      "to": "game_theory.strategic_game.dynamics.potential_replicator_lyapunov",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "game_theory.strategic_game.core",
+      "title": "Game Theory.Strategic Game.Core",
+      "href": "game_theory/strategic_game/core/index.html",
+      "role": "dependency",
+      "node_count": 6
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium",
+      "title": "Game Theory.Strategic Game.Equilibrium",
+      "href": "game_theory/strategic_game/equilibrium/index.html",
+      "role": "dependency",
+      "node_count": 10
+    },
+    {
+      "id": "game_theory.strategic_game.evolution",
+      "title": "Game Theory.Strategic Game.Evolution",
+      "href": "game_theory/strategic_game/evolution/index.html",
+      "role": "dependent",
+      "node_count": 3
+    },
+    {
+      "id": "game_theory.strategic_game.population",
+      "title": "Game Theory.Strategic Game.Population",
+      "href": "game_theory/strategic_game/population/index.html",
+      "role": "dependency",
+      "node_count": 3
+    },
+    {
+      "id": "game_theory.strategic_game.potential",
+      "title": "Game Theory.Strategic Game.Potential",
+      "href": "game_theory/strategic_game/potential/index.html",
+      "role": "dependency",
+      "node_count": 3
+    },
+    {
+      "id": "game_theory.strategic_game.variational",
+      "title": "Game Theory.Strategic Game.Variational",
+      "href": "game_theory/strategic_game/variational/index.html",
+      "role": "dependency",
+      "node_count": 1
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game.core",
+      "to": "game_theory.strategic_game.dynamics.replicator_dynamics",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.core",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.equilibrium",
+      "to": "game_theory.strategic_game.dynamics.nash_field",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.equilibrium",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.population",
+      "to": "game_theory.strategic_game.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.population",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.potential",
+      "to": "game_theory.strategic_game.dynamics.potential_replicator_lyapunov",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.potential",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.potential",
+      "to": "game_theory.strategic_game.dynamics.stable_game_framework",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.potential",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.variational",
+      "to": "game_theory.strategic_game.dynamics.positive_correlation",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.variational",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.dynamics.replicator_dynamics",
+      "to": "topic:game_theory.strategic_game.evolution",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.evolution",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "deferred",
+      "title": "deferred",
+      "href": "keywords/deferred.html",
+      "count": 1
+    },
+    {
+      "id": "dynamics",
+      "title": "dynamics",
+      "href": "keywords/dynamics.html",
+      "count": 5
+    },
+    {
+      "id": "evolution",
+      "title": "evolution",
+      "href": "keywords/evolution.html",
+      "count": 1
+    },
+    {
+      "id": "lyapunov",
+      "title": "lyapunov",
+      "href": "keywords/lyapunov.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "potential-game",
+      "title": "potential-game",
+      "href": "keywords/potential-game.html",
+      "count": 3
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 5
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "game_theory.strategic_game.dynamics.nash_field",
+    "game_theory.strategic_game.dynamics.positive_correlation",
+    "game_theory.strategic_game.dynamics.potential_replicator_lyapunov",
+    "game_theory.strategic_game.dynamics.replicator_dynamics"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.mixed_matrix_payoff",
+  "title": "Expected Payoff of a Matrix Game",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_mixed_matrix_payoff.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.core"
+  ],
+  "body_html": "<h1>Expected Payoff of a Matrix Game</h1>\n<p>For mixed strategies $x \\in \\Delta(I)$ and $y \\in \\Delta(J)$, the expected\npayoff of the matrix game $A$ is</p>\n<p>$$E_A(x,y) = \\sum_{i \\in I}\\sum_{j \\in J} x_i y_j A(i,j).$$</p>\n<p>The one-sided forms $E_A(x,j)$ and $E_A(i,y)$ describe mixed play against a\npure response.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Mixed extension of a finite matrix game.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.core.mixed_strategy",
+      "title": "Mixed Strategy",
+      "href": "game_theory/strategic_game/core/game_theory_strategic_game_core_mixed_strategy.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium of a Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_maximin_minimax.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "expectedPayoffMatrix",
+      "display_name": "expectedPayoffMatrix",
+      "qualified_name": "expectedPayoffMatrix",
+      "module": "EconCSLib.Math.Simplex",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Simplex.lean#L397",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.E",
+      "display_name": "MatrixGame.E",
+      "qualified_name": "MatrixGame.E",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L85",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.Ej",
+      "display_name": "MatrixGame.Ej",
+      "qualified_name": "MatrixGame.Ej",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L89",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "MatrixGame.Ei",
+      "display_name": "MatrixGame.Ei",
+      "qualified_name": "MatrixGame.Ei",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L93",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

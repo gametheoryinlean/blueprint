@@ -1,0 +1,89 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.examples.two_by_two_value_formula",
+  "title": "Two-By-Two Value Formula",
+  "kind": "example",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_examples_two_by_two_value_formula.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.examples"
+  ],
+  "body_html": "<h2>Lean formalisation note</h2>\n<p>The Lean file formalises the <strong>mixed case</strong> of the value formula: under\nhypotheses\n<code>0 &lt; a + d - b - c</code>, <code>b ≤ a</code>, <code>c ≤ a</code>, <code>b ≤ d</code>, <code>c ≤ d</code>\n(which guarantee that the mixed strategies are valid probability vectors),\nthe game value is <code>(a*d - b*c) / (a + d - b - c)</code>. The pure-optimal case\ndisjunction described in the blueprint body falls out of dominance\narguments on the matrix entries and is not separately formalised — when\nthe mixed-case hypotheses fail, one of the rows/columns is dominated and\nthe pure pair shows up via <code>MatrixGame.optimal_pairs_iff_saddle_point</code>.</p>\n<h1>Two-By-Two Value Formula</h1>\n<p>For a two-by-two matrix\n$$\n  \\begin{pmatrix}\n  a &amp; b\\\\\n  c &amp; d\n  \\end{pmatrix},\n$$\neither there is a pair of pure optimal strategies, or the optimal strategies\nare completely mixed and the value is\n$$\n  \\frac{ad-bc}{a+d-b-c}.\n$$</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Ex. 2.6.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Value formula for two-by-two matrix games.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "EconCSLib.StrategicGame.Examples.twoByTwo",
+      "display_name": "EconCSLib.StrategicGame.Examples.twoByTwo",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.twoByTwo",
+      "module": "EconCSLib.Examples.StrategicGame.TwoByTwo",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/TwoByTwo.lean#L39",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.twoByTwoRowMixed",
+      "display_name": "EconCSLib.StrategicGame.Examples.twoByTwoRowMixed",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.twoByTwoRowMixed",
+      "module": "EconCSLib.Examples.StrategicGame.TwoByTwo",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/TwoByTwo.lean#L52",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.twoByTwoColumnMixed",
+      "display_name": "EconCSLib.StrategicGame.Examples.twoByTwoColumnMixed",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.twoByTwoColumnMixed",
+      "module": "EconCSLib.Examples.StrategicGame.TwoByTwo",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/TwoByTwo.lean#L69",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.twoByTwoMixedValue",
+      "display_name": "EconCSLib.StrategicGame.Examples.twoByTwoMixedValue",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.twoByTwoMixedValue",
+      "module": "EconCSLib.Examples.StrategicGame.TwoByTwo",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/TwoByTwo.lean#L86",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.twoByTwo_value",
+      "display_name": "EconCSLib.StrategicGame.Examples.twoByTwo_value",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.twoByTwo_value",
+      "module": "EconCSLib.Examples.StrategicGame.TwoByTwo",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/TwoByTwo.lean#L152",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

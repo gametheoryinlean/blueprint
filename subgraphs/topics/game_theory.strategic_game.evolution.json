@@ -1,0 +1,128 @@
+{
+  "topic": {
+    "id": "game_theory.strategic_game.evolution",
+    "title": "Game Theory.Strategic Game.Evolution",
+    "href": "game_theory/strategic_game/evolution/index.html",
+    "parent": "game_theory.strategic_game",
+    "node_count": 3,
+    "descendant_node_count": 3
+  },
+  "counts": {
+    "internal_nodes": 3,
+    "inlined_nodes": 3,
+    "descendant_nodes": 3,
+    "child_topics": 0,
+    "inlined_child_topics": 3,
+    "non_proof_plan_nodes": 3,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.evolution.ess_replicator_lyapunov",
+      "title": "ESS Replicator Lyapunov Function",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/evolution/game_theory_strategic_game_evolution_ess_replicator_lyapunov.html",
+      "payload": "node_payloads/game_theory_strategic_game_evolution_ess_replicator_lyapunov.json"
+    },
+    {
+      "id": "game_theory.strategic_game.evolution.ess_uniform_invasion_barrier",
+      "title": "ESS Uniform Invasion Barrier",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/evolution/game_theory_strategic_game_evolution_ess_uniform_invasion_barrier.html",
+      "payload": "node_payloads/game_theory_strategic_game_evolution_ess_uniform_invasion_barrier.json"
+    },
+    {
+      "id": "game_theory.strategic_game.evolution.evolutionarily_stable_strategy",
+      "title": "Evolutionarily Stable Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/evolution/game_theory_strategic_game_evolution_evolutionarily_stable_strategy.html",
+      "payload": "node_payloads/game_theory_strategic_game_evolution_evolutionarily_stable_strategy.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "game_theory.strategic_game.evolution.ess_uniform_invasion_barrier",
+      "to": "game_theory.strategic_game.evolution.ess_replicator_lyapunov",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.evolution.evolutionarily_stable_strategy",
+      "to": "game_theory.strategic_game.evolution.ess_uniform_invasion_barrier",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "game_theory.strategic_game.core",
+      "title": "Game Theory.Strategic Game.Core",
+      "href": "game_theory/strategic_game/core/index.html",
+      "role": "dependency",
+      "node_count": 6
+    },
+    {
+      "id": "game_theory.strategic_game.dynamics",
+      "title": "Game Theory.Strategic Game.Dynamics",
+      "href": "game_theory/strategic_game/dynamics/index.html",
+      "role": "dependency",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game.core",
+      "to": "game_theory.strategic_game.evolution.evolutionarily_stable_strategy",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.core",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.dynamics",
+      "to": "game_theory.strategic_game.evolution.ess_replicator_lyapunov",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.dynamics",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "ess",
+      "title": "ess",
+      "href": "keywords/ess.html",
+      "count": 2
+    },
+    {
+      "id": "evolution",
+      "title": "evolution",
+      "href": "keywords/evolution.html",
+      "count": 3
+    },
+    {
+      "id": "replicator-dynamics",
+      "title": "replicator-dynamics",
+      "href": "keywords/replicator-dynamics.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 3
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "game_theory.strategic_game.evolution.ess_replicator_lyapunov",
+    "game_theory.strategic_game.evolution.ess_uniform_invasion_barrier",
+    "game_theory.strategic_game.evolution.evolutionarily_stable_strategy"
+  ]
+}

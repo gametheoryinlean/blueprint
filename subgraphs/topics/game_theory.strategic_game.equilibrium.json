@@ -1,0 +1,469 @@
+{
+  "topic": {
+    "id": "game_theory.strategic_game.equilibrium",
+    "title": "Game Theory.Strategic Game.Equilibrium",
+    "href": "game_theory/strategic_game/equilibrium/index.html",
+    "parent": "game_theory.strategic_game",
+    "node_count": 10,
+    "descendant_node_count": 10
+  },
+  "counts": {
+    "internal_nodes": 10,
+    "inlined_nodes": 9,
+    "descendant_nodes": 10,
+    "child_topics": 0,
+    "inlined_child_topics": 9,
+    "non_proof_plan_nodes": 10,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 11,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 22,
+    "visible_nodes_with_selected_proof_plans": 22
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.equilibrium.common_knowledge_equilibrium_filtering",
+      "title": "Common Knowledge Can Filter Nash Equilibria",
+      "kind": "example",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_common_knowledge_equilibrium_filtering.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_common_knowledge_equilibrium_filtering.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.epsilon_equilibrium",
+      "title": "Epsilon Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_epsilon_equilibrium.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_epsilon_equilibrium.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.finite_nash_computation_examples",
+      "title": "Finite Nash Equilibrium Computation Examples",
+      "kind": "example",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_finite_nash_computation_examples.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_finite_nash_computation_examples.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_mixed_nash_equilibrium.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_mixed_nash_equilibrium.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.mixed_nash_semialgebraic",
+      "title": "Semi-Algebraic Mixed Nash Set",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_mixed_nash_semialgebraic.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_mixed_nash_semialgebraic.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "title": "Nash Existence For Finite Games",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_nash_existence_finite_games.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_nash_existence_finite_games.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.nash_payoffs_are_individually_rational",
+      "title": "Nash Payoffs Are Individually Rational",
+      "kind": "proposition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_nash_payoffs_are_individually_rational.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_nash_payoffs_are_individually_rational.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.strict_equilibrium",
+      "title": "Strict Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_strict_equilibrium.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_strict_equilibrium.json"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.symmetric_mixed_equilibrium",
+      "title": "Symmetric Mixed Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_symmetric_mixed_equilibrium.html",
+      "payload": "node_payloads/game_theory_strategic_game_equilibrium_symmetric_mixed_equilibrium.json"
+    },
+    {
+      "id": "math.fixed_point.kakutani_from_two_player_nash",
+      "title": "Kakutani From Two-Player Nash Existence",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/equilibrium/math_fixed_point_kakutani_from_two_player_nash.html",
+      "payload": "node_payloads/math_fixed_point_kakutani_from_two_player_nash.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "game_theory.strategic_game.equilibrium.finite_nash_computation_examples",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "game_theory.strategic_game.equilibrium.mixed_nash_semialgebraic",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "game_theory.strategic_game.equilibrium.symmetric_mixed_equilibrium",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "math.fixed_point.kakutani_from_two_player_nash",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "game_theory.extensive_game.imperfect_information",
+      "title": "Game Theory.Extensive Game.Imperfect Information",
+      "href": "game_theory/extensive_game/imperfect_information/index.html",
+      "role": "dependent",
+      "node_count": 25
+    },
+    {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 206
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian",
+      "title": "Game Theory.Strategic Game.Bayesian",
+      "href": "game_theory/strategic_game/bayesian/index.html",
+      "role": "dependent",
+      "node_count": 6
+    },
+    {
+      "id": "game_theory.strategic_game.continuous",
+      "title": "Game Theory.Strategic Game.Continuous",
+      "href": "game_theory/strategic_game/continuous/index.html",
+      "role": "dependent",
+      "node_count": 16
+    },
+    {
+      "id": "game_theory.strategic_game.core",
+      "title": "Game Theory.Strategic Game.Core",
+      "href": "game_theory/strategic_game/core/index.html",
+      "role": "dependency",
+      "node_count": 6
+    },
+    {
+      "id": "game_theory.strategic_game.correlated",
+      "title": "Game Theory.Strategic Game.Correlated",
+      "href": "game_theory/strategic_game/correlated/index.html",
+      "role": "dependent",
+      "node_count": 12
+    },
+    {
+      "id": "game_theory.strategic_game.dynamics",
+      "title": "Game Theory.Strategic Game.Dynamics",
+      "href": "game_theory/strategic_game/dynamics/index.html",
+      "role": "dependent",
+      "node_count": 5
+    },
+    {
+      "id": "game_theory.strategic_game.manifold",
+      "title": "Game Theory.Strategic Game.Manifold",
+      "href": "game_theory/strategic_game/manifold/index.html",
+      "role": "dependent",
+      "node_count": 4
+    },
+    {
+      "id": "game_theory.strategic_game.payoff_geometry",
+      "title": "Game Theory.Strategic Game.Payoff Geometry",
+      "href": "game_theory/strategic_game/payoff_geometry/index.html",
+      "role": "dependency",
+      "node_count": 5
+    },
+    {
+      "id": "game_theory.strategic_game.refinements",
+      "title": "Game Theory.Strategic Game.Refinements",
+      "href": "game_theory/strategic_game/refinements/index.html",
+      "role": "dependent",
+      "node_count": 15
+    },
+    {
+      "id": "math.fixed_point",
+      "title": "Math.Fixed Point",
+      "href": "math/fixed_point/index.html",
+      "role": "dependency",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.equilibrium.common_knowledge_equilibrium_filtering",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.equilibrium.epsilon_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.equilibrium.nash_payoffs_are_individually_rational",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.equilibrium.strict_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.core",
+      "to": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.core",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.core",
+      "to": "game_theory.strategic_game.equilibrium.symmetric_mixed_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.core",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.payoff_geometry",
+      "to": "game_theory.strategic_game.equilibrium.nash_payoffs_are_individually_rational",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.payoff_geometry",
+      "count": 1
+    },
+    {
+      "from": "topic:math.fixed_point",
+      "to": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "kind": "boundary_dependency",
+      "topic": "math.fixed_point",
+      "count": 1
+    },
+    {
+      "from": "topic:math.fixed_point",
+      "to": "math.fixed_point.kakutani_from_two_player_nash",
+      "kind": "boundary_dependency",
+      "topic": "math.fixed_point",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "topic:game_theory.extensive_game.imperfect_information",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.extensive_game.imperfect_information",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "topic:game_theory.strategic_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "topic:game_theory.strategic_game.bayesian",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.bayesian",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "topic:game_theory.strategic_game.continuous",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.continuous",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "topic:game_theory.strategic_game.correlated",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.correlated",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "topic:game_theory.strategic_game.correlated",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.correlated",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "topic:game_theory.strategic_game.dynamics",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.dynamics",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "topic:game_theory.strategic_game.manifold",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.manifold",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_semialgebraic",
+      "to": "topic:game_theory.strategic_game.manifold",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.manifold",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.epsilon_equilibrium",
+      "to": "topic:game_theory.strategic_game.refinements",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.refinements",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "to": "topic:game_theory.strategic_game.refinements",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.refinements",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "to": "topic:game_theory.strategic_game.refinements",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.refinements",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.equilibrium.strict_equilibrium",
+      "to": "topic:game_theory.strategic_game.refinements",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.refinements",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "approximate-equilibrium",
+      "title": "approximate-equilibrium",
+      "href": "keywords/approximate-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "common-knowledge",
+      "title": "common-knowledge",
+      "href": "keywords/common-knowledge.html",
+      "count": 1
+    },
+    {
+      "id": "equilibrium-selection",
+      "title": "equilibrium-selection",
+      "href": "keywords/equilibrium-selection.html",
+      "count": 1
+    },
+    {
+      "id": "example",
+      "title": "example",
+      "href": "keywords/example.html",
+      "count": 1
+    },
+    {
+      "id": "existence",
+      "title": "existence",
+      "href": "keywords/existence.html",
+      "count": 1
+    },
+    {
+      "id": "feasible-payoff",
+      "title": "feasible-payoff",
+      "href": "keywords/feasible-payoff.html",
+      "count": 1
+    },
+    {
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 1
+    },
+    {
+      "id": "kakutani",
+      "title": "kakutani",
+      "href": "keywords/kakutani.html",
+      "count": 1
+    },
+    {
+      "id": "mixed-strategy",
+      "title": "mixed-strategy",
+      "href": "keywords/mixed-strategy.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 8
+    },
+    {
+      "id": "semi-algebraic",
+      "title": "semi-algebraic",
+      "href": "keywords/semi-algebraic.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 9
+    },
+    {
+      "id": "symmetry",
+      "title": "symmetry",
+      "href": "keywords/symmetry.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "game_theory.strategic_game.equilibrium.common_knowledge_equilibrium_filtering",
+    "game_theory.strategic_game.equilibrium.epsilon_equilibrium",
+    "game_theory.strategic_game.equilibrium.finite_nash_computation_examples",
+    "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+    "game_theory.strategic_game.equilibrium.mixed_nash_semialgebraic",
+    "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+    "game_theory.strategic_game.equilibrium.nash_payoffs_are_individually_rational",
+    "game_theory.strategic_game.equilibrium.strict_equilibrium",
+    "game_theory.strategic_game.equilibrium.symmetric_mixed_equilibrium"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.core.duality_gap",
+  "title": "Duality Gap In A Matrix Game",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_duality_gap.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.core"
+  ],
+  "body_html": "<h1>Duality Gap In A Matrix Game</h1>\n<p>For a finite matrix game with bilinear payoff $g(x,y)=xAy$, define\n$$\n  L(y)=\\max_{x'\\in\\Delta(I)} g(x',y),\n  \\qquad\n  M(x)=\\min_{y'\\in\\Delta(J)} g(x,y').\n$$\nThe <strong>point-wise duality gap</strong> at $(x,y)$ is\n$$\n  W(x,y)=L(y)-M(x)\\ge 0.\n$$</p>\n<p>The gap is zero exactly when $x$ and $y$ are optimal strategies: $W(x,y)=0$\nsays the best payoff player I can obtain against $y$ equals the worst payoff\nplayer I can secure with $x$, so the two one-sided guarantees meet at the\nvalue.</p>\n<p>The Lean development uses the finite-mixed-strategy specialisation\n<code>L(y) = A.guarantee_II y</code> (maximum over pure rows) and\n<code>M(x) = A.guarantee_I x</code> (minimum over pure columns); the Loomis-style\norder-characterisation lemmas turn this into the full bilinear gap.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.7, proof of Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. L(y), M(x), and W(x,y)=L(y)-M(x) used for continuous fictitious play.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.mixed_extension",
+      "title": "Mixed Extension Of A Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_mixed_extension.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_maximin_minimax.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.learning.continuous_fictitious_play_gap",
+      "title": "Continuous Fictitious Play Closes The Duality Gap",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_learning_continuous_fictitious_play_gap.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "MatrixGame.dualityGap",
+      "display_name": "MatrixGame.dualityGap",
+      "qualified_name": "MatrixGame.dualityGap",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L101",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

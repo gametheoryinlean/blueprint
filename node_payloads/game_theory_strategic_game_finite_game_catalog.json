@@ -1,0 +1,42 @@
+{
+  "id": "game_theory.strategic_game.finite_game_catalog",
+  "title": "Finite Game Catalog",
+  "kind": "definition",
+  "status": "staged",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_finite_game_catalog.html",
+  "primary_topic": "game_theory.strategic_game",
+  "topics": [
+    "game_theory.strategic_game"
+  ],
+  "body_html": "<h1>Finite Game Catalog</h1>\n<p>Index of canonical theorems about finite games that are formally proved in\nEconCSLib, distributed across <code>ExtensiveGame</code> and <code>StrategicGame</code>.  Readers\nlooking for a specific existence result should start here.</p>\n<h2>Catalog</h2>\n<ul>\n<li>\n<p><strong>Kuhn's SPE existence (no chance)</strong> — every finite perfect-information game\n  without chance moves has a pure subgame-perfect equilibrium, constructed by\n  backward induction.\n  Lean: <code>EconCSLib.ExtensiveGame.GameTreeSPE :: Kuhn_exists_SPE</code>.\n  Knowledge node: [[game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance]].</p>\n</li>\n<li>\n<p><strong>Zermelo's determinacy (2-player zero-sum, perfect information)</strong> — every\n  finite 2-player zero-sum perfect-information game is determined: one player\n  has a pure SPE guarantee.\n  Lean: <code>EconCSLib.ExtensiveGame.Zermelo :: zermelo_exists_pure_SPE</code>.\n  Knowledge node: [[game_theory.extensive_game.perfect_information.zermelo_determinacy]].</p>\n</li>\n<li>\n<p><strong>Backward-induction value</strong> — the <code>value</code> function assigns a payoff vector\n  to every node by backward induction; <code>valueList</code> is the mutually recursive\n  helper over lists of subtrees.\n  Lean: <code>EconCSLib.ExtensiveGame.BackwardInduction :: GameTree.value</code>,\n  <code>GameTree.valueList</code>.</p>\n</li>\n<li>\n<p><strong>Loomis minimax</strong> — every finite matrix game over <code>ℝ</code> satisfies\n  <code>max_x min_y xᵀAy = min_y max_x xᵀAy</code>, proved by the simplified Loomis\n  induction on <code>|I| + |J|</code>.\n  Lean: <code>EconCSLib.StrategicGame.MinimaxLoomis :: MinimaxLoomis.minmax_theorem'</code>.\n  Knowledge nodes: [[math.minimax.loomis_theorem]],\n  [[math.minimax.minimax_from_loomis]].</p>\n</li>\n<li>\n<p><strong>Dantzig minimax</strong> — minimax theorem proved via the Dantzig simplex pivot\n  route (an independent Lean verification of the same equality).\n  Lean: <code>EconCSLib.StrategicGame.MinimaxDantzig :: dantzig_minimax</code>.</p>\n</li>\n<li>\n<p><strong>Matrix-game mixed Nash (Loomis route)</strong> — every finite 2-player zero-sum\n  matrix game has a mixed Nash equilibrium, derived from the Loomis minimax\n  saddle point.\n  Lean: <code>EconCSLib.StrategicGame.MatrixGameNash ::\n  MatrixGame.exists_mixed_nash_equilibrium</code>.\n  Knowledge node: [[game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium]].</p>\n</li>\n<li>\n<p><strong>General n-player finite Nash (Brouwer route)</strong> — every finite strategic\n  game has a mixed Nash equilibrium (Nash 1951).\n  Lean: planned — <code>EconCSLib.StrategicGame.Nash ::\n  exists_mixed_nash_equilibrium_finite</code> (see SG-L2 #199).\n  Knowledge node: [[game_theory.strategic_game.equilibrium.nash_existence_finite_games]].</p>\n</li>\n</ul>\n<h2>Scope</h2>\n<p>This node covers <em>finite</em> games only.  Infinite-horizon, continuous-action, and\nstochastic game results live in their own sections of the knowledge base.  The\nchance-node extension of Kuhn's theorem (requiring vNM lottery utility) is\ntracked by [[game_theory.extensive_game.kuhn_spe_existence_with_chance]].</p>\n<h2>See also</h2>\n<ul>\n<li>[[game_theory.extensive_game.theorems_catalog]] — comprehensive index of extensive-game theorems and their Lean locations.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Ch. 3, 4] Maschler, Solan, and Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n<li>[MFoGT, §§2.3, 4.6, 6.2] Laraki, Renault, and Sorin,\n  <em>Mathematical Foundations of Game Theory</em>,\n  <code>references/MathFoundationsGameTheory.pdf</code>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance",
+      "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium (No-Chance)",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_kuhn_spe_existence_no_chance.html"
+    },
+    {
+      "id": "game_theory.extensive_game.perfect_information.zermelo_determinacy",
+      "title": "Zermelo Determinacy For Finite Perfect-Information Games",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_zermelo_determinacy.html"
+    },
+    {
+      "id": "math.minimax.loomis_theorem",
+      "title": "Loomis Theorem (Positive B)",
+      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_theorem.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium of a Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+      "title": "Nash Existence For Finite Games",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_nash_existence_finite_games.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

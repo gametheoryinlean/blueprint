@@ -1,0 +1,93 @@
+{
+  "topic": {
+    "id": "game_theory.strategic_game.variational",
+    "title": "Game Theory.Strategic Game.Variational",
+    "href": "game_theory/strategic_game/variational/index.html",
+    "parent": "game_theory.strategic_game",
+    "node_count": 1,
+    "descendant_node_count": 1
+  },
+  "counts": {
+    "internal_nodes": 1,
+    "inlined_nodes": 1,
+    "descendant_nodes": 1,
+    "child_topics": 0,
+    "inlined_child_topics": 1,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.variational.evaluation_game_equilibrium",
+      "title": "Evaluation Game Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/variational/game_theory_strategic_game_variational_evaluation_game_equilibrium.html",
+      "payload": "node_payloads/game_theory_strategic_game_variational_evaluation_game_equilibrium.json"
+    }
+  ],
+  "edges": [],
+  "boundary_topics": [
+    {
+      "id": "game_theory.strategic_game.dynamics",
+      "title": "Game Theory.Strategic Game.Dynamics",
+      "href": "game_theory/strategic_game/dynamics/index.html",
+      "role": "dependent",
+      "node_count": 5
+    },
+    {
+      "id": "math.fixed_point",
+      "title": "Math.Fixed Point",
+      "href": "math/fixed_point/index.html",
+      "role": "dependency",
+      "node_count": 5
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:math.fixed_point",
+      "to": "game_theory.strategic_game.variational.evaluation_game_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "math.fixed_point",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.variational.evaluation_game_equilibrium",
+      "to": "topic:game_theory.strategic_game.dynamics",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game.dynamics",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "fixed-point",
+      "title": "fixed-point",
+      "href": "keywords/fixed-point.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 1
+    },
+    {
+      "id": "variational-inequality",
+      "title": "variational-inequality",
+      "href": "keywords/variational-inequality.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "game_theory.strategic_game.variational.evaluation_game_equilibrium"
+  ]
+}

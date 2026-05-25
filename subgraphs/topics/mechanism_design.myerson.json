@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
     {
@@ -128,25 +128,18 @@
   ],
   "boundary_topics": [
     {
-      "id": "auction",
-      "title": "Auction",
-      "href": "auction/index.html",
-      "role": "dependent",
-      "node_count": 19
-    },
-    {
-      "id": "auction.knapsack",
-      "title": "Auction.Knapsack",
-      "href": "auction/knapsack/index.html",
-      "role": "dependent",
-      "node_count": 4
-    },
-    {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
       "role": "dependency",
-      "node_count": 25
+      "node_count": 44
+    },
+    {
+      "id": "mechanism_design.auction",
+      "title": "Mechanism Design.Auction",
+      "href": "mechanism_design/auction/index.html",
+      "role": "dependent",
+      "node_count": 19
     }
   ],
   "boundary_edges": [
@@ -186,39 +179,39 @@
       "count": 2
     },
     {
-      "from": "mechanism_design.myerson.optimal_auction",
-      "to": "topic:auction",
-      "kind": "boundary_dependent",
-      "topic": "auction",
-      "count": 1
-    },
-    {
-      "from": "mechanism_design.myerson.reserve_price",
-      "to": "topic:auction",
-      "kind": "boundary_dependent",
-      "topic": "auction",
-      "count": 1
-    },
-    {
-      "from": "mechanism_design.myerson.revenue_equivalence",
-      "to": "topic:auction",
-      "kind": "boundary_dependent",
-      "topic": "auction",
-      "count": 2
-    },
-    {
       "from": "mechanism_design.myerson.monotonicity_characterization",
-      "to": "topic:auction.knapsack",
+      "to": "topic:mechanism_design.auction",
       "kind": "boundary_dependent",
-      "topic": "auction.knapsack",
+      "topic": "mechanism_design.auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "topic:mechanism_design.auction",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.auction",
       "count": 1
     },
     {
       "from": "mechanism_design.myerson.payment_formula",
-      "to": "topic:auction.knapsack",
+      "to": "topic:mechanism_design.auction",
       "kind": "boundary_dependent",
-      "topic": "auction.knapsack",
+      "topic": "mechanism_design.auction",
       "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.reserve_price",
+      "to": "topic:mechanism_design.auction",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "topic:mechanism_design.auction",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.auction",
+      "count": 2
     }
   ],
   "keywords": [
@@ -310,8 +303,5 @@
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "child_topic_edges": [],
-  "child_boundary_topics": [],
-  "child_boundary_edges": [],
   "inlined_child_topics": []
 }

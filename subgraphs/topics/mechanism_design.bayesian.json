@@ -92,18 +92,18 @@
   ],
   "boundary_topics": [
     {
-      "id": "auction.bayesian",
-      "title": "Auction.Bayesian",
-      "href": "auction/bayesian/index.html",
-      "role": "dependent",
-      "node_count": 8
-    },
-    {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 25
+      "node_count": 44
+    },
+    {
+      "id": "mechanism_design.auction",
+      "title": "Mechanism Design.Auction",
+      "href": "mechanism_design/auction/index.html",
+      "role": "dependent",
+      "node_count": 19
     }
   ],
   "boundary_edges": [
@@ -129,20 +129,6 @@
       "count": 1
     },
     {
-      "from": "mechanism_design.bayesian.bayesian_mechanisms",
-      "to": "topic:auction.bayesian",
-      "kind": "boundary_dependent",
-      "topic": "auction.bayesian",
-      "count": 1
-    },
-    {
-      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
-      "to": "topic:auction.bayesian",
-      "kind": "boundary_dependent",
-      "topic": "auction.bayesian",
-      "count": 1
-    },
-    {
       "from": "mechanism_design.bayesian.ex_ante_expected_utility",
       "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
@@ -155,6 +141,20 @@
       "kind": "boundary_dependent",
       "topic": "mechanism_design",
       "count": 2
+    },
+    {
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
+      "to": "topic:mechanism_design.auction",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.auction",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "topic:mechanism_design.auction",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design.auction",
+      "count": 1
     }
   ],
   "keywords": [
@@ -222,8 +222,5 @@
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "child_topic_edges": [],
-  "child_boundary_topics": [],
-  "child_boundary_edges": [],
   "inlined_child_topics": []
 }

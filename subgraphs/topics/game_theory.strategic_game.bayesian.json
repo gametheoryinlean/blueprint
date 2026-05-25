@@ -1,0 +1,234 @@
+{
+  "topic": {
+    "id": "game_theory.strategic_game.bayesian",
+    "title": "Game Theory.Strategic Game.Bayesian",
+    "href": "game_theory/strategic_game/bayesian/index.html",
+    "parent": "game_theory.strategic_game",
+    "node_count": 6,
+    "descendant_node_count": 6
+  },
+  "counts": {
+    "internal_nodes": 6,
+    "inlined_nodes": 6,
+    "descendant_nodes": 6,
+    "child_topics": 0,
+    "inlined_child_topics": 6,
+    "non_proof_plan_nodes": 6,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 4,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.bayesian.agent_normal_form",
+      "title": "Agent Normal Form Of A Bayesian Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_agent_normal_form.html",
+      "payload": "node_payloads/game_theory_strategic_game_bayesian_agent_normal_form.json"
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian.bayesian_equilibrium",
+      "title": "Bayesian Equilibrium",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_bayesian_equilibrium.html",
+      "payload": "node_payloads/game_theory_strategic_game_bayesian_bayesian_equilibrium.json"
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian.bayesian_equilibrium_as_nash",
+      "title": "Bayesian Equilibrium As Nash Equilibrium",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_bayesian_equilibrium_as_nash.html",
+      "payload": "node_payloads/game_theory_strategic_game_bayesian_bayesian_equilibrium_as_nash.json"
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian.bayesian_game",
+      "title": "Bayesian Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_bayesian_game.html",
+      "payload": "node_payloads/game_theory_strategic_game_bayesian_bayesian_game.json"
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian.bayesian_strategy",
+      "title": "Bayesian Strategy",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_bayesian_strategy.html",
+      "payload": "node_payloads/game_theory_strategic_game_bayesian_bayesian_strategy.json"
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists",
+      "title": "Finite Bayesian Equilibrium Exists",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_finite_bayesian_equilibrium_exists.html",
+      "payload": "node_payloads/game_theory_strategic_game_bayesian_finite_bayesian_equilibrium_exists.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "game_theory.strategic_game.bayesian.bayesian_game",
+      "to": "game_theory.strategic_game.bayesian.agent_normal_form",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.bayesian.bayesian_strategy",
+      "to": "game_theory.strategic_game.bayesian.bayesian_equilibrium",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.bayesian.agent_normal_form",
+      "to": "game_theory.strategic_game.bayesian.bayesian_equilibrium_as_nash",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.bayesian.bayesian_equilibrium",
+      "to": "game_theory.strategic_game.bayesian.bayesian_equilibrium_as_nash",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.bayesian.bayesian_game",
+      "to": "game_theory.strategic_game.bayesian.bayesian_strategy",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.bayesian.bayesian_equilibrium_as_nash",
+      "to": "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "game_theory.repeated_game",
+      "title": "Game Theory.Repeated Game",
+      "href": "game_theory/repeated_game/index.html",
+      "role": "dependent",
+      "node_count": 17
+    },
+    {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency",
+      "node_count": 206
+    },
+    {
+      "id": "game_theory.strategic_game.core",
+      "title": "Game Theory.Strategic Game.Core",
+      "href": "game_theory/strategic_game/core/index.html",
+      "role": "dependency",
+      "node_count": 6
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium",
+      "title": "Game Theory.Strategic Game.Equilibrium",
+      "href": "game_theory/strategic_game/equilibrium/index.html",
+      "role": "dependency",
+      "node_count": 10
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.bayesian.bayesian_equilibrium",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.bayesian.bayesian_game",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.core",
+      "to": "game_theory.strategic_game.bayesian.bayesian_strategy",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.core",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game.equilibrium",
+      "to": "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.equilibrium",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.bayesian.bayesian_game",
+      "to": "topic:game_theory.repeated_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.repeated_game",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "bayesian-equilibrium",
+      "title": "bayesian-equilibrium",
+      "href": "keywords/bayesian-equilibrium.html",
+      "count": 3
+    },
+    {
+      "id": "bayesian-game",
+      "title": "bayesian-game",
+      "href": "keywords/bayesian-game.html",
+      "count": 6
+    },
+    {
+      "id": "existence",
+      "title": "existence",
+      "href": "keywords/existence.html",
+      "count": 1
+    },
+    {
+      "id": "incomplete-information",
+      "title": "incomplete-information",
+      "href": "keywords/incomplete-information.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "normal-form",
+      "title": "normal-form",
+      "href": "keywords/normal-form.html",
+      "count": 1
+    },
+    {
+      "id": "strategic-game",
+      "title": "strategic-game",
+      "href": "keywords/strategic-game.html",
+      "count": 6
+    },
+    {
+      "id": "strategy",
+      "title": "strategy",
+      "href": "keywords/strategy.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "game_theory.strategic_game.bayesian.agent_normal_form",
+    "game_theory.strategic_game.bayesian.bayesian_equilibrium",
+    "game_theory.strategic_game.bayesian.bayesian_equilibrium_as_nash",
+    "game_theory.strategic_game.bayesian.bayesian_game",
+    "game_theory.strategic_game.bayesian.bayesian_strategy",
+    "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists"
+  ]
+}

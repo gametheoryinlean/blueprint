@@ -1,0 +1,38 @@
+{
+  "id": "math.minimax.ordered_field_minimax",
+  "title": "Ordered-Field Minimax Statement",
+  "kind": "theorem",
+  "status": "admitted",
+  "href": "game_theory/strategic_game/zero_sum/math_minimax_ordered_field_minimax.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "math.minimax",
+    "math.minimax.structure"
+  ],
+  "body_html": "<h1>Ordered-Field Minimax Statement</h1>\n<p>The finite minimax theorem admits an ordered-field form: if the payoff\nmatrix has entries in an ordered field and the proof is carried out\nalgebraically through finitely many weak linear inequalities, then the\nvalue and optimal mixed strategies can be taken over that ordered field.</p>",
+  "proof_html": "<p>Use an algebraic proof route for finite minimax, such as the\nlinear-programming or Dantzig route, whose steps are finite systems of weak\nlinear inequalities, pivot operations, and normalisations by positive\nelements. These operations make sense over any ordered field. The terminal\ninequalities are precisely the two minimax optimality systems, so the\nextracted mixed strategies and value lie in the same ordered field as the\nmatrix entries.</p>\n<p>The Lean statement is <code>MinimaxDantzig.dantzig_minimax</code>, polymorphic in\n<code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code>. Most of its proof is\ndone; the only remaining gap is the simplex-termination step (tracked by\nthe proof-plan node <code>zero_sum.dantzig_proof_spine</code>), so this node is\n<code>admitted</code> rather than <code>formalized</code>. The ℝ-specialisation is independently\nclosed by the Loomis route (<a class=\"node-ref\" data-node-id=\"game_theory.strategic_game.zero_sum.von_neumann_minimax\" href=\"game_theory_strategic_game_zero_sum_von_neumann_minimax.html\">Von Neumann Minimax Theorem</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3, paragraph after the proof of Thm. 2.3.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Ordered-field generalization via finite weak linear inequalities.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "dantzig_minimax",
+      "display_name": "dantzig_minimax",
+      "qualified_name": "dantzig_minimax",
+      "module": "EconCSLib.Math.Minimax.Dantzig",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Minimax/Dantzig.lean#L480",
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

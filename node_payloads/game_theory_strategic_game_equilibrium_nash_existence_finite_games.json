@@ -1,0 +1,63 @@
+{
+  "id": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
+  "title": "Nash Existence For Finite Games",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_nash_existence_finite_games.html",
+  "primary_topic": "game_theory.strategic_game.equilibrium",
+  "topics": [
+    "game_theory.strategic_game.equilibrium"
+  ],
+  "body_html": "<h1>Nash Existence For Finite Games</h1>\n<p>Every finite strategic game has a mixed equilibrium.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>MFoGT constructs Nash's continuous self-map $f$ on\n$$\n  \\Delta=\\prod_{i\\in I}\\Delta(S_i)\n$$\nby increasing the weight of pure strategies whose payoff exceeds the current\nexpected payoff. Brouwer's fixed point theorem gives $\\sigma=f(\\sigma)$. At such\na fixed point, no player can have a pure strategy with strictly larger payoff than\n$g_i(\\sigma)$; otherwise the normalization equation forces a contradiction for a\nstrategy in the support. Hence $\\sigma$ is a mixed Nash equilibrium.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 4.6.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Every finite game has a mixed equilibrium.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "math.fixed_point.brouwer_compact_convex",
+      "title": "Brouwer Fixed Point Theorem",
+      "href": "math/fixed_point/math_fixed_point_brouwer_compact_convex.html"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
+      "title": "Mixed Nash Equilibrium",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_mixed_nash_equilibrium.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.extensive_game.imperfect_information.behavioral_equilibrium_exists",
+      "title": "Existence Of Behavioral Equilibrium",
+      "href": "game_theory/extensive_game/imperfect_information/game_theory_extensive_game_imperfect_information_behavioral_equilibrium_exists.html"
+    },
+    {
+      "id": "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists",
+      "title": "Finite Bayesian Equilibrium Exists",
+      "href": "game_theory/strategic_game/bayesian/game_theory_strategic_game_bayesian_finite_bayesian_equilibrium_exists.html"
+    },
+    {
+      "id": "game_theory.strategic_game.correlated.correlated_equilibrium_exists",
+      "title": "Correlated Equilibrium Exists In Finite Games",
+      "href": "game_theory/strategic_game/correlated/game_theory_strategic_game_correlated_correlated_equilibrium_exists.html"
+    },
+    {
+      "id": "game_theory.strategic_game.equilibrium.symmetric_mixed_equilibrium",
+      "title": "Symmetric Mixed Equilibrium",
+      "href": "game_theory/strategic_game/equilibrium/game_theory_strategic_game_equilibrium_symmetric_mixed_equilibrium.html"
+    },
+    {
+      "id": "game_theory.strategic_game.finite_game_catalog",
+      "title": "Finite Game Catalog",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_finite_game_catalog.html"
+    },
+    {
+      "id": "game_theory.strategic_game.refinements.perfect_equilibrium_exists",
+      "title": "Existence Of Perfect Equilibrium",
+      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_perfect_equilibrium_exists.html"
+    },
+    {
+      "id": "math.fixed_point.kakutani_from_two_player_nash",
+      "title": "Kakutani From Two-Player Nash Existence",
+      "href": "game_theory/strategic_game/equilibrium/math_fixed_point_kakutani_from_two_player_nash.html"
+    }
+  ],
+  "lean_refs": []
+}

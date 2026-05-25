@@ -1,0 +1,56 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.zero_sum_payoff_negation",
+  "title": "Payoff Negation in Zero-Sum Games",
+  "kind": "lemma",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_zero_sum_payoff_negation.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.core"
+  ],
+  "body_html": "<h1>Payoff Negation in Zero-Sum Games</h1>\n<p>If $G$ is zero-sum, then at every profile $\\sigma$ the payoff of either player\ndetermines the other:</p>\n<p>$$u_1(\\sigma) = -u_0(\\sigma), \\qquad u_0(\\sigma) = -u_1(\\sigma).$$</p>\n<p>This is the algebraic reduction that lets later value and optimality statements\ntrack only the row player's payoff.</p>",
+  "proof_html": "<p>The zero-sum hypothesis says\n$$\n  u_0(\\sigma)+u_1(\\sigma)=0\n$$\nat every profile $\\sigma$. Rearranging in the underlying additive group gives\n$u_1(\\sigma)=-u_0(\\sigma)$, and applying the same rearrangement with the players\ninterchanged gives $u_0(\\sigma)=-u_1(\\sigma)$.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 4, Section 4.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Immediate algebraic consequence of zero-sum payoffs.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.zero_sum_game",
+      "title": "Zero-Sum Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_zero_sum_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.zero_sum_nash_value_unique",
+      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_zero_sum_nash_value_unique.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "StrategicGame.IsZeroSum.neg",
+      "display_name": "StrategicGame.IsZeroSum.neg",
+      "qualified_name": "StrategicGame.IsZeroSum.neg",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L110",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "StrategicGame.IsZeroSum.neg'",
+      "display_name": "StrategicGame.IsZeroSum.neg'",
+      "qualified_name": "StrategicGame.IsZeroSum.neg'",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L116",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

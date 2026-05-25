@@ -1,0 +1,68 @@
+{
+  "id": "foundation.utility.lottery",
+  "title": "Lottery",
+  "kind": "definition",
+  "status": "staged",
+  "href": "foundation/utility/foundation_utility_lottery.html",
+  "primary_topic": "foundation.utility",
+  "topics": [
+    "foundation.utility"
+  ],
+  "body_html": "<h1>Lottery</h1>\n<p>For a finite set of outcomes $O$, a lottery is a probability distribution on\n$O$. The degenerate lottery at $o\\in O$ assigns probability one to $o$.</p>\n<p>Given lotteries $L_1,L_2$ and a scalar $\\alpha\\in[0,1]$, the compound lottery\n$$\n  [\\alpha L_1,(1-\\alpha)L_2]\n$$\nis the lottery assigning each outcome the probability\n$$\n  \\alpha L_1(o)+(1-\\alpha)L_2(o).\n$$</p>\n<h2>Implementation note</h2>\n<p><code>Lottery 𝕜 O</code> is a domain-flavored <code>abbrev</code> for <code>stdSimplex 𝕜 O</code>. The\nconstructors <code>Lottery.pure</code> and <code>Lottery.mix</code> are definitional aliases for\n<code>stdSimplex.pure</code> and <code>stdSimplex.mix</code> from <code>Core.Simplex</code>; the canonical\nalgebra (<code>Lottery.expectedValue_pure</code>, <code>Lottery.expectedValue_mix</code>,\n<code>Lottery.expectedValue_mono</code>, <code>Lottery.expectedValue_const</code>) is one-line\nwrappers over <code>wsum_pure_apply</code>, <code>wsum_mix</code>, <code>wsum_le_wsum</code>, <code>wsum_const</code>.\nSee [[math.simplex.mix]] for the underlying convex-combination vocabulary.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Definitions 2.9-2.11] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Lotteries, degenerate lotteries, and compound lotteries.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "foundation.preference.relation",
+      "title": "Preference Relation (MSZ Ch.2 Narrative)",
+      "href": "foundation/foundation_preference_relation.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "foundation.utility.vnm_axioms",
+      "title": "Von Neumann Morgenstern Axioms",
+      "href": "foundation/utility/foundation_utility_vnm_axioms.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Lottery",
+      "display_name": "Lottery",
+      "qualified_name": "Lottery",
+      "module": "EconCSLib.Foundation.Utility.Lottery",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/Lottery.lean#L43",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Lottery.pure",
+      "display_name": "Lottery.pure",
+      "qualified_name": "Lottery.pure",
+      "module": "EconCSLib.Foundation.Utility.Lottery",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/Lottery.lean#L58",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Lottery.mix",
+      "display_name": "Lottery.mix",
+      "qualified_name": "Lottery.mix",
+      "module": "EconCSLib.Foundation.Utility.Lottery",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/Lottery.lean#L66",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

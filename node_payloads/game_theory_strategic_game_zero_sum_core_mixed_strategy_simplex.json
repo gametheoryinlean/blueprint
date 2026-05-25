@@ -1,0 +1,84 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex",
+  "title": "Mixed Strategy Simplex",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_mixed_strategy_simplex.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.core"
+  ],
+  "body_html": "<h1>Mixed Strategy Simplex</h1>\n<p>For a finite set $S$, the mixed strategy simplex $\\Delta(S)$ is the set of\nprobability vectors on $S$:\n$$\n  \\Delta(S)=\\{x \\in \\mathbb{R}^S : x_s \\ge 0 \\text{ for all } s,\\ \n  \\sum_{s \\in S} x_s = 1\\}.\n$$\nThe Lean library uses Mathlib's <code>stdSimplex ℝ S</code> for this set, with\n<code>stdSimplex.pure i</code> for the Dirac point mass at $i$ and <code>wsum x f</code> (a\ndefinitional abbreviation for the dot product <code>x ⬝ᵥ f</code>) for the weighted\nsum of a function $f \\colon S \\to \\mathbb{R}$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Delta(S) is the simplex of probabilities on a finite set S.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.mixed_extension",
+      "title": "Mixed Extension Of A Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_mixed_extension.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.mixed_support",
+      "title": "Support Of A Mixed Strategy",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_mixed_support.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.learning.empirical_frequency",
+      "title": "Empirical Frequency Of Play",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_learning_empirical_frequency.html"
+    },
+    {
+      "id": "math.linear_programming.minimax_bridge.player_1_lp",
+      "title": "Player-1 LP Formulation of a Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_player_1_lp.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "stdSimplex",
+      "display_name": "stdSimplex",
+      "qualified_name": null,
+      "module": null,
+      "repository_title": null,
+      "revision": null,
+      "short_revision": null,
+      "source_url": null,
+      "has_sorry": false,
+      "status": "unresolved",
+      "reason": "not found in configured Lean repository"
+    },
+    {
+      "name": "stdSimplex.pure",
+      "display_name": "stdSimplex.pure",
+      "qualified_name": "stdSimplex.pure",
+      "module": "EconCSLib.Math.Simplex",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Simplex.lean#L313",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "wsum",
+      "display_name": "wsum",
+      "qualified_name": "wsum",
+      "module": "EconCSLib.Math.Simplex",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Simplex.lean#L82",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

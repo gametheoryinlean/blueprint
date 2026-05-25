@@ -1,0 +1,112 @@
+{
+  "topic": {
+    "id": "game_theory.stochastic_game.core",
+    "title": "Game Theory.Stochastic Game.Core",
+    "href": "game_theory/stochastic_game/core/index.html",
+    "parent": "game_theory.stochastic_game",
+    "node_count": 2,
+    "descendant_node_count": 2
+  },
+  "counts": {
+    "internal_nodes": 2,
+    "inlined_nodes": 0,
+    "descendant_nodes": 2,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 2,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
+  },
+  "nodes": [
+    {
+      "id": "game_theory.stochastic_game.core.history",
+      "title": "Stochastic Game History",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/stochastic_game/game_theory_stochastic_game_core_history.html",
+      "payload": "node_payloads/game_theory_stochastic_game_core_history.json"
+    },
+    {
+      "id": "game_theory.stochastic_game.core.stochastic_game",
+      "title": "Stochastic Game",
+      "kind": "definition",
+      "status": "staged",
+      "href": "game_theory/stochastic_game/game_theory_stochastic_game_core_stochastic_game.html",
+      "payload": "node_payloads/game_theory_stochastic_game_core_stochastic_game.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "game_theory.stochastic_game.core.stochastic_game",
+      "to": "game_theory.stochastic_game.core.history",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "game_theory.stochastic_game",
+      "title": "Game Theory.Stochastic Game",
+      "href": "game_theory/stochastic_game/index.html",
+      "role": "dependent",
+      "node_count": 10
+    },
+    {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency",
+      "node_count": 206
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.stochastic_game.core.stochastic_game",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "game_theory.stochastic_game.core.history",
+      "to": "topic:game_theory.stochastic_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.stochastic_game",
+      "count": 2
+    },
+    {
+      "from": "game_theory.stochastic_game.core.stochastic_game",
+      "to": "topic:game_theory.stochastic_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.stochastic_game",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "history",
+      "title": "history",
+      "href": "keywords/history.html",
+      "count": 1
+    },
+    {
+      "id": "state-dynamics",
+      "title": "state-dynamics",
+      "href": "keywords/state-dynamics.html",
+      "count": 1
+    },
+    {
+      "id": "stochastic-game",
+      "title": "stochastic-game",
+      "href": "keywords/stochastic-game.html",
+      "count": 2
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

@@ -1,0 +1,76 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.examples.matching_pennies",
+  "title": "Matching Pennies",
+  "kind": "example",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_examples_matching_pennies.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.examples"
+  ],
+  "body_html": "<h1>Matching Pennies</h1>\n<p>Matching Pennies is the matrix game\n$$\n  \\begin{pmatrix}\n  1 &amp; -1\\\\\n  -1 &amp; 1\n  \\end{pmatrix}.\n$$\nIts pure maxmin is $-1$ and its pure minmax is $1$, so it has no value in pure\nstrategies.  Its mixed extension has value $0$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Matching Pennies matrix and pure duality gap.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_value.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "EconCSLib.StrategicGame.Examples.matchingPennies",
+      "display_name": "EconCSLib.StrategicGame.Examples.matchingPennies",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.matchingPennies",
+      "module": "EconCSLib.Examples.StrategicGame.MatchingPennies",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/MatchingPennies.lean#L27",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.matchingPennies_value",
+      "display_name": "EconCSLib.StrategicGame.Examples.matchingPennies_value",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.matchingPennies_value",
+      "module": "EconCSLib.Examples.StrategicGame.MatchingPennies",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/MatchingPennies.lean#L56",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_row_optimal",
+      "display_name": "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_row_optimal",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_row_optimal",
+      "module": "EconCSLib.Examples.StrategicGame.MatchingPennies",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/MatchingPennies.lean#L63",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_column_optimal",
+      "display_name": "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_column_optimal",
+      "qualified_name": "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_column_optimal",
+      "module": "EconCSLib.Examples.StrategicGame.MatchingPennies",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Examples/StrategicGame/MatchingPennies.lean#L80",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

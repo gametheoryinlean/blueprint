@@ -1,0 +1,62 @@
+{
+  "id": "game_theory.strategic_game.weakly_dominant_strategy",
+  "title": "Weakly Dominant Strategy",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_weakly_dominant_strategy.html",
+  "primary_topic": "game_theory.strategic_game",
+  "topics": [
+    "game_theory.strategic_game"
+  ],
+  "body_html": "<h1>Weakly Dominant Strategy</h1>\n<p>A strategy $s_i$ is weakly dominant for player $i$ if it weakly dominates every\nother strategy available to $i$:</p>\n<p>$$\\forall s'_i \\in S_i, \\quad s_i \\text{ weakly dominates } s'_i.$$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Section 2.3] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of weakly dominant strategy.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.weakly_dominates",
+      "title": "Weak Dominance",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_weakly_dominates.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.dominant_implies_nash",
+      "title": "Dominant Strategy Profile is a Nash Equilibrium",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dominant_implies_nash.html"
+    },
+    {
+      "id": "game_theory.strategic_game.prisoners_dilemma",
+      "title": "Prisoner's Dilemma",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_prisoners_dilemma.html"
+    },
+    {
+      "id": "mechanism_design.auction.basic.first_price_no_dsic",
+      "title": "First-Price Fails DSIC",
+      "href": "mechanism_design/auction/mechanism_design_auction_basic_first_price_no_dsic.html"
+    },
+    {
+      "id": "mechanism_design.auction.basic.second_price_dsic",
+      "title": "Vickrey Truth-Telling Is Dominant",
+      "href": "mechanism_design/auction/mechanism_design_auction_basic_second_price_dsic.html"
+    },
+    {
+      "id": "mechanism_design.basic.dsic_predicate",
+      "title": "DSIC Predicate",
+      "href": "mechanism_design/mechanism_design_basic_dsic_predicate.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "IsWeaklyDominant",
+      "display_name": "IsWeaklyDominant",
+      "qualified_name": "IsWeaklyDominant",
+      "module": "EconCSLib.GameTheory.StrategicGame.Dominance",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L32",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

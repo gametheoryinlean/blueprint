@@ -1,0 +1,74 @@
+{
+  "id": "game_theory.extensive_game.imperfect_information.imperfect_information_pure_strategy",
+  "title": "Pure Strategy With Imperfect Information",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/extensive_game/game_theory_extensive_game_imperfect_information_imperfect_information_pure_strategy.html",
+  "primary_topic": "game_theory.extensive_game",
+  "topics": [
+    "game_theory.extensive_game",
+    "game_theory.extensive_game.imperfect_information"
+  ],
+  "body_html": "<h1>Pure Strategy With Imperfect Information</h1>\n<p>For player $i$ in an imperfect-information extensive game, a pure strategy is a\nfunction assigning to every information set $P^i_k$ an action\n$$\n  a_i\\in A_i(P^i_k).\n$$\nA pure strategy profile again induces a unique terminal outcome, so every finite\nextensive game has an associated normal form.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 6.3.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A pure strategy maps each information set to an available action.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.extensive_game.imperfect_information.action_at_information_set",
+      "title": "Action At An Information Set",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_imperfect_information_action_at_information_set.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.extensive_game.imperfect_information.mixed_behavioral_general_strategies",
+      "title": "Mixed Behavioral And General Strategies",
+      "href": "game_theory/extensive_game/imperfect_information/game_theory_extensive_game_imperfect_information_mixed_behavioral_general_strategies.html"
+    },
+    {
+      "id": "game_theory.extensive_game.normal_form.extensive_normal_form_invariance",
+      "title": "Normal Form Invariance Of Extensive Representations",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_normal_form_extensive_normal_form_invariance.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "FiniteImperfectGame.PureStrategy",
+      "display_name": "FiniteImperfectGame.PureStrategy",
+      "qualified_name": "FiniteImperfectGame.PureStrategy",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L96",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "FiniteImperfectGame.PureStrategyProfile",
+      "display_name": "FiniteImperfectGame.PureStrategyProfile",
+      "qualified_name": "FiniteImperfectGame.PureStrategyProfile",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L100",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "FiniteImperfectGame.PureStrategy.actionAt",
+      "display_name": "FiniteImperfectGame.PureStrategy.actionAt",
+      "qualified_name": "FiniteImperfectGame.PureStrategy.actionAt",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L105",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

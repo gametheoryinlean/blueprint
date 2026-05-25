@@ -1,0 +1,158 @@
+{
+  "topic": {
+    "id": "math.linear_algebra",
+    "title": "Math.Linear Algebra",
+    "href": "math/linear_algebra/index.html",
+    "parent": "math",
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "inlined_nodes": 3,
+    "descendant_nodes": 4,
+    "child_topics": 0,
+    "inlined_child_topics": 1,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.applications.perron_frobenius_positive_matrix",
+      "title": "Perron-Frobenius For Positive Matrices",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_perron_frobenius_positive_matrix.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_applications_perron_frobenius_positive_matrix.json"
+    },
+    {
+      "id": "math.linear_algebra.farkas_lemma",
+      "title": "Farkas Lemma",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "foundation/math_linear_algebra_farkas_lemma.html",
+      "payload": "node_payloads/math_linear_algebra_farkas_lemma.json"
+    },
+    {
+      "id": "math.linear_algebra.theorem_of_alternative",
+      "title": "Theorem Of The Alternative",
+      "kind": "theorem",
+      "status": "formalized",
+      "href": "foundation/math_linear_algebra_theorem_of_alternative.html",
+      "payload": "node_payloads/math_linear_algebra_theorem_of_alternative.json"
+    },
+    {
+      "id": "math.linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "title": "Fourier-Motzkin Elimination Step",
+      "kind": "lemma",
+      "status": "formalized",
+      "href": "foundation/math_linear_algebra_theorem_of_alternative_fourier_motzkin.html",
+      "payload": "node_payloads/math_linear_algebra_theorem_of_alternative_fourier_motzkin.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "math.linear_algebra.theorem_of_alternative",
+      "to": "math.linear_algebra.farkas_lemma",
+      "kind": "uses"
+    },
+    {
+      "from": "math.linear_algebra.theorem_of_alternative.fourier_motzkin",
+      "to": "math.linear_algebra.theorem_of_alternative",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "foundation",
+      "title": "Foundation",
+      "href": "foundation/index.html",
+      "role": "dependent",
+      "node_count": 27
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum",
+      "title": "Game Theory.Strategic Game.Zero Sum",
+      "href": "game_theory/strategic_game/zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 100
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game.zero_sum",
+      "to": "game_theory.strategic_game.zero_sum.applications.perron_frobenius_positive_matrix",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.zero_sum",
+      "count": 1
+    },
+    {
+      "from": "math.linear_algebra.farkas_lemma",
+      "to": "topic:foundation",
+      "kind": "boundary_dependent",
+      "topic": "foundation",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "alternatives",
+      "title": "alternatives",
+      "href": "keywords/alternatives.html",
+      "count": 2
+    },
+    {
+      "id": "convexity",
+      "title": "convexity",
+      "href": "keywords/convexity.html",
+      "count": 2
+    },
+    {
+      "id": "elimination",
+      "title": "elimination",
+      "href": "keywords/elimination.html",
+      "count": 1
+    },
+    {
+      "id": "farkas",
+      "title": "farkas",
+      "href": "keywords/farkas.html",
+      "count": 1
+    },
+    {
+      "id": "fourier-motzkin",
+      "title": "fourier-motzkin",
+      "href": "keywords/fourier-motzkin.html",
+      "count": 2
+    },
+    {
+      "id": "linear-algebra",
+      "title": "linear-algebra",
+      "href": "keywords/linear-algebra.html",
+      "count": 4
+    },
+    {
+      "id": "perron-frobenius",
+      "title": "perron-frobenius",
+      "href": "keywords/perron-frobenius.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": [
+    "math.linear_algebra.alternatives"
+  ]
+}

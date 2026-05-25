@@ -1,0 +1,44 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem",
+  "title": "Sion Minimax Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_continuous_sion_minimax_theorem.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.continuous"
+  ],
+  "body_html": "<h1>Sion Minimax Theorem</h1>\n<p>Let $G=(S,T,g)$ be a zero-sum game where $S$ and $T$ are subsets of Hausdorff\ntopological real vector spaces. Assume:</p>\n<ol>\n<li>$S$ and $T$ are convex;</li>\n<li>at least one of $S,T$ is compact;</li>\n<li>for each $t\\in T$, $g(\\cdot,t)$ is quasi-concave and upper semicontinuous in\n   $s$;</li>\n<li>for each $s\\in S$, $g(s,\\cdot)$ is quasi-convex and lower semicontinuous in\n   $t$.</li>\n</ol>\n<p>Then $G$ has a value:\n$$\n  \\sup_{s\\in S}\\inf_{t\\in T}g(s,t)\n  =\n  \\inf_{t\\in T}\\sup_{s\\in S}g(s,t).\n$$\nMoreover, if $S$ is compact then player 1 has an optimal strategy, and if $T$ is\ncompact then player 2 has an optimal strategy.</p>",
+  "proof_html": "<p>Assume, for example, that $S$ is compact and suppose the two sides are separated\nby a real number $v$. Open-cover compactness first reduces to finite subsets of\nstrategies, then to compact convex hulls. Minimality of the finite reduction and the\nintersection lemma produce a point $t_0$ against which all reduced player-1\nstrategies yield payoff greater than $v$, and symmetrically a point $s_0$ against\nwhich all reduced player-2 strategies yield payoff less than $v$. The value\n$g(s_0,t_0)$ gives a contradiction.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 3.2.4] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Pure-strategy minimax theorem under convexity, compactness, and semicontinuity hypotheses.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.value",
+      "title": "Value Of A Zero-Sum Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_value.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.continuous.quasi_concavity_semicontinuity",
+      "title": "Quasi-Concavity And Semicontinuity",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_continuous_quasi_concavity_semicontinuity.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.continuous.intersection_lemma",
+      "title": "Intersection Lemma",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_continuous_intersection_lemma.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.continuous.pure_minimax_compact_convex_one_sided",
+      "title": "One-Sided Compact Convex Minimax",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_continuous_pure_minimax_compact_convex_one_sided.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.continuous.sion_boundary_counterexample",
+      "title": "Sion Boundary Counterexample",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_continuous_sion_boundary_counterexample.html"
+    }
+  ],
+  "lean_refs": []
+}

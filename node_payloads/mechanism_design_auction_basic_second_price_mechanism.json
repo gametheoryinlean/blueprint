@@ -1,0 +1,180 @@
+{
+  "id": "mechanism_design.auction.basic.second_price_mechanism",
+  "title": "Second-Price (Vickrey) Mechanism",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "mechanism_design/auction/mechanism_design_auction_basic_second_price_mechanism.html",
+  "primary_topic": "mechanism_design.auction",
+  "topics": [
+    "mechanism_design.auction",
+    "mechanism_design.auction.basic"
+  ],
+  "body_html": "<h1>Second-Price (Vickrey) Mechanism</h1>\n<p>The second-price (Vickrey) auction is a sealed-bid single-item mechanism in\nwhich the bidder submitting the highest bid wins the item, and the winner pays\nthe second-highest bid. All other bidders pay nothing.</p>\n<h2>Setup</h2>\n<p>Fix a finite, nontrivial bidder set <code>I</code> and an ordered abelian group <code>U</code> of\nbids and utilities (for example <code>ℚ</code> or <code>ℝ</code>). Bids form a profile <code>b : I → U</code>.</p>\n<ul>\n<li><code>winner b : I</code> — the bidder with the highest bid, defined as\n  <code>Auction.argmaxBid b</code>. Ties are broken by the deterministic argmax of the\n  basic auction layer ([[mechanism_design.auction.basic.ordered_bid_utilities]]).</li>\n<li><code>secondPrice b : U</code> — the highest bid among all bidders other than the\n  winner, defined as <code>Auction.maxBidExcluding b (winner b)</code>.</li>\n<li><code>utility v b i : U</code> — quasi-linear payoff for bidder <code>i</code> at valuation\n  profile <code>v</code> and bid profile <code>b</code>:\n  $$\n  u_i(v, b) \\;=\\; \\begin{cases} v_i - \\mathrm{secondPrice}(b) &amp; i = \\mathrm{winner}(b),\\\\ 0 &amp; \\text{otherwise}.\\end{cases}\n  $$</li>\n</ul>\n<h2>Basic properties</h2>\n<ul>\n<li><code>secondPrice_le_bid_winner</code>: the second-highest bid never exceeds the\n  winning bid, $\\mathrm{secondPrice}(b) \\le b(\\mathrm{winner}\\,b)$.</li>\n<li><code>utility_winner</code>, <code>utility_loser</code>: the case analysis of <code>utility</code> as\n  computational lemmas.</li>\n<li><code>utility_nonneg</code>: truthful bidding ($b_i = v_i$) yields nonnegative payoff\n  for bidder <code>i</code>, regardless of opponents' bids.</li>\n</ul>\n<h2>Mechanism and strategic-game packaging</h2>\n<ul>\n<li><code>mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U</code> packages the\n  second-price auction as a transfer mechanism\n  ([[mechanism_design.transfer.mechanisms_with_transfers]]): the report type\n  is <code>U</code> per bidder, the allocation type is <code>I</code> (the winning bidder), and\n  payments live in <code>U</code> with <code>paymentRule b w = if w = winner b then\n  secondPrice b else 0</code>.</li>\n<li><code>game v : StrategicGame I U</code> packages the same mechanism as a strategic\n  game with bid profile <code>b</code> as the strategy profile and the quasi-linear\n  payoff above as the utility function.</li>\n<li><code>game_eq_toStrategicGame</code> certifies that <code>game v</code> agrees with\n  <code>mechanism.toStrategicGame</code> for the auction utility function.</li>\n</ul>\n<h2>Position in the library</h2>\n<p>The second-price auction is an instance of the general transfer-mechanism\ninterface ([[mechanism_design.transfer.mechanisms_with_transfers]]). Its\nDSIC property is proved in the companion theorem node\n[[mechanism_design.auction.basic.second_price_dsic]]. The first-price auction with the same\nallocation rule but different payment is in\n[[mechanism_design.auction.basic.first_price_mechanism]].</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 1, Section 1.2.4 and Exercise 4] Maschler, Solan, and\n  Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Vickrey auction example.</li>\n<li>[AGT, Chapter 9, Section 9.3.2] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Vickrey\n  auction as the canonical truthful single-item mechanism.</li>\n<li>[Krishna, Chapter 2] Vijay Krishna, <em>Auction Theory</em>, 2nd ed.,\n  <code>references/AuctionTheory.pdf</code>. Standard second-price sealed-bid auction\n  formulation.</li>\n<li>[Vickrey 1961] William Vickrey, \"Counterspeculation, Auctions, and\n  Competitive Sealed Tenders\", <em>Journal of Finance</em> 16(1):8–37.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "href": "mechanism_design/auction/mechanism_design_auction_basic_formats.html"
+    },
+    {
+      "id": "mechanism_design.auction.basic.ordered_bid_utilities",
+      "title": "Ordered-Bid Utilities",
+      "href": "mechanism_design/auction/mechanism_design_auction_basic_ordered_bid_utilities.html"
+    },
+    {
+      "id": "mechanism_design.transfer.mechanisms_with_transfers",
+      "title": "Mechanisms With Transfers",
+      "href": "mechanism_design/mechanism_design_transfer_mechanisms_with_transfers.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.auction.basic.second_price_dsic",
+      "title": "Vickrey Truth-Telling Is Dominant",
+      "href": "mechanism_design/auction/mechanism_design_auction_basic_second_price_dsic.html"
+    },
+    {
+      "id": "mechanism_design.auction.bayesian.english_second_price_equivalence",
+      "title": "English ≡ Second-Price IPV Equivalence",
+      "href": "mechanism_design/auction/mechanism_design_auction_bayesian_english_second_price_equivalence.html"
+    },
+    {
+      "id": "mechanism_design.auction.bayesian.risk_aversion_comparison",
+      "title": "Auction Comparisons Under Risk Aversion",
+      "href": "mechanism_design/auction/mechanism_design_auction_bayesian_risk_aversion_comparison.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Auction.SecondPrice.winner",
+      "display_name": "Auction.SecondPrice.winner",
+      "qualified_name": "Auction.SecondPrice.winner",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L72",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.secondPrice",
+      "display_name": "Auction.SecondPrice.secondPrice",
+      "qualified_name": "Auction.SecondPrice.secondPrice",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L75",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.secondPrice_le_bid_winner",
+      "display_name": "Auction.SecondPrice.secondPrice_le_bid_winner",
+      "qualified_name": "Auction.SecondPrice.secondPrice_le_bid_winner",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L102",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.utility",
+      "display_name": "Auction.SecondPrice.utility",
+      "qualified_name": "Auction.SecondPrice.utility",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L110",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.utility_winner",
+      "display_name": "Auction.SecondPrice.utility_winner",
+      "qualified_name": "Auction.SecondPrice.utility_winner",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L117",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.utility_loser",
+      "display_name": "Auction.SecondPrice.utility_loser",
+      "qualified_name": "Auction.SecondPrice.utility_loser",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L122",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.utility_nonneg",
+      "display_name": "Auction.SecondPrice.utility_nonneg",
+      "qualified_name": "Auction.SecondPrice.utility_nonneg",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L126",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.mechanism",
+      "display_name": "Auction.SecondPrice.mechanism",
+      "qualified_name": "Auction.SecondPrice.mechanism",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L191",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.game",
+      "display_name": "Auction.SecondPrice.game",
+      "qualified_name": "Auction.SecondPrice.game",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L169",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "Auction.SecondPrice.game_eq_toStrategicGame",
+      "display_name": "Auction.SecondPrice.game_eq_toStrategicGame",
+      "qualified_name": "Auction.SecondPrice.game_eq_toStrategicGame",
+      "module": "EconCSLib.MechanismDesign.Auction.Vickrey",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L200",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

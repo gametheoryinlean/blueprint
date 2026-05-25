@@ -1,0 +1,80 @@
+{
+  "id": "game_theory.strategic_game.dominance.dominated_strategy",
+  "title": "Dominated Strategy",
+  "kind": "definition",
+  "status": "staged",
+  "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_dominated_strategy.html",
+  "primary_topic": "game_theory.strategic_game.dominance",
+  "topics": [
+    "game_theory.strategic_game.dominance"
+  ],
+  "body_html": "<h1>Dominated Strategy</h1>\n<p>A strategy $m_i\\in\\Delta(S_i)$ is strictly dominated if there exists\n$\\sigma_i\\in\\Delta(S_i)$ such that\n$$\n  g_i(\\sigma_i,t_{-i})&gt;g_i(m_i,t_{-i})\n  \\quad\\text{for all } t_{-i}\\in S_{-i}.\n$$\nIt is weakly dominated if there exists $\\sigma_i$ such that the same inequalities\nare weak for all $t_{-i}$ and strict for at least one $t_{-i}$.</p>\n<p>For pure strategies, this specializes by identifying $s_i\\in S_i$ with the Dirac\nmass at $s_i$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 1.3.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strictly dominated and weakly dominated pure strategies.</li>\n<li>[MFoGT, Definitions 4.3.2 and 4.3.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strict and weak domination for mixed strategies in finite games.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.strategic_game",
+      "title": "Strategic Game",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.extensive_game.imperfect_information.forward_induction",
+      "title": "Forward Induction",
+      "href": "game_theory/extensive_game/imperfect_information/game_theory_extensive_game_imperfect_information_forward_induction.html"
+    },
+    {
+      "id": "game_theory.strategic_game.dominance.iterated_elimination",
+      "title": "Iterated Elimination Of Strictly Dominated Strategies",
+      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_iterated_elimination.html"
+    },
+    {
+      "id": "game_theory.strategic_game.refinements.perfect_equilibrium_undominated_two_player",
+      "title": "Perfect Equilibrium And Undominated Equilibrium",
+      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_perfect_equilibrium_undominated_two_player.html"
+    },
+    {
+      "id": "game_theory.strategic_game.refinements.proper_vs_perfect_equilibrium_examples",
+      "title": "Proper And Perfect Equilibrium Examples",
+      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_proper_vs_perfect_equilibrium_examples.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
+      "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
+      "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "WeaklyDominates",
+      "display_name": "WeaklyDominates",
+      "qualified_name": "WeaklyDominates",
+      "module": "EconCSLib.GameTheory.StrategicGame.Dominance",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L24",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "StrictlyDominates",
+      "display_name": "StrictlyDominates",
+      "qualified_name": "StrictlyDominates",
+      "module": "EconCSLib.GameTheory.StrategicGame.Dominance",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L28",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

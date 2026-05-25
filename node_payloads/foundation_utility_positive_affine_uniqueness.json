@@ -1,0 +1,75 @@
+{
+  "id": "foundation.utility.positive_affine_uniqueness",
+  "title": "Positive Affine Uniqueness Of Utility",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "foundation/utility/foundation_utility_positive_affine_uniqueness.html",
+  "primary_topic": "foundation.utility",
+  "topics": [
+    "foundation.utility"
+  ],
+  "body_html": "<h1>Positive Affine Uniqueness Of Utility</h1>\n<p>If two expected-utility functions represent the same preference over lotteries,\nthen they differ by a positive affine transformation:\n$$\n  v(L)=a u(L)+b\n  \\quad\\text{with}\\quad a&gt;0.\n$$</p>\n<p>Conversely, a positive affine transformation of a representing utility function\nrepresents the same preference relation.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The order-preserving direction is immediate from $a&gt;0$. For uniqueness, compare\nthe two representations on degenerate lotteries and use linearity over lotteries\nto extend the affine relation from outcomes to all lotteries.</p>\n<p>The Lean library has the positive-affine relation and its order-preservation and\ninverse lemmas. The full uniqueness theorem for linear utility functionals is\nstill an open theorem target in <code>EconCSLib/Utility/Lottery.lean</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Thm. 2.22] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Uniqueness of expected utility up to positive affine transformation.</li>\n<li>[MSZ, Chapter 2, Exercise 2.19] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Inverse of a positive affine transformation.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "foundation.utility.expected_utility_representation",
+      "title": "Expected Utility Representation",
+      "href": "foundation/utility/foundation_utility_expected_utility_representation.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "IsPositiveAffineOf",
+      "display_name": "IsPositiveAffineOf",
+      "qualified_name": "IsPositiveAffineOf",
+      "module": "EconCSLib.Foundation.Utility.AffineTransform",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/AffineTransform.lean#L34",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "IsPositiveAffineOf.preserves_le",
+      "display_name": "IsPositiveAffineOf.preserves_le",
+      "qualified_name": "IsPositiveAffineOf.preserves_le",
+      "module": "EconCSLib.Foundation.Utility.AffineTransform",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/AffineTransform.lean#L50",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "IsPositiveAffineOf.preserves_representation",
+      "display_name": "IsPositiveAffineOf.preserves_representation",
+      "qualified_name": "IsPositiveAffineOf.preserves_representation",
+      "module": "EconCSLib.Foundation.Utility.AffineTransform",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/AffineTransform.lean#L65",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "IsPositiveAffineOf.symm",
+      "display_name": "IsPositiveAffineOf.symm",
+      "qualified_name": "IsPositiveAffineOf.symm",
+      "module": "EconCSLib.Foundation.Utility.AffineTransform",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Foundation/Utility/AffineTransform.lean#L74",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

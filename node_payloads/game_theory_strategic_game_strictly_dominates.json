@@ -1,0 +1,36 @@
+{
+  "id": "game_theory.strategic_game.strictly_dominates",
+  "title": "Strict Dominance",
+  "kind": "definition",
+  "status": "admitted",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_strictly_dominates.html",
+  "primary_topic": "game_theory.strategic_game",
+  "topics": [
+    "game_theory.strategic_game"
+  ],
+  "body_html": "<h1>Strict Dominance</h1>\n<p>A strategy $s_i$ strictly dominates another strategy $s'_i$ for player $i$ if, for\nevery profile $\\sigma$ of the other players, playing $s_i$ yields strictly higher\npayoff:</p>\n<p>$$\\forall \\sigma, \\quad u_i(\\sigma[i \\mapsto s'_i]) &lt; u_i(\\sigma[i \\mapsto s_i]).$$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Section 2.3] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of strict dominance.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.unilateral_deviation",
+      "title": "Unilateral Deviation",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_unilateral_deviation.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "StrictlyDominates",
+      "display_name": "StrictlyDominates",
+      "qualified_name": "StrictlyDominates",
+      "module": "EconCSLib.GameTheory.StrategicGame.Dominance",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L28",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

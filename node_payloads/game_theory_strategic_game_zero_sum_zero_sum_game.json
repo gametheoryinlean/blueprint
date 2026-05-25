@@ -1,0 +1,66 @@
+{
+  "id": "game_theory.strategic_game.zero_sum.zero_sum_game",
+  "title": "Zero-Sum Game",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_zero_sum_game.html",
+  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "topics": [
+    "game_theory.strategic_game.zero_sum",
+    "game_theory.strategic_game.zero_sum.core"
+  ],
+  "body_html": "<h1>Zero-Sum Game</h1>\n<p>A two-player strategic game is zero-sum if, at every strategy profile $\\sigma$,\nthe two players' payoffs add to zero:</p>\n<p>$$u_0(\\sigma) + u_1(\\sigma) = 0.$$</p>\n<p>A constant-sum game fixes the same sum to a constant $c$ instead of zero.  In a\nzero-sum game, player 1's payoff is the negative of player 0's payoff, so the\ngame can be studied through a single payoff function.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 4, Section 4.4] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Zero-sum and constant-sum two-player games.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.strategic_game.strategic_game",
+      "title": "Strategic Game",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_strategic_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.continuous.general_mixed_strategy_space",
+      "title": "General Mixed Strategy Space",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_continuous_general_mixed_strategy_space.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.matrix_game",
+      "title": "Matrix Game",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game.html"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.zero_sum_payoff_negation",
+      "title": "Payoff Negation in Zero-Sum Games",
+      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_zero_sum_payoff_negation.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "StrategicGame.IsZeroSum",
+      "display_name": "StrategicGame.IsZeroSum",
+      "qualified_name": "StrategicGame.IsZeroSum",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L44",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "StrategicGame.IsConstantSum",
+      "display_name": "StrategicGame.IsConstantSum",
+      "qualified_name": "StrategicGame.IsConstantSum",
+      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
+      "short_revision": "09e162b",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L48",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}
