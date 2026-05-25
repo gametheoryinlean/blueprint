@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 24,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 8,
+    "boundary_topics": 9,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 33,
-    "visible_nodes_with_selected_proof_plans": 33
+    "visible_nodes_without_proof_plans": 34,
+    "visible_nodes_with_selected_proof_plans": 34
   },
   "nodes": [
     {
@@ -378,7 +378,14 @@
       "title": "Extensive Game",
       "href": "extensive_game/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 53
+      "node_count": 54
+    },
+    {
+      "id": "extensive_game.equilibrium",
+      "title": "Extensive Game.Equilibrium",
+      "href": "extensive_game/equilibrium/index.html",
+      "role": "dependent",
+      "node_count": 1
     },
     {
       "id": "extensive_game.examples",
@@ -499,6 +506,20 @@
       "to": "topic:extensive_game",
       "kind": "boundary_dependent",
       "topic": "extensive_game",
+      "count": 1
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game.equilibrium",
+      "count": 1
+    },
+    {
+      "from": "extensive_game.imperfect_information.reached_information_set",
+      "to": "topic:extensive_game.equilibrium",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game.equilibrium",
       "count": 1
     },
     {

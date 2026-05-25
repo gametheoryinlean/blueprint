@@ -5,21 +5,21 @@
     "href": "extensive_game/index.html",
     "parent": null,
     "node_count": 21,
-    "descendant_node_count": 53
+    "descendant_node_count": 54
   },
   "counts": {
     "internal_nodes": 21,
-    "inlined_nodes": 53,
-    "descendant_nodes": 53,
+    "inlined_nodes": 54,
+    "descendant_nodes": 54,
     "child_topics": 0,
-    "inlined_child_topics": 5,
-    "non_proof_plan_nodes": 53,
+    "inlined_child_topics": 6,
+    "non_proof_plan_nodes": 54,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 7,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 61,
-    "visible_nodes_with_selected_proof_plans": 61
+    "visible_nodes_without_proof_plans": 62,
+    "visible_nodes_with_selected_proof_plans": 62
   },
   "nodes": [
     {
@@ -53,6 +53,14 @@
       "status": "formalized",
       "href": "extensive_game/extensive_game_core_strategy_profile_induced_outcome.html",
       "payload": "node_payloads/extensive_game_core_strategy_profile_induced_outcome.json"
+    },
+    {
+      "id": "extensive_game.equilibrium.reached_subgame_nash_restriction",
+      "title": "Reached Subgame Nash Restriction",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "extensive_game/equilibrium/extensive_game_equilibrium_reached_subgame_nash_restriction.html",
+      "payload": "node_payloads/extensive_game_equilibrium_reached_subgame_nash_restriction.json"
     },
     {
       "id": "extensive_game.examples.backward_forward_induction_incompatibility",
@@ -451,6 +459,16 @@
     {
       "from": "extensive_game.core.game_tree",
       "to": "extensive_game.core.history_and_subgame",
+      "kind": "uses"
+    },
+    {
+      "from": "extensive_game.imperfect_information.behavioral_equilibrium",
+      "to": "extensive_game.equilibrium.reached_subgame_nash_restriction",
+      "kind": "uses"
+    },
+    {
+      "from": "extensive_game.imperfect_information.reached_information_set",
+      "to": "extensive_game.equilibrium.reached_subgame_nash_restriction",
       "kind": "uses"
     },
     {
@@ -955,7 +973,7 @@
       "id": "behavioral-strategy",
       "title": "behavioral-strategy",
       "href": "keywords/behavioral-strategy.html",
-      "count": 8
+      "count": 9
     },
     {
       "id": "belief",
@@ -1003,7 +1021,7 @@
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 53
+      "count": 54
     },
     {
       "id": "forward-induction",
@@ -1063,7 +1081,7 @@
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 4
+      "count": 5
     },
     {
       "id": "nature",
@@ -1147,7 +1165,7 @@
       "id": "subgame-perfect-equilibrium",
       "title": "subgame-perfect-equilibrium",
       "href": "keywords/subgame-perfect-equilibrium.html",
-      "count": 8
+      "count": 9
     },
     {
       "id": "value",
@@ -1276,6 +1294,7 @@
   ],
   "inlined_child_topics": [
     "extensive_game.core",
+    "extensive_game.equilibrium",
     "extensive_game.examples",
     "extensive_game.imperfect_information",
     "extensive_game.normal_form",
