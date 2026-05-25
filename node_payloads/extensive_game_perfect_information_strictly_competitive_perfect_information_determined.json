@@ -2,10 +2,11 @@
   "id": "extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
   "title": "Strictly Competitive Perfect-Information Determinacy",
   "kind": "theorem",
-  "status": "staged",
-  "href": "extensive_game/perfect_information/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.html",
-  "primary_topic": "extensive_game.perfect_information",
+  "status": "formalized",
+  "href": "extensive_game/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.html",
+  "primary_topic": "extensive_game",
   "topics": [
+    "extensive_game",
     "extensive_game.perfect_information"
   ],
   "body_html": "<h1>Strictly Competitive Perfect-Information Determinacy</h1>\n<p>Every finite strictly competitive game with perfect information is determined.</p>\n<p>Equivalently, when terminal outcomes are interpreted as player 1 payoffs and\nplayer 2 has the opposite preference order, the game has a pure-strategy value.</p>",
@@ -14,9 +15,49 @@
     {
       "id": "extensive_game.perfect_information.zermelo_determinacy",
       "title": "Zermelo Determinacy For Finite Perfect-Information Games",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zermelo_determinacy.html"
+      "href": "extensive_game/extensive_game_perfect_information_zermelo_determinacy.html"
     }
   ],
   "dependents": [],
-  "lean_refs": []
+  "lean_refs": [
+    {
+      "name": "GameTree.zermelo_exists_pure_NE",
+      "display_name": "GameTree.zermelo_exists_pure_NE",
+      "qualified_name": "GameTree.zermelo_exists_pure_NE",
+      "module": "EconCSLib.ExtensiveGame.Zermelo",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/Zermelo.lean#L105",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.value_zero_sum",
+      "display_name": "GameTree.value_zero_sum",
+      "qualified_name": "GameTree.value_zero_sum",
+      "module": "EconCSLib.ExtensiveGame.Zermelo",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/Zermelo.lean#L129",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.value₀_minimax_prop",
+      "display_name": "GameTree.value₀_minimax_prop",
+      "qualified_name": "GameTree.value₀_minimax_prop",
+      "module": "EconCSLib.ExtensiveGame.Zermelo",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/Zermelo.lean#L238",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

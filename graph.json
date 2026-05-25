@@ -759,17 +759,22 @@
       "id": "extensive_game.core.game_tree",
       "title": "Game Tree",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "game-tree"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.core"
       ],
       "lean_declarations": [
         "GameTree",
         "GameTree.children",
         "GameTree.size"
       ],
-      "topic": "extensive_game",
+      "topic": "core",
       "used_by": [
         "extensive_game.core.history_and_subgame"
       ]
@@ -778,16 +783,21 @@
       "id": "extensive_game.core.history_and_subgame",
       "title": "History And Subgame",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "subgame"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.core"
       ],
       "lean_declarations": [
         "ExtensiveGame.subgameAt",
         "GameTree.Subtree"
       ],
-      "topic": "extensive_game",
+      "topic": "core",
       "uses": [
         "extensive_game.core.game_tree"
       ],
@@ -800,16 +810,21 @@
       "id": "extensive_game.core.nature_player",
       "title": "Nature In Extensive Games",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "nature",
         "chance"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.core"
+      ],
       "lean_declarations": [
         "ExtensiveGame.isChanceState"
       ],
-      "topic": "extensive_game",
+      "topic": "core",
       "used_by": [
         "extensive_game.examples.entrant_incomplete_information_value_example",
         "extensive_game.examples.poker_game_value_example",
@@ -820,11 +835,16 @@
       "id": "extensive_game.core.strategy_profile_induced_outcome",
       "title": "Strategy Profile And Induced Outcome",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "strategy",
         "outcome"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.core"
       ],
       "lean_declarations": [
         "ExtensiveGame.StrategyProfile",
@@ -832,7 +852,7 @@
         "ExtensiveGame.finalPayoff",
         "GameTree.outcome"
       ],
-      "topic": "extensive_game",
+      "topic": "core",
       "used_by": [
         "extensive_game.normal_form.normal_form_reduction"
       ]
@@ -939,17 +959,22 @@
       "id": "extensive_game.imperfect_information.action_at_information_set",
       "title": "Action At An Information Set",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "information-set",
         "action"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.imperfect_information"
+      ],
       "lean_declarations": [
         "FiniteImperfectGame.PureStrategy.actionAt",
         "FiniteImperfectGame.actionAt_same_info_label"
       ],
-      "topic": "extensive_game",
+      "topic": "imperfect_information",
       "uses": [
         "extensive_game.imperfect_information.information_set"
       ],
@@ -1042,10 +1067,15 @@
       "id": "extensive_game.imperfect_information.imperfect_information_extensive_game",
       "title": "Extensive Game With Imperfect Information",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "imperfect-information"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.imperfect_information"
       ],
       "lean_declarations": [
         "FiniteImperfectGame",
@@ -1054,7 +1084,7 @@
         "FiniteImperfectGame.NoChanceOnDecisionInfo",
         "FiniteImperfectGame.InfoWellFormed"
       ],
-      "topic": "extensive_game",
+      "topic": "imperfect_information",
       "uses": [
         "extensive_game.perfect_information.perfect_information_extensive_game"
       ],
@@ -1068,18 +1098,23 @@
       "id": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
       "title": "Pure Strategy With Imperfect Information",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "imperfect-information",
         "strategy"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.imperfect_information"
       ],
       "lean_declarations": [
         "FiniteImperfectGame.PureStrategy",
         "FiniteImperfectGame.PureStrategyProfile",
         "FiniteImperfectGame.PureStrategy.actionAt"
       ],
-      "topic": "extensive_game",
+      "topic": "imperfect_information",
       "uses": [
         "extensive_game.imperfect_information.action_at_information_set"
       ],
@@ -1369,13 +1404,26 @@
       "id": "extensive_game.imperfect_information.subroot_subgame",
       "title": "Subroot And Subgame In Imperfect-Information Games",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "subgame",
         "imperfect-information"
       ],
-      "topic": "extensive_game",
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.imperfect_information"
+      ],
+      "lean_declarations": [
+        "GameTree.Subtree",
+        "GameTree.Subtree.self",
+        "GameTree.Subtree.head",
+        "GameTree.Subtree.tail_mem",
+        "GameTree.Subtree.child_mem",
+        "GameTree.Subtree.trans"
+      ],
+      "topic": "imperfect_information",
       "uses": [
         "extensive_game.core.history_and_subgame",
         "extensive_game.imperfect_information.information_set"
@@ -1446,13 +1494,21 @@
       "id": "extensive_game.normal_form.extensive_normal_form_invariance",
       "title": "Normal Form Invariance Of Extensive Representations",
       "kind": "proposition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "normal-form",
         "invariance"
       ],
-      "topic": "extensive_game",
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.normal_form"
+      ],
+      "lean_declarations": [
+        "GameTree.toStrategicGame_nash_iff_isNashAt"
+      ],
+      "topic": "normal_form",
       "uses": [
         "extensive_game.imperfect_information.imperfect_information_pure_strategy",
         "extensive_game.normal_form.normal_form_reduction"
@@ -1462,10 +1518,15 @@
       "id": "extensive_game.normal_form.normal_form_reduction",
       "title": "Normal Form Reduction",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "normal-form"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.normal_form"
       ],
       "lean_declarations": [
         "GameTree.PlayerStrategy",
@@ -1473,7 +1534,7 @@
         "GameTree.toStrategicGame",
         "GameTree.toStrategicGame_nash_iff_isNashAt"
       ],
-      "topic": "extensive_game",
+      "topic": "normal_form",
       "uses": [
         "extensive_game.core.strategy_profile_induced_outcome",
         "strategic_games.strategic_game"
@@ -1488,12 +1549,23 @@
       "id": "extensive_game.normal_form.semi_reduced_normal_form",
       "title": "Semi-Reduced Normal Form",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "normal-form"
       ],
-      "topic": "extensive_game",
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.normal_form"
+      ],
+      "lean_declarations": [
+        "GameTree.PlayerStrategy",
+        "GameTree.profileStrategy",
+        "GameTree.profileStrategy_deviate_variant",
+        "GameTree.profileStrategy_deviate_eq_of_variant"
+      ],
+      "topic": "normal_form",
       "uses": [
         "extensive_game.normal_form.normal_form_reduction"
       ]
@@ -1518,12 +1590,22 @@
       "id": "extensive_game.perfect_information.determined_game",
       "title": "Determined Game",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "determinacy"
       ],
-      "topic": "extensive_game",
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
+      "lean_declarations": [
+        "GameTree.IsZeroSum",
+        "GameTree.value_zero_sum",
+        "GameTree.value₀_minimax_prop"
+      ],
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.simple_perfect_information_game"
       ],
@@ -1573,10 +1655,15 @@
       "id": "extensive_game.perfect_information.perfect_information_extensive_game",
       "title": "Finite Extensive Game With Perfect Information",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "perfect-information"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
       ],
       "lean_declarations": [
         "Arena",
@@ -1584,7 +1671,7 @@
         "ExtensiveGame.isPlayerState",
         "ExtensiveGame.isTerminal"
       ],
-      "topic": "extensive_game",
+      "topic": "perfect_information",
       "used_by": [
         "extensive_game.imperfect_information.imperfect_information_extensive_game",
         "extensive_game.perfect_information.perfect_information_strategy",
@@ -1595,16 +1682,21 @@
       "id": "extensive_game.perfect_information.perfect_information_strategy",
       "title": "Strategy In A Perfect-Information Game",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "strategy"
+      ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
       ],
       "lean_declarations": [
         "ExtensiveGame.Strategy",
         "GameTree.Strategy"
       ],
-      "topic": "extensive_game",
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.perfect_information_extensive_game"
       ]
@@ -1613,12 +1705,24 @@
       "id": "extensive_game.perfect_information.simple_perfect_information_game",
       "title": "Simple Perfect-Information Game",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "determinacy"
       ],
-      "topic": "extensive_game",
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
+      "lean_declarations": [
+        "Examples.SimpleGameTree.sample",
+        "Examples.SimpleGameTree.sample_zero_sum",
+        "Examples.SimpleGameTree.sample_zermelo_spe",
+        "Examples.SimpleGameTree.sample_zermelo_ne",
+        "Examples.SimpleGameTree.sample_value_zero_sum"
+      ],
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.perfect_information_extensive_game"
       ],
@@ -1630,16 +1734,21 @@
       "id": "extensive_game.perfect_information.spe_implies_nash",
       "title": "Subgame-Perfect Equilibrium Implies Nash Equilibrium",
       "kind": "proposition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "subgame-perfect-equilibrium",
         "nash-equilibrium"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
       "lean_declarations": [
         "IsSubgamePerfect.toNE"
       ],
-      "topic": "extensive_game",
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.subgame_perfect_equilibrium"
       ]
@@ -1648,13 +1757,23 @@
       "id": "extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
       "title": "Strictly Competitive Perfect-Information Determinacy",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "determinacy",
         "zero-sum"
       ],
-      "topic": "extensive_game",
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
+      "lean_declarations": [
+        "GameTree.zermelo_exists_pure_NE",
+        "GameTree.value_zero_sum",
+        "GameTree.value₀_minimax_prop"
+      ],
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.zermelo_determinacy"
       ]
@@ -1663,15 +1782,20 @@
       "id": "extensive_game.perfect_information.subgame_perfect_equilibrium",
       "title": "Subgame-Perfect Equilibrium In Perfect-Information Games",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "subgame-perfect-equilibrium"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
       "lean_declarations": [
         "IsSubgamePerfect"
       ],
-      "topic": "extensive_game",
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.core.history_and_subgame",
         "strategic_games.nash_equilibrium"
@@ -1687,17 +1811,22 @@
       "id": "extensive_game.perfect_information.zermelo_determinacy",
       "title": "Zermelo Determinacy For Finite Perfect-Information Games",
       "kind": "theorem",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "extensive-game",
         "determinacy",
         "zermelo"
       ],
+      "primary_topic": "extensive_game",
+      "topics": [
+        "extensive_game",
+        "extensive_game.perfect_information"
+      ],
       "lean_declarations": [
         "zermelo_exists_pure_SPE",
         "zermelo_exists_pure_NE"
       ],
-      "topic": "extensive_game",
+      "topic": "perfect_information",
       "uses": [
         "extensive_game.perfect_information.determined_game"
       ],

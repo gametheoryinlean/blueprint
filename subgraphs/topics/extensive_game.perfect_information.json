@@ -9,25 +9,25 @@
   },
   "counts": {
     "internal_nodes": 11,
-    "inlined_nodes": 11,
+    "inlined_nodes": 3,
     "descendant_nodes": 11,
     "child_topics": 0,
-    "inlined_child_topics": 11,
+    "inlined_child_topics": 3,
     "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 6,
+    "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 18,
-    "visible_nodes_with_selected_proof_plans": 18
+    "visible_nodes_without_proof_plans": 17,
+    "visible_nodes_with_selected_proof_plans": 17
   },
   "nodes": [
     {
       "id": "extensive_game.perfect_information.determined_game",
       "title": "Determined Game",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_determined_game.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_determined_game.html",
       "payload": "node_payloads/extensive_game_perfect_information_determined_game.json"
     },
     {
@@ -50,56 +50,56 @@
       "id": "extensive_game.perfect_information.perfect_information_extensive_game",
       "title": "Finite Extensive Game With Perfect Information",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_perfect_information_extensive_game.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_perfect_information_extensive_game.html",
       "payload": "node_payloads/extensive_game_perfect_information_perfect_information_extensive_game.json"
     },
     {
       "id": "extensive_game.perfect_information.perfect_information_strategy",
       "title": "Strategy In A Perfect-Information Game",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_perfect_information_strategy.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_perfect_information_strategy.html",
       "payload": "node_payloads/extensive_game_perfect_information_perfect_information_strategy.json"
     },
     {
       "id": "extensive_game.perfect_information.simple_perfect_information_game",
       "title": "Simple Perfect-Information Game",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_simple_perfect_information_game.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_simple_perfect_information_game.html",
       "payload": "node_payloads/extensive_game_perfect_information_simple_perfect_information_game.json"
     },
     {
       "id": "extensive_game.perfect_information.spe_implies_nash",
       "title": "Subgame-Perfect Equilibrium Implies Nash Equilibrium",
       "kind": "proposition",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_spe_implies_nash.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_spe_implies_nash.html",
       "payload": "node_payloads/extensive_game_perfect_information_spe_implies_nash.json"
     },
     {
       "id": "extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
       "title": "Strictly Competitive Perfect-Information Determinacy",
       "kind": "theorem",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.html",
       "payload": "node_payloads/extensive_game_perfect_information_strictly_competitive_perfect_information_determined.json"
     },
     {
       "id": "extensive_game.perfect_information.subgame_perfect_equilibrium",
       "title": "Subgame-Perfect Equilibrium In Perfect-Information Games",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_subgame_perfect_equilibrium.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_subgame_perfect_equilibrium.html",
       "payload": "node_payloads/extensive_game_perfect_information_subgame_perfect_equilibrium.json"
     },
     {
       "id": "extensive_game.perfect_information.zermelo_determinacy",
       "title": "Zermelo Determinacy For Finite Perfect-Information Games",
       "kind": "theorem",
-      "status": "staged",
-      "href": "extensive_game/perfect_information/extensive_game_perfect_information_zermelo_determinacy.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_perfect_information_zermelo_determinacy.html",
       "payload": "node_payloads/extensive_game_perfect_information_zermelo_determinacy.json"
     },
     {
@@ -155,11 +155,11 @@
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.core",
-      "title": "Extensive Game.Core",
-      "href": "extensive_game/core/index.html",
-      "role": "dependency",
-      "node_count": 4
+      "id": "extensive_game",
+      "title": "Extensive Game",
+      "href": "extensive_game/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 51
     },
     {
       "id": "extensive_game.examples",
@@ -167,13 +167,6 @@
       "href": "extensive_game/examples/index.html",
       "role": "dependent",
       "node_count": 6
-    },
-    {
-      "id": "extensive_game.imperfect_information",
-      "title": "Extensive Game.Imperfect Information",
-      "href": "extensive_game/imperfect_information/index.html",
-      "role": "dependent",
-      "node_count": 24
     },
     {
       "id": "repeated_game",
@@ -199,17 +192,17 @@
   ],
   "boundary_edges": [
     {
-      "from": "topic:extensive_game.core",
+      "from": "topic:extensive_game",
       "to": "extensive_game.perfect_information.subgame_perfect_equilibrium",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
+      "topic": "extensive_game",
       "count": 1
     },
     {
-      "from": "topic:extensive_game.core",
+      "from": "topic:extensive_game",
       "to": "extensive_game.perfect_information.zero_sum_perfect_information_value",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
+      "topic": "extensive_game",
       "count": 1
     },
     {
@@ -224,6 +217,13 @@
       "to": "extensive_game.perfect_information.zero_sum_perfect_information_value",
       "kind": "boundary_dependency",
       "topic": "zero_sum",
+      "count": 1
+    },
+    {
+      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
+      "to": "topic:extensive_game",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game",
       "count": 1
     },
     {
@@ -245,13 +245,6 @@
       "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
       "topic": "extensive_game.examples",
-      "count": 1
-    },
-    {
-      "from": "extensive_game.perfect_information.perfect_information_extensive_game",
-      "to": "topic:extensive_game.imperfect_information",
-      "kind": "boundary_dependent",
-      "topic": "extensive_game.imperfect_information",
       "count": 1
     },
     {
@@ -337,16 +330,8 @@
   "child_boundary_topics": [],
   "child_boundary_edges": [],
   "inlined_child_topics": [
-    "extensive_game.perfect_information.determined_game",
     "extensive_game.perfect_information.generic_unique_spe",
     "extensive_game.perfect_information.kuhn_spe_existence",
-    "extensive_game.perfect_information.perfect_information_extensive_game",
-    "extensive_game.perfect_information.perfect_information_strategy",
-    "extensive_game.perfect_information.simple_perfect_information_game",
-    "extensive_game.perfect_information.spe_implies_nash",
-    "extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
-    "extensive_game.perfect_information.subgame_perfect_equilibrium",
-    "extensive_game.perfect_information.zermelo_determinacy",
     "extensive_game.perfect_information.zero_sum_perfect_information_value"
   ]
 }

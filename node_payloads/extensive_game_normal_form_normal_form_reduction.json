@@ -2,10 +2,11 @@
   "id": "extensive_game.normal_form.normal_form_reduction",
   "title": "Normal Form Reduction",
   "kind": "definition",
-  "status": "staged",
-  "href": "extensive_game/normal_form/extensive_game_normal_form_normal_form_reduction.html",
-  "primary_topic": "extensive_game.normal_form",
+  "status": "formalized",
+  "href": "extensive_game/extensive_game_normal_form_normal_form_reduction.html",
+  "primary_topic": "extensive_game",
   "topics": [
+    "extensive_game",
     "extensive_game.normal_form"
   ],
   "body_html": "<h1>Normal Form Reduction</h1>\n<p>The normal form reduction of a perfect-information extensive game is the map\n$$\n  F:\\prod_{i\\in I} S_i\\to R\n$$\nthat sends each pure strategy profile to the unique terminal outcome it induces.\nComposing $F$ with terminal payoff functions gives an ordinary strategic game in\nnormal form.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 6.2.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. The normal or strategic form reduction associates each strategy profile to its induced outcome.</li>\n</ul>",
@@ -14,7 +15,7 @@
     {
       "id": "extensive_game.core.strategy_profile_induced_outcome",
       "title": "Strategy Profile And Induced Outcome",
-      "href": "extensive_game/core/extensive_game_core_strategy_profile_induced_outcome.html"
+      "href": "extensive_game/extensive_game_core_strategy_profile_induced_outcome.html"
     },
     {
       "id": "strategic_games.strategic_game",
@@ -31,12 +32,12 @@
     {
       "id": "extensive_game.normal_form.extensive_normal_form_invariance",
       "title": "Normal Form Invariance Of Extensive Representations",
-      "href": "extensive_game/normal_form/extensive_game_normal_form_extensive_normal_form_invariance.html"
+      "href": "extensive_game/extensive_game_normal_form_extensive_normal_form_invariance.html"
     },
     {
       "id": "extensive_game.normal_form.semi_reduced_normal_form",
       "title": "Semi-Reduced Normal Form",
-      "href": "extensive_game/normal_form/extensive_game_normal_form_semi_reduced_normal_form.html"
+      "href": "extensive_game/extensive_game_normal_form_semi_reduced_normal_form.html"
     }
   ],
   "lean_refs": [
@@ -46,9 +47,9 @@
       "qualified_name": "GameTree.PlayerStrategy",
       "module": "EconCSLib.ExtensiveGame.GameTreeStrategicForm",
       "repository_title": "EconCSLib",
-      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
-      "short_revision": "e5a5712",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L33",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L33",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -59,9 +60,9 @@
       "qualified_name": "GameTree.profileStrategy",
       "module": "EconCSLib.ExtensiveGame.GameTreeStrategicForm",
       "repository_title": "EconCSLib",
-      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
-      "short_revision": "e5a5712",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L39",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L39",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -72,9 +73,9 @@
       "qualified_name": "GameTree.toStrategicGame",
       "module": "EconCSLib.ExtensiveGame.GameTreeStrategicForm",
       "repository_title": "EconCSLib",
-      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
-      "short_revision": "e5a5712",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L43",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L43",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -85,9 +86,9 @@
       "qualified_name": "GameTree.toStrategicGame_nash_iff_isNashAt",
       "module": "EconCSLib.ExtensiveGame.GameTreeStrategicForm",
       "repository_title": "EconCSLib",
-      "revision": "e5a57124a146092940c2ec9c33ff53dc55b4b528",
-      "short_revision": "e5a5712",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/e5a57124a146092940c2ec9c33ff53dc55b4b528/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L71",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTreeStrategicForm.lean#L71",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

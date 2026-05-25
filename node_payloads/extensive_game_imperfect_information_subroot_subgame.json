@@ -2,10 +2,11 @@
   "id": "extensive_game.imperfect_information.subroot_subgame",
   "title": "Subroot And Subgame In Imperfect-Information Games",
   "kind": "definition",
-  "status": "staged",
-  "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_subroot_subgame.html",
-  "primary_topic": "extensive_game.imperfect_information",
+  "status": "formalized",
+  "href": "extensive_game/extensive_game_imperfect_information_subroot_subgame.html",
+  "primary_topic": "extensive_game",
   "topics": [
+    "extensive_game",
     "extensive_game.imperfect_information"
   ],
   "body_html": "<h1>Subroot And Subgame In Imperfect-Information Games</h1>\n<p>In a perfect-recall extensive game, a node $x$ is a subroot if:</p>\n<ol>\n<li>$x$ is the unique node in its information set;</li>\n<li>for every information set $Q$, either every node of $Q$ follows $x$, or no node\n   of $Q$ follows $x$.</li>\n</ol>\n<p>The followers of a subroot, together with inherited information sets and payoffs,\ndefine a subgame.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 6.4.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Subroot definition for subgames in perfect-recall extensive games.</li>\n</ul>",
@@ -19,7 +20,7 @@
     {
       "id": "extensive_game.core.history_and_subgame",
       "title": "History And Subgame",
-      "href": "extensive_game/core/extensive_game_core_history_and_subgame.html"
+      "href": "extensive_game/extensive_game_core_history_and_subgame.html"
     }
   ],
   "dependents": [
@@ -29,5 +30,84 @@
       "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_spe_imperfect_information.html"
     }
   ],
-  "lean_refs": []
+  "lean_refs": [
+    {
+      "name": "GameTree.Subtree",
+      "display_name": "GameTree.Subtree",
+      "qualified_name": "GameTree.Subtree",
+      "module": "EconCSLib.ExtensiveGame.GameTree",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTree.lean#L119",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.Subtree.self",
+      "display_name": "GameTree.Subtree.self",
+      "qualified_name": "GameTree.Subtree.self",
+      "module": "EconCSLib.ExtensiveGame.GameTree",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTree.lean#L128",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.Subtree.head",
+      "display_name": "GameTree.Subtree.head",
+      "qualified_name": "GameTree.Subtree.head",
+      "module": "EconCSLib.ExtensiveGame.GameTree",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTree.lean#L131",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.Subtree.tail_mem",
+      "display_name": "GameTree.Subtree.tail_mem",
+      "qualified_name": "GameTree.Subtree.tail_mem",
+      "module": "EconCSLib.ExtensiveGame.GameTree",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTree.lean#L136",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.Subtree.child_mem",
+      "display_name": "GameTree.Subtree.child_mem",
+      "qualified_name": "GameTree.Subtree.child_mem",
+      "module": "EconCSLib.ExtensiveGame.GameTree",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTree.lean#L141",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "GameTree.Subtree.trans",
+      "display_name": "GameTree.Subtree.trans",
+      "qualified_name": "GameTree.Subtree.trans",
+      "module": "EconCSLib.ExtensiveGame.GameTree",
+      "repository_title": "EconCSLib",
+      "revision": "2b4f326f8282b102e495d81b804e4a1dbed6e73d",
+      "short_revision": "2b4f326",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/2b4f326f8282b102e495d81b804e4a1dbed6e73d/EconCSLib/ExtensiveGame/GameTree.lean#L149",
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

@@ -9,25 +9,25 @@
   },
   "counts": {
     "internal_nodes": 24,
-    "inlined_nodes": 24,
+    "inlined_nodes": 20,
     "descendant_nodes": 24,
     "child_topics": 0,
-    "inlined_child_topics": 24,
+    "inlined_child_topics": 20,
     "non_proof_plan_nodes": 24,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 9,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 34,
-    "visible_nodes_with_selected_proof_plans": 34
+    "visible_nodes_without_proof_plans": 33,
+    "visible_nodes_with_selected_proof_plans": 33
   },
   "nodes": [
     {
       "id": "extensive_game.imperfect_information.action_at_information_set",
       "title": "Action At An Information Set",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_action_at_information_set.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_imperfect_information_action_at_information_set.html",
       "payload": "node_payloads/extensive_game_imperfect_information_action_at_information_set.json"
     },
     {
@@ -66,16 +66,16 @@
       "id": "extensive_game.imperfect_information.imperfect_information_extensive_game",
       "title": "Extensive Game With Imperfect Information",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_imperfect_information_extensive_game.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_imperfect_information_imperfect_information_extensive_game.html",
       "payload": "node_payloads/extensive_game_imperfect_information_imperfect_information_extensive_game.json"
     },
     {
       "id": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
       "title": "Pure Strategy With Imperfect Information",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_imperfect_information_pure_strategy.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_imperfect_information_imperfect_information_pure_strategy.html",
       "payload": "node_payloads/extensive_game_imperfect_information_imperfect_information_pure_strategy.json"
     },
     {
@@ -202,8 +202,8 @@
       "id": "extensive_game.imperfect_information.subroot_subgame",
       "title": "Subroot And Subgame In Imperfect-Information Games",
       "kind": "definition",
-      "status": "staged",
-      "href": "extensive_game/imperfect_information/extensive_game_imperfect_information_subroot_subgame.html",
+      "status": "formalized",
+      "href": "extensive_game/extensive_game_imperfect_information_subroot_subgame.html",
       "payload": "node_payloads/extensive_game_imperfect_information_subroot_subgame.json"
     },
     {
@@ -374,11 +374,11 @@
   ],
   "boundary_topics": [
     {
-      "id": "extensive_game.core",
-      "title": "Extensive Game.Core",
-      "href": "extensive_game/core/index.html",
-      "role": "dependency",
-      "node_count": 4
+      "id": "extensive_game",
+      "title": "Extensive Game",
+      "href": "extensive_game/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 51
     },
     {
       "id": "extensive_game.examples",
@@ -393,13 +393,6 @@
       "href": "extensive_game/normal_form/index.html",
       "role": "dependent",
       "node_count": 6
-    },
-    {
-      "id": "extensive_game.perfect_information",
-      "title": "Extensive Game.Perfect Information",
-      "href": "extensive_game/perfect_information/index.html",
-      "role": "dependency",
-      "node_count": 11
     },
     {
       "id": "strategic_games",
@@ -439,17 +432,17 @@
   ],
   "boundary_edges": [
     {
-      "from": "topic:extensive_game.core",
-      "to": "extensive_game.imperfect_information.subroot_subgame",
+      "from": "topic:extensive_game",
+      "to": "extensive_game.imperfect_information.imperfect_information_extensive_game",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
+      "topic": "extensive_game",
       "count": 1
     },
     {
-      "from": "topic:extensive_game.perfect_information",
-      "to": "extensive_game.imperfect_information.imperfect_information_extensive_game",
+      "from": "topic:extensive_game",
+      "to": "extensive_game.imperfect_information.subroot_subgame",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.perfect_information",
+      "topic": "extensive_game",
       "count": 1
     },
     {
@@ -502,6 +495,13 @@
       "count": 1
     },
     {
+      "from": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
+      "to": "topic:extensive_game",
+      "kind": "boundary_dependent",
+      "topic": "extensive_game",
+      "count": 1
+    },
+    {
       "from": "extensive_game.imperfect_information.forward_induction",
       "to": "topic:extensive_game.examples",
       "kind": "boundary_dependent",
@@ -514,13 +514,6 @@
       "kind": "boundary_dependent",
       "topic": "extensive_game.examples",
       "count": 2
-    },
-    {
-      "from": "extensive_game.imperfect_information.imperfect_information_pure_strategy",
-      "to": "topic:extensive_game.normal_form",
-      "kind": "boundary_dependent",
-      "topic": "extensive_game.normal_form",
-      "count": 1
     },
     {
       "from": "extensive_game.imperfect_information.perfect_recall",
@@ -684,13 +677,10 @@
   "child_boundary_topics": [],
   "child_boundary_edges": [],
   "inlined_child_topics": [
-    "extensive_game.imperfect_information.action_at_information_set",
     "extensive_game.imperfect_information.behavioral_equilibrium",
     "extensive_game.imperfect_information.behavioral_equilibrium_exists",
     "extensive_game.imperfect_information.belief_system",
     "extensive_game.imperfect_information.forward_induction",
-    "extensive_game.imperfect_information.imperfect_information_extensive_game",
-    "extensive_game.imperfect_information.imperfect_information_pure_strategy",
     "extensive_game.imperfect_information.information_set",
     "extensive_game.imperfect_information.information_set_refinement_equilibrium",
     "extensive_game.imperfect_information.isbell_behavioral_to_mixed",
@@ -706,7 +696,6 @@
     "extensive_game.imperfect_information.spe_exists_perfect_recall",
     "extensive_game.imperfect_information.spe_imperfect_information",
     "extensive_game.imperfect_information.strategic_stability",
-    "extensive_game.imperfect_information.subroot_subgame",
     "extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
   ]
 }

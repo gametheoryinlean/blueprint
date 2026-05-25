@@ -74,11 +74,11 @@
   "edges": [],
   "boundary_topics": [
     {
-      "id": "extensive_game.core",
-      "title": "Extensive Game.Core",
-      "href": "extensive_game/core/index.html",
+      "id": "extensive_game",
+      "title": "Extensive Game",
+      "href": "extensive_game/index.html",
       "role": "dependency",
-      "node_count": 4
+      "node_count": 51
     },
     {
       "id": "extensive_game.imperfect_information",
@@ -111,36 +111,36 @@
   ],
   "boundary_edges": [
     {
-      "from": "topic:extensive_game.core",
-      "to": "extensive_game.examples.entrant_incomplete_information_value_example",
+      "from": "topic:extensive_game",
+      "to": "extensive_game.examples.backward_forward_induction_incompatibility",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
+      "topic": "extensive_game",
       "count": 1
     },
     {
-      "from": "topic:extensive_game.core",
+      "from": "topic:extensive_game",
+      "to": "extensive_game.examples.chomp_strategy_stealing",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game",
+      "count": 1
+    },
+    {
+      "from": "topic:extensive_game",
+      "to": "extensive_game.examples.entrant_incomplete_information_value_example",
+      "kind": "boundary_dependency",
+      "topic": "extensive_game",
+      "count": 2
+    },
+    {
+      "from": "topic:extensive_game",
       "to": "extensive_game.examples.poker_game_value_example",
       "kind": "boundary_dependency",
-      "topic": "extensive_game.core",
-      "count": 1
+      "topic": "extensive_game",
+      "count": 2
     },
     {
       "from": "topic:extensive_game.imperfect_information",
       "to": "extensive_game.examples.backward_forward_induction_incompatibility",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.imperfect_information",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.imperfect_information",
-      "to": "extensive_game.examples.entrant_incomplete_information_value_example",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.imperfect_information",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.imperfect_information",
-      "to": "extensive_game.examples.poker_game_value_example",
       "kind": "boundary_dependency",
       "topic": "extensive_game.imperfect_information",
       "count": 1
@@ -150,20 +150,6 @@
       "to": "extensive_game.examples.normal_vs_extensive_perfection_difference",
       "kind": "boundary_dependency",
       "topic": "extensive_game.normal_form",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.perfect_information",
-      "to": "extensive_game.examples.backward_forward_induction_incompatibility",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.perfect_information",
-      "count": 1
-    },
-    {
-      "from": "topic:extensive_game.perfect_information",
-      "to": "extensive_game.examples.chomp_strategy_stealing",
-      "kind": "boundary_dependency",
-      "topic": "extensive_game.perfect_information",
       "count": 1
     },
     {
