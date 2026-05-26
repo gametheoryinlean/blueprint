@@ -27,7 +27,7 @@
       "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
       "kind": "proof-plan",
       "status": "admitted",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_dantzig_proof_spine.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_dantzig_proof_spine.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_dantzig_proof_spine.json",
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
@@ -36,8 +36,8 @@
       "id": "game_theory.strategic_game.zero_sum.simplex_termination",
       "title": "Dantzig Simplex Termination (Open)",
       "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_simplex_termination.html",
+      "status": "admitted",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_simplex_termination.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_simplex_termination.json",
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
@@ -46,32 +46,32 @@
       "id": "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
       "title": "LP Optimum ↔ Game-Theoretic Optimal Strategy",
       "kind": "theorem",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_lp_optimal_iff_optimal_strategy.html",
+      "status": "admitted",
+      "href": "math/math_linear_programming_minimax_bridge_lp_optimal_iff_optimal_strategy.html",
       "payload": "node_payloads/math_linear_programming_minimax_bridge_lp_optimal_iff_optimal_strategy.json"
     },
     {
       "id": "math.linear_programming.minimax_bridge.player_1_lp",
       "title": "Player-1 LP Formulation of a Matrix Game",
       "kind": "definition",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_player_1_lp.html",
+      "status": "admitted",
+      "href": "math/math_linear_programming_minimax_bridge_player_1_lp.html",
       "payload": "node_payloads/math_linear_programming_minimax_bridge_player_1_lp.json"
     },
     {
       "id": "math.linear_programming.minimax_bridge.player_2_lp",
       "title": "Player-2 LP Formulation of a Matrix Game",
       "kind": "definition",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_player_2_lp.html",
+      "status": "admitted",
+      "href": "math/math_linear_programming_minimax_bridge_player_2_lp.html",
       "payload": "node_payloads/math_linear_programming_minimax_bridge_player_2_lp.json"
     },
     {
       "id": "math.linear_programming.minimax_bridge.zero_sum_lp_bridge",
       "title": "Zero-Sum Linear Programming Bridge",
       "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_zero_sum_lp_bridge.html",
+      "status": "admitted",
+      "href": "math/math_linear_programming_minimax_bridge_zero_sum_lp_bridge.html",
       "payload": "node_payloads/math_linear_programming_minimax_bridge_zero_sum_lp_bridge.json",
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
@@ -103,33 +103,33 @@
       "node_count": 27
     },
     {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 100
+      "node_count": 181
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game",
       "to": "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 2
     },
     {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game",
       "to": "math.linear_programming.minimax_bridge.player_1_lp",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 3
     },
     {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game",
       "to": "math.linear_programming.minimax_bridge.player_2_lp",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 1
     },
     {

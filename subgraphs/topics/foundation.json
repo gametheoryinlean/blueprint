@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 27,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 29,
-    "visible_nodes_with_selected_proof_plans": 29
+    "visible_nodes_without_proof_plans": 30,
+    "visible_nodes_with_selected_proof_plans": 30
   },
   "nodes": [
     {
@@ -373,47 +373,68 @@
   ],
   "boundary_topics": [
     {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
       "role": "dependent",
-      "node_count": 100
+      "node_count": 181
+    },
+    {
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
+      "role": "dependent",
+      "node_count": 49
     }
   ],
   "boundary_edges": [
     {
-      "from": "math.linear_programming.strong_complementarity",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "from": "math.simplex.bounded_by_value",
+      "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
+      "count": 3
+    },
+    {
+      "from": "math.simplex.continuity",
+      "to": "topic:game_theory.strategic_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "math.linear_programming.strong_complementarity",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
       "count": 1
     },
     {
       "from": "math.simplex.bounded_by_value",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:math",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 4
+      "topic": "math",
+      "count": 1
     },
     {
       "from": "math.simplex.continuity",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:math",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 2
+      "topic": "math",
+      "count": 1
     },
     {
       "from": "math.linear_programming.strong_duality",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:math",
       "kind": "boundary_proof_plan_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "math",
       "count": 2
     },
     {
       "from": "math.simplex.bounded_by_value",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:math",
       "kind": "boundary_proof_plan_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "math",
       "count": 1
     }
   ],

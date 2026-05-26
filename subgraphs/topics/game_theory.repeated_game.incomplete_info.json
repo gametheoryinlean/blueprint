@@ -49,18 +49,18 @@
       "node_count": 17
     },
     {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency",
+      "node_count": 181
+    },
+    {
       "id": "game_theory.strategic_game.bayesian",
       "title": "Game Theory.Strategic Game.Bayesian",
       "href": "game_theory/strategic_game/bayesian/index.html",
       "role": "dependency",
       "node_count": 6
-    },
-    {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
-      "role": "dependency",
-      "node_count": 100
     }
   ],
   "boundary_edges": [
@@ -79,17 +79,17 @@
       "count": 1
     },
     {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.repeated_game.incomplete_info.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
       "from": "topic:game_theory.strategic_game.bayesian",
       "to": "game_theory.repeated_game.incomplete_info.repeated_game_incomplete_information",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game.bayesian",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "game_theory.repeated_game.incomplete_info.cav_u_theorem",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
       "count": 1
     }
   ],

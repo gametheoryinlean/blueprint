@@ -3,31 +3,32 @@
   "title": "Player Guarantee",
   "kind": "definition",
   "status": "formalized",
-  "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_player_guarantee.html",
-  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_core_player_guarantee.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
+    "game_theory.strategic_game",
     "game_theory.strategic_game.zero_sum",
     "game_theory.strategic_game.zero_sum.core"
   ],
-  "body_html": "<h1>Player Guarantee</h1>\n<p>In the finite mixed-strategy version, $w$ is a <strong>guarantee for player I</strong>\nwhen some $x \\in \\Delta(I)$ achieves $E_A(x, j) \\ge w$ for every pure\n$j \\in J$. Symmetrically, $w$ is a <strong>guarantee for player II</strong> when some\n$y \\in \\Delta(J)$ achieves $E_A(i, y) \\le w$ for every pure $i \\in I$.\nEquivalently, $w$ is a player I guarantee iff $w \\le \\operatorname{val}(A)$\n(the maximin), and dually for player II with $\\operatorname{val}(A) \\le w$\n(the minimax).</p>\n<p>The abstract pure-strategy version ($\\exists i, \\forall j, g(i, j) \\ge w$)\ncollapses on finite mixed extensions to the same scalar bound via the\nsimplex-side order characterisation\n(<a class=\"node-ref\" data-node-id=\"math.simplex.bounded_by_value\" href=\"../../../math/simplex/math_simplex_bounded_by_value.html\">Pointwise Bounds Are Simplex Bounds</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Guarantees for both players in a zero-sum game.</li>\n</ul>",
+  "body_html": "<h1>Player Guarantee</h1>\n<p>In the finite mixed-strategy version, $w$ is a <strong>guarantee for player I</strong>\nwhen some $x \\in \\Delta(I)$ achieves $E_A(x, j) \\ge w$ for every pure\n$j \\in J$. Symmetrically, $w$ is a <strong>guarantee for player II</strong> when some\n$y \\in \\Delta(J)$ achieves $E_A(i, y) \\le w$ for every pure $i \\in I$.\nEquivalently, $w$ is a player I guarantee iff $w \\le \\operatorname{val}(A)$\n(the maximin), and dually for player II with $\\operatorname{val}(A) \\le w$\n(the minimax).</p>\n<p>The abstract pure-strategy version ($\\exists i, \\forall j, g(i, j) \\ge w$)\ncollapses on finite mixed extensions to the same scalar bound via the\nsimplex-side order characterisation\n(<a class=\"node-ref\" data-node-id=\"math.simplex.bounded_by_value\" href=\"../../math/simplex/math_simplex_bounded_by_value.html\">Pointwise Bounds Are Simplex Bounds</a>).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 2.2.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Guarantees for both players in a zero-sum game.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
       "id": "game_theory.strategic_game.zero_sum.matrix_game",
       "title": "Matrix Game",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_matrix_game.html"
     }
   ],
   "dependents": [
     {
       "id": "game_theory.strategic_game.zero_sum.core.epsilon_optimal_strategy",
       "title": "Epsilon-Optimal Strategy",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_epsilon_optimal_strategy.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_core_epsilon_optimal_strategy.html"
     },
     {
       "id": "math.minimax.common_guarantee_value",
       "title": "Common Guarantee Gives The Value",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_common_guarantee_value.html"
+      "href": "math/math_minimax_common_guarantee_value.html"
     }
   ],
   "lean_refs": [
@@ -37,9 +38,9 @@
       "qualified_name": "MatrixGame.IsPlayerIGuarantee",
       "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
-      "short_revision": "09e162b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L133",
+      "revision": "dd73383ea896844b1743fe7cf1ab67c399937a9f",
+      "short_revision": "dd73383",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/dd73383ea896844b1743fe7cf1ab67c399937a9f/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L133",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -50,9 +51,9 @@
       "qualified_name": "MatrixGame.IsPlayerIIGuarantee",
       "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash",
       "repository_title": "EconCSLib",
-      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
-      "short_revision": "09e162b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L139",
+      "revision": "dd73383ea896844b1743fe7cf1ab67c399937a9f",
+      "short_revision": "dd73383",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/dd73383ea896844b1743fe7cf1ab67c399937a9f/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L139",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

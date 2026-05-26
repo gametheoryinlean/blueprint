@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 4,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 12,
-    "visible_nodes_with_selected_proof_plans": 12
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -123,8 +123,8 @@
       "id": "game_theory.strategic_game",
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
-      "role": "dependency",
-      "node_count": 206
+      "role": "dependency_and_dependent",
+      "node_count": 181
     },
     {
       "id": "game_theory.strategic_game.refinements",
@@ -132,13 +132,6 @@
       "href": "game_theory/strategic_game/refinements/index.html",
       "role": "dependent",
       "node_count": 15
-    },
-    {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
-      "role": "dependent",
-      "node_count": 100
     }
   ],
   "boundary_edges": [
@@ -172,16 +165,16 @@
     },
     {
       "from": "game_theory.strategic_game.dominance.dominated_strategy",
-      "to": "topic:game_theory.strategic_game.refinements",
+      "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.refinements",
+      "topic": "game_theory.strategic_game",
       "count": 2
     },
     {
       "from": "game_theory.strategic_game.dominance.dominated_strategy",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:game_theory.strategic_game.refinements",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game.refinements",
       "count": 2
     }
   ],

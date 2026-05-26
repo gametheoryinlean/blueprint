@@ -9,25 +9,25 @@
   },
   "counts": {
     "internal_nodes": 7,
-    "inlined_nodes": 1,
+    "inlined_nodes": 0,
     "descendant_nodes": 7,
     "child_topics": 0,
-    "inlined_child_topics": 1,
+    "inlined_child_topics": 0,
     "non_proof_plan_nodes": 7,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
     {
       "id": "mechanism_design.auction.basic.bid_profile_supports",
       "title": "Bid-Profile Supports",
       "kind": "definition",
-      "status": "staged",
-      "href": "mechanism_design/auction/basic/mechanism_design_auction_basic_bid_profile_supports.html",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_auction_basic_bid_profile_supports.html",
       "payload": "node_payloads/mechanism_design_auction_basic_bid_profile_supports.json"
     },
     {
@@ -35,7 +35,7 @@
       "title": "First-Price Mechanism",
       "kind": "definition",
       "status": "formalized",
-      "href": "mechanism_design/auction/mechanism_design_auction_basic_first_price_mechanism.html",
+      "href": "mechanism_design/mechanism_design_auction_basic_first_price_mechanism.html",
       "payload": "node_payloads/mechanism_design_auction_basic_first_price_mechanism.json"
     },
     {
@@ -43,7 +43,7 @@
       "title": "First-Price Fails DSIC",
       "kind": "theorem",
       "status": "proved",
-      "href": "mechanism_design/auction/mechanism_design_auction_basic_first_price_no_dsic.html",
+      "href": "mechanism_design/mechanism_design_auction_basic_first_price_no_dsic.html",
       "payload": "node_payloads/mechanism_design_auction_basic_first_price_no_dsic.json"
     },
     {
@@ -51,7 +51,7 @@
       "title": "Basic Auction Formats",
       "kind": "definition",
       "status": "formalized",
-      "href": "mechanism_design/auction/mechanism_design_auction_basic_formats.html",
+      "href": "mechanism_design/mechanism_design_auction_basic_formats.html",
       "payload": "node_payloads/mechanism_design_auction_basic_formats.json"
     },
     {
@@ -59,7 +59,7 @@
       "title": "Ordered-Bid Utilities",
       "kind": "definition",
       "status": "formalized",
-      "href": "mechanism_design/auction/mechanism_design_auction_basic_ordered_bid_utilities.html",
+      "href": "mechanism_design/mechanism_design_auction_basic_ordered_bid_utilities.html",
       "payload": "node_payloads/mechanism_design_auction_basic_ordered_bid_utilities.json"
     },
     {
@@ -67,7 +67,7 @@
       "title": "Vickrey Truth-Telling Is Dominant",
       "kind": "theorem",
       "status": "proved",
-      "href": "mechanism_design/auction/mechanism_design_auction_basic_second_price_dsic.html",
+      "href": "mechanism_design/mechanism_design_auction_basic_second_price_dsic.html",
       "payload": "node_payloads/mechanism_design_auction_basic_second_price_dsic.json"
     },
     {
@@ -75,7 +75,7 @@
       "title": "Second-Price (Vickrey) Mechanism",
       "kind": "definition",
       "status": "formalized",
-      "href": "mechanism_design/auction/mechanism_design_auction_basic_second_price_mechanism.html",
+      "href": "mechanism_design/mechanism_design_auction_basic_second_price_mechanism.html",
       "payload": "node_payloads/mechanism_design_auction_basic_second_price_mechanism.json"
     }
   ],
@@ -127,21 +127,14 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 206
+      "node_count": 181
     },
     {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
-      "role": "dependency",
+      "role": "dependency_and_dependent",
       "node_count": 44
-    },
-    {
-      "id": "mechanism_design.auction",
-      "title": "Mechanism Design.Auction",
-      "href": "mechanism_design/auction/index.html",
-      "role": "dependent",
-      "node_count": 19
     }
   ],
   "boundary_edges": [
@@ -196,30 +189,30 @@
     },
     {
       "from": "mechanism_design.auction.basic.first_price_mechanism",
-      "to": "topic:mechanism_design.auction",
+      "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
+      "topic": "mechanism_design",
       "count": 3
     },
     {
       "from": "mechanism_design.auction.basic.formats",
-      "to": "topic:mechanism_design.auction",
+      "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
+      "topic": "mechanism_design",
       "count": 1
     },
     {
       "from": "mechanism_design.auction.basic.second_price_dsic",
-      "to": "topic:mechanism_design.auction",
+      "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
+      "topic": "mechanism_design",
       "count": 1
     },
     {
       "from": "mechanism_design.auction.basic.second_price_mechanism",
-      "to": "topic:mechanism_design.auction",
+      "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
+      "topic": "mechanism_design",
       "count": 2
     }
   ],
@@ -312,7 +305,5 @@
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "inlined_child_topics": [
-    "mechanism_design.auction.basic.bid_profile_supports"
-  ]
+  "inlined_child_topics": []
 }

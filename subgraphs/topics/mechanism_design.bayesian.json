@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
   },
   "nodes": [
     {
@@ -97,13 +97,6 @@
       "href": "mechanism_design/index.html",
       "role": "dependency_and_dependent",
       "node_count": 44
-    },
-    {
-      "id": "mechanism_design.auction",
-      "title": "Mechanism Design.Auction",
-      "href": "mechanism_design/auction/index.html",
-      "role": "dependent",
-      "node_count": 19
     }
   ],
   "boundary_edges": [
@@ -129,11 +122,18 @@
       "count": 1
     },
     {
-      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "from": "mechanism_design.bayesian.bayesian_mechanisms",
       "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
       "topic": "mechanism_design",
       "count": 1
+    },
+    {
+      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
+      "to": "topic:mechanism_design",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design",
+      "count": 2
     },
     {
       "from": "mechanism_design.bayesian.selling_problem",
@@ -141,20 +141,6 @@
       "kind": "boundary_dependent",
       "topic": "mechanism_design",
       "count": 2
-    },
-    {
-      "from": "mechanism_design.bayesian.bayesian_mechanisms",
-      "to": "topic:mechanism_design.auction",
-      "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
-      "count": 1
-    },
-    {
-      "from": "mechanism_design.bayesian.ex_ante_expected_utility",
-      "to": "topic:mechanism_design.auction",
-      "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
-      "count": 1
     }
   ],
   "keywords": [

@@ -4,22 +4,22 @@
     "title": "Math.Minimax.Proofs",
     "href": "math/minimax/proofs/index.html",
     "parent": "math.minimax",
-    "node_count": 16,
-    "descendant_node_count": 16
+    "node_count": 3,
+    "descendant_node_count": 3
   },
   "counts": {
-    "internal_nodes": 16,
+    "internal_nodes": 3,
     "inlined_nodes": 0,
-    "descendant_nodes": 16,
+    "descendant_nodes": 3,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 7,
-    "proof_plan_nodes": 9,
-    "selected_proof_plan_nodes": 3,
+    "non_proof_plan_nodes": 1,
+    "proof_plan_nodes": 2,
+    "selected_proof_plan_nodes": 0,
     "boundary_topics": 3,
-    "proof_plan_attachments": 9,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 14
+    "proof_plan_attachments": 2,
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -27,7 +27,7 @@
       "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
       "kind": "proof-plan",
       "status": "admitted",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_dantzig_proof_spine.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_dantzig_proof_spine.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_dantzig_proof_spine.json",
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
@@ -37,136 +37,18 @@
       "title": "Existence of Optimal Mixed Strategies (Loomis Foundations)",
       "kind": "theorem",
       "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_lam_mu_existence.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_lam_mu_existence.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_lam_mu_existence.json"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.simplex_termination",
       "title": "Dantzig Simplex Termination (Open)",
       "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_simplex_termination.html",
+      "status": "admitted",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_simplex_termination.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_simplex_termination.json",
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate"
-    },
-    {
-      "id": "math.minimax.kakutani_minimax_proof",
-      "title": "Kakutani Fixed-Point Proof of the Minimax Theorem",
-      "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_kakutani_minimax_proof.html",
-      "payload": "node_payloads/math_minimax_kakutani_minimax_proof.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof",
-      "title": "Direct Induction Proof Of Loomis Theorem",
-      "kind": "proof-plan",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof.json",
-      "target": "math.minimax.loomis_theorem",
-      "plan_status": "selected"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof.base_case",
-      "title": "Base Case of Loomis Induction",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_base_case.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof_base_case.json"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof.column_drop",
-      "title": "Column-Drop Step of Loomis Induction",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_column_drop.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof_column_drop.json"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof.positive_aggregate",
-      "title": "Positive Aggregates xB and By",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_positive_aggregate.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof_positive_aggregate.json"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof.row_drop",
-      "title": "Row-Drop Step of Loomis Induction",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_row_drop.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof_row_drop.json"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof.value_existence",
-      "title": "Existence of Loomis Optimisers",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_value_existence.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof_value_existence.json"
-    },
-    {
-      "id": "math.minimax.loomis_induction_proof.weak_duality",
-      "title": "Weak Duality For Loomis Values",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_weak_duality.html",
-      "payload": "node_payloads/math_minimax_loomis_induction_proof_weak_duality.json"
-    },
-    {
-      "id": "math.minimax.lp_duality_minimax_proof",
-      "title": "LP Duality Proof Of Minimax",
-      "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_lp_duality_minimax_proof.html",
-      "payload": "node_payloads/math_minimax_lp_duality_minimax_proof.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate"
-    },
-    {
-      "id": "math.minimax.minimax_from_antisymmetric_games",
-      "title": "Minimax From Antisymmetric Games",
-      "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_minimax_from_antisymmetric_games.html",
-      "payload": "node_payloads/math_minimax_minimax_from_antisymmetric_games.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate"
-    },
-    {
-      "id": "math.minimax.minimax_from_deterministic_approachability",
-      "title": "Minimax From Deterministic Approachability",
-      "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_minimax_from_deterministic_approachability.html",
-      "payload": "node_payloads/math_minimax_minimax_from_deterministic_approachability.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate"
-    },
-    {
-      "id": "math.minimax.minimax_from_loomis",
-      "title": "Minimax via the All-Ones Specialization of Loomis",
-      "kind": "proof-plan",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_minimax_from_loomis.html",
-      "payload": "node_payloads/math_minimax_minimax_from_loomis.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "selected"
-    },
-    {
-      "id": "math.minimax.ville_discretization_proof",
-      "title": "Ville Theorem By Discretization",
-      "kind": "proof-plan",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_ville_discretization_proof.html",
-      "payload": "node_payloads/math_minimax_ville_discretization_proof.json",
-      "target": "math.minimax.ville_theorem",
-      "plan_status": "selected"
     }
   ],
   "edges": [
@@ -174,61 +56,6 @@
       "from": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
       "to": "game_theory.strategic_game.zero_sum.simplex_termination",
       "kind": "proof_plan_uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.base_case",
-      "to": "math.minimax.loomis_induction_proof",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.row_drop",
-      "to": "math.minimax.loomis_induction_proof",
-      "kind": "proof_plan_uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "math.minimax.loomis_induction_proof.column_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.value_existence",
-      "to": "math.minimax.loomis_induction_proof.column_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.weak_duality",
-      "to": "math.minimax.loomis_induction_proof.column_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.column_drop",
-      "to": "math.minimax.loomis_induction_proof.row_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "math.minimax.loomis_induction_proof.row_drop",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.lam_mu_existence",
-      "to": "math.minimax.loomis_induction_proof.value_existence",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "math.minimax.loomis_induction_proof.value_existence",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "math.minimax.loomis_induction_proof.weak_duality",
-      "kind": "uses"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.value_existence",
-      "to": "math.minimax.loomis_induction_proof.weak_duality",
-      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -240,18 +67,18 @@
       "node_count": 27
     },
     {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 100
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency",
+      "node_count": 181
     },
     {
-      "id": "game_theory.strategic_game.zero_sum.approachability",
-      "title": "Game Theory.Strategic Game.Zero Sum.Approachability",
-      "href": "game_theory/strategic_game/zero_sum/approachability/index.html",
-      "role": "dependency",
-      "node_count": 2
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
+      "role": "dependent",
+      "node_count": 49
     }
   ],
   "boundary_edges": [
@@ -263,142 +90,21 @@
       "count": 2
     },
     {
-      "from": "topic:foundation",
-      "to": "math.minimax.loomis_induction_proof.value_existence",
-      "kind": "boundary_dependency",
-      "topic": "foundation",
-      "count": 2
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game",
       "to": "game_theory.strategic_game.zero_sum.lam_mu_existence",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 1
     },
     {
-      "from": "topic:foundation",
-      "to": "math.minimax.lp_duality_minimax_proof",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "foundation",
-      "count": 2
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.kakutani_minimax_proof",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 2
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.lp_duality_minimax_proof",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.minimax_from_antisymmetric_games",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.minimax_from_loomis",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 2
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.ville_discretization_proof",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum.approachability",
-      "to": "math.minimax.minimax_from_deterministic_approachability",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "game_theory.strategic_game.zero_sum.approachability",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.base_case",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "from": "game_theory.strategic_game.zero_sum.lam_mu_existence",
+      "to": "topic:math",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.column_drop",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.positive_aggregate",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.row_drop",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.value_existence",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof.weak_duality",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "math",
       "count": 1
     }
   ],
   "keywords": [
-    {
-      "id": "antisymmetric",
-      "title": "antisymmetric",
-      "href": "keywords/antisymmetric.html",
-      "count": 1
-    },
-    {
-      "id": "approachability",
-      "title": "approachability",
-      "href": "keywords/approachability.html",
-      "count": 1
-    },
-    {
-      "id": "base-case",
-      "title": "base-case",
-      "href": "keywords/base-case.html",
-      "count": 1
-    },
-    {
-      "id": "compactness",
-      "title": "compactness",
-      "href": "keywords/compactness.html",
-      "count": 1
-    },
-    {
-      "id": "continuous-game",
-      "title": "continuous-game",
-      "href": "keywords/continuous-game.html",
-      "count": 1
-    },
     {
       "id": "dantzig",
       "title": "dantzig",
@@ -409,43 +115,19 @@
       "id": "existence",
       "title": "existence",
       "href": "keywords/existence.html",
-      "count": 2
-    },
-    {
-      "id": "fixed-point",
-      "title": "fixed-point",
-      "href": "keywords/fixed-point.html",
-      "count": 1
-    },
-    {
-      "id": "induction",
-      "title": "induction",
-      "href": "keywords/induction.html",
-      "count": 2
-    },
-    {
-      "id": "kakutani",
-      "title": "kakutani",
-      "href": "keywords/kakutani.html",
       "count": 1
     },
     {
       "id": "linear-programming",
       "title": "linear-programming",
       "href": "keywords/linear-programming.html",
-      "count": 2
-    },
-    {
-      "id": "loomis",
-      "title": "loomis",
-      "href": "keywords/loomis.html",
-      "count": 8
+      "count": 1
     },
     {
       "id": "minimax",
       "title": "minimax",
       "href": "keywords/minimax.html",
-      "count": 8
+      "count": 3
     },
     {
       "id": "open-issue",
@@ -460,40 +142,28 @@
       "count": 1
     },
     {
-      "id": "positivity",
-      "title": "positivity",
-      "href": "keywords/positivity.html",
-      "count": 1
-    },
-    {
       "id": "proof-plan",
       "title": "proof-plan",
       "href": "keywords/proof-plan.html",
-      "count": 8
+      "count": 1
     },
     {
       "id": "simplex",
       "title": "simplex",
       "href": "keywords/simplex.html",
-      "count": 2
-    },
-    {
-      "id": "ville",
-      "title": "ville",
-      "href": "keywords/ville.html",
       "count": 1
     },
     {
       "id": "weak-duality",
       "title": "weak-duality",
       "href": "keywords/weak-duality.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 16
+      "count": 3
     }
   ],
   "proof_plan_attachments": [
@@ -508,48 +178,6 @@
       "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "kind": "has_plan",
       "plan_status": "candidate"
-    },
-    {
-      "from": "math.minimax.kakutani_minimax_proof",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "candidate"
-    },
-    {
-      "from": "math.minimax.loomis_induction_proof",
-      "to": "math.minimax.loomis_theorem",
-      "kind": "has_plan",
-      "plan_status": "selected"
-    },
-    {
-      "from": "math.minimax.lp_duality_minimax_proof",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "candidate"
-    },
-    {
-      "from": "math.minimax.minimax_from_antisymmetric_games",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "candidate"
-    },
-    {
-      "from": "math.minimax.minimax_from_deterministic_approachability",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "candidate"
-    },
-    {
-      "from": "math.minimax.minimax_from_loomis",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "selected"
-    },
-    {
-      "from": "math.minimax.ville_discretization_proof",
-      "to": "math.minimax.ville_theorem",
-      "kind": "has_plan",
-      "plan_status": "selected"
     }
   ],
   "child_topics": [],

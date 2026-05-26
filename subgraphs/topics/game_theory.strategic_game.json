@@ -4,13 +4,13 @@
     "title": "Game Theory.Strategic Game",
     "href": "game_theory/strategic_game/index.html",
     "parent": "game_theory",
-    "node_count": 12,
-    "descendant_node_count": 206
+    "node_count": 78,
+    "descendant_node_count": 181
   },
   "counts": {
-    "internal_nodes": 12,
+    "internal_nodes": 78,
     "inlined_nodes": 75,
-    "descendant_nodes": 206,
+    "descendant_nodes": 181,
     "child_topics": 3,
     "inlined_child_topics": 23,
     "non_proof_plan_nodes": 75,
@@ -1179,6 +1179,13 @@
       "node_count": 10
     },
     {
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 49
+    },
+    {
       "id": "math.fixed_point",
       "title": "Math.Fixed Point",
       "href": "math/fixed_point/index.html",
@@ -1198,13 +1205,6 @@
       "href": "mechanism_design/index.html",
       "role": "dependent",
       "node_count": 44
-    },
-    {
-      "id": "mechanism_design.auction",
-      "title": "Mechanism Design.Auction",
-      "href": "mechanism_design/auction/index.html",
-      "role": "dependent",
-      "node_count": 19
     }
   ],
   "boundary_edges": [
@@ -1213,7 +1213,7 @@
       "to": "topic:game_theory.strategic_game.zero_sum",
       "kind": "boundary_dependency",
       "topic": "foundation",
-      "count": 7
+      "count": 4
     },
     {
       "from": "topic:game_theory.extensive_game",
@@ -1227,7 +1227,21 @@
       "to": "game_theory.strategic_game.finite_game_catalog",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game.zero_sum",
-      "count": 2
+      "count": 1
+    },
+    {
+      "from": "topic:math",
+      "to": "game_theory.strategic_game.finite_game_catalog",
+      "kind": "boundary_dependency",
+      "topic": "math",
+      "count": 1
+    },
+    {
+      "from": "topic:math",
+      "to": "topic:game_theory.strategic_game.zero_sum",
+      "kind": "boundary_dependency",
+      "topic": "math",
+      "count": 1
     },
     {
       "from": "topic:math.fixed_point",
@@ -1270,13 +1284,6 @@
       "kind": "boundary_dependency",
       "topic": "math.lattice",
       "count": 1
-    },
-    {
-      "from": "topic:foundation",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "foundation",
-      "count": 3
     },
     {
       "from": "game_theory.strategic_game.nash_equilibrium",
@@ -1538,6 +1545,13 @@
       "count": 2
     },
     {
+      "from": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 20
+    },
+    {
       "from": "game_theory.strategic_game.nash_equilibrium",
       "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
@@ -1556,14 +1570,14 @@
       "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
       "topic": "mechanism_design",
-      "count": 1
+      "count": 3
     },
     {
-      "from": "game_theory.strategic_game.weakly_dominant_strategy",
-      "to": "topic:mechanism_design.auction",
-      "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
-      "count": 2
+      "from": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:math",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "math",
+      "count": 6
     }
   ],
   "keywords": [
@@ -1935,21 +1949,21 @@
       "title": "Game Theory.Strategic Game.Zero Sum",
       "depth": 3,
       "parent": "game_theory.strategic_game",
-      "node_count": 100,
-      "direct_node_count": 91,
+      "node_count": 75,
+      "direct_node_count": 66,
       "kind_counts": {
-        "definition": 26,
+        "definition": 23,
         "example": 8,
-        "lemma": 17,
-        "proof-plan": 10,
-        "proposition": 16,
-        "theorem": 23
+        "lemma": 10,
+        "proof-plan": 2,
+        "proposition": 15,
+        "theorem": 17
       },
       "status_counts": {
-        "admitted": 2,
-        "formalized": 41,
-        "proved": 2,
-        "staged": 55
+        "admitted": 27,
+        "formalized": 38,
+        "proved": 1,
+        "staged": 9
       },
       "href": "game_theory/strategic_game/zero_sum/index.html",
       "children": [

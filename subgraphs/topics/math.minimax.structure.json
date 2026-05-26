@@ -4,22 +4,22 @@
     "title": "Math.Minimax.Structure",
     "href": "math/minimax/structure/index.html",
     "parent": "math.minimax",
-    "node_count": 10,
-    "descendant_node_count": 10
+    "node_count": 2,
+    "descendant_node_count": 2
   },
   "counts": {
-    "internal_nodes": 10,
+    "internal_nodes": 2,
     "inlined_nodes": 0,
-    "descendant_nodes": 10,
+    "descendant_nodes": 2,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 10,
+    "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 3,
-    "proof_plan_attachments": 10,
-    "visible_nodes_without_proof_plans": 14,
-    "visible_nodes_with_selected_proof_plans": 14
+    "proof_plan_attachments": 8,
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -27,7 +27,7 @@
       "title": "Mixed Nash Equilibrium of a Matrix Game",
       "kind": "theorem",
       "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.json"
     },
     {
@@ -35,108 +35,14 @@
       "title": "Von Neumann Minimax Theorem",
       "kind": "theorem",
       "status": "proved",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_von_neumann_minimax.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_von_neumann_minimax.json"
-    },
-    {
-      "id": "math.minimax.antisymmetric_matrix_game_value",
-      "title": "Antisymmetric Matrix Games Have Value",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_antisymmetric_matrix_game_value.html",
-      "payload": "node_payloads/math_minimax_antisymmetric_matrix_game_value.json"
-    },
-    {
-      "id": "math.minimax.common_guarantee_value",
-      "title": "Common Guarantee Gives The Value",
-      "kind": "lemma",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_common_guarantee_value.html",
-      "payload": "node_payloads/math_minimax_common_guarantee_value.json"
-    },
-    {
-      "id": "math.minimax.loomis_theorem",
-      "title": "Loomis Theorem (Positive B)",
-      "kind": "theorem",
-      "status": "proved",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_theorem.html",
-      "payload": "node_payloads/math_minimax_loomis_theorem.json"
-    },
-    {
-      "id": "math.minimax.ordered_field_minimax",
-      "title": "Ordered-Field Minimax Statement",
-      "kind": "theorem",
-      "status": "admitted",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_ordered_field_minimax.html",
-      "payload": "node_payloads/math_minimax_ordered_field_minimax.json"
-    },
-    {
-      "id": "math.minimax.strong_complementarity",
-      "title": "Strong Complementarity",
-      "kind": "proposition",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_strong_complementarity.html",
-      "payload": "node_payloads/math_minimax_strong_complementarity.json"
-    },
-    {
-      "id": "math.minimax.value_predicates",
-      "title": "Field-Generic Value Predicates",
-      "kind": "definition",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_value_predicates.html",
-      "payload": "node_payloads/math_minimax_value_predicates.json"
-    },
-    {
-      "id": "math.minimax.ville_theorem",
-      "title": "Ville Theorem",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_ville_theorem.html",
-      "payload": "node_payloads/math_minimax_ville_theorem.json"
-    },
-    {
-      "id": "math.minimax.zero_sum_nash_saddle",
-      "title": "Zero-Sum Nash Equilibria As Saddle Points",
-      "kind": "theorem",
-      "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_zero_sum_nash_saddle.html",
-      "payload": "node_payloads/math_minimax_zero_sum_nash_saddle.json"
     }
   ],
   "edges": [
     {
       "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "to": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
-      "to": "math.minimax.antisymmetric_matrix_game_value",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "to": "math.minimax.common_guarantee_value",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "to": "math.minimax.ordered_field_minimax",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
-      "to": "math.minimax.strong_complementarity",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "to": "math.minimax.ville_theorem",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
-      "to": "math.minimax.zero_sum_nash_saddle",
       "kind": "uses"
     }
   ],
@@ -152,15 +58,15 @@
       "id": "game_theory.strategic_game",
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
-      "role": "dependent",
-      "node_count": 206
+      "role": "dependency_and_dependent",
+      "node_count": 181
     },
     {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
-      "role": "dependency_and_dependent",
-      "node_count": 100
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
+      "role": "dependent",
+      "node_count": 49
     }
   ],
   "boundary_edges": [
@@ -172,59 +78,10 @@
       "count": 1
     },
     {
-      "from": "topic:foundation",
-      "to": "math.minimax.strong_complementarity",
-      "kind": "boundary_dependency",
-      "topic": "foundation",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game",
       "to": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.antisymmetric_matrix_game_value",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.common_guarantee_value",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 3
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.loomis_theorem",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 6
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.strong_complementarity",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.value_predicates",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "math.minimax.zero_sum_nash_saddle",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 1
     },
     {
@@ -232,106 +89,49 @@
       "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependent",
       "topic": "game_theory.strategic_game",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_theorem",
-      "to": "topic:game_theory.strategic_game",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game",
-      "count": 1
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
+      "count": 2
     },
     {
       "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 5
     },
     {
-      "from": "math.minimax.loomis_theorem",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "from": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
+      "to": "topic:math",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
+      "topic": "math",
+      "count": 3
     },
     {
       "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_proof_plan_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 3
     },
     {
-      "from": "math.minimax.antisymmetric_matrix_game_value",
-      "to": "topic:game_theory.strategic_game.zero_sum",
+      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "to": "topic:math",
       "kind": "boundary_proof_plan_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "math.minimax.loomis_theorem",
-      "to": "topic:game_theory.strategic_game.zero_sum",
-      "kind": "boundary_proof_plan_dependent",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "math",
       "count": 1
     }
   ],
   "keywords": [
     {
-      "id": "antisymmetric",
-      "title": "antisymmetric",
-      "href": "keywords/antisymmetric.html",
-      "count": 1
-    },
-    {
-      "id": "complementarity",
-      "title": "complementarity",
-      "href": "keywords/complementarity.html",
-      "count": 1
-    },
-    {
-      "id": "continuous-game",
-      "title": "continuous-game",
-      "href": "keywords/continuous-game.html",
-      "count": 1
-    },
-    {
-      "id": "field-generic",
-      "title": "field-generic",
-      "href": "keywords/field-generic.html",
-      "count": 1
-    },
-    {
-      "id": "linear-programming",
-      "title": "linear-programming",
-      "href": "keywords/linear-programming.html",
-      "count": 1
-    },
-    {
-      "id": "loomis",
-      "title": "loomis",
-      "href": "keywords/loomis.html",
-      "count": 1
-    },
-    {
       "id": "matrix-game",
       "title": "matrix-game",
       "href": "keywords/matrix-game.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "minimax",
       "title": "minimax",
       "href": "keywords/minimax.html",
-      "count": 4
+      "count": 1
     },
     {
       "id": "mixed-strategy",
@@ -343,31 +143,13 @@
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 2
-    },
-    {
-      "id": "optimal-strategy",
-      "title": "optimal-strategy",
-      "href": "keywords/optimal-strategy.html",
-      "count": 1
-    },
-    {
-      "id": "ordered-field",
-      "title": "ordered-field",
-      "href": "keywords/ordered-field.html",
-      "count": 1
-    },
-    {
-      "id": "predicate",
-      "title": "predicate",
-      "href": "keywords/predicate.html",
       "count": 1
     },
     {
       "id": "saddle-point",
       "title": "saddle-point",
       "href": "keywords/saddle-point.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "theorem",
@@ -379,13 +161,13 @@
       "id": "value",
       "title": "value",
       "href": "keywords/value.html",
-      "count": 3
+      "count": 1
     },
     {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 10
+      "count": 2
     }
   ],
   "proof_plan_attachments": [
@@ -414,12 +196,6 @@
       "plan_status": "candidate"
     },
     {
-      "from": "math.minimax.loomis_induction_proof",
-      "to": "math.minimax.loomis_theorem",
-      "kind": "has_plan",
-      "plan_status": "selected"
-    },
-    {
       "from": "math.minimax.lp_duality_minimax_proof",
       "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "kind": "has_plan",
@@ -440,12 +216,6 @@
     {
       "from": "math.minimax.minimax_from_loomis",
       "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "selected"
-    },
-    {
-      "from": "math.minimax.ville_discretization_proof",
-      "to": "math.minimax.ville_theorem",
       "kind": "has_plan",
       "plan_status": "selected"
     }

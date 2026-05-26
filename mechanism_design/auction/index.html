@@ -938,11 +938,11 @@
   <div class="topic-stats">
     <span class="topic-node-count">19 nodes</span>
     
-    <span class="badge status-formalized">8 formalized</span>
+    <span class="badge status-formalized">9 formalized</span>
     
     <span class="badge status-proved">4 proved</span>
     
-    <span class="badge status-staged">7 staged</span>
+    <span class="badge status-staged">6 staged</span>
     
   </div>
   
@@ -962,13 +962,48 @@
 </div>
 
 
+<div class="topic-catalog">
+  <h1>Staged Auction Topic Catalog</h1>
+<p>Canonical folder topic: <code>auction</code></p>
+<h2>Subtopics</h2>
+<ul>
+<li><code>auction.basic</code> - auction formats, bid profiles, ordered-bid utilities,
+  Vickrey (second-price) and first-price sealed-bid mechanisms.</li>
+<li><code>auction.knapsack</code> - binary allocations, welfare maximization, relaxations,
+  and dynamic programming.</li>
+<li><code>auction.bayesian</code> - Bayesian single-item auction framework (CDF/density,
+  opponent priors), interim quantities and IC, MSZ Chapter 12 blueprint
+  stubs (Dutch/English equivalences, symmetric IPV equilibria for first-
+  price and all-pay, entry fee and reserve price analysis, risk-aversion
+  comparisons).</li>
+</ul>
+<h2>Source Guidance</h2>
+<ul>
+<li>Use [Krishna 2010] Vijay Krishna, <em>Auction Theory</em>, 2nd ed.,
+  <code>references/AuctionTheory.pdf</code>, for private-value auctions, first-price and
+  second-price auctions, revenue equivalence, interdependent values, collusion,
+  multiple-object auctions, packages, positions, and auction-specific mechanism
+  design.</li>
+<li>Use [MSZ Chapter 12] Maschler, Solan, and Zamir, <em>Game Theory</em>,
+  <code>references/GameTheory.pdf</code>, for the IPV / Bayesian-equilibrium track and
+  for the strategic equivalences (Dutch≡FP, English≡SP under IPV).</li>
+</ul>
+<h2>Boundary</h2>
+<p>Put general truthfulness, transfer interfaces, Myerson optimal-auction
+machinery, revenue equivalence, reserve-price characterisations, and the
+selling-problem framework under <code>mechanism_design</code>. The <code>auction</code> topic
+covers concrete auction formats (single-item, multi-item, knapsack,
+Bayesian single-item) and their format-specific equilibrium and DSIC
+results.</p>
+</div>
+
 
 <div class="blueprint-node-list">
   
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_bayesian_all_pay_equilibrium.html">All-Pay Auction Symmetric Equilibrium</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_bayesian_all_pay_equilibrium.html">All-Pay Auction Symmetric Equilibrium</a>
       <span class="badge status-staged">staged</span>
     </header>
   </article>
@@ -976,7 +1011,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_bayesian_risk_aversion_comparison.html">Auction Comparisons Under Risk Aversion</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_bayesian_risk_aversion_comparison.html">Auction Comparisons Under Risk Aversion</a>
       <span class="badge status-staged">staged</span>
     </header>
   </article>
@@ -984,7 +1019,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_basic_formats.html">Basic Auction Formats</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_basic_formats.html">Basic Auction Formats</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -992,7 +1027,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1000,7 +1035,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_bayesian_interim_and_ic.html">Bayesian Single-Item Auction Interim Quantities And IC</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_bayesian_interim_and_ic.html">Bayesian Single-Item Auction Interim Quantities And IC</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1008,15 +1043,15 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="basic/mechanism_design_auction_basic_bid_profile_supports.html">Bid-Profile Supports</a>
-      <span class="badge status-staged">staged</span>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_basic_bid_profile_supports.html">Bid-Profile Supports</a>
+      <span class="badge status-formalized">formalized</span>
     </header>
   </article>
   
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_knapsack_binary_allocations.html">Binary Knapsack Allocations</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_knapsack_binary_allocations.html">Binary Knapsack Allocations</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1024,7 +1059,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_bayesian_dutch_first_price_equivalence.html">Dutch ≡ First-Price Strategic Equivalence</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_bayesian_dutch_first_price_equivalence.html">Dutch ≡ First-Price Strategic Equivalence</a>
       <span class="badge status-staged">staged</span>
     </header>
   </article>
@@ -1032,7 +1067,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_bayesian_english_second_price_equivalence.html">English ≡ Second-Price IPV Equivalence</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_bayesian_english_second_price_equivalence.html">English ≡ Second-Price IPV Equivalence</a>
       <span class="badge status-staged">staged</span>
     </header>
   </article>
@@ -1040,7 +1075,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_bayesian_entry_fee_and_reserve_price.html">Entry Fees And Reserve Prices In IPV Auctions</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_bayesian_entry_fee_and_reserve_price.html">Entry Fees And Reserve Prices In IPV Auctions</a>
       <span class="badge status-staged">staged</span>
     </header>
   </article>
@@ -1048,7 +1083,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_basic_first_price_no_dsic.html">First-Price Fails DSIC</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_basic_first_price_no_dsic.html">First-Price Fails DSIC</a>
       <span class="badge status-proved">proved</span>
     </header>
   </article>
@@ -1056,7 +1091,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_basic_first_price_mechanism.html">First-Price Mechanism</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_basic_first_price_mechanism.html">First-Price Mechanism</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1064,7 +1099,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_knapsack_environment.html">Knapsack Auction Environment</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_knapsack_environment.html">Knapsack Auction Environment</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1072,7 +1107,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_knapsack_relaxations_dynamic_programming.html">Knapsack Relaxations And Dynamic Programming</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_knapsack_relaxations_dynamic_programming.html">Knapsack Relaxations And Dynamic Programming</a>
       <span class="badge status-proved">proved</span>
     </header>
   </article>
@@ -1080,7 +1115,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_basic_ordered_bid_utilities.html">Ordered-Bid Utilities</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_basic_ordered_bid_utilities.html">Ordered-Bid Utilities</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1088,7 +1123,7 @@
   <article class="definition_thmwrapper theorem-style-definition summary-node">
     <header class="definition_thmheading thm-heading">
       <span class="definition_thmcaption thm-caption">Definition</span>
-      <a class="definition_thmtitle thm-title" href="mechanism_design_auction_basic_second_price_mechanism.html">Second-Price (Vickrey) Mechanism</a>
+      <a class="definition_thmtitle thm-title" href="../mechanism_design_auction_basic_second_price_mechanism.html">Second-Price (Vickrey) Mechanism</a>
       <span class="badge status-formalized">formalized</span>
     </header>
   </article>
@@ -1096,7 +1131,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>
       <span class="badge status-staged">staged</span>
     </header>
   </article>
@@ -1104,7 +1139,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_basic_second_price_dsic.html">Vickrey Truth-Telling Is Dominant</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_basic_second_price_dsic.html">Vickrey Truth-Telling Is Dominant</a>
       <span class="badge status-proved">proved</span>
     </header>
   </article>
@@ -1112,7 +1147,7 @@
   <article class="theorem_thmwrapper theorem-style-theorem summary-node">
     <header class="theorem_thmheading thm-heading">
       <span class="theorem_thmcaption thm-caption">Theorem</span>
-      <a class="theorem_thmtitle thm-title" href="mechanism_design_auction_knapsack_welfare_maximizing_mechanism.html">Welfare-Maximizing Knapsack Mechanism</a>
+      <a class="theorem_thmtitle thm-title" href="../mechanism_design_auction_knapsack_welfare_maximizing_mechanism.html">Welfare-Maximizing Knapsack Mechanism</a>
       <span class="badge status-proved">proved</span>
     </header>
   </article>

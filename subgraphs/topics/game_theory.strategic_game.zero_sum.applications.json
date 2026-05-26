@@ -26,8 +26,8 @@
       "id": "game_theory.strategic_game.zero_sum.applications.markov_stationary_as_zero_sum_value",
       "title": "Markov Stationary Distribution as Zero-Sum Game Value",
       "kind": "lemma",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_markov_stationary_as_zero_sum_value.html",
+      "status": "admitted",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_markov_stationary_as_zero_sum_value.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_applications_markov_stationary_as_zero_sum_value.json"
     },
     {
@@ -35,7 +35,7 @@
       "title": "Perron-Frobenius For Positive Matrices",
       "kind": "theorem",
       "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_perron_frobenius_positive_matrix.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_perron_frobenius_positive_matrix.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_applications_perron_frobenius_positive_matrix.json"
     },
     {
@@ -43,23 +43,23 @@
       "title": "Stochastic Matrix Has An Invariant Distribution",
       "kind": "theorem",
       "status": "formalized",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_stochastic_matrix_invariant_distribution.html",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_stochastic_matrix_invariant_distribution.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_applications_stochastic_matrix_invariant_distribution.json"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
       "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
       "kind": "proposition",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.html",
+      "status": "admitted",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.json"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
       "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
       "kind": "proposition",
-      "status": "staged",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.html",
+      "status": "admitted",
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.html",
       "payload": "node_payloads/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.json"
     }
   ],
@@ -76,7 +76,7 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 206
+      "node_count": 181
     },
     {
       "id": "game_theory.strategic_game.dominance",
@@ -86,75 +86,61 @@
       "node_count": 7
     },
     {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
       "role": "dependency",
-      "node_count": 100
+      "node_count": 49
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:game_theory.strategic_game",
-      "to": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
+      "to": "game_theory.strategic_game.zero_sum.applications.markov_stationary_as_zero_sum_value",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
       "count": 1
     },
     {
       "from": "topic:game_theory.strategic_game",
-      "to": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.dominance",
-      "to": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.dominance",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.dominance",
-      "to": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.dominance",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "game_theory.strategic_game.zero_sum.applications.markov_stationary_as_zero_sum_value",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "game_theory.strategic_game.zero_sum.applications.perron_frobenius_positive_matrix",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
       "to": "game_theory.strategic_game.zero_sum.applications.stochastic_matrix_invariant_distribution",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
       "count": 3
     },
     {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game",
       "to": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game",
+      "count": 2
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 2
+    },
+    {
+      "from": "topic:game_theory.strategic_game.dominance",
+      "to": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game.dominance",
       "count": 1
     },
     {
-      "from": "topic:game_theory.strategic_game.zero_sum",
+      "from": "topic:game_theory.strategic_game.dominance",
       "to": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
+      "topic": "game_theory.strategic_game.dominance",
+      "count": 1
+    },
+    {
+      "from": "topic:math",
+      "to": "game_theory.strategic_game.zero_sum.applications.perron_frobenius_positive_matrix",
+      "kind": "boundary_dependency",
+      "topic": "math",
       "count": 1
     }
   ],

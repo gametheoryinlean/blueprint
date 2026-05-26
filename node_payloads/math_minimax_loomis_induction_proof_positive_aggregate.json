@@ -3,12 +3,11 @@
   "title": "Positive Aggregates xB and By",
   "kind": "lemma",
   "status": "formalized",
-  "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_positive_aggregate.html",
-  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "href": "math/math_minimax_loomis_induction_proof_positive_aggregate.html",
+  "primary_topic": "math",
   "topics": [
-    "game_theory.strategic_game.zero_sum",
-    "math.minimax",
-    "math.minimax.proofs"
+    "math",
+    "math.minimax"
   ],
   "body_html": "<h1>Positive Aggregates xB and By</h1>\n<p>A bookkeeping lemma used throughout the direct Loomis induction proof: an\nentrywise-positive matrix $B$ stays positive after weighting by a\nprobability vector on either side.</p>\n<h2>Statement</h2>\n<p>Let $I$ and $J$ be finite nonempty index types, and let\n$B \\colon I \\times J \\to \\mathbb{R}$ satisfy $B_{ij} &gt; 0$ for every\n$(i, j) \\in I \\times J$. Then:</p>\n<ol>\n<li>For every $x \\in \\Delta(I)$ and every $j \\in J$,\n   $(xB)_j = \\sum_i x_i B_{ij} &gt; 0$.</li>\n<li>For every $y \\in \\Delta(J)$ and every $i \\in I$,\n   $(By)_i = \\sum_j B_{ij}\\, y_j &gt; 0$.</li>\n<li>For every $x \\in \\Delta(I)$ and every $y \\in \\Delta(J)$,\n   $x B y = \\sum_{i, j} x_i B_{ij} y_j &gt; 0$.</li>\n</ol>",
   "proof_html": "<p>(i) Fix $x \\in \\Delta(I)$ and $j \\in J$. Each summand $x_i B_{ij}$ is\nnonnegative because $x_i \\ge 0$ and $B_{ij} &gt; 0$. Since $\\sum_i x_i = 1$,\nthere is some $i^* \\in I$ with $x_{i^*} &gt; 0$; for that index\n$x_{i^*} B_{i^* j} &gt; 0$ strictly. Adding the nonnegative remaining terms\nkeeps the sum strictly positive.</p>\n<p>(ii) Symmetric in $y$ and the column variable.</p>\n<p>(iii) Weight (ii) by $x \\ge 0$ with $\\sum_i x_i = 1$. The argument of (i)\napplied to the strictly positive function $i \\mapsto (By)_i$ gives\n$\\sum_i x_i (By)_i &gt; 0$, which is exactly $x B y$. $\\square$</p>\n<h2>Use</h2>\n<p>Used wherever the Loomis ratios $\\frac{(xA)_j}{(xB)_j}$ and\n$\\frac{(Ay)_i}{(By)_i}$ appear: the denominators are strictly positive, so\nthe ratios are well-defined real numbers and continuous in their simplex\narguments. In particular it underwrites the value-existence and\nweak-duality lemmas of the direct Loomis induction proof.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations\n  of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Aggregate\n  positivity used to define the Loomis ratios.</li>\n</ul>",
@@ -17,27 +16,27 @@
     {
       "id": "math.minimax.loomis_induction_proof.column_drop",
       "title": "Column-Drop Step of Loomis Induction",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_column_drop.html"
+      "href": "math/math_minimax_loomis_induction_proof_column_drop.html"
     },
     {
       "id": "math.minimax.loomis_induction_proof.row_drop",
       "title": "Row-Drop Step of Loomis Induction",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_row_drop.html"
+      "href": "math/math_minimax_loomis_induction_proof_row_drop.html"
     },
     {
       "id": "math.minimax.loomis_induction_proof.value_existence",
       "title": "Existence of Loomis Optimisers",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_value_existence.html"
+      "href": "math/math_minimax_loomis_induction_proof_value_existence.html"
     },
     {
       "id": "math.minimax.loomis_induction_proof.weak_duality",
       "title": "Weak Duality For Loomis Values",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_induction_proof_weak_duality.html"
+      "href": "math/math_minimax_loomis_induction_proof_weak_duality.html"
     },
     {
       "id": "math.minimax.loomis_theorem",
       "title": "Loomis Theorem (Positive B)",
-      "href": "game_theory/strategic_game/zero_sum/math_minimax_loomis_theorem.html"
+      "href": "math/math_minimax_loomis_theorem.html"
     }
   ],
   "lean_refs": [
@@ -47,9 +46,9 @@
       "qualified_name": "LoomisGeneral.IsPositive.one",
       "module": "EconCSLib.Math.Minimax.LoomisGeneral",
       "repository_title": "EconCSLib",
-      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
-      "short_revision": "09e162b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Minimax/LoomisGeneral.lean#L56",
+      "revision": "dd73383ea896844b1743fe7cf1ab67c399937a9f",
+      "short_revision": "dd73383",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/dd73383ea896844b1743fe7cf1ab67c399937a9f/EconCSLib/Math/Minimax/LoomisGeneral.lean#L56",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -60,9 +59,9 @@
       "qualified_name": "LoomisGeneral.xB_pos",
       "module": "EconCSLib.Math.Minimax.LoomisGeneral",
       "repository_title": "EconCSLib",
-      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
-      "short_revision": "09e162b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Minimax/LoomisGeneral.lean#L82",
+      "revision": "dd73383ea896844b1743fe7cf1ab67c399937a9f",
+      "short_revision": "dd73383",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/dd73383ea896844b1743fe7cf1ab67c399937a9f/EconCSLib/Math/Minimax/LoomisGeneral.lean#L82",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -73,9 +72,9 @@
       "qualified_name": "LoomisGeneral.By_pos",
       "module": "EconCSLib.Math.Minimax.LoomisGeneral",
       "repository_title": "EconCSLib",
-      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
-      "short_revision": "09e162b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Minimax/LoomisGeneral.lean#L87",
+      "revision": "dd73383ea896844b1743fe7cf1ab67c399937a9f",
+      "short_revision": "dd73383",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/dd73383ea896844b1743fe7cf1ab67c399937a9f/EconCSLib/Math/Minimax/LoomisGeneral.lean#L87",
       "has_sorry": false,
       "status": "resolved",
       "reason": null
@@ -86,9 +85,9 @@
       "qualified_name": "LoomisGeneral.xBy_pos",
       "module": "EconCSLib.Math.Minimax.LoomisGeneral",
       "repository_title": "EconCSLib",
-      "revision": "09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7",
-      "short_revision": "09e162b",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/09e162b1d86f3e66b894bc3ee89c27e7fe6e0cd7/EconCSLib/Math/Minimax/LoomisGeneral.lean#L92",
+      "revision": "dd73383ea896844b1743fe7cf1ab67c399937a9f",
+      "short_revision": "dd73383",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/dd73383ea896844b1743fe7cf1ab67c399937a9f/EconCSLib/Math/Minimax/LoomisGeneral.lean#L92",
       "has_sorry": false,
       "status": "resolved",
       "reason": null

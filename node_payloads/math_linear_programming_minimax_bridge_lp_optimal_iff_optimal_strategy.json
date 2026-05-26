@@ -2,11 +2,12 @@
   "id": "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
   "title": "LP Optimum ↔ Game-Theoretic Optimal Strategy",
   "kind": "theorem",
-  "status": "staged",
-  "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_lp_optimal_iff_optimal_strategy.html",
-  "primary_topic": "game_theory.strategic_game.zero_sum",
+  "status": "admitted",
+  "href": "math/math_linear_programming_minimax_bridge_lp_optimal_iff_optimal_strategy.html",
+  "primary_topic": "math",
   "topics": [
-    "game_theory.strategic_game.zero_sum",
+    "math",
+    "math.linear_programming",
     "math.linear_programming.minimax_bridge"
   ],
   "body_html": "<h1>LP Optimum ↔ Game-Theoretic Optimal Strategy</h1>\n<p><strong>Theorem.</strong> Let $A : I \\times J \\to \\mathbb{R}$ be a finite matrix\ngame with value $\\operatorname{val}(A) \\in \\mathbb{R}$\n([[game_theory.strategic_game.zero_sum.core.value]]).</p>\n<ol>\n<li>\n<p>The pair $(x^*, v^*)$ is optimal for player 1's LP\n   ([[math.linear_programming.minimax_bridge.player_1_lp]]) <strong>if and only if</strong> $x^*$ is a maxmin\n   (optimal) mixed strategy for player 1 and $v^* = \\operatorname{val}(A)$.</p>\n</li>\n<li>\n<p>The pair $(y^*, w^*)$ is optimal for player 2's LP\n   ([[math.linear_programming.minimax_bridge.player_2_lp]]) <strong>if and only if</strong> $y^*$ is a minmax\n   (optimal) mixed strategy for player 2 and $w^* = \\operatorname{val}(A)$.</p>\n</li>\n<li>\n<p>Any pair $(x^*, y^*)$ obtained from LP optima is a saddle point of\n   $A$ ([[game_theory.strategic_game.zero_sum.core.saddle_point]]); conversely every saddle point\n   gives optimal LP solutions.</p>\n</li>\n</ol>",
@@ -15,17 +16,17 @@
     {
       "id": "math.linear_programming.minimax_bridge.player_2_lp",
       "title": "Player-2 LP Formulation of a Matrix Game",
-      "href": "game_theory/strategic_game/zero_sum/math_linear_programming_minimax_bridge_player_2_lp.html"
+      "href": "math/math_linear_programming_minimax_bridge_player_2_lp.html"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
       "title": "Optimal Strategy Sets",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_optimal_strategy_sets.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_core_optimal_strategy_sets.html"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.core.saddle_point",
       "title": "Saddle Point",
-      "href": "game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_core_saddle_point.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_core_saddle_point.html"
     }
   ],
   "dependents": [],

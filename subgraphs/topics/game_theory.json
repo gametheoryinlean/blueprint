@@ -5,12 +5,12 @@
     "href": "game_theory/index.html",
     "parent": null,
     "node_count": 0,
-    "descendant_node_count": 288
+    "descendant_node_count": 263
   },
   "counts": {
     "internal_nodes": 0,
     "inlined_nodes": 27,
-    "descendant_nodes": 288,
+    "descendant_nodes": 263,
     "child_topics": 2,
     "inlined_child_topics": 2,
     "non_proof_plan_nodes": 27,
@@ -402,6 +402,13 @@
       "node_count": 27
     },
     {
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 49
+    },
+    {
       "id": "math.fixed_point",
       "title": "Math.Fixed Point",
       "href": "math/fixed_point/index.html",
@@ -421,13 +428,6 @@
       "href": "mechanism_design/index.html",
       "role": "dependent",
       "node_count": 44
-    },
-    {
-      "id": "mechanism_design.auction",
-      "title": "Mechanism Design.Auction",
-      "href": "mechanism_design/auction/index.html",
-      "role": "dependent",
-      "node_count": 19
     }
   ],
   "boundary_edges": [
@@ -436,7 +436,7 @@
       "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependency",
       "topic": "foundation",
-      "count": 7
+      "count": 4
     },
     {
       "from": "topic:game_theory.extensive_game",
@@ -509,6 +509,13 @@
       "count": 1
     },
     {
+      "from": "topic:math",
+      "to": "topic:game_theory.strategic_game",
+      "kind": "boundary_dependency",
+      "topic": "math",
+      "count": 2
+    },
+    {
       "from": "topic:math.fixed_point",
       "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependency",
@@ -523,25 +530,25 @@
       "count": 1
     },
     {
-      "from": "topic:foundation",
-      "to": "topic:game_theory.strategic_game",
-      "kind": "boundary_proof_plan_dependency",
-      "topic": "foundation",
-      "count": 3
+      "from": "topic:game_theory.strategic_game",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 20
     },
     {
       "from": "topic:game_theory.strategic_game",
       "to": "topic:mechanism_design",
       "kind": "boundary_dependent",
       "topic": "mechanism_design",
-      "count": 4
+      "count": 6
     },
     {
       "from": "topic:game_theory.strategic_game",
-      "to": "topic:mechanism_design.auction",
-      "kind": "boundary_dependent",
-      "topic": "mechanism_design.auction",
-      "count": 2
+      "to": "topic:math",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "math",
+      "count": 6
     }
   ],
   "keywords": [
@@ -764,21 +771,21 @@
       "title": "Game Theory.Strategic Game",
       "depth": 2,
       "parent": "game_theory",
-      "node_count": 206,
-      "direct_node_count": 12,
+      "node_count": 181,
+      "direct_node_count": 78,
       "kind_counts": {
-        "definition": 83,
+        "definition": 80,
         "example": 14,
-        "lemma": 17,
-        "proof-plan": 10,
-        "proposition": 32,
-        "theorem": 50
+        "lemma": 10,
+        "proof-plan": 2,
+        "proposition": 31,
+        "theorem": 44
       },
       "status_counts": {
-        "admitted": 12,
-        "formalized": 41,
-        "proved": 2,
-        "staged": 151
+        "admitted": 37,
+        "formalized": 38,
+        "proved": 1,
+        "staged": 105
       },
       "href": "game_theory/strategic_game/index.html",
       "children": [

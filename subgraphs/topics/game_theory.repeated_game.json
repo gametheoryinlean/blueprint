@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 17,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 23,
-    "visible_nodes_with_selected_proof_plans": 23
+    "visible_nodes_without_proof_plans": 22,
+    "visible_nodes_with_selected_proof_plans": 22
   },
   "nodes": [
     {
@@ -264,7 +264,7 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 206
+      "node_count": 181
     },
     {
       "id": "game_theory.strategic_game.bayesian",
@@ -279,13 +279,6 @@
       "href": "game_theory/strategic_game/payoff_geometry/index.html",
       "role": "dependency",
       "node_count": 5
-    },
-    {
-      "id": "game_theory.strategic_game.zero_sum",
-      "title": "Game Theory.Strategic Game.Zero Sum",
-      "href": "game_theory/strategic_game/zero_sum/index.html",
-      "role": "dependency",
-      "node_count": 100
     }
   ],
   "boundary_edges": [
@@ -311,6 +304,13 @@
       "count": 1
     },
     {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.repeated_game.incomplete_info.cav_u_theorem",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
       "from": "topic:game_theory.strategic_game.bayesian",
       "to": "game_theory.repeated_game.incomplete_info.repeated_game_incomplete_information",
       "kind": "boundary_dependency",
@@ -322,13 +322,6 @@
       "to": "game_theory.repeated_game.core.feasible_individually_rational_payoffs",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game.payoff_geometry",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.zero_sum",
-      "to": "game_theory.repeated_game.incomplete_info.cav_u_theorem",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.zero_sum",
       "count": 1
     }
   ],
