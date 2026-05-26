@@ -1,0 +1,35 @@
+{
+  "id": "market_design.matching.one_to_one.gale_shapley_algorithm",
+  "title": "Gale-Shapley Deferred Acceptance Algorithm",
+  "kind": "definition",
+  "status": "staged",
+  "href": "market_design/market_design_matching_one_to_one_gale_shapley_algorithm.html",
+  "primary_topic": "market_design",
+  "topics": [
+    "market_design",
+    "market_design.matching",
+    "market_design.matching.one_to_one"
+  ],
+  "body_html": "<h1>Gale-Shapley Deferred Acceptance Algorithm</h1>\n<p>Men-proposing version on a one-to-one matching market $(M, W, \\succ)$.</p>\n<h2>Algorithm</h2>\n<p>Initialize: every man is free; every woman holds no offer.</p>\n<p>Repeat until no free man has any acceptable woman remaining on his list:</p>\n<ol>\n<li><strong>Propose.</strong> Pick a free man $i$ who still has at least one acceptable\n   woman not yet proposed to. Let $j$ be $i$'s most-preferred such woman.\n   $i$ proposes to $j$ (and crosses $j$ off his list, whether or not she\n   accepts).</li>\n<li><strong>Decide.</strong></li>\n<li>If $j$ currently holds no offer, $j$ tentatively accepts $i$.</li>\n<li>If $j$ currently holds an offer from $i'$ and prefers $i$ to $i'$,\n     $j$ accepts $i$ and rejects $i'$ (who becomes free again).</li>\n<li>Else $j$ rejects $i$.</li>\n</ol>\n<p>The algorithm terminates because the total number of (man, woman) proposal\npairs is at most $|M| \\cdot |W|$ and strictly grows each round.</p>\n<p>The output matching matches each woman to the man whose offer she is\nholding at termination; unmatched men get $\\bot$, unmatched women get $\\bot$.</p>\n<h2>Variant: Women-Proposing</h2>\n<p>Swap the roles of $M$ and $W$. The output is generally a <em>different</em> stable\nmatching (see [[lattice]]); both are stable but with opposite optimality\nproperties for the two sides (see [[proposing_optimal]]).</p>\n<p>In Lean, the men-proposing algorithm is implemented in\n<code>EconCSLib.MarketDesign.Matching.GaleShapley</code> as the <code>galeShapley</code> /\n<code>gs</code> family, parameterized over an <code>EquivData</code> reduction to <code>Fin n × Fin n</code>\nfor finiteness.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.22, Alg 22.6] Maschler, Solan, Zamir, <em>Game Theory</em>.</li>\n<li>Gale &amp; Shapley (1962). <em>College Admissions and the Stability of Marriage</em>. AMM 69, 9–15.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "market_design.matching.one_to_one.market",
+      "title": "Matching Market (One-to-One)",
+      "href": "market_design/market_design_matching_one_to_one_market.html"
+    },
+    {
+      "id": "market_design.matching.one_to_one.matching",
+      "title": "Matching (Partial Bijection)",
+      "href": "market_design/market_design_matching_one_to_one_matching.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "market_design.matching.one_to_one.gale_shapley_stable",
+      "title": "Gale-Shapley Theorem (Existence of Stable Matching)",
+      "href": "market_design/market_design_matching_one_to_one_gale_shapley_stable.html"
+    }
+  ],
+  "lean_refs": []
+}

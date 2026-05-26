@@ -6228,6 +6228,225 @@
       ]
     },
     {
+      "id": "market_design.matching.one_to_one.gale_shapley_algorithm",
+      "title": "Gale-Shapley Deferred Acceptance Algorithm",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "gale-shapley",
+        "deferred-acceptance",
+        "algorithm"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.market",
+        "market_design.matching.one_to_one.matching"
+      ],
+      "used_by": [
+        "market_design.matching.one_to_one.gale_shapley_stable"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.gale_shapley_stable",
+      "title": "Gale-Shapley Theorem (Existence of Stable Matching)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "stability",
+        "existence",
+        "gale-shapley"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.gale_shapley_algorithm",
+        "market_design.matching.one_to_one.stability"
+      ],
+      "used_by": [
+        "market_design.matching.one_to_one.proposing_optimal",
+        "market_design.matching.one_to_one.strategy_proofness_proposing"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.lattice",
+      "title": "Lattice Structure of Stable Matchings (Conway-Knuth)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "lattice",
+        "stable-set"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.proposing_optimal",
+        "market_design.matching.one_to_one.stability"
+      ],
+      "used_by": [
+        "market_design.matching.one_to_one.rural_hospitals"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.market",
+      "title": "Matching Market (One-to-One)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "market-design",
+        "one-to-one"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "used_by": [
+        "market_design.matching.one_to_one.gale_shapley_algorithm",
+        "market_design.matching.one_to_one.matching"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.matching",
+      "title": "Matching (Partial Bijection)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "market-design"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.market"
+      ],
+      "used_by": [
+        "market_design.matching.one_to_one.gale_shapley_algorithm",
+        "market_design.matching.one_to_one.stability"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.proposing_optimal",
+      "title": "Proposing-Side Optimal Stable Matching",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "optimality",
+        "gale-shapley"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.gale_shapley_stable"
+      ],
+      "used_by": [
+        "market_design.matching.one_to_one.lattice",
+        "market_design.matching.one_to_one.strategy_proofness_proposing"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.rural_hospitals",
+      "title": "Rural Hospitals Theorem",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "rural-hospitals",
+        "invariance"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.lattice"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.stability",
+      "title": "Stability (Individual Rationality + No Blocking Pair)",
+      "kind": "definition",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "stability",
+        "blocking-pair"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.matching"
+      ],
+      "used_by": [
+        "market_design.matching.one_to_one.gale_shapley_stable",
+        "market_design.matching.one_to_one.lattice"
+      ]
+    },
+    {
+      "id": "market_design.matching.one_to_one.strategy_proofness_proposing",
+      "title": "Strategy-Proofness of Gale-Shapley for the Proposing Side (Roth 1982)",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "matching",
+        "strategy-proofness",
+        "gale-shapley",
+        "mechanism-design"
+      ],
+      "primary_topic": "market_design",
+      "topics": [
+        "market_design",
+        "market_design.matching",
+        "market_design.matching.one_to_one"
+      ],
+      "topic": "one_to_one",
+      "uses": [
+        "market_design.matching.one_to_one.gale_shapley_stable",
+        "market_design.matching.one_to_one.proposing_optimal",
+        "mechanism_design.basic.dsic_predicate"
+      ]
+    },
+    {
       "id": "math.fixed_point.brouwer_compact_convex",
       "title": "Brouwer Fixed Point Theorem",
       "kind": "theorem",
@@ -8063,6 +8282,7 @@
         "mechanism_design.basic.induced_strategic_game"
       ],
       "used_by": [
+        "market_design.matching.one_to_one.strategy_proofness_proposing",
         "mechanism_design.auction.basic.first_price_no_dsic",
         "mechanism_design.auction.basic.second_price_dsic",
         "mechanism_design.basic.truthfulness_from_dsic",
@@ -14101,6 +14321,58 @@
     {
       "from": "game_theory.strategic_game.zero_sum.zero_sum_game",
       "to": "game_theory.strategic_game.zero_sum.zero_sum_payoff_negation"
+    },
+    {
+      "from": "market_design.matching.one_to_one.market",
+      "to": "market_design.matching.one_to_one.gale_shapley_algorithm"
+    },
+    {
+      "from": "market_design.matching.one_to_one.matching",
+      "to": "market_design.matching.one_to_one.gale_shapley_algorithm"
+    },
+    {
+      "from": "market_design.matching.one_to_one.gale_shapley_algorithm",
+      "to": "market_design.matching.one_to_one.gale_shapley_stable"
+    },
+    {
+      "from": "market_design.matching.one_to_one.stability",
+      "to": "market_design.matching.one_to_one.gale_shapley_stable"
+    },
+    {
+      "from": "market_design.matching.one_to_one.proposing_optimal",
+      "to": "market_design.matching.one_to_one.lattice"
+    },
+    {
+      "from": "market_design.matching.one_to_one.stability",
+      "to": "market_design.matching.one_to_one.lattice"
+    },
+    {
+      "from": "market_design.matching.one_to_one.market",
+      "to": "market_design.matching.one_to_one.matching"
+    },
+    {
+      "from": "market_design.matching.one_to_one.gale_shapley_stable",
+      "to": "market_design.matching.one_to_one.proposing_optimal"
+    },
+    {
+      "from": "market_design.matching.one_to_one.lattice",
+      "to": "market_design.matching.one_to_one.rural_hospitals"
+    },
+    {
+      "from": "market_design.matching.one_to_one.matching",
+      "to": "market_design.matching.one_to_one.stability"
+    },
+    {
+      "from": "market_design.matching.one_to_one.gale_shapley_stable",
+      "to": "market_design.matching.one_to_one.strategy_proofness_proposing"
+    },
+    {
+      "from": "market_design.matching.one_to_one.proposing_optimal",
+      "to": "market_design.matching.one_to_one.strategy_proofness_proposing"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "market_design.matching.one_to_one.strategy_proofness_proposing"
     },
     {
       "from": "math.fixed_point.retract_fixed_point",

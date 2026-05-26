@@ -1,0 +1,24 @@
+{
+  "id": "market_design.matching.one_to_one.rural_hospitals",
+  "title": "Rural Hospitals Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "market_design/market_design_matching_one_to_one_rural_hospitals.html",
+  "primary_topic": "market_design",
+  "topics": [
+    "market_design",
+    "market_design.matching",
+    "market_design.matching.one_to_one"
+  ],
+  "body_html": "<h1>Rural Hospitals Theorem</h1>\n<p><strong>Theorem (Roth 1986, McVitie-Wilson 1970 for one-to-one).</strong> In a finite\none-to-one matching market $(M, W, \\succ)$, the set of <strong>matched\nparticipants</strong> is invariant across all stable matchings:</p>\n<p>$$\\{ i \\in M : \\mu(i) \\ne \\bot \\} = \\{ i \\in M : \\mu'(i) \\ne \\bot \\}$$</p>\n<p>for any two stable matchings $\\mu, \\mu'$ (and symmetrically for $W$).</p>\n<p>In particular, the man-proposing optimal $\\mu^M$ and the woman-proposing\noptimal $\\mu^W$ match exactly the same individuals.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Suppose $\\mu, \\mu'$ are stable and some man $i$ is matched in $\\mu$ but\nunmatched in $\\mu'$. Let $j = \\mu(i)$. By [[lattice]], we can WLOG take\n$\\mu = \\mu^M$ (men-optimal) and $\\mu' = \\mu^W$ (women-optimal). Since\n$\\mu(i) = j$ and $\\mu^W$ ranks weakly below $\\mu^M$ for every man, every man\nwho is matched in $\\mu^M$ is also matched in $\\mu^W$ (he might be matched to\na different — and weakly worse — partner, but he is matched).</p>\n<p>Hence the matched-man sets coincide. By symmetry (cardinality of matched\nparticipants is the same on both sides), the matched-woman sets coincide\ntoo.</p>\n<h2>Why \"Rural Hospitals\"?</h2>\n<p>The name comes from the many-to-one (residency matching) version, where the\nresult says: any hospital that fills fewer positions than its quota under\none stable assignment fills exactly the same set of positions (with the\nsame set of residents!) under every stable assignment. Rural hospitals\nthat historically struggled to fill positions still struggle — no\nmechanism design can rescue them within the stable-matching framework.</p>\n<p>The one-to-one version above is the simpler specialization.</p>\n<h2>Lean Status</h2>\n<p>To be formalized in MT-L2 (#204). Depends on the lattice structure\n([[lattice]]) and proposing-optimality ([[proposing_optimal]]).</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.22, Thm 22.14] Maschler, Solan, Zamir, <em>Game Theory</em>.</li>\n<li>McVitie &amp; Wilson (1970), <em>Stable Marriage Assignment for Unequal Sets</em>.</li>\n<li>Roth (1986), <em>On the Allocation of Residents to Rural Hospitals</em>. Econometrica 54.</li>\n<li>Roth &amp; Sotomayor (1990), Ch. 2 §2.4.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "market_design.matching.one_to_one.lattice",
+      "title": "Lattice Structure of Stable Matchings (Conway-Knuth)",
+      "href": "market_design/market_design_matching_one_to_one_lattice.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": []
+}

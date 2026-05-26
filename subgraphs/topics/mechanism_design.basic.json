@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -99,6 +99,13 @@
       "node_count": 181
     },
     {
+      "id": "market_design",
+      "title": "Market Design",
+      "href": "market_design/index.html",
+      "role": "dependent",
+      "node_count": 9
+    },
+    {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
@@ -133,6 +140,13 @@
       "to": "mechanism_design.basic.truthfulness_from_dsic",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "topic:market_design",
+      "kind": "boundary_dependent",
+      "topic": "market_design",
       "count": 1
     },
     {

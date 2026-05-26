@@ -1,0 +1,35 @@
+{
+  "id": "market_design.matching.one_to_one.proposing_optimal",
+  "title": "Proposing-Side Optimal Stable Matching",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "market_design/market_design_matching_one_to_one_proposing_optimal.html",
+  "primary_topic": "market_design",
+  "topics": [
+    "market_design",
+    "market_design.matching",
+    "market_design.matching.one_to_one"
+  ],
+  "body_html": "<h1>Proposing-Side Optimal Stable Matching</h1>\n<p><strong>Theorem.</strong> Let $\\mu^M$ denote the matching produced by the men-proposing\nGale-Shapley algorithm on $(M, W, \\succ)$. Then:</p>\n<ol>\n<li><strong>Men-optimal.</strong> For every man $i \\in M$ and every stable matching $\\mu$:</li>\n</ol>\n<p>$$\\mu^M(i) \\succeq_i \\mu(i)$$</p>\n<p>I.e., every man weakly prefers his match in $\\mu^M$ to his match in any\n   other stable matching.</p>\n<ol>\n<li><strong>Women-pessimal.</strong> For every woman $j \\in W$ and every stable matching $\\mu$:</li>\n</ol>\n<p>$$\\mu(j) \\succeq_j \\mu^M(j)$$</p>\n<p>I.e., every woman weakly prefers her match in any other stable matching\n   to her match in $\\mu^M$.</p>\n<p>A symmetric pair of statements holds for the women-proposing algorithm with\nroles swapped.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>Call a man-woman pair $(i, j)$ <strong>achievable</strong> if some stable matching matches\n$i$ to $j$.</p>\n<p><em>Men-optimal</em> (claim 1): By induction on the round of the men-proposing\nalgorithm, no man $i$ is ever rejected by an achievable partner. The\ninductive step uses the structure of stable matchings: if $i$ were rejected\nby an achievable partner $j$, then $j$ would be holding some preferred $i'$\nwho, in any stable matching pairing $i$ with $j$, would block — contradiction.</p>\n<p>Hence at the end, each man $i$ is matched (or stays single) with the\nbest-for-him achievable partner; that <em>is</em> his match in $\\mu^M$.</p>\n<p><em>Women-pessimal</em> (claim 2): If a woman $j$ were strictly better off in $\\mu^M$\nthan in some stable $\\mu$, then she would have $\\mu^M(j) = i$ with\n$i \\succ_j \\mu^{-1}(j)$. By claim 1, $\\mu^M(i) \\succeq_i \\mu(i)$, so $j \\succeq_i \\mu(i)$.\nCombining gives a blocking pair $(i, j)$ for $\\mu$ — contradicting stability of $\\mu$.</p>\n<h2>Consequences</h2>\n<p>The set of stable matchings has a <strong>distinguished extremal element</strong> on each\nside. Combined with the [[lattice]] structure, this gives an explicit\ncharacterization of the boundary of the stable set.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.22, Thm 22.11] Maschler, Solan, Zamir, <em>Game Theory</em>.</li>\n<li>Gale &amp; Shapley (1962), original optimality observation.</li>\n<li>Roth &amp; Sotomayor (1990), <em>Two-Sided Matching</em>, Ch. 2.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "market_design.matching.one_to_one.gale_shapley_stable",
+      "title": "Gale-Shapley Theorem (Existence of Stable Matching)",
+      "href": "market_design/market_design_matching_one_to_one_gale_shapley_stable.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "market_design.matching.one_to_one.lattice",
+      "title": "Lattice Structure of Stable Matchings (Conway-Knuth)",
+      "href": "market_design/market_design_matching_one_to_one_lattice.html"
+    },
+    {
+      "id": "market_design.matching.one_to_one.strategy_proofness_proposing",
+      "title": "Strategy-Proofness of Gale-Shapley for the Proposing Side (Roth 1982)",
+      "href": "market_design/market_design_matching_one_to_one_strategy_proofness_proposing.html"
+    }
+  ],
+  "lean_refs": []
+}
