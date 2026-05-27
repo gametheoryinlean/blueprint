@@ -1011,21 +1011,38 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L150"><code>MatrixGame.AdmissibleSequence.robinson_induction_step</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L150"><code>MatrixGame.AdmissibleSequence.robinson_induction_step</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem AdmissibleSequence.robinson_induction_step
+    (A : MatrixGame I J ℝ) (s : AdmissibleSequence A)
+    (tStar : ℕ) (_htStar_pos : 0 &lt; tStar)
+    (ε : ℝ) (_hε : 0 &lt; ε)
+    (_h_useful_case :
+      ∀ start, (∀ i, s.IsRowUsefulInWindow start tStar i) ∧ (∀ j, s.IsColUsefulInWindow start tStar j)
+        → s.mu (start + tStar) ≤ 4 * tStar * normMax A)
+    (_h_nonuseful_case :
+      ∀ start, ((∃ i, ¬ s.IsRowUsefulInWindow start tStar i)
+              ∨ (∃ j, ¬ s.IsColUsefulInWindow start tStar j))
+        → s.mu (start + tStar) - s.mu start ≤ ε / 2 * tStar + 2 * normMax A) :
+    ∀ t ≥ tStar,</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
+      </p>
       
     </div>
   </div>

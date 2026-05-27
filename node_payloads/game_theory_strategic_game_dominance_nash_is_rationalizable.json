@@ -35,24 +35,46 @@
       "display_name": "StrategicGame.IsNashEquilibrium.survives",
       "qualified_name": "StrategicGame.IsNashEquilibrium.survives",
       "module": "EconCSLib.GameTheory.StrategicGame.IESDS",
+      "kind": "theorem",
+      "signature": "theorem IsNashEquilibrium.survives {G : StrategicGame ι U}\n    {σ : G.Profile} (hN : IsNashEquilibrium G σ) :\n    ∀ (n : ℕ) (i : ι), G.Survives n i (σ i)",
+      "docstring": "Nash equilibrium strategies survive all rounds. [MSZ 4.31]",
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L61",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L61",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "StrategicGame.IsNashEquilibrium.isRationalizable",
       "display_name": "StrategicGame.IsNashEquilibrium.isRationalizable",
       "qualified_name": "StrategicGame.IsNashEquilibrium.isRationalizable",
       "module": "EconCSLib.GameTheory.StrategicGame.IESDS",
+      "kind": "theorem",
+      "signature": "theorem IsNashEquilibrium.isRationalizable {G : StrategicGame ι U}\n    {σ : G.Profile} (hN : IsNashEquilibrium G σ) (i : ι) :\n    G.IsRationalizable i (σ i)",
+      "docstring": "Nash strategies are rationalizable.",
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L78",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L78",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.StrategicGame.IESDS",
+      "display_name": "EconCSLib.GameTheory.StrategicGame.IESDS",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
       "status": "resolved",
       "reason": null
     }

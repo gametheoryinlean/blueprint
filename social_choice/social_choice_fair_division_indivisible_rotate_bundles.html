@@ -1009,81 +1009,124 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L213"><code>SocialChoice.FairDivision.Indivisible.rotateBundles</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L213"><code>SocialChoice.FairDivision.Indivisible.rotateBundles</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def rotateBundles [DecidableEq N] (A : Allocation N G) (l : List N) :
+    Allocation N G</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L230"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_not_mem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L230"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_not_mem</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          <p class="lean-docstring">Agents not in the cycle are unaffected by bundle rotation.</p>
+          <pre class="lean-signature"><code>lemma rotateBundles_not_mem (A : Allocation N G) (l : List N) (i : N) (h : i ∉ l) :
+    rotateBundles A l i = A i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L269"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_mem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L269"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_mem</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma rotateBundles_mem (A : Allocation N G) (l : List N) (i : N) (h : i ∈ l) :
+    ∃ k : Fin l.length, l.get k = i ∧
+      ∃ k&#39; : Fin l.length, (k&#39;.val = (k.val + 1) % l.length) ∧
+        rotateBundles A l i = A (l.get k&#39;)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L314"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_isAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L314"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_isAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma rotateBundles_isAllocation [Fintype N]
+    {allGoods : Finset G} {A : Allocation N G}
+    (hA : IsAllocation allGoods A)
+    (l : List N) (hnd : l.Nodup) :
+    IsAllocation allGoods (rotateBundles A l)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L369"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_improves</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L369"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_improves</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma rotateBundles_improves
+    (v : Valuation N G) (A : Allocation N G)
+    (l : List N) (hcyc : isEnvyCycle v A l)
+    (i : N) (hi : i ∈ l) :
+    v.val i (A i) &lt; v.val i (rotateBundles A l i)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L384"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_nondecreasing</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L384"><code>SocialChoice.FairDivision.Indivisible.rotateBundles_nondecreasing</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma rotateBundles_nondecreasing
+    (v : Valuation N G) (A : Allocation N G)
+    (l : List N) (hcyc : isEnvyCycle v A l)
+    (i : N) :
+    v.val i (A i) ≤ v.val i (rotateBundles A l i)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></a>
+      </p>
       
     </div>
   </div>

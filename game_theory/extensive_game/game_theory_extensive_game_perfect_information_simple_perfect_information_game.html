@@ -1009,69 +1009,92 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/SimpleGameTree.lean#L48"><code>Examples.SimpleGameTree.sample</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/SimpleGameTree.lean#L48"><code>Examples.SimpleGameTree.sample</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.SimpleGameTree
+            EconCSLib @ d87d88a, EconCSLib.Examples.SimpleGameTree
           </span>
           
           
+          <p class="lean-docstring">The sample game tree (see module docstring).</p>
+          <pre class="lean-signature"><code>def sample : GameTree Player ℚ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/SimpleGameTree.lean#L60"><code>Examples.SimpleGameTree.sample_zero_sum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/SimpleGameTree.lean#L60"><code>Examples.SimpleGameTree.sample_zero_sum</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.SimpleGameTree
+            EconCSLib @ d87d88a, EconCSLib.Examples.SimpleGameTree
           </span>
           
           
+          <p class="lean-docstring">The zero-sum predicate holds on the sample game.</p>
+          <pre class="lean-signature"><code>theorem sample_zero_sum : IsZeroSum sample</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/SimpleGameTree.lean#L67"><code>Examples.SimpleGameTree.sample_zermelo_spe</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/SimpleGameTree.lean#L67"><code>Examples.SimpleGameTree.sample_zermelo_spe</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.SimpleGameTree
+            EconCSLib @ d87d88a, EconCSLib.Examples.SimpleGameTree
           </span>
           
           
+          <p class="lean-docstring">Zermelo-style pure SPE existence for the zero-sum sample.</p>
+          <pre class="lean-signature"><code>theorem sample_zermelo_spe : ∃ σ : Strategy Player ℚ, IsSubgamePerfect σ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/SimpleGameTree.lean#L71"><code>Examples.SimpleGameTree.sample_zermelo_ne</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/SimpleGameTree.lean#L71"><code>Examples.SimpleGameTree.sample_zermelo_ne</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.SimpleGameTree
+            EconCSLib @ d87d88a, EconCSLib.Examples.SimpleGameTree
           </span>
           
           
+          <p class="lean-docstring">Zermelo-style pure root Nash existence for the zero-sum sample.</p>
+          <pre class="lean-signature"><code>theorem sample_zermelo_ne :
+    ∃ σ : Strategy Player ℚ, GameTree.IsNashEquilibrium σ sample</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/SimpleGameTree.lean#L91"><code>Examples.SimpleGameTree.sample_value_zero_sum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/SimpleGameTree.lean#L91"><code>Examples.SimpleGameTree.sample_value_zero_sum</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.SimpleGameTree
+            EconCSLib @ d87d88a, EconCSLib.Examples.SimpleGameTree
           </span>
           
           
+          <p class="lean-docstring">The backward-induction value of the sample remains zero-sum.</p>
+          <pre class="lean-signature"><code>theorem sample_value_zero_sum : (value sample) 0 + (value sample) 1 = 0</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Examples.SimpleGameTree</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/SimpleGameTree.lean#L1"><code>EconCSLib.Examples.SimpleGameTree</code></a>
+      </p>
       
     </div>
   </div>

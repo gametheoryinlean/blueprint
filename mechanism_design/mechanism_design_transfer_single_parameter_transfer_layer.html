@@ -1009,117 +1009,170 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L153"><code>SingleParameterMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L153"><code>SingleParameterMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure SingleParameterMechanism (I : Type*) (R : Type*)
+    extends MechanismWithTransfers I (fun _ =&gt; R) (I → R) R
+namespace SingleParameterMechanism
+variable {I : Type*} {R : Type*}
+/-- Allocation feasibility: each agent&#39;s allocation lies in `[0, 1]`.
+  Requires `Zero R`, `One R`, and `LE R` (e.g., any linearly ordered field). -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L163"><code>SingleParameterMechanism.IsAllocFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L163"><code>SingleParameterMechanism.IsAllocFeasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsAllocFeasible [Zero R] [One R] [LE R] (M : SingleParameterMechanism I R) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L174"><code>SingleParameterMechanism.IsMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L174"><code>SingleParameterMechanism.IsMonotone</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsMonotone [DecidableEq I] [Preorder R] (M : SingleParameterMechanism I R) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L184"><code>SingleParameterMechanism.payment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L184"><code>SingleParameterMechanism.payment</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev payment (M : SingleParameterMechanism I R) (b : I → R) : I → R</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L189"><code>SingleParameterMechanism.quasiLinearValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L189"><code>SingleParameterMechanism.quasiLinearValue</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def quasiLinearValue [Mul R]
+    (x θ : I → R) (i : I) : R</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L195"><code>SingleParameterMechanism.quasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L195"><code>SingleParameterMechanism.quasiLinearUtility</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def quasiLinearUtility [Mul R] [Sub R]
+    (M : SingleParameterMechanism I R)
+    (b θ : I → R) (i : I) : R</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L203"><code>SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L203"><code>SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma quasiLinearUtility_eq_transferQuasiLinearUtility [Mul R] [Sub R]
+    (M : SingleParameterMechanism I R)
+    (b θ : I → R) (i : I) :
+    M.quasiLinearUtility b θ i =
+      MechanismWithTransfers.quasiLinearUtility
+        (I</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L220"><code>SingleParameterMechanism.IsDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L220"><code>SingleParameterMechanism.IsDSIC</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsDSIC [DecidableEq I] [Mul R] [Sub R] [Preorder R]
+    (M : SingleParameterMechanism I R) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L229"><code>SingleParameterMechanism.IsImplementable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L229"><code>SingleParameterMechanism.IsImplementable</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsImplementable [DecidableEq I] [Mul R] [Sub R] [Preorder R]
+    (x : (I → R) → I → R) : Prop</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Transfer</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Transfer</code></a>
+      </p>
       
     </div>
   </div>

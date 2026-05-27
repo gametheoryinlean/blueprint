@@ -1009,21 +1009,32 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L85"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L85"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma isEFX_of_singleton_bundle [DecidableEq G]
+    (v : Valuation (Fin 2) G) (A : Allocation (Fin 2) G)
+    (i j : Fin 2) {g : G}
+    (hAi : A i = {g})
+    (h_empty_le : v.val j ∅ ≤ v.val j (A j)) :
+    ∀ h ∈ A i, v.val j (A i \ {h}) ≤ v.val j (A j)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
+      </p>
       
     </div>
   </div>

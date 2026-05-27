@@ -1011,21 +1011,29 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L88"><code>StrategicGame.dominance_solvable_unique_nash</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L88"><code>StrategicGame.dominance_solvable_unique_nash</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.IESDS
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.IESDS
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
+          <p class="lean-docstring">If IESDS yields a unique profile, it is the unique Nash equilibrium. [MSZ 4.37]</p>
+          <pre class="lean-signature"><code>theorem dominance_solvable_unique_nash {G : StrategicGame ι U}
+    (hDS : G.IsDominanceSolvable) :
+    ∃! σ : G.Profile, IsNashEquilibrium G σ</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.StrategicGame.IESDS</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.IESDS</code></a>
+      </p>
       
     </div>
   </div>

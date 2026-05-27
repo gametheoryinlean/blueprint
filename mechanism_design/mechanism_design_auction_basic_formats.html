@@ -1011,45 +1011,68 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L86"><code>SingleItemAuction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L86"><code>SingleItemAuction</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure SingleItemAuction (I : Type*) (V : Type*) (P : Type*)
+    extends MechanismWithTransfers I (fun _ =&gt; V) (Option I) P
+/-- A multi-item auction with `k` distinct items.
+  Agents report a bid vector (one value per item type). The mechanism allocates
+  bundles of items: each agent receives a `Finset (Fin k)`.
+  Feasibility (no item sold twice) is a separate predicate; see `IsFeasible`. -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L95"><code>MultiItemAuction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L95"><code>MultiItemAuction</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure MultiItemAuction (I : Type*) (k : ℕ) (V : Type*) (P : Type*)
+    extends MechanismWithTransfers I (fun _ =&gt; Fin k → V) (I → Finset (Fin k)) P
+namespace MultiItemAuction
+/-- Feasibility: each item is allocated to at most one agent. -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L101"><code>MultiItemAuction.IsFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L101"><code>MultiItemAuction.IsFeasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">Feasibility: each item is allocated to at most one agent.</p>
+          <pre class="lean-signature"><code>def IsFeasible {I : Type*} {k : ℕ} {V P : Type*}
+    (M : MultiItemAuction I k V P) : Prop</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Auction.Basic</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Basic</code></a>
+      </p>
       
     </div>
   </div>

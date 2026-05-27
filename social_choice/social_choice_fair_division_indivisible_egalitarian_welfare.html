@@ -1013,45 +1013,66 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L101"><code>SocialChoice.FairDivision.Indivisible.IsMaxmin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L101"><code>SocialChoice.FairDivision.Indivisible.IsMaxmin</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev IsMaxmin [Fintype N] [Nonempty N] [DecidableEq G]
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L128"><code>SocialChoice.FairDivision.Indivisible.egalitarianWelfare_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L128"><code>SocialChoice.FairDivision.Indivisible.egalitarianWelfare_le</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
+          <p class="lean-docstring">Egalitarian welfare is bounded above by any agent&#39;s bundle value.</p>
+          <pre class="lean-signature"><code>lemma egalitarianWelfare_le [Nonempty N]
+    (v : Valuation N G) (A : Allocation N G) (i : N) :
+    egalitarianWelfare v A ≤ v.val i (A i)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L138"><code>SocialChoice.FairDivision.Indivisible.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L138"><code>SocialChoice.FairDivision.Indivisible.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma nsmul_egalitarianWelfare_le_utilitarianWelfare
+    [Nonempty N]
+    (v : Valuation N G) (A : Allocation N G)
+    (hle : ∀ i : N, egalitarianWelfare v A ≤ v.val i (A i)) :
+    Fintype.card N • egalitarianWelfare v A ≤ utilitarianWelfare v A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare</code></a>
+      </p>
       
     </div>
   </div>

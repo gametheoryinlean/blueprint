@@ -1009,141 +1009,209 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L151"><code>stdSimplex.mix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L151"><code>stdSimplex.mix</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def stdSimplex.mix (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1)
+    (x y : stdSimplex 𝕜 I) : stdSimplex 𝕜 I where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L170"><code>stdSimplex.mix_apply</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L170"><code>stdSimplex.mix_apply</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem stdSimplex.mix_apply (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1)
+    (x y : stdSimplex 𝕜 I) (i : I) :
+    (stdSimplex.mix α hα₀ hα₁ x y).val i = α * x.val i + (1 - α) * y.val i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L176"><code>wsum_mix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L176"><code>wsum_mix</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem wsum_mix (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1)
+    (x y : stdSimplex 𝕜 I) (f : I → 𝕜) :
+    wsum (stdSimplex.mix α hα₀ hα₁ x y) f =
+      α * wsum x f + (1 - α) * wsum y f</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L192"><code>linear_comb_gt_left</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L192"><code>linear_comb_gt_left</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">If `x &lt; y` and `α &lt; 1`, then `α·x + (1-α)·y &gt; x`.</p>
+          <pre class="lean-signature"><code>theorem linear_comb_gt_left {x y : ℝ} (H : x &lt; y) {α : ℝ} (Hα : α &lt; 1) :
+    x &lt; α * x + (1 - α) * y</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L199"><code>linear_comb_gt_right</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L199"><code>linear_comb_gt_right</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">If `y &lt; x` and `0 &lt; α`, then `α·x + (1-α)·y &gt; y`.</p>
+          <pre class="lean-signature"><code>theorem linear_comb_gt_right {x y : ℝ} (H : y &lt; x) {α : ℝ} (Hα : 0 &lt; α) :
+    y &lt; α * x + (1 - α) * y</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L205"><code>linear_comb_gt_of_ge_gt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L205"><code>linear_comb_gt_of_ge_gt</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Convex combination of &#34;≥ c&#34; and &#34;&gt; c&#34; stays &#34;&gt; c&#34; (provided `α ≥ 0` and `α &lt; 1`).</p>
+          <pre class="lean-signature"><code>theorem linear_comb_gt_of_ge_gt (x y c : ℝ) (H1 : c ≤ x) (H2 : c &lt; y)
+    {α : ℝ} (hα₀ : 0 ≤ α) (hα₁ : α &lt; 1) :
+    c &lt; α * x + (1 - α) * y</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L214"><code>linear_comb_lt_of_le_lt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L214"><code>linear_comb_lt_of_le_lt</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Convex combination of &#34;≤ c&#34; and &#34;&lt; c&#34; stays &#34;&lt; c&#34; (provided `α ≥ 0` and `α &lt; 1`).</p>
+          <pre class="lean-signature"><code>theorem linear_comb_lt_of_le_lt (x y c : ℝ) (H1 : x ≤ c) (H2 : y &lt; c)
+    {α : ℝ} (hα₀ : 0 ≤ α) (hα₁ : α &lt; 1) :
+    α * x + (1 - α) * y &lt; c</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L225"><code>wsum_mix_gt_of_ge_gt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L225"><code>wsum_mix_gt_of_ge_gt</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">`wsum` version of `linear_comb_gt_of_ge_gt`.</p>
+          <pre class="lean-signature"><code>theorem wsum_mix_gt_of_ge_gt {α : Type*} [Fintype α]
+    (f : α → ℝ) (x y : stdSimplex ℝ α) (c : ℝ)
+    (H1 : c ≤ wsum x f) (H2 : c &lt; wsum y f)
+    {t : ℝ} (ht₀ : 0 ≤ t) (ht₁ : t ≤ 1) (Ht : t &lt; 1) :
+    c &lt; wsum (stdSimplex.mix t ht₀ ht₁ x y) f</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L234"><code>wsum_mix_lt_of_le_lt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L234"><code>wsum_mix_lt_of_le_lt</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">`wsum` version of `linear_comb_lt_of_le_lt`.</p>
+          <pre class="lean-signature"><code>theorem wsum_mix_lt_of_le_lt {α : Type*} [Fintype α]
+    (f : α → ℝ) (x y : stdSimplex ℝ α) (c : ℝ)
+    (H1 : wsum x f ≤ c) (H2 : wsum y f &lt; c)
+    {t : ℝ} (ht₀ : 0 ≤ t) (ht₁ : t ≤ 1) (Ht : t &lt; 1) :
+    wsum (stdSimplex.mix t ht₀ ht₁ x y) f &lt; c</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L278"><code>mix_gt_of_gt_nbh</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L278"><code>mix_gt_of_gt_nbh</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem mix_gt_of_gt_nbh (x y c : ℝ) (H : c &lt; x) :
+    ∃ t : ℝ, 0 &lt; t ∧ t &lt; 1 ∧ c &lt; t * x + (1 - t) * y</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L289"><code>mix_lt_of_lt_nbh</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L289"><code>mix_lt_of_lt_nbh</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Dual: strictly interior `t` keeping `t·x + (1-t)·y &lt; c`, given `x &lt; c`.</p>
+          <pre class="lean-signature"><code>theorem mix_lt_of_lt_nbh (x y c : ℝ) (H : x &lt; c) :
+    ∃ t : ℝ, 0 &lt; t ∧ t &lt; 1 ∧ t * x + (1 - t) * y &lt; c</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.Simplex</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
+      </p>
       
     </div>
   </div>

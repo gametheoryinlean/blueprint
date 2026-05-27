@@ -1009,105 +1009,154 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L46"><code>EconCSLib.LinearProgramming.PrimalFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L46"><code>EconCSLib.LinearProgramming.PrimalFeasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          <p class="lean-docstring">Primal feasibility: `∃ x, A x ≥ b ∧ x ≥ 0`.</p>
+          <pre class="lean-signature"><code>def PrimalFeasible (A : I → Fin n → 𝕜) (b : I → 𝕜) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L50"><code>EconCSLib.LinearProgramming.DualFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L50"><code>EconCSLib.LinearProgramming.DualFeasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          <p class="lean-docstring">Dual feasibility of `u`: `u ≥ 0 ∧ uᵀA ≤ c`.</p>
+          <pre class="lean-signature"><code>def DualFeasible (A : I → Fin n → 𝕜) (c : Fin n → 𝕜) (u : I → 𝕜) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L56"><code>EconCSLib.LinearProgramming.lp_weak_duality</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L56"><code>EconCSLib.LinearProgramming.lp_weak_duality</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem lp_weak_duality (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜)
+    {x : Fin n → 𝕜} (hxA : ∀ i, b i ≤ ∑ j, A i j * x j) (hxnn : ∀ j, 0 ≤ x j)
+    {u : I → 𝕜} (hu_du : DualFeasible A c u) :
+    ∑ i, u i * b i ≤ ∑ j, c j * x j</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L94"><code>EconCSLib.LinearProgramming.DualAugRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L94"><code>EconCSLib.LinearProgramming.DualAugRow</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          <p class="lean-docstring">Augmented row index for the LP-Farkas reduction.</p>
+          <pre class="lean-signature"><code>abbrev DualAugRow (I : Type*) (n : ℕ) : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L97"><code>EconCSLib.LinearProgramming.dualAugA</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L97"><code>EconCSLib.LinearProgramming.dualAugA</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          <p class="lean-docstring">Augmented matrix combining `A` rows with `x ≥ 0` unit rows.</p>
+          <pre class="lean-signature"><code>def dualAugA (A : I → Fin n → 𝕜) : DualAugRow I n → Fin n → 𝕜
+  | Sum.inl i, j =&gt; A i j
+  | Sum.inr j&#39;, j =&gt; if j = j&#39; then 1 else 0
+/-- Augmented RHS. -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L102"><code>EconCSLib.LinearProgramming.dualAugB</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L102"><code>EconCSLib.LinearProgramming.dualAugB</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          <p class="lean-docstring">Augmented RHS.</p>
+          <pre class="lean-signature"><code>def dualAugB (b : I → 𝕜) : DualAugRow I n → 𝕜
+  | Sum.inl i =&gt; b i
+  | Sum.inr _ =&gt; 0
+@[simp] theorem dualAugA_inl (A : I → Fin n → 𝕜) (i : I) (j : Fin n) :
+    dualAugA A (Sum.inl i) j = A i j</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L119"><code>EconCSLib.LinearProgramming.isFeasible_dualAug_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L119"><code>EconCSLib.LinearProgramming.isFeasible_dualAug_iff</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          <p class="lean-docstring">Augmented feasibility is the primal feasibility (with `x ≥ 0`).</p>
+          <pre class="lean-signature"><code>theorem isFeasible_dualAug_iff (A : I → Fin n → 𝕜) (b : I → 𝕜) :
+    IsFeasible (dualAugA A) (dualAugB b) ↔ PrimalFeasible A b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L149"><code>EconCSLib.LinearProgramming.lp_strong_duality</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L149"><code>EconCSLib.LinearProgramming.lp_strong_duality</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongDuality
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongDuality
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem lp_strong_duality (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜) (d : 𝕜)
+    (hP_feas : PrimalFeasible A b)
+    (hP_bound : ∀ x : Fin n → 𝕜,
+      (∀ i, b i ≤ ∑ j, A i j * x j) → (∀ j, 0 ≤ x j) → d ≤ ∑ j, c j * x j) :
+    ∃ u : I → 𝕜, DualFeasible A c u ∧ d ≤ ∑ i, u i * b i</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.LinearProgramming.StrongDuality</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongDuality.lean#L1"><code>EconCSLib.Math.LinearProgramming.StrongDuality</code></a>
+      </p>
       
     </div>
   </div>

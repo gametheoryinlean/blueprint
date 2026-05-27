@@ -1013,129 +1013,192 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L152"><code>KnapsackAuction.exists_welfareMaximizer</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L152"><code>KnapsackAuction.exists_welfareMaximizer</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma exists_welfareMaximizer
+    (A : KnapsackAuction I) (b : I → ℝ) (hW : 0 ≤ A.totalCapacity) :
+    ∃ x : BinaryAllocation I,
+      x ∈ A.feasibleBinaryAllocations ∧
+        ∀ y ∈ A.feasibleBinaryAllocations,
+          binarySocialWelfare b y ≤ binarySocialWelfare b x</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L171"><code>KnapsackAuction.welfareMaximizer</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L171"><code>KnapsackAuction.welfareMaximizer</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def welfareMaximizer
+    (A : KnapsackAuction I) (b : I → ℝ) (hW : 0 ≤ A.totalCapacity) : BinaryAllocation I</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L176"><code>KnapsackAuction.maximalSocialWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L176"><code>KnapsackAuction.maximalSocialWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">The maximal social welfare over the feasible binary allocation space.</p>
+          <pre class="lean-signature"><code>noncomputable def maximalSocialWelfare
+    (A : KnapsackAuction I) (b : I → ℝ) (hW : 0 ≤ A.totalCapacity) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L180"><code>KnapsackAuction.welfareMaximizer_mem_feasibleBinaryAllocations</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L180"><code>KnapsackAuction.welfareMaximizer_mem_feasibleBinaryAllocations</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma welfareMaximizer_mem_feasibleBinaryAllocations
+    (A : KnapsackAuction I) (b : I → ℝ) (hW : 0 ≤ A.totalCapacity) :
+    A.welfareMaximizer b hW ∈ A.feasibleBinaryAllocations</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L185"><code>KnapsackAuction.welfareMaximizer_ge</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L185"><code>KnapsackAuction.welfareMaximizer_ge</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma welfareMaximizer_ge
+    (A : KnapsackAuction I) (b : I → ℝ) (hW : 0 ≤ A.totalCapacity)
+    {x : BinaryAllocation I}
+    (hx : x ∈ A.feasibleBinaryAllocations) :
+    binarySocialWelfare b x ≤ binarySocialWelfare b (A.welfareMaximizer b hW)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L224"><code>KnapsackAuction.welfareMaximizingAllocationRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L224"><code>KnapsackAuction.welfareMaximizingAllocationRule</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def welfareMaximizingAllocationRule
+    (A : KnapsackAuction I) (hW : 0 ≤ A.totalCapacity) : (I → ℝ) → I → ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L230"><code>KnapsackAuction.welfareMaximizingPaymentRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L230"><code>KnapsackAuction.welfareMaximizingPaymentRule</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def welfareMaximizingPaymentRule
+    (A : KnapsackAuction I) (hW : 0 ≤ A.totalCapacity) : (I → ℝ) → I → ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L236"><code>KnapsackAuction.welfareMaximizingMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L236"><code>KnapsackAuction.welfareMaximizingMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def welfareMaximizingMechanism
+    (A : KnapsackAuction I) (hW : 0 ≤ A.totalCapacity) : SingleParameterMechanism I ℝ where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L241"><code>KnapsackAuction.welfareMaximizingAllocationRule_isMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L241"><code>KnapsackAuction.welfareMaximizingAllocationRule_isMonotone</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma welfareMaximizingAllocationRule_isMonotone
+    (A : KnapsackAuction I) (hW : 0 ≤ A.totalCapacity) :
+    SingleParameterMechanism.IsMonotone
+      ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L292"><code>KnapsackAuction.welfareMaximizingMechanism_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L292"><code>KnapsackAuction.welfareMaximizingMechanism_isDSIC</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem welfareMaximizingMechanism_isDSIC
+    (A : KnapsackAuction I) (hW : 0 ≤ A.totalCapacity) :
+    (A.welfareMaximizingMechanism hW).IsDSIC</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Auction.Knapsack</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Knapsack</code></a>
+      </p>
       
     </div>
   </div>

@@ -1013,189 +1013,269 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L39"><code>BayesianMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L39"><code>BayesianMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure BayesianMechanism
+    (I : Type*) (T : I → Type*) [∀ i, MeasurableSpace (T i)]
+    (M : I → Type*) (O : Type*) where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L60"><code>BayesianMechanism.Strategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L60"><code>BayesianMechanism.Strategy</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev Strategy (Tᵢ : Type*) (Mᵢ : Type*)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L63"><code>BayesianMechanism.StrategyProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L63"><code>BayesianMechanism.StrategyProfile</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">A strategy profile for all agents in an incomplete-information mechanism.</p>
+          <pre class="lean-signature"><code>abbrev StrategyProfile (T : I → Type*) (M : I → Type*)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L66"><code>BayesianMechanism.IsMeasurableStrategyProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L66"><code>BayesianMechanism.IsMeasurableStrategyProfile</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">A measurable strategy profile for all agents in an incomplete-information mechanism.</p>
+          <pre class="lean-signature"><code>def IsMeasurableStrategyProfile
+    [∀ i, MeasurableSpace (M i)]
+    (σ : StrategyProfile T M) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L72"><code>BayesianMechanism.inducedMessages</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L72"><code>BayesianMechanism.inducedMessages</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">The message profile induced by a true type profile and a strategy profile.</p>
+          <pre class="lean-signature"><code>def inducedMessages (σ : StrategyProfile T M) (t : ∀ i, T i) : ∀ i, M i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L77"><code>BayesianMechanism.toMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L77"><code>BayesianMechanism.toMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def toMechanism (B : BayesianMechanism I T M O) : Mechanism I M O where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L83"><code>DirectBayesianMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L83"><code>DirectBayesianMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">A direct-revelation Bayesian mechanism: agents report in their own type spaces.</p>
+          <pre class="lean-signature"><code>abbrev DirectBayesianMechanism
+    (I : Type*) (T : I → Type*) [∀ i, MeasurableSpace (T i)] (O : Type*)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L96"><code>DirectBayesianMechanism.truthfulStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L96"><code>DirectBayesianMechanism.truthfulStrategy</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def truthfulStrategy : BayesianMechanism.StrategyProfile T T</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L106"><code>BayesianMechanismWithTransfers</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L106"><code>BayesianMechanismWithTransfers</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure BayesianMechanismWithTransfers
+    (I : Type*) (T : I → Type*) [∀ i, MeasurableSpace (T i)]
+    (M : I → Type*) (A : Type*) (P : Type*) where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L130"><code>BayesianMechanismWithTransfers.StrategyProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L130"><code>BayesianMechanismWithTransfers.StrategyProfile</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">A pure reporting strategy profile for a Bayesian transfer mechanism.</p>
+          <pre class="lean-signature"><code>abbrev StrategyProfile (T : I → Type*) (M : I → Type*)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L134"><code>BayesianMechanismWithTransfers.inducedAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L134"><code>BayesianMechanismWithTransfers.inducedAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">The allocation induced by a strategy profile and a realized type profile.</p>
+          <pre class="lean-signature"><code>def inducedAllocation
+    (B : BayesianMechanismWithTransfers I T M A P)
+    (σ : StrategyProfile T M) (t : ∀ i, T i) : A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L140"><code>BayesianMechanismWithTransfers.inducedPayments</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L140"><code>BayesianMechanismWithTransfers.inducedPayments</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">The payment vector induced by a strategy profile and a realized type profile.</p>
+          <pre class="lean-signature"><code>def inducedPayments
+    (B : BayesianMechanismWithTransfers I T M A P)
+    (σ : StrategyProfile T M) (t : ∀ i, T i) : I → P</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L146"><code>BayesianMechanismWithTransfers.deviate</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L146"><code>BayesianMechanismWithTransfers.deviate</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          <p class="lean-docstring">Deviating from a strategy profile at one agent.</p>
+          <pre class="lean-signature"><code>def deviate
+    [DecidableEq I]
+    (σ : StrategyProfile T M) (i : I) (τ : T i → M i) :
+    StrategyProfile T M</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L154"><code>BayesianMechanismWithTransfers.toMechanismWithTransfers</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L154"><code>BayesianMechanismWithTransfers.toMechanismWithTransfers</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def toMechanismWithTransfers
+    (B : BayesianMechanismWithTransfers I T M A P) :
+    MechanismWithTransfers I M A P where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Bayesian.lean#L162"><code>BayesianMechanismWithTransfers.toBayesianMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L162"><code>BayesianMechanismWithTransfers.toBayesianMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Bayesian
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Bayesian
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def toBayesianMechanism
+    (B : BayesianMechanismWithTransfers I T M A P) :
+    BayesianMechanism I T M (A × (I → P)) where</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Bayesian</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Bayesian.lean#L1"><code>EconCSLib.MechanismDesign.Bayesian</code></a>
+      </p>
       
     </div>
   </div>

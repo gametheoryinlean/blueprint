@@ -1009,21 +1009,31 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Dantzig.lean#L480"><code>dantzig_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Dantzig.lean#L480"><code>dantzig_minimax</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Dantzig
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Dantzig
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem dantzig_minimax [Nonempty (Fin m)] [Nonempty (Fin n)]
+    (A : Fin m → Fin n → 𝕜) :
+    ∃ (x : stdSimplex 𝕜 (Fin m)) (y : stdSimplex 𝕜 (Fin n)) (v : 𝕜),
+      (∀ j : Fin n, ∑ i : Fin m, x.val i * A i j ≥ v) ∧
+      (∀ i : Fin m, ∑ j : Fin n, A i j * y.val j ≤ v)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.Minimax.Dantzig</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Dantzig.lean#L1"><code>EconCSLib.Math.Minimax.Dantzig</code></a>
+      </p>
       
     </div>
   </div>

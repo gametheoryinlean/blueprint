@@ -35,11 +35,28 @@
       "display_name": "Mechanism.IsDSIC.truthful_isNash",
       "qualified_name": "Mechanism.IsDSIC.truthful_isNash",
       "module": "EconCSLib.MechanismDesign.Basic",
+      "kind": "theorem",
+      "signature": "theorem IsDSIC.truthful_isNash [DecidableEq I] [Preorder U]\n    {M : Mechanism I T O} {u : O → (∀ i, T i) → I → U}\n    (hdsic : M.IsDSIC u) (v : ∀ i, T i) :\n    IsNashEquilibrium (M.toStrategicGame u v) v",
+      "docstring": "If a mechanism is DSIC, then truthful reporting is a Nash equilibrium.",
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Basic.lean#L103",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Basic.lean#L103",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.MechanismDesign.Basic",
+      "display_name": "EconCSLib.MechanismDesign.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -1009,69 +1009,94 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L103"><code>SocialChoice.FairDivision.Indivisible.envies</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L103"><code>SocialChoice.FairDivision.Indivisible.envies</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def envies (v : Valuation N G) (A : Allocation N G) (i j : N) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L107"><code>SocialChoice.FairDivision.Indivisible.envies_irrefl</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L107"><code>SocialChoice.FairDivision.Indivisible.envies_irrefl</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          <p class="lean-docstring">An agent cannot envy themselves: `envies v A i i` is always false.</p>
+          <pre class="lean-signature"><code>lemma envies_irrefl (v : Valuation N G) (A : Allocation N G) (i : N) :
+    ¬ envies v A i i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L112"><code>SocialChoice.FairDivision.Indivisible.envies_ne</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L112"><code>SocialChoice.FairDivision.Indivisible.envies_ne</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          <p class="lean-docstring">Envy implies distinct agents: if `i` envies `j` then `i ≠ j`.</p>
+          <pre class="lean-signature"><code>lemma envies_ne (v : Valuation N G) (A : Allocation N G)
+    {i j : N} (h : envies v A i j) : i ≠ j</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L124"><code>SocialChoice.FairDivision.Indivisible.isSource</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L124"><code>SocialChoice.FairDivision.Indivisible.isSource</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def isSource (v : Valuation N G) (A : Allocation N G) (i : N) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L128"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isSource_all</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L128"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isSource_all</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
+          <p class="lean-docstring">In an envy-free allocation, every agent is a source.</p>
+          <pre class="lean-signature"><code>lemma IsEnvyFree.isSource_all (v : Valuation N G) (A : Allocation N G)
+    (hef : IsEnvyFree v A) (i : N) : isSource v A i</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></a>
+      </p>
       
     </div>
   </div>

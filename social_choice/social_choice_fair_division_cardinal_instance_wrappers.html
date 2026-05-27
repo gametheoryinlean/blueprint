@@ -1021,105 +1021,148 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L61"><code>SocialChoice.FairDivision.CardinalInstance.IsEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L61"><code>SocialChoice.FairDivision.CardinalInstance.IsEnvyFree</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          <p class="lean-docstring">Envy-freeness for a cardinal instance.</p>
+          <pre class="lean-signature"><code>def IsEnvyFree {N R S : Type*}
+    (I : CardinalInstance N R S) (A : Allocation N S) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L67"><code>SocialChoice.FairDivision.CardinalInstance.IsProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L67"><code>SocialChoice.FairDivision.CardinalInstance.IsProportional</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsProportional {N R S : Type*}
+    (I : CardinalInstance N R S) (n : ℕ) (whole : S)
+    (A : Allocation N S) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L73"><code>SocialChoice.FairDivision.CardinalInstance.IsEquitable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L73"><code>SocialChoice.FairDivision.CardinalInstance.IsEquitable</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          <p class="lean-docstring">Equitability for a cardinal instance.</p>
+          <pre class="lean-signature"><code>def IsEquitable {N R S : Type*}
+    (I : CardinalInstance N R S) (A : Allocation N S) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L79"><code>SocialChoice.FairDivision.CardinalInstance.IsParetoOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L79"><code>SocialChoice.FairDivision.CardinalInstance.IsParetoOptimal</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsParetoOptimal {N R S : Type*}
+    (I : CardinalInstance N R S) (A : Allocation N S) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L84"><code>SocialChoice.FairDivision.CardinalInstance.utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L84"><code>SocialChoice.FairDivision.CardinalInstance.utilitarianWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          <p class="lean-docstring">Utilitarian welfare for a cardinal instance.</p>
+          <pre class="lean-signature"><code>noncomputable def utilitarianWelfare {N R S : Type*} [Fintype N]
+    (I : CardinalInstance N R S) (A : Allocation N S) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L89"><code>SocialChoice.FairDivision.CardinalInstance.egalitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L89"><code>SocialChoice.FairDivision.CardinalInstance.egalitarianWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          <p class="lean-docstring">Egalitarian welfare for a cardinal instance.</p>
+          <pre class="lean-signature"><code>noncomputable def egalitarianWelfare {N R S : Type*} [Fintype N] [Nonempty N]
+    (I : CardinalInstance N R S) (A : Allocation N S) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L95"><code>SocialChoice.FairDivision.CardinalInstance.IsUtilitarianOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L95"><code>SocialChoice.FairDivision.CardinalInstance.IsUtilitarianOptimal</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsUtilitarianOptimal {N R S : Type*} [Fintype N]
+    (I : CardinalInstance N R S) (A : Allocation N S) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L101"><code>SocialChoice.FairDivision.CardinalInstance.IsMaxmin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L101"><code>SocialChoice.FairDivision.CardinalInstance.IsMaxmin</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def IsMaxmin {N R S : Type*} [Fintype N] [Nonempty N]
+    (I : CardinalInstance N R S) (A : Allocation N S) : Prop</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Cardinal</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Cardinal</code></a>
+      </p>
       
     </div>
   </div>

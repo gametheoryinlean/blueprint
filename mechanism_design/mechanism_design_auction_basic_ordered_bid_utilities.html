@@ -1009,141 +1009,191 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L176"><code>Auction.maxBid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L176"><code>Auction.maxBid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def maxBid : V</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L179"><code>Auction.exists_maxBid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L179"><code>Auction.exists_maxBid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">There exists a bidder whose bid equals the highest bid.</p>
+          <pre class="lean-signature"><code>lemma exists_maxBid : ∃ i : I, b i = maxBid b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L187"><code>Auction.argmaxBid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L187"><code>Auction.argmaxBid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def argmaxBid : I</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L190"><code>Auction.argmaxBid_eq_maxBid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L190"><code>Auction.argmaxBid_eq_maxBid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">The argmax bidder&#39;s bid equals the highest bid.</p>
+          <pre class="lean-signature"><code>lemma argmaxBid_eq_maxBid : b (argmaxBid b) = maxBid b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L194"><code>Auction.bid_le_maxBid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L194"><code>Auction.bid_le_maxBid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">Every bid is at most the argmax bidder&#39;s bid.</p>
+          <pre class="lean-signature"><code>lemma bid_le_maxBid (j : I) : b j ≤ b (argmaxBid b)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L199"><code>Auction.eq_argmaxBid_of_strict_max</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L199"><code>Auction.eq_argmaxBid_of_strict_max</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">If `i` strictly outbids all others, then `i` is the argmax bidder.</p>
+          <pre class="lean-signature"><code>lemma eq_argmaxBid_of_strict_max (i : I) (h : ∀ j, j ≠ i → b j &lt; b i) :
+    i = argmaxBid b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L207"><code>Auction.maxBidExcluding</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L207"><code>Auction.maxBidExcluding</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">The highest bid excluding bidder `i`.</p>
+          <pre class="lean-signature"><code>noncomputable def maxBidExcluding (i : I) : V</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L211"><code>Auction.maxBidExcluding_le_maxBid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L211"><code>Auction.maxBidExcluding_le_maxBid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">Excluding any bidder can only decrease the highest bid.</p>
+          <pre class="lean-signature"><code>lemma maxBidExcluding_le_maxBid (i : I) : maxBidExcluding b i ≤ maxBid b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L216"><code>Auction.maxBidExcluding_eq_maxBid_of_not_argmax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L216"><code>Auction.maxBidExcluding_eq_maxBid_of_not_argmax</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">If `i` is not the argmax bidder, excluding `i` does not change the highest bid.</p>
+          <pre class="lean-signature"><code>lemma maxBidExcluding_eq_maxBid_of_not_argmax {i : I} (h : i ≠ argmaxBid b) :
+    maxBidExcluding b i = maxBid b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L224"><code>Auction.maxBidExcluding_le_argmaxBid_bid</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L224"><code>Auction.maxBidExcluding_le_argmaxBid_bid</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">The argmax bidder&#39;s bid is at least the highest bid among all others.</p>
+          <pre class="lean-signature"><code>lemma maxBidExcluding_le_argmaxBid_bid :
+    maxBidExcluding b (argmaxBid b) ≤ b (argmaxBid b)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L231"><code>Auction.maxBidExcluding_update_self</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L231"><code>Auction.maxBidExcluding_update_self</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          <p class="lean-docstring">Changing `i`&#39;s bid does not affect the highest bid among the others.</p>
+          <pre class="lean-signature"><code>lemma maxBidExcluding_update_self (i : I) (bi : V) :
+    maxBidExcluding (Function.update b i bi) i = maxBidExcluding b i</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Auction.Basic</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Basic</code></a>
+      </p>
       
     </div>
   </div>

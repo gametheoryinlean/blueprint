@@ -1009,45 +1009,74 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L288"><code>SocialChoice.FairDivision.Indivisible.isAlphaMMS_mono_alpha</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L288"><code>SocialChoice.FairDivision.Indivisible.isAlphaMMS_mono_alpha</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem isAlphaMMS_mono_alpha
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G)
+    (α β : ℝ) (hβα : β ≤ α)
+    (hmms_nn : ∀ i, 0 ≤ mmsValue v allGoods i)
+    (hα : IsAlphaMMS α v allGoods A) :
+    IsAlphaMMS β v allGoods A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L302"><code>SocialChoice.FairDivision.Indivisible.isAlphaMMS_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L302"><code>SocialChoice.FairDivision.Indivisible.isAlphaMMS_zero</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem isAlphaMMS_zero
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G)
+    (hnonneg : ∀ i S, 0 ≤ v.val i S) :
+    IsAlphaMMS 0 v allGoods A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L312"><code>SocialChoice.FairDivision.Indivisible.IsMaxminShare.isAlphaMMS</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L312"><code>SocialChoice.FairDivision.Indivisible.IsMaxminShare.isAlphaMMS</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          <p class="lean-docstring">**`IsMaxminShare` implies α-MMS** for `α ≤ 1` and nonneg MMS values.</p>
+          <pre class="lean-signature"><code>theorem IsMaxminShare.isAlphaMMS
+    [Nonempty N] [Fintype G]
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G)
+    (hne : Nonempty {A&#39; : Allocation N G // IsAllocation allGoods A&#39;})
+    (hMMS : IsMaxminShare v allGoods A)
+    (α : ℝ) (hα_le : α ≤ 1)
+    (hmms_nn : ∀ i, 0 ≤ mmsValue v allGoods i) :
+    IsAlphaMMS α v allGoods A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
+      </p>
       
     </div>
   </div>

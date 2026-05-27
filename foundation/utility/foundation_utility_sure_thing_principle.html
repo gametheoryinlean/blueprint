@@ -1009,21 +1009,33 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Utility/VNMAxioms.lean#L64"><code>VNM.sure_thing_principle</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Utility/VNMAxioms.lean#L64"><code>VNM.sure_thing_principle</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Utility.VNMAxioms
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Utility.VNMAxioms
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem sure_thing_principle
+    {pref : Lottery 𝕜 O → Lottery 𝕜 O → Prop}
+    (hind : Independence pref)
+    (L₁ L₂ L₃ L₄ : Lottery 𝕜 O)
+    (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1) :
+    StrictPref pref (Lottery.mix α hα₀ hα₁ L₁ L₃) (Lottery.mix α hα₀ hα₁ L₂ L₃) ↔
+    StrictPref pref (Lottery.mix α hα₀ hα₁ L₁ L₄) (Lottery.mix α hα₀ hα₁ L₂ L₄)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Foundation.Utility.VNMAxioms</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1"><code>EconCSLib.Foundation.Utility.VNMAxioms</code></a>
+      </p>
       
     </div>
   </div>

@@ -37,11 +37,28 @@
       "display_name": "MatrixGame.AdmissibleSequence.robinson_induction_step",
       "qualified_name": "MatrixGame.AdmissibleSequence.robinson_induction_step",
       "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson",
+      "kind": "theorem",
+      "signature": "theorem AdmissibleSequence.robinson_induction_step\n    (A : MatrixGame I J ℝ) (s : AdmissibleSequence A)\n    (tStar : ℕ) (_htStar_pos : 0 < tStar)\n    (ε : ℝ) (_hε : 0 < ε)\n    (_h_useful_case :\n      ∀ start, (∀ i, s.IsRowUsefulInWindow start tStar i) ∧ (∀ j, s.IsColUsefulInWindow start tStar j)\n        → s.mu (start + tStar) ≤ 4 * tStar * normMax A)\n    (_h_nonuseful_case :\n      ∀ start, ((∃ i, ¬ s.IsRowUsefulInWindow start tStar i)\n              ∨ (∃ j, ¬ s.IsColUsefulInWindow start tStar j))\n        → s.mu (start + tStar) - s.mu start ≤ ε / 2 * tStar + 2 * normMax A) :\n    ∀ t ≥ tStar,",
+      "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L150",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L150",
+      "doc_url": null,
       "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson",
+      "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1",
       "status": "resolved",
       "reason": null
     }

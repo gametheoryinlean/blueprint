@@ -26,11 +26,28 @@
       "display_name": "SocialChoice.FairDivision.Indivisible.ef_impossible_two_agents_one_good",
       "qualified_name": "SocialChoice.FairDivision.Indivisible.ef_impossible_two_agents_one_good",
       "module": "EconCSLib.SocialChoice.FairDivision.Indivisible.ImpossibilityEF",
+      "kind": "theorem",
+      "signature": "theorem ef_impossible_two_agents_one_good {G : Type*}\n    [DecidableEq G]\n    {g : G}\n    (v : Valuation (Fin 2) G)\n    (h0 : v.val 0 ∅ < v.val 0 {g})\n    (h1 : v.val 1 ∅ < v.val 1 {g})\n    {A : Allocation (Fin 2) G} (hA : IsAllocation {g} A) :\n    ¬ IsEnvyFree v A",
+      "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/ImpossibilityEF.lean#L49",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/ImpossibilityEF.lean#L49",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.SocialChoice.FairDivision.Indivisible.ImpossibilityEF",
+      "display_name": "EconCSLib.SocialChoice.FairDivision.Indivisible.ImpossibilityEF",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/ImpossibilityEF.lean#L1",
       "status": "resolved",
       "reason": null
     }

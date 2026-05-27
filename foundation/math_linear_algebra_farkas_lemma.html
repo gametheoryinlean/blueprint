@@ -1009,57 +1009,92 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/Farkas.lean#L61"><code>EconCSLib.LinearAlgebra.FarkasAugRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/Farkas.lean#L61"><code>EconCSLib.LinearAlgebra.FarkasAugRow</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.Farkas
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.Farkas
           </span>
           
           
+          <p class="lean-docstring">Row index of the augmented Farkas system.</p>
+          <pre class="lean-signature"><code>abbrev FarkasAugRow (I : Type*) : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/Farkas.lean#L64"><code>EconCSLib.LinearAlgebra.farkasAugA</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/Farkas.lean#L64"><code>EconCSLib.LinearAlgebra.farkasAugA</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.Farkas
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.Farkas
           </span>
           
           
+          <p class="lean-docstring">Augmented matrix `A_aug : FarkasAugRow I → Fin (n+1) → 𝕜`.</p>
+          <pre class="lean-signature"><code>def farkasAugA (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜) (d : 𝕜) :
+    FarkasAugRow I → Fin (n+1) → 𝕜
+  | Sum.inl i, j =&gt; Fin.lastCases (-b i) (fun j&#39; =&gt; A i j&#39;) j
+  | Sum.inr false, j =&gt; Fin.lastCases 1 (fun _ =&gt; (0 : 𝕜)) j
+  | Sum.inr true, j =&gt; Fin.lastCases d (fun j&#39; =&gt; -c j&#39;) j
+/-- Augmented RHS `b_aug : FarkasAugRow I → 𝕜`. -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/Farkas.lean#L71"><code>EconCSLib.LinearAlgebra.farkasAugB</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/Farkas.lean#L71"><code>EconCSLib.LinearAlgebra.farkasAugB</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.Farkas
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.Farkas
           </span>
           
           
+          <p class="lean-docstring">Augmented RHS `b_aug : FarkasAugRow I → 𝕜`.</p>
+          <pre class="lean-signature"><code>def farkasAugB (b : I → 𝕜) : FarkasAugRow I → 𝕜
+  | Sum.inl _ =&gt; 0
+  | Sum.inr false =&gt; 0
+  | Sum.inr true =&gt; 1
+/-! ### Simp lemmas for `farkasAugA` and `farkasAugB` -/
+@[simp] theorem farkasAugA_inl_castSucc (A : I → Fin n → 𝕜) (b : I → 𝕜)
+    (c : Fin n → 𝕜) (d : 𝕜) (i : I) (j&#39; : Fin n) :
+    farkasAugA A b c d (Sum.inl i) j&#39;.castSucc = A i j&#39;</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/Farkas.lean#L159"><code>EconCSLib.LinearAlgebra.farkas_lemma</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/Farkas.lean#L159"><code>EconCSLib.LinearAlgebra.farkas_lemma</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.Farkas
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.Farkas
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem farkas_lemma (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜) (d : 𝕜)
+    (hS : IsFeasible A b) :
+    (∀ x : Fin n → 𝕜, (∀ i, b i ≤ ∑ j, A i j * x j) → d ≤ ∑ j, c j * x j) ↔
+    (∃ u : I → 𝕜, (∀ i, 0 ≤ u i)
+      ∧ (∀ j, ∑ i, u i * A i j = c j)
+      ∧ d ≤ ∑ i, u i * b i)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.LinearAlgebra.Farkas</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/Farkas.lean#L1"><code>EconCSLib.Math.LinearAlgebra.Farkas</code></a>
+      </p>
       
     </div>
   </div>

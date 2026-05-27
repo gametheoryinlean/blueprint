@@ -996,45 +996,74 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">inductive</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L21"><code>GameTree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L21"><code>GameTree</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
           </span>
           
           
+          
+          <pre class="lean-signature"><code>inductive GameTree
+  | Leaf  (val : ℚ)                          -- terminal payoff for player A
+  | Pnode (p : Player) (L R : GameTree)       -- player decision node (binary)
+  | Nnode (p : Set.Icc (0:ℚ) 1) (L R : GameTree)  -- chance node (prob p → L)
+```
+`value : GameTree → ℚ` computes the backward-induction value for player A:
+* Leaf  → the leaf payoff.
+* Player A node → max of children&#39;s values.
+* Player B node → min of children&#39;s values.
+* Nature node   → probability-weighted average of children&#39;s values.</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L59"><code>GameTree.children</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L59"><code>GameTree.children</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def children : GameTree ι U → List (GameTree ι U)
+  | Leaf _ =&gt; []
+  | Node _ h t =&gt; h :: t
+/-- Children of a `Node` are never empty. -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L69"><code>GameTree.size</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L69"><code>GameTree.size</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
+          <p class="lean-docstring">Structural size, used for well-founded recursion.</p>
+          <pre class="lean-signature"><code>def size : GameTree ι U → ℕ
+  | Leaf _ =&gt; 1
+  | Node _ h t =&gt; 1 + h.size + (t.map size).sum
+/-- Size is always positive. -/</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
+      </p>
       
     </div>
   </div>

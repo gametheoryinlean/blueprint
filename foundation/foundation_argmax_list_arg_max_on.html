@@ -1009,69 +1009,100 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Argmax.lean#L32"><code>List.exists_argMax_on</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Argmax.lean#L32"><code>List.exists_argMax_on</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Argmax
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Argmax
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem exists_argMax_on [TotalPreorder β] (f : α → β)
+    (head : α) (tail : List α) :
+    ∃ m, m ∈ head :: tail ∧ ∀ x ∈ head :: tail, f x ≤ f m</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Argmax.lean#L60"><code>List.argMaxOn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Argmax.lean#L60"><code>List.argMaxOn</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Argmax
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Argmax
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def argMaxOn [TotalPreorder β] (f : α → β)
+    (head : α) (tail : List α) : α</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Argmax.lean#L64"><code>List.argMaxOn_mem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Argmax.lean#L64"><code>List.argMaxOn_mem</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Argmax
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Argmax
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem argMaxOn_mem [TotalPreorder β] (f : α → β)
+    (head : α) (tail : List α) :
+    argMaxOn f head tail ∈ head :: tail</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Argmax.lean#L69"><code>List.argMaxOn_ge</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Argmax.lean#L69"><code>List.argMaxOn_ge</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Argmax
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Argmax
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem argMaxOn_ge [TotalPreorder β] (f : α → β)
+    (head : α) (tail : List α) :
+    ∀ x ∈ head :: tail, f x ≤ f (argMaxOn f head tail)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Argmax.lean#L75"><code>List.le_argMaxOn_head</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Argmax.lean#L75"><code>List.le_argMaxOn_head</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Argmax
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Argmax
           </span>
           
           
+          <p class="lean-docstring">The argmax achieves at least the head&#39;s value.</p>
+          <pre class="lean-signature"><code>theorem le_argMaxOn_head [TotalPreorder β] (f : α → β)
+    (head : α) (tail : List α) :
+    f head ≤ f (argMaxOn f head tail)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Foundation.Argmax</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Argmax.lean#L1"><code>EconCSLib.Foundation.Argmax</code></a>
+      </p>
       
     </div>
   </div>

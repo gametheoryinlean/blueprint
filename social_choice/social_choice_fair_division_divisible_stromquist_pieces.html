@@ -1009,45 +1009,63 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L239"><code>SocialChoice.FairDivision.Divisible.strom_piece</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L239"><code>SocialChoice.FairDivision.Divisible.strom_piece</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def strom_piece (x : Fin n → ℝ) (i : Fin n) : Set ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L245"><code>SocialChoice.FairDivision.Divisible.strom_piece_partition</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L245"><code>SocialChoice.FairDivision.Divisible.strom_piece_partition</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma strom_piece_partition (x : Fin n → ℝ) (hx : x ∈ stdSimplex ℝ (Fin n)) :
+    (∀ i, MeasurableSet (strom_piece n x i)) ∧
+    (∀ i j : Fin n, i ≠ j → Disjoint (strom_piece n x i) (strom_piece n x j)) ∧
+    (⋃ i, strom_piece n x i = Set.Ico 0 1)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L336"><code>SocialChoice.FairDivision.Divisible.strom_piece_empty_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L336"><code>SocialChoice.FairDivision.Divisible.strom_piece_empty_iff</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma strom_piece_empty_iff (x : Fin n → ℝ) (hx : x ∈ stdSimplex ℝ (Fin n)) (i : Fin n) :
+    strom_piece n x i = ∅ ↔ x i = 0</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+      </p>
       
     </div>
   </div>

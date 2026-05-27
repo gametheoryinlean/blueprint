@@ -1013,21 +1013,31 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L69"><code>MatrixGame.exists_strong_complementary_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L69"><code>MatrixGame.exists_strong_complementary_pair</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem exists_strong_complementary_pair :
+    ∃ (xx : stdSimplex ℝ I) (yy : stdSimplex ℝ J),
+      xx ∈ A.optimalRowStrategies ∧ yy ∈ A.optimalColumnStrategies ∧
+      (∀ i, 0 &lt; xx.val i ↔ A.Ei i yy = A.value) ∧
+      (∀ j, 0 &lt; yy.val j ↔ A.Ej xx j = A.value)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity</code></a>
+      </p>
       
     </div>
   </div>

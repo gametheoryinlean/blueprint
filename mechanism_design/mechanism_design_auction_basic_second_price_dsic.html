@@ -1013,45 +1013,63 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L136"><code>Auction.SecondPrice.valuation_is_dominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L136"><code>Auction.SecondPrice.valuation_is_dominant</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem valuation_is_dominant (v : I → U) (i : I) (b : I → U) :
+    utility v b i ≤ utility v (Function.update b i (v i)) i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L175"><code>Auction.SecondPrice.truthful_weakly_dominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L175"><code>Auction.SecondPrice.truthful_weakly_dominant</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem truthful_weakly_dominant (v : I → U) (i : I) :
+    IsWeaklyDominant (game v) i (v i)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L216"><code>Auction.SecondPrice.mechanism_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L216"><code>Auction.SecondPrice.mechanism_isDSIC</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem mechanism_isDSIC :
+    mechanism.isDSIC
+      (fun (w : I) (pay : I → U) (vals : I → U) (i : I) =&gt; if i = w then vals i - pay i else 0)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Auction.Vickrey</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Vickrey</code></a>
+      </p>
       
     </div>
   </div>

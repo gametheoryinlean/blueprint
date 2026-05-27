@@ -1009,21 +1009,31 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L68"><code>SocialChoice.FairDivision.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L68"><code>SocialChoice.FairDivision.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma nsmul_egalitarianWelfare_le_utilitarianWelfare
+    [Nonempty N]
+    (u : N → S → ℝ) (A : Allocation N S)
+    (hle : ∀ i : N, egalitarianWelfare u A ≤ u i (A i)) :
+    Fintype.card N • egalitarianWelfare u A ≤ utilitarianWelfare u A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Welfare</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
+      </p>
       
     </div>
   </div>

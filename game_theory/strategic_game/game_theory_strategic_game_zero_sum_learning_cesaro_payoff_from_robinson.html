@@ -1011,21 +1011,30 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L41"><code>MatrixGame.cesaro_payoff_converges_to_value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L41"><code>MatrixGame.cesaro_payoff_converges_to_value</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem cesaro_payoff_converges_to_value
+    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)
+    (_hFP : IsFictitiousPlay A iSeq jSeq) :
+    Tendsto (fun n =&gt; realisedCumPayoff A iSeq jSeq n / n) atTop (nhds A.value)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro</code></a>
+      </p>
       
     </div>
   </div>

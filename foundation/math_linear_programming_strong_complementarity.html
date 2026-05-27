@@ -1011,69 +1011,134 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L65"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_row</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L65"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_row</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongComplementarity
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongComplementarity
           </span>
           
           
+          <p class="lean-docstring">**Weak complementary slackness**, row form.</p>
+          <pre class="lean-signature"><code>theorem lp_weak_complementarity_row
+    (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜)
+    {x : Fin n → 𝕜} (hxA : ∀ i, b i ≤ ∑ j, A i j * x j) (hxnn : ∀ j, 0 ≤ x j)
+    {u : I → 𝕜} (hu_du : DualFeasible A c u)
+    (h_match : ∑ j, c j * x j = ∑ i, u i * b i) :
+    ∀ i, (∑ j, A i j * x j - b i) * u i = 0</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L114"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_col</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L114"><code>EconCSLib.LinearProgramming.lp_weak_complementarity_col</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongComplementarity
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongComplementarity
           </span>
           
           
+          <p class="lean-docstring">**Weak complementary slackness**, column form.</p>
+          <pre class="lean-signature"><code>theorem lp_weak_complementarity_col
+    (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜)
+    {x : Fin n → 𝕜} (hxA : ∀ i, b i ≤ ∑ j, A i j * x j) (hxnn : ∀ j, 0 ≤ x j)
+    {u : I → 𝕜} (hu_du : DualFeasible A c u)
+    (h_match : ∑ j, c j * x j = ∑ i, u i * b i) :
+    ∀ j, (c j - ∑ i, u i * A i j) * x j = 0</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L266"><code>EconCSLib.LinearProgramming.exists_row_strict_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L266"><code>EconCSLib.LinearProgramming.exists_row_strict_pair</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongComplementarity
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongComplementarity
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem exists_row_strict_pair
+    (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜) (v : 𝕜)
+    {x₀ : Fin n → 𝕜}
+    (hx₀A : ∀ i, b i ≤ ∑ j, A i j * x₀ j)
+    (hx₀nn : ∀ j, 0 ≤ x₀ j) (hx₀_val : ∑ j, c j * x₀ j = v)
+    {u₀ : I → 𝕜} (hu₀ : DualFeasible A c u₀) (hu₀_val : ∑ i, u₀ i * b i = v)
+    (i₀ : I) :
+    ∃ (x : Fin n → 𝕜) (u : I → 𝕜),
+      (∀ i, b i ≤ ∑ j, A i j * x j) ∧ (∀ j, 0 ≤ x j) ∧
+      DualFeasible A c u ∧
+      (∑ j, c j * x j = v) ∧ (∑ i, u i * b i = v) ∧
+      0 &lt; (∑ j, A i₀ j * x j - b i₀) + u i₀</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L533"><code>EconCSLib.LinearProgramming.exists_col_strict_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L533"><code>EconCSLib.LinearProgramming.exists_col_strict_pair</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongComplementarity
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongComplementarity
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem exists_col_strict_pair
+    (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜) (v : 𝕜)
+    {x₀ : Fin n → 𝕜}
+    (hx₀A : ∀ i, b i ≤ ∑ j, A i j * x₀ j)
+    (hx₀nn : ∀ j, 0 ≤ x₀ j) (hx₀_val : ∑ j, c j * x₀ j = v)
+    {u₀ : I → 𝕜} (hu₀ : DualFeasible A c u₀) (hu₀_val : ∑ i, u₀ i * b i = v)
+    (j₀ : Fin n) :
+    ∃ (x : Fin n → 𝕜) (u : I → 𝕜),
+      (∀ i, b i ≤ ∑ j, A i j * x j) ∧ (∀ j, 0 ≤ x j) ∧
+      DualFeasible A c u ∧
+      (∑ j, c j * x j = v) ∧ (∑ i, u i * b i = v) ∧
+      0 &lt; x j₀ + (c j₀ - ∑ i, u i * A i j₀)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L748"><code>EconCSLib.LinearProgramming.exists_strong_complementary_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L748"><code>EconCSLib.LinearProgramming.exists_strong_complementary_pair</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearProgramming.StrongComplementarity
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearProgramming.StrongComplementarity
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem exists_strong_complementary_pair
+    (A : I → Fin n → 𝕜) (b : I → 𝕜) (c : Fin n → 𝕜) (v : 𝕜)
+    (hN_pos : (0 : 𝕜) &lt; ((Fintype.card I + n : ℕ) : 𝕜))
+    {x₀ : Fin n → 𝕜}
+    (hx₀A : ∀ i, b i ≤ ∑ j, A i j * x₀ j)
+    (hx₀nn : ∀ j, 0 ≤ x₀ j) (hx₀_val : ∑ j, c j * x₀ j = v)
+    {u₀ : I → 𝕜} (hu₀ : DualFeasible A c u₀) (hu₀_val : ∑ i, u₀ i * b i = v) :
+    ∃ (x : Fin n → 𝕜) (u : I → 𝕜),
+      (∀ i, b i ≤ ∑ j, A i j * x j) ∧ (∀ j, 0 ≤ x j) ∧
+      DualFeasible A c u ∧
+      (∑ j, c j * x j = v) ∧ (∑ i, u i * b i = v) ∧
+      (∀ i, 0 &lt; (∑ j, A i j * x j - b i) + u i) ∧</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.LinearProgramming.StrongComplementarity</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearProgramming/StrongComplementarity.lean#L1"><code>EconCSLib.Math.LinearProgramming.StrongComplementarity</code></a>
+      </p>
       
     </div>
   </div>

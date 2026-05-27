@@ -996,141 +996,191 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L121"><code>EconCSLib.LinearAlgebra.ZeroRows</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L121"><code>EconCSLib.LinearAlgebra.ZeroRows</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">Rows where the last-column coefficient is zero.</p>
+          <pre class="lean-signature"><code>abbrev ZeroRows (A : I → Fin (n+1) → 𝕜) : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L125"><code>EconCSLib.LinearAlgebra.PosRows</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L125"><code>EconCSLib.LinearAlgebra.PosRows</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">Rows where the last-column coefficient is strictly positive.</p>
+          <pre class="lean-signature"><code>abbrev PosRows (A : I → Fin (n+1) → 𝕜) : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L129"><code>EconCSLib.LinearAlgebra.NegRows</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L129"><code>EconCSLib.LinearAlgebra.NegRows</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">Rows where the last-column coefficient is strictly negative.</p>
+          <pre class="lean-signature"><code>abbrev NegRows (A : I → Fin (n+1) → 𝕜) : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L133"><code>EconCSLib.LinearAlgebra.FMRowIndex</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L133"><code>EconCSLib.LinearAlgebra.FMRowIndex</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">Reduced row index after Fourier-Motzkin elimination of the last column.</p>
+          <pre class="lean-signature"><code>abbrev FMRowIndex (A : I → Fin (n+1) → 𝕜) : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L147"><code>EconCSLib.LinearAlgebra.fmA</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L147"><code>EconCSLib.LinearAlgebra.fmA</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">Reduced matrix coefficient.</p>
+          <pre class="lean-signature"><code>def fmA (A : I → Fin (n+1) → 𝕜) (idx : FMRowIndex A) (j : Fin n) : 𝕜</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L155"><code>EconCSLib.LinearAlgebra.fmB</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L155"><code>EconCSLib.LinearAlgebra.fmB</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">Reduced right-hand side.</p>
+          <pre class="lean-signature"><code>def fmB (A : I → Fin (n+1) → 𝕜) (b : I → 𝕜) (idx : FMRowIndex A) : 𝕜</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L189"><code>EconCSLib.LinearAlgebra.fm_feasible_of_feasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L189"><code>EconCSLib.LinearAlgebra.fm_feasible_of_feasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem fm_feasible_of_feasible (A : I → Fin (n+1) → 𝕜) (b : I → 𝕜)
+    (hfeas : IsFeasible A b) : IsFeasible (fmA A) (fmB A b)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L299"><code>EconCSLib.LinearAlgebra.feasible_of_fm_feasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L299"><code>EconCSLib.LinearAlgebra.feasible_of_fm_feasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem feasible_of_fm_feasible (A : I → Fin (n+1) → 𝕜) (b : I → 𝕜)
+    (hred : IsFeasible (fmA A) (fmB A b)) : IsFeasible A b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L387"><code>EconCSLib.LinearAlgebra.liftCoeff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L387"><code>EconCSLib.LinearAlgebra.liftCoeff</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def liftCoeff (A : I → Fin (n+1) → 𝕜) (idx : FMRowIndex A) (i : I) : 𝕜</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L405"><code>EconCSLib.LinearAlgebra.liftCert</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L405"><code>EconCSLib.LinearAlgebra.liftCert</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          <p class="lean-docstring">The lifted certificate `u i = ∑ idx, L idx i * u&#39;(idx)`.</p>
+          <pre class="lean-signature"><code>def liftCert (A : I → Fin (n+1) → 𝕜) (u&#39; : FMRowIndex A → 𝕜)
+    (i : I) : 𝕜</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L513"><code>EconCSLib.LinearAlgebra.fm_cert_lift</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L513"><code>EconCSLib.LinearAlgebra.fm_cert_lift</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem fm_cert_lift (A : I → Fin (n+1) → 𝕜) (b : I → 𝕜)
+    (hred : HasCertificate (fmA A) (fmB A b)) : HasCertificate A b</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.LinearAlgebra.FourierMotzkin</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L1"><code>EconCSLib.Math.LinearAlgebra.FourierMotzkin</code></a>
+      </p>
       
     </div>
   </div>

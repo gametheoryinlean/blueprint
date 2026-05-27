@@ -37,11 +37,28 @@
       "display_name": "SocialChoice.Voting.iia_strict",
       "qualified_name": "SocialChoice.Voting.iia_strict",
       "module": "EconCSLib.SocialChoice.Voting.Decisive",
+      "kind": "theorem",
+      "signature": "theorem iia_strict [Fintype N] [Fintype A] {F : SWF N A} (hF : SWF.IIA F)\n    {P Q : Profile N A} {a b : A}\n    (hab : ∀ i, Prefers P i a b ↔ Prefers Q i a b)\n    (hba : ∀ i, Prefers P i b a ↔ Prefers Q i b a) :\n    strict (F P) a b ↔ strict (F Q) a b",
+      "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/Voting/Decisive.lean#L84",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/Voting/Decisive.lean#L84",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.SocialChoice.Voting.Decisive",
+      "display_name": "EconCSLib.SocialChoice.Voting.Decisive",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/Voting/Decisive.lean#L1",
       "status": "resolved",
       "reason": null
     }

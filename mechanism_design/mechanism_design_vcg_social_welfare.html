@@ -1009,69 +1009,93 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/VCG.lean#L36"><code>MultipleParameterMechanism.socialWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/VCG.lean#L36"><code>MultipleParameterMechanism.socialWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.VCG
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.VCG
           </span>
           
           
+          <p class="lean-docstring">Reported social welfare of allocation `a` under a profile of valuations.</p>
+          <pre class="lean-signature"><code>def socialWelfare (v : ∀ _ : I, Valuation A ℝ) (a : A) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/VCG.lean#L40"><code>MultipleParameterMechanism.maxSocialWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/VCG.lean#L40"><code>MultipleParameterMechanism.maxSocialWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.VCG
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.VCG
           </span>
           
           
+          <p class="lean-docstring">The maximum reported social welfare over all allocations.</p>
+          <pre class="lean-signature"><code>noncomputable def maxSocialWelfare (v : ∀ _ : I, Valuation A ℝ) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/VCG.lean#L44"><code>MultipleParameterMechanism.exists_efficientAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/VCG.lean#L44"><code>MultipleParameterMechanism.exists_efficientAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.VCG
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.VCG
           </span>
           
           
+          <p class="lean-docstring">There exists an allocation maximizing reported social welfare.</p>
+          <pre class="lean-signature"><code>lemma exists_efficientAllocation (v : ∀ _ : I, Valuation A ℝ) :
+    ∃ a : A, ∀ b : A, socialWelfare v b ≤ socialWelfare v a</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/VCG.lean#L57"><code>MultipleParameterMechanism.efficientAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/VCG.lean#L57"><code>MultipleParameterMechanism.efficientAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.VCG
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.VCG
           </span>
           
           
+          <p class="lean-docstring">A welfare-maximizing allocation, chosen noncomputably from finite `A`.</p>
+          <pre class="lean-signature"><code>noncomputable def efficientAllocation (v : ∀ _ : I, Valuation A ℝ) : A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/VCG.lean#L61"><code>MultipleParameterMechanism.efficientAllocation_isOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/VCG.lean#L61"><code>MultipleParameterMechanism.efficientAllocation_isOptimal</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.VCG
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.VCG
           </span>
           
           
+          <p class="lean-docstring">The chosen VCG allocation maximizes reported social welfare.</p>
+          <pre class="lean-signature"><code>lemma efficientAllocation_isOptimal (v : ∀ _ : I, Valuation A ℝ) (a : A) :
+    socialWelfare v a ≤ socialWelfare v (efficientAllocation v)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.VCG</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/VCG.lean#L1"><code>EconCSLib.MechanismDesign.VCG</code></a>
+      </p>
       
     </div>
   </div>

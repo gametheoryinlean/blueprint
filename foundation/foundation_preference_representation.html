@@ -1009,45 +1009,63 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Preference.lean#L102"><code>RepresentsPreference</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Preference.lean#L102"><code>RepresentsPreference</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Preference
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Preference
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure RepresentsPreference [Preorder α] [Preorder β] (u : α → β) : Prop where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Preference.lean#L107"><code>RepresentsPreference.lt_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Preference.lean#L107"><code>RepresentsPreference.lt_iff</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Preference
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Preference
           </span>
           
           
+          <p class="lean-docstring">A utility representation preserves strict preference.</p>
+          <pre class="lean-signature"><code>theorem RepresentsPreference.lt_iff [Preorder α] [Preorder β] {u : α → β}
+    (h : RepresentsPreference u) (a b : α) :
+    a &lt; b ↔ u a &lt; u b</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Preference.lean#L113"><code>RepresentsPreference.indifferent_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Preference.lean#L113"><code>RepresentsPreference.indifferent_iff</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Preference
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Preference
           </span>
           
           
+          <p class="lean-docstring">A utility representation preserves indifference.</p>
+          <pre class="lean-signature"><code>theorem RepresentsPreference.indifferent_iff [Preorder α] [Preorder β] {u : α → β}
+    (h : RepresentsPreference u) (a b : α) :
+    Indifferent a b ↔ Indifferent (u a) (u b)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Foundation.Preference</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+      </p>
       
     </div>
   </div>

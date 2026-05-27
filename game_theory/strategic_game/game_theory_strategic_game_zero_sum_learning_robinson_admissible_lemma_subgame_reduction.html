@@ -1009,21 +1009,38 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L132"><code>MatrixGame.AdmissibleSequence.subgame_reduction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L132"><code>MatrixGame.AdmissibleSequence.subgame_reduction</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
           </span>
           
           <span class="badge status-needs_proof_review">sorry/admit</span>
+          
+          <pre class="lean-signature"><code>theorem AdmissibleSequence.subgame_reduction
+    (A : MatrixGame I J ℝ) (s : AdmissibleSequence A)
+    (start length : ℕ) (ε : ℝ) (_hε : 0 &lt; ε)
+    (_h_nonuseful :
+      (∃ i, ¬ s.IsRowUsefulInWindow start length i)
+      ∨ (∃ j, ¬ s.IsColUsefulInWindow start length j))
+    (_h_submatrix_bound :
+      -- Inductive hypothesis on strict submatrices, summarised abstractly:
+      -- the restriction of `s` to the un-useful complement is itself an
+      -- admissible sequence on a strict submatrix and satisfies μ&#39; ≤ ε·t&#39;.
+      True) :
+    s.mu (start + length) - s.mu start ≤ ε * length + 2 * normMax A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
+      </p>
       
     </div>
   </div>

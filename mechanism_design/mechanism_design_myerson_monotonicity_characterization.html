@@ -1013,105 +1013,157 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L66"><code>SingleParameterMechanism.isMonotone_of_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L66"><code>SingleParameterMechanism.isMonotone_of_isDSIC</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem isMonotone_of_isDSIC [DecidableEq I] {M : SingleParameterMechanism I ℝ}
+    (hdsic : M.IsDSIC) :
+    M.IsMonotone</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L146"><code>SingleParameterMechanism.withMyersonPayment_isDSIC_of_isMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L146"><code>SingleParameterMechanism.withMyersonPayment_isDSIC_of_isMonotone</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem withMyersonPayment_isDSIC_of_isMonotone [DecidableEq I]
+    {x : (I → ℝ) → I → ℝ}
+    (hx : IsMonotone ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L209"><code>SingleParameterMechanism.isImplementable_of_isMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L209"><code>SingleParameterMechanism.isImplementable_of_isMonotone</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem isImplementable_of_isMonotone [DecidableEq I]
+    {x : (I → ℝ) → I → ℝ}
+    (hx : IsMonotone ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L219"><code>SingleParameterMechanism.isImplementable_iff_isMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L219"><code>SingleParameterMechanism.isImplementable_iff_isMonotone</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem isImplementable_iff_isMonotone [DecidableEq I]
+    (x : (I → ℝ) → I → ℝ) :
+    IsImplementable x ↔
+      IsMonotone ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L236"><code>SingleParameterMechanism.payment_formula_of_isDSIC_of_zeroNormalized</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L236"><code>SingleParameterMechanism.payment_formula_of_isDSIC_of_zeroNormalized</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem payment_formula_of_isDSIC_of_zeroNormalized [DecidableEq I]
+    {x p : (I → ℝ) → I → ℝ}
+    (hdsic : ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L369"><code>SingleParameterMechanism.payment_eq_myersonPayment_of_isDSIC_of_zeroNormalized</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L369"><code>SingleParameterMechanism.payment_eq_myersonPayment_of_isDSIC_of_zeroNormalized</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem payment_eq_myersonPayment_of_isDSIC_of_zeroNormalized [DecidableEq I]
+    {x p : (I → ℝ) → I → ℝ}
+    (hdsic : ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L381"><code>SingleParameterMechanism.existsUnique_zeroNormalized_payment_of_isMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L381"><code>SingleParameterMechanism.existsUnique_zeroNormalized_payment_of_isMonotone</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem existsUnique_zeroNormalized_payment_of_isMonotone [DecidableEq I]
+    {x : (I → ℝ) → I → ℝ}
+    (hx : IsMonotone ({ allocationRule</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Myerson.lean#L396"><code>SingleParameterMechanism.payment_formula_of_zeroNormalized_and_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L396"><code>SingleParameterMechanism.payment_formula_of_zeroNormalized_and_isDSIC</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Myerson
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Myerson
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem payment_formula_of_zeroNormalized_and_isDSIC [DecidableEq I]
+    {x p : (I → ℝ) → I → ℝ}
+    (hp : ZeroNormalized p ∧
+      ({ allocationRule</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Myerson</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Myerson.lean#L1"><code>EconCSLib.MechanismDesign.Myerson</code></a>
+      </p>
       
     </div>
   </div>

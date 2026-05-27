@@ -1009,45 +1009,62 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Utility/Lottery.lean#L43"><code>Lottery</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Utility/Lottery.lean#L43"><code>Lottery</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev Lottery (𝕜 : Type*) (O : Type*) [Semiring 𝕜] [PartialOrder 𝕜] [Fintype O]</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Utility/Lottery.lean#L58"><code>Lottery.pure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Utility/Lottery.lean#L58"><code>Lottery.pure</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev Lottery.pure {O : Type*} [Fintype O] [DecidableEq O] (o₀ : O) :
+    Lottery 𝕜 O</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Foundation/Utility/Lottery.lean#L66"><code>Lottery.mix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Utility/Lottery.lean#L66"><code>Lottery.mix</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ d87d88a, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev Lottery.mix {O : Type*} [Fintype O]
+    (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1)
+    (L₁ L₂ : Lottery 𝕜 O) : Lottery 𝕜 O</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Foundation.Utility.Lottery</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Foundation/Utility/Lottery.lean#L1"><code>EconCSLib.Foundation.Utility.Lottery</code></a>
+      </p>
       
     </div>
   </div>

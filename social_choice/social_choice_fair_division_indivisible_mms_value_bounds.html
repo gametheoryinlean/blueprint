@@ -1011,57 +1011,95 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L134"><code>SocialChoice.FairDivision.Indivisible.iInf_partition_le_mmsValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L134"><code>SocialChoice.FairDivision.Indivisible.iInf_partition_le_mmsValue</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma iInf_partition_le_mmsValue
+    (v : Valuation N G) (allGoods : Finset G) (i : N)
+    (B : Allocation N G) (hB : IsAllocation allGoods B)
+    (hbdd : BddAbove (Set.range fun X : {A : Allocation N G // IsAllocation allGoods A} =&gt;
+        iInf fun j : N =&gt; v.val i (X.val j))) :
+    iInf (fun j : N =&gt; v.val i (B j)) ≤ mmsValue v allGoods i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L148"><code>SocialChoice.FairDivision.Indivisible.mmsValue_le_of_forall</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L148"><code>SocialChoice.FairDivision.Indivisible.mmsValue_le_of_forall</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma mmsValue_le_of_forall
+    (v : Valuation N G) (allGoods : Finset G) (i : N)
+    (hne : Nonempty {A : Allocation N G // IsAllocation allGoods A})
+    (ub : ℝ)
+    (h : ∀ B : Allocation N G, IsAllocation allGoods B →
+        iInf (fun j : N =&gt; v.val i (B j)) ≤ ub) :
+    mmsValue v allGoods i ≤ ub</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L162"><code>SocialChoice.FairDivision.Indivisible.mmsValue_nonneg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L162"><code>SocialChoice.FairDivision.Indivisible.mmsValue_nonneg</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma mmsValue_nonneg [Fintype G]
+    (v : Valuation N G) (allGoods : Finset G) (i : N)
+    (hne : Nonempty {A : Allocation N G // IsAllocation allGoods A})
+    (hnonneg : ∀ S : Finset G, 0 ≤ v.val i S) :
+    0 ≤ mmsValue v allGoods i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L192"><code>SocialChoice.FairDivision.Indivisible.mmsValue_le_proportional_share_additive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L192"><code>SocialChoice.FairDivision.Indivisible.mmsValue_le_proportional_share_additive</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma mmsValue_le_proportional_share_additive
+    (w : AdditiveValuation N G)
+    (allGoods : Finset G) (i : N)
+    (hne : Nonempty {A : Allocation N G // IsAllocation allGoods A}) :
+    (Fintype.card N : ℝ) * mmsValue w.toValuation allGoods i ≤
+      w.toValuation.val i allGoods</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
+      </p>
       
     </div>
   </div>

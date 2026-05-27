@@ -1009,45 +1009,65 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L243"><code>MultipleParameterMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L243"><code>MultipleParameterMechanism</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>structure MultipleParameterMechanism
+    (I : Type*) (A : Type*) (V : Type*) (P : Type*)
+    extends MechanismWithTransfers I (fun _ =&gt; A → V) A P
+namespace MultipleParameterMechanism
+variable {I A V : Type*}
+/-- The valuation/type space of an agent in a multiple-parameter mechanism. -/</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L252"><code>MultipleParameterMechanism.Valuation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L252"><code>MultipleParameterMechanism.Valuation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          <p class="lean-docstring">The valuation/type space of an agent in a multiple-parameter mechanism.</p>
+          <pre class="lean-signature"><code>abbrev Valuation (A : Type*) (V : Type*)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Transfer.lean#L256"><code>MultipleParameterMechanism.valueOfAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L256"><code>MultipleParameterMechanism.valueOfAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Transfer
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def valueOfAllocation
+    (a : A) (types : ∀ _ : I, Valuation A V) (i : I) : V</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Transfer</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Transfer</code></a>
+      </p>
       
     </div>
   </div>

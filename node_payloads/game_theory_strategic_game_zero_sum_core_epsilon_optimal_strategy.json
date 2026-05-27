@@ -31,24 +31,46 @@
       "display_name": "MatrixGame.IsEpsilonOptimalRow",
       "qualified_name": "MatrixGame.IsEpsilonOptimalRow",
       "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash",
+      "kind": "def",
+      "signature": "def IsEpsilonOptimalRow {𝕜 : Type} [Field 𝕜] [ConditionallyCompleteLinearOrder 𝕜]\n    [IsStrictOrderedRing 𝕜]\n    (A : MatrixGame I J 𝕜) (ε : 𝕜) (xx : stdSimplex 𝕜 I) : Prop",
+      "docstring": "An **ε-optimal row strategy** guarantees at least `value - ε`.",
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L120",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L120",
+      "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
-      "reason": null
+      "reason": null,
+      "suggestions": []
     },
     {
       "name": "MatrixGame.IsEpsilonOptimalColumn",
       "display_name": "MatrixGame.IsEpsilonOptimalColumn",
       "qualified_name": "MatrixGame.IsEpsilonOptimalColumn",
       "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash",
+      "kind": "def",
+      "signature": "def IsEpsilonOptimalColumn {𝕜 : Type} [Field 𝕜] [ConditionallyCompleteLinearOrder 𝕜]\n    [IsStrictOrderedRing 𝕜]\n    (A : MatrixGame I J 𝕜) (ε : 𝕜) (yy : stdSimplex 𝕜 J) : Prop",
+      "docstring": "An **ε-optimal column strategy** caps player I's payoff at `value + ε`.",
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L126",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L126",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
+      "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

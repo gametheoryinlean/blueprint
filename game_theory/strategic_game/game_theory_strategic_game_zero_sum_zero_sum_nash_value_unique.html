@@ -1011,33 +1011,49 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L152"><code>StrategicGame.IsZeroSum.nash_payoff_eq</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L152"><code>StrategicGame.IsZeroSum.nash_payoff_eq</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem IsZeroSum.nash_payoff_eq
+    (hzs : IsZeroSum G) {σ τ : G.Profile}
+    (hσ : IsNashEquilibrium G σ) (hτ : IsNashEquilibrium G τ) :
+    G.payoff σ 0 = G.payoff τ 0</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L203"><code>StrategicGame.IsZeroSum.nash_payoff_eq_p1</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L203"><code>StrategicGame.IsZeroSum.nash_payoff_eq_p1</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
           </span>
           
           
+          <p class="lean-docstring">In a zero-sum game, all Nash equilibria yield the same payoff for player 1.</p>
+          <pre class="lean-signature"><code>theorem IsZeroSum.nash_payoff_eq_p1
+    (hzs : IsZeroSum G) {σ τ : G.Profile}
+    (hσ : IsNashEquilibrium G σ) (hτ : IsNashEquilibrium G τ) :
+    G.payoff σ 1 = G.payoff τ 1</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic</code></a>
+      </p>
       
     </div>
   </div>

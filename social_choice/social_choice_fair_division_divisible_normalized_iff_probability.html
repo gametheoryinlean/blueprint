@@ -1009,21 +1009,29 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L64"><code>SocialChoice.FairDivision.Divisible.IsNormalized.iff_isProbabilityMeasure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L64"><code>SocialChoice.FairDivision.Divisible.IsNormalized.iff_isProbabilityMeasure</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma iff_isProbabilityMeasure {N Ω : Type*} [MeasurableSpace Ω]
+    (μ : N → MeasureTheory.Measure Ω) :
+    IsNormalized (MeasureValuation μ) ↔ ∀ i, MeasureTheory.IsProbabilityMeasure (μ i)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Divisible.Valuation</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Valuation</code></a>
+      </p>
       
     </div>
   </div>

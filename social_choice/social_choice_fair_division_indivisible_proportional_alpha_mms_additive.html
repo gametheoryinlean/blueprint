@@ -1013,21 +1013,35 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L338"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isAlphaMMS_additive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L338"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isAlphaMMS_additive</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem IsProportional.isAlphaMMS_additive
+    [Nonempty N] [Fintype G]
+    (w : AdditiveValuation N G)
+    {allGoods : Finset G} {A : Allocation N G}
+    (hne : Nonempty {A&#39; : Allocation N G // IsAllocation allGoods A&#39;})
+    (hProp : IsProportional (Fintype.card N) w.toValuation allGoods A)
+    (α : ℝ) (hα_le : α ≤ 1)
+    (hmms_nn : ∀ i, 0 ≤ mmsValue w.toValuation allGoods i) :
+    IsAlphaMMS α w.toValuation allGoods A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
+      </p>
       
     </div>
   </div>

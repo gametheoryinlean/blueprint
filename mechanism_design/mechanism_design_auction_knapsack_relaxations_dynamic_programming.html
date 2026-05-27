@@ -1009,189 +1009,283 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L308"><code>KnapsackAuction.fractionalSocialWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L308"><code>KnapsackAuction.fractionalSocialWelfare</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">Fractional social welfare for a real-valued allocation vector.</p>
+          <pre class="lean-signature"><code>def fractionalSocialWelfare (b : I → ℝ) (x : I → ℝ) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L313"><code>KnapsackAuction.fractionalFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L313"><code>KnapsackAuction.fractionalFeasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def fractionalFeasible (A : KnapsackAuction I) (x : I → ℝ) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L350"><code>KnapsackAuction.fractionalGreedyAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L350"><code>KnapsackAuction.fractionalGreedyAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def fractionalGreedyAllocation
+    (A : KnapsackAuction I) (b : I → ℝ) : I → ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L378"><code>KnapsackAuction.fractionalGreedyWelfare_ge_zeroOneWelfare_of_optimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L378"><code>KnapsackAuction.fractionalGreedyWelfare_ge_zeroOneWelfare_of_optimal</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem fractionalGreedyWelfare_ge_zeroOneWelfare_of_optimal
+    (A : KnapsackAuction I) (b : I → ℝ) (hW : 0 ≤ A.totalCapacity)
+    (hgreedyOptimal :
+      ∀ x : I → ℝ, A.fractionalFeasible x →
+        fractionalSocialWelfare b x ≤
+          fractionalSocialWelfare b (A.fractionalGreedyAllocation b)) :
+    A.maximalSocialWelfare b hW ≤
+      fractionalSocialWelfare b (A.fractionalGreedyAllocation b)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L552"><code>KnapsackAuction.dpSolveList</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L552"><code>KnapsackAuction.dpSolveList</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def dpSolveList (w b : I → Nat) : List I → Nat → BinaryAllocation I
+  | [], _ =&gt; fun _ =&gt; false
+  | i :: is, capacity =&gt;
+      if w i ≤ capacity then
+        let skip</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L698"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L698"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def dynamicProgrammingOptimalAllocation
+    (w b : I → Nat) (capacity : Nat) : BinaryAllocation I</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L703"><code>KnapsackAuction.dynamicProgrammingOptimalValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L703"><code>KnapsackAuction.dynamicProgrammingOptimalValue</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">The social welfare achieved by the dynamic-programming allocation.</p>
+          <pre class="lean-signature"><code>noncomputable def dynamicProgrammingOptimalValue
+    (w b : I → Nat) (capacity : Nat) : Nat</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L709"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation_feasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L709"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation_feasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem dynamicProgrammingOptimalAllocation_feasible
+    (w b : I → Nat) (capacity : Nat) :
+    natBinaryLoad w (dynamicProgrammingOptimalAllocation w b capacity) ≤ capacity</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L723"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation_optimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L723"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation_optimal</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem dynamicProgrammingOptimalAllocation_optimal
+    (w b : I → Nat) (capacity : Nat) {x : BinaryAllocation I}
+    (hfeas : natBinaryLoad w x ≤ capacity) :
+    natBinarySocialWelfare b x ≤
+      natBinarySocialWelfare b (dynamicProgrammingOptimalAllocation w b capacity)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L771"><code>KnapsackAuction.integralGreedyAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L771"><code>KnapsackAuction.integralGreedyAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">The ratio-sorted integral greedy allocation.</p>
+          <pre class="lean-signature"><code>noncomputable def integralGreedyAllocation (w b : I → Nat) (capacity : Nat) : BinaryAllocation I</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L775"><code>KnapsackAuction.integralGreedyValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L775"><code>KnapsackAuction.integralGreedyValue</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">Welfare of the ratio-sorted integral greedy allocation.</p>
+          <pre class="lean-signature"><code>noncomputable def integralGreedyValue (w b : I → Nat) (capacity : Nat) : Nat</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L808"><code>KnapsackAuction.natFractionalGreedyAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L808"><code>KnapsackAuction.natFractionalGreedyAllocation</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">The ratio-sorted fractional greedy allocation on natural-number data.</p>
+          <pre class="lean-signature"><code>noncomputable def natFractionalGreedyAllocation (w b : I → Nat) (capacity : Nat) : I → ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L812"><code>KnapsackAuction.natFractionalGreedyValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L812"><code>KnapsackAuction.natFractionalGreedyValue</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          <p class="lean-docstring">Welfare of the ratio-sorted fractional greedy allocation.</p>
+          <pre class="lean-signature"><code>noncomputable def natFractionalGreedyValue (w b : I → Nat) (capacity : Nat) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1009"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation_fractionalFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1009"><code>KnapsackAuction.dynamicProgrammingOptimalAllocation_fractionalFeasible</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma dynamicProgrammingOptimalAllocation_fractionalFeasible
+    (w b : I → Nat) (capacity : Nat) :
+    (natAuctionData w capacity).fractionalFeasible
+      (binaryToAllocation (dynamicProgrammingOptimalAllocation w b capacity))</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1026"><code>KnapsackAuction.integralGreedy_halfApprox_dpOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1026"><code>KnapsackAuction.integralGreedy_halfApprox_dpOptimal</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem integralGreedy_halfApprox_dpOptimal
+    (w b : I → Nat) (capacity : Nat)
+    (hwpos : ∀ i, 0 &lt; w i)
+    (_hallfit : ∀ i, w i ≤ capacity)
+    (hfracOptimal :
+      ∀ x : I → ℝ, (natAuctionData w capacity).fractionalFeasible x →
+        fractionalSocialWelfare (realBidOfNat b) x ≤
+          natFractionalGreedyValue w b capacity) :
+    ((dynamicProgrammingOptimalValue w b capacity : ℝ) / 2) ≤
+      max (integralGreedyValue w b capacity) (highestBidValue b)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Auction.Knapsack</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Knapsack</code></a>
+      </p>
       
     </div>
   </div>

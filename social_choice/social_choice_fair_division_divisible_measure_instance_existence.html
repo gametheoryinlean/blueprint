@@ -1013,45 +1013,80 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1355"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.proportional_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1355"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.proportional_exists</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
+          <p class="lean-docstring">Proportional existence for bundled measure instances on `[0,1]`.</p>
+          <pre class="lean-signature"><code>theorem MeasureInstance.proportional_exists
+    {N : Type*} [Fintype N] [Nonempty N]
+    (M : MeasureInstance N I)
+    [∀ i, IsFiniteMeasure (M.measure i)]
+    [∀ i, NoAtoms (M.measure i)] :
+    ∃ A : Allocation N I,
+      IsAllocation A ∧
+      M.IsProportional (Fintype.card N) A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1366"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1366"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_exists</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
+          <p class="lean-docstring">Envy-free existence for bundled measure instances on `[0,1]`.</p>
+          <pre class="lean-signature"><code>theorem MeasureInstance.envyFree_exists
+    {N : Type*} [Fintype N] [Nonempty N]
+    (M : MeasureInstance N I)
+    [∀ i, IsFiniteMeasure (M.measure i)]
+    [∀ i, NoAtoms (M.measure i)] :
+    ∃ A : Allocation N I,
+      IsAllocation A ∧ M.IsEnvyFree A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1377"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_and_proportional_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1377"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.envyFree_and_proportional_exists</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem MeasureInstance.envyFree_and_proportional_exists
+    {N : Type*} [Fintype N] [Nonempty N]
+    (M : MeasureInstance N I)
+    [∀ i, IsFiniteMeasure (M.measure i)]
+    [∀ i, NoAtoms (M.measure i)] :
+    ∃ A : Allocation N I,
+      IsAllocation A ∧
+      M.IsEnvyFree A ∧
+      M.IsProportional (Fintype.card N) A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+      </p>
       
     </div>
   </div>

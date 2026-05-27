@@ -1011,201 +1011,337 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L95"><code>ExtensiveGame.BehaviorStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L95"><code>ExtensiveGame.BehaviorStrategy</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def BehaviorStrategy (G : ExtensiveGame iota U) (i : iota)
+    [(s : G.State) -&gt; Fintype (G.Action s)] : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L100"><code>ExtensiveGame.BehaviorProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L100"><code>ExtensiveGame.BehaviorProfile</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          <p class="lean-docstring">A behavior-strategy profile: one behavior strategy for every player.</p>
+          <pre class="lean-signature"><code>def BehaviorProfile (G : ExtensiveGame iota U)
+    [(s : G.State) -&gt; Fintype (G.Action s)] : Type _</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L63"><code>ExtensiveGame.reachableSubgameAt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L63"><code>ExtensiveGame.reachableSubgameAt</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.Subgame
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.Subgame
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def reachableSubgameAt (G : ExtensiveGame iota U) (root : G.State) :
+    ExtensiveGame iota U where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L368"><code>ExtensiveGame.reachProb</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L368"><code>ExtensiveGame.reachProb</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          <p class="lean-docstring">Finite-fuel probability of reaching `target` from the initial state.</p>
+          <pre class="lean-signature"><code>noncomputable def reachProb (G : ExtensiveGame iota U)
+    [DecidableEq G.State] [(s : G.State) -&gt; Fintype (G.Action s)]
+    (beta : G.BehaviorProfile) (target : G.State) (fuel : Nat) : Real</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L397"><code>ExtensiveGame.expectedPayoff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L397"><code>ExtensiveGame.expectedPayoff</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          <p class="lean-docstring">Finite-fuel expected payoff from the initial state under a behavior profile.</p>
+          <pre class="lean-signature"><code>noncomputable def expectedPayoff (G : ExtensiveGame iota Real)
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    (beta : G.BehaviorProfile) (fuel : Nat) (who : iota) : Real</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L201"><code>ExtensiveGame.BehaviorStrategy.restrictReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L201"><code>ExtensiveGame.BehaviorStrategy.restrictReachableSubgame</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def restrictReachableSubgame {G : ExtensiveGame iota U}
+    [(s : G.State) -&gt; Fintype (G.Action s)] {i : iota}
+    (beta : G.BehaviorStrategy i) (root : G.State) :
+    (G.reachableSubgameAt root).BehaviorStrategy i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L209"><code>ExtensiveGame.BehaviorStrategy.liftReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L209"><code>ExtensiveGame.BehaviorStrategy.liftReachableSubgame</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def liftReachableSubgame {G : ExtensiveGame iota U}
+    [(s : G.State) -&gt; Fintype (G.Action s)] {i : iota} {root : G.State}
+    [(s : G.State) -&gt; Decidable (Arena.Reachable G.toArena root s)]
+    (base : G.BehaviorStrategy i)
+    (beta : (G.reachableSubgameAt root).BehaviorStrategy i) :
+    G.BehaviorStrategy i</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L269"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L269"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def restrictReachableSubgame {G : ExtensiveGame iota U}
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    (beta : G.BehaviorProfile) (root : G.State) :
+    (G.reachableSubgameAt root).BehaviorProfile</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L277"><code>ExtensiveGame.BehaviorProfile.liftReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L277"><code>ExtensiveGame.BehaviorProfile.liftReachableSubgame</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def liftReachableSubgame {G : ExtensiveGame iota U}
+    [(s : G.State) -&gt; Fintype (G.Action s)] {root : G.State}
+    [(s : G.State) -&gt; Decidable (Arena.Reachable G.toArena root s)]
+    (base : G.BehaviorProfile)
+    (beta : (G.reachableSubgameAt root).BehaviorProfile) :
+    G.BehaviorProfile</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L298"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame_deviate_liftReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L298"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame_deviate_liftReachableSubgame</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem restrictReachableSubgame_deviate_liftReachableSubgame
+    {G : ExtensiveGame iota U}
+    [(s : G.State) -&gt; Fintype (G.Action s)] [DecidableEq iota]
+    {root : G.State}
+    [(s : G.State) -&gt; Decidable (Arena.Reachable G.toArena root s)]
+    (beta : G.BehaviorProfile) (who : iota)
+    (beta&#39; : (G.reachableSubgameAt root).BehaviorStrategy who) :
+    (beta.deviate who ((beta who).liftReachableSubgame beta&#39;)).restrictReachableSubgame root =
+      (beta.restrictReachableSubgame root).deviate who beta&#39;</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L404"><code>ExtensiveGame.expectedPayoffFrom_restrictSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L404"><code>ExtensiveGame.expectedPayoffFrom_restrictSubgame</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem expectedPayoffFrom_restrictSubgame {G : ExtensiveGame iota Real}
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    (beta : G.BehaviorProfile) (root start : G.State) (fuel : Nat) (who : iota) :
+    expectedPayoffFrom (G</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L429"><code>ExtensiveGame.expectedPayoff_restrictSubgame_init</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L429"><code>ExtensiveGame.expectedPayoff_restrictSubgame_init</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem expectedPayoff_restrictSubgame_init {G : ExtensiveGame iota Real}
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    (beta : G.BehaviorProfile) (fuel : Nat) (who : iota) :
+    expectedPayoff (G.subgameAt G.init) (beta.restrictSubgame G.init) fuel who =
+      expectedPayoff G beta fuel who</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L459"><code>ExtensiveGame.ReachedSubgamePayoffTransfer</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L459"><code>ExtensiveGame.ReachedSubgamePayoffTransfer</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def ReachedSubgamePayoffTransfer (G : ExtensiveGame iota Real)
+    [DecidableEq G.State]
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    [DecidableEq iota]
+    (beta : G.BehaviorProfile) (root : G.State) (fuel : Nat) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L478"><code>ExtensiveGame.ReachedSubgamePayoffTransfer.init</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L478"><code>ExtensiveGame.ReachedSubgamePayoffTransfer.init</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          <p class="lean-docstring">The payoff-transfer interface holds trivially for the root subgame.</p>
+          <pre class="lean-signature"><code>theorem ReachedSubgamePayoffTransfer.init
+    (G : ExtensiveGame iota Real)
+    [DecidableEq G.State]
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    [DecidableEq iota]
+    (beta : G.BehaviorProfile) (fuel : Nat) :
+    ReachedSubgamePayoffTransfer G beta G.init fuel</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L519"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_of_reachProb_pos</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L519"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_of_reachProb_pos</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem IsBehaviorNashEq.restrictSubgame_of_reachProb_pos
+    {G : ExtensiveGame iota Real}
+    [DecidableEq G.State]
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    [DecidableEq iota]
+    {beta : G.BehaviorProfile} {root : G.State} {fuel : Nat}
+    (hNash : IsBehaviorNashEq G beta fuel)
+    (hreach : 0 &lt; reachProb G beta root fuel)
+    (hpay : ReachedSubgamePayoffTransfer G beta root fuel) :
+    IsBehaviorNashEq (G.subgameAt root) (beta.restrictSubgame root) fuel</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L548"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_init</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L548"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_init</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem IsBehaviorNashEq.restrictSubgame_init
+    {G : ExtensiveGame iota Real}
+    [(s : G.State) -&gt; Fintype (G.Action s)]
+    [(s : G.State) -&gt; Decidable (IsEmpty (G.Action s))]
+    [DecidableEq iota]
+    {beta : G.BehaviorProfile} {fuel : Nat}
+    (hNash : IsBehaviorNashEq G beta fuel) :
+    IsBehaviorNashEq (G.subgameAt G.init) (beta.restrictSubgame G.init) fuel</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.GameTheory.ExtensiveGame.Subgame</code>, <code>EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Subgame</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy</code></a>
+      </p>
       
     </div>
   </div>

@@ -1011,165 +1011,240 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L198"><code>MinimaxLoomis.singleton_of_card_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L198"><code>MinimaxLoomis.singleton_of_card_one</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem singleton_of_card_one {α : Type*} [Fintype α] [DecidableEq α]
+    (H : Fintype.card α = 1) :
+    ∃ a : α, (Finset.univ : Finset α) = {a}</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L205"><code>MinimaxLoomis.minmax&#39;_IJ_2</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L205"><code>MinimaxLoomis.minmax&#39;_IJ_2</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          <p class="lean-docstring">Base case of the Loomis induction: a 1×1 matrix game has `lam0 = mu0`.</p>
+          <pre class="lean-signature"><code>theorem minmax&#39;_IJ_2 (Hn : 2 = Fintype.card I + Fintype.card J) (A : I → J → ℝ) :
+    lam0 A = mu0 A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L243"><code>MinimaxLoomis.dropEquiv</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L243"><code>MinimaxLoomis.dropEquiv</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          <p class="lean-docstring">The equivalence `J ≃ Option {j // j ≠ j₀}`: `j₀ ↦ none`, other `j ↦ some j`.</p>
+          <pre class="lean-signature"><code>noncomputable def dropEquiv [DecidableEq J] (j₀ : J) : J ≃ Option {j : J // j ≠ j₀} where</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L253"><code>MinimaxLoomis.sum_split_at</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L253"><code>MinimaxLoomis.sum_split_at</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem sum_split_at [DecidableEq J] (j₀ : J) (f : J → ℝ) :
+    ∑ j : J, f j = f j₀ + ∑ j&#39; : {j : J // j ≠ j₀}, f j&#39;.val</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L264"><code>MinimaxLoomis.extendDropColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L264"><code>MinimaxLoomis.extendDropColumn</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          
+          <pre class="lean-signature"><code>noncomputable def extendDropColumn [DecidableEq J] (j₀ : J)
+    (y&#39; : stdSimplex ℝ {j : J // j ≠ j₀}) :
+    stdSimplex ℝ J</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L282"><code>MinimaxLoomis.extendDropRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L282"><code>MinimaxLoomis.extendDropRow</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          <p class="lean-docstring">Dual: extend a mixed strategy on `I&#39; = {i // i ≠ i₀}` to one on `I`.</p>
+          <pre class="lean-signature"><code>noncomputable def extendDropRow [DecidableEq I] (i₀ : I)
+    (x&#39; : stdSimplex ℝ {i : I // i ≠ i₀}) :
+    stdSimplex ℝ I</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L289"><code>MinimaxLoomis.wsum_extendDropColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L289"><code>MinimaxLoomis.wsum_extendDropColumn</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem wsum_extendDropColumn [DecidableEq J] (j₀ : J)
+    (y&#39; : stdSimplex ℝ {j : J // j ≠ j₀}) (f : J → ℝ) :
+    wsum (extendDropColumn j₀ y&#39;) f
+      = ∑ j&#39; : {j : J // j ≠ j₀}, y&#39;.val j&#39; * f j&#39;.val</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L306"><code>MinimaxLoomis.wsum_extendDropRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L306"><code>MinimaxLoomis.wsum_extendDropRow</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          <p class="lean-docstring">Companion for row extension.</p>
+          <pre class="lean-signature"><code>theorem wsum_extendDropRow [DecidableEq I] (i₀ : I)
+    (x&#39; : stdSimplex ℝ {i : I // i ≠ i₀}) (f : I → ℝ) :
+    wsum (extendDropRow i₀ x&#39;) f
+      = ∑ i&#39; : {i : I // i ≠ i₀}, x&#39;.val i&#39; * f i&#39;.val</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L316"><code>MinimaxLoomis.minmax&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L316"><code>MinimaxLoomis.minmax&#39;</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem minmax&#39; :
+    ∀ (n : ℕ), 2 ≤ n →
+    ∀ {I J : Type*} [Fintype I] [Fintype J] [Nonempty I] [Nonempty J],
+      n = Fintype.card I + Fintype.card J →
+      ∀ (A : I → J → ℝ), lam0 A = mu0 A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Loomis.lean#L535"><code>MinimaxLoomis.minmax_theorem&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L535"><code>MinimaxLoomis.minmax_theorem&#39;</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem minmax_theorem&#39; (A : I → J → ℝ) : lam0 A = mu0 A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/LoomisGeneral.lean#L895"><code>LoomisGeneral.minmax_from_general</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/LoomisGeneral.lean#L895"><code>LoomisGeneral.minmax_from_general</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.LoomisGeneral
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.LoomisGeneral
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem minmax_from_general (A : I → J → ℝ) :
+    MinimaxLoomis.lam0 A = MinimaxLoomis.mu0 A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/LoomisGeneral.lean#L877"><code>LoomisGeneral.lamB0_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/LoomisGeneral.lean#L877"><code>LoomisGeneral.lamB0_one</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.LoomisGeneral
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.LoomisGeneral
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem lamB0_one (A : I → J → ℝ) :
+    lamB0 A (fun _ _ =&gt; 1) = MinimaxLoomis.lam0 A</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/LoomisGeneral.lean#L882"><code>LoomisGeneral.muB0_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/LoomisGeneral.lean#L882"><code>LoomisGeneral.muB0_one</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Minimax.LoomisGeneral
+            EconCSLib @ d87d88a, EconCSLib.Math.Minimax.LoomisGeneral
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem muB0_one (A : I → J → ℝ) :
+    muB0 A (fun _ _ =&gt; 1) = MinimaxLoomis.mu0 A</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.Minimax.Loomis</code>, <code>EconCSLib.Math.Minimax.LoomisGeneral</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/LoomisGeneral.lean#L1"><code>EconCSLib.Math.Minimax.LoomisGeneral</code></a>
+      </p>
       
     </div>
   </div>

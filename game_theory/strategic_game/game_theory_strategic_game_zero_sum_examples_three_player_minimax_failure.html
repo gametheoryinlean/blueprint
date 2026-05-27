@@ -1009,57 +1009,86 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L37"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.G</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L37"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.G</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
+            EconCSLib @ d87d88a, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
           </span>
           
           
+          <p class="lean-docstring">Expected payoff `G(x, y, z) = z · xy + (1 − z) · (1 − x)(1 − y)`.</p>
+          <pre class="lean-signature"><code>def G (x y z : ℝ) : ℝ</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L130"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.maximin_eq_one_quarter</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L130"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.maximin_eq_one_quarter</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
+            EconCSLib @ d87d88a, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem maximin_eq_one_quarter :
+    -- Witness x = y = 1/2 achieves at least 1/4 against every z.
+    (∀ z, 0 ≤ z → z ≤ 1 → (1 / 4 : ℝ) ≤ G (1/2) (1/2) z)
+    ∧
+    -- Upper bound: every (x,y) ∈ [0,1]² has min_z G(x,y,z) ≤ 1/4.
+    (∀ x y, 0 ≤ x → x ≤ 1 → 0 ≤ y → y ≤ 1 →
+      min (x * y) ((1 - x) * (1 - y)) ≤ (1 / 4 : ℝ))</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L170"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.minimax_eq_one_half</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L170"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.minimax_eq_one_half</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
+            EconCSLib @ d87d88a, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
           </span>
           
           
+          <p class="lean-docstring">**Minimax equality**: `min_{z ∈ [0,1]} max_{x,y} G(x,y,z) = 1/2`.</p>
+          <pre class="lean-signature"><code>theorem minimax_eq_one_half :
+    -- Witness z = 1/2 caps every (x,y) at 1/2.
+    (∀ x y, 0 ≤ x → x ≤ 1 → 0 ≤ y → y ≤ 1 → G x y (1/2) ≤ (1 / 2 : ℝ))
+    ∧
+    -- Lower bound: every z ∈ [0,1] has max_{x,y} G(x,y,z) ≥ 1/2.
+    (∀ z, 0 ≤ z → z ≤ 1 → (1 / 2 : ℝ) ≤ max (G 1 1 z) (G 0 0 z))</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L179"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.maximin_lt_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L179"><code>EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.maximin_lt_minimax</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
+            EconCSLib @ d87d88a, EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure
           </span>
           
           
+          <p class="lean-docstring">**The minimax inequality is strict**: `1/4 &lt; 1/2`.</p>
+          <pre class="lean-signature"><code>theorem maximin_lt_minimax : (1 / 4 : ℝ) &lt; 1 / 2</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Examples/StrategicGame/ThreePlayerMinimaxFailure.lean#L1"><code>EconCSLib.Examples.StrategicGame.ThreePlayerMinimaxFailure</code></a>
+      </p>
       
     </div>
   </div>

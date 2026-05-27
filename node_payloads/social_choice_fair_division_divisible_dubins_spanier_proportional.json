@@ -38,11 +38,28 @@
       "display_name": "SocialChoice.FairDivision.Divisible.dubinsSpanierProportional",
       "qualified_name": "SocialChoice.FairDivision.Divisible.dubinsSpanierProportional",
       "module": "EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier",
+      "kind": "theorem",
+      "signature": "theorem dubinsSpanierProportional (n : ℕ) (hn : 0 < n)\n    (μ : Fin n → Measure I) [∀ i, IsFiniteMeasure (μ i)] [∀ i, NoAtoms (μ i)] :\n    ∃ A : Allocation (Fin n) I,\n      IsAllocation A ∧ IsProportional n (MeasureValuation μ) A",
+      "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L418",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L418",
+      "doc_url": null,
       "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier",
+      "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -1009,21 +1009,33 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/LinearAlgebra/PerronFrobenius.lean#L70"><code>EconCSLib.LinearAlgebra.perron_frobenius</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/PerronFrobenius.lean#L70"><code>EconCSLib.LinearAlgebra.perron_frobenius</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.LinearAlgebra.PerronFrobenius
+            EconCSLib @ d87d88a, EconCSLib.Math.LinearAlgebra.PerronFrobenius
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem perron_frobenius (M : Fin n → Fin n → ℝ) (hM_pos : ∀ i j, 0 &lt; M i j) :
+    ∃ (x y : stdSimplex ℝ (Fin n)) (lam : ℝ),
+      0 &lt; lam ∧
+      (∀ i, 0 &lt; x.val i) ∧
+      (∀ i, 0 &lt; y.val i) ∧
+      (∀ j, wsum x (fun i =&gt; M i j) = lam * x.val j) ∧
+      (∀ i, wsum y (M i) = lam * y.val i)</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.LinearAlgebra.PerronFrobenius</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/LinearAlgebra/PerronFrobenius.lean#L1"><code>EconCSLib.Math.LinearAlgebra.PerronFrobenius</code></a>
+      </p>
       
     </div>
   </div>

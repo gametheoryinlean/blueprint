@@ -25,11 +25,28 @@
       "display_name": "dantzig_minimax",
       "qualified_name": "dantzig_minimax",
       "module": "EconCSLib.Math.Minimax.Dantzig",
+      "kind": "theorem",
+      "signature": "theorem dantzig_minimax [Nonempty (Fin m)] [Nonempty (Fin n)]\n    (A : Fin m → Fin n → 𝕜) :\n    ∃ (x : stdSimplex 𝕜 (Fin m)) (y : stdSimplex 𝕜 (Fin n)) (v : 𝕜),\n      (∀ j : Fin n, ∑ i : Fin m, x.val i * A i j ≥ v) ∧\n      (∀ i : Fin m, ∑ j : Fin n, A i j * y.val j ≤ v)",
+      "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7531edeb1162bb612ddb1b0dbe2a413c98c75540",
-      "short_revision": "7531ede",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Minimax/Dantzig.lean#L480",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Dantzig.lean#L480",
+      "doc_url": null,
       "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.Math.Minimax.Dantzig",
+      "display_name": "EconCSLib.Math.Minimax.Dantzig",
+      "repository_title": "EconCSLib",
+      "revision": "d87d88ab5cc56b012153af91f78bd2998dbc4c49",
+      "short_revision": "d87d88a",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Minimax/Dantzig.lean#L1",
       "status": "resolved",
       "reason": null
     }

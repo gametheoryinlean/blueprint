@@ -1011,33 +1011,49 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L738"><code>SocialChoice.FairDivision.Indivisible.roundRobinAllocation_isEF1</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L738"><code>SocialChoice.FairDivision.Indivisible.roundRobinAllocation_isEF1</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
+          <p class="lean-docstring">Round-robin gives EF1 for additive instances with nonnegative item weights.</p>
+          <pre class="lean-signature"><code>theorem roundRobinAllocation_isEF1 [DecidableEq G]
+    (I : AdditiveInstance (Fin n) G)
+    (hnn : ∀ (i : Fin n) (g : G), 0 ≤ I.weight i g) :
+    I.IsEF1 (roundRobinAllocation I)</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L747"><code>SocialChoice.FairDivision.Indivisible.roundRobinRule_isEF1</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L747"><code>SocialChoice.FairDivision.Indivisible.roundRobinRule_isEF1</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ d87d88a, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
+          <p class="lean-docstring">The bundled round-robin rule is EF1 under nonnegative item weights.</p>
+          <pre class="lean-signature"><code>theorem roundRobinRule_isEF1 [DecidableEq G]
+    (I : AdditiveInstance (Fin n) G)
+    (hnn : ∀ (i : Fin n) (g : G), 0 ≤ I.weight i g) :
+    I.IsEF1 (roundRobinRule I).1</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin</code></a>
+      </p>
       
     </div>
   </div>

@@ -1009,69 +1009,92 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L124"><code>Auction.BidProfile.Nonnegative</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L124"><code>Auction.BidProfile.Nonnegative</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def Nonnegative [Zero V] [LE V] (b : I → V) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L131"><code>Auction.BidProfile.InSet</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L131"><code>Auction.BidProfile.InSet</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def InSet (b : I → V) (S : I → Set V) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L137"><code>Auction.BidProfile.InBox</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L137"><code>Auction.BidProfile.InBox</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def InBox [LE V] (b : I → V) (ℓ u : I → V) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L144"><code>Auction.BidProfile.StrategyMapsBoxToBox</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L144"><code>Auction.BidProfile.StrategyMapsBoxToBox</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>def StrategyMapsBoxToBox [LE V] (σ : V → V) (ℓ u ℓ&#39; u&#39; : V) : Prop</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/MechanismDesign/Auction/Basic.lean#L151"><code>Auction.BidProfile.inBox_iff_inSet_Icc</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L151"><code>Auction.BidProfile.inBox_iff_inSet_Icc</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.MechanismDesign.Auction.Basic
+            EconCSLib @ d87d88a, EconCSLib.MechanismDesign.Auction.Basic
           </span>
           
           
+          
+          <pre class="lean-signature"><code>lemma inBox_iff_inSet_Icc [Preorder V] (b : I → V) (ℓ u : I → V) :
+    InBox b ℓ u ↔ InSet b (fun i =&gt; Set.Icc (ℓ i) (u i))</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.MechanismDesign.Auction.Basic</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/MechanismDesign/Auction/Basic.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Basic</code></a>
+      </p>
       
     </div>
   </div>

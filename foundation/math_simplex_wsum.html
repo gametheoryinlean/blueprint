@@ -996,105 +996,146 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L82"><code>wsum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L82"><code>wsum</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          
+          <pre class="lean-signature"><code>abbrev wsum (x : stdSimplex 𝕜 I) (f : I → 𝕜) : 𝕜</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L86"><code>wsum_const</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L86"><code>wsum_const</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Weighted sum of a constant equals the constant.</p>
+          <pre class="lean-signature"><code>theorem wsum_const (x : stdSimplex 𝕜 I) (c : 𝕜) :
+    wsum x (fun _ =&gt; c) = c</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L91"><code>wsum_le_wsum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L91"><code>wsum_le_wsum</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Weighted sum is monotone: pointwise `≤` implies `wsum ≤`.</p>
+          <pre class="lean-signature"><code>theorem wsum_le_wsum (x : stdSimplex 𝕜 I) {f g : I → 𝕜}
+    (h : ∀ i, f i ≤ g i) : wsum x f ≤ wsum x g</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L98"><code>wsum_nonneg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L98"><code>wsum_nonneg</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Weighted sum of non-negative values is non-negative.</p>
+          <pre class="lean-signature"><code>theorem wsum_nonneg (x : stdSimplex 𝕜 I) {f : I → 𝕜}
+    (h : ∀ i, 0 ≤ f i) : 0 ≤ wsum x f</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L108"><code>wsum_pos</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L108"><code>wsum_pos</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem wsum_pos (x : stdSimplex 𝕜 I) {f : I → 𝕜}
+    (hf : ∀ i, 0 &lt; f i) : 0 &lt; wsum x f</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L128"><code>wsum_ge_wsum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L128"><code>wsum_ge_wsum</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Weighted sum respects `≥`.</p>
+          <pre class="lean-signature"><code>theorem wsum_ge_wsum (x : stdSimplex 𝕜 I) {f g : I → 𝕜}
+    (h : ∀ i, f i ≥ g i) : wsum x f ≥ wsum x g</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L133"><code>wsum_add</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L133"><code>wsum_add</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Weighted sum is linear over addition.</p>
+          <pre class="lean-signature"><code>theorem wsum_add (x : stdSimplex 𝕜 I) (f g : I → 𝕜) :
+    wsum x (f + g) = wsum x f + wsum x g</code></pre>
         </li>
         
-        <li>
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7531edeb1162bb612ddb1b0dbe2a413c98c75540/EconCSLib/Math/Simplex.lean#L138"><code>wsum_smul</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L138"><code>wsum_smul</code></a>
+          
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7531ede, EconCSLib.Math.Simplex
+            EconCSLib @ d87d88a, EconCSLib.Math.Simplex
           </span>
           
           
+          <p class="lean-docstring">Weighted sum commutes with scalar multiplication.</p>
+          <pre class="lean-signature"><code>theorem wsum_smul (x : stdSimplex 𝕜 I) (c : 𝕜) (f : I → 𝕜) :
+    wsum x (c • f) = c * wsum x f</code></pre>
         </li>
         
       </ul>
       
-      <p class="lean-modules">Modules: <code>EconCSLib.Math.Simplex</code></p>
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
+      </p>
       
     </div>
   </div>
