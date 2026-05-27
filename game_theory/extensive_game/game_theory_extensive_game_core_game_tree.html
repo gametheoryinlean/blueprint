@@ -999,37 +999,35 @@
         <li class="lean-ref">
           <span class="badge lean-kind">inductive</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L21"><code>GameTree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1d6996363ab79ae74d9747b5bfcb269b82a61dbf/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L48"><code>GameTree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ 1d69963, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
           
-          <pre class="lean-signature"><code>inductive GameTree
-  | Leaf  (val : ℚ)                          -- terminal payoff for player A
-  | Pnode (p : Player) (L R : GameTree)       -- player decision node (binary)
-  | Nnode (p : Set.Icc (0:ℚ) 1) (L R : GameTree)  -- chance node (prob p → L)
-```
-`value : GameTree → ℚ` computes the backward-induction value for player A:
-* Leaf  → the leaf payoff.
-* Player A node → max of children&#39;s values.
-* Player B node → min of children&#39;s values.
-* Nature node   → probability-weighted average of children&#39;s values.</code></pre>
+          <pre class="lean-signature"><code>inductive GameTree (ι : Type*) (U : Type*) : Type _
+  | Leaf (payoff : ι → U) : GameTree ι U
+  | Node (mover : ι) (head : GameTree ι U) (tail : List (GameTree ι U)) :
+      GameTree ι U
+namespace GameTree
+variable {ι U : Type*}
+/-- The full child list at a `Node`, as a guaranteed non-empty list. -/
+@[simp]</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L59"><code>GameTree.children</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1d6996363ab79ae74d9747b5bfcb269b82a61dbf/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L59"><code>GameTree.children</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ 1d69963, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
@@ -1043,12 +1041,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L69"><code>GameTree.size</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1d6996363ab79ae74d9747b5bfcb269b82a61dbf/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L69"><code>GameTree.size</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ d87d88a, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ 1d69963, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
@@ -1062,7 +1060,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d87d88ab5cc56b012153af91f78bd2998dbc4c49/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/1d6996363ab79ae74d9747b5bfcb269b82a61dbf/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
       </p>
       
     </div>
