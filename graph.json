@@ -3221,7 +3221,19 @@
         "mixed-strategy"
       ],
       "lean_declarations": [
-        "MixedStrategy"
+        "MixedStrategy",
+        "StrategicGame.IsCompletelyMixed",
+        "StrategicGame.IsCompletelyMixedProfile",
+        "StrategicGame.uniformMixed",
+        "StrategicGame.uniformMixedProfile",
+        "StrategicGame.pureProfileToMixed",
+        "StrategicGame.deviateMixed",
+        "StrategicGame.IsCompletelyMixedProfile.player",
+        "StrategicGame.pureToMixed_not_isCompletelyMixed_of_ne",
+        "StrategicGame.uniformMixedProfile_isCompletelyMixed",
+        "StrategicGame.uniformMixed_apply",
+        "StrategicGame.uniformMixed_isCompletelyMixed",
+        "StrategicGame.uniformMixed_pos"
       ],
       "topic": "game_theory.strategic_game.core",
       "uses": [
@@ -3547,7 +3559,9 @@
         "rationality"
       ],
       "lean_declarations": [
-        "StrategicGame.Survives"
+        "StrategicGame.Survives",
+        "StrategicGame.Survives.mono",
+        "StrategicGame.Survives.prev"
       ],
       "topic": "game_theory.strategic_game.dominance",
       "uses": [
@@ -3848,6 +3862,9 @@
         "nash-equilibrium",
         "existence"
       ],
+      "lean_declarations": [
+        "StrategicGame.exists_mixed_nash_equilibrium_finite"
+      ],
       "topic": "game_theory.strategic_game.equilibrium",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
@@ -3958,7 +3975,11 @@
       ],
       "lean_declarations": [
         "IsESS",
-        "IsNSS"
+        "IsNSS",
+        "IsESS.isNSS",
+        "IsESS.nash_condition",
+        "IsESS.strict_against_other",
+        "strict_nash_implies_ess"
       ],
       "topic": "game_theory.strategic_game.evolution",
       "uses": [
@@ -4070,7 +4091,9 @@
         "equilibrium"
       ],
       "lean_declarations": [
-        "IsNashEquilibrium"
+        "IsNashEquilibrium",
+        "isNashEq",
+        "isNashEq_iff"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -4268,7 +4291,8 @@
         "nash-equilibrium"
       ],
       "lean_declarations": [
-        "IsExactPotential.maximizer_is_nash"
+        "IsExactPotential.maximizer_is_nash",
+        "IsOrdinalPotential.isNash_iff_localMax"
       ],
       "topic": "game_theory.strategic_game.potential",
       "uses": [
@@ -4578,7 +4602,8 @@
         "foundational"
       ],
       "lean_declarations": [
-        "StrategicGame"
+        "StrategicGame",
+        "StrategicGame.welfare"
       ],
       "topic": "game_theory.strategic_game",
       "used_by": [
@@ -4638,7 +4663,9 @@
         "dominance"
       ],
       "lean_declarations": [
-        "StrictlyDominates"
+        "StrictlyDominates",
+        "StrictlyDominates.weakly",
+        "IsStrictlyDominant.isWeaklyDominant"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -4695,7 +4722,8 @@
         "dominance"
       ],
       "lean_declarations": [
-        "IsWeaklyDominant"
+        "IsWeaklyDominant",
+        "IsWeaklyDominant.isBestResponse"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -4794,7 +4822,18 @@
         "game_theory.strategic_game.zero_sum.applications"
       ],
       "lean_declarations": [
-        "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution"
+        "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution",
+        "EconCSLib.StrategicGame.IsStochasticMatrix",
+        "EconCSLib.StrategicGame.uniformDist",
+        "EconCSLib.StrategicGame.MatrixGame.disp",
+        "EconCSLib.StrategicGame.IsStochasticMatrix.total_mass_preserved",
+        "EconCSLib.StrategicGame.MatrixGame.disp_Ei",
+        "EconCSLib.StrategicGame.MatrixGame.disp_Ej",
+        "EconCSLib.StrategicGame.MatrixGame.disp_Ei_uniform",
+        "EconCSLib.StrategicGame.MatrixGame.disp_Ei_argmin_nonneg",
+        "EconCSLib.StrategicGame.MatrixGame.disp_value_eq_zero",
+        "EconCSLib.StrategicGame.MatrixGame.disp_value_ge_zero",
+        "EconCSLib.StrategicGame.MatrixGame.disp_value_le_zero"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -5423,7 +5462,9 @@
         "MatrixGame.optimalColumnSet_isCompact",
         "MatrixGame.optimalColumnSet_nonempty",
         "MatrixGame.optimalRowStrategies_image_isPolytope",
-        "MatrixGame.optimalColumnStrategies_image_isPolytope"
+        "MatrixGame.optimalColumnStrategies_image_isPolytope",
+        "MatrixGame.optimalRowSet",
+        "MatrixGame.optimalColumnSet"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -5950,7 +5991,8 @@
         "game_theory.strategic_game.zero_sum.learning"
       ],
       "lean_declarations": [
-        "MatrixGame.cesaro_payoff_converges_to_value"
+        "MatrixGame.cesaro_payoff_converges_to_value",
+        "MatrixGame.realisedCumPayoff"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -6178,7 +6220,8 @@
         "game_theory.strategic_game.zero_sum.learning"
       ],
       "lean_declarations": [
-        "MatrixGame.robinson_admissible_lemma"
+        "MatrixGame.robinson_admissible_lemma",
+        "MatrixGame.AdmissibleSequence"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -6421,7 +6464,9 @@
         "MatrixGame.guarantee_I",
         "MatrixGame.guarantee_II",
         "MatrixGame.maximin",
-        "MatrixGame.minimax"
+        "MatrixGame.minimax",
+        "MatrixGame.value_eq_maximin",
+        "MatrixGame.value_eq_minimax"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -6455,7 +6500,9 @@
         "expectedPayoffMatrix",
         "MatrixGame.E",
         "MatrixGame.Ej",
-        "MatrixGame.Ei"
+        "MatrixGame.Ei",
+        "MatrixGame.payoffAgainstRow",
+        "MatrixGame.payoffAgainstColumn"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -6663,7 +6710,12 @@
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum",
-        "StrategicGame.IsConstantSum"
+        "StrategicGame.IsConstantSum",
+        "StrategicGame.IsZeroSum.toIsConstantSum",
+        "StrategicGame.IsZeroSum.welfare_eq_zero",
+        "StrategicGame.IsConstantSum.welfare_eq",
+        "StrategicGame.IsConstantSum.zero_isZeroSum",
+        "StrategicGame.isZeroSum_iff_isConstantSum_zero"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -6693,7 +6745,9 @@
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum.nash_payoff_eq",
-        "StrategicGame.IsZeroSum.nash_payoff_eq_p1"
+        "StrategicGame.IsZeroSum.nash_payoff_eq_p1",
+        "MatrixGame.nash_interchangeable",
+        "MatrixGame.nash_value_unique"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -6718,7 +6772,9 @@
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum.neg",
-        "StrategicGame.IsZeroSum.neg'"
+        "StrategicGame.IsZeroSum.neg'",
+        "StrategicGame.IsZeroSum.expectedPayoff_neg",
+        "StrategicGame.IsZeroSum.expectedPayoff_neg'"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -7386,7 +7442,11 @@
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero",
-        "EconCSLib.StrategicGame.MatrixGame.antisymmetric_exists_optimal_strategy"
+        "EconCSLib.StrategicGame.MatrixGame.antisymmetric_exists_optimal_strategy",
+        "EconCSLib.StrategicGame.IsAntisymmetric",
+        "EconCSLib.StrategicGame.IsAntisymmetric.diag_zero",
+        "EconCSLib.StrategicGame.IsAntisymmetric.quadform_zero",
+        "EconCSLib.StrategicGame.antisymmetric_self_pairing_zero"
       ],
       "topic": "math",
       "uses": [
@@ -12576,7 +12636,7 @@
     },
     {
       "id": "social_choice.voting.borda_score",
-      "title": "Borda Score and Borda Winner",
+      "title": "Borda Score and Borda Rule",
       "kind": "definition",
       "status": "formalized",
       "tags": [
@@ -12592,8 +12652,8 @@
       ],
       "lean_declarations": [
         "SocialChoice.Voting.bordaScore",
-        "SocialChoice.Voting.bordaTotalScore",
-        "SocialChoice.Voting.IsBordaWinner"
+        "SocialChoice.Voting.scoreCandidate",
+        "SocialChoice.Voting.borda"
       ],
       "topic": "social_choice",
       "uses": [
@@ -12644,7 +12704,7 @@
         "social_choice.voting.rules"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.IsCondorcetWinner",
+        "SocialChoice.Voting.CondorcetWinner",
         "SocialChoice.Voting.HasCondorcetWinner"
       ],
       "topic": "social_choice",
@@ -12732,7 +12792,7 @@
         "social_choice.voting"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.SCF.Dictatorial"
+        "SocialChoice.Voting.Dictatorial"
       ],
       "topic": "social_choice",
       "uses": [
@@ -13018,7 +13078,7 @@
         "social_choice.voting"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.SCF.Monotonic"
+        "SocialChoice.Voting.Monotonicity"
       ],
       "topic": "social_choice",
       "uses": [
@@ -13063,7 +13123,7 @@
     },
     {
       "id": "social_choice.voting.plurality_score",
-      "title": "Plurality Score and Plurality Winner",
+      "title": "Plurality Score and Plurality Rule",
       "kind": "definition",
       "status": "formalized",
       "tags": [
@@ -13079,7 +13139,7 @@
       ],
       "lean_declarations": [
         "SocialChoice.Voting.pluralityScore",
-        "SocialChoice.Voting.IsPluralityWinner"
+        "SocialChoice.Voting.plurality"
       ],
       "topic": "social_choice",
       "uses": [
@@ -13103,7 +13163,9 @@
         "social_choice.voting"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.SCF"
+        "SocialChoice.Voting.VotingRule",
+        "SocialChoice.Voting.IsTotal",
+        "SocialChoice.Voting.Resolute"
       ],
       "topic": "social_choice",
       "uses": [
@@ -13134,7 +13196,7 @@
         "social_choice.voting"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.SCF.StrategyProof"
+        "SocialChoice.Voting.ResoluteStrategyproofness"
       ],
       "topic": "social_choice",
       "uses": [
@@ -13222,7 +13284,7 @@
       ],
       "lean_declarations": [
         "SocialChoice.Voting.SWF.Unanimity",
-        "SocialChoice.Voting.SCF.Unanimity"
+        "SocialChoice.Voting.Unanimity"
       ],
       "topic": "social_choice",
       "uses": [

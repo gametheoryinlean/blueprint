@@ -1040,27 +1040,57 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">abbrev</span>
           
-          
-          <code>SocialChoice.Voting.SCF</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) .claude.worktrees.eloquent-kowalevski-c8f893.GameTheoryLib.SocialChoice.VotingRules</code>, <code>(module) EconCSLib.SocialChoice.Voting.Arrow</code>, <code>(module) EconCSLib.SocialChoice.Voting.Basic</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L220"><code>SocialChoice.Voting.VotingRule</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
           
           
+          <p class="lean-docstring">A set-valued voting rule on fixed finite voter and candidate types.</p>
+          <pre class="lean-signature"><code>abbrev VotingRule (N A : Type*) [Fintype N] [Fintype A]</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L224"><code>SocialChoice.Voting.IsTotal</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">A voting rule is total if it always returns at least one winner.</p>
+          <pre class="lean-signature"><code>def IsTotal [Fintype N] [Fintype A] (f : VotingRule N A) : Prop</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L228"><code>SocialChoice.Voting.Resolute</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">A voting rule is resolute if it always returns exactly one winner.</p>
+          <pre class="lean-signature"><code>def Resolute [Fintype N] [Fintype A] (f : VotingRule N A) : Prop</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1069,22 +1099,29 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Social Choice Function</h1>
-<p>A <em>social choice function</em> (SCF) on a population $N$ and alternative set $A$
-is a map
+<p>A <em>social choice function</em> aggregates a preference profile into the
+alternatives that win. In this formalization it is the set-valued <em>voting
+rule</em>
 $$
-G : \mathrm{PrefProfile}(N, A) \to A
+f : \mathrm{PrefProfile}(N, A) \to \mathcal{P}(A)
 $$
-that selects, for every preference profile, a single winning alternative.</p>
-<p>In Lean this is the structure <code>SocialChoice.Voting.SCF N A</code> with one field
-<code>f : PrefProfile N A → A</code>, equipped with a <code>CoeFun</code> so <code>G P</code> is the chosen
-alternative at profile $P$.</p>
+returning, for every profile, the (possibly tied) winner set $f(P)$.</p>
+<p>In Lean this is <code>SocialChoice.Voting.VotingRule N A</code>, the abbreviation
+<code>Profile N A → Finset A</code>. Two refinements isolate the single-winner case:</p>
+<ul>
+<li><code>IsTotal f</code> — every profile has at least one winner, $f(P) \ne \varnothing$.</li>
+<li><code>Resolute f</code> — every profile has exactly one winner, $\#f(P) = 1$. A
+  resolute rule is the set-valued encoding of the classical single-valued SCF
+  $G : \mathrm{PrefProfile}(N,A) \to A$ via $f(P) = \{G(P)\}$.</li>
+</ul>
 <p>Compared with a social welfare function ([[social_choice.voting.swf]]) the
-SCF returns only the top-pick rather than a full ranking. The standard
-axioms — unanimity ([[social_choice.voting.unanimity]]), monotonicity
+voting rule returns only the chosen winners rather than a full ranking. The
+standard axioms — unanimity ([[social_choice.voting.unanimity]]), monotonicity
 ([[social_choice.voting.monotonic_scf]]), strategy-proofness
 ([[social_choice.voting.strategyproof]]), and (non-)dictatorship
-([[social_choice.voting.dictatorial_scf]]) — are all stated directly on
-$G(P)$.</p>
+([[social_choice.voting.dictatorial_scf]]) — are all stated on the winner set
+$f(P)$, with strategy-proofness and dictatorship specializing to the resolute
+case.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ 21.21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Social choice function.</li>

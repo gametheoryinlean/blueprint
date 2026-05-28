@@ -9,7 +9,7 @@
     "social_choice",
     "social_choice.voting"
   ],
-  "body_html": "<h1>Unanimity (Pareto Axiom)</h1>\n<p>Unanimity asks that an aggregation rule respect unanimous individual strict\nrankings. Two parallel versions:</p>\n<p><strong>SWF unanimity.</strong> A social welfare function $F$ is <em>unanimous</em> if for every\nprofile $P$ and every pair $a, b \\in A$,\n$$\n\\bigl(\\forall i \\in N,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow a \\succ_{F(P)} b.\n$$</p>\n<p><strong>SCF unanimity.</strong> A social choice function $G$ is <em>unanimous</em> if for every\nprofile $P$ and every $a \\in A$,\n$$\n\\bigl(\\forall i \\in N,\\ \\forall b \\ne a,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow G(P) = a.\n$$</p>\n<p>In Lean these are <code>SocialChoice.Voting.SWF.Unanimity</code> and\n<code>SocialChoice.Voting.SCF.Unanimity</code>, defined in terms of the bundled strict\npreference [[social_choice.strict_preference]].</p>\n<p>Unanimity is the weakest Paretian axiom in this hierarchy. It is the hypothesis\nfor both Arrow's impossibility ([[social_choice.voting.arrow_impossibility]])\nand Muller-Satterthwaite ([[social_choice.voting.muller_satterthwaite]]).</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.8, 21.26] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Unanimity / Pareto axioms.</li>\n</ul>",
+  "body_html": "<h1>Unanimity (Pareto Axiom)</h1>\n<p>Unanimity asks that an aggregation rule respect unanimous individual strict\nrankings. Two parallel versions:</p>\n<p><strong>SWF unanimity.</strong> A social welfare function $F$ is <em>unanimous</em> if for every\nprofile $P$ and every pair $a, b \\in A$,\n$$\n\\bigl(\\forall i \\in N,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow a \\succ_{F(P)} b.\n$$</p>\n<p><strong>Voting-rule unanimity (weak Pareto).</strong> A voting rule $f$ is <em>unanimous</em> if\nno unanimously dominated alternative is ever selected: for every profile $P$\nand every pair $a, b \\in A$,\n$$\n\\bigl(\\forall i \\in N,\\ a \\succ_{P_i} b\\bigr)\n\\Rightarrow b \\notin f(P).\n$$\nFor a resolute rule this recovers the single-winner statement $G(P) = a$\nwhenever every voter ranks $a$ strictly first.</p>\n<p>In Lean these are <code>SocialChoice.Voting.SWF.Unanimity</code> and\n<code>SocialChoice.Voting.Unanimity</code>, defined in terms of the bundled strict\npreference [[social_choice.strict_preference]].</p>\n<p>Unanimity is the weakest Paretian axiom in this hierarchy. It is the hypothesis\nfor both Arrow's impossibility ([[social_choice.voting.arrow_impossibility]])\nand Muller-Satterthwaite ([[social_choice.voting.muller_satterthwaite]]).</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.8, 21.26] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Unanimity / Pareto axioms.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -50,9 +50,9 @@
       "signature": "def Unanimity (F : SWF N A) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f273f10a9499d36cdad22ebae9ddfebc181889fd",
-      "short_revision": "f273f10",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L241",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L241",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -60,26 +60,22 @@
       "suggestions": []
     },
     {
-      "name": "SocialChoice.Voting.SCF.Unanimity",
-      "display_name": "SocialChoice.Voting.SCF.Unanimity",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "SocialChoice.Voting.Unanimity",
+      "display_name": "SocialChoice.Voting.Unanimity",
+      "qualified_name": "SocialChoice.Voting.Unanimity",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "kind": "def",
+      "signature": "def Unanimity (f : VotingRule N A) : Prop",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L271",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "SWF.Unanimity",
-        "SocialChoice.Voting.SWF.Unanimity",
-        "SocialChoice.Voting.Unanimity"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [
@@ -87,9 +83,9 @@
       "name": "EconCSLib.SocialChoice.Voting.Basic",
       "display_name": "EconCSLib.SocialChoice.Voting.Basic",
       "repository_title": "EconCSLib",
-      "revision": "f273f10a9499d36cdad22ebae9ddfebc181889fd",
-      "short_revision": "f273f10",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

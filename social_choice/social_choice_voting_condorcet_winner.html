@@ -1040,32 +1040,30 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.IsCondorcetWinner</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SocialChoice.IsCondorcetWinner</code>, <code>SocialChoice.Voting.CondorcetWinner</code>, <code>SocialChoice.Voting.HasCondorcetWinner</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L152"><code>SocialChoice.Voting.CondorcetWinner</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def CondorcetWinner [Fintype N] [Fintype A] (P : Profile N A) (a : A) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L156"><code>SocialChoice.Voting.HasCondorcetWinner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L156"><code>SocialChoice.Voting.HasCondorcetWinner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
@@ -1076,7 +1074,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
       </p>
       
     </div>
@@ -1092,7 +1090,7 @@ $$
 \forall b \in A,\ b \ne a,\ \mathrm{MajorityPrefers}(P, a, b).
 $$</p>
 <p>A profile <em>has a Condorcet winner</em> if some such $a$ exists.</p>
-<p>In Lean: <code>SocialChoice.Voting.IsCondorcetWinner</code> and <code>HasCondorcetWinner</code>.</p>
+<p>In Lean: <code>SocialChoice.Voting.CondorcetWinner</code> and <code>HasCondorcetWinner</code>.</p>
 <p>A Condorcet winner — when one exists — is the canonical "majority-acceptable"
 choice. But Condorcet winners <em>need not exist</em>: cyclic pairwise majorities
 ("Condorcet paradox", [[social_choice.voting.condorcet_paradox]]) are

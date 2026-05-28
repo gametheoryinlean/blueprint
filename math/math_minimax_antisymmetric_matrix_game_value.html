@@ -1044,12 +1044,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L66"><code>EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L66"><code>EconCSLib.StrategicGame.MatrixGame.antisymmetric_value_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
           </span>
           
           
@@ -1061,12 +1061,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L136"><code>EconCSLib.StrategicGame.MatrixGame.antisymmetric_exists_optimal_strategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L136"><code>EconCSLib.StrategicGame.MatrixGame.antisymmetric_exists_optimal_strategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
           </span>
           
           
@@ -1076,10 +1076,78 @@
     ∃ y : stdSimplex ℝ I, ∀ i, ∑ j, B i j * y.val j ≤ 0</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L24"><code>EconCSLib.StrategicGame.IsAntisymmetric</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
+          </span>
+          
+          
+          <p class="lean-docstring">A square matrix is **antisymmetric** if `B i j = -B j i` for all `i, j`.</p>
+          <pre class="lean-signature"><code>def IsAntisymmetric (B : I → I → ℝ) : Prop</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L27"><code>EconCSLib.StrategicGame.IsAntisymmetric.diag_zero</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
+          </span>
+          
+          
+          <p class="lean-docstring">An antisymmetric matrix has zero diagonal.</p>
+          <pre class="lean-signature"><code>theorem IsAntisymmetric.diag_zero {B : I → I → ℝ} (hB : IsAntisymmetric B) (i : I) :
+    B i i = 0</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L32"><code>EconCSLib.StrategicGame.IsAntisymmetric.quadform_zero</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
+          </span>
+          
+          
+          <p class="lean-docstring">For any vector `z`, `∑_{i,j} z_i B_{ij} z_j = 0`.</p>
+          <pre class="lean-signature"><code>theorem IsAntisymmetric.quadform_zero {B : I → I → ℝ} (hB : IsAntisymmetric B)
+    (z : I → ℝ) : ∑ i, ∑ j, z i * B i j * z j = 0</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L54"><code>EconCSLib.StrategicGame.antisymmetric_self_pairing_zero</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>private theorem antisymmetric_self_pairing_zero {B : I → I → ℝ}
+    (hB : IsAntisymmetric B) (x : stdSimplex ℝ I) :
+    ∑ i, x.val i * (∑ j, B i j * x.val j) = 0</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Antisymmetric.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Antisymmetric</code></a>
       </p>
       
     </div>

@@ -1,6 +1,6 @@
 {
   "id": "social_choice.voting.plurality_score",
-  "title": "Plurality Score and Plurality Winner",
+  "title": "Plurality Score and Plurality Rule",
   "kind": "definition",
   "status": "formalized",
   "href": "social_choice/social_choice_voting_plurality_score.html",
@@ -10,7 +10,7 @@
     "social_choice.voting",
     "social_choice.voting.rules"
   ],
-  "body_html": "<h1>Plurality Score and Plurality Winner</h1>\n<p>The <em>plurality score</em> of an alternative $a$ under a finite preference\nprofile $P$ counts the voters who rank $a$ first (strictly above every\nother alternative):\n$$\n\\mathrm{plu}(P, a) =\n\\#\\{i \\in N \\mid \\forall b \\ne a,\\ a \\succ_{P_i} b\\}.\n$$</p>\n<p>An alternative $a$ is a <em>plurality winner</em> if it maximises the plurality\nscore:\n$$\n\\forall c \\in A,\\ \\mathrm{plu}(P, c) \\le \\mathrm{plu}(P, a).\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.pluralityScore</code> and <code>.IsPluralityWinner</code>. As\nwith Borda ([[social_choice.voting.borda_score]]), the definitions are\n<code>noncomputable</code> because filtering by a bare-<code>Prop</code> strict preference uses\nclassical decidability, and ties are allowed in <code>IsPluralityWinner</code>.</p>\n<h2>Properties (informal)</h2>\n<ul>\n<li>Plurality is the simplest positional rule (all weight on the top rank).</li>\n<li>Plurality is <em>not</em> a Condorcet method: examples exist where the Condorcet\n  winner is <em>not</em> even a plurality winner.</li>\n<li>Plurality satisfies unanimity ([[social_choice.voting.unanimity]]) but is\n  strategy-manipulable for $|A| \\ge 3$\n  ([[social_choice.voting.gibbard_satterthwaite]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Plurality and positional scoring rules.</li>\n</ul>",
+  "body_html": "<h1>Plurality Score and Plurality Rule</h1>\n<p>The <em>plurality score</em> is the positional scoring vector that puts all weight on\nthe top rank: an alternative earns $1$ from each voter who ranks it first and\n$0$ otherwise. As a rank-indexed vector (rank $0$ is the top),\n$$\n\\mathrm{pluralityScore}(m, r) =\n\\begin{cases} 1 &amp; r = 0 \\\\ 0 &amp; r \\ne 0,\\end{cases}\n$$\nindependent of the number of alternatives $m$.</p>\n<p>The <em>plurality rule</em> is the positional scoring rule built from this vector. At\na profile $P$ its winner set is the alternatives maximising total plurality\nscore — those ranked first by the most voters, with ties allowed:\n$$\n\\mathrm{plurality}(P) =\n\\arg\\max_{a \\in A}\\ \\#\\{i \\in N \\mid a \\text{ is } i\\text{'s top choice}\\}.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.pluralityScore</code> (the score vector) and\n<code>SocialChoice.Voting.plurality</code> (the rule, <code>scoringRule pluralityScore</code>, a\nset-valued <code>VotingRule</code>). As with Borda ([[social_choice.voting.borda_score]]),\nthese are <code>noncomputable</code> because aggregating a bare-<code>Prop</code> strict preference\nuses classical decidability, and ties are kept in the winner set.</p>\n<h2>Properties (informal)</h2>\n<ul>\n<li>Plurality is the simplest positional rule (all weight on the top rank).</li>\n<li>Plurality is <em>not</em> a Condorcet method: examples exist where the Condorcet\n  winner is <em>not</em> even a plurality winner.</li>\n<li>Plurality satisfies unanimity ([[social_choice.voting.unanimity]]) but is\n  strategy-manipulable for $|A| \\ge 3$\n  ([[social_choice.voting.gibbard_satterthwaite]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Plurality and positional scoring rules.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -35,9 +35,9 @@
       "signature": "def pluralityScore (_m r : Nat) : Int",
       "docstring": "Plurality score vector.",
       "repository_title": "EconCSLib",
-      "revision": "f273f10a9499d36cdad22ebae9ddfebc181889fd",
-      "short_revision": "f273f10",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L208",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L208",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -45,26 +45,22 @@
       "suggestions": []
     },
     {
-      "name": "SocialChoice.Voting.IsPluralityWinner",
-      "display_name": "SocialChoice.Voting.IsPluralityWinner",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
-      "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "name": "SocialChoice.Voting.plurality",
+      "display_name": "SocialChoice.Voting.plurality",
+      "qualified_name": "SocialChoice.Voting.plurality",
+      "module": "EconCSLib.SocialChoice.Voting.VotingRules",
+      "kind": "def",
+      "signature": "noncomputable def plurality [Fintype N] [Fintype A] : VotingRule N A",
+      "docstring": "Plurality rule.",
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L220",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "SocialChoice.Voting.plurality_isTotal",
-        "SocialChoice.IsCondorcetWinner",
-        "SocialChoice.Voting.CondorcetWinner"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [
@@ -72,9 +68,9 @@
       "name": "EconCSLib.SocialChoice.Voting.VotingRules",
       "display_name": "EconCSLib.SocialChoice.Voting.VotingRules",
       "repository_title": "EconCSLib",
-      "revision": "f273f10a9499d36cdad22ebae9ddfebc181889fd",
-      "short_revision": "f273f10",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1",
       "status": "resolved",
       "reason": null
     }

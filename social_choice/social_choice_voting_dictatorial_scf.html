@@ -1042,27 +1042,25 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.SCF.Dictatorial</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SWF.Dictatorial</code>, <code>SCF.Dictatorial</code>, <code>SocialChoice.Voting.SWF.Dictatorial</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L341"><code>SocialChoice.Voting.Dictatorial</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def Dictatorial [Nonempty A] (f : VotingRule N A) : Prop</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1071,23 +1069,23 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Dictatorial Social Choice Function</h1>
-<p>A social choice function $G$ is <em>dictatorial</em> if there exists a voter
-$i \in N$ whose top-ranked alternative is always selected: for every profile
-$P$, the chosen outcome $G(P)$ strictly dominates every other alternative
-under $P_i$:
+<p>A voting rule $f$ is <em>dictatorial</em> if there exists a voter $i \in N$ whose
+top-ranked alternative is always the unique winner: for every profile $P$,
 $$
-\exists i \in N,\ \forall P,\ \forall b \ne G(P),\
-G(P) \succ_{P_i} b.
-$$</p>
-<p>In Lean: <code>SocialChoice.Voting.SCF.Dictatorial</code>.</p>
-<p>This is the SCF counterpart to dictatorship for social welfare functions
-([[social_choice.voting.dictatorial_swf]]): rather than copying the dictator's
-full ranking, the SCF returns the dictator's unique top choice at every
-profile.</p>
+\exists i \in N,\ \forall P,\ f(P) = \{\,\mathrm{top}_{P_i}\,\},
+$$
+where $\mathrm{top}_{P_i}$ is voter $i$'s most-preferred alternative under
+$P_i$.</p>
+<p>In Lean: <code>SocialChoice.Voting.Dictatorial</code>, defined as
+<code>∃ i, ∀ P, f P = {topChoice P i}</code>.</p>
+<p>This is the voting-rule counterpart to dictatorship for social welfare
+functions ([[social_choice.voting.dictatorial_swf]]): rather than copying the
+dictator's full ranking, the rule returns the dictator's unique top choice as
+the sole winner at every profile.</p>
 <p>Gibbard–Satterthwaite ([[social_choice.voting.gibbard_satterthwaite]]) shows
-that for $|A| \ge 3$ on a finite nonempty voter set, the conjunction of
-unanimity and strategy-proofness ([[social_choice.voting.strategyproof]])
-forces $G$ to be dictatorial in this sense.</p>
+that for $|A| \ge 3$ on a finite nonempty voter set, a resolute rule that is
+unanimous and strategy-proof ([[social_choice.voting.strategyproof]]) must be
+dictatorial in this sense.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ 21.23] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Dictatorial SCF.</li>

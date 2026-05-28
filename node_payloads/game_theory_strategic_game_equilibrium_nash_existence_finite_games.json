@@ -59,6 +59,36 @@
       "href": "game_theory/strategic_game/equilibrium/math_fixed_point_kakutani_from_two_player_nash.html"
     }
   ],
-  "lean_refs": [],
-  "lean_modules": []
+  "lean_refs": [
+    {
+      "name": "StrategicGame.exists_mixed_nash_equilibrium_finite",
+      "display_name": "StrategicGame.exists_mixed_nash_equilibrium_finite",
+      "qualified_name": "StrategicGame.exists_mixed_nash_equilibrium_finite",
+      "module": "EconCSLib.GameTheory.StrategicGame.Nash",
+      "kind": "theorem",
+      "signature": "theorem exists_mixed_nash_equilibrium_finite\n    (G : StrategicGame ι ℝ) [Fintype ι] [DecidableEq ι]\n    [∀ i, Fintype (G.strategy i)] [∀ i, DecidableEq (G.strategy i)]\n    [∀ i, Inhabited (G.strategy i)] [Inhabited ι] :\n    ∃ σ : MixedS G, mixedNashEquilibrium G σ",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/Nash.lean#L286",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.StrategicGame.Nash",
+      "display_name": "EconCSLib.GameTheory.StrategicGame.Nash",
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/Nash.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

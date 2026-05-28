@@ -1046,12 +1046,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L241"><code>SocialChoice.Voting.SWF.Unanimity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L241"><code>SocialChoice.Voting.SWF.Unanimity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
           </span>
           
           
@@ -1060,27 +1060,25 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.SCF.Unanimity</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SWF.Unanimity</code>, <code>SocialChoice.Voting.SWF.Unanimity</code>, <code>SocialChoice.Voting.Unanimity</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L271"><code>SocialChoice.Voting.Unanimity</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def Unanimity (f : VotingRule N A) : Prop</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1097,14 +1095,17 @@ $$
 \bigl(\forall i \in N,\ a \succ_{P_i} b\bigr)
 \Rightarrow a \succ_{F(P)} b.
 $$</p>
-<p><strong>SCF unanimity.</strong> A social choice function $G$ is <em>unanimous</em> if for every
-profile $P$ and every $a \in A$,
+<p><strong>Voting-rule unanimity (weak Pareto).</strong> A voting rule $f$ is <em>unanimous</em> if
+no unanimously dominated alternative is ever selected: for every profile $P$
+and every pair $a, b \in A$,
 $$
-\bigl(\forall i \in N,\ \forall b \ne a,\ a \succ_{P_i} b\bigr)
-\Rightarrow G(P) = a.
-$$</p>
+\bigl(\forall i \in N,\ a \succ_{P_i} b\bigr)
+\Rightarrow b \notin f(P).
+$$
+For a resolute rule this recovers the single-winner statement $G(P) = a$
+whenever every voter ranks $a$ strictly first.</p>
 <p>In Lean these are <code>SocialChoice.Voting.SWF.Unanimity</code> and
-<code>SocialChoice.Voting.SCF.Unanimity</code>, defined in terms of the bundled strict
+<code>SocialChoice.Voting.Unanimity</code>, defined in terms of the bundled strict
 preference [[social_choice.strict_preference]].</p>
 <p>Unanimity is the weakest Paretian axiom in this hierarchy. It is the hypothesis
 for both Arrow's impossibility ([[social_choice.voting.arrow_impossibility]])

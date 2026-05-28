@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plurality Score and Plurality Winner — EconCSLib Knowledge Blueprint</title>
+  <title>Plurality Score and Plurality Rule — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -1003,7 +1003,7 @@
 <article class="definition_thmwrapper theorem-style-definition node-page" id="node-social_choice-2e-voting-2e-plurality_score">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Plurality Score and Plurality Winner</span>
+    <span class="definition_thmtitle thm-title">Plurality Score and Plurality Rule</span>
     <div class="thm_header_extras">
       <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
@@ -1044,12 +1044,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L208"><code>SocialChoice.Voting.pluralityScore</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L208"><code>SocialChoice.Voting.pluralityScore</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
@@ -1058,27 +1058,25 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.IsPluralityWinner</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SocialChoice.Voting.plurality_isTotal</code>, <code>SocialChoice.IsCondorcetWinner</code>, <code>SocialChoice.Voting.CondorcetWinner</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L220"><code>SocialChoice.Voting.plurality</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
+          </span>
           
           
+          <p class="lean-docstring">Plurality rule.</p>
+          <pre class="lean-signature"><code>noncomputable def plurality [Fintype N] [Fintype A] : VotingRule N A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
       </p>
       
     </div>
@@ -1086,23 +1084,27 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1>Plurality Score and Plurality Winner</h1>
-<p>The <em>plurality score</em> of an alternative $a$ under a finite preference
-profile $P$ counts the voters who rank $a$ first (strictly above every
-other alternative):
+    <h1>Plurality Score and Plurality Rule</h1>
+<p>The <em>plurality score</em> is the positional scoring vector that puts all weight on
+the top rank: an alternative earns $1$ from each voter who ranks it first and
+$0$ otherwise. As a rank-indexed vector (rank $0$ is the top),
 $$
-\mathrm{plu}(P, a) =
-\#\{i \in N \mid \forall b \ne a,\ a \succ_{P_i} b\}.
-$$</p>
-<p>An alternative $a$ is a <em>plurality winner</em> if it maximises the plurality
-score:
+\mathrm{pluralityScore}(m, r) =
+\begin{cases} 1 &amp; r = 0 \\ 0 &amp; r \ne 0,\end{cases}
 $$
-\forall c \in A,\ \mathrm{plu}(P, c) \le \mathrm{plu}(P, a).
+independent of the number of alternatives $m$.</p>
+<p>The <em>plurality rule</em> is the positional scoring rule built from this vector. At
+a profile $P$ its winner set is the alternatives maximising total plurality
+score — those ranked first by the most voters, with ties allowed:
+$$
+\mathrm{plurality}(P) =
+\arg\max_{a \in A}\ \#\{i \in N \mid a \text{ is } i\text{'s top choice}\}.
 $$</p>
-<p>In Lean: <code>SocialChoice.Voting.pluralityScore</code> and <code>.IsPluralityWinner</code>. As
-with Borda ([[social_choice.voting.borda_score]]), the definitions are
-<code>noncomputable</code> because filtering by a bare-<code>Prop</code> strict preference uses
-classical decidability, and ties are allowed in <code>IsPluralityWinner</code>.</p>
+<p>In Lean: <code>SocialChoice.Voting.pluralityScore</code> (the score vector) and
+<code>SocialChoice.Voting.plurality</code> (the rule, <code>scoringRule pluralityScore</code>, a
+set-valued <code>VotingRule</code>). As with Borda ([[social_choice.voting.borda_score]]),
+these are <code>noncomputable</code> because aggregating a bare-<code>Prop</code> strict preference
+uses classical decidability, and ties are kept in the winner set.</p>
 <h2>Properties (informal)</h2>
 <ul>
 <li>Plurality is the simplest positional rule (all weight on the top rank).</li>

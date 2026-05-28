@@ -1042,12 +1042,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L44"><code>StrategicGame.IsZeroSum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L44"><code>StrategicGame.IsZeroSum</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
           </span>
           
           
@@ -1058,12 +1058,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L48"><code>StrategicGame.IsConstantSum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L48"><code>StrategicGame.IsConstantSum</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
           </span>
           
           
@@ -1071,10 +1071,100 @@
           <pre class="lean-signature"><code>def IsConstantSum [Add U] (G : StrategicGame (Fin 2) U) (c : U) : Prop</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L66"><code>StrategicGame.IsZeroSum.toIsConstantSum</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">A zero-sum game is a constant-sum game with constant `0`.</p>
+          <pre class="lean-signature"><code>theorem IsZeroSum.toIsConstantSum [Add U] [Zero U]
+    {G : StrategicGame (Fin 2) U} (hzs : IsZeroSum G) :
+    IsConstantSum G 0</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L82"><code>StrategicGame.IsZeroSum.welfare_eq_zero</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">Two-player zero-sum games have zero social welfare at every profile.</p>
+          <pre class="lean-signature"><code>theorem IsZeroSum.welfare_eq_zero [AddCommMonoid U]
+    {G : StrategicGame (Fin 2) U} (hzs : IsZeroSum G) (σ : G.Profile) :
+    welfare G σ = 0</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L90"><code>StrategicGame.IsConstantSum.welfare_eq</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">Two-player constant-sum games have constant social welfare at every profile.</p>
+          <pre class="lean-signature"><code>theorem IsConstantSum.welfare_eq [AddCommMonoid U]
+    {G : StrategicGame (Fin 2) U} {c : U} (hcs : IsConstantSum G c) (σ : G.Profile) :
+    welfare G σ = c</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L71"><code>StrategicGame.IsConstantSum.zero_isZeroSum</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">A constant-sum game whose constant is `0` is zero-sum.</p>
+          <pre class="lean-signature"><code>theorem IsConstantSum.zero_isZeroSum [Add U] [Zero U]
+    {G : StrategicGame (Fin 2) U} (h : IsConstantSum G 0) :
+    IsZeroSum G</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L60"><code>StrategicGame.isZeroSum_iff_isConstantSum_zero</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">`IsZeroSum G` and `IsConstantSum G 0` are the same proposition.</p>
+          <pre class="lean-signature"><code>theorem isZeroSum_iff_isConstantSum_zero [Add U] [Zero U]
+    {G : StrategicGame (Fin 2) U} :
+    IsZeroSum G ↔ IsConstantSum G 0</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic</code></a>
       </p>
       
     </div>

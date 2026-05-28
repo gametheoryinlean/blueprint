@@ -1042,12 +1042,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L110"><code>StrategicGame.IsZeroSum.neg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L110"><code>StrategicGame.IsZeroSum.neg</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
           </span>
           
           
@@ -1060,12 +1060,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L116"><code>StrategicGame.IsZeroSum.neg&#39;</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L116"><code>StrategicGame.IsZeroSum.neg&#39;</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
           </span>
           
           
@@ -1075,10 +1075,48 @@
     G.payoff σ 0 = - G.payoff σ 1</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L275"><code>StrategicGame.IsZeroSum.expectedPayoff_neg</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">In a zero-sum game, player 1&#39;s expected payoff is the negation of player 0&#39;s.</p>
+          <pre class="lean-signature"><code>theorem IsZeroSum.expectedPayoff_neg
+    (hzs : IsZeroSum G) (p : StrategicGame.MixedProfile G) :
+    StrategicGame.expectedPayoff G p 1
+      = -(StrategicGame.expectedPayoff G p 0)</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L287"><code>StrategicGame.IsZeroSum.expectedPayoff_neg&#39;</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">In a zero-sum game, player 0&#39;s expected payoff is the negation of player 1&#39;s.</p>
+          <pre class="lean-signature"><code>theorem IsZeroSum.expectedPayoff_neg&#39;
+    (hzs : IsZeroSum G) (p : StrategicGame.MixedProfile G) :
+    StrategicGame.expectedPayoff G p 0
+      = -(StrategicGame.expectedPayoff G p 1)</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Basic</code></a>
       </p>
       
     </div>

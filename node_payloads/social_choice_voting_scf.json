@@ -9,7 +9,7 @@
     "social_choice",
     "social_choice.voting"
   ],
-  "body_html": "<h1>Social Choice Function</h1>\n<p>A <em>social choice function</em> (SCF) on a population $N$ and alternative set $A$\nis a map\n$$\nG : \\mathrm{PrefProfile}(N, A) \\to A\n$$\nthat selects, for every preference profile, a single winning alternative.</p>\n<p>In Lean this is the structure <code>SocialChoice.Voting.SCF N A</code> with one field\n<code>f : PrefProfile N A → A</code>, equipped with a <code>CoeFun</code> so <code>G P</code> is the chosen\nalternative at profile $P$.</p>\n<p>Compared with a social welfare function ([[social_choice.voting.swf]]) the\nSCF returns only the top-pick rather than a full ranking. The standard\naxioms — unanimity ([[social_choice.voting.unanimity]]), monotonicity\n([[social_choice.voting.monotonic_scf]]), strategy-proofness\n([[social_choice.voting.strategyproof]]), and (non-)dictatorship\n([[social_choice.voting.dictatorial_scf]]) — are all stated directly on\n$G(P)$.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Social choice function.</li>\n</ul>",
+  "body_html": "<h1>Social Choice Function</h1>\n<p>A <em>social choice function</em> aggregates a preference profile into the\nalternatives that win. In this formalization it is the set-valued <em>voting\nrule</em>\n$$\nf : \\mathrm{PrefProfile}(N, A) \\to \\mathcal{P}(A)\n$$\nreturning, for every profile, the (possibly tied) winner set $f(P)$.</p>\n<p>In Lean this is <code>SocialChoice.Voting.VotingRule N A</code>, the abbreviation\n<code>Profile N A → Finset A</code>. Two refinements isolate the single-winner case:</p>\n<ul>\n<li><code>IsTotal f</code> — every profile has at least one winner, $f(P) \\ne \\varnothing$.</li>\n<li><code>Resolute f</code> — every profile has exactly one winner, $\\#f(P) = 1$. A\n  resolute rule is the set-valued encoding of the classical single-valued SCF\n  $G : \\mathrm{PrefProfile}(N,A) \\to A$ via $f(P) = \\{G(P)\\}$.</li>\n</ul>\n<p>Compared with a social welfare function ([[social_choice.voting.swf]]) the\nvoting rule returns only the chosen winners rather than a full ranking. The\nstandard axioms — unanimity ([[social_choice.voting.unanimity]]), monotonicity\n([[social_choice.voting.monotonic_scf]]), strategy-proofness\n([[social_choice.voting.strategyproof]]), and (non-)dictatorship\n([[social_choice.voting.dictatorial_scf]]) — are all stated on the winner set\n$f(P)$, with strategy-proofness and dictatorship specializing to the resolute\ncase.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Social choice function.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -42,26 +42,58 @@
   ],
   "lean_refs": [
     {
-      "name": "SocialChoice.Voting.SCF",
-      "display_name": "SocialChoice.Voting.SCF",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
-      "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "name": "SocialChoice.Voting.VotingRule",
+      "display_name": "SocialChoice.Voting.VotingRule",
+      "qualified_name": "SocialChoice.Voting.VotingRule",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "kind": "abbrev",
+      "signature": "abbrev VotingRule (N A : Type*) [Fintype N] [Fintype A]",
+      "docstring": "A set-valued voting rule on fixed finite voter and candidate types.",
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L220",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "(module) .claude.worktrees.eloquent-kowalevski-c8f893.GameTheoryLib.SocialChoice.VotingRules",
-        "(module) EconCSLib.SocialChoice.Voting.Arrow",
-        "(module) EconCSLib.SocialChoice.Voting.Basic"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SocialChoice.Voting.IsTotal",
+      "display_name": "SocialChoice.Voting.IsTotal",
+      "qualified_name": "SocialChoice.Voting.IsTotal",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "kind": "def",
+      "signature": "def IsTotal [Fintype N] [Fintype A] (f : VotingRule N A) : Prop",
+      "docstring": "A voting rule is total if it always returns at least one winner.",
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L224",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "SocialChoice.Voting.Resolute",
+      "display_name": "SocialChoice.Voting.Resolute",
+      "qualified_name": "SocialChoice.Voting.Resolute",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "kind": "def",
+      "signature": "def Resolute [Fintype N] [Fintype A] (f : VotingRule N A) : Prop",
+      "docstring": "A voting rule is resolute if it always returns exactly one winner.",
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L228",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [
@@ -69,9 +101,9 @@
       "name": "EconCSLib.SocialChoice.Voting.Basic",
       "display_name": "EconCSLib.SocialChoice.Voting.Basic",
       "repository_title": "EconCSLib",
-      "revision": "f273f10a9499d36cdad22ebae9ddfebc181889fd",
-      "short_revision": "f273f10",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

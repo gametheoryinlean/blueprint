@@ -1044,12 +1044,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L59"><code>StrategicGame.IsExactPotential.maximizer_is_nash</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L59"><code>StrategicGame.IsExactPotential.maximizer_is_nash</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.PotentialGame
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.PotentialGame
           </span>
           
           
@@ -1060,10 +1060,29 @@
     IsNashEquilibrium G σ</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L74"><code>StrategicGame.IsOrdinalPotential.isNash_iff_localMax</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.PotentialGame
+          </span>
+          
+          
+          <p class="lean-docstring">Nash ↔ local maximizer of ordinal potential.</p>
+          <pre class="lean-signature"><code>theorem IsOrdinalPotential.isNash_iff_localMax {Φ : G.Profile → U}
+    (hΦ : IsOrdinalPotential G Φ) {σ : G.Profile} :
+    IsNashEquilibrium G σ ↔
+    ∀ i (s&#39; : G.strategy i), Φ σ ≥ Φ (deviate σ i s&#39;)</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.PotentialGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.PotentialGame</code></a>
       </p>
       
     </div>

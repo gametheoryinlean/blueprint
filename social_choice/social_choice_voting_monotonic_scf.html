@@ -1042,27 +1042,25 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.SCF.Monotonic</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SCF.Monotonic</code>, <code>SocialChoice.Voting.monotonic_zProfile</code>, <code>SocialChoice.Voting.strategyproof_monotonic</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L318"><code>SocialChoice.Voting.Monotonicity</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
           
           
+          <p class="lean-docstring">Monotonicity: raising a selected alternative cannot make it unselected.</p>
+          <pre class="lean-signature"><code>def Monotonicity (f : VotingRule N A) : Prop</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1071,24 +1069,25 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Monotonic Social Choice Function</h1>
-<p>A social choice function $G$ is <em>monotonic</em> (in the Maskin sense, restricted
-to strict comparisons against the chosen winner) if a winner remains a
-winner whenever it is weakly pushed up in everyone's ranking: for every pair
-of profiles $P, Q$ and every alternative $a$,
+<p>A voting rule $f$ is <em>monotonic</em> if a selected winner stays selected whenever
+it is weakly pushed up in everyone's ranking. Writing $Q$ for a profile
+obtained from $P$ by a <em>simple lift</em> of $a$,
 $$
-G(P) = a \;\wedge\;
-\bigl(\forall i,\ \forall c \ne a,\ a \succ_{P_i} c \Rightarrow a \succ_{Q_i} c\bigr)
-\;\Rightarrow\; G(Q) = a.
-$$</p>
-<p>In Lean: <code>SocialChoice.Voting.SCF.Monotonic</code>.</p>
-<p>The condition only requires that strict $a$-vs-$c$ comparisons in favor of
-the winner persist; voters may rearrange their rankings among
-non-winning alternatives freely.</p>
+a \in f(P) \;\wedge\; \mathrm{SimpleLift}(Q, P, a)
+\;\Rightarrow\; a \in f(Q).
+$$
+Here $\mathrm{SimpleLift}(Q, P, a)$ requires, for every voter $i$ and
+alternative $x$: if $a \succ_{P_i} x$ then $a \succ_{Q_i} x$, and if
+$x \succ_{Q_i} a$ then $x \succ_{P_i} a$ — i.e. $a$ only moves up, never down.</p>
+<p>In Lean: <code>SocialChoice.Voting.Monotonicity</code>, using the lift relation
+<code>SocialChoice.Voting.SimpleLift</code>.</p>
+<p>The condition only constrains strict comparisons involving the winner $a$;
+voters may rearrange their rankings among the other alternatives freely.</p>
 <p>Monotonicity is the bridge from strategy-proofness
 ([[social_choice.voting.strategyproof]]) to dictatorship in the Gibbard
-–Satterthwaite chain: strategy-proof SCFs are monotonic
+–Satterthwaite chain: resolute strategy-proof rules are monotonic
 ([[social_choice.voting.strategyproof_implies_monotonic]]), and monotonic
-unanimous SCFs with $|A| \ge 3$ are dictatorial
+unanimous resolute rules with $|A| \ge 3$ are dictatorial
 ([[social_choice.voting.muller_satterthwaite]]).</p>
 <h2>References</h2>
 <ul>

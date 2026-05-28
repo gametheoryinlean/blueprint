@@ -1042,12 +1042,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ESS.lean#L32"><code>IsESS</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L32"><code>IsESS</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ESS
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ESS
           </span>
           
           
@@ -1058,12 +1058,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ESS.lean#L39"><code>IsNSS</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L39"><code>IsNSS</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ESS
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ESS
           </span>
           
           
@@ -1071,10 +1071,78 @@
           <pre class="lean-signature"><code>def IsNSS {S : Type*} (u : S → S → ℝ) (s : S) : Prop</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L49"><code>IsESS.isNSS</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ESS
+          </span>
+          
+          
+          <p class="lean-docstring">Every ESS is neutrally stable.</p>
+          <pre class="lean-signature"><code>theorem IsESS.isNSS {s : S} (h : IsESS u s) : IsNSS u s</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L65"><code>IsESS.nash_condition</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ESS
+          </span>
+          
+          
+          <p class="lean-docstring">An ESS satisfies the symmetric Nash condition. [MSZ 5.51]</p>
+          <pre class="lean-signature"><code>theorem IsESS.nash_condition {s : S} (h : IsESS u s) :
+    ∀ t, u s s ≥ u t s</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L70"><code>IsESS.strict_against_other</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ESS
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem IsESS.strict_against_other {s t : S}
+    (hs : IsESS u s) (ht : IsESS u t) (hne : s ≠ t) :
+    u s s &gt; u t s</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L56"><code>strict_nash_implies_ess</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ESS
+          </span>
+          
+          
+          <p class="lean-docstring">A strict symmetric Nash equilibrium is automatically ESS.</p>
+          <pre class="lean-signature"><code>theorem strict_nash_implies_ess {s : S}
+    (hstrict : ∀ t, t ≠ s → u s s &gt; u t s) : IsESS u s</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ESS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ESS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ESS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ESS</code></a>
       </p>
       
     </div>

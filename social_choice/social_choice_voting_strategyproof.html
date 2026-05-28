@@ -1042,27 +1042,25 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.SCF.StrategyProof</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SCF.StrategyProof</code>, <code>(module) .claude.worktrees.eloquent-kowalevski-c8f893.GameTheoryLib.SocialChoice.ArrowProof</code>, <code>(module) .claude.worktrees.eloquent-kowalevski-c8f893.GameTheoryLib.SocialChoice.VotingRules</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L323"><code>SocialChoice.Voting.ResoluteStrategyproofness</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.Basic
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def ResoluteStrategyproofness (f : VotingRule N A) (_hf : Resolute f) : Prop</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1071,22 +1069,24 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Strategy-Proof Social Choice Function</h1>
-<p>A social choice function $G$ is <em>strategy-proof</em> (non-manipulable) if no
-voter can improve their outcome by misreporting: for every profile $P$,
-voter $i$, and alternative report $Q_i$,
+<p>A resolute voting rule $f$ (one that returns a single winner) is
+<em>strategy-proof</em> (non-manipulable) if no voter can obtain a strictly better
+winner by misreporting. If $f(P) = \{a\}$ and voter $i$ unilaterally switches
+their ballot to a ranking $r$, producing $f(P[i \mapsto r]) = \{b\}$, then
 $$
-\neg\bigl(\, G(P[i \mapsto Q_i]) \succ_{P_i} G(P) \,\bigr).
-$$</p>
-<p>In Lean: <code>SocialChoice.Voting.SCF.StrategyProof</code>, using
-<code>Function.update P i Q_i</code> for the profile with voter $i$'s report replaced
-by $Q_i$. Voter $i$'s <em>true</em> preference $P_i$ is what determines whether
-deviating is profitable.</p>
+\neg\,(\, b \succ_{P_i} a \,),
+$$
+i.e. the new winner $b$ is never strictly preferred to the honest winner $a$
+under $i$'s <em>true</em> preference $P_i$.</p>
+<p>In Lean: <code>SocialChoice.Voting.ResoluteStrategyproofness</code>, stated for a rule
+together with a <code>Resolute</code> witness, using <code>updateProfile P i r</code> for the
+profile with voter $i$'s ballot replaced by ranking $r$.</p>
 <p>Strategy-proofness is the central incentive-compatibility axiom for ordinal
 voting rules; it is the natural ordinal counterpart of dominant-strategy
 incentive compatibility (DSIC) in mechanism design.</p>
 <p>Two classical implications closed the field:</p>
 <ul>
-<li>Strategy-proof SCFs are monotonic
+<li>Resolute strategy-proof rules are monotonic
   ([[social_choice.voting.strategyproof_implies_monotonic]]).</li>
 <li>Combined with unanimity ([[social_choice.voting.unanimity]]) and
   $|A| \ge 3$, strategy-proofness forces dictatorship — the

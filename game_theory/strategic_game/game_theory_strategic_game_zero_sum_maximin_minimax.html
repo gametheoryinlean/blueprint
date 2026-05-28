@@ -1042,12 +1042,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L103"><code>MatrixGame.guarantee_I</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L103"><code>MatrixGame.guarantee_I</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1058,12 +1058,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L108"><code>MatrixGame.guarantee_II</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L108"><code>MatrixGame.guarantee_II</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1074,12 +1074,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L164"><code>MatrixGame.maximin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L164"><code>MatrixGame.maximin</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1090,12 +1090,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L169"><code>MatrixGame.minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L169"><code>MatrixGame.minimax</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1103,10 +1103,44 @@
           <pre class="lean-signature"><code>noncomputable def minimax : 𝕜</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L90"><code>MatrixGame.value_eq_maximin</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem value_eq_maximin {𝕜 : Type} [Field 𝕜] [ConditionallyCompleteLinearOrder 𝕜]
+    [IsStrictOrderedRing 𝕜]
+    (A : MatrixGame I J 𝕜) : A.value = A.maximin</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L94"><code>MatrixGame.value_eq_minimax</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem value_eq_minimax : A.value = A.minimax</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash</code></a>
       </p>
       
     </div>

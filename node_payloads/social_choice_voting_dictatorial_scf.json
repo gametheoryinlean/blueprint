@@ -9,7 +9,7 @@
     "social_choice",
     "social_choice.voting"
   ],
-  "body_html": "<h1>Dictatorial Social Choice Function</h1>\n<p>A social choice function $G$ is <em>dictatorial</em> if there exists a voter\n$i \\in N$ whose top-ranked alternative is always selected: for every profile\n$P$, the chosen outcome $G(P)$ strictly dominates every other alternative\nunder $P_i$:\n$$\n\\exists i \\in N,\\ \\forall P,\\ \\forall b \\ne G(P),\\\nG(P) \\succ_{P_i} b.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.SCF.Dictatorial</code>.</p>\n<p>This is the SCF counterpart to dictatorship for social welfare functions\n([[social_choice.voting.dictatorial_swf]]): rather than copying the dictator's\nfull ranking, the SCF returns the dictator's unique top choice at every\nprofile.</p>\n<p>Gibbard–Satterthwaite ([[social_choice.voting.gibbard_satterthwaite]]) shows\nthat for $|A| \\ge 3$ on a finite nonempty voter set, the conjunction of\nunanimity and strategy-proofness ([[social_choice.voting.strategyproof]])\nforces $G$ to be dictatorial in this sense.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.23] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Dictatorial SCF.</li>\n</ul>",
+  "body_html": "<h1>Dictatorial Social Choice Function</h1>\n<p>A voting rule $f$ is <em>dictatorial</em> if there exists a voter $i \\in N$ whose\ntop-ranked alternative is always the unique winner: for every profile $P$,\n$$\n\\exists i \\in N,\\ \\forall P,\\ f(P) = \\{\\,\\mathrm{top}_{P_i}\\,\\},\n$$\nwhere $\\mathrm{top}_{P_i}$ is voter $i$'s most-preferred alternative under\n$P_i$.</p>\n<p>In Lean: <code>SocialChoice.Voting.Dictatorial</code>, defined as\n<code>∃ i, ∀ P, f P = {topChoice P i}</code>.</p>\n<p>This is the voting-rule counterpart to dictatorship for social welfare\nfunctions ([[social_choice.voting.dictatorial_swf]]): rather than copying the\ndictator's full ranking, the rule returns the dictator's unique top choice as\nthe sole winner at every profile.</p>\n<p>Gibbard–Satterthwaite ([[social_choice.voting.gibbard_satterthwaite]]) shows\nthat for $|A| \\ge 3$ on a finite nonempty voter set, a resolute rule that is\nunanimous and strategy-proof ([[social_choice.voting.strategyproof]]) must be\ndictatorial in this sense.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.23] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Dictatorial SCF.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -32,26 +32,22 @@
   ],
   "lean_refs": [
     {
-      "name": "SocialChoice.Voting.SCF.Dictatorial",
-      "display_name": "SocialChoice.Voting.SCF.Dictatorial",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
+      "name": "SocialChoice.Voting.Dictatorial",
+      "display_name": "SocialChoice.Voting.Dictatorial",
+      "qualified_name": "SocialChoice.Voting.Dictatorial",
+      "module": "EconCSLib.SocialChoice.Voting.Basic",
+      "kind": "def",
+      "signature": "def Dictatorial [Nonempty A] (f : VotingRule N A) : Prop",
       "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
+      "repository_title": "EconCSLib",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L341",
       "doc_url": null,
       "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "SWF.Dictatorial",
-        "SCF.Dictatorial",
-        "SocialChoice.Voting.SWF.Dictatorial"
-      ]
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
     }
   ],
   "lean_modules": [
@@ -59,9 +55,9 @@
       "name": "EconCSLib.SocialChoice.Voting.Basic",
       "display_name": "EconCSLib.SocialChoice.Voting.Basic",
       "repository_title": "EconCSLib",
-      "revision": "f273f10a9499d36cdad22ebae9ddfebc181889fd",
-      "short_revision": "f273f10",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/Basic.lean#L1",
+      "revision": "f620bd50158467f646ebd413bd758ede1fe3db02",
+      "short_revision": "f620bd5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borda Score and Borda Winner — EconCSLib Knowledge Blueprint</title>
+  <title>Borda Score and Borda Rule — EconCSLib Knowledge Blueprint</title>
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.46/dist/katex.min.css"
         integrity="sha384-hW6ZmmePRD2f/9cuxGE6C9faGprtIBOme5OLUiEjtRKMTN67tY23ur9eAi21H8De"
@@ -1003,7 +1003,7 @@
 <article class="definition_thmwrapper theorem-style-definition node-page" id="node-social_choice-2e-voting-2e-borda_score">
   <header class="definition_thmheading thm-heading">
     <span class="definition_thmcaption thm-caption">Definition</span>
-    <span class="definition_thmtitle thm-title">Borda Score and Borda Winner</span>
+    <span class="definition_thmtitle thm-title">Borda Score and Borda Rule</span>
     <div class="thm_header_extras">
       <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
@@ -1044,12 +1044,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L212"><code>SocialChoice.Voting.bordaScore</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L212"><code>SocialChoice.Voting.bordaScore</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
@@ -1058,45 +1058,42 @@
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.bordaTotalScore</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SocialChoice.bordaTotalScore</code>, <code>SocialChoice.Voting.bordaScore</code>, <code>SocialChoice.Voting.borda_isTotal</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L167"><code>SocialChoice.Voting.scoreCandidate</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
+          </span>
           
           
+          <p class="lean-docstring">Total score for a candidate under a positional score vector.</p>
+          <pre class="lean-signature"><code>noncomputable def scoreCandidate [Fintype N] [Fintype A]
+    (P : Profile N A) (score : Nat → Int) (a : A) : Int</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>SocialChoice.Voting.IsBordaWinner</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SocialChoice.Voting.borda_isTotal</code>, <code>SocialChoice.IsCondorcetWinner</code>, <code>SocialChoice.Voting.CondorcetWinner</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L224"><code>SocialChoice.Voting.borda</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.SocialChoice.Voting.VotingRules
+          </span>
           
           
+          <p class="lean-docstring">Borda rule.</p>
+          <pre class="lean-signature"><code>noncomputable def borda [Fintype N] [Fintype A] : VotingRule N A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
       </p>
       
     </div>
@@ -1104,26 +1101,29 @@
   
 
   <div class="definition_thmcontent thm-content body">
-    <h1>Borda Score and Borda Winner</h1>
-<p>The <em>Borda score</em> of an alternative $a$ under preference $P_i$ counts
-how many alternatives are ranked strictly below $a$:
+    <h1>Borda Score and Borda Rule</h1>
+<p>The <em>Borda score</em> is the positional scoring vector that awards $m - 1$ points
+to a voter's top alternative and one fewer for each rank down. As a
+rank-indexed vector (rank $0$ is the top, $m = |A|$),
 $$
-b(P_i, a) = \#\{c \in A \mid a \succ_{P_i} c\}.
-$$</p>
-<p>The <em>total Borda score</em> across the profile is
+\mathrm{bordaScore}(m, r) = m - 1 - r,
 $$
-B(P, a) = \sum_{i \in N} b(P_i, a).
-$$</p>
-<p>An alternative $a$ is a <em>Borda winner</em> if it maximizes the total Borda
-score:
+so under preference $P_i$ an alternative $a$ earns the count of alternatives
+ranked strictly below it, $\#\{c \in A \mid a \succ_{P_i} c\}$.</p>
+<p>The <em>total Borda score</em> of $a$ across the profile sums the per-voter scores,
+$B(P, a) = \sum_{i \in N} \mathrm{bordaScore}$ — in Lean this is the generic
+<code>scoreCandidate P</code> aggregator applied to the Borda vector.</p>
+<p>The <em>Borda rule</em> selects the alternatives maximising total Borda score, with
+ties kept:
 $$
-\forall c \in A,\ B(P, c) \le B(P, a).
+\mathrm{borda}(P) = \arg\max_{a \in A}\ B(P, a).
 $$</p>
-<p>In Lean: <code>SocialChoice.Voting.bordaScore</code>, <code>.bordaTotalScore</code>, and
-<code>.IsBordaWinner</code>. The definitions live under <code>noncomputable</code> because
-filtering by a bare-<code>Prop</code> strict preference uses classical decidability.</p>
-<p>Ties between Borda winners are explicitly allowed — <code>IsBordaWinner</code> is the
-$\arg\max$ membership predicate, not a function returning a unique winner.</p>
+<p>In Lean: <code>SocialChoice.Voting.bordaScore</code> (the score vector),
+<code>SocialChoice.Voting.scoreCandidate</code> (the total-score aggregator), and
+<code>SocialChoice.Voting.borda</code> (the rule, <code>scoringRule bordaScore</code>, a set-valued
+<code>VotingRule</code>). These are <code>noncomputable</code> because aggregating a bare-<code>Prop</code>
+strict preference uses classical decidability, and ties are kept in the
+winner set.</p>
 <h2>Properties (informal)</h2>
 <ul>
 <li>Borda is monotonic, anonymous, and neutral.</li>

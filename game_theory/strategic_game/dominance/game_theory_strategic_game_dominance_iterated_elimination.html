@@ -1042,12 +1042,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L36"><code>StrategicGame.Survives</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L36"><code>StrategicGame.Survives</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f273f10, EconCSLib.GameTheory.StrategicGame.IESDS
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.IESDS
           </span>
           
           
@@ -1062,10 +1062,44 @@
 /-- Survival at round n+1 implies survival at round n. -/</code></pre>
         </li>
         
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L50"><code>StrategicGame.Survives.mono</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.IESDS
+          </span>
+          
+          
+          <p class="lean-docstring">Survival is monotone: later rounds ⊆ earlier rounds.</p>
+          <pre class="lean-signature"><code>theorem Survives.mono {G : StrategicGame ι U} {m n : ℕ} (hmn : m ≤ n)
+    {i : ι} {s : G.strategy i} (h : G.Survives n i s) : G.Survives m i s</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L45"><code>StrategicGame.Survives.prev</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ f620bd5, EconCSLib.GameTheory.StrategicGame.IESDS
+          </span>
+          
+          
+          <p class="lean-docstring">Survival at round n+1 implies survival at round n.</p>
+          <pre class="lean-signature"><code>theorem Survives.prev {G : StrategicGame ι U} {n : ℕ} {i : ι} {s : G.strategy i}
+    (h : G.Survives (n + 1) i s) : G.Survives n i s</code></pre>
+        </li>
+        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f273f10a9499d36cdad22ebae9ddfebc181889fd/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.IESDS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.IESDS</code></a>
       </p>
       
     </div>
