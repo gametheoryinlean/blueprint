@@ -1,0 +1,60 @@
+{
+  "id": "game_theory.coalitional_game.marginal_contribution",
+  "title": "Marginal Contribution",
+  "kind": "definition",
+  "status": "staged",
+  "href": "game_theory/coalitional_game/game_theory_coalitional_game_marginal_contribution.html",
+  "primary_topic": "game_theory.coalitional_game",
+  "topics": [
+    "game_theory",
+    "game_theory.coalitional_game"
+  ],
+  "body_html": "<h1>Marginal Contribution</h1>\n<p>The <strong>marginal contribution</strong> of player $i$ to a coalition $S$ not\ncontaining $i$ is\n$$\n  v(S \\cup \\{i\\}) - v(S).\n$$</p>\n<p>This is the payoff increment created by adding $i$ to $S$. Shapley-value\nformulae average this quantity over all possible predecessor coalitions.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.18, §18.2] Maschler, Solan, Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.coalitional_game.tu_game",
+      "title": "Transferable-Utility Coalitional Game",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_tu_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.coalitional_game.shapley_value",
+      "title": "Shapley Value",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_value.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "CoalitionalGame.marginalContrib",
+      "display_name": "CoalitionalGame.marginalContrib",
+      "qualified_name": "CoalitionalGame.marginalContrib",
+      "module": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
+      "kind": "def",
+      "signature": "def marginalContrib (i : N) (S : Finset N) : ℝ",
+      "docstring": "The marginal contribution of player `i` to coalition `S` (where `i ∉ S`).",
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L44",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
+      "display_name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

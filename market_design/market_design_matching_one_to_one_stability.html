@@ -49,7 +49,9 @@
         <li class="topic-parent">
           <details data-topic-root="game_theory">
             <summary><a href="../game_theory/index.html">Game Theory</a></summary>
-            <ul class="topic-children"><li class="topic-parent">
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../game_theory/coalitional_game/index.html">Coalitional Game</a>
+        </li><li class="topic-parent">
           <details data-topic-root="game_theory.extensive_game">
             <summary><a href="../game_theory/extensive_game/index.html">Extensive Game</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
@@ -328,7 +330,11 @@
       
         <li><a href="../keywords/axiom.html">axiom</a></li>
       
+        <li><a href="../keywords/axioms.html">axioms</a></li>
+      
         <li><a href="../keywords/backward-induction.html">backward-induction</a></li>
+      
+        <li><a href="../keywords/balancedness.html">balancedness</a></li>
       
         <li><a href="../keywords/bargaining.html">bargaining</a></li>
       
@@ -368,6 +374,8 @@
       
         <li><a href="../keywords/bnic.html">bnic</a></li>
       
+        <li><a href="../keywords/bondareva-shapley.html">bondareva-shapley</a></li>
+      
         <li><a href="../keywords/borda.html">borda</a></li>
       
         <li><a href="../keywords/bounds.html">bounds</a></li>
@@ -390,11 +398,15 @@
       
         <li><a href="../keywords/chance.html">chance</a></li>
       
+        <li><a href="../keywords/characteristic-function.html">characteristic-function</a></li>
+      
         <li><a href="../keywords/checker.html">checker</a></li>
       
         <li><a href="../keywords/clarke-pivot.html">clarke-pivot</a></li>
       
         <li><a href="../keywords/classic.html">classic</a></li>
+      
+        <li><a href="../keywords/coalitional-game.html">coalitional-game</a></li>
       
         <li><a href="../keywords/combinatorics.html">combinatorics</a></li>
       
@@ -586,6 +598,8 @@
       
         <li><a href="../keywords/impossibility.html">impossibility</a></li>
       
+        <li><a href="../keywords/imputation.html">imputation</a></li>
+      
         <li><a href="../keywords/incentive-compatibility.html">incentive-compatibility</a></li>
       
         <li><a href="../keywords/incomplete-information.html">incomplete-information</a></li>
@@ -649,6 +663,8 @@
         <li><a href="../keywords/lyapunov.html">lyapunov</a></li>
       
         <li><a href="../keywords/majority.html">majority</a></li>
+      
+        <li><a href="../keywords/marginal-contribution.html">marginal-contribution</a></li>
       
         <li><a href="../keywords/market-design.html">market-design</a></li>
       
@@ -735,6 +751,8 @@
         <li><a href="../keywords/payoff.html">payoff</a></li>
       
         <li><a href="../keywords/payoff-aggregation.html">payoff-aggregation</a></li>
+      
+        <li><a href="../keywords/payoff-vector.html">payoff-vector</a></li>
       
         <li><a href="../keywords/perfect-information.html">perfect-information</a></li>
       
@@ -832,7 +850,11 @@
       
         <li><a href="../keywords/shapley-operator.html">shapley-operator</a></li>
       
+        <li><a href="../keywords/shapley-value.html">shapley-value</a></li>
+      
         <li><a href="../keywords/signals.html">signals</a></li>
+      
+        <li><a href="../keywords/simple-game.html">simple-game</a></li>
       
         <li><a href="../keywords/simplex.html">simplex</a></li>
       
@@ -890,7 +912,11 @@
       
         <li><a href="../keywords/subgame-perfect-equilibrium.html">subgame-perfect-equilibrium</a></li>
       
+        <li><a href="../keywords/superadditivity.html">superadditivity</a></li>
+      
         <li><a href="../keywords/supermodular-game.html">supermodular-game</a></li>
+      
+        <li><a href="../keywords/supermodularity.html">supermodularity</a></li>
       
         <li><a href="../keywords/support.html">support</a></li>
       
@@ -910,6 +936,8 @@
       
         <li><a href="../keywords/total-preorder.html">total-preorder</a></li>
       
+        <li><a href="../keywords/transferable-utility.html">transferable-utility</a></li>
+      
         <li><a href="../keywords/transfers.html">transfers</a></li>
       
         <li><a href="../keywords/two-by-two.html">two-by-two</a></li>
@@ -917,6 +945,8 @@
         <li><a href="../keywords/uniform-equilibrium.html">uniform-equilibrium</a></li>
       
         <li><a href="../keywords/uniform-value.html">uniform-value</a></li>
+      
+        <li><a href="../keywords/uniqueness.html">uniqueness</a></li>
       
         <li><a href="../keywords/utilitarian.html">utilitarian</a></li>
       
@@ -975,15 +1005,17 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Stability (Individual Rationality + No Blocking Pair)</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-market_design-2e-matching-2e-one_to_one-2e-stability">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
+      
+      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -1001,6 +1033,53 @@
   </div>
   
 
+  
+  <div class="modal-container" id="lean-modal" hidden>
+    <div class="modal-content">
+      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
+      <ul class="uses">
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/MarketDesign/Matching/Basic.lean#L77"><code>Matching.IsBlocking</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ af1e2e5, EconCSLib.MarketDesign.Matching.Basic
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def IsBlocking (market : MatchingMarket M W) (μ : Matching M W)
+    (m : M) (w : W) : Prop</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/MarketDesign/Matching/Basic.lean#L83"><code>Matching.IsStable</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ af1e2e5, EconCSLib.MarketDesign.Matching.Basic
+          </span>
+          
+          
+          <p class="lean-docstring">A matching is stable if it has no blocking pair. [MSZ 22.5]</p>
+          <pre class="lean-signature"><code>def IsStable (market : MatchingMarket M W) (μ : Matching M W) : Prop</code></pre>
+        </li>
+        
+      </ul>
+      
+      <p class="lean-modules">Modules:
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/MarketDesign/Matching/Basic.lean#L1"><code>EconCSLib.MarketDesign.Matching.Basic</code></a>
+      </p>
+      
+    </div>
+  </div>
   
 
   <div class="definition_thmcontent thm-content body">
@@ -1045,6 +1124,8 @@ as <code>Matching.IsIndividuallyRational</code>, <code>Matching.IsBlocking</code
       <li><a href="market_design_matching_one_to_one_gale_shapley_stable.html">Gale-Shapley Theorem (Existence of Stable Matching)</a></li>
       
       <li><a href="market_design_matching_one_to_one_lattice.html">Lattice Structure of Stable Matchings (Conway-Knuth)</a></li>
+      
+      <li><a href="market_design_matching_one_to_one_rural_hospitals.html">Rural Hospitals Theorem</a></li>
       
     </ul>
   </section>

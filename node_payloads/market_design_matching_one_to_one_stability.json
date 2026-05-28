@@ -2,7 +2,7 @@
   "id": "market_design.matching.one_to_one.stability",
   "title": "Stability (Individual Rationality + No Blocking Pair)",
   "kind": "definition",
-  "status": "staged",
+  "status": "formalized",
   "href": "market_design/market_design_matching_one_to_one_stability.html",
   "primary_topic": "market_design",
   "topics": [
@@ -29,8 +29,61 @@
       "id": "market_design.matching.one_to_one.lattice",
       "title": "Lattice Structure of Stable Matchings (Conway-Knuth)",
       "href": "market_design/market_design_matching_one_to_one_lattice.html"
+    },
+    {
+      "id": "market_design.matching.one_to_one.rural_hospitals",
+      "title": "Rural Hospitals Theorem",
+      "href": "market_design/market_design_matching_one_to_one_rural_hospitals.html"
     }
   ],
-  "lean_refs": [],
-  "lean_modules": []
+  "lean_refs": [
+    {
+      "name": "Matching.IsBlocking",
+      "display_name": "Matching.IsBlocking",
+      "qualified_name": "Matching.IsBlocking",
+      "module": "EconCSLib.MarketDesign.Matching.Basic",
+      "kind": "def",
+      "signature": "def IsBlocking (market : MatchingMarket M W) (μ : Matching M W)\n    (m : M) (w : W) : Prop",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/MarketDesign/Matching/Basic.lean#L77",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Matching.IsStable",
+      "display_name": "Matching.IsStable",
+      "qualified_name": "Matching.IsStable",
+      "module": "EconCSLib.MarketDesign.Matching.Basic",
+      "kind": "def",
+      "signature": "def IsStable (market : MatchingMarket M W) (μ : Matching M W) : Prop",
+      "docstring": "A matching is stable if it has no blocking pair. [MSZ 22.5]",
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/MarketDesign/Matching/Basic.lean#L83",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.MarketDesign.Matching.Basic",
+      "display_name": "EconCSLib.MarketDesign.Matching.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/MarketDesign/Matching/Basic.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

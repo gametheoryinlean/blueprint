@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 39,
     "proof_plan_nodes": 10,
     "selected_proof_plan_nodes": 3,
-    "boundary_topics": 6,
+    "boundary_topics": 7,
     "proof_plan_attachments": 10,
-    "visible_nodes_without_proof_plans": 46,
-    "visible_nodes_with_selected_proof_plans": 49
+    "visible_nodes_without_proof_plans": 47,
+    "visible_nodes_with_selected_proof_plans": 50
   },
   "nodes": [
     {
@@ -709,6 +709,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "game_theory.coalitional_game",
+      "title": "Game Theory.Coalitional Game",
+      "href": "game_theory/coalitional_game/index.html",
+      "role": "dependent",
+      "node_count": 19
+    },
+    {
       "id": "game_theory.strategic_game",
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
@@ -848,6 +855,13 @@
       "to": "math.minimax.minimax_from_deterministic_approachability",
       "kind": "boundary_proof_plan_dependency",
       "topic": "game_theory.strategic_game.zero_sum.approachability",
+      "count": 1
+    },
+    {
+      "from": "math.linear_programming.strong_duality",
+      "to": "topic:game_theory.coalitional_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.coalitional_game",
       "count": 1
     },
     {

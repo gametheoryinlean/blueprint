@@ -1,0 +1,59 @@
+{
+  "id": "game_theory.coalitional_game.shapley_uniqueness",
+  "title": "Shapley Uniqueness Theorem",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_uniqueness.html",
+  "primary_topic": "game_theory.coalitional_game",
+  "topics": [
+    "game_theory",
+    "game_theory.coalitional_game"
+  ],
+  "body_html": "<h1>Shapley Uniqueness Theorem</h1>\n<p><strong>Theorem.</strong> The Shapley value is the unique single-valued solution concept\nthat satisfies efficiency, symmetry, the null-player property, and\nadditivity.</p>",
+  "proof_html": "<p>Sketch</p>\n<p>The usual proof expands arbitrary games in a basis of unanimity games.\nThe four axioms determine the value uniquely on unanimity games: players in\nthe winning coalition receive equal shares and players outside it are null.\nAdditivity then extends the determination to every game.</p>\n<h2>Lean Status</h2>\n<p>The theorem statement exists as <code>CoalitionalGame.shapley_uniqueness</code> and\ncurrently has a documented proof gap.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.18, Thm 18.13 and Thm 18.15] Maschler, Solan, Zamir,\n  <em>Game Theory</em>, <code>references/GameTheory.pdf</code>.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "game_theory.coalitional_game.shapley_value",
+      "title": "Shapley Value",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_value.html"
+    },
+    {
+      "id": "game_theory.coalitional_game.shapley_axioms",
+      "title": "Shapley Axioms",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_axioms.html"
+    }
+  ],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "CoalitionalGame.shapley_uniqueness",
+      "display_name": "CoalitionalGame.shapley_uniqueness",
+      "qualified_name": "CoalitionalGame.shapley_uniqueness",
+      "module": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
+      "kind": "theorem",
+      "signature": "theorem shapley_uniqueness (φ : CoalitionalGame N ℝ → N → ℝ)\n    (heff : SatisfiesEfficiency φ) (hsym : SatisfiesSymmetry φ)\n    (hnull : SatisfiesNullPlayer φ) (hadd : SatisfiesAdditivity φ) :\n    ∀ (G : CoalitionalGame N ℝ) (i : N), φ G i = G.shapleyValue i",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L101",
+      "doc_url": null,
+      "has_sorry": true,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
+      "display_name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

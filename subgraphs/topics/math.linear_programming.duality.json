@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 2,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -55,6 +55,13 @@
       "node_count": 27
     },
     {
+      "id": "game_theory.coalitional_game",
+      "title": "Game Theory.Coalitional Game",
+      "href": "game_theory/coalitional_game/index.html",
+      "role": "dependent",
+      "node_count": 19
+    },
+    {
       "id": "math",
       "title": "Math",
       "href": "math/index.html",
@@ -75,6 +82,13 @@
       "to": "math.linear_programming.strong_duality",
       "kind": "boundary_dependency",
       "topic": "foundation",
+      "count": 1
+    },
+    {
+      "from": "math.linear_programming.strong_duality",
+      "to": "topic:game_theory.coalitional_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.coalitional_game",
       "count": 1
     },
     {

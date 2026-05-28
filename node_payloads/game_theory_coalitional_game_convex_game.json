@@ -1,0 +1,83 @@
+{
+  "id": "game_theory.coalitional_game.convex_game",
+  "title": "Convex Coalitional Game",
+  "kind": "definition",
+  "status": "staged",
+  "href": "game_theory/coalitional_game/game_theory_coalitional_game_convex_game.html",
+  "primary_topic": "game_theory.coalitional_game",
+  "topics": [
+    "game_theory",
+    "game_theory.coalitional_game"
+  ],
+  "body_html": "<h1>Convex Coalitional Game</h1>\n<p>A coalitional game is <strong>convex</strong> when its characteristic function is\nsupermodular:\n$$\n  v(S \\cup T) + v(S \\cap T) \\ge v(S) + v(T)\n$$\nfor all coalitions $S,T \\subseteq N$.</p>\n<p>Equivalently, a player's marginal contribution weakly increases as the\ncoalition they join becomes larger. Convexity is a strong regularity\ncondition: convex games have nonempty core, and their Shapley value lies in\nthe core.</p>\n<h2>Lean Status</h2>\n<p>Lean defines convexity as <code>CoalitionalGame.IsConvex</code> and proves the basic\nfact <code>CoalitionalGame.IsConvex.isSuperadditive</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.17, Def 17.51 and Thm 17.54] Maschler, Solan, Zamir,\n  <em>Game Theory</em>, <code>references/GameTheory.pdf</code>.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "game_theory.coalitional_game.tu_game",
+      "title": "Transferable-Utility Coalitional Game",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_tu_game.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "game_theory.coalitional_game.convex_game_core_nonempty",
+      "title": "Convex Games Have Nonempty Core",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_convex_game_core_nonempty.html"
+    },
+    {
+      "id": "game_theory.coalitional_game.shapley_in_core_convex",
+      "title": "Shapley Value Lies In The Core Of A Convex Game",
+      "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_in_core_convex.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "CoalitionalGame.IsConvex",
+      "display_name": "CoalitionalGame.IsConvex",
+      "qualified_name": "CoalitionalGame.IsConvex",
+      "module": "EconCSLib.GameTheory.CoalitionalGame.Basic",
+      "kind": "def",
+      "signature": "def IsConvex [LE U] : Prop",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L97",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "CoalitionalGame.IsConvex.isSuperadditive",
+      "display_name": "CoalitionalGame.IsConvex.isSuperadditive",
+      "qualified_name": "CoalitionalGame.IsConvex.isSuperadditive",
+      "module": "EconCSLib.GameTheory.CoalitionalGame.Basic",
+      "kind": "theorem",
+      "signature": "theorem IsConvex.isSuperadditive [LE U] (hconv : G.IsConvex) : G.IsSuperadditive",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L119",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.CoalitionalGame.Basic",
+      "display_name": "EconCSLib.GameTheory.CoalitionalGame.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "af1e2e524fe2161cdd91bb06143d03b46c9f0839",
+      "short_revision": "af1e2e5",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/af1e2e524fe2161cdd91bb06143d03b46c9f0839/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}
