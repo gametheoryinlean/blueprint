@@ -213,6 +213,13 @@
     },
     {
       "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.correlated.correlated_equilibrium_exists",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
       "to": "game_theory.strategic_game.correlated.correlated_strategy",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
@@ -258,13 +265,6 @@
       "to": "game_theory.strategic_game.correlated.correlated_strategy",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game.core",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.equilibrium",
-      "to": "game_theory.strategic_game.correlated.correlated_equilibrium_exists",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.equilibrium",
       "count": 1
     },
     {

@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 25,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 9,
+    "boundary_topics": 8,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 35,
-    "visible_nodes_with_selected_proof_plans": 35
+    "visible_nodes_without_proof_plans": 34,
+    "visible_nodes_with_selected_proof_plans": 34
   },
   "nodes": [
     {
@@ -431,13 +431,6 @@
       "node_count": 7
     },
     {
-      "id": "game_theory.strategic_game.equilibrium",
-      "title": "Game Theory.Strategic Game.Equilibrium",
-      "href": "game_theory/strategic_game/equilibrium/index.html",
-      "role": "dependency",
-      "node_count": 10
-    },
-    {
       "id": "game_theory.strategic_game.refinements",
       "title": "Game Theory.Strategic Game.Refinements",
       "href": "game_theory/strategic_game/refinements/index.html",
@@ -476,6 +469,13 @@
     },
     {
       "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.extensive_game.imperfect_information.behavioral_equilibrium_exists",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
       "to": "game_theory.extensive_game.imperfect_information.information_set_refinement_equilibrium",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
@@ -493,13 +493,6 @@
       "to": "game_theory.extensive_game.imperfect_information.forward_induction",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game.dominance",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.equilibrium",
-      "to": "game_theory.extensive_game.imperfect_information.behavioral_equilibrium_exists",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.equilibrium",
       "count": 1
     },
     {

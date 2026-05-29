@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 4,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
     {
@@ -124,13 +124,6 @@
       "href": "game_theory/strategic_game/core/index.html",
       "role": "dependency",
       "node_count": 6
-    },
-    {
-      "id": "game_theory.strategic_game.equilibrium",
-      "title": "Game Theory.Strategic Game.Equilibrium",
-      "href": "game_theory/strategic_game/equilibrium/index.html",
-      "role": "dependency",
-      "node_count": 10
     }
   ],
   "boundary_edges": [
@@ -149,17 +142,17 @@
       "count": 1
     },
     {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
       "from": "topic:game_theory.strategic_game.core",
       "to": "game_theory.strategic_game.bayesian.bayesian_strategy",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game.core",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.equilibrium",
-      "to": "game_theory.strategic_game.bayesian.finite_bayesian_equilibrium_exists",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.equilibrium",
       "count": 1
     },
     {

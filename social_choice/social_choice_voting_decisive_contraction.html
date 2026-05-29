@@ -1040,27 +1040,29 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>SocialChoice.Voting.isDecisive_contraction</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>SocialChoice.Voting.IsDecisive</code>, <code>SocialChoice.Voting.IsDecisiveFor</code>, <code>SocialChoice.Voting.IsWeaklyDecisiveFor</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/SocialChoice/Voting/Decisive.lean#L550"><code>SocialChoice.Voting.decisive_contraction</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ b0d217e, EconCSLib.SocialChoice.Voting.Decisive
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>private theorem decisive_contraction [Fintype N] [Fintype A]
+    {F : SWF N A} (h0 : ∃ x y z : A, x ≠ y ∧ x ≠ z ∧ y ≠ z)
+    {C : Set N} (hCdec : IsDecisive F C) (hCcard : 2 ≤ C.ncard)
+    (hU : SWF.Unanimity F) (hIIA : SWF.IIA F) :
+    ∃ S : Set N, S.Nonempty ∧ S &lt; C ∧ IsDecisive F S</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f620bd50158467f646ebd413bd758ede1fe3db02/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1074,7 +1076,8 @@
 on a finite voter type with $|A| \ge 3$. If a decisive coalition
 $C$ ([[social_choice.voting.is_decisive]]) has at least two members, then
 there exists a strictly smaller nonempty decisive coalition $D \subsetneq C$.</p>
-<p>In Lean: <code>SocialChoice.Voting.isDecisive_contraction</code>.</p>
+<p>In Lean: <code>SocialChoice.Voting.decisive_contraction</code> (a <code>private</code> lemma internal
+to the Arrow proof in <code>Decisive.lean</code>).</p>
     
     <details class="proof-details">
       <summary>Proof</summary>

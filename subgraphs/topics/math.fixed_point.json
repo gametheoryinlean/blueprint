@@ -16,10 +16,10 @@
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 4,
+    "boundary_topics": 5,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 11,
+    "visible_nodes_with_selected_proof_plans": 11
   },
   "nodes": [
     {
@@ -87,6 +87,13 @@
   ],
   "boundary_topics": [
     {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependent",
+      "node_count": 181
+    },
+    {
       "id": "game_theory.strategic_game.continuous",
       "title": "Game Theory.Strategic Game.Continuous",
       "href": "game_theory/strategic_game/continuous/index.html",
@@ -118,6 +125,13 @@
   "boundary_edges": [
     {
       "from": "math.fixed_point.brouwer_compact_convex",
+      "to": "topic:game_theory.strategic_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "math.fixed_point.brouwer_compact_convex",
       "to": "topic:game_theory.strategic_game.continuous",
       "kind": "boundary_dependent",
       "topic": "game_theory.strategic_game.continuous",
@@ -128,13 +142,6 @@
       "to": "topic:game_theory.strategic_game.continuous",
       "kind": "boundary_dependent",
       "topic": "game_theory.strategic_game.continuous",
-      "count": 1
-    },
-    {
-      "from": "math.fixed_point.brouwer_compact_convex",
-      "to": "topic:game_theory.strategic_game.equilibrium",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.equilibrium",
       "count": 1
     },
     {

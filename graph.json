@@ -3856,16 +3856,21 @@
       "id": "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
       "title": "Nash Existence For Finite Games",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "strategic-game",
         "nash-equilibrium",
         "existence"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
       "lean_declarations": [
         "StrategicGame.exists_mixed_nash_equilibrium_finite"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
         "math.fixed_point.brouwer_compact_convex"
@@ -12734,7 +12739,7 @@
         "social_choice.voting.arrow"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.isDecisive_contraction"
+        "SocialChoice.Voting.decisive_contraction"
       ],
       "topic": "social_choice",
       "uses": [
@@ -12763,7 +12768,7 @@
         "social_choice.voting.arrow"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.isDecisive_spread"
+        "SocialChoice.Voting.decisive_spread"
       ],
       "topic": "social_choice",
       "uses": [
@@ -13050,7 +13055,8 @@
         "social_choice.voting.arrow"
       ],
       "lean_declarations": [
-        "SocialChoice.Voting.minimal_decisive_coalition_card_one"
+        "SocialChoice.Voting.decisive_minimal",
+        "SocialChoice.Voting.exists_minimal_decisive_coalition"
       ],
       "topic": "social_choice",
       "uses": [
