@@ -4,22 +4,27 @@
     "title": "Foundation",
     "href": "foundation/index.html",
     "parent": null,
-    "node_count": 20,
-    "descendant_node_count": 27
+    "node_count": 19,
+    "descendant_node_count": 26,
+    "status_counts": {
+      "formalized": 10,
+      "proved": 8,
+      "staged": 8
+    }
   },
   "counts": {
-    "internal_nodes": 20,
-    "inlined_nodes": 16,
-    "descendant_nodes": 27,
+    "internal_nodes": 19,
+    "inlined_nodes": 15,
+    "descendant_nodes": 26,
     "child_topics": 0,
     "inlined_child_topics": 4,
-    "non_proof_plan_nodes": 27,
+    "non_proof_plan_nodes": 26,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 31,
-    "visible_nodes_with_selected_proof_plans": 31
+    "visible_nodes_without_proof_plans": 30,
+    "visible_nodes_with_selected_proof_plans": 30
   },
   "nodes": [
     {
@@ -53,14 +58,6 @@
       "status": "staged",
       "href": "foundation/foundation_preference_relation.html",
       "payload": "node_payloads/foundation_preference_relation.json"
-    },
-    {
-      "id": "foundation.preference.representation",
-      "title": "Utility Representation",
-      "kind": "definition",
-      "status": "staged",
-      "href": "foundation/foundation_preference_representation.html",
-      "payload": "node_payloads/foundation_preference_representation.json"
     },
     {
       "id": "foundation.preference.represents_preference",
@@ -266,11 +263,6 @@
       "kind": "uses"
     },
     {
-      "from": "foundation.preference.relation",
-      "to": "foundation.preference.representation",
-      "kind": "uses"
-    },
-    {
       "from": "foundation.preference.indifferent",
       "to": "foundation.preference.represents_preference",
       "kind": "uses"
@@ -281,7 +273,7 @@
       "kind": "uses"
     },
     {
-      "from": "foundation.preference.representation",
+      "from": "foundation.preference.represents_preference",
       "to": "foundation.utility.expected_utility_representation",
       "kind": "uses"
     },
@@ -380,18 +372,18 @@
       "node_count": 19
     },
     {
-      "id": "game_theory.strategic_game",
-      "title": "Game Theory.Strategic Game",
-      "href": "game_theory/strategic_game/index.html",
+      "id": "game_theory.zero_sum",
+      "title": "Game Theory.Zero Sum",
+      "href": "game_theory/zero_sum/index.html",
       "role": "dependent",
-      "node_count": 181
+      "node_count": 77
     },
     {
       "id": "math",
       "title": "Math",
       "href": "math/index.html",
       "role": "dependent",
-      "node_count": 49
+      "node_count": 43
     }
   ],
   "boundary_edges": [
@@ -404,16 +396,16 @@
     },
     {
       "from": "math.simplex.bounded_by_value",
-      "to": "topic:game_theory.strategic_game",
+      "to": "topic:game_theory.zero_sum",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 3
     },
     {
       "from": "math.simplex.continuity",
-      "to": "topic:game_theory.strategic_game",
+      "to": "topic:game_theory.zero_sum",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 1
     },
     {
@@ -607,7 +599,7 @@
       "id": "preference",
       "title": "preference",
       "href": "keywords/preference.html",
-      "count": 7
+      "count": 6
     },
     {
       "id": "profile",

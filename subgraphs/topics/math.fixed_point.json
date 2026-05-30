@@ -5,21 +5,25 @@
     "href": "math/fixed_point/index.html",
     "parent": "math",
     "node_count": 5,
-    "descendant_node_count": 5
+    "descendant_node_count": 5,
+    "status_counts": {
+      "proved": 2,
+      "staged": 3
+    }
   },
   "counts": {
     "internal_nodes": 5,
-    "inlined_nodes": 5,
+    "inlined_nodes": 3,
     "descendant_nodes": 5,
     "child_topics": 0,
-    "inlined_child_topics": 5,
+    "inlined_child_topics": 3,
     "non_proof_plan_nodes": 5,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 11,
-    "visible_nodes_with_selected_proof_plans": 11
+    "visible_nodes_without_proof_plans": 8,
+    "visible_nodes_with_selected_proof_plans": 8
   },
   "nodes": [
     {
@@ -34,8 +38,8 @@
       "id": "math.fixed_point.brouwer_simplex",
       "title": "Brouwer Fixed Point Theorem For A Simplex",
       "kind": "theorem",
-      "status": "staged",
-      "href": "math/fixed_point/math_fixed_point_brouwer_simplex.html",
+      "status": "proved",
+      "href": "math/math_fixed_point_brouwer_simplex.html",
       "payload": "node_payloads/math_fixed_point_brouwer_simplex.json"
     },
     {
@@ -55,12 +59,12 @@
       "payload": "node_payloads/math_fixed_point_retract_fixed_point.json"
     },
     {
-      "id": "math.fixed_point.sperner_lemma",
-      "title": "Sperner Lemma",
+      "id": "math.fixed_point.scarf_lemma",
+      "title": "Scarf Combinatorial Lemma (Colorful Room Existence)",
       "kind": "lemma",
-      "status": "staged",
-      "href": "math/fixed_point/math_fixed_point_sperner_lemma.html",
-      "payload": "node_payloads/math_fixed_point_sperner_lemma.json"
+      "status": "proved",
+      "href": "math/math_fixed_point_scarf_lemma.html",
+      "payload": "node_payloads/math_fixed_point_scarf_lemma.json"
     }
   ],
   "edges": [
@@ -70,7 +74,7 @@
       "kind": "uses"
     },
     {
-      "from": "math.fixed_point.sperner_lemma",
+      "from": "math.fixed_point.scarf_lemma",
       "to": "math.fixed_point.brouwer_simplex",
       "kind": "uses"
     },
@@ -91,35 +95,14 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependent",
-      "node_count": 181
-    },
-    {
-      "id": "game_theory.strategic_game.continuous",
-      "title": "Game Theory.Strategic Game.Continuous",
-      "href": "game_theory/strategic_game/continuous/index.html",
-      "role": "dependent",
-      "node_count": 16
+      "node_count": 105
     },
     {
       "id": "game_theory.strategic_game.equilibrium",
       "title": "Game Theory.Strategic Game.Equilibrium",
       "href": "game_theory/strategic_game/equilibrium/index.html",
       "role": "dependent",
-      "node_count": 10
-    },
-    {
-      "id": "game_theory.strategic_game.refinements",
-      "title": "Game Theory.Strategic Game.Refinements",
-      "href": "game_theory/strategic_game/refinements/index.html",
-      "role": "dependent",
-      "node_count": 15
-    },
-    {
-      "id": "game_theory.strategic_game.variational",
-      "title": "Game Theory.Strategic Game.Variational",
-      "href": "game_theory/strategic_game/variational/index.html",
-      "role": "dependent",
-      "node_count": 1
+      "node_count": 12
     }
   ],
   "boundary_edges": [
@@ -128,41 +111,20 @@
       "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependent",
       "topic": "game_theory.strategic_game",
-      "count": 1
-    },
-    {
-      "from": "math.fixed_point.brouwer_compact_convex",
-      "to": "topic:game_theory.strategic_game.continuous",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.continuous",
-      "count": 1
+      "count": 3
     },
     {
       "from": "math.fixed_point.kakutani_fixed_point",
-      "to": "topic:game_theory.strategic_game.continuous",
+      "to": "topic:game_theory.strategic_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.continuous",
-      "count": 1
+      "topic": "game_theory.strategic_game",
+      "count": 2
     },
     {
       "from": "math.fixed_point.kakutani_fixed_point",
       "to": "topic:game_theory.strategic_game.equilibrium",
       "kind": "boundary_dependent",
       "topic": "game_theory.strategic_game.equilibrium",
-      "count": 1
-    },
-    {
-      "from": "math.fixed_point.kakutani_fixed_point",
-      "to": "topic:game_theory.strategic_game.refinements",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.refinements",
-      "count": 1
-    },
-    {
-      "from": "math.fixed_point.brouwer_compact_convex",
-      "to": "topic:game_theory.strategic_game.variational",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game.variational",
       "count": 1
     }
   ],
@@ -196,6 +158,12 @@
       "title": "retract",
       "href": "keywords/retract.html",
       "count": 1
+    },
+    {
+      "id": "scarf",
+      "title": "scarf",
+      "href": "keywords/scarf.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],
@@ -203,9 +171,7 @@
   "child_topic_nodes": [],
   "inlined_child_topics": [
     "math.fixed_point.brouwer_compact_convex",
-    "math.fixed_point.brouwer_simplex",
     "math.fixed_point.kakutani_fixed_point",
-    "math.fixed_point.retract_fixed_point",
-    "math.fixed_point.sperner_lemma"
+    "math.fixed_point.retract_fixed_point"
   ]
 }

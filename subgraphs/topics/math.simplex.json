@@ -5,7 +5,11 @@
     "href": "math/simplex/index.html",
     "parent": "math",
     "node_count": 6,
-    "descendant_node_count": 6
+    "descendant_node_count": 6,
+    "status_counts": {
+      "formalized": 3,
+      "proved": 3
+    }
   },
   "counts": {
     "internal_nodes": 6,
@@ -100,33 +104,33 @@
   ],
   "boundary_topics": [
     {
-      "id": "game_theory.strategic_game",
-      "title": "Game Theory.Strategic Game",
-      "href": "game_theory/strategic_game/index.html",
+      "id": "game_theory.zero_sum",
+      "title": "Game Theory.Zero Sum",
+      "href": "game_theory/zero_sum/index.html",
       "role": "dependent",
-      "node_count": 181
+      "node_count": 77
     },
     {
       "id": "math",
       "title": "Math",
       "href": "math/index.html",
       "role": "dependent",
-      "node_count": 49
+      "node_count": 43
     }
   ],
   "boundary_edges": [
     {
       "from": "math.simplex.bounded_by_value",
-      "to": "topic:game_theory.strategic_game",
+      "to": "topic:game_theory.zero_sum",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 3
     },
     {
       "from": "math.simplex.continuity",
-      "to": "topic:game_theory.strategic_game",
+      "to": "topic:game_theory.zero_sum",
       "kind": "boundary_dependent",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 1
     },
     {

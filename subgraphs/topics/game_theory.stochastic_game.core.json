@@ -4,22 +4,25 @@
     "title": "Game Theory.Stochastic Game.Core",
     "href": "game_theory/stochastic_game/core/index.html",
     "parent": "game_theory.stochastic_game",
-    "node_count": 2,
-    "descendant_node_count": 2
+    "node_count": 4,
+    "descendant_node_count": 4,
+    "status_counts": {
+      "staged": 4
+    }
   },
   "counts": {
-    "internal_nodes": 2,
+    "internal_nodes": 4,
     "inlined_nodes": 0,
-    "descendant_nodes": 2,
+    "descendant_nodes": 4,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 2,
+    "non_proof_plan_nodes": 4,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
   },
   "nodes": [
     {
@@ -37,12 +40,33 @@
       "status": "staged",
       "href": "game_theory/stochastic_game/game_theory_stochastic_game_core_stochastic_game.html",
       "payload": "node_payloads/game_theory_stochastic_game_core_stochastic_game.json"
+    },
+    {
+      "id": "game_theory.stochastic_game.equilibrium.fink_nash_existence",
+      "title": "Fink Nash Existence in Stochastic Games",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/stochastic_game/game_theory_stochastic_game_equilibrium_fink_nash_existence.html",
+      "payload": "node_payloads/game_theory_stochastic_game_equilibrium_fink_nash_existence.json"
+    },
+    {
+      "id": "game_theory.stochastic_game.examples.big_match_uniform_value",
+      "title": "Big Match Uniform Value",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/stochastic_game/game_theory_stochastic_game_examples_big_match_uniform_value.html",
+      "payload": "node_payloads/game_theory_stochastic_game_examples_big_match_uniform_value.json"
     }
   ],
   "edges": [
     {
       "from": "game_theory.stochastic_game.core.stochastic_game",
       "to": "game_theory.stochastic_game.core.history",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.stochastic_game.core.history",
+      "to": "game_theory.stochastic_game.equilibrium.fink_nash_existence",
       "kind": "uses"
     }
   ],
@@ -51,7 +75,7 @@
       "id": "game_theory.stochastic_game",
       "title": "Game Theory.Stochastic Game",
       "href": "game_theory/stochastic_game/index.html",
-      "role": "dependent",
+      "role": "dependency_and_dependent",
       "node_count": 10
     },
     {
@@ -59,13 +83,27 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 181
+      "node_count": 105
     }
   ],
   "boundary_edges": [
     {
+      "from": "topic:game_theory.stochastic_game",
+      "to": "game_theory.stochastic_game.examples.big_match_uniform_value",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.stochastic_game",
+      "count": 1
+    },
+    {
       "from": "topic:game_theory.strategic_game",
       "to": "game_theory.stochastic_game.core.stochastic_game",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.stochastic_game.equilibrium.fink_nash_existence",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
       "count": 1
@@ -75,7 +113,7 @@
       "to": "topic:game_theory.stochastic_game",
       "kind": "boundary_dependent",
       "topic": "game_theory.stochastic_game",
-      "count": 2
+      "count": 1
     },
     {
       "from": "game_theory.stochastic_game.core.stochastic_game",
@@ -87,9 +125,39 @@
   ],
   "keywords": [
     {
+      "id": "big-match",
+      "title": "big-match",
+      "href": "keywords/big-match.html",
+      "count": 1
+    },
+    {
+      "id": "example",
+      "title": "example",
+      "href": "keywords/example.html",
+      "count": 1
+    },
+    {
+      "id": "existence",
+      "title": "existence",
+      "href": "keywords/existence.html",
+      "count": 1
+    },
+    {
+      "id": "general-sum",
+      "title": "general-sum",
+      "href": "keywords/general-sum.html",
+      "count": 1
+    },
+    {
       "id": "history",
       "title": "history",
       "href": "keywords/history.html",
+      "count": 1
+    },
+    {
+      "id": "nash-equilibrium",
+      "title": "nash-equilibrium",
+      "href": "keywords/nash-equilibrium.html",
       "count": 1
     },
     {
@@ -102,7 +170,19 @@
       "id": "stochastic-game",
       "title": "stochastic-game",
       "href": "keywords/stochastic-game.html",
-      "count": 2
+      "count": 4
+    },
+    {
+      "id": "uniform-value",
+      "title": "uniform-value",
+      "href": "keywords/uniform-value.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 1
     }
   ],
   "proof_plan_attachments": [],

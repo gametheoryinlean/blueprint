@@ -6,7 +6,8 @@
   "href": "game_theory/strategic_game/game_theory_strategic_game_weakly_dominates.html",
   "primary_topic": "game_theory.strategic_game",
   "topics": [
-    "game_theory.strategic_game"
+    "game_theory.strategic_game",
+    "game_theory.strategic_game.dominance"
   ],
   "body_html": "<h1>Weak Dominance</h1>\n<p>A strategy $s_i$ weakly dominates another strategy $s'_i$ for player $i$ if, for\nevery profile $\\sigma$ of the other players, playing $s_i$ yields at least as high\na payoff as playing $s'_i$:</p>\n<p>$$\\forall \\sigma, \\quad u_i(\\sigma[i \\mapsto s'_i]) \\le u_i(\\sigma[i \\mapsto s_i]).$$</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Section 2.3] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of weak dominance.</li>\n</ul>",
   "proof_html": null,
@@ -34,9 +35,9 @@
       "signature": "def WeaklyDominates (G : StrategicGame ι U) (i : ι) (s s' : G.strategy i) : Prop",
       "docstring": "Strategy `s` weakly dominates strategy `s'` for player `i`.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L24",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L24",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -49,9 +50,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.Dominance",
       "display_name": "EconCSLib.GameTheory.StrategicGame.Dominance",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1",
       "status": "resolved",
       "reason": null
     }

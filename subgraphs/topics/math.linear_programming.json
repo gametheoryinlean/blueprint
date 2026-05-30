@@ -5,43 +5,27 @@
     "href": "math/linear_programming/index.html",
     "parent": "math",
     "node_count": 6,
-    "descendant_node_count": 8
+    "descendant_node_count": 6,
+    "status_counts": {
+      "admitted": 4,
+      "proved": 2
+    }
   },
   "counts": {
     "internal_nodes": 6,
-    "inlined_nodes": 8,
-    "descendant_nodes": 8,
+    "inlined_nodes": 6,
+    "descendant_nodes": 6,
     "child_topics": 0,
     "inlined_child_topics": 2,
     "non_proof_plan_nodes": 5,
-    "proof_plan_nodes": 3,
+    "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 4,
-    "proof_plan_attachments": 3,
+    "proof_plan_attachments": 1,
     "visible_nodes_without_proof_plans": 10,
     "visible_nodes_with_selected_proof_plans": 10
   },
   "nodes": [
-    {
-      "id": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
-      "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
-      "kind": "proof-plan",
-      "status": "admitted",
-      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_dantzig_proof_spine.html",
-      "payload": "node_payloads/game_theory_strategic_game_zero_sum_dantzig_proof_spine.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate"
-    },
-    {
-      "id": "game_theory.strategic_game.zero_sum.simplex_termination",
-      "title": "Dantzig Simplex Termination (Open)",
-      "kind": "proof-plan",
-      "status": "admitted",
-      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_simplex_termination.html",
-      "payload": "node_payloads/game_theory_strategic_game_zero_sum_simplex_termination.json",
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate"
-    },
     {
       "id": "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
       "title": "LP Optimum ↔ Game-Theoretic Optimal Strategy",
@@ -95,11 +79,6 @@
   ],
   "edges": [
     {
-      "from": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
-      "to": "game_theory.strategic_game.zero_sum.simplex_termination",
-      "kind": "proof_plan_uses"
-    },
-    {
       "from": "math.linear_programming.minimax_bridge.player_2_lp",
       "to": "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
       "kind": "uses"
@@ -126,7 +105,7 @@
       "title": "Foundation",
       "href": "foundation/index.html",
       "role": "dependency",
-      "node_count": 27
+      "node_count": 26
     },
     {
       "id": "game_theory.coalitional_game",
@@ -136,18 +115,18 @@
       "node_count": 19
     },
     {
-      "id": "game_theory.strategic_game",
-      "title": "Game Theory.Strategic Game",
-      "href": "game_theory/strategic_game/index.html",
+      "id": "game_theory.zero_sum",
+      "title": "Game Theory.Zero Sum",
+      "href": "game_theory/zero_sum/index.html",
       "role": "dependency",
-      "node_count": 181
+      "node_count": 77
     },
     {
       "id": "math",
       "title": "Math",
       "href": "math/index.html",
       "role": "dependent",
-      "node_count": 49
+      "node_count": 43
     }
   ],
   "boundary_edges": [
@@ -166,24 +145,24 @@
       "count": 1
     },
     {
-      "from": "topic:game_theory.strategic_game",
+      "from": "topic:game_theory.zero_sum",
       "to": "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 2
     },
     {
-      "from": "topic:game_theory.strategic_game",
+      "from": "topic:game_theory.zero_sum",
       "to": "math.linear_programming.minimax_bridge.player_1_lp",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 3
     },
     {
-      "from": "topic:game_theory.strategic_game",
+      "from": "topic:game_theory.zero_sum",
       "to": "math.linear_programming.minimax_bridge.player_2_lp",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 1
     },
     {
@@ -222,12 +201,6 @@
       "count": 1
     },
     {
-      "id": "dantzig",
-      "title": "dantzig",
-      "href": "keywords/dantzig.html",
-      "count": 2
-    },
-    {
       "id": "duality",
       "title": "duality",
       "href": "keywords/duality.html",
@@ -237,7 +210,7 @@
       "id": "linear-programming",
       "title": "linear-programming",
       "href": "keywords/linear-programming.html",
-      "count": 7
+      "count": 6
     },
     {
       "id": "lp-dual",
@@ -252,45 +225,15 @@
       "count": 1
     },
     {
-      "id": "minimax",
-      "title": "minimax",
-      "href": "keywords/minimax.html",
-      "count": 2
-    },
-    {
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
       "count": 1
     },
     {
-      "id": "open-issue",
-      "title": "open-issue",
-      "href": "keywords/open-issue.html",
-      "count": 1
-    },
-    {
       "id": "optimal-strategy",
       "title": "optimal-strategy",
       "href": "keywords/optimal-strategy.html",
-      "count": 1
-    },
-    {
-      "id": "ordered-field",
-      "title": "ordered-field",
-      "href": "keywords/ordered-field.html",
-      "count": 1
-    },
-    {
-      "id": "proof-plan",
-      "title": "proof-plan",
-      "href": "keywords/proof-plan.html",
-      "count": 1
-    },
-    {
-      "id": "simplex",
-      "title": "simplex",
-      "href": "keywords/simplex.html",
       "count": 1
     },
     {
@@ -303,22 +246,10 @@
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 6
+      "count": 4
     }
   ],
   "proof_plan_attachments": [
-    {
-      "from": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "candidate"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.simplex_termination",
-      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "kind": "has_plan",
-      "plan_status": "candidate"
-    },
     {
       "from": "math.linear_programming.minimax_bridge.zero_sum_lp_bridge",
       "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",

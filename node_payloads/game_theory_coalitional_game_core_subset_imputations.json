@@ -6,8 +6,8 @@
   "href": "game_theory/coalitional_game/game_theory_coalitional_game_core_subset_imputations.html",
   "primary_topic": "game_theory.coalitional_game",
   "topics": [
-    "game_theory",
-    "game_theory.coalitional_game"
+    "game_theory.coalitional_game",
+    "game_theory.coalitional_game.core"
   ],
   "body_html": "<h1>Core Payoffs Are Imputations</h1>\n<p>Every payoff vector in the core is an imputation.</p>\n<p>Indeed, the core definition already contains efficiency:\n$$\n  \\sum_{i \\in N} x_i = v(N).\n$$\nFor individual rationality, apply the core's coalitional rationality\ncondition to the singleton coalition $\\{i\\}$:\n$$\n  x_i = \\sum_{j \\in \\{i\\}} x_j \\ge v(\\{i\\}).\n$$</p>\n<p>Thus core membership implies both efficiency and individual rationality.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.17, Def 17.1-17.2] Maschler, Solan, Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n</ul>",
   "proof_html": null,
@@ -34,9 +34,9 @@
       "signature": "theorem core_subset_imputations :\n    G.Core ⊆ { x | G.IsImputation x }",
       "docstring": "Every element of the core is an imputation.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L50",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L50",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -49,9 +49,9 @@
       "name": "EconCSLib.GameTheory.CoalitionalGame.Core",
       "display_name": "EconCSLib.GameTheory.CoalitionalGame.Core",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L1",
       "status": "resolved",
       "reason": null
     }

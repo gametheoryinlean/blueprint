@@ -4,22 +4,27 @@
     "title": "Mechanism Design",
     "href": "mechanism_design/index.html",
     "parent": null,
-    "node_count": 44,
-    "descendant_node_count": 44
+    "node_count": 49,
+    "descendant_node_count": 49,
+    "status_counts": {
+      "formalized": 27,
+      "proved": 12,
+      "staged": 10
+    }
   },
   "counts": {
-    "internal_nodes": 44,
-    "inlined_nodes": 44,
-    "descendant_nodes": 44,
+    "internal_nodes": 49,
+    "inlined_nodes": 49,
+    "descendant_nodes": 49,
     "child_topics": 0,
     "inlined_child_topics": 6,
-    "non_proof_plan_nodes": 44,
-    "proof_plan_nodes": 0,
+    "non_proof_plan_nodes": 48,
+    "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
-    "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 47,
-    "visible_nodes_with_selected_proof_plans": 47
+    "proof_plan_attachments": 1,
+    "visible_nodes_without_proof_plans": 51,
+    "visible_nodes_with_selected_proof_plans": 51
   },
   "nodes": [
     {
@@ -61,6 +66,22 @@
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_auction_basic_ordered_bid_utilities.html",
       "payload": "node_payloads/mechanism_design_auction_basic_ordered_bid_utilities.json"
+    },
+    {
+      "id": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "title": "Reserve Second-Price Truth-Telling Is Dominant",
+      "kind": "theorem",
+      "status": "proved",
+      "href": "mechanism_design/mechanism_design_auction_basic_reserve_second_price_dsic.html",
+      "payload": "node_payloads/mechanism_design_auction_basic_reserve_second_price_dsic.json"
+    },
+    {
+      "id": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "title": "Reserve Second-Price Mechanism",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_auction_basic_reserve_second_price_mechanism.html",
+      "payload": "node_payloads/mechanism_design_auction_basic_reserve_second_price_mechanism.json"
     },
     {
       "id": "mechanism_design.auction.basic.second_price_dsic",
@@ -264,11 +285,21 @@
     },
     {
       "id": "mechanism_design.myerson.optimal_auction",
-      "title": "Myerson Optimal Auction (Virtual Valuations)",
+      "title": "Regular Myerson Optimal Single-Item Auction",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "href": "mechanism_design/mechanism_design_myerson_optimal_auction.html",
       "payload": "node_payloads/mechanism_design_myerson_optimal_auction.json"
+    },
+    {
+      "id": "mechanism_design.myerson.optimal_auction_legacy_plan",
+      "title": "Myerson Optimal Auction Legacy Plan",
+      "kind": "proof-plan",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_myerson_optimal_auction_legacy_plan.html",
+      "payload": "node_payloads/mechanism_design_myerson_optimal_auction_legacy_plan.json",
+      "target": "mechanism_design.myerson.optimal_auction",
+      "plan_status": "formalized"
     },
     {
       "id": "mechanism_design.myerson.payment_construction",
@@ -309,6 +340,22 @@
       "status": "staged",
       "href": "mechanism_design/mechanism_design_myerson_revenue_equivalence.html",
       "payload": "node_payloads/mechanism_design_myerson_revenue_equivalence.json"
+    },
+    {
+      "id": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "title": "Virtual-Surplus-Maximizing Allocation",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_virtual_surplus_maximizing_allocation.html",
+      "payload": "node_payloads/mechanism_design_myerson_virtual_surplus_maximizing_allocation.json"
+    },
+    {
+      "id": "mechanism_design.myerson.virtual_value_regularity",
+      "title": "Virtual Values and Regularity",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_virtual_value_regularity.html",
+      "payload": "node_payloads/mechanism_design_myerson_virtual_value_regularity.json"
     },
     {
       "id": "mechanism_design.transfer.mechanisms_with_transfers",
@@ -419,6 +466,31 @@
     {
       "from": "mechanism_design.auction.basic.formats",
       "to": "mechanism_design.auction.basic.ordered_bid_utilities",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.second_price_dsic",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.second_price_mechanism",
+      "to": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.auction.basic.reserve_second_price_mechanism",
       "kind": "uses"
     },
     {
@@ -692,7 +764,22 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.auction.bayesian.interim_and_ic",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.bayesian.selling_problem",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.monotonicity_characterization",
       "to": "mechanism_design.myerson.optimal_auction",
       "kind": "uses"
     },
@@ -703,6 +790,16 @@
     },
     {
       "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_value_regularity",
       "to": "mechanism_design.myerson.optimal_auction",
       "kind": "uses"
     },
@@ -749,6 +846,21 @@
     {
       "from": "mechanism_design.myerson.payment_formula",
       "to": "mechanism_design.myerson.revenue_equivalence",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_value_regularity",
+      "to": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.virtual_value_regularity",
       "kind": "uses"
     },
     {
@@ -828,7 +940,7 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 181
+      "node_count": 105
     },
     {
       "id": "market_design",
@@ -842,6 +954,13 @@
     {
       "from": "topic:game_theory.strategic_game",
       "to": "mechanism_design.auction.basic.first_price_no_dsic",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
       "count": 1
@@ -897,6 +1016,12 @@
       "count": 1
     },
     {
+      "id": "allocation-rule",
+      "title": "allocation-rule",
+      "href": "keywords/allocation-rule.html",
+      "count": 1
+    },
+    {
       "id": "approximation",
       "title": "approximation",
       "href": "keywords/approximation.html",
@@ -912,7 +1037,7 @@
       "id": "auction",
       "title": "auction",
       "href": "keywords/auction.html",
-      "count": 19
+      "count": 21
     },
     {
       "id": "bayes-nash",
@@ -1002,7 +1127,7 @@
       "id": "dsic",
       "title": "dsic",
       "href": "keywords/dsic.html",
-      "count": 8
+      "count": 9
     },
     {
       "id": "dutch-auction",
@@ -1098,13 +1223,13 @@
       "id": "mechanism",
       "title": "mechanism",
       "href": "keywords/mechanism.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "mechanism-design",
       "title": "mechanism-design",
       "href": "keywords/mechanism-design.html",
-      "count": 26
+      "count": 29
     },
     {
       "id": "monotonicity",
@@ -1122,7 +1247,7 @@
       "id": "myerson",
       "title": "myerson",
       "href": "keywords/myerson.html",
-      "count": 8
+      "count": 11
     },
     {
       "id": "nash-equilibrium",
@@ -1134,7 +1259,7 @@
       "id": "optimal-auction",
       "title": "optimal-auction",
       "href": "keywords/optimal-auction.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "payment-construction",
@@ -1149,16 +1274,28 @@
       "count": 1
     },
     {
+      "id": "provenance",
+      "title": "provenance",
+      "href": "keywords/provenance.html",
+      "count": 1
+    },
+    {
       "id": "quasi-linear-utility",
       "title": "quasi-linear-utility",
       "href": "keywords/quasi-linear-utility.html",
       "count": 1
     },
     {
+      "id": "regularity",
+      "title": "regularity",
+      "href": "keywords/regularity.html",
+      "count": 1
+    },
+    {
       "id": "reserve-price",
       "title": "reserve-price",
       "href": "keywords/reserve-price.html",
-      "count": 2
+      "count": 5
     },
     {
       "id": "revelation-principle",
@@ -1194,7 +1331,7 @@
       "id": "second-price",
       "title": "second-price",
       "href": "keywords/second-price.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "second-price-auction",
@@ -1212,7 +1349,7 @@
       "id": "single-item",
       "title": "single-item",
       "href": "keywords/single-item.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "single-parameter",
@@ -1272,19 +1409,25 @@
       "id": "vickrey",
       "title": "vickrey",
       "href": "keywords/vickrey.html",
-      "count": 2
+      "count": 4
+    },
+    {
+      "id": "virtual-surplus",
+      "title": "virtual-surplus",
+      "href": "keywords/virtual-surplus.html",
+      "count": 1
     },
     {
       "id": "virtual-valuation",
       "title": "virtual-valuation",
       "href": "keywords/virtual-valuation.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "weakly-dominant",
       "title": "weakly-dominant",
       "href": "keywords/weakly-dominant.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "welfare-without",
@@ -1293,7 +1436,14 @@
       "count": 1
     }
   ],
-  "proof_plan_attachments": [],
+  "proof_plan_attachments": [
+    {
+      "from": "mechanism_design.myerson.optimal_auction_legacy_plan",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "has_plan",
+      "plan_status": "formalized"
+    }
+  ],
   "child_topics": [],
   "child_topic_nodes": [],
   "inlined_child_topics": [

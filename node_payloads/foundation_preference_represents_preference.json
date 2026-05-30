@@ -23,7 +23,13 @@
       "href": "foundation/foundation_preference_strictly_preferred.html"
     }
   ],
-  "dependents": [],
+  "dependents": [
+    {
+      "id": "foundation.utility.expected_utility_representation",
+      "title": "Expected Utility Representation",
+      "href": "foundation/utility/foundation_utility_expected_utility_representation.html"
+    }
+  ],
   "lean_refs": [
     {
       "name": "RepresentsPreference",
@@ -34,9 +40,9 @@
       "signature": "structure RepresentsPreference [Preorder α] [Preorder β] (u : α → β) : Prop where",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/Foundation/Preference.lean#L102",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Foundation/Preference.lean#L102",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -52,9 +58,9 @@
       "signature": "theorem RepresentsPreference.lt_iff [Preorder α] [Preorder β] {u : α → β}\n    (h : RepresentsPreference u) (a b : α) :\n    a < b ↔ u a < u b",
       "docstring": "A utility representation preserves strict preference.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/Foundation/Preference.lean#L107",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Foundation/Preference.lean#L107",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -70,9 +76,9 @@
       "signature": "theorem RepresentsPreference.indifferent_iff [Preorder α] [Preorder β] {u : α → β}\n    (h : RepresentsPreference u) (a b : α) :\n    Indifferent a b ↔ Indifferent (u a) (u b)",
       "docstring": "A utility representation preserves indifference.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/Foundation/Preference.lean#L113",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Foundation/Preference.lean#L113",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -85,9 +91,9 @@
       "name": "EconCSLib.Foundation.Preference",
       "display_name": "EconCSLib.Foundation.Preference",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/Foundation/Preference.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Foundation/Preference.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -3,10 +3,11 @@
   "title": "External Regret",
   "kind": "definition",
   "status": "staged",
-  "href": "game_theory/strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_external_regret.html",
-  "primary_topic": "game_theory.strategic_game.zero_sum.learning",
+  "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_learning_external_regret.html",
+  "primary_topic": "game_theory.zero_sum",
   "topics": [
-    "game_theory.strategic_game.zero_sum.learning"
+    "game_theory.zero_sum",
+    "game_theory.zero_sum.learning"
   ],
   "body_html": "<h1>External Regret</h1>\n<p>In repeated play of a finite strategic game, the external regret of player $i$\ncompares the realized payoff to the payoff that would have been obtained by\nusing one fixed action throughout the same history.</p>\n<p>For a realized action history $(a^1,\\ldots,a^n)$, the external regret against a\nfixed alternative action $b_i\\in A_i$ is\n$$\n  \\frac1n\\sum_{t=1}^n\n  (g_i(b_i,a_{-i}^t)-g_i(a_i^t,a_{-i}^t)).\n$$\nA procedure has no external regret if the positive part of this quantity\nconverges to $0$ for every fixed alternative action.</p>\n<p>External regret is weaker than internal regret: it tests only constant\ncounterfactual actions, not recommendation-contingent replacements.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 7, Section 7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. No-external-regret procedures in repeated play.</li>\n</ul>",
   "proof_html": null,
@@ -21,17 +22,17 @@
     {
       "id": "game_theory.strategic_game.zero_sum.learning.calibrated_strategy",
       "title": "Calibrated Strategy",
-      "href": "game_theory/strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_calibrated_strategy.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_learning_calibrated_strategy.html"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.learning.hannan_set",
       "title": "Hannan Set",
-      "href": "game_theory/strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_hannan_set.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_learning_hannan_set.html"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.learning.internal_regret",
       "title": "Internal Regret",
-      "href": "game_theory/strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_internal_regret.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_learning_internal_regret.html"
     }
   ],
   "lean_refs": [],

@@ -3,9 +3,10 @@
   "title": "Solvable Games Have A Unique Nash Equilibrium",
   "kind": "proposition",
   "status": "staged",
-  "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_solvable_unique_nash.html",
-  "primary_topic": "game_theory.strategic_game.dominance",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_solvable_unique_nash.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
+    "game_theory.strategic_game",
     "game_theory.strategic_game.dominance"
   ],
   "body_html": "<h1>Solvable Games Have A Unique Nash Equilibrium</h1>\n<p>If a strategic game is solvable, then it has a unique Nash equilibrium.</p>",
@@ -14,12 +15,12 @@
     {
       "id": "game_theory.strategic_game.dominance.dominance_solvable_game",
       "title": "Solvable Game",
-      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_dominance_solvable_game.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_dominance_solvable_game.html"
     },
     {
       "id": "game_theory.strategic_game.dominance.nash_is_rationalizable",
       "title": "Nash Equilibria Are Rationalizable",
-      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_nash_is_rationalizable.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_nash_is_rationalizable.html"
     }
   ],
   "dependents": [],
@@ -33,9 +34,9 @@
       "signature": "theorem dominance_solvable_unique_nash {G : StrategicGame ι U}\n    (hDS : G.IsDominanceSolvable) :\n    ∃! σ : G.Profile, IsNashEquilibrium G σ",
       "docstring": "If IESDS yields a unique profile, it is the unique Nash equilibrium. [MSZ 4.37]",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L88",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L88",
       "doc_url": null,
       "has_sorry": true,
       "status": "resolved",
@@ -48,9 +49,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.IESDS",
       "display_name": "EconCSLib.GameTheory.StrategicGame.IESDS",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
       "status": "resolved",
       "reason": null
     }

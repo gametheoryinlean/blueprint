@@ -4,22 +4,27 @@
     "title": "Mechanism Design.Auction.Bayesian",
     "href": "mechanism_design/auction/bayesian/index.html",
     "parent": "mechanism_design.auction",
-    "node_count": 8,
-    "descendant_node_count": 8
+    "node_count": 11,
+    "descendant_node_count": 11,
+    "status_counts": {
+      "formalized": 4,
+      "proved": 1,
+      "staged": 6
+    }
   },
   "counts": {
-    "internal_nodes": 8,
+    "internal_nodes": 11,
     "inlined_nodes": 0,
-    "descendant_nodes": 8,
+    "descendant_nodes": 11,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 8,
+    "non_proof_plan_nodes": 11,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
-    "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "proof_plan_attachments": 1,
+    "visible_nodes_without_proof_plans": 13,
+    "visible_nodes_with_selected_proof_plans": 13
   },
   "nodes": [
     {
@@ -85,6 +90,30 @@
       "status": "staged",
       "href": "mechanism_design/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html",
       "payload": "node_payloads/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.json"
+    },
+    {
+      "id": "mechanism_design.myerson.optimal_auction",
+      "title": "Regular Myerson Optimal Single-Item Auction",
+      "kind": "theorem",
+      "status": "proved",
+      "href": "mechanism_design/mechanism_design_myerson_optimal_auction.html",
+      "payload": "node_payloads/mechanism_design_myerson_optimal_auction.json"
+    },
+    {
+      "id": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "title": "Virtual-Surplus-Maximizing Allocation",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_virtual_surplus_maximizing_allocation.html",
+      "payload": "node_payloads/mechanism_design_myerson_virtual_surplus_maximizing_allocation.json"
+    },
+    {
+      "id": "mechanism_design.myerson.virtual_value_regularity",
+      "title": "Virtual Values and Regularity",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_myerson_virtual_value_regularity.html",
+      "payload": "node_payloads/mechanism_design_myerson_virtual_value_regularity.json"
     }
   ],
   "edges": [
@@ -119,6 +148,11 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "mechanism_design.auction.bayesian.entry_fee_and_reserve_price",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.auction.bayesian.single_item_framework",
       "to": "mechanism_design.auction.bayesian.interim_and_ic",
       "kind": "uses"
@@ -142,6 +176,41 @@
       "from": "mechanism_design.auction.bayesian.single_item_framework",
       "to": "mechanism_design.auction.bayesian.symmetric_first_price_equilibrium",
       "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.interim_and_ic",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_value_regularity",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_value_regularity",
+      "to": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.virtual_value_regularity",
+      "kind": "uses"
     }
   ],
   "boundary_topics": [
@@ -149,8 +218,8 @@
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
-      "role": "dependency",
-      "node_count": 44
+      "role": "dependency_and_dependent",
+      "node_count": 49
     }
   ],
   "boundary_edges": [
@@ -180,7 +249,7 @@
       "to": "mechanism_design.auction.bayesian.entry_fee_and_reserve_price",
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
-      "count": 2
+      "count": 1
     },
     {
       "from": "topic:mechanism_design",
@@ -209,6 +278,20 @@
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
       "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 4
+    },
+    {
+      "from": "mechanism_design.myerson.optimal_auction",
+      "to": "topic:mechanism_design",
+      "kind": "boundary_dependent",
+      "topic": "mechanism_design",
+      "count": 1
     }
   ],
   "keywords": [
@@ -216,6 +299,12 @@
       "id": "all-pay",
       "title": "all-pay",
       "href": "keywords/all-pay.html",
+      "count": 1
+    },
+    {
+      "id": "allocation-rule",
+      "title": "allocation-rule",
+      "href": "keywords/allocation-rule.html",
       "count": 1
     },
     {
@@ -234,7 +323,7 @@
       "id": "bayesian",
       "title": "bayesian",
       "href": "keywords/bayesian.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "bnic",
@@ -303,10 +392,34 @@
       "count": 1
     },
     {
+      "id": "mechanism-design",
+      "title": "mechanism-design",
+      "href": "keywords/mechanism-design.html",
+      "count": 3
+    },
+    {
+      "id": "myerson",
+      "title": "myerson",
+      "href": "keywords/myerson.html",
+      "count": 3
+    },
+    {
+      "id": "optimal-auction",
+      "title": "optimal-auction",
+      "href": "keywords/optimal-auction.html",
+      "count": 1
+    },
+    {
+      "id": "regularity",
+      "title": "regularity",
+      "href": "keywords/regularity.html",
+      "count": 1
+    },
+    {
       "id": "reserve-price",
       "title": "reserve-price",
       "href": "keywords/reserve-price.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "revenue-comparison",
@@ -342,7 +455,7 @@
       "id": "single-item",
       "title": "single-item",
       "href": "keywords/single-item.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "strategic-equivalence",
@@ -355,9 +468,28 @@
       "title": "symmetric-equilibrium",
       "href": "keywords/symmetric-equilibrium.html",
       "count": 2
+    },
+    {
+      "id": "virtual-surplus",
+      "title": "virtual-surplus",
+      "href": "keywords/virtual-surplus.html",
+      "count": 1
+    },
+    {
+      "id": "virtual-valuation",
+      "title": "virtual-valuation",
+      "href": "keywords/virtual-valuation.html",
+      "count": 2
     }
   ],
-  "proof_plan_attachments": [],
+  "proof_plan_attachments": [
+    {
+      "from": "mechanism_design.myerson.optimal_auction_legacy_plan",
+      "to": "mechanism_design.myerson.optimal_auction",
+      "kind": "has_plan",
+      "plan_status": "formalized"
+    }
+  ],
   "child_topics": [],
   "child_topic_nodes": [],
   "inlined_child_topics": []

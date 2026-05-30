@@ -3,10 +3,11 @@
   "title": "Potential Maximizer Is Nash",
   "kind": "theorem",
   "status": "staged",
-  "href": "game_theory/strategic_game/potential/game_theory_strategic_game_potential_potential_maximizer_nash.html",
-  "primary_topic": "game_theory.strategic_game.potential",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_potential_potential_maximizer_nash.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
-    "game_theory.strategic_game.potential"
+    "game_theory.strategic_game",
+    "game_theory.strategic_game.dynamics"
   ],
   "body_html": "<h1>Potential Maximizer Is Nash</h1>\n<p>In a finite exact potential game, every global maximizer of the potential is a\npure Nash equilibrium.</p>\n<p>The proof is local: if a unilateral deviation from a potential maximizer were\nprofitable, exactness would make the same deviation increase the potential,\ncontradicting maximality.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Section 5.6, Exercise 1(1)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite potential games have pure equilibria by maximizing the potential.</li>\n</ul>",
   "proof_html": null,
@@ -14,7 +15,7 @@
     {
       "id": "game_theory.strategic_game.potential.potential_game",
       "title": "Potential Game",
-      "href": "game_theory/strategic_game/potential/game_theory_strategic_game_potential_potential_game.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_potential_potential_game.html"
     },
     {
       "id": "game_theory.strategic_game.nash_equilibrium",
@@ -33,9 +34,9 @@
       "signature": "theorem IsExactPotential.maximizer_is_nash {Φ : G.Profile → U}\n    (hΦ : IsExactPotential G Φ) {σ : G.Profile}\n    (hmax : ∀ τ : G.Profile, Φ σ ≥ Φ τ) :\n    IsNashEquilibrium G σ",
       "docstring": "A profile maximizing an exact potential is a Nash equilibrium.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L59",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L59",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -51,9 +52,9 @@
       "signature": "theorem IsOrdinalPotential.isNash_iff_localMax {Φ : G.Profile → U}\n    (hΦ : IsOrdinalPotential G Φ) {σ : G.Profile} :\n    IsNashEquilibrium G σ ↔\n    ∀ i (s' : G.strategy i), Φ σ ≥ Φ (deviate σ i s')",
       "docstring": "Nash ↔ local maximizer of ordinal potential.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L74",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L74",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -66,9 +67,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
       "display_name": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

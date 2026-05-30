@@ -5,7 +5,10 @@
     "href": "game_theory/repeated_game/index.html",
     "parent": "game_theory",
     "node_count": 17,
-    "descendant_node_count": 17
+    "descendant_node_count": 17,
+    "status_counts": {
+      "staged": 17
+    }
   },
   "counts": {
     "internal_nodes": 17,
@@ -16,10 +19,10 @@
     "non_proof_plan_nodes": 17,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 4,
+    "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 22,
-    "visible_nodes_with_selected_proof_plans": 22
+    "visible_nodes_without_proof_plans": 21,
+    "visible_nodes_with_selected_proof_plans": 21
   },
   "nodes": [
     {
@@ -257,28 +260,21 @@
       "title": "Game Theory.Extensive Game",
       "href": "game_theory/extensive_game/index.html",
       "role": "dependency",
-      "node_count": 55
+      "node_count": 56
     },
     {
       "id": "game_theory.strategic_game",
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 181
+      "node_count": 105
     },
     {
-      "id": "game_theory.strategic_game.bayesian",
-      "title": "Game Theory.Strategic Game.Bayesian",
-      "href": "game_theory/strategic_game/bayesian/index.html",
+      "id": "game_theory.zero_sum",
+      "title": "Game Theory.Zero Sum",
+      "href": "game_theory/zero_sum/index.html",
       "role": "dependency",
-      "node_count": 6
-    },
-    {
-      "id": "game_theory.strategic_game.payoff_geometry",
-      "title": "Game Theory.Strategic Game.Payoff Geometry",
-      "href": "game_theory/strategic_game/payoff_geometry/index.html",
-      "role": "dependency",
-      "node_count": 5
+      "node_count": 77
     }
   ],
   "boundary_edges": [
@@ -287,6 +283,13 @@
       "to": "game_theory.repeated_game.folk_theorem.subgame_perfect_uniform_folk_theorem",
       "kind": "boundary_dependency",
       "topic": "game_theory.extensive_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.repeated_game.core.feasible_individually_rational_payoffs",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
       "count": 1
     },
     {
@@ -305,23 +308,16 @@
     },
     {
       "from": "topic:game_theory.strategic_game",
-      "to": "game_theory.repeated_game.incomplete_info.cav_u_theorem",
+      "to": "game_theory.repeated_game.incomplete_info.repeated_game_incomplete_information",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
       "count": 1
     },
     {
-      "from": "topic:game_theory.strategic_game.bayesian",
-      "to": "game_theory.repeated_game.incomplete_info.repeated_game_incomplete_information",
+      "from": "topic:game_theory.zero_sum",
+      "to": "game_theory.repeated_game.incomplete_info.cav_u_theorem",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.bayesian",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game.payoff_geometry",
-      "to": "game_theory.repeated_game.core.feasible_individually_rational_payoffs",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.payoff_geometry",
+      "topic": "game_theory.zero_sum",
       "count": 1
     }
   ],

@@ -4,22 +4,26 @@
     "title": "Mechanism Design.Auction.Basic",
     "href": "mechanism_design/auction/basic/index.html",
     "parent": "mechanism_design.auction",
-    "node_count": 7,
-    "descendant_node_count": 7
+    "node_count": 9,
+    "descendant_node_count": 9,
+    "status_counts": {
+      "formalized": 6,
+      "proved": 3
+    }
   },
   "counts": {
-    "internal_nodes": 7,
+    "internal_nodes": 9,
     "inlined_nodes": 0,
-    "descendant_nodes": 7,
+    "descendant_nodes": 9,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 7,
+    "non_proof_plan_nodes": 9,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 12,
+    "visible_nodes_with_selected_proof_plans": 12
   },
   "nodes": [
     {
@@ -61,6 +65,22 @@
       "status": "formalized",
       "href": "mechanism_design/mechanism_design_auction_basic_ordered_bid_utilities.html",
       "payload": "node_payloads/mechanism_design_auction_basic_ordered_bid_utilities.json"
+    },
+    {
+      "id": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "title": "Reserve Second-Price Truth-Telling Is Dominant",
+      "kind": "theorem",
+      "status": "proved",
+      "href": "mechanism_design/mechanism_design_auction_basic_reserve_second_price_dsic.html",
+      "payload": "node_payloads/mechanism_design_auction_basic_reserve_second_price_dsic.json"
+    },
+    {
+      "id": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "title": "Reserve Second-Price Mechanism",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "mechanism_design/mechanism_design_auction_basic_reserve_second_price_mechanism.html",
+      "payload": "node_payloads/mechanism_design_auction_basic_reserve_second_price_mechanism.json"
     },
     {
       "id": "mechanism_design.auction.basic.second_price_dsic",
@@ -106,6 +126,21 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.second_price_dsic",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.second_price_mechanism",
+      "to": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.auction.basic.second_price_mechanism",
       "to": "mechanism_design.auction.basic.second_price_dsic",
       "kind": "uses"
@@ -127,20 +162,27 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 181
+      "node_count": 105
     },
     {
       "id": "mechanism_design",
       "title": "Mechanism Design",
       "href": "mechanism_design/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 44
+      "node_count": 49
     }
   ],
   "boundary_edges": [
     {
       "from": "topic:game_theory.strategic_game",
       "to": "mechanism_design.auction.basic.first_price_no_dsic",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
       "count": 1
@@ -172,6 +214,20 @@
       "kind": "boundary_dependency",
       "topic": "mechanism_design",
       "count": 2
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
     },
     {
       "from": "topic:mechanism_design",
@@ -227,7 +283,7 @@
       "id": "auction",
       "title": "auction",
       "href": "keywords/auction.html",
-      "count": 7
+      "count": 9
     },
     {
       "id": "bid-profile",
@@ -251,7 +307,7 @@
       "id": "dsic",
       "title": "dsic",
       "href": "keywords/dsic.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "first-price",
@@ -263,7 +319,7 @@
       "id": "mechanism",
       "title": "mechanism",
       "href": "keywords/mechanism.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "mechanism-design",
@@ -272,10 +328,16 @@
       "count": 1
     },
     {
+      "id": "reserve-price",
+      "title": "reserve-price",
+      "href": "keywords/reserve-price.html",
+      "count": 2
+    },
+    {
       "id": "second-price",
       "title": "second-price",
       "href": "keywords/second-price.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "support",
@@ -293,13 +355,13 @@
       "id": "vickrey",
       "title": "vickrey",
       "href": "keywords/vickrey.html",
-      "count": 2
+      "count": 4
     },
     {
       "id": "weakly-dominant",
       "title": "weakly-dominant",
       "href": "keywords/weakly-dominant.html",
-      "count": 1
+      "count": 2
     }
   ],
   "proof_plan_attachments": [],

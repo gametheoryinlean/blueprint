@@ -4,22 +4,25 @@
     "title": "Game Theory.Stochastic Game.Asymptotic",
     "href": "game_theory/stochastic_game/asymptotic/index.html",
     "parent": "game_theory.stochastic_game",
-    "node_count": 3,
-    "descendant_node_count": 3
+    "node_count": 2,
+    "descendant_node_count": 2,
+    "status_counts": {
+      "staged": 2
+    }
   },
   "counts": {
-    "internal_nodes": 3,
+    "internal_nodes": 2,
     "inlined_nodes": 0,
-    "descendant_nodes": 3,
+    "descendant_nodes": 2,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 3,
+    "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 5,
-    "visible_nodes_with_selected_proof_plans": 5
+    "visible_nodes_without_proof_plans": 4,
+    "visible_nodes_with_selected_proof_plans": 4
   },
   "nodes": [
     {
@@ -37,25 +40,12 @@
       "status": "staged",
       "href": "game_theory/stochastic_game/game_theory_stochastic_game_asymptotic_mertens_neyman_uniform_value.html",
       "payload": "node_payloads/game_theory_stochastic_game_asymptotic_mertens_neyman_uniform_value.json"
-    },
-    {
-      "id": "game_theory.stochastic_game.examples.big_match_uniform_value",
-      "title": "Big Match Uniform Value",
-      "kind": "theorem",
-      "status": "staged",
-      "href": "game_theory/stochastic_game/game_theory_stochastic_game_examples_big_match_uniform_value.html",
-      "payload": "node_payloads/game_theory_stochastic_game_examples_big_match_uniform_value.json"
     }
   ],
   "edges": [
     {
       "from": "game_theory.stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
       "to": "game_theory.stochastic_game.asymptotic.mertens_neyman_uniform_value",
-      "kind": "uses"
-    },
-    {
-      "from": "game_theory.stochastic_game.asymptotic.mertens_neyman_uniform_value",
-      "to": "game_theory.stochastic_game.examples.big_match_uniform_value",
       "kind": "uses"
     }
   ],
@@ -64,7 +54,7 @@
       "id": "game_theory.stochastic_game",
       "title": "Game Theory.Stochastic Game",
       "href": "game_theory/stochastic_game/index.html",
-      "role": "dependency",
+      "role": "dependency_and_dependent",
       "node_count": 10
     }
   ],
@@ -73,6 +63,13 @@
       "from": "topic:game_theory.stochastic_game",
       "to": "game_theory.stochastic_game.asymptotic.bewley_kohlberg_asymptotic_value",
       "kind": "boundary_dependency",
+      "topic": "game_theory.stochastic_game",
+      "count": 1
+    },
+    {
+      "from": "game_theory.stochastic_game.asymptotic.mertens_neyman_uniform_value",
+      "to": "topic:game_theory.stochastic_game",
+      "kind": "boundary_dependent",
       "topic": "game_theory.stochastic_game",
       "count": 1
     }
@@ -91,18 +88,6 @@
       "count": 1
     },
     {
-      "id": "big-match",
-      "title": "big-match",
-      "href": "keywords/big-match.html",
-      "count": 1
-    },
-    {
-      "id": "example",
-      "title": "example",
-      "href": "keywords/example.html",
-      "count": 1
-    },
-    {
       "id": "mertens-neyman",
       "title": "mertens-neyman",
       "href": "keywords/mertens-neyman.html",
@@ -112,19 +97,19 @@
       "id": "stochastic-game",
       "title": "stochastic-game",
       "href": "keywords/stochastic-game.html",
-      "count": 3
+      "count": 2
     },
     {
       "id": "uniform-value",
       "title": "uniform-value",
       "href": "keywords/uniform-value.html",
-      "count": 2
+      "count": 1
     },
     {
       "id": "zero-sum",
       "title": "zero-sum",
       "href": "keywords/zero-sum.html",
-      "count": 3
+      "count": 2
     }
   ],
   "proof_plan_attachments": [],

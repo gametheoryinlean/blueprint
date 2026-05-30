@@ -3,12 +3,13 @@
   "title": "Dominated Strategy",
   "kind": "definition",
   "status": "staged",
-  "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_dominated_strategy.html",
-  "primary_topic": "game_theory.strategic_game.dominance",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_dominated_strategy.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
+    "game_theory.strategic_game",
     "game_theory.strategic_game.dominance"
   ],
-  "body_html": "<h1>Dominated Strategy</h1>\n<p>A strategy $m_i\\in\\Delta(S_i)$ is strictly dominated if there exists\n$\\sigma_i\\in\\Delta(S_i)$ such that\n$$\n  g_i(\\sigma_i,t_{-i})&gt;g_i(m_i,t_{-i})\n  \\quad\\text{for all } t_{-i}\\in S_{-i}.\n$$\nIt is weakly dominated if there exists $\\sigma_i$ such that the same inequalities\nare weak for all $t_{-i}$ and strict for at least one $t_{-i}$.</p>\n<p>For pure strategies, this specializes by identifying $s_i\\in S_i$ with the Dirac\nmass at $s_i$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 1.3.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strictly dominated and weakly dominated pure strategies.</li>\n<li>[MFoGT, Definitions 4.3.2 and 4.3.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strict and weak domination for mixed strategies in finite games.</li>\n</ul>",
+  "body_html": "<h1>Dominated Strategy</h1>\n<p>A strategy $m_i\\in\\Delta(S_i)$ is strictly dominated if there exists\n$\\sigma_i\\in\\Delta(S_i)$ such that\n$$\n  g_i(\\sigma_i,t_{-i})&gt;g_i(m_i,t_{-i})\n  \\quad\\text{for all } t_{-i}\\in S_{-i}.\n$$\nIt is weakly dominated if there exists $\\sigma_i$ such that the same inequalities\nare weak for all $t_{-i}$ and strict for at least one $t_{-i}$.</p>\n<p>For pure strategies, this specializes by identifying $s_i\\in S_i$ with the Dirac\nmass at $s_i$.</p>\n<h2>Lean scope</h2>\n<p>Lean's <code>StrictlyDominates</code> / <code>WeaklyDominates</code> formalize domination between\n<strong>pure</strong> strategies ($s,s' : G.\\text{strategy}\\,i$). The mixed-strategy\ndomination above — domination by some $\\sigma_i\\in\\Delta(S_i)$ — is the more\ngeneral MFoGT notion, of which the Lean relations are the pure-strategy special\ncase. Mixed-strategy domination is not yet formalized, so this node stays\n<code>pending</code> until the general notion is ported.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 1.3.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strictly dominated and weakly dominated pure strategies.</li>\n<li>[MFoGT, Definitions 4.3.2 and 4.3.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strict and weak domination for mixed strategies in finite games.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -21,32 +22,32 @@
     {
       "id": "game_theory.extensive_game.imperfect_information.forward_induction",
       "title": "Forward Induction",
-      "href": "game_theory/extensive_game/imperfect_information/game_theory_extensive_game_imperfect_information_forward_induction.html"
+      "href": "game_theory/extensive_game/game_theory_extensive_game_imperfect_information_forward_induction.html"
     },
     {
       "id": "game_theory.strategic_game.dominance.iterated_elimination",
       "title": "Iterated Elimination Of Strictly Dominated Strategies",
-      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_iterated_elimination.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_iterated_elimination.html"
     },
     {
       "id": "game_theory.strategic_game.refinements.perfect_equilibrium_undominated_two_player",
       "title": "Perfect Equilibrium And Undominated Equilibrium",
-      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_perfect_equilibrium_undominated_two_player.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_refinements_perfect_equilibrium_undominated_two_player.html"
     },
     {
       "id": "game_theory.strategic_game.refinements.proper_vs_perfect_equilibrium_examples",
       "title": "Proper And Perfect Equilibrium Examples",
-      "href": "game_theory/strategic_game/refinements/game_theory_strategic_game_refinements_proper_vs_perfect_equilibrium_examples.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_refinements_proper_vs_perfect_equilibrium_examples.html"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
       "title": "Strict Domination And Never Best Response (via auxiliary zero-sum game)",
-      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_applications_strict_dominance_never_best_response.html"
     },
     {
       "id": "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
       "title": "Weak Domination And Completely Mixed Tests (via auxiliary zero-sum game)",
-      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_applications_weak_dominance_never_best_response.html"
     }
   ],
   "lean_refs": [
@@ -59,9 +60,9 @@
       "signature": "def WeaklyDominates (G : StrategicGame ι U) (i : ι) (s s' : G.strategy i) : Prop",
       "docstring": "Strategy `s` weakly dominates strategy `s'` for player `i`.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L24",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L24",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -77,9 +78,9 @@
       "signature": "def StrictlyDominates (G : StrategicGame ι U) (i : ι) (s s' : G.strategy i) : Prop",
       "docstring": "Strategy `s` strictly dominates strategy `s'` for player `i`.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L28",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L28",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -92,9 +93,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.Dominance",
       "display_name": "EconCSLib.GameTheory.StrategicGame.Dominance",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1",
       "status": "resolved",
       "reason": null
     }

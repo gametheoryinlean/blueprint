@@ -3,12 +3,11 @@
   "title": "Diagonal Matrix Game Value",
   "kind": "proposition",
   "status": "proved",
-  "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_examples_diagonal_matrix_game_value.html",
-  "primary_topic": "game_theory.strategic_game",
+  "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_examples_diagonal_matrix_game_value.html",
+  "primary_topic": "game_theory.zero_sum",
   "topics": [
-    "game_theory.strategic_game",
-    "game_theory.strategic_game.zero_sum",
-    "game_theory.strategic_game.zero_sum.examples"
+    "game_theory.zero_sum",
+    "game_theory.zero_sum.examples"
   ],
   "body_html": "<h1>Diagonal Matrix Game Value</h1>\n<p>Let $A$ be the diagonal $n\\times n$ matrix with diagonal entries\n$a_i&gt;0$. Then\n$$\n  \\operatorname{val}(A)=\n  \\left(\\sum_{i=1}^n a_i^{-1}\\right)^{-1}.\n$$\nBoth players have the same optimal mixed strategy $p\\in\\Delta(\\{1,\\ldots,n\\})$\ngiven by\n$$\n  p_i=\n  \\frac{a_i^{-1}}{\\sum_{k=1}^n a_k^{-1}}.\n$$</p>",
   "proof_html": "<p>Let\n$$\n  c=\\left(\\sum_{k=1}^n a_k^{-1}\\right)^{-1}\n  \\quad\\text{and}\\quad\n  p_i=ca_i^{-1}.\n$$\nThen $p$ is a probability vector. Against any pure column $j$, the row player's\npayoff from $p$ is $p_ja_j=c$, so $p$ guarantees $c$. Against any pure row $i$,\nthe column player's mixed strategy $p$ gives payoff $a_ip_i=c$, so $p$ holds the\nrow player to $c$. By weak duality, the value is $c$ and $p$ is optimal for both\nplayers.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 2.8, Exercise 6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Compute value and optimal strategies for a positive diagonal matrix game.</li>\n</ul>",
@@ -16,7 +15,7 @@
     {
       "id": "game_theory.strategic_game.zero_sum.core.value",
       "title": "Value Of A Zero-Sum Game",
-      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_core_value.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_core_value.html"
     }
   ],
   "dependents": [],
@@ -30,9 +29,9 @@
       "signature": "theorem diagonalGame_value (a : I → ℝ) (hpos : ∀ i, 0 < a i) :\n    (diagonalGame a).value = diagonalGameValue a",
       "docstring": "**Diagonal matrix game value** [MFoGT Ex. 2.8.6].",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/Examples/StrategicGame/DiagonalGame.lean#L100",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Examples/StrategicGame/DiagonalGame.lean#L100",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -45,9 +44,9 @@
       "name": "EconCSLib.Examples.StrategicGame.DiagonalGame",
       "display_name": "EconCSLib.Examples.StrategicGame.DiagonalGame",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/Examples/StrategicGame/DiagonalGame.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Examples/StrategicGame/DiagonalGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

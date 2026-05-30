@@ -3,10 +3,11 @@
   "title": "Evolutionarily Stable Strategy",
   "kind": "definition",
   "status": "staged",
-  "href": "game_theory/strategic_game/evolution/game_theory_strategic_game_evolution_evolutionarily_stable_strategy.html",
-  "primary_topic": "game_theory.strategic_game.evolution",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_evolution_evolutionarily_stable_strategy.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
-    "game_theory.strategic_game.evolution"
+    "game_theory.strategic_game",
+    "game_theory.strategic_game.dynamics"
   ],
   "body_html": "<h1>Evolutionarily Stable Strategy</h1>\n<p>For a symmetric two-player game with payoff matrix $A$, a mixed type\n$p\\in\\Delta(K)$ is an evolutionarily stable strategy if every mutant\n$q\\ne p$ has a threshold $\\epsilon(q)&gt;0$ such that, for all\n$0&lt;\\epsilon\\le\\epsilon(q)$,\n$$\n  pA((1-\\epsilon)p+\\epsilon q)\n  &gt;\n  qA((1-\\epsilon)p+\\epsilon q).\n$$</p>\n<p>Equivalently, $p$ satisfies the symmetric Nash condition\n$pAp\\ge qAp$ for every $q$, and when equality holds it satisfies the second-order\nstability condition $pAq&gt;qAq$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Def. 5.5.7] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Evolutionarily stable strategy in a symmetric two-player game.</li>\n</ul>",
   "proof_html": null,
@@ -14,14 +15,14 @@
     {
       "id": "game_theory.strategic_game.core.symmetric_game",
       "title": "Symmetric Game",
-      "href": "game_theory/strategic_game/core/game_theory_strategic_game_core_symmetric_game.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_core_symmetric_game.html"
     }
   ],
   "dependents": [
     {
       "id": "game_theory.strategic_game.evolution.ess_uniform_invasion_barrier",
       "title": "ESS Uniform Invasion Barrier",
-      "href": "game_theory/strategic_game/evolution/game_theory_strategic_game_evolution_ess_uniform_invasion_barrier.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_evolution_ess_uniform_invasion_barrier.html"
     }
   ],
   "lean_refs": [
@@ -34,9 +35,9 @@
       "signature": "def IsESS {S : Type*} (u : S → S → ℝ) (s : S) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L32",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L32",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -52,9 +53,9 @@
       "signature": "def IsNSS {S : Type*} (u : S → S → ℝ) (s : S) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L39",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L39",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -70,9 +71,9 @@
       "signature": "theorem IsESS.isNSS {s : S} (h : IsESS u s) : IsNSS u s",
       "docstring": "Every ESS is neutrally stable.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L49",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L49",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -88,9 +89,9 @@
       "signature": "theorem IsESS.nash_condition {s : S} (h : IsESS u s) :\n    ∀ t, u s s ≥ u t s",
       "docstring": "An ESS satisfies the symmetric Nash condition. [MSZ 5.51]",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L65",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L65",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -106,9 +107,9 @@
       "signature": "theorem IsESS.strict_against_other {s t : S}\n    (hs : IsESS u s) (ht : IsESS u t) (hne : s ≠ t) :\n    u s s > u t s",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L70",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L70",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -124,9 +125,9 @@
       "signature": "theorem strict_nash_implies_ess {s : S}\n    (hstrict : ∀ t, t ≠ s → u s s > u t s) : IsESS u s",
       "docstring": "A strict symmetric Nash equilibrium is automatically ESS.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L56",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L56",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -139,9 +140,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.ESS",
       "display_name": "EconCSLib.GameTheory.StrategicGame.ESS",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/ESS.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ESS.lean#L1",
       "status": "resolved",
       "reason": null
     }

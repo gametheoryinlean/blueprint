@@ -3,9 +3,10 @@
   "title": "Solvable Game",
   "kind": "definition",
   "status": "staged",
-  "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_dominance_solvable_game.html",
-  "primary_topic": "game_theory.strategic_game.dominance",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_dominance_solvable_game.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
+    "game_theory.strategic_game",
     "game_theory.strategic_game.dominance"
   ],
   "body_html": "<h1>Solvable Game</h1>\n<p>A game is solvable if the set $S^\\infty$ of rationalizable outcomes is reduced to\na singleton:\n$$\n  S^\\infty=\\{s^*\\}.\n$$\nThis captures games whose common-rationality elimination process predicts a\nunique profile.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 4.4.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. A game is solvable if the rationalizable outcome set is a singleton.</li>\n<li>[MFoGT, Section 1.3.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Earlier use of solvability for iterated elimination.</li>\n</ul>",
@@ -14,14 +15,14 @@
     {
       "id": "game_theory.strategic_game.dominance.rationalizable_strategy",
       "title": "Rationalizable Strategy",
-      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_rationalizable_strategy.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_rationalizable_strategy.html"
     }
   ],
   "dependents": [
     {
       "id": "game_theory.strategic_game.dominance.solvable_unique_nash",
       "title": "Solvable Games Have A Unique Nash Equilibrium",
-      "href": "game_theory/strategic_game/dominance/game_theory_strategic_game_dominance_solvable_unique_nash.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dominance_solvable_unique_nash.html"
     }
   ],
   "lean_refs": [
@@ -34,9 +35,9 @@
       "signature": "def IsDominanceSolvable (G : StrategicGame ι U) : Prop",
       "docstring": "A game is dominance-solvable if IESDS yields a unique surviving profile.",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L84",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L84",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -49,9 +50,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.IESDS",
       "display_name": "EconCSLib.GameTheory.StrategicGame.IESDS",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
       "status": "resolved",
       "reason": null
     }

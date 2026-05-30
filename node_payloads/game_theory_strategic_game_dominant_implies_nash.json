@@ -6,7 +6,8 @@
   "href": "game_theory/strategic_game/game_theory_strategic_game_dominant_implies_nash.html",
   "primary_topic": "game_theory.strategic_game",
   "topics": [
-    "game_theory.strategic_game"
+    "game_theory.strategic_game",
+    "game_theory.strategic_game.equilibrium"
   ],
   "body_html": "<h1>Dominant Strategy Profile is a Nash Equilibrium</h1>\n<p>If every player \\(i\\) plays a weakly dominant strategy \\(s_i\\), then the resulting\nprofile \\(\\sigma = (s_i)_{i \\in I}\\) is a Nash equilibrium.</p>",
   "proof_html": "<p>A weakly dominant strategy weakly dominates every alternative. In particular,\nfor any player \\(i\\) and any deviation \\(s'_i\\), we have\n\\(u_i(\\sigma[i \\mapsto s'_i]) \\le u_i(\\sigma)\\). This means each player is best\nresponding, so \\(\\sigma\\) is a Nash equilibrium. \\(\\square\\)</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Relationship between dominant strategies and Nash equilibrium.</li>\n</ul>",
@@ -33,9 +34,9 @@
       "signature": "theorem of_dominant {G : StrategicGame ι U} {σ : G.Profile}\n    (h : ∀ i : ι, IsWeaklyDominant G i (σ i)) : IsNashEquilibrium G σ",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L30",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L30",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -48,9 +49,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.NashEquilibrium",
       "display_name": "EconCSLib.GameTheory.StrategicGame.NashEquilibrium",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L1",
       "status": "resolved",
       "reason": null
     }

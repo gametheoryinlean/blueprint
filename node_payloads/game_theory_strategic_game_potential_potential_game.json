@@ -3,10 +3,11 @@
   "title": "Potential Game",
   "kind": "definition",
   "status": "staged",
-  "href": "game_theory/strategic_game/potential/game_theory_strategic_game_potential_potential_game.html",
-  "primary_topic": "game_theory.strategic_game.potential",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_potential_potential_game.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
-    "game_theory.strategic_game.potential"
+    "game_theory.strategic_game",
+    "game_theory.strategic_game.dynamics"
   ],
   "body_html": "<h1>Potential Game</h1>\n<p>For a finite game, a function $P$ on mixed profiles is a potential if every pure\nunilateral deviation has the same payoff difference and potential difference:\n$$\n  g_i(s_i,u_{-i})-g_i(t_i,u_{-i})\n  =\n  P(s_i,u_{-i})-P(t_i,u_{-i}).\n$$</p>\n<p>MFoGT also gives an evaluation-game version: a $C^1$ function $W$ is a\npotential for $\\Phi$ if, along each player's tangent space, the gradient of $W$\nis a positive scalar multiple of the player's evaluation vector.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Definitions 5.2.7 and 5.2.8] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite and evaluation-game potential functions.</li>\n</ul>",
   "proof_html": null,
@@ -21,17 +22,17 @@
     {
       "id": "game_theory.strategic_game.dynamics.potential_replicator_lyapunov",
       "title": "Potential Is Lyapunov For Replicator Dynamics",
-      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_potential_replicator_lyapunov.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dynamics_potential_replicator_lyapunov.html"
     },
     {
       "id": "game_theory.strategic_game.dynamics.stable_game_framework",
       "title": "Stable Game Framework (Hofbauer–Sandholm)",
-      "href": "game_theory/strategic_game/dynamics/game_theory_strategic_game_dynamics_stable_game_framework.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_dynamics_stable_game_framework.html"
     },
     {
       "id": "game_theory.strategic_game.potential.potential_maximizer_nash",
       "title": "Potential Maximizer Is Nash",
-      "href": "game_theory/strategic_game/potential/game_theory_strategic_game_potential_potential_maximizer_nash.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_potential_potential_maximizer_nash.html"
     }
   ],
   "lean_refs": [
@@ -44,9 +45,9 @@
       "signature": "def IsExactPotential (G : StrategicGame ι U) (Φ : G.Profile → U) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L38",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L38",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -62,9 +63,9 @@
       "signature": "def IsOrdinalPotential (G : StrategicGame ι U) (Φ : G.Profile → U) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L45",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L45",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -77,9 +78,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
       "display_name": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

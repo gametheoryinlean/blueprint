@@ -6,8 +6,8 @@
   "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_value_efficient.html",
   "primary_topic": "game_theory.coalitional_game",
   "topics": [
-    "game_theory",
-    "game_theory.coalitional_game"
+    "game_theory.coalitional_game",
+    "game_theory.coalitional_game.shapley_value"
   ],
   "body_html": "<h1>Shapley Value Is Efficient</h1>\n<p><strong>Theorem.</strong> The Shapley value distributes the worth of the grand coalition:\n$$\n  \\sum_{i \\in N} \\operatorname{Sh}_i(v)=v(N).\n$$</p>",
   "proof_html": "<p>Sketch</p>\n<p>Expand the Shapley formula and exchange the sums over players and predecessor\ncoalitions. Each coalition marginal contribution appears with the number of\norders in which it is the relevant predecessor set. The resulting telescoping\nover permutations leaves exactly $v(N)-v(\\varnothing)=v(N)$.</p>\n<h2>Lean Status</h2>\n<p>The theorem statement exists as <code>CoalitionalGame.shapleyValue_efficient</code>\nand currently has a documented proof gap.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.18, Thm 18.18] Maschler, Solan, Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n</ul>",
@@ -34,9 +34,9 @@
       "signature": "theorem shapleyValue_efficient :\n    ∑ i : N, G.shapleyValue i = G.v Finset.univ",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L91",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L91",
       "doc_url": null,
       "has_sorry": true,
       "status": "resolved",
@@ -49,9 +49,9 @@
       "name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
       "display_name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1",
       "status": "resolved",
       "reason": null
     }

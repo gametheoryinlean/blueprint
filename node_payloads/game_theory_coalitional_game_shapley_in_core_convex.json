@@ -6,8 +6,8 @@
   "href": "game_theory/coalitional_game/game_theory_coalitional_game_shapley_in_core_convex.html",
   "primary_topic": "game_theory.coalitional_game",
   "topics": [
-    "game_theory",
-    "game_theory.coalitional_game"
+    "game_theory.coalitional_game",
+    "game_theory.coalitional_game.shapley_value"
   ],
   "body_html": "<h1>Shapley Value Lies In The Core Of A Convex Game</h1>\n<p><strong>Theorem.</strong> If a TU game is convex, then its Shapley value belongs to the\ncore.</p>\n<p>Convexity means marginal contributions are increasing with coalition size.\nThis increasing-marginal-returns property makes the Shapley average satisfy\nevery coalitional rationality inequality:\n$$\n  \\sum_{i \\in S}\\operatorname{Sh}_i(v) \\ge v(S)\n  \\quad\\text{for every } S \\subseteq N.\n$$\nTogether with Shapley efficiency, this places the Shapley payoff vector in\nthe core.</p>\n<h2>Lean Status</h2>\n<p>The theorem statement exists as <code>CoalitionalGame.IsConvex.shapley_in_core</code>\nand currently has a documented proof gap.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.18, Thm 18.32] Maschler, Solan, Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n</ul>",
   "proof_html": null,
@@ -39,9 +39,9 @@
       "signature": "theorem IsConvex.shapley_in_core (hconv : G.IsConvex) :\n    (fun i => G.shapleyValue i) ∈ G.Core",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L111",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L111",
       "doc_url": null,
       "has_sorry": true,
       "status": "resolved",
@@ -54,9 +54,9 @@
       "name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
       "display_name": "EconCSLib.GameTheory.CoalitionalGame.ShapleyValue",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -1,0 +1,364 @@
+{
+  "topic": {
+    "id": "game_theory.zero_sum.minimax",
+    "title": "Game Theory.Zero Sum.Minimax",
+    "href": "game_theory/zero_sum/minimax/index.html",
+    "parent": "game_theory.zero_sum",
+    "node_count": 7,
+    "descendant_node_count": 7,
+    "status_counts": {
+      "admitted": 2,
+      "formalized": 1,
+      "proved": 4
+    }
+  },
+  "counts": {
+    "internal_nodes": 7,
+    "inlined_nodes": 0,
+    "descendant_nodes": 7,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 5,
+    "proof_plan_nodes": 2,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 4,
+    "proof_plan_attachments": 8,
+    "visible_nodes_without_proof_plans": 10,
+    "visible_nodes_with_selected_proof_plans": 10
+  },
+  "nodes": [
+    {
+      "id": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
+      "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
+      "kind": "proof-plan",
+      "status": "admitted",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_dantzig_proof_spine.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_dantzig_proof_spine.json",
+      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.lam_mu_existence",
+      "title": "Existence of Optimal Mixed Strategies (Loomis Foundations)",
+      "kind": "theorem",
+      "status": "proved",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_lam_mu_existence.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_lam_mu_existence.json"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.maximin_le_minimax",
+      "title": "Maximin is Bounded by Minimax",
+      "kind": "lemma",
+      "status": "proved",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_maximin_le_minimax.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_maximin_le_minimax.json"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "title": "Maximin and Minimax Values",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_maximin_minimax.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_maximin_minimax.json"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.simplex_termination",
+      "title": "Dantzig Simplex Termination (Open)",
+      "kind": "proof-plan",
+      "status": "admitted",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_simplex_termination.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_simplex_termination.json",
+      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "plan_status": "candidate"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "title": "Von Neumann Minimax Theorem",
+      "kind": "theorem",
+      "status": "proved",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_von_neumann_minimax.json"
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.zero_sum_nash_value_unique",
+      "title": "Nash Payoff Uniqueness in Zero-Sum Games",
+      "kind": "theorem",
+      "status": "proved",
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_zero_sum_nash_value_unique.html",
+      "payload": "node_payloads/game_theory_strategic_game_zero_sum_zero_sum_nash_value_unique.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "to": "game_theory.strategic_game.zero_sum.lam_mu_existence",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "to": "game_theory.strategic_game.zero_sum.maximin_le_minimax",
+      "kind": "uses"
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
+      "to": "game_theory.strategic_game.zero_sum.simplex_termination",
+      "kind": "proof_plan_uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "foundation",
+      "title": "Foundation",
+      "href": "foundation/index.html",
+      "role": "dependency",
+      "node_count": 26
+    },
+    {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency",
+      "node_count": 105
+    },
+    {
+      "id": "game_theory.zero_sum",
+      "title": "Game Theory.Zero Sum",
+      "href": "game_theory/zero_sum/index.html",
+      "role": "dependency_and_dependent",
+      "node_count": 77
+    },
+    {
+      "id": "math",
+      "title": "Math",
+      "href": "math/index.html",
+      "role": "dependent",
+      "node_count": 43
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:foundation",
+      "to": "game_theory.strategic_game.zero_sum.lam_mu_existence",
+      "kind": "boundary_dependency",
+      "topic": "foundation",
+      "count": 2
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.strategic_game.zero_sum.zero_sum_nash_value_unique",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.zero_sum",
+      "to": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.zero_sum",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.zero_sum",
+      "to": "game_theory.strategic_game.zero_sum.zero_sum_nash_value_unique",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.zero_sum",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_le_minimax",
+      "to": "topic:game_theory.zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.zero_sum",
+      "count": 3
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "to": "topic:game_theory.zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.zero_sum",
+      "count": 2
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "to": "topic:game_theory.zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.zero_sum",
+      "count": 7
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.lam_mu_existence",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_le_minimax",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_minimax",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 1
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "to": "topic:math",
+      "kind": "boundary_dependent",
+      "topic": "math",
+      "count": 3
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.maximin_le_minimax",
+      "to": "topic:math",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "math",
+      "count": 2
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "to": "topic:math",
+      "kind": "boundary_proof_plan_dependent",
+      "topic": "math",
+      "count": 1
+    }
+  ],
+  "keywords": [
+    {
+      "id": "dantzig",
+      "title": "dantzig",
+      "href": "keywords/dantzig.html",
+      "count": 2
+    },
+    {
+      "id": "equilibrium",
+      "title": "equilibrium",
+      "href": "keywords/equilibrium.html",
+      "count": 1
+    },
+    {
+      "id": "existence",
+      "title": "existence",
+      "href": "keywords/existence.html",
+      "count": 1
+    },
+    {
+      "id": "linear-programming",
+      "title": "linear-programming",
+      "href": "keywords/linear-programming.html",
+      "count": 1
+    },
+    {
+      "id": "minimax",
+      "title": "minimax",
+      "href": "keywords/minimax.html",
+      "count": 6
+    },
+    {
+      "id": "open-issue",
+      "title": "open-issue",
+      "href": "keywords/open-issue.html",
+      "count": 1
+    },
+    {
+      "id": "ordered-field",
+      "title": "ordered-field",
+      "href": "keywords/ordered-field.html",
+      "count": 1
+    },
+    {
+      "id": "proof-plan",
+      "title": "proof-plan",
+      "href": "keywords/proof-plan.html",
+      "count": 1
+    },
+    {
+      "id": "simplex",
+      "title": "simplex",
+      "href": "keywords/simplex.html",
+      "count": 1
+    },
+    {
+      "id": "theorem",
+      "title": "theorem",
+      "href": "keywords/theorem.html",
+      "count": 1
+    },
+    {
+      "id": "value",
+      "title": "value",
+      "href": "keywords/value.html",
+      "count": 4
+    },
+    {
+      "id": "weak-duality",
+      "title": "weak-duality",
+      "href": "keywords/weak-duality.html",
+      "count": 1
+    },
+    {
+      "id": "zero-sum",
+      "title": "zero-sum",
+      "href": "keywords/zero-sum.html",
+      "count": 7
+    }
+  ],
+  "proof_plan_attachments": [
+    {
+      "from": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.simplex_termination",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "math.linear_programming.minimax_bridge.zero_sum_lp_bridge",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "math.minimax.kakutani_minimax_proof",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "math.minimax.lp_duality_minimax_proof",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "math.minimax.minimax_from_antisymmetric_games",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "math.minimax.minimax_from_deterministic_approachability",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "candidate"
+    },
+    {
+      "from": "math.minimax.minimax_from_loomis",
+      "to": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "kind": "has_plan",
+      "plan_status": "selected"
+    }
+  ],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

@@ -3,10 +3,11 @@
   "title": "Degenerate Correlated Equilibrium",
   "kind": "theorem",
   "status": "staged",
-  "href": "game_theory/strategic_game/correlated/game_theory_strategic_game_correlated_degenerate_correlated_equilibrium.html",
-  "primary_topic": "game_theory.strategic_game.correlated",
+  "href": "game_theory/strategic_game/game_theory_strategic_game_correlated_degenerate_correlated_equilibrium.html",
+  "primary_topic": "game_theory.strategic_game",
   "topics": [
-    "game_theory.strategic_game.correlated"
+    "game_theory.strategic_game",
+    "game_theory.strategic_game.bayesian_correlated"
   ],
   "body_html": "<h1>Degenerate Correlated Equilibrium</h1>\n<p>A degenerate correlated equilibrium is a correlated device that puts probability\none on a single pure strategy profile.</p>\n<p>For such a point-mass device, obedience is exactly the Nash condition for that\npure profile: no player can improve by deviating from the recommended action,\nbecause the recommendation fully determines the profile.</p>",
   "proof_html": "<p>Sketch</p>\n<p>If the point-mass profile is Nash, every recommended action is already a best\nresponse to the other components, so obedience holds. Conversely, obedience of\nthe point-mass device tests exactly the unilateral deviations from that profile,\nwhich is the Nash condition.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 8, Def. 8.6 and Thm. 8.7] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Point-mass correlated equilibria correspond to pure Nash equilibria.</li>\n</ul>",
@@ -14,7 +15,7 @@
     {
       "id": "game_theory.strategic_game.correlated.correlated_equilibrium",
       "title": "Correlated Equilibrium",
-      "href": "game_theory/strategic_game/correlated/game_theory_strategic_game_correlated_correlated_equilibrium.html"
+      "href": "game_theory/strategic_game/game_theory_strategic_game_correlated_correlated_equilibrium.html"
     },
     {
       "id": "game_theory.strategic_game.nash_equilibrium",
@@ -33,9 +34,9 @@
       "signature": "def IsDegenerateCorrelatedEq (G : StrategicGame ι U) (σ : G.Profile) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L36",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L36",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -51,9 +52,9 @@
       "signature": "theorem nash_iff_degenerate_ce (G : StrategicGame ι U) (σ : G.Profile) :\n    IsNashEquilibrium G σ ↔ IsDegenerateCorrelatedEq G σ",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L41",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L41",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -66,9 +67,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.CorrelatedEq",
       "display_name": "EconCSLib.GameTheory.StrategicGame.CorrelatedEq",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L1",
       "status": "resolved",
       "reason": null
     }

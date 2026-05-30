@@ -102,34 +102,7 @@
         "foundation.preference.total_preorder"
       ],
       "used_by": [
-        "foundation.preference.representation",
         "foundation.utility.lottery"
-      ]
-    },
-    {
-      "id": "foundation.preference.representation",
-      "title": "Utility Representation",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "preference"
-      ],
-      "primary_topic": "foundation",
-      "topics": [
-        "foundation",
-        "foundation.preference"
-      ],
-      "lean_declarations": [
-        "RepresentsPreference",
-        "RepresentsPreference.lt_iff",
-        "RepresentsPreference.indifferent_iff"
-      ],
-      "topic": "foundation",
-      "uses": [
-        "foundation.preference.relation"
-      ],
-      "used_by": [
-        "foundation.utility.expected_utility_representation"
       ]
     },
     {
@@ -156,6 +129,9 @@
       "uses": [
         "foundation.preference.indifferent",
         "foundation.preference.strictly_preferred"
+      ],
+      "used_by": [
+        "foundation.utility.expected_utility_representation"
       ]
     },
     {
@@ -253,7 +229,7 @@
       ],
       "topic": "foundation.utility",
       "uses": [
-        "foundation.preference.representation",
+        "foundation.preference.represents_preference",
         "foundation.utility.vnm_axioms"
       ],
       "used_by": [
@@ -397,8 +373,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsBalanced"
@@ -423,8 +399,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsBalancedGame"
@@ -450,8 +426,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.core_nonempty_iff_balanced"
@@ -478,8 +454,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsConvex",
@@ -506,8 +482,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsConvex.core_nonempty"
@@ -530,8 +506,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.Core"
@@ -558,8 +534,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.core_subset_imputations"
@@ -583,8 +559,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsEfficient",
@@ -612,8 +588,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.marginalContrib"
@@ -637,8 +613,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsMonotonic"
@@ -660,8 +636,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.PayoffVector",
@@ -687,8 +663,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.AreSymmetric",
@@ -721,8 +697,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsConvex.shapley_in_core"
@@ -746,8 +722,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.shapley_uniqueness"
@@ -769,8 +745,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.shapleyValue"
@@ -798,8 +774,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.shapleyValue_efficient"
@@ -822,8 +798,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsSimple",
@@ -845,8 +821,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsSuperadditive"
@@ -868,8 +844,8 @@
       ],
       "primary_topic": "game_theory.coalitional_game",
       "topics": [
-        "game_theory",
-        "game_theory.coalitional_game"
+        "game_theory.coalitional_game",
+        "game_theory.coalitional_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame",
@@ -908,7 +884,8 @@
       ],
       "topic": "game_theory.extensive_game",
       "used_by": [
-        "game_theory.extensive_game.core.history_and_subgame"
+        "game_theory.extensive_game.core.history_and_subgame",
+        "game_theory.extensive_game.perfect_information.backward_induction_value"
       ]
     },
     {
@@ -1001,10 +978,10 @@
         "nash-equilibrium",
         "subgame-perfect-equilibrium"
       ],
-      "primary_topic": "game_theory.extensive_game.equilibrium",
+      "primary_topic": "game_theory.extensive_game",
       "topics": [
         "game_theory.extensive_game",
-        "game_theory.extensive_game.equilibrium"
+        "game_theory.extensive_game.imperfect_information"
       ],
       "lean_declarations": [
         "ExtensiveGame.BehaviorStrategy",
@@ -1024,7 +1001,7 @@
         "ExtensiveGame.IsBehaviorNashEq.restrictSubgame_of_reachProb_pos",
         "ExtensiveGame.IsBehaviorNashEq.restrictSubgame_init"
       ],
-      "topic": "game_theory.extensive_game.equilibrium",
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
         "game_theory.extensive_game.imperfect_information.reached_information_set"
@@ -1040,7 +1017,12 @@
         "forward-induction",
         "example"
       ],
-      "topic": "game_theory.extensive_game.examples",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.examples"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.forward_induction",
         "game_theory.extensive_game.perfect_information.subgame_perfect_equilibrium"
@@ -1056,7 +1038,12 @@
         "perfect-information",
         "exercise"
       ],
-      "topic": "game_theory.extensive_game.examples",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.examples"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.perfect_information.zermelo_determinacy"
       ]
@@ -1072,7 +1059,12 @@
         "value",
         "exercise"
       ],
-      "topic": "game_theory.extensive_game.examples",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.examples"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.core.nature_player",
         "game_theory.extensive_game.imperfect_information.imperfect_information_extensive_game",
@@ -1089,7 +1081,12 @@
         "equilibrium-refinement",
         "example"
       ],
-      "topic": "game_theory.extensive_game.examples",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.examples"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.normal_form.extensive_form_perfect_equilibrium"
       ]
@@ -1105,7 +1102,12 @@
         "imperfect-information",
         "exercise"
       ],
-      "topic": "game_theory.extensive_game.examples",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.examples"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.core.nature_player",
         "game_theory.extensive_game.imperfect_information.imperfect_information_extensive_game",
@@ -1123,7 +1125,12 @@
         "bargaining",
         "exercise"
       ],
-      "topic": "game_theory.extensive_game.examples",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.examples"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance"
       ]
@@ -1165,7 +1172,12 @@
         "behavioral-strategy",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.mixed_behavioral_general_strategies",
         "game_theory.strategic_game.nash_equilibrium"
@@ -1188,7 +1200,12 @@
         "nash-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
         "game_theory.extensive_game.imperfect_information.isbell_behavioral_to_mixed",
@@ -1209,7 +1226,12 @@
         "belief",
         "refinement"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.information_set"
       ],
@@ -1227,7 +1249,12 @@
         "forward-induction",
         "refinement"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.sequential_equilibrium",
         "game_theory.strategic_game.dominance.dominated_strategy"
@@ -1307,7 +1334,12 @@
         "information-set",
         "imperfect-information"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.imperfect_information_extensive_game"
       ],
@@ -1329,7 +1361,12 @@
         "information-set",
         "exercise"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.perfect_recall",
         "game_theory.strategic_game.nash_equilibrium"
@@ -1345,7 +1382,12 @@
         "behavioral-strategy",
         "mixed-strategy"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.linear_extensive_game",
         "game_theory.extensive_game.imperfect_information.mixed_behavioral_general_strategies"
@@ -1364,7 +1406,12 @@
         "perfect-recall",
         "behavioral-strategy"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.information_set"
       ],
@@ -1382,7 +1429,12 @@
         "behavioral-strategy",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.reached_information_set"
       ]
@@ -1397,7 +1449,12 @@
         "strategic-stability",
         "mertens"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.strategic_stability",
         "game_theory.strategic_game.core.br_invariance"
@@ -1413,7 +1470,12 @@
         "randomized-strategy",
         "behavioral-strategy"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.imperfect_information_pure_strategy"
       ],
@@ -1432,7 +1494,12 @@
         "extensive-game",
         "perfect-recall"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.information_set"
       ],
@@ -1453,7 +1520,12 @@
         "kuhn-theorem",
         "behavioral-strategy"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.mixed_behavioral_general_strategies",
         "game_theory.extensive_game.imperfect_information.perfect_recall"
@@ -1473,7 +1545,12 @@
         "sequential-equilibrium",
         "proper-equilibrium"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.perfect_recall_mixed_to_behavioral",
         "game_theory.extensive_game.imperfect_information.sequential_equilibrium",
@@ -1490,7 +1567,12 @@
         "information-set",
         "behavioral-strategy"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium"
       ],
@@ -1510,7 +1592,12 @@
         "sequential-equilibrium",
         "refinement"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.weak_bayesian_perfect_equilibrium"
       ],
@@ -1531,7 +1618,12 @@
         "perfect-recall",
         "existence"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium_exists",
         "game_theory.extensive_game.imperfect_information.spe_imperfect_information"
@@ -1547,7 +1639,12 @@
         "subgame-perfect-equilibrium",
         "imperfect-information"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
         "game_theory.extensive_game.imperfect_information.subroot_subgame"
@@ -1566,7 +1663,12 @@
         "strategic-stability",
         "equilibrium-refinement"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.forward_induction",
         "game_theory.strategic_game.refinements.proper_equilibrium"
@@ -1617,7 +1719,12 @@
         "belief",
         "refinement"
       ],
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.belief_system",
         "game_theory.extensive_game.imperfect_information.reached_information_set"
@@ -1636,7 +1743,12 @@
         "normal-form",
         "refinement"
       ],
-      "topic": "game_theory.extensive_game.normal_form",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.normal_form"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.perfect_recall",
         "game_theory.extensive_game.normal_form.normal_form_reduction"
@@ -1656,7 +1768,12 @@
         "equilibrium-refinement",
         "perfection"
       ],
-      "topic": "game_theory.extensive_game.normal_form",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.normal_form"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.normal_form.agent_normal_form",
         "game_theory.strategic_game.refinements.perfect_equilibrium"
@@ -1755,10 +1872,43 @@
         "sequential-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.extensive_game.normal_form",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.normal_form"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.imperfect_information.sequential_equilibrium",
         "game_theory.extensive_game.normal_form.agent_normal_form"
+      ]
+    },
+    {
+      "id": "game_theory.extensive_game.perfect_information.backward_induction_value",
+      "title": "Backward Induction Value",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "extensive-game",
+        "backward-induction",
+        "perfect-information"
+      ],
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.perfect_information"
+      ],
+      "lean_declarations": [
+        "GameTree.value",
+        "GameTree.valueList",
+        "GameTree.value_Leaf",
+        "GameTree.value_Node",
+        "GameTree.value_Node_ge",
+        "GameTree.value_Node_eq_some_child_value"
+      ],
+      "topic": "game_theory.extensive_game",
+      "uses": [
+        "game_theory.extensive_game.core.game_tree"
       ]
     },
     {
@@ -1798,7 +1948,12 @@
         "subgame-perfect-equilibrium",
         "genericity"
       ],
-      "topic": "game_theory.extensive_game.perfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.perfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance"
       ]
@@ -1845,7 +2000,12 @@
         "backward-induction",
         "chance"
       ],
-      "topic": "game_theory.extensive_game.perfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.perfect_information"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.core.nature_player",
         "game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance"
@@ -2078,7 +2238,19 @@
         "value",
         "chance"
       ],
-      "topic": "game_theory.extensive_game.perfect_information",
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.perfect_information"
+      ],
+      "lean_declarations": [
+        "ZeroSumChance.GameTree",
+        "ZeroSumChance.GameTree.value",
+        "ZeroSumChance.GameTree.DStrategy",
+        "ZeroSumChance.GameTree.outcome",
+        "ZeroSumChance.GameTree.value_prop"
+      ],
+      "topic": "game_theory.extensive_game",
       "uses": [
         "game_theory.extensive_game.core.nature_player",
         "game_theory.extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
@@ -2100,9 +2272,7 @@
       "primary_topic": "game_theory.extensive_game",
       "topics": [
         "game_theory.extensive_game",
-        "game_theory.extensive_game.perfect_information",
-        "game_theory.extensive_game.imperfect_information",
-        "game_theory.extensive_game.normal_form"
+        "game_theory.extensive_game.perfect_information"
       ],
       "topic": "game_theory.extensive_game",
       "uses": [
@@ -2602,11 +2772,12 @@
       "primary_topic": "game_theory.stochastic_game",
       "topics": [
         "game_theory.stochastic_game",
-        "game_theory.stochastic_game.equilibrium"
+        "game_theory.stochastic_game.core"
       ],
       "topic": "game_theory.stochastic_game",
       "uses": [
-        "game_theory.stochastic_game.core.history"
+        "game_theory.stochastic_game.core.history",
+        "game_theory.strategic_game.nash_equilibrium"
       ]
     },
     {
@@ -2624,8 +2795,7 @@
       "primary_topic": "game_theory.stochastic_game",
       "topics": [
         "game_theory.stochastic_game",
-        "game_theory.stochastic_game.examples",
-        "game_theory.stochastic_game.asymptotic"
+        "game_theory.stochastic_game.core"
       ],
       "topic": "game_theory.stochastic_game",
       "uses": [
@@ -2740,7 +2910,12 @@
         "bayesian-game",
         "normal-form"
       ],
-      "topic": "game_theory.strategic_game.bayesian",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.bayesian.bayesian_game"
       ],
@@ -2758,7 +2933,12 @@
         "bayesian-game",
         "bayesian-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.bayesian",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.bayesian.bayesian_strategy",
         "game_theory.strategic_game.nash_equilibrium"
@@ -2778,7 +2958,12 @@
         "bayesian-equilibrium",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.bayesian",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.bayesian.agent_normal_form",
         "game_theory.strategic_game.bayesian.bayesian_equilibrium"
@@ -2797,7 +2982,12 @@
         "bayesian-game",
         "incomplete-information"
       ],
-      "topic": "game_theory.strategic_game.bayesian",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -2817,7 +3007,12 @@
         "bayesian-game",
         "strategy"
       ],
-      "topic": "game_theory.strategic_game.bayesian",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.bayesian.bayesian_game",
         "game_theory.strategic_game.core.mixed_strategy"
@@ -2837,7 +3032,12 @@
         "bayesian-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.bayesian",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.bayesian.bayesian_equilibrium_as_nash",
         "game_theory.strategic_game.equilibrium.nash_existence_finite_games"
@@ -2851,6 +3051,11 @@
       "tags": [
         "strategic-game",
         "solution-concept"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
       ],
       "lean_declarations": [
         "IsBestResponse"
@@ -2884,7 +3089,12 @@
         "nash-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.quasi_concave_game",
         "game_theory.strategic_game.nash_equilibrium",
@@ -2903,7 +3113,12 @@
         "strategic-game",
         "convex-game"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -2922,7 +3137,12 @@
         "nash-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.convex_game_variational_characterization",
         "math.fixed_point.brouwer_compact_convex"
@@ -2938,7 +3158,12 @@
         "convex-game",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.convex_game",
         "game_theory.strategic_game.nash_equilibrium"
@@ -2957,7 +3182,12 @@
         "supermodular-game",
         "cournot"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.supermodular_game_nash_exists"
       ]
@@ -2972,7 +3202,12 @@
         "cournot",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium"
       ]
@@ -2987,7 +3222,12 @@
         "smooth-game",
         "variational-inequality"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.smooth_game",
         "game_theory.strategic_game.nash_equilibrium"
@@ -3006,7 +3246,12 @@
         "nash-equilibrium",
         "minority-game"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium"
       ]
@@ -3022,7 +3267,12 @@
         "mixed-strategy",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.compact_quasi_concave_nash_exists",
         "game_theory.strategic_game.core.mixed_extension"
@@ -3037,7 +3287,12 @@
         "strategic-game",
         "monotone-game"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.smooth_game"
       ],
@@ -3055,7 +3310,12 @@
         "monotone-game",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.first_order_nash_condition",
         "game_theory.strategic_game.continuous.monotone_game"
@@ -3070,7 +3330,12 @@
         "strategic-game",
         "continuous-game"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -3088,7 +3353,12 @@
         "strategic-game",
         "smooth-game"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -3107,7 +3377,12 @@
         "supermodular-game",
         "best-response"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.continuous.supermodular_game"
@@ -3126,7 +3401,12 @@
         "supermodular-game",
         "lattice"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -3145,7 +3425,12 @@
         "nash-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.continuous",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.supermodular_best_response_lattice",
         "game_theory.strategic_game.nash_equilibrium",
@@ -3164,30 +3449,17 @@
         "strategic-game",
         "equilibrium-selection"
       ],
-      "topic": "game_theory.strategic_game.core",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response"
       ],
       "used_by": [
         "game_theory.extensive_game.imperfect_information.mertens_stable_sets"
-      ]
-    },
-    {
-      "id": "game_theory.strategic_game.core.dominant_strategy",
-      "title": "Dominant Strategy",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "dominance"
-      ],
-      "lean_declarations": [
-        "IsWeaklyDominant",
-        "IsStrictlyDominant"
-      ],
-      "topic": "game_theory.strategic_game.core",
-      "uses": [
-        "game_theory.strategic_game.strategic_game"
       ]
     },
     {
@@ -3199,10 +3471,15 @@
         "strategic-game",
         "mixed-strategy"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
+      ],
       "lean_declarations": [
         "StrategicGame.expectedPayoff"
       ],
-      "topic": "game_theory.strategic_game.core",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy"
       ],
@@ -3220,8 +3497,15 @@
         "strategic-game",
         "mixed-strategy"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
+      ],
       "lean_declarations": [
         "MixedStrategy",
+        "StrategicGame.MixedProfile",
+        "StrategicGame.pureToMixed",
         "StrategicGame.IsCompletelyMixed",
         "StrategicGame.IsCompletelyMixedProfile",
         "StrategicGame.uniformMixed",
@@ -3235,7 +3519,7 @@
         "StrategicGame.uniformMixed_isCompletelyMixed",
         "StrategicGame.uniformMixed_pos"
       ],
-      "topic": "game_theory.strategic_game.core",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -3252,25 +3536,6 @@
       ]
     },
     {
-      "id": "game_theory.strategic_game.core.mixed_strategy_mfogt",
-      "title": "Mixed Strategy",
-      "kind": "definition",
-      "status": "staged",
-      "tags": [
-        "strategic-game",
-        "mixed-strategy"
-      ],
-      "lean_declarations": [
-        "StrategicGame.MixedStrategy",
-        "StrategicGame.MixedProfile",
-        "StrategicGame.pureToMixed"
-      ],
-      "topic": "game_theory.strategic_game.core",
-      "uses": [
-        "game_theory.strategic_game.strategic_game"
-      ]
-    },
-    {
       "id": "game_theory.strategic_game.core.symmetric_game",
       "title": "Symmetric Game",
       "kind": "definition",
@@ -3279,7 +3544,12 @@
         "strategic-game",
         "symmetry"
       ],
-      "topic": "game_theory.strategic_game.core",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -3299,7 +3569,12 @@
         "best-response",
         "correlation"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.correlated.correlated_strategy"
@@ -3315,7 +3590,12 @@
         "correlated-equilibrium",
         "correlation-device"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy"
       ]
@@ -3331,7 +3611,12 @@
         "correlation",
         "example"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.correlated.correlated_strategy"
@@ -3346,7 +3631,12 @@
         "strategic-game",
         "correlated-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy",
         "game_theory.strategic_game.correlated.obedience_condition"
@@ -3369,7 +3659,12 @@
         "convexity",
         "compactness"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.correlated.correlated_equilibrium"
       ]
@@ -3384,7 +3679,12 @@
         "correlated-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.correlated.nash_induces_correlated_equilibrium",
         "game_theory.strategic_game.equilibrium.nash_existence_finite_games"
@@ -3400,7 +3700,12 @@
         "mixed-strategy",
         "correlation"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy",
         "game_theory.strategic_game.strategy_profile"
@@ -3420,11 +3725,16 @@
         "correlated-equilibrium",
         "nash-equilibrium"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
       "lean_declarations": [
         "StrategicGame.IsDegenerateCorrelatedEq",
         "StrategicGame.nash_iff_degenerate_ce"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.correlated.correlated_equilibrium",
         "game_theory.strategic_game.nash_equilibrium"
@@ -3439,7 +3749,12 @@
         "strategic-game",
         "correlated-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategy_profile"
       ],
@@ -3457,7 +3772,12 @@
         "correlated-equilibrium",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.correlated.correlated_equilibrium",
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium"
@@ -3476,7 +3796,12 @@
         "correlated-equilibrium",
         "obedience"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.correlated.recommendation_strategy"
@@ -3494,7 +3819,12 @@
         "strategic-game",
         "correlated-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.correlated",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.bayesian_correlated"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.correlated.mediated_game"
       ],
@@ -3511,10 +3841,15 @@
         "strategic-game",
         "rationalizability"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "StrategicGame.IsDominanceSolvable"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.rationalizable_strategy"
       ],
@@ -3531,11 +3866,16 @@
         "strategic-game",
         "dominance"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "WeaklyDominates",
         "StrictlyDominates"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -3558,12 +3898,17 @@
         "dominance",
         "rationality"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "StrategicGame.Survives",
         "StrategicGame.Survives.mono",
         "StrategicGame.Survives.prev"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.dominated_strategy"
       ]
@@ -3578,11 +3923,16 @@
         "nash-equilibrium",
         "rationalizability"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "StrategicGame.IsNashEquilibrium.survives",
         "StrategicGame.IsNashEquilibrium.isRationalizable"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.rationalizable_fixed_point",
         "game_theory.strategic_game.nash_equilibrium"
@@ -3601,7 +3951,12 @@
         "rationalizability",
         "fixed-point"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.rationalizable_strategy"
       ],
@@ -3619,10 +3974,15 @@
         "rationalizability",
         "best-response"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "StrategicGame.IsRationalizable"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response"
       ],
@@ -3641,10 +4001,15 @@
         "rationalizability",
         "nash-equilibrium"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "StrategicGame.dominance_solvable_unique_nash"
       ],
-      "topic": "game_theory.strategic_game.dominance",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.dominance_solvable_game",
         "game_theory.strategic_game.dominance.nash_is_rationalizable"
@@ -3659,6 +4024,11 @@
         "strategic-game",
         "equilibrium",
         "dominance"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
       ],
       "lean_declarations": [
         "IsNashEquilibrium.of_dominant"
@@ -3679,7 +4049,12 @@
         "dynamics",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.dynamics",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium"
       ]
@@ -3694,7 +4069,12 @@
         "dynamics",
         "potential-game"
       ],
-      "topic": "game_theory.strategic_game.dynamics",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.variational.evaluation_game_equilibrium"
       ]
@@ -3709,7 +4089,12 @@
         "potential-game",
         "dynamics"
       ],
-      "topic": "game_theory.strategic_game.dynamics",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dynamics.replicator_dynamics",
         "game_theory.strategic_game.potential.potential_game"
@@ -3725,7 +4110,12 @@
         "dynamics",
         "evolution"
       ],
-      "topic": "game_theory.strategic_game.dynamics",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.symmetric_game"
       ],
@@ -3747,12 +4137,12 @@
         "lyapunov",
         "deferred"
       ],
-      "primary_topic": "game_theory.strategic_game.dynamics",
+      "primary_topic": "game_theory.strategic_game",
       "topics": [
-        "game_theory.strategic_game.dynamics",
-        "game_theory.strategic_game.potential"
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
       ],
-      "topic": "game_theory.strategic_game.dynamics",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.population.population_game",
         "game_theory.strategic_game.potential.potential_game"
@@ -3768,7 +4158,12 @@
         "common-knowledge",
         "equilibrium-selection"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium"
       ]
@@ -3782,7 +4177,12 @@
         "strategic-game",
         "approximate-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response"
       ],
@@ -3800,7 +4200,12 @@
         "nash-equilibrium",
         "example"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium"
       ]
@@ -3815,10 +4220,15 @@
         "mixed-strategy",
         "nash-equilibrium"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
       "lean_declarations": [
         "StrategicGame.IsMixedNashEq"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_extension",
         "game_theory.strategic_game.nash_equilibrium"
@@ -3844,7 +4254,12 @@
         "nash-equilibrium",
         "semi-algebraic"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium"
       ],
@@ -3895,7 +4310,12 @@
         "feasible-payoff",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium",
         "game_theory.strategic_game.payoff_geometry.feasible_payoffs"
@@ -3910,7 +4330,12 @@
         "strategic-game",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium"
       ],
@@ -3928,7 +4353,12 @@
         "symmetry",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.equilibrium",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.symmetric_game",
         "game_theory.strategic_game.equilibrium.nash_existence_finite_games"
@@ -3944,7 +4374,12 @@
         "evolution",
         "replicator-dynamics"
       ],
-      "topic": "game_theory.strategic_game.evolution",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dynamics.replicator_dynamics",
         "game_theory.strategic_game.evolution.ess_uniform_invasion_barrier"
@@ -3960,7 +4395,12 @@
         "evolution",
         "ess"
       ],
-      "topic": "game_theory.strategic_game.evolution",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.evolution.evolutionarily_stable_strategy"
       ],
@@ -3978,6 +4418,11 @@
         "evolution",
         "ess"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
       "lean_declarations": [
         "IsESS",
         "IsNSS",
@@ -3986,7 +4431,7 @@
         "IsESS.strict_against_other",
         "strict_nash_implies_ess"
       ],
-      "topic": "game_theory.strategic_game.evolution",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.symmetric_game"
       ],
@@ -4003,6 +4448,11 @@
         "finite-game",
         "index",
         "catalog"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
       ],
       "topic": "game_theory.strategic_game",
       "uses": [
@@ -4023,7 +4473,12 @@
         "equilibrium-manifold",
         "nash-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.manifold",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium"
       ],
@@ -4042,7 +4497,12 @@
         "equilibrium-manifold",
         "robustness"
       ],
-      "topic": "game_theory.strategic_game.manifold",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.manifold.equilibrium_manifold"
       ],
@@ -4060,7 +4520,12 @@
         "equilibrium-manifold",
         "genericity"
       ],
-      "topic": "game_theory.strategic_game.manifold",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_semialgebraic",
         "game_theory.strategic_game.manifold.essential_component",
@@ -4077,7 +4542,12 @@
         "equilibrium-manifold",
         "topology"
       ],
-      "topic": "game_theory.strategic_game.manifold",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.manifold.equilibrium_manifold"
       ],
@@ -4095,6 +4565,11 @@
         "solution-concept",
         "equilibrium"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.equilibrium"
+      ],
       "lean_declarations": [
         "IsNashEquilibrium",
         "isNashEq",
@@ -4108,6 +4583,7 @@
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
         "game_theory.extensive_game.imperfect_information.information_set_refinement_equilibrium",
         "game_theory.extensive_game.perfect_information.subgame_perfect_equilibrium",
+        "game_theory.stochastic_game.equilibrium.fink_nash_existence",
         "game_theory.strategic_game.bayesian.bayesian_equilibrium",
         "game_theory.strategic_game.continuous.compact_quasi_concave_nash_exists",
         "game_theory.strategic_game.continuous.convex_game_variational_characterization",
@@ -4138,7 +4614,12 @@
         "strategic-game",
         "feasible-payoff"
       ],
-      "topic": "game_theory.strategic_game.payoff_geometry",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.payoff_geometry.threat_point"
       ],
@@ -4157,7 +4638,12 @@
         "equilibrium-selection",
         "focal-point"
       ],
-      "topic": "game_theory.strategic_game.payoff_geometry",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium"
       ]
@@ -4173,7 +4659,12 @@
         "topology",
         "example"
       ],
-      "topic": "game_theory.strategic_game.payoff_geometry",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.payoff_geometry.feasible_payoffs"
       ]
@@ -4187,7 +4678,12 @@
         "strategic-game",
         "prudence"
       ],
-      "topic": "game_theory.strategic_game.payoff_geometry",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy"
       ]
@@ -4202,7 +4698,12 @@
         "feasible-payoff",
         "repeated-game"
       ],
-      "topic": "game_theory.strategic_game.payoff_geometry",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy"
       ],
@@ -4220,7 +4721,12 @@
         "strategic-game",
         "population-game"
       ],
-      "topic": "game_theory.strategic_game.population",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -4239,7 +4745,12 @@
         "population-game",
         "wardrop-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.population",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.population.population_game"
       ],
@@ -4257,7 +4768,12 @@
         "population-game",
         "variational-inequality"
       ],
-      "topic": "game_theory.strategic_game.population",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.population.wardrop_equilibrium"
       ]
@@ -4271,11 +4787,16 @@
         "strategic-game",
         "potential-game"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
       "lean_declarations": [
         "IsExactPotential",
         "IsOrdinalPotential"
       ],
-      "topic": "game_theory.strategic_game.potential",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -4295,11 +4816,16 @@
         "potential-game",
         "nash-equilibrium"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dynamics"
+      ],
       "lean_declarations": [
         "IsExactPotential.maximizer_is_nash",
         "IsOrdinalPotential.isNash_iff_localMax"
       ],
-      "topic": "game_theory.strategic_game.potential",
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium",
         "game_theory.strategic_game.potential.potential_game"
@@ -4314,6 +4840,11 @@
         "strategic-game",
         "example",
         "classic"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
       ],
       "lean_declarations": [
         "PrisonersDilemma.PD",
@@ -4337,7 +4868,12 @@
         "strategic-game",
         "approximate-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.epsilon_equilibrium",
         "game_theory.strategic_game.refinements.reny_solution"
@@ -4356,7 +4892,12 @@
         "approximate-equilibrium",
         "discontinuous-game"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.refinements.approximate_solution"
       ]
@@ -4370,7 +4911,12 @@
         "strategic-game",
         "discontinuous-game"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium",
         "game_theory.strategic_game.refinements.reny_solution"
@@ -4390,7 +4936,12 @@
         "nash-equilibrium",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.refinements.better_reply_secure_game",
         "game_theory.strategic_game.refinements.reny_solution_exists"
@@ -4406,7 +4957,12 @@
         "equilibrium-refinement",
         "perfection"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.core.mixed_strategy"
@@ -4426,7 +4982,12 @@
         "equilibrium-refinement",
         "proper-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.refinements.epsilon_perfect_equilibrium"
       ],
@@ -4444,7 +5005,12 @@
         "equilibrium-refinement",
         "perfection"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.mixed_nash_equilibrium",
         "game_theory.strategic_game.refinements.epsilon_perfect_equilibrium"
@@ -4466,7 +5032,12 @@
         "equilibrium-refinement",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.nash_existence_finite_games",
         "game_theory.strategic_game.refinements.perfect_equilibrium"
@@ -4482,7 +5053,12 @@
         "equilibrium-refinement",
         "dominance"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.dominated_strategy",
         "game_theory.strategic_game.refinements.perfect_equilibrium"
@@ -4498,7 +5074,12 @@
         "equilibrium-refinement",
         "proper-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.refinements.epsilon_proper_equilibrium",
         "game_theory.strategic_game.refinements.perfect_equilibrium"
@@ -4521,7 +5102,12 @@
         "equilibrium-refinement",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.refinements.proper_equilibrium",
         "math.fixed_point.kakutani_fixed_point"
@@ -4537,7 +5123,12 @@
         "equilibrium-refinement",
         "example"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.dominance.dominated_strategy",
         "game_theory.strategic_game.refinements.proper_equilibrium"
@@ -4552,7 +5143,12 @@
         "strategic-game",
         "discontinuous-game"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -4572,7 +5168,12 @@
         "discontinuous-game",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.continuous.quasi_concave_game",
         "game_theory.strategic_game.refinements.reny_solution"
@@ -4591,7 +5192,12 @@
         "equilibrium-refinement",
         "strict-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.refinements",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.refinements"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.equilibrium.strict_equilibrium",
         "game_theory.strategic_game.refinements.proper_equilibrium"
@@ -4605,6 +5211,11 @@
       "tags": [
         "strategic-game",
         "foundational"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
       ],
       "lean_declarations": [
         "StrategicGame",
@@ -4621,9 +5232,7 @@
         "game_theory.strategic_game.continuous.quasi_concave_game",
         "game_theory.strategic_game.continuous.smooth_game",
         "game_theory.strategic_game.continuous.supermodular_game",
-        "game_theory.strategic_game.core.dominant_strategy",
         "game_theory.strategic_game.core.mixed_strategy",
-        "game_theory.strategic_game.core.mixed_strategy_mfogt",
         "game_theory.strategic_game.core.symmetric_game",
         "game_theory.strategic_game.dominance.dominated_strategy",
         "game_theory.strategic_game.population.population_game",
@@ -4645,6 +5254,11 @@
         "strategic-game",
         "foundational"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
+      ],
       "lean_declarations": [
         "StrategicGame.Profile"
       ],
@@ -4659,6 +5273,28 @@
       ]
     },
     {
+      "id": "game_theory.strategic_game.strictly_dominant_strategy",
+      "title": "Strictly Dominant Strategy",
+      "kind": "definition",
+      "status": "admitted",
+      "tags": [
+        "strategic-game",
+        "dominance"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
+      "lean_declarations": [
+        "IsStrictlyDominant"
+      ],
+      "topic": "game_theory.strategic_game",
+      "uses": [
+        "game_theory.strategic_game.strictly_dominates"
+      ]
+    },
+    {
       "id": "game_theory.strategic_game.strictly_dominates",
       "title": "Strict Dominance",
       "kind": "definition",
@@ -4666,6 +5302,11 @@
       "tags": [
         "strategic-game",
         "dominance"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
       ],
       "lean_declarations": [
         "StrictlyDominates",
@@ -4675,6 +5316,9 @@
       "topic": "game_theory.strategic_game",
       "uses": [
         "game_theory.strategic_game.unilateral_deviation"
+      ],
+      "used_by": [
+        "game_theory.strategic_game.strictly_dominant_strategy"
       ]
     },
     {
@@ -4685,6 +5329,11 @@
       "tags": [
         "strategic-game",
         "foundational"
+      ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.core"
       ],
       "lean_declarations": [
         "StrategicGame.deviate"
@@ -4709,7 +5358,12 @@
         "variational-inequality",
         "fixed-point"
       ],
-      "topic": "game_theory.strategic_game.variational",
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.continuous"
+      ],
+      "topic": "game_theory.strategic_game",
       "uses": [
         "math.fixed_point.brouwer_compact_convex"
       ],
@@ -4726,6 +5380,11 @@
         "strategic-game",
         "dominance"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "IsWeaklyDominant",
         "IsWeaklyDominant.isBestResponse"
@@ -4738,6 +5397,7 @@
         "game_theory.strategic_game.dominant_implies_nash",
         "game_theory.strategic_game.prisoners_dilemma",
         "mechanism_design.auction.basic.first_price_no_dsic",
+        "mechanism_design.auction.basic.reserve_second_price_dsic",
         "mechanism_design.auction.basic.second_price_dsic",
         "mechanism_design.basic.dsic_predicate"
       ]
@@ -4751,6 +5411,11 @@
         "strategic-game",
         "dominance"
       ],
+      "primary_topic": "game_theory.strategic_game",
+      "topics": [
+        "game_theory.strategic_game",
+        "game_theory.strategic_game.dominance"
+      ],
       "lean_declarations": [
         "WeaklyDominates"
       ],
@@ -4760,6 +5425,34 @@
       ],
       "used_by": [
         "game_theory.strategic_game.weakly_dominant_strategy"
+      ]
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.antisymmetric_matrix_game_value",
+      "title": "Antisymmetric Matrix Game Has Value Zero",
+      "kind": "theorem",
+      "status": "proved",
+      "tags": [
+        "zero-sum",
+        "matrix-game",
+        "antisymmetric",
+        "value"
+      ],
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
+      ],
+      "lean_declarations": [
+        "IsAntisymmetric",
+        "IsAntisymmetric.diag_zero",
+        "IsAntisymmetric.quadform_zero",
+        "MatrixGame.antisymmetric_value_zero",
+        "MatrixGame.antisymmetric_exists_optimal_strategy"
+      ],
+      "topic": "game_theory.zero_sum",
+      "uses": [
+        "game_theory.strategic_game.zero_sum.von_neumann_minimax"
       ]
     },
     {
@@ -4773,13 +5466,12 @@
         "markov",
         "stationary-distribution"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.applications"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.applications.stochastic_matrix_invariant_distribution",
         "game_theory.strategic_game.zero_sum.von_neumann_minimax"
@@ -4795,17 +5487,15 @@
         "perron-frobenius",
         "zero-sum"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.applications",
-        "math.linear_algebra"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
       ],
       "lean_declarations": [
         "EconCSLib.LinearAlgebra.perron_frobenius"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "math.minimax.loomis_theorem"
       ]
@@ -4820,11 +5510,10 @@
         "stochastic-matrix",
         "invariant-distribution"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.applications"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution",
@@ -4840,7 +5529,7 @@
         "EconCSLib.StrategicGame.MatrixGame.disp_value_ge_zero",
         "EconCSLib.StrategicGame.MatrixGame.disp_value_le_zero"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
         "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium",
@@ -4860,13 +5549,12 @@
         "dominance",
         "best-response"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.applications"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.dominance.dominated_strategy",
@@ -4883,13 +5571,12 @@
         "dominance",
         "best-response"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.applications"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.best_response",
         "game_theory.strategic_game.dominance.dominated_strategy",
@@ -4906,7 +5593,12 @@
         "repeated-game",
         "vector-payoff"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.approachability",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.approachability.deterministic_blackwell_sequence"
       ],
@@ -4923,7 +5615,12 @@
         "approachability",
         "convexity"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.approachability",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.applications"
+      ],
+      "topic": "game_theory.zero_sum",
       "used_by": [
         "game_theory.strategic_game.zero_sum.approachability.blackwell_b_set_approachability",
         "math.minimax.minimax_from_deterministic_approachability"
@@ -4939,13 +5636,12 @@
         "mixed-strategy",
         "minimax"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.general_mixed_strategy_space",
         "game_theory.strategic_game.zero_sum.continuous.pure_minimax_compact_convex_one_sided"
@@ -4964,13 +5660,12 @@
         "mixed-strategy",
         "separation"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.general_mixed_strategy_space",
         "game_theory.strategic_game.zero_sum.core.value"
@@ -4987,13 +5682,12 @@
         "minimax",
         "continuous-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.compact_mixed_vs_finite_support_minimax"
       ],
@@ -5011,13 +5705,12 @@
         "mixed-strategy",
         "topology"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.zero_sum_game"
       ],
@@ -5037,13 +5730,12 @@
         "convexity",
         "separation"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "used_by": [
         "game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem"
       ]
@@ -5058,13 +5750,12 @@
         "mixed-strategy",
         "counterexample"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.general_mixed_strategy_space"
       ]
@@ -5079,13 +5770,12 @@
         "value",
         "limit"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.quasi_concavity_semicontinuity",
         "game_theory.strategic_game.zero_sum.core.value"
@@ -5105,13 +5795,12 @@
         "limit",
         "counterexample"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.monotone_decreasing_values_limit"
       ]
@@ -5126,13 +5815,12 @@
         "minimax",
         "continuous-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem"
       ],
@@ -5150,13 +5838,12 @@
         "convexity",
         "topology"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "used_by": [
         "game_theory.strategic_game.zero_sum.continuous.monotone_decreasing_values_limit",
         "game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem"
@@ -5172,13 +5859,12 @@
         "minimax",
         "counterexample"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem"
       ]
@@ -5194,13 +5880,12 @@
         "continuous-game",
         "sion"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.intersection_lemma",
         "game_theory.strategic_game.zero_sum.continuous.quasi_concavity_semicontinuity",
@@ -5221,13 +5906,12 @@
         "mixed-strategy",
         "counterexample"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.continuous"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.continuous"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.continuous.general_mixed_minimax_theorem"
       ]
@@ -5242,16 +5926,15 @@
         "value",
         "fictitious-play"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.dualityGap"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.mixed_extension",
         "game_theory.strategic_game.zero_sum.maximin_minimax"
@@ -5270,17 +5953,16 @@
         "optimal-strategy",
         "value"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.IsEpsilonOptimalRow",
         "MatrixGame.IsEpsilonOptimalColumn"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.player_guarantee",
         "game_theory.strategic_game.zero_sum.core.value"
@@ -5296,16 +5978,15 @@
         "mixed-strategy",
         "expected-payoff"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "expectedPayoffMatrix"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex"
       ],
@@ -5324,18 +6005,17 @@
         "mixed-strategy",
         "simplex"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "stdSimplex",
         "stdSimplex.pure",
         "wsum"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.matrix_game"
       ],
@@ -5356,16 +6036,15 @@
         "mixed-strategy",
         "support"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.support"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex"
       ],
@@ -5383,18 +6062,17 @@
         "saddle-point",
         "optimal-strategy"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.optimal_pairs_iff_saddle_point",
         "MatrixGame.mem_optimalRowStrategies_iff_E_ge",
         "MatrixGame.mem_optimalColumnStrategies_iff_E_le"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
         "game_theory.strategic_game.zero_sum.core.saddle_point",
@@ -5414,17 +6092,16 @@
         "zero-sum",
         "optimal-strategy"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.optimalRowStrategies",
         "MatrixGame.optimalColumnStrategies"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value"
       ],
@@ -5432,6 +6109,7 @@
         "game_theory.strategic_game.zero_sum.applications.stochastic_matrix_invariant_distribution",
         "game_theory.strategic_game.zero_sum.core.optimal_pairs_are_saddle_points",
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets_are_polytopes",
+        "game_theory.strategic_game.zero_sum.core.strong_complementarity",
         "game_theory.strategic_game.zero_sum.examples.computation_three_by_two_example",
         "game_theory.strategic_game.zero_sum.learning.fictitious_play_convergence",
         "game_theory.strategic_game.zero_sum.operators.derived_game",
@@ -5449,11 +6127,10 @@
         "optimal-strategy",
         "polytope"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.image_optimalRowStrategies_eq",
@@ -5471,7 +6148,7 @@
         "MatrixGame.optimalRowSet",
         "MatrixGame.optimalColumnSet"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets"
       ]
@@ -5486,17 +6163,16 @@
         "value",
         "guarantee"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.IsPlayerIGuarantee",
         "MatrixGame.IsPlayerIIGuarantee"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.matrix_game"
       ],
@@ -5515,17 +6191,16 @@
         "saddle-point",
         "equilibrium"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.IsSaddlePoint",
         "MatrixGame.IsMixedNashEq"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.mixed_extension"
       ],
@@ -5534,6 +6209,30 @@
         "math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy",
         "math.minimax.kakutani_minimax_proof",
         "math.minimax.zero_sum_nash_saddle"
+      ]
+    },
+    {
+      "id": "game_theory.strategic_game.zero_sum.core.strong_complementarity",
+      "title": "Strong Complementarity",
+      "kind": "theorem",
+      "status": "proved",
+      "tags": [
+        "zero-sum",
+        "complementarity",
+        "optimal-strategy"
+      ],
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
+      ],
+      "lean_declarations": [
+        "MatrixGame.exists_strong_complementary_pair"
+      ],
+      "topic": "game_theory.zero_sum",
+      "uses": [
+        "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
+        "game_theory.strategic_game.zero_sum.core.support_complementarity"
       ]
     },
     {
@@ -5546,23 +6245,23 @@
         "complementarity",
         "optimal-strategy"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.support_complementarity_row",
         "MatrixGame.support_complementarity_column"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.mixed_support",
         "game_theory.strategic_game.zero_sum.core.optimal_pairs_are_saddle_points"
       ],
       "used_by": [
         "game_theory.strategic_game.zero_sum.applications.weak_dominance_never_best_response",
+        "game_theory.strategic_game.zero_sum.core.strong_complementarity",
         "math.minimax.strong_complementarity"
       ]
     },
@@ -5575,16 +6274,15 @@
         "zero-sum",
         "value"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.value"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.maximin_minimax"
       ],
@@ -5624,13 +6322,10 @@
         "ordered-field",
         "dantzig"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "math.minimax",
-        "math.minimax.proofs",
-        "math.linear_programming.minimax_bridge"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate",
@@ -5672,7 +6367,7 @@
         "extractPlayerII_guarantee",
         "dantzig_minimax"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "used_by": [
         "game_theory.strategic_game.zero_sum.simplex_termination"
       ]
@@ -5688,13 +6383,12 @@
         "continuous-game",
         "mixed-strategy"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.examples.silent_duel_no_pure_value"
       ]
@@ -5710,11 +6404,10 @@
         "computation",
         "example"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.Examples.threeByTwoExample",
@@ -5722,7 +6415,7 @@
         "EconCSLib.StrategicGame.Examples.threeByTwoColOpt",
         "EconCSLib.StrategicGame.Examples.threeByTwoExample_value"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets"
       ]
@@ -5737,16 +6430,15 @@
         "matrix-game",
         "example"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.Examples.diagonalGame_value"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value"
       ]
@@ -5761,11 +6453,10 @@
         "example",
         "matrix-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.Examples.matchingPennies",
@@ -5773,7 +6464,7 @@
         "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_row_optimal",
         "EconCSLib.StrategicGame.Examples.matchingPennies_uniform_column_optimal"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value"
       ]
@@ -5788,13 +6479,12 @@
         "duel",
         "continuous-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.examples.noisy_duel_one_bullet_value"
       ]
@@ -5809,13 +6499,12 @@
         "duel",
         "continuous-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value"
       ],
@@ -5834,13 +6523,12 @@
         "continuous-game",
         "mixed-strategy"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value"
       ],
@@ -5859,11 +6547,10 @@
         "counterexample",
         "example"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.G",
@@ -5871,7 +6558,7 @@
         "EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.minimax_eq_one_half",
         "EconCSLib.StrategicGame.Examples.ThreePlayerMinimaxFailure.maximin_lt_minimax"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.maximin_le_minimax"
       ]
@@ -5886,11 +6573,10 @@
         "example",
         "two-by-two"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.examples"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.examples"
       ],
       "lean_declarations": [
         "EconCSLib.StrategicGame.Examples.twoByTwo",
@@ -5899,7 +6585,7 @@
         "EconCSLib.StrategicGame.Examples.twoByTwoMixedValue",
         "EconCSLib.StrategicGame.Examples.twoByTwo_value"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.von_neumann_minimax"
       ]
@@ -5915,12 +6601,10 @@
         "existence",
         "weak-duality"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "math.minimax",
-        "math.minimax.proofs"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "lean_declarations": [
         "MinimaxLoomis.lam.aux.continuous",
@@ -5933,7 +6617,7 @@
         "MinimaxLoomis.exists_yy_mu0",
         "MinimaxLoomis.lam0_le_mu0"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.maximin_minimax",
         "math.simplex.bounded_by_value",
@@ -5953,7 +6637,12 @@
         "learning",
         "calibration"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.external_regret"
       ],
@@ -5972,7 +6661,12 @@
         "calibration",
         "existence"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.approachability.blackwell_b_set_approachability",
         "game_theory.strategic_game.zero_sum.learning.calibrated_strategy"
@@ -5989,17 +6683,16 @@
         "robinson",
         "cesaro"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.cesaro_payoff_converges_to_value",
         "MatrixGame.realisedCumPayoff"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value",
         "game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma"
@@ -6018,16 +6711,15 @@
         "learning",
         "fictitious-play"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.continuous_fictitious_play_gap"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.duality_gap",
         "game_theory.strategic_game.zero_sum.learning.fictitious_play",
@@ -6044,16 +6736,15 @@
         "learning",
         "fictitious-play"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.empiricalFrequency"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex"
       ],
@@ -6071,7 +6762,12 @@
         "learning",
         "regret"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -6091,16 +6787,15 @@
         "learning",
         "fictitious-play"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.IsFictitiousPlay"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.empirical_frequency"
       ],
@@ -6120,18 +6815,17 @@
         "learning",
         "fictitious-play"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.fictitious_play_convergence",
         "MatrixGame.fictitious_play_convergence_frequency",
         "MatrixGame.fictitious_play_convergence_cesaro"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
         "game_theory.strategic_game.zero_sum.learning.cesaro_payoff_from_robinson"
@@ -6147,7 +6841,12 @@
         "learning",
         "regret"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.external_regret"
       ],
@@ -6166,7 +6865,12 @@
         "regret",
         "correlated-equilibrium"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.correlated.correlated_equilibrium",
         "game_theory.strategic_game.zero_sum.learning.external_regret"
@@ -6186,7 +6890,12 @@
         "regret",
         "convergence"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.hannan_set"
       ]
@@ -6203,7 +6912,12 @@
         "correlated-equilibrium",
         "convergence"
       ],
-      "topic": "game_theory.strategic_game.zero_sum.learning",
+      "primary_topic": "game_theory.zero_sum",
+      "topics": [
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
+      ],
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.internal_regret"
       ]
@@ -6218,17 +6932,16 @@
         "fictitious-play",
         "robinson"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.robinson_admissible_lemma",
         "MatrixGame.AdmissibleSequence"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.induction_step"
       ],
@@ -6247,16 +6960,15 @@
         "robinson",
         "invariant"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.AdmissibleSequence.bracket_invariant"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.fictitious_play"
       ],
@@ -6274,16 +6986,15 @@
         "fictitious-play",
         "robinson"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.AdmissibleSequence.robinson_induction_step"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.subgame_reduction",
         "game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.useful_window"
@@ -6302,16 +7013,15 @@
         "fictitious-play",
         "robinson"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.AdmissibleSequence.subgame_reduction"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.fictitious_play"
       ],
@@ -6329,16 +7039,15 @@
         "fictitious-play",
         "robinson"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.learning"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.learning"
       ],
       "lean_declarations": [
         "MatrixGame.AdmissibleSequence.useful_window_bound"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.bracket_invariant"
       ],
@@ -6356,16 +7065,15 @@
         "matrix-game",
         "finite-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.zero_sum_game"
       ],
@@ -6390,12 +7098,10 @@
         "nash-equilibrium",
         "saddle-point"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "math.minimax",
-        "math.minimax.structure"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "MatrixGame.exists_mixed_nash_equilibrium",
@@ -6403,7 +7109,7 @@
         "MatrixGame.expectedPayoff_toStrategicGame_one",
         "MatrixGame.exists_strategic_game_nash_equilibrium"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.mixed_matrix_payoff",
         "game_theory.strategic_game.zero_sum.von_neumann_minimax",
@@ -6427,16 +7133,15 @@
         "value",
         "minimax"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "lean_declarations": [
         "MatrixGame.maximin_le_minimax"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.maximin_minimax"
       ],
@@ -6459,11 +7164,10 @@
         "value",
         "minimax"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "lean_declarations": [
         "MatrixGame.guarantee_I",
@@ -6473,7 +7177,7 @@
         "MatrixGame.value_eq_maximin",
         "MatrixGame.value_eq_minimax"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.mixed_matrix_payoff"
       ],
@@ -6495,11 +7199,10 @@
         "mixed-strategy",
         "matrix-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "expectedPayoffMatrix",
@@ -6509,7 +7212,7 @@
         "MatrixGame.payoffAgainstRow",
         "MatrixGame.payoffAgainstColumn"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.core.mixed_strategy",
         "game_theory.strategic_game.zero_sum.matrix_game"
@@ -6529,13 +7232,12 @@
         "value-operator",
         "derived-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.operators"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.operators"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
         "game_theory.strategic_game.zero_sum.operators.value_operator_general"
@@ -6554,13 +7256,12 @@
         "value-operator",
         "derived-game"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.operators"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.operators"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.operators.derived_game"
       ]
@@ -6574,13 +7275,12 @@
         "zero-sum",
         "value-operator"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.operators"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.operators"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.core.value"
       ],
@@ -6598,13 +7298,12 @@
         "zero-sum",
         "value-operator"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.operators"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.operators"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.operators.value_operator_general"
       ],
@@ -6622,13 +7321,12 @@
         "value",
         "continuity"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.operators"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.operators"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.von_neumann_minimax"
       ]
@@ -6645,17 +7343,14 @@
         "open-issue",
         "dantzig"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "math.minimax",
-        "math.minimax.proofs",
-        "math.linear_programming.minimax_bridge"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "plan_status": "candidate",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.dantzig_proof_spine"
       ]
@@ -6671,20 +7366,19 @@
         "minimax",
         "theorem"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "math.minimax",
-        "math.minimax.structure"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "lean_declarations": [
         "MatrixGame.maximin_le_minimax",
         "MatrixGame.minimax_theorem",
         "MatrixGame.minimax_optimal_strategies"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "used_by": [
+        "game_theory.strategic_game.zero_sum.antisymmetric_matrix_game_value",
         "game_theory.strategic_game.zero_sum.applications.markov_stationary_as_zero_sum_value",
         "game_theory.strategic_game.zero_sum.applications.stochastic_matrix_invariant_distribution",
         "game_theory.strategic_game.zero_sum.applications.strict_dominance_never_best_response",
@@ -6707,11 +7401,10 @@
         "strategic-game",
         "foundational"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum",
@@ -6722,7 +7415,7 @@
         "StrategicGame.IsConstantSum.zero_isZeroSum",
         "StrategicGame.isZeroSum_iff_isConstantSum_zero"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.strategic_game"
       ],
@@ -6742,11 +7435,10 @@
         "equilibrium",
         "value"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.minimax"
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum.nash_payoff_eq",
@@ -6754,7 +7446,7 @@
         "MatrixGame.nash_interchangeable",
         "MatrixGame.nash_value_unique"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.nash_equilibrium",
         "game_theory.strategic_game.zero_sum.zero_sum_payoff_negation"
@@ -6769,11 +7461,10 @@
         "zero-sum",
         "payoff"
       ],
-      "primary_topic": "game_theory.strategic_game",
+      "primary_topic": "game_theory.zero_sum",
       "topics": [
-        "game_theory.strategic_game",
-        "game_theory.strategic_game.zero_sum",
-        "game_theory.strategic_game.zero_sum.core"
+        "game_theory.zero_sum",
+        "game_theory.zero_sum.core"
       ],
       "lean_declarations": [
         "StrategicGame.IsZeroSum.neg",
@@ -6781,7 +7472,7 @@
         "StrategicGame.IsZeroSum.expectedPayoff_neg",
         "StrategicGame.IsZeroSum.expectedPayoff_neg'"
       ],
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.zero_sum_game"
       ],
@@ -7062,17 +7753,22 @@
       "id": "math.fixed_point.brouwer_simplex",
       "title": "Brouwer Fixed Point Theorem For A Simplex",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "fixed-point",
         "brouwer"
       ],
+      "primary_topic": "math",
+      "topics": [
+        "math",
+        "math.fixed_point"
+      ],
       "lean_declarations": [
         "Brouwer"
       ],
-      "topic": "math.fixed_point",
+      "topic": "math",
       "uses": [
-        "math.fixed_point.sperner_lemma"
+        "math.fixed_point.scarf_lemma"
       ],
       "used_by": [
         "math.fixed_point.retract_fixed_point"
@@ -7136,15 +7832,27 @@
       ]
     },
     {
-      "id": "math.fixed_point.sperner_lemma",
-      "title": "Sperner Lemma",
+      "id": "math.fixed_point.scarf_lemma",
+      "title": "Scarf Combinatorial Lemma (Colorful Room Existence)",
       "kind": "lemma",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "fixed-point",
-        "combinatorics"
+        "combinatorics",
+        "scarf"
       ],
-      "topic": "math.fixed_point",
+      "primary_topic": "math",
+      "topics": [
+        "math",
+        "math.fixed_point"
+      ],
+      "lean_declarations": [
+        "IndexedLOrder.Scarf",
+        "IndexedLOrder.isColorful",
+        "IndexedLOrder.internal_door_two_rooms",
+        "IndexedLOrder.typed_colorful_room_odd"
+      ],
+      "topic": "math",
       "used_by": [
         "math.fixed_point.brouwer_simplex"
       ]
@@ -8364,6 +9072,78 @@
       ]
     },
     {
+      "id": "mechanism_design.auction.basic.reserve_second_price_dsic",
+      "title": "Reserve Second-Price Truth-Telling Is Dominant",
+      "kind": "theorem",
+      "status": "proved",
+      "tags": [
+        "auction",
+        "vickrey",
+        "reserve-price",
+        "dsic",
+        "weakly-dominant"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.auction",
+        "mechanism_design.auction.basic"
+      ],
+      "lean_declarations": [
+        "Auction.ReserveSecondPrice.utility_nonneg",
+        "Auction.ReserveSecondPrice.valuation_is_dominant",
+        "Auction.ReserveSecondPrice.truthful_weakly_dominant",
+        "Auction.ReserveSecondPrice.game_eq_toStrategicGame",
+        "Auction.ReserveSecondPrice.mechanism_isDSIC"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "game_theory.strategic_game.weakly_dominant_strategy",
+        "mechanism_design.auction.basic.reserve_second_price_mechanism",
+        "mechanism_design.auction.basic.second_price_dsic",
+        "mechanism_design.basic.dsic_predicate"
+      ]
+    },
+    {
+      "id": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "title": "Reserve Second-Price Mechanism",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "auction",
+        "vickrey",
+        "second-price",
+        "reserve-price",
+        "mechanism"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.auction",
+        "mechanism_design.auction.basic"
+      ],
+      "lean_declarations": [
+        "Auction.ReserveSecondPrice.clearingPrice",
+        "Auction.ReserveSecondPrice.allocation",
+        "Auction.ReserveSecondPrice.utility",
+        "Auction.ReserveSecondPrice.game",
+        "Auction.ReserveSecondPrice.mechanism",
+        "Auction.ReserveSecondPrice.allocation_eq_some_iff",
+        "Auction.ReserveSecondPrice.allocation_eq_none_iff",
+        "Auction.ReserveSecondPrice.clearingPrice_le_bid_of_allocation_eq_some",
+        "Auction.ReserveSecondPrice.mechanism_payment_of_allocation_eq_some",
+        "Auction.ReserveSecondPrice.mechanism_payment_of_allocation_ne_some"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.auction.basic.second_price_mechanism",
+        "mechanism_design.transfer.mechanisms_with_transfers"
+      ],
+      "used_by": [
+        "mechanism_design.auction.basic.reserve_second_price_dsic"
+      ]
+    },
+    {
       "id": "mechanism_design.auction.basic.second_price_dsic",
       "title": "Vickrey Truth-Telling Is Dominant",
       "kind": "theorem",
@@ -8392,6 +9172,7 @@
         "mechanism_design.basic.dsic_predicate"
       ],
       "used_by": [
+        "mechanism_design.auction.basic.reserve_second_price_dsic",
         "mechanism_design.auction.bayesian.english_second_price_equivalence"
       ]
     },
@@ -8431,6 +9212,7 @@
         "mechanism_design.transfer.mechanisms_with_transfers"
       ],
       "used_by": [
+        "mechanism_design.auction.basic.reserve_second_price_mechanism",
         "mechanism_design.auction.basic.second_price_dsic",
         "mechanism_design.auction.bayesian.english_second_price_equivalence",
         "mechanism_design.auction.bayesian.risk_aversion_comparison"
@@ -8572,7 +9354,8 @@
         "mechanism_design.bayesian.ex_ante_expected_utility"
       ],
       "used_by": [
-        "mechanism_design.auction.bayesian.symmetric_first_price_equilibrium"
+        "mechanism_design.auction.bayesian.symmetric_first_price_equilibrium",
+        "mechanism_design.myerson.optimal_auction"
       ]
     },
     {
@@ -8623,17 +9406,19 @@
       "lean_declarations": [
         "TypeCDF",
         "ContinuousTypeProfile",
+        "OpponentProfile",
         "OpponentTypeProfile",
-        "extendOpponentProfile",
         "BayesianSingleItemAuction",
+        "BayesianSingleItemAuction.profileInsert",
         "BayesianSingleItemAuction.toDirectBayesianMechanismWithTransfers",
         "BayesianSingleItemAuction.RespectsSingleItemCapacity",
         "BayesianSingleItemAuction.IsFeasible",
-        "BayesianSingleItemAuction.allocationProbability",
-        "BayesianSingleItemAuction.payment",
         "BayesianSingleItemAuction.typeDensity",
+        "BayesianSingleItemAuction.typeMeasure",
         "BayesianSingleItemAuction.jointDensity",
-        "BayesianSingleItemAuction.truthfulStrategy"
+        "BayesianSingleItemAuction.productPrior",
+        "BayesianSingleItemAuction.opponentProductPrior",
+        "BayesianSingleItemAuction.HasIndependentTypePriors"
       ],
       "topic": "mechanism_design",
       "uses": [
@@ -8647,7 +9432,10 @@
         "mechanism_design.auction.bayesian.english_second_price_equivalence",
         "mechanism_design.auction.bayesian.entry_fee_and_reserve_price",
         "mechanism_design.auction.bayesian.interim_and_ic",
-        "mechanism_design.auction.bayesian.symmetric_first_price_equilibrium"
+        "mechanism_design.auction.bayesian.symmetric_first_price_equilibrium",
+        "mechanism_design.myerson.optimal_auction",
+        "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+        "mechanism_design.myerson.virtual_value_regularity"
       ]
     },
     {
@@ -8881,6 +9669,7 @@
       "used_by": [
         "market_design.matching.one_to_one.strategy_proofness_proposing",
         "mechanism_design.auction.basic.first_price_no_dsic",
+        "mechanism_design.auction.basic.reserve_second_price_dsic",
         "mechanism_design.auction.basic.second_price_dsic",
         "mechanism_design.basic.truthfulness_from_dsic",
         "mechanism_design.transfer.mechanisms_with_transfers"
@@ -9153,36 +9942,74 @@
         "mechanism_design.myerson.payment_formula"
       ],
       "used_by": [
-        "mechanism_design.auction.knapsack.welfare_maximizing_mechanism"
+        "mechanism_design.auction.knapsack.welfare_maximizing_mechanism",
+        "mechanism_design.myerson.optimal_auction"
       ]
     },
     {
       "id": "mechanism_design.myerson.optimal_auction",
-      "title": "Myerson Optimal Auction (Virtual Valuations)",
+      "title": "Regular Myerson Optimal Single-Item Auction",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "mechanism-design",
         "myerson",
         "optimal-auction",
         "virtual-valuation",
-        "bayesian"
+        "bayesian",
+        "single-item"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson",
+        "mechanism_design.auction",
+        "mechanism_design.auction.bayesian"
+      ],
+      "lean_declarations": [
+        "BayesianSingleItemAuction.virtualSurplusMaximizingPaymentRule",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingMechanism",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingAuction",
+        "BayesianSingleItemAuction.RegularMyersonICIRAnalyticAssumptions",
+        "BayesianSingleItemAuction.IsFeasibleICIRIntegrable",
+        "BayesianSingleItemAuction.IsRegularMyersonOptimalICIRAuction",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingAuction_regularMyersonOptimalICIR_of_isRegular"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.auction.bayesian.interim_and_ic",
+        "mechanism_design.auction.bayesian.single_item_framework",
+        "mechanism_design.bayesian.selling_problem",
+        "mechanism_design.myerson.monotonicity_characterization",
+        "mechanism_design.myerson.payment_formula",
+        "mechanism_design.myerson.revenue_equivalence",
+        "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+        "mechanism_design.myerson.virtual_value_regularity"
+      ],
+      "used_by": [
+        "mechanism_design.auction.bayesian.entry_fee_and_reserve_price",
+        "mechanism_design.myerson.reserve_price"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.optimal_auction_legacy_plan",
+      "title": "Myerson Optimal Auction Legacy Plan",
+      "kind": "proof-plan",
+      "status": "staged",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "optimal-auction",
+        "provenance"
       ],
       "primary_topic": "mechanism_design",
       "topics": [
         "mechanism_design",
         "mechanism_design.myerson"
       ],
-      "topic": "mechanism_design",
-      "uses": [
-        "mechanism_design.bayesian.selling_problem",
-        "mechanism_design.myerson.payment_formula",
-        "mechanism_design.myerson.revenue_equivalence"
-      ],
-      "used_by": [
-        "mechanism_design.auction.bayesian.entry_fee_and_reserve_price",
-        "mechanism_design.myerson.reserve_price"
-      ]
+      "target": "mechanism_design.myerson.optimal_auction",
+      "plan_status": "formalized",
+      "topic": "mechanism_design"
     },
     {
       "id": "mechanism_design.myerson.payment_construction",
@@ -9329,6 +10156,82 @@
       ]
     },
     {
+      "id": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "title": "Virtual-Surplus-Maximizing Allocation",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "virtual-surplus",
+        "allocation-rule",
+        "single-item"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson",
+        "mechanism_design.auction",
+        "mechanism_design.auction.bayesian"
+      ],
+      "lean_declarations": [
+        "BayesianSingleItemAuction.virtualSurplus",
+        "BayesianSingleItemAuction.expectedVirtualSurplus",
+        "BayesianSingleItemAuction.IntegrableVirtualSurplus",
+        "BayesianSingleItemAuction.IsSingleItemAllocationRule",
+        "BayesianSingleItemAuction.IsVirtualSurplusOptimalAllocationRule",
+        "BayesianSingleItemAuction.virtualScore",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingWinner",
+        "BayesianSingleItemAuction.winningVirtualValue",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule_isSingleItemAllocationRule",
+        "BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule_isVirtualSurplusOptimalAllocationRule"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.auction.bayesian.single_item_framework",
+        "mechanism_design.myerson.virtual_value_regularity"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.optimal_auction"
+      ]
+    },
+    {
+      "id": "mechanism_design.myerson.virtual_value_regularity",
+      "title": "Virtual Values and Regularity",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "mechanism-design",
+        "myerson",
+        "virtual-valuation",
+        "regularity",
+        "reserve-price"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.myerson",
+        "mechanism_design.auction",
+        "mechanism_design.auction.bayesian"
+      ],
+      "lean_declarations": [
+        "BayesianSingleItemAuction.virtualValue",
+        "BayesianSingleItemAuction.IsRegular",
+        "BayesianSingleItemAuction.IsReserveThreshold",
+        "BayesianSingleItemAuction.measurable_virtualValue_of_isRegular",
+        "BayesianSingleItemAuction.isReserveThreshold_of_isRegular_of_virtualValue_eq_zero"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.auction.bayesian.single_item_framework"
+      ],
+      "used_by": [
+        "mechanism_design.myerson.optimal_auction",
+        "mechanism_design.myerson.virtual_surplus_maximizing_allocation"
+      ]
+    },
+    {
       "id": "mechanism_design.transfer.mechanisms_with_transfers",
       "title": "Mechanisms With Transfers",
       "kind": "definition",
@@ -9363,6 +10266,7 @@
       "used_by": [
         "mechanism_design.auction.basic.first_price_mechanism",
         "mechanism_design.auction.basic.formats",
+        "mechanism_design.auction.basic.reserve_second_price_mechanism",
         "mechanism_design.auction.basic.second_price_mechanism",
         "mechanism_design.bayesian.bayesian_mechanisms",
         "mechanism_design.bayesian.ex_ante_expected_utility",
@@ -10561,7 +11465,9 @@
         "social_choice.fair_division.divisible",
         "social_choice.fair_division.divisible.stromquist"
       ],
-      "lean_declarations": [],
+      "lean_declarations": [
+        "SocialChoice.FairDivision.Divisible.strom_fair_assignment"
+      ],
       "topic": "social_choice",
       "uses": [
         "social_choice.fair_division.divisible.envy_free",
@@ -10711,7 +11617,9 @@
         "social_choice.fair_division.divisible",
         "social_choice.fair_division.divisible.stromquist"
       ],
-      "lean_declarations": [],
+      "lean_declarations": [
+        "SocialChoice.FairDivision.Divisible.strom_unusual_case"
+      ],
       "topic": "social_choice",
       "uses": [
         "social_choice.fair_division.divisible.stromquist_shifted_cells",
@@ -10740,7 +11648,9 @@
         "social_choice.fair_division.divisible",
         "social_choice.fair_division.divisible.stromquist"
       ],
-      "lean_declarations": [],
+      "lean_declarations": [
+        "SocialChoice.FairDivision.Divisible.strom_usual_case"
+      ],
       "topic": "social_choice",
       "uses": [
         "social_choice.fair_division.divisible.stromquist_assignment"
@@ -13355,10 +14265,6 @@
       "to": "foundation.preference.relation"
     },
     {
-      "from": "foundation.preference.relation",
-      "to": "foundation.preference.representation"
-    },
-    {
       "from": "foundation.preference.indifferent",
       "to": "foundation.preference.represents_preference"
     },
@@ -13367,7 +14273,7 @@
       "to": "foundation.preference.represents_preference"
     },
     {
-      "from": "foundation.preference.representation",
+      "from": "foundation.preference.represents_preference",
       "to": "foundation.utility.expected_utility_representation"
     },
     {
@@ -13767,6 +14673,10 @@
       "to": "game_theory.extensive_game.normal_form.sequential_equilibrium_exists"
     },
     {
+      "from": "game_theory.extensive_game.core.game_tree",
+      "to": "game_theory.extensive_game.perfect_information.backward_induction_value"
+    },
+    {
       "from": "game_theory.extensive_game.perfect_information.simple_perfect_information_game",
       "to": "game_theory.extensive_game.perfect_information.determined_game"
     },
@@ -13963,6 +14873,10 @@
       "to": "game_theory.stochastic_game.equilibrium.fink_nash_existence"
     },
     {
+      "from": "game_theory.strategic_game.nash_equilibrium",
+      "to": "game_theory.stochastic_game.equilibrium.fink_nash_existence"
+    },
+    {
       "from": "game_theory.stochastic_game.asymptotic.mertens_neyman_uniform_value",
       "to": "game_theory.stochastic_game.examples.big_match_uniform_value"
     },
@@ -14151,20 +15065,12 @@
       "to": "game_theory.strategic_game.core.br_invariance"
     },
     {
-      "from": "game_theory.strategic_game.strategic_game",
-      "to": "game_theory.strategic_game.core.dominant_strategy"
-    },
-    {
       "from": "game_theory.strategic_game.core.mixed_strategy",
       "to": "game_theory.strategic_game.core.mixed_extension"
     },
     {
       "from": "game_theory.strategic_game.strategic_game",
       "to": "game_theory.strategic_game.core.mixed_strategy"
-    },
-    {
-      "from": "game_theory.strategic_game.strategic_game",
-      "to": "game_theory.strategic_game.core.mixed_strategy_mfogt"
     },
     {
       "from": "game_theory.strategic_game.strategic_game",
@@ -14603,6 +15509,10 @@
       "to": "game_theory.strategic_game.strategy_profile"
     },
     {
+      "from": "game_theory.strategic_game.strictly_dominates",
+      "to": "game_theory.strategic_game.strictly_dominant_strategy"
+    },
+    {
       "from": "game_theory.strategic_game.unilateral_deviation",
       "to": "game_theory.strategic_game.strictly_dominates"
     },
@@ -14621,6 +15531,10 @@
     {
       "from": "game_theory.strategic_game.unilateral_deviation",
       "to": "game_theory.strategic_game.weakly_dominates"
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+      "to": "game_theory.strategic_game.zero_sum.antisymmetric_matrix_game_value"
     },
     {
       "from": "game_theory.strategic_game.zero_sum.applications.stochastic_matrix_invariant_distribution",
@@ -14797,6 +15711,14 @@
     {
       "from": "game_theory.strategic_game.zero_sum.core.mixed_extension",
       "to": "game_theory.strategic_game.zero_sum.core.saddle_point"
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.core.optimal_strategy_sets",
+      "to": "game_theory.strategic_game.zero_sum.core.strong_complementarity"
+    },
+    {
+      "from": "game_theory.strategic_game.zero_sum.core.support_complementarity",
+      "to": "game_theory.strategic_game.zero_sum.core.strong_complementarity"
     },
     {
       "from": "game_theory.strategic_game.zero_sum.core.mixed_support",
@@ -15087,7 +16009,7 @@
       "to": "math.fixed_point.brouwer_compact_convex"
     },
     {
-      "from": "math.fixed_point.sperner_lemma",
+      "from": "math.fixed_point.scarf_lemma",
       "to": "math.fixed_point.brouwer_simplex"
     },
     {
@@ -15396,6 +16318,30 @@
     },
     {
       "from": "game_theory.strategic_game.weakly_dominant_strategy",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic"
+    },
+    {
+      "from": "mechanism_design.auction.basic.reserve_second_price_mechanism",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic"
+    },
+    {
+      "from": "mechanism_design.auction.basic.second_price_dsic",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "mechanism_design.auction.basic.reserve_second_price_dsic"
+    },
+    {
+      "from": "mechanism_design.auction.basic.second_price_mechanism",
+      "to": "mechanism_design.auction.basic.reserve_second_price_mechanism"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.auction.basic.reserve_second_price_mechanism"
+    },
+    {
+      "from": "game_theory.strategic_game.weakly_dominant_strategy",
       "to": "mechanism_design.auction.basic.second_price_dsic"
     },
     {
@@ -15631,7 +16577,19 @@
       "to": "mechanism_design.myerson.monotonicity_characterization"
     },
     {
+      "from": "mechanism_design.auction.bayesian.interim_and_ic",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
       "from": "mechanism_design.bayesian.selling_problem",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.myerson.monotonicity_characterization",
       "to": "mechanism_design.myerson.optimal_auction"
     },
     {
@@ -15640,6 +16598,14 @@
     },
     {
       "from": "mechanism_design.myerson.revenue_equivalence",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_surplus_maximizing_allocation",
+      "to": "mechanism_design.myerson.optimal_auction"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_value_regularity",
       "to": "mechanism_design.myerson.optimal_auction"
     },
     {
@@ -15677,6 +16643,18 @@
     {
       "from": "mechanism_design.myerson.payment_formula",
       "to": "mechanism_design.myerson.revenue_equivalence"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.virtual_surplus_maximizing_allocation"
+    },
+    {
+      "from": "mechanism_design.myerson.virtual_value_regularity",
+      "to": "mechanism_design.myerson.virtual_surplus_maximizing_allocation"
+    },
+    {
+      "from": "mechanism_design.auction.bayesian.single_item_framework",
+      "to": "mechanism_design.myerson.virtual_value_regularity"
     },
     {
       "from": "mechanism_design.basic.direct_mechanism_interface",

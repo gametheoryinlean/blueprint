@@ -6,8 +6,8 @@
   "href": "game_theory/coalitional_game/game_theory_coalitional_game_convex_game_core_nonempty.html",
   "primary_topic": "game_theory.coalitional_game",
   "topics": [
-    "game_theory",
-    "game_theory.coalitional_game"
+    "game_theory.coalitional_game",
+    "game_theory.coalitional_game.classes"
   ],
   "body_html": "<h1>Convex Games Have Nonempty Core</h1>\n<p><strong>Theorem.</strong> If a finite TU game is convex, then its core is nonempty.</p>",
   "proof_html": "<p>Sketch</p>\n<p>Convexity implies the balancedness inequalities required by\nBondareva-Shapley. Applying\n[[game_theory.coalitional_game.bondareva_shapley]] then gives\nnonemptiness of the core.</p>\n<h2>Lean Status</h2>\n<p>The theorem statement exists as <code>CoalitionalGame.IsConvex.core_nonempty</code>\nand currently has a documented proof gap, depending on the\nBondareva-Shapley proof route.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Ch.17, Thm 17.55] Maschler, Solan, Zamir, <em>Game Theory</em>,\n  <code>references/GameTheory.pdf</code>.</li>\n</ul>",
@@ -34,9 +34,9 @@
       "signature": "theorem IsConvex.core_nonempty (hconv : G.IsConvex) :\n    (G.Core).Nonempty",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L93",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L93",
       "doc_url": null,
       "has_sorry": true,
       "status": "resolved",
@@ -49,9 +49,9 @@
       "name": "EconCSLib.GameTheory.CoalitionalGame.Core",
       "display_name": "EconCSLib.GameTheory.CoalitionalGame.Core",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L1",
       "status": "resolved",
       "reason": null
     }

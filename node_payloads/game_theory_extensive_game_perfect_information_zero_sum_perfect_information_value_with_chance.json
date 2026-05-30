@@ -3,9 +3,10 @@
   "title": "Value In Finite Zero-Sum Perfect-Information Games (With Chance)",
   "kind": "theorem",
   "status": "staged",
-  "href": "game_theory/extensive_game/perfect_information/game_theory_extensive_game_perfect_information_zero_sum_perfect_information_value_with_chance.html",
-  "primary_topic": "game_theory.extensive_game.perfect_information",
+  "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_zero_sum_perfect_information_value_with_chance.html",
+  "primary_topic": "game_theory.extensive_game",
   "topics": [
+    "game_theory.extensive_game",
     "game_theory.extensive_game.perfect_information"
   ],
   "body_html": "<h1>Value In Finite Zero-Sum Perfect-Information Games (With Chance)</h1>\n<p>Every finite zero-sum perfect-information game <strong>with Nature / chance moves</strong>\nhas a value, and both players have pure optimal strategies. At a chance node,\nthe value equals the probability-weighted average of the successor subgame\nvalues.</p>",
@@ -24,10 +25,112 @@
     {
       "id": "game_theory.strategic_game.zero_sum.core.value",
       "title": "Value Of A Zero-Sum Game",
-      "href": "game_theory/strategic_game/game_theory_strategic_game_zero_sum_core_value.html"
+      "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_core_value.html"
     }
   ],
   "dependents": [],
-  "lean_refs": [],
-  "lean_modules": []
+  "lean_refs": [
+    {
+      "name": "ZeroSumChance.GameTree",
+      "display_name": "ZeroSumChance.GameTree",
+      "qualified_name": "ZeroSumChance.GameTree",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "kind": "inductive",
+      "signature": "inductive GameTree : Type\n  | Leaf  (val : ℚ)                                           : GameTree\n  | Pnode (p : Player) (L R : GameTree)                       : GameTree\n  | Nnode (prob : Set.Icc (0 : ℚ) 1) (L R : GameTree)        : GameTree\n  deriving Repr, DecidableEq",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L84",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "ZeroSumChance.GameTree.value",
+      "display_name": "ZeroSumChance.GameTree.value",
+      "qualified_name": "ZeroSumChance.GameTree.value",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "kind": "def",
+      "signature": "def value : GameTree → ℚ\n  | Leaf r      => r\n  | Pnode p L R => match p with\n    | .A => max L.value R.value\n    | .B => min L.value R.value\n  | Nnode prob L R => prob * L.value + (1 - prob) * R.value\n/-- **A's dominant strategy**: at each A-node, move to whichever child has the\n    higher value; ties go left. -/",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L120",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "ZeroSumChance.GameTree.DStrategy",
+      "display_name": "ZeroSumChance.GameTree.DStrategy",
+      "qualified_name": "ZeroSumChance.GameTree.DStrategy",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "kind": "def",
+      "signature": "def DStrategy : Strategy",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L129",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "ZeroSumChance.GameTree.outcome",
+      "display_name": "ZeroSumChance.GameTree.outcome",
+      "qualified_name": "ZeroSumChance.GameTree.outcome",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "kind": "def",
+      "signature": "def outcome (SA SB : Strategy) : GameTree → ℚ\n  | Leaf r      => r\n  | Pnode p L R => match p with\n    | .A => match SA L R with\n      | .l => outcome SA SB L\n      | .r => outcome SA SB R\n    | .B => match SB L R with\n      | .l => outcome SA SB L\n      | .r => outcome SA SB R\n  | Nnode prob L R => prob * outcome SA SB L + (1 - prob) * outcome SA SB R\n/-! ### Main theorem -/",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L137",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "ZeroSumChance.GameTree.value_prop",
+      "display_name": "ZeroSumChance.GameTree.value_prop",
+      "qualified_name": "ZeroSumChance.GameTree.value_prop",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "kind": "theorem",
+      "signature": "theorem value_prop (SB : Strategy) {t : GameTree} : t.value ≤ t.outcome DStrategy SB",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L155",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "display_name": "EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance",
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
 }

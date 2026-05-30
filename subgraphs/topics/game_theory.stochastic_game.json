@@ -5,21 +5,24 @@
     "href": "game_theory/stochastic_game/index.html",
     "parent": "game_theory",
     "node_count": 10,
-    "descendant_node_count": 10
+    "descendant_node_count": 10,
+    "status_counts": {
+      "staged": 10
+    }
   },
   "counts": {
     "internal_nodes": 10,
     "inlined_nodes": 10,
     "descendant_nodes": 10,
     "child_topics": 0,
-    "inlined_child_topics": 5,
+    "inlined_child_topics": 3,
     "non_proof_plan_nodes": 10,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 1,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 12,
-    "visible_nodes_with_selected_proof_plans": 12
+    "visible_nodes_without_proof_plans": 13,
+    "visible_nodes_with_selected_proof_plans": 13
   },
   "nodes": [
     {
@@ -161,7 +164,14 @@
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 181
+      "node_count": 105
+    },
+    {
+      "id": "game_theory.zero_sum",
+      "title": "Game Theory.Zero Sum",
+      "href": "game_theory/zero_sum/index.html",
+      "role": "dependency",
+      "node_count": 77
     }
   ],
   "boundary_edges": [
@@ -174,23 +184,30 @@
     },
     {
       "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.stochastic_game.equilibrium.fink_nash_existence",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.zero_sum",
       "to": "game_theory.stochastic_game.value.discounted_value",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 1
     },
     {
-      "from": "topic:game_theory.strategic_game",
+      "from": "topic:game_theory.zero_sum",
       "to": "game_theory.stochastic_game.value.shapley_operator",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 1
     },
     {
-      "from": "topic:game_theory.strategic_game",
+      "from": "topic:game_theory.zero_sum",
       "to": "game_theory.stochastic_game.value.shapley_operator_contraction",
       "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
+      "topic": "game_theory.zero_sum",
       "count": 1
     }
   ],
@@ -304,8 +321,6 @@
   "inlined_child_topics": [
     "game_theory.stochastic_game.asymptotic",
     "game_theory.stochastic_game.core",
-    "game_theory.stochastic_game.equilibrium",
-    "game_theory.stochastic_game.examples",
     "game_theory.stochastic_game.value"
   ]
 }

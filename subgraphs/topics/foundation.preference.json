@@ -4,22 +4,26 @@
     "title": "Foundation.Preference",
     "href": "foundation/preference/index.html",
     "parent": "foundation",
-    "node_count": 7,
-    "descendant_node_count": 7
+    "node_count": 6,
+    "descendant_node_count": 6,
+    "status_counts": {
+      "formalized": 5,
+      "staged": 1
+    }
   },
   "counts": {
-    "internal_nodes": 7,
+    "internal_nodes": 6,
     "inlined_nodes": 0,
-    "descendant_nodes": 7,
+    "descendant_nodes": 6,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 7,
+    "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 10,
-    "visible_nodes_with_selected_proof_plans": 10
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -45,14 +49,6 @@
       "status": "staged",
       "href": "foundation/foundation_preference_relation.html",
       "payload": "node_payloads/foundation_preference_relation.json"
-    },
-    {
-      "id": "foundation.preference.representation",
-      "title": "Utility Representation",
-      "kind": "definition",
-      "status": "staged",
-      "href": "foundation/foundation_preference_representation.html",
-      "payload": "node_payloads/foundation_preference_representation.json"
     },
     {
       "id": "foundation.preference.represents_preference",
@@ -101,11 +97,6 @@
       "kind": "uses"
     },
     {
-      "from": "foundation.preference.relation",
-      "to": "foundation.preference.representation",
-      "kind": "uses"
-    },
-    {
       "from": "foundation.preference.indifferent",
       "to": "foundation.preference.represents_preference",
       "kind": "uses"
@@ -122,7 +113,7 @@
       "title": "Foundation",
       "href": "foundation/index.html",
       "role": "dependent",
-      "node_count": 27
+      "node_count": 26
     },
     {
       "id": "foundation.utility",
@@ -148,7 +139,7 @@
       "count": 1
     },
     {
-      "from": "foundation.preference.representation",
+      "from": "foundation.preference.represents_preference",
       "to": "topic:foundation.utility",
       "kind": "boundary_dependent",
       "topic": "foundation.utility",
@@ -172,7 +163,7 @@
       "id": "preference",
       "title": "preference",
       "href": "keywords/preference.html",
-      "count": 7
+      "count": 6
     },
     {
       "id": "strict-preference",

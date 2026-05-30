@@ -4,22 +4,26 @@
     "title": "Game Theory.Extensive Game.Normal Form",
     "href": "game_theory/extensive_game/normal_form/index.html",
     "parent": "game_theory.extensive_game",
-    "node_count": 7,
-    "descendant_node_count": 7
+    "node_count": 6,
+    "descendant_node_count": 6,
+    "status_counts": {
+      "formalized": 3,
+      "staged": 3
+    }
   },
   "counts": {
-    "internal_nodes": 7,
-    "inlined_nodes": 3,
-    "descendant_nodes": 7,
+    "internal_nodes": 6,
+    "inlined_nodes": 0,
+    "descendant_nodes": 6,
     "child_topics": 0,
-    "inlined_child_topics": 3,
-    "non_proof_plan_nodes": 7,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 6,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 5,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 13,
-    "visible_nodes_with_selected_proof_plans": 13
+    "visible_nodes_without_proof_plans": 9,
+    "visible_nodes_with_selected_proof_plans": 9
   },
   "nodes": [
     {
@@ -27,7 +31,7 @@
       "title": "Agent Normal Form",
       "kind": "definition",
       "status": "staged",
-      "href": "game_theory/extensive_game/normal_form/game_theory_extensive_game_normal_form_agent_normal_form.html",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_normal_form_agent_normal_form.html",
       "payload": "node_payloads/game_theory_extensive_game_normal_form_agent_normal_form.json"
     },
     {
@@ -35,7 +39,7 @@
       "title": "Extensive Form Perfect Equilibrium",
       "kind": "definition",
       "status": "staged",
-      "href": "game_theory/extensive_game/normal_form/game_theory_extensive_game_normal_form_extensive_form_perfect_equilibrium.html",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_normal_form_extensive_form_perfect_equilibrium.html",
       "payload": "node_payloads/game_theory_extensive_game_normal_form_extensive_form_perfect_equilibrium.json"
     },
     {
@@ -67,16 +71,8 @@
       "title": "Existence Of Sequential Equilibrium",
       "kind": "theorem",
       "status": "staged",
-      "href": "game_theory/extensive_game/normal_form/game_theory_extensive_game_normal_form_sequential_equilibrium_exists.html",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_normal_form_sequential_equilibrium_exists.html",
       "payload": "node_payloads/game_theory_extensive_game_normal_form_sequential_equilibrium_exists.json"
-    },
-    {
-      "id": "game_theory.extensive_game.theorems_catalog",
-      "title": "Extensive-Game Theorems Catalog",
-      "kind": "definition",
-      "status": "staged",
-      "href": "game_theory/extensive_game/game_theory_extensive_game_theorems_catalog.html",
-      "payload": "node_payloads/game_theory_extensive_game_theorems_catalog.json"
     }
   ],
   "edges": [
@@ -111,39 +107,25 @@
       "id": "game_theory.extensive_game",
       "title": "Game Theory.Extensive Game",
       "href": "game_theory/extensive_game/index.html",
-      "role": "dependency",
-      "node_count": 55
-    },
-    {
-      "id": "game_theory.extensive_game.examples",
-      "title": "Game Theory.Extensive Game.Examples",
-      "href": "game_theory/extensive_game/examples/index.html",
-      "role": "dependent",
-      "node_count": 6
-    },
-    {
-      "id": "game_theory.extensive_game.imperfect_information",
-      "title": "Game Theory.Extensive Game.Imperfect Information",
-      "href": "game_theory/extensive_game/imperfect_information/index.html",
-      "role": "dependency",
-      "node_count": 25
+      "role": "dependency_and_dependent",
+      "node_count": 56
     },
     {
       "id": "game_theory.strategic_game",
       "title": "Game Theory.Strategic Game",
       "href": "game_theory/strategic_game/index.html",
       "role": "dependency",
-      "node_count": 181
-    },
-    {
-      "id": "game_theory.strategic_game.refinements",
-      "title": "Game Theory.Strategic Game.Refinements",
-      "href": "game_theory/strategic_game/refinements/index.html",
-      "role": "dependency",
-      "node_count": 15
+      "node_count": 105
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:game_theory.extensive_game",
+      "to": "game_theory.extensive_game.normal_form.agent_normal_form",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.extensive_game",
+      "count": 1
+    },
     {
       "from": "topic:game_theory.extensive_game",
       "to": "game_theory.extensive_game.normal_form.extensive_normal_form_invariance",
@@ -160,23 +142,16 @@
     },
     {
       "from": "topic:game_theory.extensive_game",
-      "to": "game_theory.extensive_game.theorems_catalog",
+      "to": "game_theory.extensive_game.normal_form.sequential_equilibrium_exists",
       "kind": "boundary_dependency",
       "topic": "game_theory.extensive_game",
-      "count": 4
-    },
-    {
-      "from": "topic:game_theory.extensive_game.imperfect_information",
-      "to": "game_theory.extensive_game.normal_form.agent_normal_form",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.extensive_game.imperfect_information",
       "count": 1
     },
     {
-      "from": "topic:game_theory.extensive_game.imperfect_information",
-      "to": "game_theory.extensive_game.normal_form.sequential_equilibrium_exists",
+      "from": "topic:game_theory.strategic_game",
+      "to": "game_theory.extensive_game.normal_form.extensive_form_perfect_equilibrium",
       "kind": "boundary_dependency",
-      "topic": "game_theory.extensive_game.imperfect_information",
+      "topic": "game_theory.strategic_game",
       "count": 1
     },
     {
@@ -187,33 +162,14 @@
       "count": 1
     },
     {
-      "from": "topic:game_theory.strategic_game.refinements",
-      "to": "game_theory.extensive_game.normal_form.extensive_form_perfect_equilibrium",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game.refinements",
-      "count": 1
-    },
-    {
       "from": "game_theory.extensive_game.normal_form.extensive_form_perfect_equilibrium",
-      "to": "topic:game_theory.extensive_game.examples",
+      "to": "topic:game_theory.extensive_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.extensive_game.examples",
+      "topic": "game_theory.extensive_game",
       "count": 1
     }
   ],
   "keywords": [
-    {
-      "id": "backward-induction",
-      "title": "backward-induction",
-      "href": "keywords/backward-induction.html",
-      "count": 1
-    },
-    {
-      "id": "catalog",
-      "title": "catalog",
-      "href": "keywords/catalog.html",
-      "count": 1
-    },
     {
       "id": "equilibrium-refinement",
       "title": "equilibrium-refinement",
@@ -230,7 +186,7 @@
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 7
+      "count": 6
     },
     {
       "id": "invariance",
@@ -243,12 +199,6 @@
       "title": "normal-form",
       "href": "keywords/normal-form.html",
       "count": 4
-    },
-    {
-      "id": "normal-form-reduction",
-      "title": "normal-form-reduction",
-      "href": "keywords/normal-form-reduction.html",
-      "count": 1
     },
     {
       "id": "perfection",
@@ -267,20 +217,10 @@
       "title": "sequential-equilibrium",
       "href": "keywords/sequential-equilibrium.html",
       "count": 1
-    },
-    {
-      "id": "subgame-perfect-equilibrium",
-      "title": "subgame-perfect-equilibrium",
-      "href": "keywords/subgame-perfect-equilibrium.html",
-      "count": 1
     }
   ],
   "proof_plan_attachments": [],
   "child_topics": [],
   "child_topic_nodes": [],
-  "inlined_child_topics": [
-    "game_theory.extensive_game.normal_form.agent_normal_form",
-    "game_theory.extensive_game.normal_form.extensive_form_perfect_equilibrium",
-    "game_theory.extensive_game.normal_form.sequential_equilibrium_exists"
-  ]
+  "inlined_child_topics": []
 }

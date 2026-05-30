@@ -5,7 +5,10 @@
     "href": "game_theory/extensive_game/core/index.html",
     "parent": "game_theory.extensive_game",
     "node_count": 4,
-    "descendant_node_count": 4
+    "descendant_node_count": 4,
+    "status_counts": {
+      "formalized": 4
+    }
   },
   "counts": {
     "internal_nodes": 4,
@@ -16,10 +19,10 @@
     "non_proof_plan_nodes": 4,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 1,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 8,
-    "visible_nodes_with_selected_proof_plans": 8
+    "visible_nodes_without_proof_plans": 6,
+    "visible_nodes_with_selected_proof_plans": 6
   },
   "nodes": [
     {
@@ -68,24 +71,17 @@
       "title": "Game Theory.Extensive Game",
       "href": "game_theory/extensive_game/index.html",
       "role": "dependent",
-      "node_count": 55
-    },
-    {
-      "id": "game_theory.extensive_game.examples",
-      "title": "Game Theory.Extensive Game.Examples",
-      "href": "game_theory/extensive_game/examples/index.html",
-      "role": "dependent",
-      "node_count": 6
-    },
-    {
-      "id": "game_theory.extensive_game.perfect_information",
-      "title": "Game Theory.Extensive Game.Perfect Information",
-      "href": "game_theory/extensive_game/perfect_information/index.html",
-      "role": "dependent",
-      "node_count": 14
+      "node_count": 56
     }
   ],
   "boundary_edges": [
+    {
+      "from": "game_theory.extensive_game.core.game_tree",
+      "to": "topic:game_theory.extensive_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.extensive_game",
+      "count": 1
+    },
     {
       "from": "game_theory.extensive_game.core.history_and_subgame",
       "to": "topic:game_theory.extensive_game",
@@ -94,25 +90,18 @@
       "count": 2
     },
     {
+      "from": "game_theory.extensive_game.core.nature_player",
+      "to": "topic:game_theory.extensive_game",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.extensive_game",
+      "count": 4
+    },
+    {
       "from": "game_theory.extensive_game.core.strategy_profile_induced_outcome",
       "to": "topic:game_theory.extensive_game",
       "kind": "boundary_dependent",
       "topic": "game_theory.extensive_game",
       "count": 1
-    },
-    {
-      "from": "game_theory.extensive_game.core.nature_player",
-      "to": "topic:game_theory.extensive_game.examples",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.extensive_game.examples",
-      "count": 2
-    },
-    {
-      "from": "game_theory.extensive_game.core.nature_player",
-      "to": "topic:game_theory.extensive_game.perfect_information",
-      "kind": "boundary_dependent",
-      "topic": "game_theory.extensive_game.perfect_information",
-      "count": 2
     }
   ],
   "keywords": [

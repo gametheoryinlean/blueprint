@@ -15,7 +15,7 @@
     {
       "id": "game_theory.extensive_game.imperfect_information.information_set",
       "title": "Information Set",
-      "href": "game_theory/extensive_game/imperfect_information/game_theory_extensive_game_imperfect_information_information_set.html"
+      "href": "game_theory/extensive_game/game_theory_extensive_game_imperfect_information_information_set.html"
     }
   ],
   "dependents": [
@@ -35,9 +35,9 @@
       "signature": "def PureStrategy.actionAt {i : ι} (σ : G.PureStrategy i) {s : G.State}\n    {k : G.InfoSet} (hinfo : G.info s = some k) (hmover : G.mover s = some i) :\n    G.Action s",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L105",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L105",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -53,9 +53,9 @@
       "signature": "theorem actionAt_same_info_label {i : ι} (σ : G.PureStrategy i)\n    {s t : G.State} {k : G.InfoSet}\n    (hs : G.info s = some k) (ht : G.info t = some k)\n    (hms : G.mover s = some i) (hmt : G.mover t = some i) :\n    PureStrategy.actionAt G σ hs hms = σ k s hs hms ∧\n      PureStrategy.actionAt G σ ht hmt = σ k t ht hmt",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L114",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L114",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -68,9 +68,9 @@
       "name": "EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation",
       "display_name": "EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L1",
       "status": "resolved",
       "reason": null
     }

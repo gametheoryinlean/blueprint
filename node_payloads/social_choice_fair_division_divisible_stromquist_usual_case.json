@@ -27,15 +27,34 @@
       "href": "social_choice/social_choice_fair_division_divisible_stromquist_unusual_case.html"
     }
   ],
-  "lean_refs": [],
+  "lean_refs": [
+    {
+      "name": "SocialChoice.FairDivision.Divisible.strom_usual_case",
+      "display_name": "SocialChoice.FairDivision.Divisible.strom_usual_case",
+      "qualified_name": "SocialChoice.FairDivision.Divisible.strom_usual_case",
+      "module": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
+      "kind": "lemma",
+      "signature": "private lemma strom_usual_case\n    (hn : 0 < n)\n    (hcover : stdSimplex ℝ (Fin n) ⊆ ⋃ i, strom_U n μ i)\n    (hpos : ∀ j : Fin n, 0 < μ j (Set.Ico 0 1))\n    (hsupp : ∀ j : Fin n, μ j = (μ j).restrict (Set.Ico 0 1)) :\n    ∃ A : Allocation (Fin n) ℝ,\n      IsAllocation A ∧ IsEnvyFree (MeasureValuation μ) A",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L583",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
   "lean_modules": [
     {
       "name": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
       "repository_title": "EconCSLib",
-      "revision": "b0d217ef174cb644a3c82b3edc94bc46bf493292",
-      "short_revision": "b0d217e",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b0d217ef174cb644a3c82b3edc94bc46bf493292/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1",
+      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
+      "short_revision": "c7e923d",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1",
       "status": "resolved",
       "reason": null
     }
