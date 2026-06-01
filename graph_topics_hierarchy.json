@@ -8,18 +8,18 @@
       "node_count": 26,
       "direct_node_count": 19,
       "kind_counts": {
-        "definition": 13,
-        "lemma": 4,
-        "theorem": 9
+        "definition": 14,
+        "example": 7,
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 10,
-        "proved": 8,
+        "formalized": 18,
         "staged": 8
       },
       "href": "foundation/index.html",
       "children": [
         "foundation.argmax",
+        "foundation.cost",
         "foundation.preference",
         "foundation.profile",
         "foundation.utility"
@@ -30,25 +30,24 @@
       "title": "Game Theory",
       "depth": 1,
       "parent": null,
-      "node_count": 284,
+      "node_count": 283,
       "direct_node_count": 0,
       "kind_counts": {
         "definition": 139,
         "example": 18,
         "lemma": 10,
-        "proof-plan": 2,
         "proposition": 35,
-        "theorem": 80
+        "theorem": 81
       },
       "status_counts": {
-        "admitted": 38,
+        "admitted": 36,
         "formalized": 49,
         "proved": 15,
-        "staged": 182
+        "staged": 183
       },
       "href": "game_theory/index.html",
       "children": [
-        "game_theory.coalitional_game",
+        "game_theory.cooperative_game",
         "game_theory.extensive_game",
         "game_theory.repeated_game",
         "game_theory.stochastic_game",
@@ -83,7 +82,7 @@
       "depth": 1,
       "parent": null,
       "node_count": 43,
-      "direct_node_count": 27,
+      "direct_node_count": 38,
       "kind_counts": {
         "definition": 6,
         "lemma": 14,
@@ -92,8 +91,8 @@
         "theorem": 14
       },
       "status_counts": {
-        "admitted": 11,
-        "formalized": 6,
+        "admitted": 10,
+        "formalized": 7,
         "proved": 21,
         "staged": 5
       },
@@ -168,18 +167,18 @@
       "node_count": 26,
       "direct_node_count": 19,
       "kind_counts": {
-        "definition": 13,
-        "lemma": 4,
-        "theorem": 9
+        "definition": 14,
+        "example": 7,
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 10,
-        "proved": 8,
+        "formalized": 18,
         "staged": 8
       },
       "href": "foundation/index.html",
       "children": [
         "foundation.argmax",
+        "foundation.cost",
         "foundation.preference",
         "foundation.profile",
         "foundation.utility"
@@ -199,6 +198,41 @@
         "formalized": 1
       },
       "href": "foundation/argmax/index.html",
+      "children": []
+    },
+    "foundation.cost": {
+      "id": "foundation.cost",
+      "title": "Foundation.Cost",
+      "depth": 2,
+      "parent": "foundation",
+      "node_count": 11,
+      "direct_node_count": 4,
+      "kind_counts": {
+        "definition": 4,
+        "example": 7
+      },
+      "status_counts": {
+        "formalized": 11
+      },
+      "href": "foundation/cost/index.html",
+      "children": [
+        "foundation.cost.examples"
+      ]
+    },
+    "foundation.cost.examples": {
+      "id": "foundation.cost.examples",
+      "title": "Foundation.Cost.Examples",
+      "depth": 3,
+      "parent": "foundation.cost",
+      "node_count": 7,
+      "direct_node_count": 7,
+      "kind_counts": {
+        "example": 7
+      },
+      "status_counts": {
+        "formalized": 7
+      },
+      "href": "foundation/cost/examples/index.html",
       "children": []
     },
     "foundation.preference": {
@@ -256,25 +290,24 @@
       "title": "Game Theory",
       "depth": 1,
       "parent": null,
-      "node_count": 284,
+      "node_count": 283,
       "direct_node_count": 0,
       "kind_counts": {
         "definition": 139,
         "example": 18,
         "lemma": 10,
-        "proof-plan": 2,
         "proposition": 35,
-        "theorem": 80
+        "theorem": 81
       },
       "status_counts": {
-        "admitted": 38,
+        "admitted": 36,
         "formalized": 49,
         "proved": 15,
-        "staged": 182
+        "staged": 183
       },
       "href": "game_theory/index.html",
       "children": [
-        "game_theory.coalitional_game",
+        "game_theory.cooperative_game",
         "game_theory.extensive_game",
         "game_theory.repeated_game",
         "game_theory.stochastic_game",
@@ -282,9 +315,9 @@
         "game_theory.zero_sum"
       ]
     },
-    "game_theory.coalitional_game": {
-      "id": "game_theory.coalitional_game",
-      "title": "Game Theory.Coalitional Game",
+    "game_theory.cooperative_game": {
+      "id": "game_theory.cooperative_game",
+      "title": "Game Theory.Cooperative Game",
       "depth": 2,
       "parent": "game_theory",
       "node_count": 19,
@@ -296,18 +329,18 @@
       "status_counts": {
         "staged": 19
       },
-      "href": "game_theory/coalitional_game/index.html",
+      "href": "game_theory/cooperative_game/index.html",
       "children": [
-        "game_theory.coalitional_game.classes",
-        "game_theory.coalitional_game.core",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game.classes",
+        "game_theory.cooperative_game.core",
+        "game_theory.cooperative_game.shapley_value"
       ]
     },
-    "game_theory.coalitional_game.classes": {
-      "id": "game_theory.coalitional_game.classes",
-      "title": "Game Theory.Coalitional Game.Classes",
+    "game_theory.cooperative_game.classes": {
+      "id": "game_theory.cooperative_game.classes",
+      "title": "Game Theory.Cooperative Game.Classes",
       "depth": 3,
-      "parent": "game_theory.coalitional_game",
+      "parent": "game_theory.cooperative_game",
       "node_count": 5,
       "direct_node_count": 5,
       "kind_counts": {
@@ -317,14 +350,14 @@
       "status_counts": {
         "staged": 5
       },
-      "href": "game_theory/coalitional_game/classes/index.html",
+      "href": "game_theory/cooperative_game/classes/index.html",
       "children": []
     },
-    "game_theory.coalitional_game.core": {
-      "id": "game_theory.coalitional_game.core",
-      "title": "Game Theory.Coalitional Game.Core",
+    "game_theory.cooperative_game.core": {
+      "id": "game_theory.cooperative_game.core",
+      "title": "Game Theory.Cooperative Game.Core",
       "depth": 3,
-      "parent": "game_theory.coalitional_game",
+      "parent": "game_theory.cooperative_game",
       "node_count": 8,
       "direct_node_count": 8,
       "kind_counts": {
@@ -334,14 +367,14 @@
       "status_counts": {
         "staged": 8
       },
-      "href": "game_theory/coalitional_game/core/index.html",
+      "href": "game_theory/cooperative_game/core/index.html",
       "children": []
     },
-    "game_theory.coalitional_game.shapley_value": {
-      "id": "game_theory.coalitional_game.shapley_value",
-      "title": "Game Theory.Coalitional Game.Shapley Value",
+    "game_theory.cooperative_game.shapley_value": {
+      "id": "game_theory.cooperative_game.shapley_value",
+      "title": "Game Theory.Cooperative Game.Shapley Value",
       "depth": 3,
-      "parent": "game_theory.coalitional_game",
+      "parent": "game_theory.cooperative_game",
       "node_count": 6,
       "direct_node_count": 6,
       "kind_counts": {
@@ -351,7 +384,7 @@
       "status_counts": {
         "staged": 6
       },
-      "href": "game_theory/coalitional_game/shapley_value/index.html",
+      "href": "game_theory/cooperative_game/shapley_value/index.html",
       "children": []
     },
     "game_theory.extensive_game": {
@@ -359,17 +392,17 @@
       "title": "Game Theory.Extensive Game",
       "depth": 2,
       "parent": "game_theory",
-      "node_count": 56,
-      "direct_node_count": 56,
+      "node_count": 57,
+      "direct_node_count": 57,
       "kind_counts": {
         "definition": 32,
         "example": 4,
         "proposition": 4,
-        "theorem": 16
+        "theorem": 17
       },
       "status_counts": {
         "formalized": 22,
-        "staged": 34
+        "staged": 35
       },
       "href": "game_theory/extensive_game/index.html",
       "children": [
@@ -418,16 +451,16 @@
       "title": "Game Theory.Extensive Game.Imperfect Information",
       "depth": 3,
       "parent": "game_theory.extensive_game",
-      "node_count": 25,
-      "direct_node_count": 25,
+      "node_count": 26,
+      "direct_node_count": 26,
       "kind_counts": {
         "definition": 17,
         "proposition": 1,
-        "theorem": 7
+        "theorem": 8
       },
       "status_counts": {
         "formalized": 4,
-        "staged": 21
+        "staged": 22
       },
       "href": "game_theory/extensive_game/imperfect_information/index.html",
       "children": []
@@ -777,18 +810,17 @@
       "title": "Game Theory.Zero Sum",
       "depth": 2,
       "parent": "game_theory",
-      "node_count": 77,
-      "direct_node_count": 77,
+      "node_count": 75,
+      "direct_node_count": 75,
       "kind_counts": {
         "definition": 23,
         "example": 8,
         "lemma": 10,
-        "proof-plan": 2,
         "proposition": 15,
         "theorem": 19
       },
       "status_counts": {
-        "admitted": 27,
+        "admitted": 25,
         "formalized": 27,
         "proved": 14,
         "staged": 9
@@ -909,16 +941,14 @@
       "title": "Game Theory.Zero Sum.Minimax",
       "depth": 3,
       "parent": "game_theory.zero_sum",
-      "node_count": 7,
-      "direct_node_count": 7,
+      "node_count": 5,
+      "direct_node_count": 5,
       "kind_counts": {
         "definition": 1,
         "lemma": 1,
-        "proof-plan": 2,
         "theorem": 3
       },
       "status_counts": {
-        "admitted": 2,
         "formalized": 1,
         "proved": 4
       },
@@ -1009,7 +1039,7 @@
       "depth": 1,
       "parent": null,
       "node_count": 43,
-      "direct_node_count": 27,
+      "direct_node_count": 38,
       "kind_counts": {
         "definition": 6,
         "lemma": 14,
@@ -1018,8 +1048,8 @@
         "theorem": 14
       },
       "status_counts": {
-        "admitted": 11,
-        "formalized": 6,
+        "admitted": 10,
+        "formalized": 7,
         "proved": 21,
         "staged": 5
       },
@@ -1175,8 +1205,8 @@
         "theorem": 5
       },
       "status_counts": {
-        "admitted": 7,
-        "formalized": 3,
+        "admitted": 6,
+        "formalized": 4,
         "proved": 11
       },
       "href": "math/minimax/index.html",

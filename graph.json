@@ -28,6 +28,312 @@
       ]
     },
     {
+      "id": "foundation.cost.cells",
+      "title": "Peak-Memory Cost via the Cells Monoid",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "memory",
+        "tropical"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost"
+      ],
+      "lean_declarations": [
+        "Cells",
+        "Cells.alloc",
+        "Cells.free"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm"
+      ],
+      "used_by": [
+        "foundation.cost.examples.boyer_moore"
+      ]
+    },
+    {
+      "id": "foundation.cost.costm",
+      "title": "The CostM Complexity Monad",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "monad",
+        "complexity"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost"
+      ],
+      "lean_declarations": [
+        "CostM",
+        "CostM.pure",
+        "CostM.bind",
+        "CostM.tick",
+        "CostM.instMonad",
+        "CostM.instLawfulMonad",
+        "CostM.Bounded",
+        "CostM.IsPolyBounded"
+      ],
+      "topic": "foundation",
+      "used_by": [
+        "foundation.cost.cells",
+        "foundation.cost.examples.boyer_moore",
+        "foundation.cost.examples.gcd",
+        "foundation.cost.examples.lcs",
+        "foundation.cost.examples.memo_fib",
+        "foundation.cost.examples.par_all",
+        "foundation.cost.examples.par_sum",
+        "foundation.cost.examples.reverse_space",
+        "foundation.cost.parallel",
+        "foundation.cost.visited"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.boyer_moore",
+      "title": "Worked Example: Constant-Space Boyer–Moore Majority",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "peak-memory"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "BoyerMoore.majority",
+        "BoyerMoore.loop_cost",
+        "BoyerMoore.majority_peak_le"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.cells",
+        "foundation.cost.costm"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.gcd",
+      "title": "Worked Example: Euclidean GCD Step Count",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "time-complexity"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "GCD.gcd",
+        "GCD.gcd_cost_le",
+        "GCD.gcd_cost_log_le"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.lcs",
+      "title": "Worked Example: Longest Common Subsequence DP Grid",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "dynamic-programming"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "LCS.lcs",
+        "LCS.lcs_cost_subset",
+        "LCS.lcs_cost_card_le"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm",
+        "foundation.cost.visited"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.memo_fib",
+      "title": "Worked Example: Memoized Fibonacci Footprint",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "memoization"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "MemoFib.fibAux",
+        "MemoFib.fib",
+        "MemoFib.fibAux_ret",
+        "MemoFib.fib_value",
+        "MemoFib.fibAux_cost",
+        "MemoFib.fib_cost",
+        "MemoFib.fib_cost_card"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm",
+        "foundation.cost.visited"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.par_all",
+      "title": "Worked Example: N-ary parList Depth Bound",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "parallel"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "ParAll.parMap_unit_cost_le"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm",
+        "foundation.cost.parallel"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.par_sum",
+      "title": "Worked Example: Balanced Parallel Sum Depth",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "parallel"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "ParSum.parSum",
+        "ParSum.parSum_cost_le_clog",
+        "ParSum.parSum_cost_le_length"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm",
+        "foundation.cost.parallel"
+      ]
+    },
+    {
+      "id": "foundation.cost.examples.reverse_space",
+      "title": "Worked Example: Quadratic Naive List Reversal",
+      "kind": "example",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "example",
+        "time-complexity"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost.examples"
+      ],
+      "lean_declarations": [
+        "ReverseSpace.naiveReverse",
+        "ReverseSpace.naiveReverse_cost_le"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm"
+      ]
+    },
+    {
+      "id": "foundation.cost.parallel",
+      "title": "Parallel Composition in CostM",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "parallel",
+        "complexity"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost"
+      ],
+      "lean_declarations": [
+        "CostM.par",
+        "CostM.parList"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm"
+      ],
+      "used_by": [
+        "foundation.cost.examples.par_all",
+        "foundation.cost.examples.par_sum"
+      ]
+    },
+    {
+      "id": "foundation.cost.visited",
+      "title": "Memoization Footprint via the Visited Monoid",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "cost",
+        "memoization",
+        "idempotent"
+      ],
+      "primary_topic": "foundation",
+      "topics": [
+        "foundation",
+        "foundation.cost"
+      ],
+      "lean_declarations": [
+        "Visited",
+        "Visited.toFinset",
+        "Visited.ofFinset",
+        "Visited.singleton"
+      ],
+      "topic": "foundation",
+      "uses": [
+        "foundation.cost.costm"
+      ],
+      "used_by": [
+        "foundation.cost.examples.lcs",
+        "foundation.cost.examples.memo_fib"
+      ]
+    },
+    {
       "id": "foundation.preference.abstract_relation",
       "title": "Abstract Preference-Relation Axioms",
       "kind": "definition",
@@ -43,8 +349,8 @@
         "foundation.preference"
       ],
       "lean_declarations": [
-        "VNM.StrictPref",
-        "VNM.Indiff",
+        "strict",
+        "indiff",
         "VNM.Completeness",
         "VNM.Transitivity"
       ],
@@ -363,7 +669,7 @@
       ]
     },
     {
-      "id": "game_theory.coalitional_game.balanced_collection",
+      "id": "game_theory.cooperative_game.balanced_collection",
       "title": "Balanced Collection Of Coalitions",
       "kind": "definition",
       "status": "staged",
@@ -371,24 +677,24 @@
         "coalitional-game",
         "balancedness"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsBalanced"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ],
       "used_by": [
-        "game_theory.coalitional_game.balanced_game"
+        "game_theory.cooperative_game.balanced_game"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.balanced_game",
+      "id": "game_theory.cooperative_game.balanced_game",
       "title": "Balanced Coalitional Game",
       "kind": "definition",
       "status": "staged",
@@ -397,24 +703,24 @@
         "balancedness",
         "bondareva-shapley"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsBalancedGame"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.balanced_collection"
+        "game_theory.cooperative_game.balanced_collection"
       ],
       "used_by": [
-        "game_theory.coalitional_game.bondareva_shapley"
+        "game_theory.cooperative_game.bondareva_shapley"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.bondareva_shapley",
+      "id": "game_theory.cooperative_game.bondareva_shapley",
       "title": "Bondareva-Shapley Theorem",
       "kind": "theorem",
       "status": "staged",
@@ -424,26 +730,26 @@
         "balancedness",
         "bondareva-shapley"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.core_nonempty_iff_balanced"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.balanced_game",
-        "game_theory.coalitional_game.core",
+        "game_theory.cooperative_game.balanced_game",
+        "game_theory.cooperative_game.core",
         "math.linear_programming.strong_duality"
       ],
       "used_by": [
-        "game_theory.coalitional_game.convex_game_core_nonempty"
+        "game_theory.cooperative_game.convex_game_core_nonempty"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.convex_game",
+      "id": "game_theory.cooperative_game.convex_game",
       "title": "Convex Coalitional Game",
       "kind": "definition",
       "status": "staged",
@@ -452,26 +758,26 @@
         "convex-game",
         "supermodularity"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.classes"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsConvex",
         "CoalitionalGame.IsConvex.isSuperadditive"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ],
       "used_by": [
-        "game_theory.coalitional_game.convex_game_core_nonempty",
-        "game_theory.coalitional_game.shapley_in_core_convex"
+        "game_theory.cooperative_game.convex_game_core_nonempty",
+        "game_theory.cooperative_game.shapley_in_core_convex"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.convex_game_core_nonempty",
+      "id": "game_theory.cooperative_game.convex_game_core_nonempty",
       "title": "Convex Games Have Nonempty Core",
       "kind": "theorem",
       "status": "staged",
@@ -480,22 +786,22 @@
         "convex-game",
         "core"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.classes"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsConvex.core_nonempty"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.bondareva_shapley",
-        "game_theory.coalitional_game.convex_game"
+        "game_theory.cooperative_game.bondareva_shapley",
+        "game_theory.cooperative_game.convex_game"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.core",
+      "id": "game_theory.cooperative_game.core",
       "title": "Core Of A Coalitional Game",
       "kind": "definition",
       "status": "staged",
@@ -504,26 +810,26 @@
         "core",
         "stability"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.Core"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.imputation"
+        "game_theory.cooperative_game.imputation"
       ],
       "used_by": [
-        "game_theory.coalitional_game.bondareva_shapley",
-        "game_theory.coalitional_game.core_subset_imputations",
-        "game_theory.coalitional_game.shapley_in_core_convex"
+        "game_theory.cooperative_game.bondareva_shapley",
+        "game_theory.cooperative_game.core_subset_imputations",
+        "game_theory.cooperative_game.shapley_in_core_convex"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.core_subset_imputations",
+      "id": "game_theory.cooperative_game.core_subset_imputations",
       "title": "Core Payoffs Are Imputations",
       "kind": "theorem",
       "status": "staged",
@@ -532,22 +838,22 @@
         "core",
         "imputation"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.core_subset_imputations"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.core",
-        "game_theory.coalitional_game.imputation"
+        "game_theory.cooperative_game.core",
+        "game_theory.cooperative_game.imputation"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.imputation",
+      "id": "game_theory.cooperative_game.imputation",
       "title": "Imputation",
       "kind": "definition",
       "status": "staged",
@@ -557,27 +863,27 @@
         "efficiency",
         "individual-rationality"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsEfficient",
         "CoalitionalGame.IsIndividuallyRational",
         "CoalitionalGame.IsImputation"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.payoff_vector"
+        "game_theory.cooperative_game.payoff_vector"
       ],
       "used_by": [
-        "game_theory.coalitional_game.core",
-        "game_theory.coalitional_game.core_subset_imputations"
+        "game_theory.cooperative_game.core",
+        "game_theory.cooperative_game.core_subset_imputations"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.marginal_contribution",
+      "id": "game_theory.cooperative_game.marginal_contribution",
       "title": "Marginal Contribution",
       "kind": "definition",
       "status": "staged",
@@ -586,24 +892,24 @@
         "shapley-value",
         "marginal-contribution"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.marginalContrib"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ],
       "used_by": [
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game.shapley_value"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.monotonic_game",
+      "id": "game_theory.cooperative_game.monotonic_game",
       "title": "Monotonic Coalitional Game",
       "kind": "definition",
       "status": "staged",
@@ -611,21 +917,21 @@
         "coalitional-game",
         "monotonicity"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.classes"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsMonotonic"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.payoff_vector",
+      "id": "game_theory.cooperative_game.payoff_vector",
       "title": "Payoff Vector",
       "kind": "definition",
       "status": "staged",
@@ -634,25 +940,25 @@
         "payoff-vector",
         "imputation"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame.PayoffVector",
         "CoalitionalGame.coalitionPayoff"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ],
       "used_by": [
-        "game_theory.coalitional_game.imputation"
+        "game_theory.cooperative_game.imputation"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.shapley_axioms",
+      "id": "game_theory.cooperative_game.shapley_axioms",
       "title": "Shapley Axioms",
       "kind": "definition",
       "status": "staged",
@@ -661,10 +967,10 @@
         "shapley-value",
         "axioms"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.AreSymmetric",
@@ -674,18 +980,18 @@
         "CoalitionalGame.SatisfiesNullPlayer",
         "CoalitionalGame.SatisfiesAdditivity"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ],
       "used_by": [
-        "game_theory.coalitional_game.shapley_uniqueness",
-        "game_theory.coalitional_game.shapley_value",
-        "game_theory.coalitional_game.shapley_value_efficient"
+        "game_theory.cooperative_game.shapley_uniqueness",
+        "game_theory.cooperative_game.shapley_value",
+        "game_theory.cooperative_game.shapley_value_efficient"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.shapley_in_core_convex",
+      "id": "game_theory.cooperative_game.shapley_in_core_convex",
       "title": "Shapley Value Lies In The Core Of A Convex Game",
       "kind": "theorem",
       "status": "staged",
@@ -695,23 +1001,23 @@
         "convex-game",
         "core"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsConvex.shapley_in_core"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.convex_game",
-        "game_theory.coalitional_game.core",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game.convex_game",
+        "game_theory.cooperative_game.core",
+        "game_theory.cooperative_game.shapley_value"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.shapley_uniqueness",
+      "id": "game_theory.cooperative_game.shapley_uniqueness",
       "title": "Shapley Uniqueness Theorem",
       "kind": "theorem",
       "status": "staged",
@@ -720,22 +1026,22 @@
         "shapley-value",
         "uniqueness"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.shapley_uniqueness"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.shapley_axioms",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game.shapley_axioms",
+        "game_theory.cooperative_game.shapley_value"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.shapley_value",
+      "id": "game_theory.cooperative_game.shapley_value",
       "title": "Shapley Value",
       "kind": "definition",
       "status": "staged",
@@ -743,27 +1049,27 @@
         "coalitional-game",
         "shapley-value"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.shapleyValue"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.marginal_contribution",
-        "game_theory.coalitional_game.shapley_axioms"
+        "game_theory.cooperative_game.marginal_contribution",
+        "game_theory.cooperative_game.shapley_axioms"
       ],
       "used_by": [
-        "game_theory.coalitional_game.shapley_in_core_convex",
-        "game_theory.coalitional_game.shapley_uniqueness",
-        "game_theory.coalitional_game.shapley_value_efficient"
+        "game_theory.cooperative_game.shapley_in_core_convex",
+        "game_theory.cooperative_game.shapley_uniqueness",
+        "game_theory.cooperative_game.shapley_value_efficient"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.shapley_value_efficient",
+      "id": "game_theory.cooperative_game.shapley_value_efficient",
       "title": "Shapley Value Is Efficient",
       "kind": "theorem",
       "status": "staged",
@@ -772,22 +1078,22 @@
         "shapley-value",
         "efficiency"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.shapley_value"
       ],
       "lean_declarations": [
         "CoalitionalGame.shapleyValue_efficient"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.shapley_axioms",
-        "game_theory.coalitional_game.shapley_value"
+        "game_theory.cooperative_game.shapley_axioms",
+        "game_theory.cooperative_game.shapley_value"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.simple_game",
+      "id": "game_theory.cooperative_game.simple_game",
       "title": "Simple Game",
       "kind": "definition",
       "status": "staged",
@@ -796,22 +1102,22 @@
         "simple-game",
         "voting"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.classes"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsSimple",
         "CoalitionalGame.IsWinning"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.superadditive_game",
+      "id": "game_theory.cooperative_game.superadditive_game",
       "title": "Superadditive Coalitional Game",
       "kind": "definition",
       "status": "staged",
@@ -819,21 +1125,21 @@
         "coalitional-game",
         "superadditivity"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.classes"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.classes"
       ],
       "lean_declarations": [
         "CoalitionalGame.IsSuperadditive"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "uses": [
-        "game_theory.coalitional_game.tu_game"
+        "game_theory.cooperative_game.tu_game"
       ]
     },
     {
-      "id": "game_theory.coalitional_game.tu_game",
+      "id": "game_theory.cooperative_game.tu_game",
       "title": "Transferable-Utility Coalitional Game",
       "kind": "definition",
       "status": "staged",
@@ -842,25 +1148,25 @@
         "transferable-utility",
         "characteristic-function"
       ],
-      "primary_topic": "game_theory.coalitional_game",
+      "primary_topic": "game_theory.cooperative_game",
       "topics": [
-        "game_theory.coalitional_game",
-        "game_theory.coalitional_game.core"
+        "game_theory.cooperative_game",
+        "game_theory.cooperative_game.core"
       ],
       "lean_declarations": [
         "CoalitionalGame",
         "CoalitionalGame.coalitionPayoff"
       ],
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "used_by": [
-        "game_theory.coalitional_game.balanced_collection",
-        "game_theory.coalitional_game.convex_game",
-        "game_theory.coalitional_game.marginal_contribution",
-        "game_theory.coalitional_game.monotonic_game",
-        "game_theory.coalitional_game.payoff_vector",
-        "game_theory.coalitional_game.shapley_axioms",
-        "game_theory.coalitional_game.simple_game",
-        "game_theory.coalitional_game.superadditive_game"
+        "game_theory.cooperative_game.balanced_collection",
+        "game_theory.cooperative_game.convex_game",
+        "game_theory.cooperative_game.marginal_contribution",
+        "game_theory.cooperative_game.monotonic_game",
+        "game_theory.cooperative_game.payoff_vector",
+        "game_theory.cooperative_game.shapley_axioms",
+        "game_theory.cooperative_game.simple_game",
+        "game_theory.cooperative_game.superadditive_game"
       ]
     },
     {
@@ -968,6 +1274,37 @@
       ]
     },
     {
+      "id": "game_theory.extensive_game.equilibrium.completely_mixed_nash_is_subgame_perfect",
+      "title": "Completely Mixed Nash Is Subgame Perfect",
+      "kind": "theorem",
+      "status": "staged",
+      "tags": [
+        "extensive-game",
+        "behavioral-strategy",
+        "nash-equilibrium",
+        "subgame-perfect-equilibrium",
+        "completely-mixed"
+      ],
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.imperfect_information"
+      ],
+      "lean_declarations": [
+        "ExtensiveGame.BehaviorStrategy.IsCompletelyMixed",
+        "ExtensiveGame.BehaviorProfile.IsCompletelyMixed",
+        "ExtensiveGame.BehaviorProfile.IsCompletelyMixedWithPositiveReach",
+        "ExtensiveGame.BehaviorProfile.IsCompletelyMixed.actionProb_pos",
+        "ExtensiveGame.IsBehaviorSubgamePerfect",
+        "ExtensiveGame.IsBehaviorNashEq.toSubgamePerfect_of_reachProb_pos",
+        "ExtensiveGame.IsBehaviorNashEq.toSubgamePerfect_of_isCompletelyMixed"
+      ],
+      "topic": "game_theory.extensive_game",
+      "uses": [
+        "game_theory.extensive_game.equilibrium.reached_subgame_nash_restriction"
+      ]
+    },
+    {
       "id": "game_theory.extensive_game.equilibrium.reached_subgame_nash_restriction",
       "title": "Reached Subgame Nash Restriction",
       "kind": "theorem",
@@ -1005,6 +1342,9 @@
       "uses": [
         "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
         "game_theory.extensive_game.imperfect_information.reached_information_set"
+      ],
+      "used_by": [
+        "game_theory.extensive_game.equilibrium.completely_mixed_nash_is_subgame_perfect"
       ]
     },
     {
@@ -1928,7 +2268,8 @@
       "lean_declarations": [
         "GameTree.IsZeroSum",
         "GameTree.value_zero_sum",
-        "GameTree.value₀_minimax_prop"
+        "GameTree.zermelo_determinacy",
+        "GameTree.value₀_eq_outcome_and_zeroSum"
       ],
       "topic": "game_theory.extensive_game",
       "uses": [
@@ -2132,9 +2473,9 @@
         "game_theory.extensive_game.perfect_information"
       ],
       "lean_declarations": [
-        "GameTree.zermelo_exists_pure_NE",
+        "GameTree.zermelo_determinacy",
         "GameTree.value_zero_sum",
-        "GameTree.value₀_minimax_prop"
+        "GameTree.value₀_eq_outcome_and_zeroSum"
       ],
       "topic": "game_theory.extensive_game",
       "uses": [
@@ -2187,8 +2528,7 @@
         "game_theory.extensive_game.perfect_information"
       ],
       "lean_declarations": [
-        "zermelo_exists_pure_SPE",
-        "zermelo_exists_pure_NE"
+        "zermelo_determinacy"
       ],
       "topic": "game_theory.extensive_game",
       "uses": [
@@ -2217,7 +2557,8 @@
         "game_theory.extensive_game.perfect_information"
       ],
       "lean_declarations": [
-        "GameTree.value₀_minimax_prop"
+        "GameTree.zermelo_determinacy",
+        "GameTree.value₀_eq_outcome_and_zeroSum"
       ],
       "topic": "game_theory.extensive_game",
       "uses": [
@@ -6310,69 +6651,6 @@
       ]
     },
     {
-      "id": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
-      "title": "Dantzig Proof Spine for Minimax (Ordered-Field Route)",
-      "kind": "proof-plan",
-      "status": "admitted",
-      "tags": [
-        "zero-sum",
-        "minimax",
-        "proof-plan",
-        "linear-programming",
-        "ordered-field",
-        "dantzig"
-      ],
-      "primary_topic": "game_theory.zero_sum",
-      "topics": [
-        "game_theory.zero_sum",
-        "game_theory.zero_sum.minimax"
-      ],
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate",
-      "lean_declarations": [
-        "LexPos",
-        "lexLt",
-        "lexGt",
-        "lexPos_iff",
-        "LexPos.add",
-        "LexPos.add_nonneg_smul",
-        "lexGt_iff_lexPos_sub",
-        "LexPos.first_nonneg",
-        "DantzigState",
-        "DantzigState.value",
-        "DantzigState.stratI",
-        "DantzigState.basisVar",
-        "DantzigState.hasBasisProp",
-        "DantzigState.isOptimal",
-        "dantzigP0",
-        "dantzigPj",
-        "dantzigUk",
-        "dotBeta0Pj",
-        "dotBeta0Uk",
-        "dotBeta0Pj_eq",
-        "fin_sum_succ",
-        "optimal_basis_minimax",
-        "stratI_sum_one",
-        "dantzigPivot",
-        "dantzigPivot_lexCond",
-        "dantzigPivot_beta0_decrease",
-        "identityBeta",
-        "identityBeta_lexPos",
-        "initialState_exists",
-        "augColVec",
-        "BFSConstraint",
-        "extractPlayerII",
-        "extractPlayerII_nonneg",
-        "extractPlayerII_sum",
-        "extractPlayerII_guarantee",
-        "dantzig_minimax"
-      ],
-      "topic": "game_theory.zero_sum",
-      "used_by": [
-        "game_theory.strategic_game.zero_sum.simplex_termination"
-      ]
-    },
-    {
       "id": "game_theory.strategic_game.zero_sum.examples.asymmetric_silent_noisy_duel_value",
       "title": "Silent Versus Noisy One-Bullet Duel Value",
       "kind": "proposition",
@@ -7113,6 +7391,7 @@
       "uses": [
         "game_theory.strategic_game.zero_sum.mixed_matrix_payoff",
         "game_theory.strategic_game.zero_sum.von_neumann_minimax",
+        "math.minimax.ordered_field_minimax",
         "math.simplex.bounded_by_value"
       ],
       "used_by": [
@@ -7329,30 +7608,6 @@
       "topic": "game_theory.zero_sum",
       "uses": [
         "game_theory.strategic_game.zero_sum.von_neumann_minimax"
-      ]
-    },
-    {
-      "id": "game_theory.strategic_game.zero_sum.simplex_termination",
-      "title": "Dantzig Simplex Termination (Open)",
-      "kind": "proof-plan",
-      "status": "admitted",
-      "tags": [
-        "zero-sum",
-        "minimax",
-        "simplex",
-        "open-issue",
-        "dantzig"
-      ],
-      "primary_topic": "game_theory.zero_sum",
-      "topics": [
-        "game_theory.zero_sum",
-        "game_theory.zero_sum.minimax"
-      ],
-      "target": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
-      "plan_status": "candidate",
-      "topic": "game_theory.zero_sum",
-      "uses": [
-        "game_theory.strategic_game.zero_sum.dantzig_proof_spine"
       ]
     },
     {
@@ -7882,9 +8137,9 @@
         "convexity",
         "farkas"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.linear_algebra",
         "math.linear_algebra.alternatives"
       ],
@@ -7894,7 +8149,7 @@
         "farkasAugB",
         "farkas_lemma"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.linear_algebra.theorem_of_alternative"
       ],
@@ -7914,9 +8169,9 @@
         "alternatives",
         "fourier-motzkin"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.linear_algebra",
         "math.linear_algebra.alternatives"
       ],
@@ -7928,7 +8183,7 @@
         "EconCSLib.LinearAlgebra.feas_cert_disjoint",
         "EconCSLib.LinearAlgebra.theorem_of_alternative"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.linear_algebra.theorem_of_alternative.fourier_motzkin"
       ],
@@ -7947,9 +8202,9 @@
         "alternatives",
         "elimination"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.linear_algebra",
         "math.linear_algebra.alternatives"
       ],
@@ -7966,7 +8221,7 @@
         "liftCert",
         "fm_cert_lift"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "used_by": [
         "math.linear_algebra.theorem_of_alternative"
       ]
@@ -8080,9 +8335,9 @@
         "duality",
         "complementarity"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.linear_programming",
         "math.linear_programming.duality"
       ],
@@ -8093,7 +8348,7 @@
         "EconCSLib.LinearProgramming.exists_col_strict_pair",
         "EconCSLib.LinearProgramming.exists_strong_complementary_pair"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.linear_algebra.farkas_lemma",
         "math.linear_programming.strong_duality"
@@ -8111,9 +8366,9 @@
         "linear-programming",
         "duality"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.linear_programming",
         "math.linear_programming.duality"
       ],
@@ -8127,12 +8382,12 @@
         "EconCSLib.LinearProgramming.isFeasible_dualAug_iff",
         "EconCSLib.LinearProgramming.lp_strong_duality"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.linear_algebra.farkas_lemma"
       ],
       "used_by": [
-        "game_theory.coalitional_game.bondareva_shapley",
+        "game_theory.cooperative_game.bondareva_shapley",
         "math.linear_programming.minimax_bridge.zero_sum_lp_bridge",
         "math.linear_programming.strong_complementarity",
         "math.minimax.lp_duality_minimax_proof"
@@ -8239,7 +8494,7 @@
       "target": "math.minimax.loomis_theorem",
       "plan_status": "selected",
       "lean_declarations": [
-        "LoomisGeneral.loomis_value_eq"
+        "Loomis.loomis_value_eq"
       ],
       "topic": "math",
       "uses": [
@@ -8263,7 +8518,7 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.loomis_value_IJ_2"
+        "Loomis.loomis_value_IJ_2"
       ],
       "topic": "math",
       "used_by": [
@@ -8287,7 +8542,7 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.loomis_value_eq_aux"
+        "Loomis.loomis_value_eq_aux"
       ],
       "topic": "math",
       "uses": [
@@ -8317,10 +8572,10 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.IsPositive.one",
-        "LoomisGeneral.xB_pos",
-        "LoomisGeneral.By_pos",
-        "LoomisGeneral.xBy_pos"
+        "Loomis.IsPositive.one",
+        "Loomis.xB_pos",
+        "Loomis.By_pos",
+        "Loomis.xBy_pos"
       ],
       "topic": "math",
       "used_by": [
@@ -8347,7 +8602,7 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.loomis_value_eq_aux"
+        "Loomis.loomis_value_eq_aux"
       ],
       "topic": "math",
       "uses": [
@@ -8376,18 +8631,18 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.lamB.aux_gt_iff_gt",
-        "LoomisGeneral.muB.aux_lt_iff_lt",
-        "LoomisGeneral.colRatio.continuous",
-        "LoomisGeneral.rowRatio.continuous",
-        "LoomisGeneral.lamB.aux.continuous",
-        "LoomisGeneral.muB.aux.continuous",
-        "LoomisGeneral.lamB.aux.bddAbove",
-        "LoomisGeneral.muB.aux.bddBelow",
-        "LoomisGeneral.lamB.aux.le_lamB0",
-        "LoomisGeneral.muB.aux.ge_muB0",
-        "LoomisGeneral.exists_xx_lamB0",
-        "LoomisGeneral.exists_yy_muB0"
+        "Loomis.lamB.aux_gt_iff_gt",
+        "Loomis.muB.aux_lt_iff_lt",
+        "Loomis.colRatio.continuous",
+        "Loomis.rowRatio.continuous",
+        "Loomis.lamB.aux.continuous",
+        "Loomis.muB.aux.continuous",
+        "Loomis.lamB.aux.bddAbove",
+        "Loomis.muB.aux.bddBelow",
+        "Loomis.lamB.aux.le_lamB0",
+        "Loomis.muB.aux.ge_muB0",
+        "Loomis.exists_xx_lamB0",
+        "Loomis.exists_yy_muB0"
       ],
       "topic": "math",
       "uses": [
@@ -8418,7 +8673,7 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.lamB0_le_muB0"
+        "Loomis.lamB0_le_muB0"
       ],
       "topic": "math",
       "uses": [
@@ -8446,8 +8701,8 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "LoomisGeneral.loomis_value_eq",
-        "LoomisGeneral.loomis_theorem"
+        "Loomis.loomis_value_eq",
+        "Loomis.loomis_theorem"
       ],
       "topic": "math",
       "uses": [
@@ -8555,18 +8810,15 @@
       "plan_status": "selected",
       "lean_declarations": [
         "MinimaxLoomis.singleton_of_card_one",
-        "MinimaxLoomis.minmax'_IJ_2",
         "MinimaxLoomis.dropEquiv",
         "MinimaxLoomis.sum_split_at",
         "MinimaxLoomis.extendDropColumn",
         "MinimaxLoomis.extendDropRow",
         "MinimaxLoomis.wsum_extendDropColumn",
         "MinimaxLoomis.wsum_extendDropRow",
-        "MinimaxLoomis.minmax'",
-        "MinimaxLoomis.minmax_theorem'",
-        "LoomisGeneral.minmax_from_general",
-        "LoomisGeneral.lamB0_one",
-        "LoomisGeneral.muB0_one"
+        "Loomis.minmax_from_general",
+        "Loomis.lamB0_one",
+        "Loomis.muB0_one"
       ],
       "topic": "math",
       "uses": [
@@ -8578,7 +8830,7 @@
       "id": "math.minimax.ordered_field_minimax",
       "title": "Ordered-Field Minimax Statement",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "formalized",
       "tags": [
         "zero-sum",
         "minimax",
@@ -8590,11 +8842,15 @@
         "math.minimax"
       ],
       "lean_declarations": [
-        "dantzig_minimax"
+        "Minimax.minimax",
+        "SkewSymmetric.optimal"
       ],
       "topic": "math",
       "uses": [
         "game_theory.strategic_game.zero_sum.von_neumann_minimax"
+      ],
+      "used_by": [
+        "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium"
       ]
     },
     {
@@ -8736,16 +8992,16 @@
         "simplex",
         "minimax"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.simplex"
       ],
       "lean_declarations": [
         "ge_iff_simplex_ge",
         "le_iff_simplex_le"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.simplex.pure"
       ],
@@ -8768,16 +9024,16 @@
         "continuity",
         "topology"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.simplex"
       ],
       "lean_declarations": [
         "stdSimplex.continuous_coord",
         "wsum_continuous"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.simplex.wsum"
       ],
@@ -8797,9 +9053,9 @@
         "convex-combination",
         "mixed-strategy"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.simplex"
       ],
       "lean_declarations": [
@@ -8815,7 +9071,7 @@
         "mix_gt_of_gt_nbh",
         "mix_lt_of_lt_nbh"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.simplex.wsum"
       ]
@@ -8830,9 +9086,9 @@
         "simplex",
         "dirac"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.simplex"
       ],
       "lean_declarations": [
@@ -8841,7 +9097,7 @@
         "wsum_pure_apply",
         "wsum_pure"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.simplex.wsum"
       ],
@@ -8859,9 +9115,9 @@
         "simplex",
         "weighted-sum"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.simplex"
       ],
       "lean_declarations": [
@@ -8874,7 +9130,7 @@
         "wsum_add",
         "wsum_smul"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "used_by": [
         "math.simplex.continuity",
         "math.simplex.mix",
@@ -8892,15 +9148,15 @@
         "simplex",
         "fubini"
       ],
-      "primary_topic": "foundation",
+      "primary_topic": "math",
       "topics": [
-        "foundation",
+        "math",
         "math.simplex"
       ],
       "lean_declarations": [
         "wsum_wsum_comm"
       ],
-      "topic": "foundation",
+      "topic": "math",
       "uses": [
         "math.simplex.wsum"
       ]
@@ -9017,8 +9273,10 @@
       ],
       "lean_declarations": [
         "SingleItemAuction",
-        "MultiItemAuction",
-        "MultiItemAuction.IsFeasible"
+        "MultiItemBundle",
+        "CombinatorialAllocation",
+        "CombinatorialAuction",
+        "CombinatorialAuction.IsFeasible"
       ],
       "topic": "mechanism_design",
       "uses": [
@@ -14249,6 +14507,66 @@
       "to": "foundation.argmax.list_arg_max_on"
     },
     {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.cells"
+    },
+    {
+      "from": "foundation.cost.cells",
+      "to": "foundation.cost.examples.boyer_moore"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.boyer_moore"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.gcd"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.lcs"
+    },
+    {
+      "from": "foundation.cost.visited",
+      "to": "foundation.cost.examples.lcs"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.memo_fib"
+    },
+    {
+      "from": "foundation.cost.visited",
+      "to": "foundation.cost.examples.memo_fib"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.par_all"
+    },
+    {
+      "from": "foundation.cost.parallel",
+      "to": "foundation.cost.examples.par_all"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.par_sum"
+    },
+    {
+      "from": "foundation.cost.parallel",
+      "to": "foundation.cost.examples.par_sum"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.examples.reverse_space"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.parallel"
+    },
+    {
+      "from": "foundation.cost.costm",
+      "to": "foundation.cost.visited"
+    },
+    {
       "from": "foundation.preference.abstract_relation",
       "to": "foundation.preference.relation"
     },
@@ -14305,116 +14623,120 @@
       "to": "foundation.utility.vnm_axioms"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.balanced_collection"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.balanced_collection"
     },
     {
-      "from": "game_theory.coalitional_game.balanced_collection",
-      "to": "game_theory.coalitional_game.balanced_game"
+      "from": "game_theory.cooperative_game.balanced_collection",
+      "to": "game_theory.cooperative_game.balanced_game"
     },
     {
-      "from": "game_theory.coalitional_game.balanced_game",
-      "to": "game_theory.coalitional_game.bondareva_shapley"
+      "from": "game_theory.cooperative_game.balanced_game",
+      "to": "game_theory.cooperative_game.bondareva_shapley"
     },
     {
-      "from": "game_theory.coalitional_game.core",
-      "to": "game_theory.coalitional_game.bondareva_shapley"
+      "from": "game_theory.cooperative_game.core",
+      "to": "game_theory.cooperative_game.bondareva_shapley"
     },
     {
       "from": "math.linear_programming.strong_duality",
-      "to": "game_theory.coalitional_game.bondareva_shapley"
+      "to": "game_theory.cooperative_game.bondareva_shapley"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.convex_game"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.convex_game"
     },
     {
-      "from": "game_theory.coalitional_game.bondareva_shapley",
-      "to": "game_theory.coalitional_game.convex_game_core_nonempty"
+      "from": "game_theory.cooperative_game.bondareva_shapley",
+      "to": "game_theory.cooperative_game.convex_game_core_nonempty"
     },
     {
-      "from": "game_theory.coalitional_game.convex_game",
-      "to": "game_theory.coalitional_game.convex_game_core_nonempty"
+      "from": "game_theory.cooperative_game.convex_game",
+      "to": "game_theory.cooperative_game.convex_game_core_nonempty"
     },
     {
-      "from": "game_theory.coalitional_game.imputation",
-      "to": "game_theory.coalitional_game.core"
+      "from": "game_theory.cooperative_game.imputation",
+      "to": "game_theory.cooperative_game.core"
     },
     {
-      "from": "game_theory.coalitional_game.core",
-      "to": "game_theory.coalitional_game.core_subset_imputations"
+      "from": "game_theory.cooperative_game.core",
+      "to": "game_theory.cooperative_game.core_subset_imputations"
     },
     {
-      "from": "game_theory.coalitional_game.imputation",
-      "to": "game_theory.coalitional_game.core_subset_imputations"
+      "from": "game_theory.cooperative_game.imputation",
+      "to": "game_theory.cooperative_game.core_subset_imputations"
     },
     {
-      "from": "game_theory.coalitional_game.payoff_vector",
-      "to": "game_theory.coalitional_game.imputation"
+      "from": "game_theory.cooperative_game.payoff_vector",
+      "to": "game_theory.cooperative_game.imputation"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.marginal_contribution"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.marginal_contribution"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.monotonic_game"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.monotonic_game"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.payoff_vector"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.payoff_vector"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.shapley_axioms"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.shapley_axioms"
     },
     {
-      "from": "game_theory.coalitional_game.convex_game",
-      "to": "game_theory.coalitional_game.shapley_in_core_convex"
+      "from": "game_theory.cooperative_game.convex_game",
+      "to": "game_theory.cooperative_game.shapley_in_core_convex"
     },
     {
-      "from": "game_theory.coalitional_game.core",
-      "to": "game_theory.coalitional_game.shapley_in_core_convex"
+      "from": "game_theory.cooperative_game.core",
+      "to": "game_theory.cooperative_game.shapley_in_core_convex"
     },
     {
-      "from": "game_theory.coalitional_game.shapley_value",
-      "to": "game_theory.coalitional_game.shapley_in_core_convex"
+      "from": "game_theory.cooperative_game.shapley_value",
+      "to": "game_theory.cooperative_game.shapley_in_core_convex"
     },
     {
-      "from": "game_theory.coalitional_game.shapley_axioms",
-      "to": "game_theory.coalitional_game.shapley_uniqueness"
+      "from": "game_theory.cooperative_game.shapley_axioms",
+      "to": "game_theory.cooperative_game.shapley_uniqueness"
     },
     {
-      "from": "game_theory.coalitional_game.shapley_value",
-      "to": "game_theory.coalitional_game.shapley_uniqueness"
+      "from": "game_theory.cooperative_game.shapley_value",
+      "to": "game_theory.cooperative_game.shapley_uniqueness"
     },
     {
-      "from": "game_theory.coalitional_game.marginal_contribution",
-      "to": "game_theory.coalitional_game.shapley_value"
+      "from": "game_theory.cooperative_game.marginal_contribution",
+      "to": "game_theory.cooperative_game.shapley_value"
     },
     {
-      "from": "game_theory.coalitional_game.shapley_axioms",
-      "to": "game_theory.coalitional_game.shapley_value"
+      "from": "game_theory.cooperative_game.shapley_axioms",
+      "to": "game_theory.cooperative_game.shapley_value"
     },
     {
-      "from": "game_theory.coalitional_game.shapley_axioms",
-      "to": "game_theory.coalitional_game.shapley_value_efficient"
+      "from": "game_theory.cooperative_game.shapley_axioms",
+      "to": "game_theory.cooperative_game.shapley_value_efficient"
     },
     {
-      "from": "game_theory.coalitional_game.shapley_value",
-      "to": "game_theory.coalitional_game.shapley_value_efficient"
+      "from": "game_theory.cooperative_game.shapley_value",
+      "to": "game_theory.cooperative_game.shapley_value_efficient"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.simple_game"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.simple_game"
     },
     {
-      "from": "game_theory.coalitional_game.tu_game",
-      "to": "game_theory.coalitional_game.superadditive_game"
+      "from": "game_theory.cooperative_game.tu_game",
+      "to": "game_theory.cooperative_game.superadditive_game"
     },
     {
       "from": "game_theory.extensive_game.core.game_tree",
       "to": "game_theory.extensive_game.core.history_and_subgame"
+    },
+    {
+      "from": "game_theory.extensive_game.equilibrium.reached_subgame_nash_restriction",
+      "to": "game_theory.extensive_game.equilibrium.completely_mixed_nash_is_subgame_perfect"
     },
     {
       "from": "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
@@ -15889,6 +16211,10 @@
       "to": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium"
     },
     {
+      "from": "math.minimax.ordered_field_minimax",
+      "to": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium"
+    },
+    {
       "from": "math.simplex.bounded_by_value",
       "to": "game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium"
     },
@@ -15931,10 +16257,6 @@
     {
       "from": "game_theory.strategic_game.zero_sum.von_neumann_minimax",
       "to": "game_theory.strategic_game.zero_sum.operators.value_operator_properties"
-    },
-    {
-      "from": "game_theory.strategic_game.zero_sum.dantzig_proof_spine",
-      "to": "game_theory.strategic_game.zero_sum.simplex_termination"
     },
     {
       "from": "game_theory.strategic_game.strategic_game",

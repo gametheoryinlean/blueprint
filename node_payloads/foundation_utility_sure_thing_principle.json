@@ -8,7 +8,7 @@
   "topics": [
     "foundation.utility"
   ],
-  "body_html": "<h1>Sure Thing Principle</h1>\n<p>The sure-thing principle says that a common consequence in a lottery mixture\ndoes not affect strict preference between the non-common parts.</p>\n<p>If independence holds, then for any lotteries $L_1,L_2,L_3,L_4$ and\n$\\alpha\\in[0,1]$,\n$$\n  \\operatorname{StrictPref}([\\alpha L_1,(1-\\alpha)L_3],\n  [\\alpha L_2,(1-\\alpha)L_3])\n$$\nif and only if\n$$\n  \\operatorname{StrictPref}([\\alpha L_1,(1-\\alpha)L_4],\n  [\\alpha L_2,(1-\\alpha)L_4]).\n$$</p>",
+  "body_html": "<h1>Sure Thing Principle</h1>\n<p>The sure-thing principle says that a common consequence in a lottery mixture\ndoes not affect strict preference between the non-common parts.</p>\n<p>If independence holds, then for any lotteries $L_1,L_2,L_3,L_4$ and\n$\\alpha\\in[0,1]$,\n$$\n  [\\alpha L_1,(1-\\alpha)L_3] \\succ\n  [\\alpha L_2,(1-\\alpha)L_3]\n$$\nif and only if\n$$\n  [\\alpha L_1,(1-\\alpha)L_4] \\succ\n  [\\alpha L_2,(1-\\alpha)L_4].\n$$</p>",
   "proof_html": "<p>Sketch</p>\n<p>When $\\alpha=0$, both sides compare a lottery with itself and strict preference\nis impossible. When $\\alpha&gt;0$, apply independence once to remove $L_3$ and once\nto insert $L_4$.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Exercise 2.12] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. The sure-thing principle follows from independence.</li>\n</ul>",
   "deps": [
     {
@@ -25,12 +25,12 @@
       "qualified_name": "VNM.sure_thing_principle",
       "module": "EconCSLib.Foundation.Utility.VNMAxioms",
       "kind": "theorem",
-      "signature": "theorem sure_thing_principle\n    {pref : Lottery 𝕜 O → Lottery 𝕜 O → Prop}\n    (hind : Independence pref)\n    (L₁ L₂ L₃ L₄ : Lottery 𝕜 O)\n    (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1) :\n    StrictPref pref (Lottery.mix α hα₀ hα₁ L₁ L₃) (Lottery.mix α hα₀ hα₁ L₂ L₃) ↔\n    StrictPref pref (Lottery.mix α hα₀ hα₁ L₁ L₄) (Lottery.mix α hα₀ hα₁ L₂ L₄)",
+      "signature": "theorem sure_thing_principle\n    {pref : Lottery 𝕜 O → Lottery 𝕜 O → Prop}\n    (hind : Independence pref)\n    (L₁ L₂ L₃ L₄ : Lottery 𝕜 O)\n    (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1) :\n    strict pref (Lottery.mix α hα₀ hα₁ L₁ L₃) (Lottery.mix α hα₀ hα₁ L₂ L₃) ↔\n    strict pref (Lottery.mix α hα₀ hα₁ L₁ L₄) (Lottery.mix α hα₀ hα₁ L₂ L₄)",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
-      "short_revision": "c7e923d",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Foundation/Utility/VNMAxioms.lean#L64",
+      "revision": "b6e8f906e6aabc3bdb98385abdb724b08526c772",
+      "short_revision": "b6e8f90",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Utility/VNMAxioms.lean#L64",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -43,9 +43,9 @@
       "name": "EconCSLib.Foundation.Utility.VNMAxioms",
       "display_name": "EconCSLib.Foundation.Utility.VNMAxioms",
       "repository_title": "EconCSLib",
-      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
-      "short_revision": "c7e923d",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1",
+      "revision": "b6e8f906e6aabc3bdb98385abdb724b08526c772",
+      "short_revision": "b6e8f90",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1",
       "status": "resolved",
       "reason": null
     }

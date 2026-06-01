@@ -9,7 +9,7 @@
     "game_theory.zero_sum",
     "game_theory.zero_sum.core"
   ],
-  "body_html": "<h1>Matrix Game</h1>\n<p>A finite two-player zero-sum matrix game is specified by finite row and column\nsets $I,J$ and a payoff matrix valued in a scalar field $\\mathbb{K}$</p>\n<p>$$A : I \\times J \\to \\mathbb{K}.$$</p>\n<p>Player I chooses a row, player II chooses a column, player I receives\n$A(i,j)$, and player II receives $-A(i,j)$. The default scalar in\nthe Lean structure is $\\mathbb{Q}$ (no order completeness assumed); the\ncanonical instantiations are $\\mathbb{Q}$ (where the value still lies in\nthe field by LP/Dantzig but the <code>sSup</code>-based <code>maximin/minimax</code>\ndefinitions are unavailable) and $\\mathbb{R}$ (where order completeness\ngives the full Loomis / minimax theorem).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Def. 2.2.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite two-player zero-sum games in matrix form.</li>\n</ul>",
+  "body_html": "<h1>Matrix Game</h1>\n<p>A finite two-player zero-sum matrix game is specified by finite row and column\nsets $I,J$ and a payoff matrix valued in a scalar field $\\mathbb{K}$</p>\n<p>$$A : I \\times J \\to \\mathbb{K}.$$</p>\n<p>Player I chooses a row, player II chooses a column, player I receives\n$A(i,j)$, and player II receives $-A(i,j)$. The default scalar in\nthe Lean structure is $\\mathbb{Q}$ (no order completeness assumed); the\ncanonical instantiations are $\\mathbb{Q}$ (where the value still lies in\nthe field by LP but the <code>sSup</code>-based <code>maximin/minimax</code>\ndefinitions are unavailable) and $\\mathbb{R}$ (where order completeness\ngives the full Loomis / minimax theorem).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Def. 2.2.1] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite two-player zero-sum games in matrix form.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -60,9 +60,9 @@
       "signature": "structure MatrixGame (I J : Type*) (𝕜 : Type",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
-      "short_revision": "c7e923d",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L54",
+      "revision": "b6e8f906e6aabc3bdb98385abdb724b08526c772",
+      "short_revision": "b6e8f90",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L54",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -75,9 +75,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
       "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
       "repository_title": "EconCSLib",
-      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
-      "short_revision": "c7e923d",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
+      "revision": "b6e8f906e6aabc3bdb98385abdb724b08526c772",
+      "short_revision": "b6e8f90",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

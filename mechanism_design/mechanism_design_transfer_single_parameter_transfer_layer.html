@@ -36,6 +36,13 @@
             <summary><a href="../foundation/index.html">Foundation</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../foundation/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="foundation.cost">
+            <summary><a href="../foundation/cost/index.html">Cost</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../foundation/cost/examples/index.html">Examples</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="../foundation/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -50,14 +57,14 @@
           <details data-topic-root="game_theory">
             <summary><a href="../game_theory/index.html">Game Theory</a></summary>
             <ul class="topic-children"><li class="topic-parent">
-          <details data-topic-root="game_theory.coalitional_game">
-            <summary><a href="../game_theory/coalitional_game/index.html">Coalitional Game</a></summary>
+          <details data-topic-root="game_theory.cooperative_game">
+            <summary><a href="../game_theory/cooperative_game/index.html">Cooperative Game</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
-          <a href="../game_theory/coalitional_game/classes/index.html">Classes</a>
+          <a href="../game_theory/cooperative_game/classes/index.html">Classes</a>
         </li><li class="topic-leaf">
-          <a href="../game_theory/coalitional_game/core/index.html">Core</a>
+          <a href="../game_theory/cooperative_game/core/index.html">Core</a>
         </li><li class="topic-leaf">
-          <a href="../game_theory/coalitional_game/shapley_value/index.html">Shapley Value</a>
+          <a href="../game_theory/cooperative_game/shapley_value/index.html">Shapley Value</a>
         </li></ul>
           </details>
         </li><li class="topic-parent">
@@ -400,6 +407,10 @@
       
         <li><a href="../keywords/complementarity.html">complementarity</a></li>
       
+        <li><a href="../keywords/completely-mixed.html">completely-mixed</a></li>
+      
+        <li><a href="../keywords/complexity.html">complexity</a></li>
+      
         <li><a href="../keywords/computation.html">computation</a></li>
       
         <li><a href="../keywords/condorcet.html">condorcet</a></li>
@@ -426,13 +437,13 @@
       
         <li><a href="../keywords/correlation-device.html">correlation-device</a></li>
       
+        <li><a href="../keywords/cost.html">cost</a></li>
+      
         <li><a href="../keywords/counterexample.html">counterexample</a></li>
       
         <li><a href="../keywords/cournot.html">cournot</a></li>
       
         <li><a href="../keywords/cut-and-choose.html">cut-and-choose</a></li>
-      
-        <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
         <li><a href="../keywords/decidable.html">decidable</a></li>
       
@@ -574,6 +585,8 @@
       
         <li><a href="../keywords/history.html">history</a></li>
       
+        <li><a href="../keywords/idempotent.html">idempotent</a></li>
+      
         <li><a href="../keywords/iia.html">iia</a></li>
       
         <li><a href="../keywords/imperfect-information.html">imperfect-information</a></li>
@@ -668,6 +681,10 @@
       
         <li><a href="../keywords/mechanism-design.html">mechanism-design</a></li>
       
+        <li><a href="../keywords/memoization.html">memoization</a></li>
+      
+        <li><a href="../keywords/memory.html">memory</a></li>
+      
         <li><a href="../keywords/mertens.html">mertens</a></li>
       
         <li><a href="../keywords/mertens-neyman.html">mertens-neyman</a></li>
@@ -679,6 +696,8 @@
         <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
       
         <li><a href="../keywords/mms.html">mms</a></li>
+      
+        <li><a href="../keywords/monad.html">monad</a></li>
       
         <li><a href="../keywords/monotone-game.html">monotone-game</a></li>
       
@@ -708,8 +727,6 @@
       
         <li><a href="../keywords/one-to-one.html">one-to-one</a></li>
       
-        <li><a href="../keywords/open-issue.html">open-issue</a></li>
-      
         <li><a href="../keywords/optimal-auction.html">optimal-auction</a></li>
       
         <li><a href="../keywords/optimal-strategy.html">optimal-strategy</a></li>
@@ -724,6 +741,8 @@
       
         <li><a href="../keywords/outcome.html">outcome</a></li>
       
+        <li><a href="../keywords/parallel.html">parallel</a></li>
+      
         <li><a href="../keywords/pareto.html">pareto</a></li>
       
         <li><a href="../keywords/partition.html">partition</a></li>
@@ -737,6 +756,8 @@
         <li><a href="../keywords/payoff-aggregation.html">payoff-aggregation</a></li>
       
         <li><a href="../keywords/payoff-vector.html">payoff-vector</a></li>
+      
+        <li><a href="../keywords/peak-memory.html">peak-memory</a></li>
       
         <li><a href="../keywords/perfect-information.html">perfect-information</a></li>
       
@@ -922,6 +943,8 @@
       
         <li><a href="../keywords/theorem.html">theorem</a></li>
       
+        <li><a href="../keywords/time-complexity.html">time-complexity</a></li>
+      
         <li><a href="../keywords/topology.html">topology</a></li>
       
         <li><a href="../keywords/total-preorder.html">total-preorder</a></li>
@@ -929,6 +952,8 @@
         <li><a href="../keywords/transferable-utility.html">transferable-utility</a></li>
       
         <li><a href="../keywords/transfers.html">transfers</a></li>
+      
+        <li><a href="../keywords/tropical.html">tropical</a></li>
       
         <li><a href="../keywords/two-by-two.html">two-by-two</a></li>
       
@@ -1034,12 +1059,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L153"><code>SingleParameterMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L158"><code>SingleParameterMechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1047,7 +1072,8 @@
           <pre class="lean-signature"><code>structure SingleParameterMechanism (I : Type*) (R : Type*)
     extends MechanismWithTransfers I (fun _ =&gt; R) (I → R) R
 namespace SingleParameterMechanism
-variable {I : Type*} {R : Type*}
+variable {I : Type*} [DecidableEq I] {R : Type*}
+variable (M : SingleParameterMechanism I R)
 /-- Allocation feasibility: each agent&#39;s allocation lies in `[0, 1]`.
   Requires `Zero R`, `One R`, and `LE R` (e.g., any linearly ordered field). -/</code></pre>
         </li>
@@ -1055,60 +1081,60 @@ variable {I : Type*} {R : Type*}
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L163"><code>SingleParameterMechanism.IsAllocFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L169"><code>SingleParameterMechanism.IsAllocFeasible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsAllocFeasible [Zero R] [One R] [LE R] (M : SingleParameterMechanism I R) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsAllocFeasible [Zero R] [One R] [LE R] : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L174"><code>SingleParameterMechanism.IsMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L180"><code>SingleParameterMechanism.IsMonotone</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsMonotone [DecidableEq I] [Preorder R] (M : SingleParameterMechanism I R) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsMonotone [Preorder R] : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L184"><code>SingleParameterMechanism.payment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L190"><code>SingleParameterMechanism.payment</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev payment (M : SingleParameterMechanism I R) (b : I → R) : I → R</code></pre>
+          <pre class="lean-signature"><code>abbrev payment (b : I → R) : I → R</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L189"><code>SingleParameterMechanism.quasiLinearValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L195"><code>SingleParameterMechanism.quasiLinearValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1120,36 +1146,34 @@ variable {I : Type*} {R : Type*}
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L195"><code>SingleParameterMechanism.quasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L201"><code>SingleParameterMechanism.quasiLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def quasiLinearUtility [Mul R] [Sub R]
-    (M : SingleParameterMechanism I R)
     (b θ : I → R) (i : I) : R</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L203"><code>SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L209"><code>SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>lemma quasiLinearUtility_eq_transferQuasiLinearUtility [Mul R] [Sub R]
-    (M : SingleParameterMechanism I R)
     (b θ : I → R) (i : I) :
     M.quasiLinearUtility b θ i =
       MechanismWithTransfers.quasiLinearUtility
@@ -1159,41 +1183,40 @@ variable {I : Type*} {R : Type*}
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L220"><code>SingleParameterMechanism.IsDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L225"><code>SingleParameterMechanism.IsDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsDSIC [DecidableEq I] [Mul R] [Sub R] [Preorder R]
-    (M : SingleParameterMechanism I R) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsDSIC [Mul R] [Sub R] [Preorder R] : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L229"><code>SingleParameterMechanism.IsImplementable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L233"><code>SingleParameterMechanism.IsImplementable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Transfer
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsImplementable [DecidableEq I] [Mul R] [Sub R] [Preorder R]
+          <pre class="lean-signature"><code>def IsImplementable [Mul R] [Sub R] [Preorder R]
     (x : (I → R) → I → R) : Prop</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Transfer</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Transfer</code></a>
       </p>
       
     </div>

@@ -36,6 +36,13 @@
             <summary><a href="../foundation/index.html">Foundation</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
           <a href="../foundation/argmax/index.html">Argmax</a>
+        </li><li class="topic-parent">
+          <details data-topic-root="foundation.cost">
+            <summary><a href="../foundation/cost/index.html">Cost</a></summary>
+            <ul class="topic-children"><li class="topic-leaf">
+          <a href="../foundation/cost/examples/index.html">Examples</a>
+        </li></ul>
+          </details>
         </li><li class="topic-leaf">
           <a href="../foundation/preference/index.html">Preference</a>
         </li><li class="topic-leaf">
@@ -50,14 +57,14 @@
           <details data-topic-root="game_theory">
             <summary><a href="../game_theory/index.html">Game Theory</a></summary>
             <ul class="topic-children"><li class="topic-parent">
-          <details data-topic-root="game_theory.coalitional_game">
-            <summary><a href="../game_theory/coalitional_game/index.html">Coalitional Game</a></summary>
+          <details data-topic-root="game_theory.cooperative_game">
+            <summary><a href="../game_theory/cooperative_game/index.html">Cooperative Game</a></summary>
             <ul class="topic-children"><li class="topic-leaf">
-          <a href="../game_theory/coalitional_game/classes/index.html">Classes</a>
+          <a href="../game_theory/cooperative_game/classes/index.html">Classes</a>
         </li><li class="topic-leaf">
-          <a href="../game_theory/coalitional_game/core/index.html">Core</a>
+          <a href="../game_theory/cooperative_game/core/index.html">Core</a>
         </li><li class="topic-leaf">
-          <a href="../game_theory/coalitional_game/shapley_value/index.html">Shapley Value</a>
+          <a href="../game_theory/cooperative_game/shapley_value/index.html">Shapley Value</a>
         </li></ul>
           </details>
         </li><li class="topic-parent">
@@ -400,6 +407,10 @@
       
         <li><a href="../keywords/complementarity.html">complementarity</a></li>
       
+        <li><a href="../keywords/completely-mixed.html">completely-mixed</a></li>
+      
+        <li><a href="../keywords/complexity.html">complexity</a></li>
+      
         <li><a href="../keywords/computation.html">computation</a></li>
       
         <li><a href="../keywords/condorcet.html">condorcet</a></li>
@@ -426,13 +437,13 @@
       
         <li><a href="../keywords/correlation-device.html">correlation-device</a></li>
       
+        <li><a href="../keywords/cost.html">cost</a></li>
+      
         <li><a href="../keywords/counterexample.html">counterexample</a></li>
       
         <li><a href="../keywords/cournot.html">cournot</a></li>
       
         <li><a href="../keywords/cut-and-choose.html">cut-and-choose</a></li>
-      
-        <li><a href="../keywords/dantzig.html">dantzig</a></li>
       
         <li><a href="../keywords/decidable.html">decidable</a></li>
       
@@ -574,6 +585,8 @@
       
         <li><a href="../keywords/history.html">history</a></li>
       
+        <li><a href="../keywords/idempotent.html">idempotent</a></li>
+      
         <li><a href="../keywords/iia.html">iia</a></li>
       
         <li><a href="../keywords/imperfect-information.html">imperfect-information</a></li>
@@ -668,6 +681,10 @@
       
         <li><a href="../keywords/mechanism-design.html">mechanism-design</a></li>
       
+        <li><a href="../keywords/memoization.html">memoization</a></li>
+      
+        <li><a href="../keywords/memory.html">memory</a></li>
+      
         <li><a href="../keywords/mertens.html">mertens</a></li>
       
         <li><a href="../keywords/mertens-neyman.html">mertens-neyman</a></li>
@@ -679,6 +696,8 @@
         <li><a href="../keywords/mixed-strategy.html">mixed-strategy</a></li>
       
         <li><a href="../keywords/mms.html">mms</a></li>
+      
+        <li><a href="../keywords/monad.html">monad</a></li>
       
         <li><a href="../keywords/monotone-game.html">monotone-game</a></li>
       
@@ -708,8 +727,6 @@
       
         <li><a href="../keywords/one-to-one.html">one-to-one</a></li>
       
-        <li><a href="../keywords/open-issue.html">open-issue</a></li>
-      
         <li><a href="../keywords/optimal-auction.html">optimal-auction</a></li>
       
         <li><a href="../keywords/optimal-strategy.html">optimal-strategy</a></li>
@@ -724,6 +741,8 @@
       
         <li><a href="../keywords/outcome.html">outcome</a></li>
       
+        <li><a href="../keywords/parallel.html">parallel</a></li>
+      
         <li><a href="../keywords/pareto.html">pareto</a></li>
       
         <li><a href="../keywords/partition.html">partition</a></li>
@@ -737,6 +756,8 @@
         <li><a href="../keywords/payoff-aggregation.html">payoff-aggregation</a></li>
       
         <li><a href="../keywords/payoff-vector.html">payoff-vector</a></li>
+      
+        <li><a href="../keywords/peak-memory.html">peak-memory</a></li>
       
         <li><a href="../keywords/perfect-information.html">perfect-information</a></li>
       
@@ -922,6 +943,8 @@
       
         <li><a href="../keywords/theorem.html">theorem</a></li>
       
+        <li><a href="../keywords/time-complexity.html">time-complexity</a></li>
+      
         <li><a href="../keywords/topology.html">topology</a></li>
       
         <li><a href="../keywords/total-preorder.html">total-preorder</a></li>
@@ -929,6 +952,8 @@
         <li><a href="../keywords/transferable-utility.html">transferable-utility</a></li>
       
         <li><a href="../keywords/transfers.html">transfers</a></li>
+      
+        <li><a href="../keywords/tropical.html">tropical</a></li>
       
         <li><a href="../keywords/two-by-two.html">two-by-two</a></li>
       
@@ -1038,12 +1063,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L42"><code>TypeCDF</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L52"><code>TypeCDF</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1054,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L57"><code>ContinuousTypeProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L67"><code>ContinuousTypeProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1070,12 +1095,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L64"><code>OpponentProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L74"><code>OpponentProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1086,12 +1111,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L67"><code>OpponentTypeProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L77"><code>OpponentTypeProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1102,12 +1127,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L81"><code>BayesianSingleItemAuction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L91"><code>BayesianSingleItemAuction</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1119,12 +1144,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L109"><code>BayesianSingleItemAuction.profileInsert</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L119"><code>BayesianSingleItemAuction.profileInsert</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1136,12 +1161,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L133"><code>BayesianSingleItemAuction.toDirectBayesianMechanismWithTransfers</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L143"><code>BayesianSingleItemAuction.toDirectBayesianMechanismWithTransfers</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1153,12 +1178,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L145"><code>BayesianSingleItemAuction.RespectsSingleItemCapacity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L155"><code>BayesianSingleItemAuction.RespectsSingleItemCapacity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1169,12 +1194,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L152"><code>BayesianSingleItemAuction.IsFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L162"><code>BayesianSingleItemAuction.IsFeasible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1185,12 +1210,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L167"><code>BayesianSingleItemAuction.typeDensity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L177"><code>BayesianSingleItemAuction.typeDensity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1201,12 +1226,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L171"><code>BayesianSingleItemAuction.typeMeasure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L181"><code>BayesianSingleItemAuction.typeMeasure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1217,12 +1242,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L179"><code>BayesianSingleItemAuction.jointDensity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L189"><code>BayesianSingleItemAuction.jointDensity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1234,12 +1259,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L184"><code>BayesianSingleItemAuction.productPrior</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L194"><code>BayesianSingleItemAuction.productPrior</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1251,12 +1276,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L189"><code>BayesianSingleItemAuction.opponentProductPrior</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L199"><code>BayesianSingleItemAuction.opponentProductPrior</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1268,12 +1293,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L194"><code>BayesianSingleItemAuction.HasIndependentTypePriors</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L204"><code>BayesianSingleItemAuction.HasIndependentTypePriors</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ c7e923d, EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction
+            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
@@ -1285,7 +1310,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/MechanismDesign/Auction/BayesianSingleItemAuction.lean#L1"><code>EconCSLib.MechanismDesign.Auction.BayesianSingleItemAuction</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.BayesianSingleItem</code></a>
       </p>
       
     </div>

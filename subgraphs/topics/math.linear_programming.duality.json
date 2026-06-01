@@ -5,10 +5,7 @@
     "href": "math/linear_programming/duality/index.html",
     "parent": "math.linear_programming",
     "node_count": 2,
-    "descendant_node_count": 2,
-    "status_counts": {
-      "proved": 2
-    }
+    "descendant_node_count": 2
   },
   "counts": {
     "internal_nodes": 2,
@@ -19,10 +16,10 @@
     "non_proof_plan_nodes": 2,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
-    "boundary_topics": 3,
+    "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 6,
-    "visible_nodes_with_selected_proof_plans": 6
+    "visible_nodes_without_proof_plans": 5,
+    "visible_nodes_with_selected_proof_plans": 5
   },
   "nodes": [
     {
@@ -30,7 +27,7 @@
       "title": "Strong Complementarity For Linear Programming",
       "kind": "theorem",
       "status": "proved",
-      "href": "foundation/math_linear_programming_strong_complementarity.html",
+      "href": "math/math_linear_programming_strong_complementarity.html",
       "payload": "node_payloads/math_linear_programming_strong_complementarity.json"
     },
     {
@@ -38,7 +35,7 @@
       "title": "Strong Duality For Linear Programming",
       "kind": "theorem",
       "status": "proved",
-      "href": "foundation/math_linear_programming_strong_duality.html",
+      "href": "math/math_linear_programming_strong_duality.html",
       "payload": "node_payloads/math_linear_programming_strong_duality.json"
     }
   ],
@@ -51,16 +48,9 @@
   ],
   "boundary_topics": [
     {
-      "id": "foundation",
-      "title": "Foundation",
-      "href": "foundation/index.html",
-      "role": "dependency",
-      "node_count": 26
-    },
-    {
-      "id": "game_theory.coalitional_game",
-      "title": "Game Theory.Coalitional Game",
-      "href": "game_theory/coalitional_game/index.html",
+      "id": "game_theory.cooperative_game",
+      "title": "Game Theory.Cooperative Game",
+      "href": "game_theory/cooperative_game/index.html",
       "role": "dependent",
       "node_count": 19
     },
@@ -68,30 +58,30 @@
       "id": "math",
       "title": "Math",
       "href": "math/index.html",
-      "role": "dependent",
+      "role": "dependency_and_dependent",
       "node_count": 43
     }
   ],
   "boundary_edges": [
     {
-      "from": "topic:foundation",
+      "from": "topic:math",
       "to": "math.linear_programming.strong_complementarity",
       "kind": "boundary_dependency",
-      "topic": "foundation",
+      "topic": "math",
       "count": 1
     },
     {
-      "from": "topic:foundation",
+      "from": "topic:math",
       "to": "math.linear_programming.strong_duality",
       "kind": "boundary_dependency",
-      "topic": "foundation",
+      "topic": "math",
       "count": 1
     },
     {
       "from": "math.linear_programming.strong_duality",
-      "to": "topic:game_theory.coalitional_game",
+      "to": "topic:game_theory.cooperative_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "count": 1
     },
     {

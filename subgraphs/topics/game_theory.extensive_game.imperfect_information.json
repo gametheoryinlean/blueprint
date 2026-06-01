@@ -4,28 +4,32 @@
     "title": "Game Theory.Extensive Game.Imperfect Information",
     "href": "game_theory/extensive_game/imperfect_information/index.html",
     "parent": "game_theory.extensive_game",
-    "node_count": 25,
-    "descendant_node_count": 25,
-    "status_counts": {
-      "formalized": 4,
-      "staged": 21
-    }
+    "node_count": 26,
+    "descendant_node_count": 26
   },
   "counts": {
-    "internal_nodes": 25,
+    "internal_nodes": 26,
     "inlined_nodes": 0,
-    "descendant_nodes": 25,
+    "descendant_nodes": 26,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 25,
+    "non_proof_plan_nodes": 26,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 28,
-    "visible_nodes_with_selected_proof_plans": 28
+    "visible_nodes_without_proof_plans": 29,
+    "visible_nodes_with_selected_proof_plans": 29
   },
   "nodes": [
+    {
+      "id": "game_theory.extensive_game.equilibrium.completely_mixed_nash_is_subgame_perfect",
+      "title": "Completely Mixed Nash Is Subgame Perfect",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_equilibrium_completely_mixed_nash_is_subgame_perfect.html",
+      "payload": "node_payloads/game_theory_extensive_game_equilibrium_completely_mixed_nash_is_subgame_perfect.json"
+    },
     {
       "id": "game_theory.extensive_game.equilibrium.reached_subgame_nash_restriction",
       "title": "Reached Subgame Nash Restriction",
@@ -229,6 +233,11 @@
   ],
   "edges": [
     {
+      "from": "game_theory.extensive_game.equilibrium.reached_subgame_nash_restriction",
+      "to": "game_theory.extensive_game.equilibrium.completely_mixed_nash_is_subgame_perfect",
+      "kind": "uses"
+    },
+    {
       "from": "game_theory.extensive_game.imperfect_information.behavioral_equilibrium",
       "to": "game_theory.extensive_game.equilibrium.reached_subgame_nash_restriction",
       "kind": "uses"
@@ -400,7 +409,7 @@
       "title": "Game Theory.Extensive Game",
       "href": "game_theory/extensive_game/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 56
+      "node_count": 57
     },
     {
       "id": "game_theory.strategic_game",
@@ -521,13 +530,19 @@
       "id": "behavioral-strategy",
       "title": "behavioral-strategy",
       "href": "keywords/behavioral-strategy.html",
-      "count": 9
+      "count": 10
     },
     {
       "id": "belief",
       "title": "belief",
       "href": "keywords/belief.html",
       "count": 2
+    },
+    {
+      "id": "completely-mixed",
+      "title": "completely-mixed",
+      "href": "keywords/completely-mixed.html",
+      "count": 1
     },
     {
       "id": "equilibrium-refinement",
@@ -551,7 +566,7 @@
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 25
+      "count": 26
     },
     {
       "id": "forward-induction",
@@ -593,7 +608,7 @@
       "id": "nash-equilibrium",
       "title": "nash-equilibrium",
       "href": "keywords/nash-equilibrium.html",
-      "count": 4
+      "count": 5
     },
     {
       "id": "perfect-recall",
@@ -647,7 +662,7 @@
       "id": "subgame-perfect-equilibrium",
       "title": "subgame-perfect-equilibrium",
       "href": "keywords/subgame-perfect-equilibrium.html",
-      "count": 3
+      "count": 4
     }
   ],
   "proof_plan_attachments": [],

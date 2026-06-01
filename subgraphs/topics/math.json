@@ -4,17 +4,11 @@
     "title": "Math",
     "href": "math/index.html",
     "parent": null,
-    "node_count": 27,
-    "descendant_node_count": 43,
-    "status_counts": {
-      "admitted": 11,
-      "formalized": 6,
-      "proved": 21,
-      "staged": 5
-    }
+    "node_count": 38,
+    "descendant_node_count": 43
   },
   "counts": {
-    "internal_nodes": 27,
+    "internal_nodes": 38,
     "inlined_nodes": 43,
     "descendant_nodes": 43,
     "child_topics": 0,
@@ -81,7 +75,7 @@
       "title": "Farkas Lemma",
       "kind": "theorem",
       "status": "proved",
-      "href": "foundation/math_linear_algebra_farkas_lemma.html",
+      "href": "math/math_linear_algebra_farkas_lemma.html",
       "payload": "node_payloads/math_linear_algebra_farkas_lemma.json"
     },
     {
@@ -89,7 +83,7 @@
       "title": "Theorem Of The Alternative",
       "kind": "theorem",
       "status": "proved",
-      "href": "foundation/math_linear_algebra_theorem_of_alternative.html",
+      "href": "math/math_linear_algebra_theorem_of_alternative.html",
       "payload": "node_payloads/math_linear_algebra_theorem_of_alternative.json"
     },
     {
@@ -97,7 +91,7 @@
       "title": "Fourier-Motzkin Elimination Step",
       "kind": "lemma",
       "status": "proved",
-      "href": "foundation/math_linear_algebra_theorem_of_alternative_fourier_motzkin.html",
+      "href": "math/math_linear_algebra_theorem_of_alternative_fourier_motzkin.html",
       "payload": "node_payloads/math_linear_algebra_theorem_of_alternative_fourier_motzkin.json"
     },
     {
@@ -139,7 +133,7 @@
       "title": "Strong Complementarity For Linear Programming",
       "kind": "theorem",
       "status": "proved",
-      "href": "foundation/math_linear_programming_strong_complementarity.html",
+      "href": "math/math_linear_programming_strong_complementarity.html",
       "payload": "node_payloads/math_linear_programming_strong_complementarity.json"
     },
     {
@@ -147,7 +141,7 @@
       "title": "Strong Duality For Linear Programming",
       "kind": "theorem",
       "status": "proved",
-      "href": "foundation/math_linear_programming_strong_duality.html",
+      "href": "math/math_linear_programming_strong_duality.html",
       "payload": "node_payloads/math_linear_programming_strong_duality.json"
     },
     {
@@ -286,7 +280,7 @@
       "id": "math.minimax.ordered_field_minimax",
       "title": "Ordered-Field Minimax Statement",
       "kind": "theorem",
-      "status": "admitted",
+      "status": "formalized",
       "href": "math/math_minimax_ordered_field_minimax.html",
       "payload": "node_payloads/math_minimax_ordered_field_minimax.json"
     },
@@ -345,7 +339,7 @@
       "title": "Pointwise Bounds Are Simplex Bounds",
       "kind": "lemma",
       "status": "proved",
-      "href": "foundation/math_simplex_bounded_by_value.html",
+      "href": "math/math_simplex_bounded_by_value.html",
       "payload": "node_payloads/math_simplex_bounded_by_value.json"
     },
     {
@@ -353,7 +347,7 @@
       "title": "Continuity on the Real Standard Simplex",
       "kind": "lemma",
       "status": "proved",
-      "href": "foundation/math_simplex_continuity.html",
+      "href": "math/math_simplex_continuity.html",
       "payload": "node_payloads/math_simplex_continuity.json"
     },
     {
@@ -361,7 +355,7 @@
       "title": "Convex Combination of Simplex Points",
       "kind": "definition",
       "status": "formalized",
-      "href": "foundation/math_simplex_mix.html",
+      "href": "math/math_simplex_mix.html",
       "payload": "node_payloads/math_simplex_mix.json"
     },
     {
@@ -369,7 +363,7 @@
       "title": "Point Mass on the Standard Simplex",
       "kind": "definition",
       "status": "formalized",
-      "href": "foundation/math_simplex_pure.html",
+      "href": "math/math_simplex_pure.html",
       "payload": "node_payloads/math_simplex_pure.json"
     },
     {
@@ -377,7 +371,7 @@
       "title": "Weighted Sum over the Standard Simplex",
       "kind": "definition",
       "status": "formalized",
-      "href": "foundation/math_simplex_wsum.html",
+      "href": "math/math_simplex_wsum.html",
       "payload": "node_payloads/math_simplex_wsum.json"
     },
     {
@@ -385,7 +379,7 @@
       "title": "Iterated Weighted Sums Commute",
       "kind": "lemma",
       "status": "proved",
-      "href": "foundation/math_simplex_wsum_comm.html",
+      "href": "math/math_simplex_wsum_comm.html",
       "payload": "node_payloads/math_simplex_wsum_comm.json"
     }
   ],
@@ -593,9 +587,9 @@
   ],
   "boundary_topics": [
     {
-      "id": "game_theory.coalitional_game",
-      "title": "Game Theory.Coalitional Game",
-      "href": "game_theory/coalitional_game/index.html",
+      "id": "game_theory.cooperative_game",
+      "title": "Game Theory.Cooperative Game",
+      "href": "game_theory/cooperative_game/index.html",
       "role": "dependent",
       "node_count": 19
     },
@@ -618,7 +612,7 @@
       "title": "Game Theory.Zero Sum",
       "href": "game_theory/zero_sum/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 77
+      "node_count": 75
     }
   ],
   "boundary_edges": [
@@ -736,9 +730,9 @@
     },
     {
       "from": "math.linear_programming.strong_duality",
-      "to": "topic:game_theory.coalitional_game",
+      "to": "topic:game_theory.cooperative_game",
       "kind": "boundary_dependent",
-      "topic": "game_theory.coalitional_game",
+      "topic": "game_theory.cooperative_game",
       "count": 1
     },
     {
@@ -778,6 +772,13 @@
     },
     {
       "from": "math.minimax.loomis_theorem",
+      "to": "topic:game_theory.zero_sum",
+      "kind": "boundary_dependent",
+      "topic": "game_theory.zero_sum",
+      "count": 1
+    },
+    {
+      "from": "math.minimax.ordered_field_minimax",
       "to": "topic:game_theory.zero_sum",
       "kind": "boundary_dependent",
       "topic": "game_theory.zero_sum",

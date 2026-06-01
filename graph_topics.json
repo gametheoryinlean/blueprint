@@ -8,18 +8,18 @@
       "node_count": 26,
       "direct_node_count": 19,
       "kind_counts": {
-        "definition": 13,
-        "lemma": 4,
-        "theorem": 9
+        "definition": 14,
+        "example": 7,
+        "theorem": 5
       },
       "status_counts": {
-        "formalized": 10,
-        "proved": 8,
+        "formalized": 18,
         "staged": 8
       },
       "href": "foundation/index.html",
       "children": [
         "foundation.argmax",
+        "foundation.cost",
         "foundation.preference",
         "foundation.profile",
         "foundation.utility"
@@ -30,25 +30,24 @@
       "title": "Game Theory",
       "depth": 1,
       "parent": null,
-      "node_count": 284,
+      "node_count": 283,
       "direct_node_count": 0,
       "kind_counts": {
         "definition": 139,
         "example": 18,
         "lemma": 10,
-        "proof-plan": 2,
         "proposition": 35,
-        "theorem": 80
+        "theorem": 81
       },
       "status_counts": {
-        "admitted": 38,
+        "admitted": 36,
         "formalized": 49,
         "proved": 15,
-        "staged": 182
+        "staged": 183
       },
       "href": "game_theory/index.html",
       "children": [
-        "game_theory.coalitional_game",
+        "game_theory.cooperative_game",
         "game_theory.extensive_game",
         "game_theory.repeated_game",
         "game_theory.stochastic_game",
@@ -83,7 +82,7 @@
       "depth": 1,
       "parent": null,
       "node_count": 43,
-      "direct_node_count": 27,
+      "direct_node_count": 38,
       "kind_counts": {
         "definition": 6,
         "lemma": 14,
@@ -92,8 +91,8 @@
         "theorem": 14
       },
       "status_counts": {
-        "admitted": 11,
-        "formalized": 6,
+        "admitted": 10,
+        "formalized": 7,
         "proved": 21,
         "staged": 5
       },
@@ -161,16 +160,6 @@
   ],
   "edges": [
     {
-      "from": "foundation",
-      "to": "game_theory",
-      "count": 5
-    },
-    {
-      "from": "foundation",
-      "to": "math",
-      "count": 3
-    },
-    {
       "from": "game_theory",
       "to": "math",
       "count": 20
@@ -183,7 +172,7 @@
     {
       "from": "math",
       "to": "game_theory",
-      "count": 9
+      "count": 15
     },
     {
       "from": "mechanism_design",

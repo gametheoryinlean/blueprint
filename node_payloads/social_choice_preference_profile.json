@@ -8,7 +8,7 @@
   "topics": [
     "social_choice"
   ],
-  "body_html": "<h1>Preference Profile</h1>\n<p>Given a (finite or arbitrary) population $N$ of agents and an alternative\nset $A$, a <em>preference profile</em> assigns each agent $i \\in N$ a weak\npreference $P_i$ on $A$:</p>\n<p>$$\nP : N \\to \\mathrm{Pref}(A), \\qquad i \\mapsto P_i.\n$$</p>\n<p>In Lean: <code>PrefProfile N A := N → Pref A</code>. Each entry <code>P i</code> is a bundled\npreference ([[social_choice.preference]]), so unanimity, dictatorship, and IIA can all be stated\nuniformly in terms of how the entries <code>P i</code> rank pairs of alternatives.</p>\n<p>The preference profile is the universal input shape for the voting layer:\nboth social welfare functions and social choice functions consume a\n<code>PrefProfile N A</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Preference profiles as inputs to social choice rules.</li>\n</ul>",
+  "body_html": "<h1>Preference Profile</h1>\n<p>Given a (finite or arbitrary) population $N$ of agents and an alternative\nset $A$, a <em>preference profile</em> assigns each agent $i \\in N$ a weak\npreference $P_i$ on $A$:</p>\n<p>$$\nP : N \\to \\mathrm{Pref}(A), \\qquad i \\mapsto P_i.\n$$</p>\n<p>In Lean: <code>PrefProfile N A := N → Pref A</code>. Each entry <code>P i</code> is a bundled\npreference ([[social_choice.preference]]), so unanimity, dictatorship, and IIA can all be stated\nuniformly in terms of how the entries <code>P i</code> rank pairs of alternatives.</p>\n<p>This is the generic weak-preference profile shape. The voting layer uses a\nstrict finite specialization whose ballots are <code>LinearOrder A</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Preference profiles as inputs to social choice rules.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -49,14 +49,14 @@
       "name": "PrefProfile",
       "display_name": "PrefProfile",
       "qualified_name": "PrefProfile",
-      "module": "EconCSLib.SocialChoice.Basic",
+      "module": "EconCSLib.Foundation.Preference",
       "kind": "def",
       "signature": "def PrefProfile (N A : Type*)",
-      "docstring": "A preference profile: each voter `i : N` holds a preference over `A`.",
+      "docstring": "A preference profile assigns each agent a bundled preference.",
       "repository_title": "EconCSLib",
-      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
-      "short_revision": "c7e923d",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/SocialChoice/Basic.lean#L78",
+      "revision": "b6e8f906e6aabc3bdb98385abdb724b08526c772",
+      "short_revision": "b6e8f90",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L175",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -66,12 +66,12 @@
   ],
   "lean_modules": [
     {
-      "name": "EconCSLib.SocialChoice.Basic",
-      "display_name": "EconCSLib.SocialChoice.Basic",
+      "name": "EconCSLib.Foundation.Preference",
+      "display_name": "EconCSLib.Foundation.Preference",
       "repository_title": "EconCSLib",
-      "revision": "c7e923d7fd919a1d68fcad911e7e490214d06ed0",
-      "short_revision": "c7e923d",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/c7e923d7fd919a1d68fcad911e7e490214d06ed0/EconCSLib/SocialChoice/Basic.lean#L1",
+      "revision": "b6e8f906e6aabc3bdb98385abdb724b08526c772",
+      "short_revision": "b6e8f90",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L1",
       "status": "resolved",
       "reason": null
     }
