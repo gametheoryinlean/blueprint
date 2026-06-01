@@ -1022,17 +1022,15 @@
     <span class="lemma_thmcaption thm-caption">Lemma</span>
     <span class="lemma_thmtitle thm-title">Subgame Reduction For Non-Useful Indices</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-robinson_admissible_lemma-2e-subgame_reduction">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -1050,47 +1048,6 @@
   </div>
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L132"><code>MatrixGame.AdmissibleSequence.subgame_reduction</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem AdmissibleSequence.subgame_reduction
-    (A : MatrixGame I J ℝ) (s : AdmissibleSequence A)
-    (start length : ℕ) (ε : ℝ) (_hε : 0 &lt; ε)
-    (_h_nonuseful :
-      (∃ i, ¬ s.IsRowUsefulInWindow start length i)
-      ∨ (∃ j, ¬ s.IsColUsefulInWindow start length j))
-    (_h_submatrix_bound :
-      -- Inductive hypothesis on strict submatrices, summarised abstractly:
-      -- the restriction of `s` to the un-useful complement is itself an
-      -- admissible sequence on a strict submatrix and satisfies μ&#39; ≤ ε·t&#39;.
-      True) :
-    s.mu (start + length) - s.mu start ≤ ε * length + 2 * normMax A</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="lemma_thmcontent thm-content body">
@@ -1168,8 +1125,7 @@ closes.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Section 2.8, Exercise 12 part (3)(b)] Laraki, Renault, and Sorin,
-  <em>Mathematical Foundations of Game Theory</em>,
-  <code>references/MathFoundationsGameTheory.pdf</code>. Non-useful-row reduction to a
+  <em>Mathematical Foundations of Game Theory</em>. Non-useful-row reduction to a
   strict submatrix.</li>
 </ul>
       </div>

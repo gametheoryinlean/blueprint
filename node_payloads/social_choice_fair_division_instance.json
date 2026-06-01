@@ -10,7 +10,7 @@
     "social_choice.fair_division",
     "social_choice.fair_division.core"
   ],
-  "body_html": "<h1>Fair Division Instance</h1>\n<p>A <em>fair-division instance</em> over a population $N$, resource type $R$, and\nshare type $S$ bundles:</p>\n<ul>\n<li><strong>Resource side</strong>: a value <code>resource : R</code> carrying problem-specific\n  parameters (the cake, the item set, capacity constraints, …).</li>\n<li><strong>Feasibility</strong>: a predicate <code>feasible : Allocation N S → Prop</code> on\n  complete allocations.</li>\n<li><strong>Preferences</strong>: for each agent, a preference $P_i$ on the <em>whole\n  allocation</em> space ($\\mathrm{Pref}(\\mathrm{Allocation}\\ N\\ S)$).</li>\n</ul>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Instance N R S</code>.</p>\n<p>The generality of <code>pref i : Pref (Allocation N S)</code> lets the instance encode\n<em>externalities</em> — agent $i$'s ranking can depend on every other agent's\nshare, not just their own. The no-externality specialization is\n[[social_choice.fair_division.share_instance]].</p>\n<p>This instance sits exactly above the generic social-choice instance shape\n([[social_choice.instance]]) but with a structured alternative space\n$\\mathrm{Allocation}\\ N\\ S$ in place of an unstructured $A$.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Fair division instances.</li>\n</ul>",
+  "body_html": "<h1>Fair Division Instance</h1>\n<p>A <em>fair-division instance</em> over a population $N$, resource type $R$, and\nshare type $S$ bundles:</p>\n<ul>\n<li><strong>Resource side</strong>: a value <code>resource : R</code> carrying problem-specific\n  parameters (the cake, the item set, capacity constraints, …).</li>\n<li><strong>Feasibility</strong>: a predicate <code>feasible : Allocation N S → Prop</code> on\n  complete allocations.</li>\n<li><strong>Preferences</strong>: for each agent, a preference $P_i$ on the <em>whole\n  allocation</em> space ($\\mathrm{Pref}(\\mathrm{Allocation}\\ N\\ S)$).</li>\n</ul>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Instance N R S</code>.</p>\n<p>The generality of <code>pref i : Pref (Allocation N S)</code> lets the instance encode\n<em>externalities</em> — agent $i$'s ranking can depend on every other agent's\nshare, not just their own. The no-externality specialization is\n[[social_choice.fair_division.share_instance]].</p>\n<p>This instance sits exactly above the generic social-choice instance shape\n([[social_choice.instance]]) but with a structured alternative space\n$\\mathrm{Allocation}\\ N\\ S$ in place of an unstructured $A$.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Fair division instances.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -46,9 +46,9 @@
       "signature": "structure Instance (N R S : Type*) where",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Basic.lean#L35",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Basic.lean#L40",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -61,9 +61,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Basic",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Basic",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

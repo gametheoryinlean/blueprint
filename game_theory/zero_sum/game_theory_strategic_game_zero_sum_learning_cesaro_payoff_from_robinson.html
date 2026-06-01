@@ -1022,9 +1022,9 @@
     <span class="lemma_thmcaption thm-caption">Lemma</span>
     <span class="lemma_thmtitle thm-title">Cesàro Payoff Convergence From Robinson Lemma</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-cesaro_payoff_from_robinson">#</a>
@@ -1059,33 +1059,14 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L41"><code>MatrixGame.cesaro_payoff_converges_to_value</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem cesaro_payoff_converges_to_value
-    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)
-    (_hFP : IsFictitiousPlay A iSeq jSeq) :
-    Tendsto (fun n =&gt; realisedCumPayoff A iSeq jSeq n / n) atTop (nhds A.value)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L29"><code>MatrixGame.realisedCumPayoff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L25"><code>MatrixGame.realisedCumPayoff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
+            EconCSLib @ 0af0448, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
           </span>
           
           
@@ -1097,7 +1078,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro</code></a>
       </p>
       
     </div>
@@ -1189,8 +1170,7 @@ chain — a natural first Lean target.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 2, Section 2.7] Laraki, Renault, and Sorin,
-  <em>Mathematical Foundations of Game Theory</em>,
-  <code>references/MathFoundationsGameTheory.pdf</code>. Cesàro average-payoff
+  <em>Mathematical Foundations of Game Theory</em>. Cesàro average-payoff
   convergence along fictitious play; see the <code>source</code> block above for
   the precise locator.</li>
 </ul>

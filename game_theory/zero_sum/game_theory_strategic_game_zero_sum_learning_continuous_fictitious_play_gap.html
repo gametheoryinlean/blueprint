@@ -1022,17 +1022,15 @@
     <span class="proposition_thmcaption thm-caption">Proposition</span>
     <span class="proposition_thmtitle thm-title">Continuous Fictitious Play Closes The Duality Gap</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-proposition">proposition</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-continuous_fictitious_play_gap">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -1054,40 +1052,6 @@
   </div>
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Continuous.lean#L40"><code>MatrixGame.continuous_fictitious_play_gap</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Continuous
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem continuous_fictitious_play_gap
-    (A : MatrixGame I J ℝ)
-    (x : ℝ → stdSimplex ℝ I) (y : ℝ → stdSimplex ℝ J)
-    (_hContBR : True) :
-    Tendsto (fun t =&gt; A.dualityGap (x t) (y t)) atTop (nhds 0)</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Continuous.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Continuous</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="proposition_thmcontent thm-content body">
@@ -1129,7 +1093,7 @@ optimal-strategy set is exactly the zero set of $W$, convergence of the gap
 implies convergence toward $X(A)\times Y(A)$.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Continuous fictitious play duality gap convergence.</li>
+<li>[MFoGT, Prop. 2.7.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Continuous fictitious play duality gap convergence.</li>
 </ul>
       </div>
     </details>

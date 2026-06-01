@@ -1058,27 +1058,10 @@
       <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
       <ul class="uses">
         
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L91"><code>CoalitionalGame.shapleyValue_efficient</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.CoalitionalGame.ShapleyValue
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem shapleyValue_efficient :
-    ∑ i : N, G.shapleyValue i = G.v Finset.univ</code></pre>
-        </li>
-        
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.ShapleyValue</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/CoalitionalGame/ShapleyValue.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.ShapleyValue</code></a>
       </p>
       
     </div>
@@ -1101,12 +1084,11 @@ coalitions. Each coalition marginal contribution appears with the number of
 orders in which it is the relevant predecessor set. The resulting telescoping
 over permutations leaves exactly $v(N)-v(\varnothing)=v(N)$.</p>
 <h2>Lean Status</h2>
-<p>The theorem statement exists as <code>CoalitionalGame.shapleyValue_efficient</code>
-and currently has a documented proof gap.</p>
+<p>The Lean module defines the Shapley value. Efficiency remains a blueprint
+target with a combinatorial proof route.</p>
 <h2>References</h2>
 <ul>
-<li>[MSZ Ch.18, Thm 18.18] Maschler, Solan, Zamir, <em>Game Theory</em>,
-  <code>references/GameTheory.pdf</code>.</li>
+<li>[MSZ Ch.18, Thm 18.18] Maschler, Solan, Zamir, <em>Game Theory</em>.</li>
 </ul>
       </div>
     </details>

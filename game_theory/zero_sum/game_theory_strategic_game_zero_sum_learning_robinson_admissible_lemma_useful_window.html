@@ -1022,17 +1022,15 @@
     <span class="lemma_thmcaption thm-caption">Lemma</span>
     <span class="lemma_thmtitle thm-title">Useful Window Bound For Admissible Sequences</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-robinson_admissible_lemma-2e-useful_window">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -1050,41 +1048,6 @@
   </div>
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L119"><code>MatrixGame.AdmissibleSequence.useful_window_bound</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem AdmissibleSequence.useful_window_bound
-    (A : MatrixGame I J ℝ) (s : AdmissibleSequence A)
-    (start length : ℕ)
-    (h_rows : ∀ i, s.IsRowUsefulInWindow start length i)
-    (h_cols : ∀ j, s.IsColUsefulInWindow start length j) :
-    s.mu (start + length) ≤ 4 * length * normMax A</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="lemma_thmcontent thm-content body">
@@ -1161,8 +1124,7 @@ window of full usefulness has been traversed.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Section 2.8, Exercise 12 parts (2)(iv) and (2)(v)] Laraki, Renault,
-  and Sorin, <em>Mathematical Foundations of Game Theory</em>,
-  <code>references/MathFoundationsGameTheory.pdf</code>. Useful-window collapse and
+  and Sorin, <em>Mathematical Foundations of Game Theory</em>. Useful-window collapse and
   combined $\mu$ bound.</li>
 </ul>
       </div>

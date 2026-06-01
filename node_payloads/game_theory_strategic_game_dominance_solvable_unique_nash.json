@@ -10,7 +10,7 @@
     "game_theory.strategic_game.dominance"
   ],
   "body_html": "<h1>Solvable Games Have A Unique Nash Equilibrium</h1>\n<p>If a strategic game is solvable, then it has a unique Nash equilibrium.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>Every Nash equilibrium is rationalizable. If $S^\\infty$ is a singleton, all Nash\nequilibria must equal that singleton profile. Thus there is at most one Nash\nequilibrium. In the compact continuous setting of MFoGT, the solvable outcome is\nalso the unique fixed rationalizable prediction.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Cor. 4.5.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. If the game is solvable, it has a unique Nash equilibrium.</li>\n</ul>",
+  "proof_html": "<p>Sketch</p>\n<p>Every Nash equilibrium is rationalizable. If $S^\\infty$ is a singleton, all Nash\nequilibria must equal that singleton profile. Thus there is at most one Nash\nequilibrium. In the compact continuous setting of MFoGT, the solvable outcome is\nalso the unique fixed rationalizable prediction.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Cor. 4.5.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. If the game is solvable, it has a unique Nash equilibrium.</li>\n</ul>",
   "deps": [
     {
       "id": "game_theory.strategic_game.dominance.dominance_solvable_game",
@@ -24,34 +24,15 @@
     }
   ],
   "dependents": [],
-  "lean_refs": [
-    {
-      "name": "StrategicGame.dominance_solvable_unique_nash",
-      "display_name": "StrategicGame.dominance_solvable_unique_nash",
-      "qualified_name": "StrategicGame.dominance_solvable_unique_nash",
-      "module": "EconCSLib.GameTheory.StrategicGame.IESDS",
-      "kind": "theorem",
-      "signature": "theorem dominance_solvable_unique_nash {G : StrategicGame N U}\n    (hDS : G.IsDominanceSolvable) :\n    ∃! σ : G.Profile, IsNashEquilibrium G σ",
-      "docstring": "If IESDS yields a unique profile, it is the unique Nash equilibrium. [MSZ 4.37]",
-      "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L88",
-      "doc_url": null,
-      "has_sorry": true,
-      "status": "resolved",
-      "reason": null,
-      "suggestions": []
-    }
-  ],
+  "lean_refs": [],
   "lean_modules": [
     {
       "name": "EconCSLib.GameTheory.StrategicGame.IESDS",
       "display_name": "EconCSLib.GameTheory.StrategicGame.IESDS",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1",
       "status": "resolved",
       "reason": null
     }

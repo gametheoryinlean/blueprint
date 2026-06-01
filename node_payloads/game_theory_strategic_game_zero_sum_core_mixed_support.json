@@ -9,7 +9,7 @@
     "game_theory.zero_sum",
     "game_theory.zero_sum.core"
   ],
-  "body_html": "<h1>Support Of A Mixed Strategy</h1>\n<p>The support of a mixed strategy $x \\in \\Delta(I)$ is the set\n$$\n  \\operatorname{supp}(x)=\\{i \\in I : x_i&gt;0\\}.\n$$\nIn Lean, <code>MatrixGame.support</code> returns this as a <code>Finset I</code> via\n<code>Finset.univ.filter (0 &lt; x.val ·)</code>. Marked <code>noncomputable</code> because strict\ninequality on <code>ℝ</code> is not decidable.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Support of a mixed strategy.</li>\n</ul>",
+  "body_html": "<h1>Support Of A Mixed Strategy</h1>\n<p>The support of a mixed strategy $x \\in \\Delta(I)$ is the set\n$$\n  \\operatorname{supp}(x)=\\{i \\in I : x_i&gt;0\\}.\n$$\nIn Lean, <code>MatrixGame.support</code> returns this as a <code>Finset I</code> via\n<code>Finset.univ.filter (0 &lt; x.val ·)</code>. Marked <code>noncomputable</code> because strict\ninequality on <code>ℝ</code> is not decidable.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Support of a mixed strategy.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -35,9 +35,9 @@
       "signature": "noncomputable def support {𝕜 : Type} [Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]\n    [DecidableEq I] (xx : stdSimplex 𝕜 I) : Finset I",
       "docstring": "**Support** of a mixed strategy: the indices with positive probability.",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L145",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L150",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -50,9 +50,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
       "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

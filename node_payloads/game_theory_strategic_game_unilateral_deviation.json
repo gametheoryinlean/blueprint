@@ -9,7 +9,7 @@
     "game_theory.strategic_game",
     "game_theory.strategic_game.core"
   ],
-  "body_html": "<h1>Unilateral Deviation</h1>\n<p>Given a strategy profile \\(\\sigma\\) and a player \\(i\\), the unilateral deviation\n\\((\\sigma_{-i}, s'_i)\\) is the profile where player \\(i\\) plays \\(s'_i\\) and all other\nplayers play according to \\(\\sigma\\). We write \\(\\sigma[i \\mapsto s']\\).</p>\n<p>In Lean, this is <code>Function.update σ i s'</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Notation for unilateral deviation.</li>\n</ul>",
+  "body_html": "<h1>Unilateral Deviation</h1>\n<p>Given a strategy profile \\(\\sigma\\) and a player \\(i\\), the unilateral deviation\n\\((\\sigma_{-i}, s'_i)\\) is the profile where player \\(i\\) plays \\(s'_i\\) and all other\nplayers play according to \\(\\sigma\\). We write \\(\\sigma[i \\mapsto s']\\).</p>\n<p>In Lean, this is <code>Function.update σ i s'</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2] Maschler, Solan, and Zamir, <em>Game Theory</em>. Notation for unilateral deviation.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -45,9 +45,9 @@
       "signature": "abbrev deviate {G : StrategicGame ι U} [DecidableEq ι]\n    (σ : G.Profile) (i : ι) (s' : G.strategy i) : G.Profile",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L13",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L13",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -60,9 +60,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.Basic",
       "display_name": "EconCSLib.GameTheory.StrategicGame.Basic",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/Basic.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

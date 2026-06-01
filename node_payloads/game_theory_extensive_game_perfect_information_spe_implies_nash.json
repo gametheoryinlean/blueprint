@@ -10,7 +10,7 @@
     "game_theory.extensive_game.perfect_information"
   ],
   "body_html": "<h1>Subgame-Perfect Equilibrium Implies Nash Equilibrium</h1>\n<p>In a perfect-information game, every subgame-perfect equilibrium is a Nash\nequilibrium of the whole game.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>The whole game is the subgame rooted at the origin. Since subgame perfection\nrequires the continuation profile to be Nash in every subgame, applying the\ndefinition at the origin gives the Nash condition for the original game.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 6.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. SPE requires Nash equilibrium in every subgame, including the whole game at the origin.</li>\n</ul>",
+  "proof_html": "<p>Sketch</p>\n<p>The whole game is the subgame rooted at the origin. Since subgame perfection\nrequires the continuation profile to be Nash in every subgame, applying the\ndefinition at the origin gives the Nash condition for the original game.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Def. 6.2.6] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. SPE requires Nash equilibrium in every subgame, including the whole game at the origin.</li>\n</ul>",
   "deps": [
     {
       "id": "game_theory.extensive_game.perfect_information.subgame_perfect_equilibrium",
@@ -35,9 +35,9 @@
       "signature": "theorem IsSubgamePerfect.toNE {σ : Strategy N U} (hspe : IsSubgamePerfect σ)\n    (g : GameTree N U) : IsNashEquilibrium σ g",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeNE.lean#L76",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/ExtensiveGame/GameTreeNE.lean#L81",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -50,9 +50,9 @@
       "name": "EconCSLib.GameTheory.ExtensiveGame.GameTreeNE",
       "display_name": "EconCSLib.GameTheory.ExtensiveGame.GameTreeNE",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeNE.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/ExtensiveGame/GameTreeNE.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -1118,10 +1118,8 @@ falls out as the 2-player zero-sum special case.</p>
   Brouwer / Kakutani arguments.</li>
 </ul>
 <h2>Where Kakutani is missing in this library</h2>
-<p>EconCSLib does not yet carry Kakutani in Lean — see PLAN.md Phase 2b'
-on <code>FixedPoint/Kakutani.lean</code> (planned port from
-harfe/fixed-point-theorems-lean4). Until that lands, this proof exists
-only at blueprint level. The Lean proof of the matrix-game minimax
+<p>EconCSLib does not yet carry Kakutani in Lean. Until that infrastructure is
+implemented, this proof exists only at blueprint level. The Lean proof of the matrix-game minimax
 theorem currently uses Loomis ([[math.minimax.minimax_from_loomis]]) over ℝ,
 and <code>Minimax.minimax</code> (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>) over any
 linearly ordered field.</p>

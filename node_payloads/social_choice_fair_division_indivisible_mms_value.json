@@ -11,7 +11,7 @@
     "social_choice.fair_division.indivisible",
     "social_choice.fair_division.indivisible.mms"
   ],
-  "body_html": "<h1>Maximin Share Value</h1>\n<p>For an agent $i$, a valuation $v$\n([[social_choice.fair_division.indivisible.valuation]]), and an outer\ngood set <code>allGoods : Finset G</code>, the <em>maximin share value</em> is\n$$\n\\mathrm{MMS}_i \\;=\\; \\max_{B \\text{ complete}}\\ \\min_{j} v_i(B(j)),\n$$\ni.e. the maximum, over agent $i$'s self-partitions of <code>allGoods</code> into\n$n$ bundles, of the worst-bundle value (from $i$'s own perspective).</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.mmsValue v allGoods i</code>,\ndefined <code>noncomputable</code> with hypotheses <code>[Fintype N] [DecidableEq G]</code>.</p>\n<p>The Lean definition packages the supremum-of-minimums using\n<code>Finset.sup'</code> / <code>Finset.inf'</code> constructions over the set of complete\nallocations.</p>\n<h2>Why the definition is well-posed</h2>\n<ul>\n<li>The set of complete allocations of <code>allGoods</code> is finite (a function\n  from $N$ to a $\\mathrm{Finset}\\ G$, constrained by the partition\n  property).</li>\n<li>For each complete allocation $B$, $\\min_j v_i(B(j))$ is a finite min\n  over the finite type $N$.</li>\n</ul>\n<p>So $\\mathrm{MMS}_i$ exists as a finite max of finite mins.</p>\n<h2>Use</h2>\n<p><code>mmsValue</code> is the threshold appearing in the <em>exact</em> MMS guarantee\n([[social_choice.fair_division.indivisible.maximin_share]]) and in the\nα-MMS approximation\n([[social_choice.fair_division.indivisible.is_alpha_mms]]). The\npredicate <code>IsMaxminShare A</code> (every agent's bundle has value $\\ge\n\\mathrm{MMS}_i$) and the bound <code>mmsValue_le_proportional_share_additive</code>\n([[social_choice.fair_division.indivisible.mms_value_bounds]]) both\nquantify how close $A$ comes to this threshold.</p>\n<h2>References</h2>\n<ul>\n<li>Budish, E. (2011). \"The Combinatorial Assignment Problem\". <em>J. Pol. Econ.</em></li>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Maximin share value.</li>\n</ul>",
+  "body_html": "<h1>Maximin Share Value</h1>\n<p>For an agent $i$, a valuation $v$\n([[social_choice.fair_division.indivisible.valuation]]), and an outer\ngood set <code>allGoods : Finset G</code>, the <em>maximin share value</em> is\n$$\n\\mathrm{MMS}_i \\;=\\; \\max_{B \\text{ complete}}\\ \\min_{j} v_i(B(j)),\n$$\ni.e. the maximum, over agent $i$'s self-partitions of <code>allGoods</code> into\n$n$ bundles, of the worst-bundle value (from $i$'s own perspective).</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.mmsValue v allGoods i</code>,\ndefined <code>noncomputable</code> with hypotheses <code>[Fintype N] [DecidableEq G]</code>.</p>\n<p>The Lean definition packages the supremum-of-minimums using\n<code>Finset.sup'</code> / <code>Finset.inf'</code> constructions over the set of complete\nallocations.</p>\n<h2>Why the definition is well-posed</h2>\n<ul>\n<li>The set of complete allocations of <code>allGoods</code> is finite (a function\n  from $N$ to a $\\mathrm{Finset}\\ G$, constrained by the partition\n  property).</li>\n<li>For each complete allocation $B$, $\\min_j v_i(B(j))$ is a finite min\n  over the finite type $N$.</li>\n</ul>\n<p>So $\\mathrm{MMS}_i$ exists as a finite max of finite mins.</p>\n<h2>Use</h2>\n<p><code>mmsValue</code> is the threshold appearing in the <em>exact</em> MMS guarantee\n([[social_choice.fair_division.indivisible.maximin_share]]) and in the\nα-MMS approximation\n([[social_choice.fair_division.indivisible.is_alpha_mms]]). The\npredicate <code>IsMaxminShare A</code> (every agent's bundle has value $\\ge\n\\mathrm{MMS}_i$) and the bound <code>mmsValue_le_proportional_share_additive</code>\n([[social_choice.fair_division.indivisible.mms_value_bounds]]) both\nquantify how close $A$ comes to this threshold.</p>\n<h2>References</h2>\n<ul>\n<li>Budish, E. (2011). \"The Combinatorial Assignment Problem\". <em>J. Pol. Econ.</em></li>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Maximin share value.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -47,9 +47,9 @@
       "signature": "noncomputable def mmsValue [Fintype N] [DecidableEq G]\n    (v : Valuation N G) (allGoods : Finset G) (i : N) : ℝ",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L96",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L101",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -62,9 +62,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Indivisible.MMS",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Indivisible.MMS",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1",
       "status": "resolved",
       "reason": null
     }

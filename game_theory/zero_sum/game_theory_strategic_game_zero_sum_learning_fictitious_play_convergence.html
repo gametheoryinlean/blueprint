@@ -1022,17 +1022,15 @@
     <span class="theorem_thmcaption thm-caption">Theorem</span>
     <span class="theorem_thmtitle thm-title">Fictitious Play Convergence</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-fictitious_play_convergence">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -1052,82 +1050,6 @@
   </div>
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L62"><code>MatrixGame.fictitious_play_convergence</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem fictitious_play_convergence
-    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)
-    (hFP : IsFictitiousPlay A iSeq jSeq) :
-    (∀ ε : ℝ, 0 &lt; ε → ∃ N : ℕ, ∀ n ≥ N,
-       (∀ y : stdSimplex ℝ J, A.value - ε ≤ A.E (empiricalFrequency iSeq n) y) ∧
-       (∀ x : stdSimplex ℝ I, A.E x (empiricalFrequency jSeq n) ≤ A.value + ε))
-    ∧ Tendsto (fun n =&gt; realisedCumPayoff A iSeq jSeq n / n) atTop (nhds A.value)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L44"><code>MatrixGame.fictitious_play_convergence_frequency</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem fictitious_play_convergence_frequency
-    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)
-    (_hFP : IsFictitiousPlay A iSeq jSeq) (ε : ℝ) (_hε : 0 &lt; ε) :
-    ∃ N : ℕ, ∀ n ≥ N,
-      (∀ y : stdSimplex ℝ J, A.value - ε ≤ A.E (empiricalFrequency iSeq n) y) ∧
-      (∀ x : stdSimplex ℝ I, A.E x (empiricalFrequency jSeq n) ≤ A.value + ε)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L54"><code>MatrixGame.fictitious_play_convergence_cesaro</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem fictitious_play_convergence_cesaro
-    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)
-    (hFP : IsFictitiousPlay A iSeq jSeq) :
-    Tendsto (fun n =&gt; realisedCumPayoff A iSeq jSeq n / n) atTop (nhds A.value)</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="theorem_thmcontent thm-content body">
@@ -1169,7 +1091,7 @@ self-contained derivation $R_n / n \to \operatorname{val}(A)$ from the
 $o(n)$ gap bound.</p>
 <h2>References</h2>
 <ul>
-<li>[MFoGT, Thm. 2.7.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Convergence of fictitious play in finite zero-sum games.</li>
+<li>[MFoGT, Thm. 2.7.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Convergence of fictitious play in finite zero-sum games.</li>
 </ul>
       </div>
     </details>

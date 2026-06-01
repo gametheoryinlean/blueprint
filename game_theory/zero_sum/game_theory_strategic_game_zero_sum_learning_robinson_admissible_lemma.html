@@ -1022,9 +1022,9 @@
     <span class="lemma_thmcaption thm-caption">Lemma</span>
     <span class="lemma_thmtitle thm-title">Robinson Admissible Sequence Lemma</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-robinson_admissible_lemma">#</a>
@@ -1057,33 +1057,14 @@
       <ul class="uses">
         
         <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L171"><code>MatrixGame.robinson_admissible_lemma</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem robinson_admissible_lemma
-    (A : MatrixGame I J ℝ) (ε : ℝ) (_hε : 0 &lt; ε) :
-    ∃ s_0 : ℕ, ∀ (s : AdmissibleSequence A) (t : ℕ),
-      s_0 ≤ t → s.mu t ≤ ε * (t : ℝ)</code></pre>
-        </li>
-        
-        <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L67"><code>MatrixGame.AdmissibleSequence</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L61"><code>MatrixGame.AdmissibleSequence</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
+            EconCSLib @ 0af0448, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
           </span>
           
           
@@ -1094,7 +1075,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
       </p>
       
     </div>
@@ -1246,7 +1227,7 @@ argument in
 <li>[Robinson 1951] J. Robinson, "An iterative method of solving a game",
   <em>Annals of Mathematics</em> 54 (1951), 296–301.</li>
 <li>[MFoGT, Section 2.8, Exercise 12] Laraki, Renault, and Sorin, <em>Mathematical
-  Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>.
+  Foundations of Game Theory</em>.
   Hint-decomposition of Robinson's proof into the four internal lemmas cited
   above.</li>
 </ul>

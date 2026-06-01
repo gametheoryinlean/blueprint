@@ -9,7 +9,7 @@
     "game_theory.zero_sum",
     "game_theory.zero_sum.core"
   ],
-  "body_html": "<h1>Mixed Strategy Simplex</h1>\n<p>For a finite set $S$, the mixed strategy simplex $\\Delta(S)$ is the set of\nprobability vectors on $S$:\n$$\n  \\Delta(S)=\\{x \\in \\mathbb{R}^S : x_s \\ge 0 \\text{ for all } s,\\ \n  \\sum_{s \\in S} x_s = 1\\}.\n$$\nThe Lean library uses Mathlib's <code>stdSimplex ℝ S</code> for this set, with\n<code>stdSimplex.pure i</code> for the Dirac point mass at $i$ and <code>wsum x f</code> (a\ndefinitional abbreviation for the dot product <code>x ⬝ᵥ f</code>) for the weighted\nsum of a function $f \\colon S \\to \\mathbb{R}$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Delta(S) is the simplex of probabilities on a finite set S.</li>\n</ul>",
+  "body_html": "<h1>Mixed Strategy Simplex</h1>\n<p>For a finite set $S$, the mixed strategy simplex $\\Delta(S)$ is the set of\nprobability vectors on $S$:\n$$\n  \\Delta(S)=\\{x \\in \\mathbb{R}^S : x_s \\ge 0 \\text{ for all } s,\\ \n  \\sum_{s \\in S} x_s = 1\\}.\n$$\nThe Lean library uses Mathlib's <code>stdSimplex ℝ S</code> for this set, with\n<code>stdSimplex.pure i</code> for the Dirac point mass at $i$ and <code>wsum x f</code> (a\ndefinitional abbreviation for the dot product <code>x ⬝ᵥ f</code>) for the weighted\nsum of a function $f \\colon S \\to \\mathbb{R}$.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 2, Section 2.3] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Delta(S) is the simplex of probabilities on a finite set S.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -42,28 +42,6 @@
   ],
   "lean_refs": [
     {
-      "name": "stdSimplex",
-      "display_name": "stdSimplex",
-      "qualified_name": null,
-      "module": null,
-      "kind": null,
-      "signature": null,
-      "docstring": null,
-      "repository_title": null,
-      "revision": null,
-      "short_revision": null,
-      "source_url": null,
-      "doc_url": null,
-      "has_sorry": false,
-      "status": "unresolved",
-      "reason": "not found in configured Lean repository",
-      "suggestions": [
-        "stdSimplex.affineCombination",
-        "stdSimplex.affineCombination_eq_linearCombination",
-        "stdSimplex.continuous_coord"
-      ]
-    },
-    {
       "name": "stdSimplex.pure",
       "display_name": "stdSimplex.pure",
       "qualified_name": "stdSimplex.pure",
@@ -72,9 +50,9 @@
       "signature": "def stdSimplex.pure [DecidableEq I] (i₀ : I) : stdSimplex 𝕜 I where",
       "docstring": "Point-mass simplex element at `i₀`.",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Math/Simplex.lean#L303",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/Math/Simplex.lean#L308",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -90,9 +68,9 @@
       "signature": "abbrev wsum (x : stdSimplex 𝕜 I) (f : I → 𝕜) : 𝕜",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Math/Simplex.lean#L82",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/Math/Simplex.lean#L87",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -105,9 +83,9 @@
       "name": "EconCSLib.Math.Simplex",
       "display_name": "EconCSLib.Math.Simplex",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Math/Simplex.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/Math/Simplex.lean#L1",
       "status": "resolved",
       "reason": null
     }

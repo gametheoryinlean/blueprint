@@ -1022,17 +1022,15 @@
     <span class="lemma_thmcaption thm-caption">Lemma</span>
     <span class="lemma_thmtitle thm-title">Euclidean Division Pasting In Robinson Induction</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-lemma">lemma</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-admitted">admitted</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-strategic_game-2e-zero_sum-2e-learning-2e-robinson_admissible_lemma-2e-induction_step">#</a>
       
       <button class="modal-trigger" type="button" data-modal-target="uses-modal">Uses</button>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
@@ -1052,47 +1050,6 @@
   </div>
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L150"><code>MatrixGame.AdmissibleSequence.robinson_induction_step</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
-          </span>
-          
-          <span class="badge status-needs_proof_review">sorry/admit</span>
-          
-          <pre class="lean-signature"><code>theorem AdmissibleSequence.robinson_induction_step
-    (A : MatrixGame I J ℝ) (s : AdmissibleSequence A)
-    (tStar : ℕ) (_htStar_pos : 0 &lt; tStar)
-    (ε : ℝ) (_hε : 0 &lt; ε)
-    (_h_useful_case :
-      ∀ start, (∀ i, s.IsRowUsefulInWindow start tStar i) ∧ (∀ j, s.IsColUsefulInWindow start tStar j)
-        → s.mu (start + tStar) ≤ 4 * tStar * normMax A)
-    (_h_nonuseful_case :
-      ∀ start, ((∃ i, ¬ s.IsRowUsefulInWindow start tStar i)
-              ∨ (∃ j, ¬ s.IsColUsefulInWindow start tStar j))
-        → s.mu (start + tStar) - s.mu start ≤ ε / 2 * tStar + 2 * normMax A) :
-    ∀ t ≥ tStar,</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="lemma_thmcontent thm-content body">
@@ -1185,8 +1142,7 @@ $\varepsilon t$ for sufficiently large $t^*$ or $t$.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Section 2.8, Exercise 12 parts (3)(c) and (3)(d)] Laraki, Renault,
-  and Sorin, <em>Mathematical Foundations of Game Theory</em>,
-  <code>references/MathFoundationsGameTheory.pdf</code>. Euclidean-division pasting in
+  and Sorin, <em>Mathematical Foundations of Game Theory</em>. Euclidean-division pasting in
   Robinson's induction.</li>
 </ul>
       </div>

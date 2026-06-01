@@ -10,7 +10,7 @@
     "game_theory.strategic_game.bayesian_correlated"
   ],
   "body_html": "<h1>Degenerate Correlated Equilibrium</h1>\n<p>A degenerate correlated equilibrium is a correlated device that puts probability\none on a single pure strategy profile.</p>\n<p>For such a point-mass device, obedience is exactly the Nash condition for that\npure profile: no player can improve by deviating from the recommended action,\nbecause the recommendation fully determines the profile.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>If the point-mass profile is Nash, every recommended action is already a best\nresponse to the other components, so obedience holds. Conversely, obedience of\nthe point-mass device tests exactly the unilateral deviations from that profile,\nwhich is the Nash condition.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 8, Def. 8.6 and Thm. 8.7] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Point-mass correlated equilibria correspond to pure Nash equilibria.</li>\n</ul>",
+  "proof_html": "<p>Sketch</p>\n<p>If the point-mass profile is Nash, every recommended action is already a best\nresponse to the other components, so obedience holds. Conversely, obedience of\nthe point-mass device tests exactly the unilateral deviations from that profile,\nwhich is the Nash condition.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 8, Def. 8.6 and Thm. 8.7] Maschler, Solan, and Zamir, <em>Game Theory</em>. Point-mass correlated equilibria correspond to pure Nash equilibria.</li>\n</ul>",
   "deps": [
     {
       "id": "game_theory.strategic_game.correlated.correlated_equilibrium",
@@ -34,9 +34,9 @@
       "signature": "def IsDegenerateCorrelatedEq (G : StrategicGame N U) (σ : G.Profile) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L36",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L41",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -52,9 +52,9 @@
       "signature": "theorem nash_iff_degenerate_ce (G : StrategicGame N U) (σ : G.Profile) :\n    IsNashEquilibrium G σ ↔ IsDegenerateCorrelatedEq G σ",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L41",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L46",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -67,9 +67,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.CorrelatedEq",
       "display_name": "EconCSLib.GameTheory.StrategicGame.CorrelatedEq",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/CorrelatedEq.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -10,7 +10,7 @@
     "game_theory.zero_sum.core"
   ],
   "body_html": "<h1>Strong Complementarity</h1>\n<p>For a finite zero-sum matrix game $A : I \\times J \\to \\mathbb{R}$ there exists an\noptimal pair $(x^\\ast, y^\\ast) \\in X(A) \\times Y(A)$ that is <strong>strongly\ncomplementary</strong>:</p>\n<p>$$\n  x^\\ast_i &gt; 0 \\iff e_i A y^\\ast = \\operatorname{val}(A),\n  \\qquad\n  y^\\ast_j &gt; 0 \\iff x^\\ast A e_j = \\operatorname{val}(A).\n$$</p>\n<p>The forward implications ($\\Rightarrow$) hold for <em>every</em> optimal pair and are\nexactly <a class=\"node-ref\" data-node-id=\"game_theory.strategic_game.zero_sum.core.support_complementarity\" href=\"../strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_support_complementarity.html\">Support Complementarity</a>.\nThe strengthening here is the existence of a pair for which the reverse\nimplications ($\\Leftarrow$) also hold simultaneously.</p>",
-  "proof_html": "<p>Shift the payoffs by a constant $K$ so the value becomes positive, and\nread off the row/column linear programs of the shifted game. LP strong\ncomplementary slackness supplies an optimal LP pair satisfying strict\ncomplementarity; rescaling back by the shifted value yields an optimal\nmatrix-game pair satisfying the biconditional above.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(c)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Strong complementarity of optimal strategies via LP strong complementary slackness.</li>\n</ul>",
+  "proof_html": "<p>Shift the payoffs by a constant $K$ so the value becomes positive, and\nread off the row/column linear programs of the shifted game. LP strong\ncomplementary slackness supplies an optimal LP pair satisfying strict\ncomplementarity; rescaling back by the shifted value yields an optimal\nmatrix-game pair satisfying the biconditional above.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(c)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Strong complementarity of optimal strategies via LP strong complementary slackness.</li>\n</ul>",
   "deps": [
     {
       "id": "game_theory.strategic_game.zero_sum.core.support_complementarity",
@@ -34,9 +34,9 @@
       "signature": "theorem exists_strong_complementary_pair :\n    ∃ (xx : stdSimplex ℝ I) (yy : stdSimplex ℝ J),\n      xx ∈ A.optimalRowStrategies ∧ yy ∈ A.optimalColumnStrategies ∧\n      (∀ i, 0 < xx.val i ↔ A.Ei i yy = A.value) ∧\n      (∀ j, 0 < yy.val j ↔ A.Ej xx j = A.value)",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L69",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L74",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -49,9 +49,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity",
       "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1",
       "status": "resolved",
       "reason": null
     }

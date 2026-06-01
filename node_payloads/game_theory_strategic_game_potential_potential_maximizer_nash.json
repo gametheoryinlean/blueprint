@@ -9,7 +9,7 @@
     "game_theory.strategic_game",
     "game_theory.strategic_game.dynamics"
   ],
-  "body_html": "<h1>Potential Maximizer Is Nash</h1>\n<p>In a finite exact potential game, every global maximizer of the potential is a\npure Nash equilibrium.</p>\n<p>The proof is local: if a unilateral deviation from a potential maximizer were\nprofitable, exactness would make the same deviation increase the potential,\ncontradicting maximality.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Section 5.6, Exercise 1(1)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Finite potential games have pure equilibria by maximizing the potential.</li>\n</ul>",
+  "body_html": "<h1>Potential Maximizer Is Nash</h1>\n<p>In a finite exact potential game, every global maximizer of the potential is a\npure Nash equilibrium.</p>\n<p>The proof is local: if a unilateral deviation from a potential maximizer were\nprofitable, exactness would make the same deviation increase the potential,\ncontradicting maximality.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Chapter 5, Section 5.6, Exercise 1(1)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Finite potential games have pure equilibria by maximizing the potential.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -34,9 +34,9 @@
       "signature": "theorem IsExactPotential.maximizer_is_nash {Φ : G.Profile → U}\n    (hΦ : IsExactPotential G Φ) {σ : G.Profile}\n    (hmax : ∀ τ : G.Profile, Φ σ ≥ Φ τ) :\n    IsNashEquilibrium G σ",
       "docstring": "A profile maximizing an exact potential is a Nash equilibrium.",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L59",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L64",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -52,9 +52,9 @@
       "signature": "theorem IsOrdinalPotential.isNash_iff_localMax {Φ : G.Profile → U}\n    (hΦ : IsOrdinalPotential G Φ) {σ : G.Profile} :\n    IsNashEquilibrium G σ ↔\n    ∀ i (s' : G.strategy i), Φ σ ≥ Φ (deviate σ i s')",
       "docstring": "Nash ↔ local maximizer of ordinal potential.",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L74",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L79",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -67,9 +67,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
       "display_name": "EconCSLib.GameTheory.StrategicGame.PotentialGame",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/GameTheory/StrategicGame/PotentialGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

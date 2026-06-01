@@ -2,7 +2,7 @@
   "id": "game_theory.strategic_game.zero_sum.learning.fictitious_play_convergence",
   "title": "Fictitious Play Convergence",
   "kind": "theorem",
-  "status": "formalized",
+  "status": "admitted",
   "href": "game_theory/zero_sum/game_theory_strategic_game_zero_sum_learning_fictitious_play_convergence.html",
   "primary_topic": "game_theory.zero_sum",
   "topics": [
@@ -10,7 +10,7 @@
     "game_theory.zero_sum.learning"
   ],
   "body_html": "<h1>Fictitious Play Convergence</h1>\n<p>Let $(i_n,j_n)_{n\\ge1}$ be a fictitious-play realization in a finite matrix game\n$A$, and let $(x_n,y_n)$ be the empirical frequencies of play.</p>\n<p>MFoGT Thm. 2.7.2 has two conclusions.</p>\n<p>First, the empirical frequencies approach the optimal-strategy sets\n$X(A)\\times Y(A)$. Explicitly, for every $\\varepsilon&gt;0$ there is $N$ such that,\nfor every $n\\ge N$,\n$$\n  x_nAy\\ge \\operatorname{val}(A)-\\varepsilon\n  \\quad\\text{for all }y\\in\\Delta(J),\n$$\nand\n$$\n  xAy_n\\le \\operatorname{val}(A)+\\varepsilon\n  \\quad\\text{for all }x\\in\\Delta(I).\n$$</p>\n<p>Second, the Cesaro average of realized payoffs converges to the value:\n$$\n  \\frac1n\\sum_{t=1}^n A_{i_tj_t}\n  \\longrightarrow \\operatorname{val}(A).\n$$</p>",
-  "proof_html": "<p>The two conclusions decouple along independent technical chains.</p>\n<p><strong>Frequency convergence to optimal strategies.</strong> By\n[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma]] the cumulative duality\ngap $\\mu(n) := \\max_i \\beta^i(n) - \\min_j \\alpha^j(n)$ is $o(n)$. Dividing by\n$n$ and using $\\alpha(n)/n = x_n A + O(1/n)$ and $\\beta(n)/n = A y_n + O(1/n)$,\nthe two eventual optimality inequalities follow, so the empirical frequencies\napproach $X(A) \\times Y(A)$.</p>\n<p><strong>Cesàro payoff convergence.</strong> This is a separate elementary telescoping\nargument; see [[game_theory.strategic_game.zero_sum.learning.cesaro_payoff_from_robinson]] for the\nself-contained derivation $R_n / n \\to \\operatorname{val}(A)$ from the\n$o(n)$ gap bound.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 2.7.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>, <code>references/MathFoundationsGameTheory.pdf</code>. Convergence of fictitious play in finite zero-sum games.</li>\n</ul>",
+  "proof_html": "<p>The two conclusions decouple along independent technical chains.</p>\n<p><strong>Frequency convergence to optimal strategies.</strong> By\n[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma]] the cumulative duality\ngap $\\mu(n) := \\max_i \\beta^i(n) - \\min_j \\alpha^j(n)$ is $o(n)$. Dividing by\n$n$ and using $\\alpha(n)/n = x_n A + O(1/n)$ and $\\beta(n)/n = A y_n + O(1/n)$,\nthe two eventual optimality inequalities follow, so the empirical frequencies\napproach $X(A) \\times Y(A)$.</p>\n<p><strong>Cesàro payoff convergence.</strong> This is a separate elementary telescoping\nargument; see [[game_theory.strategic_game.zero_sum.learning.cesaro_payoff_from_robinson]] for the\nself-contained derivation $R_n / n \\to \\operatorname{val}(A)$ from the\n$o(n)$ gap bound.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Thm. 2.7.2] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Convergence of fictitious play in finite zero-sum games.</li>\n</ul>",
   "deps": [
     {
       "id": "game_theory.strategic_game.zero_sum.learning.cesaro_payoff_from_robinson",
@@ -24,72 +24,6 @@
     }
   ],
   "dependents": [],
-  "lean_refs": [
-    {
-      "name": "MatrixGame.fictitious_play_convergence",
-      "display_name": "MatrixGame.fictitious_play_convergence",
-      "qualified_name": "MatrixGame.fictitious_play_convergence",
-      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence",
-      "kind": "theorem",
-      "signature": "theorem fictitious_play_convergence\n    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)\n    (hFP : IsFictitiousPlay A iSeq jSeq) :\n    (∀ ε : ℝ, 0 < ε → ∃ N : ℕ, ∀ n ≥ N,\n       (∀ y : stdSimplex ℝ J, A.value - ε ≤ A.E (empiricalFrequency iSeq n) y) ∧\n       (∀ x : stdSimplex ℝ I, A.E x (empiricalFrequency jSeq n) ≤ A.value + ε))\n    ∧ Tendsto (fun n => realisedCumPayoff A iSeq jSeq n / n) atTop (nhds A.value)",
-      "docstring": null,
-      "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L62",
-      "doc_url": null,
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null,
-      "suggestions": []
-    },
-    {
-      "name": "MatrixGame.fictitious_play_convergence_frequency",
-      "display_name": "MatrixGame.fictitious_play_convergence_frequency",
-      "qualified_name": "MatrixGame.fictitious_play_convergence_frequency",
-      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence",
-      "kind": "theorem",
-      "signature": "theorem fictitious_play_convergence_frequency\n    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)\n    (_hFP : IsFictitiousPlay A iSeq jSeq) (ε : ℝ) (_hε : 0 < ε) :\n    ∃ N : ℕ, ∀ n ≥ N,\n      (∀ y : stdSimplex ℝ J, A.value - ε ≤ A.E (empiricalFrequency iSeq n) y) ∧\n      (∀ x : stdSimplex ℝ I, A.E x (empiricalFrequency jSeq n) ≤ A.value + ε)",
-      "docstring": null,
-      "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L44",
-      "doc_url": null,
-      "has_sorry": true,
-      "status": "resolved",
-      "reason": null,
-      "suggestions": []
-    },
-    {
-      "name": "MatrixGame.fictitious_play_convergence_cesaro",
-      "display_name": "MatrixGame.fictitious_play_convergence_cesaro",
-      "qualified_name": "MatrixGame.fictitious_play_convergence_cesaro",
-      "module": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence",
-      "kind": "theorem",
-      "signature": "theorem fictitious_play_convergence_cesaro\n    (A : MatrixGame I J ℝ) (iSeq : ℕ → I) (jSeq : ℕ → J)\n    (hFP : IsFictitiousPlay A iSeq jSeq) :\n    Tendsto (fun n => realisedCumPayoff A iSeq jSeq n / n) atTop (nhds A.value)",
-      "docstring": null,
-      "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L54",
-      "doc_url": null,
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null,
-      "suggestions": []
-    }
-  ],
-  "lean_modules": [
-    {
-      "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence",
-      "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Convergence",
-      "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Convergence.lean#L1",
-      "status": "resolved",
-      "reason": null
-    }
-  ]
+  "lean_refs": [],
+  "lean_modules": []
 }

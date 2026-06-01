@@ -12,7 +12,7 @@
     "social_choice.fair_division.divisible.cut_and_choose"
   ],
   "body_html": "<h1>Cut-and-Choose Is Envy-Free at a Fair Cut</h1>\n<p><strong>Theorem.</strong> For a two-agent measure family $\\mu : \\mathrm{Fin}\\ 2 \\to\n\\mathrm{Measure}\\ I$ and a *fair* cut point $t$ for the cutter, the\ncut-and-choose allocation is envy-free.</p>\n<p>In Lean: <code>cutAndChoose_isEnvyFree</code>.</p>",
-  "proof_html": "<p>Combine the two half-results:</p>\n<ul>\n<li>The chooser never envies the cutter at <em>any</em> cut\n  ([[social_choice.fair_division.divisible.chooser_envy_free]]).</li>\n<li>The cutter does not envy the chooser <em>at a fair cut</em>\n  ([[social_choice.fair_division.divisible.cutter_envy_free_of_fair]]).</li>\n</ul>\n<p>Together these cover both directions of the envy-freeness condition\n$\\forall i, j,\\ \\mu_i(A_j) \\le \\mu_i(A_i)$ for the two agents.</p>\n<h2>Existence corollary</h2>\n<p>Because fair cut points always exist for finite non-atomic cutter measures\n([[social_choice.fair_division.divisible.fair_cut_exists]]), cut-and-choose\ngives a constructive existence proof for EF allocations on two agents\n([[social_choice.fair_division.divisible.cut_and_choose_ef_exists]]).</p>\n<h2>References</h2>\n<ul>\n<li>Steinhaus, H. (1948). \"The Problem of Fair Division\". <em>Econometrica</em>.</li>\n<li>Robertson, J. M. and Webb, W. A. (1998). <em>Cake-Cutting Algorithms</em>, Ch. 1.</li>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>.</li>\n</ul>",
+  "proof_html": "<p>Combine the two half-results:</p>\n<ul>\n<li>The chooser never envies the cutter at <em>any</em> cut\n  ([[social_choice.fair_division.divisible.chooser_envy_free]]).</li>\n<li>The cutter does not envy the chooser <em>at a fair cut</em>\n  ([[social_choice.fair_division.divisible.cutter_envy_free_of_fair]]).</li>\n</ul>\n<p>Together these cover both directions of the envy-freeness condition\n$\\forall i, j,\\ \\mu_i(A_j) \\le \\mu_i(A_i)$ for the two agents.</p>\n<h2>Existence corollary</h2>\n<p>Because fair cut points always exist for finite non-atomic cutter measures\n([[social_choice.fair_division.divisible.fair_cut_exists]]), cut-and-choose\ngives a constructive existence proof for EF allocations on two agents\n([[social_choice.fair_division.divisible.cut_and_choose_ef_exists]]).</p>\n<h2>References</h2>\n<ul>\n<li>Steinhaus, H. (1948). \"The Problem of Fair Division\". <em>Econometrica</em>.</li>\n<li>Robertson, J. M. and Webb, W. A. (1998). <em>Cake-Cutting Algorithms</em>, Ch. 1.</li>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>.</li>\n</ul>",
   "deps": [
     {
       "id": "social_choice.fair_division.divisible.chooser_envy_free",
@@ -42,9 +42,9 @@
       "signature": "theorem cutAndChoose_isEnvyFree (μ : Fin 2 → Measure I) (t : I)\n    (hfair : IsFairCutPoint μ t) :\n    IsEnvyFree (MeasureValuation μ) (cutAndChooseAlloc μ t)",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L188",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L193",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -57,9 +57,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1",
       "status": "resolved",
       "reason": null
     }

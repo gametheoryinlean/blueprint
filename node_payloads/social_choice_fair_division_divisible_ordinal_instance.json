@@ -10,7 +10,7 @@
     "social_choice.fair_division",
     "social_choice.fair_division.divisible"
   ],
-  "body_html": "<h1>Divisible Ordinal Instance</h1>\n<p>A <em>divisible ordinal instance</em> is the no-externality share model\nspecialized to cake-cutting: each agent's preference is an ordinal\npreference on cake pieces $\\mathrm{Set}\\ \\Omega$.</p>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Divisible.Instance N Ω</code>\nwith a single field <code>sharePref : N → Pref (Set Ω)</code>.</p>\n<p>Feasibility is fixed at the divisible-allocation level (a measurable\npartition of $\\Omega$, the predicate\n[[social_choice.fair_division.divisible.allocation]]). The instance's\n<code>feasible</code> member is therefore a definitional alias for <code>IsAllocation</code>.</p>\n<h2>Bridge to the generic share-instance API</h2>\n<p><code>Divisible.Instance.toShareInstance</code> views the divisible instance as a\nno-externality share instance\n([[social_choice.fair_division.share_instance]]) over the share type\n$S = \\mathrm{Set}\\ \\Omega$ and resource value $\\mathrm{Set.univ}$. This\nmakes every fair-division solution concept stated against the generic\n<code>ShareInstance</code> API ([[social_choice.fair_division.solution_concept]])\nautomatically applicable to divisible instances.</p>\n<p>The cardinal-instance and measure-instance specializations\n([[social_choice.fair_division.divisible.cardinal_instance]],\n[[social_choice.fair_division.divisible.measure_instance]]) feed into\nthe same bridge — the entire divisible track plugs into the shared\nsocial-choice infrastructure through these wrappers.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>, <code>references/AlgorithmicGameTheory.pdf</code>. Cake-cutting instances.</li>\n</ul>",
+  "body_html": "<h1>Divisible Ordinal Instance</h1>\n<p>A <em>divisible ordinal instance</em> is the no-externality share model\nspecialized to cake-cutting: each agent's preference is an ordinal\npreference on cake pieces $\\mathrm{Set}\\ \\Omega$.</p>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Divisible.Instance N Ω</code>\nwith a single field <code>sharePref : N → Pref (Set Ω)</code>.</p>\n<p>Feasibility is fixed at the divisible-allocation level (a measurable\npartition of $\\Omega$, the predicate\n[[social_choice.fair_division.divisible.allocation]]). The instance's\n<code>feasible</code> member is therefore a definitional alias for <code>IsAllocation</code>.</p>\n<h2>Bridge to the generic share-instance API</h2>\n<p><code>Divisible.Instance.toShareInstance</code> views the divisible instance as a\nno-externality share instance\n([[social_choice.fair_division.share_instance]]) over the share type\n$S = \\mathrm{Set}\\ \\Omega$ and resource value $\\mathrm{Set.univ}$. This\nmakes every fair-division solution concept stated against the generic\n<code>ShareInstance</code> API ([[social_choice.fair_division.solution_concept]])\nautomatically applicable to divisible instances.</p>\n<p>The cardinal-instance and measure-instance specializations\n([[social_choice.fair_division.divisible.cardinal_instance]],\n[[social_choice.fair_division.divisible.measure_instance]]) feed into\nthe same bridge — the entire divisible track plugs into the shared\nsocial-choice infrastructure through these wrappers.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Cake-cutting instances.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -36,9 +36,9 @@
       "signature": "structure Instance (N Ω : Type*) where",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L26",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L31",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -54,9 +54,9 @@
       "signature": "def toShareInstance {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]\n    (I : Instance N Ω) :\n    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω) where",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L40",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L45",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -69,9 +69,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Divisible.Instance",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.Instance",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1",
       "status": "resolved",
       "reason": null
     }

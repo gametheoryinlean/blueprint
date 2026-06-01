@@ -9,7 +9,7 @@
     "foundation.utility"
   ],
   "body_html": "<h1>Independence Of The VNM Axioms</h1>\n<p>The vNM axioms are logically independent: for each axiom, there is a preference\nrelation over lotteries that violates that axiom while satisfying the others.</p>",
-  "proof_html": "<p>Sketch</p>\n<p>Construct separate finite lottery preference relations. For completeness, use a\npreference that compares only identical lotteries. For transitivity, create a\ncycle. For continuity, use a lexicographic-style preference. For independence,\nuse a preference rule whose ranking changes under common mixing. Each example\nkeeps the remaining axioms valid.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Exercise 2.5] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. The vNM axioms are independent.</li>\n</ul>",
+  "proof_html": "<p>Sketch</p>\n<p>Construct separate finite lottery preference relations. For completeness, use a\npreference that compares only identical lotteries. For transitivity, create a\ncycle. For continuity, use a lexicographic-style preference. For independence,\nuse a preference rule whose ranking changes under common mixing. Each example\nkeeps the remaining axioms valid.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 2, Exercise 2.5] Maschler, Solan, and Zamir, <em>Game Theory</em>. The vNM axioms are independent.</li>\n</ul>",
   "deps": [
     {
       "id": "foundation.utility.vnm_axioms",
@@ -28,9 +28,9 @@
       "signature": "theorem VNM.axioms_independent :\n    -- ¬Complete\n    (∃ pref : Lottery ℚ (Fin 3) → Lottery ℚ (Fin 3) → Prop,\n      ¬ Completeness pref ∧ Transitivity pref ∧ Independence pref ∧ Continuity pref) ∧\n    -- ¬Transitive\n    (∃ pref : Lottery ℚ (Fin 3) → Lottery ℚ (Fin 3) → Prop,\n      ¬ Transitivity pref ∧ Completeness pref ∧ Independence pref ∧ Continuity pref) ∧\n    -- ¬Independent\n    (∃ pref : Lottery ℚ (Fin 3) → Lottery ℚ (Fin 3) → Prop,\n      ¬ Independence pref ∧ Completeness pref ∧ Transitivity pref ∧ Continuity pref) ∧\n    -- ¬Continuous\n    (∃ pref : Lottery ℚ (Fin 3) → Lottery ℚ (Fin 3) → Prop,",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/VNMAxioms.lean#L412",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/Foundation/Utility/VNMAxioms.lean#L417",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -43,9 +43,9 @@
       "name": "EconCSLib.Foundation.Utility.VNMAxioms",
       "display_name": "EconCSLib.Foundation.Utility.VNMAxioms",
       "repository_title": "EconCSLib",
-      "revision": "f90aa07b25326025daa0cfa05c3e47744724453e",
-      "short_revision": "f90aa07",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1",
+      "revision": "0af044819b5de5047a60f8cccdebe060aeb984eb",
+      "short_revision": "0af0448",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/0af044819b5de5047a60f8cccdebe060aeb984eb/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1",
       "status": "resolved",
       "reason": null
     }
