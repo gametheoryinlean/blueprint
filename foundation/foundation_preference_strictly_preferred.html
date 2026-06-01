@@ -1046,50 +1046,50 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L85"><code>StrictlyPreferred</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L85"><code>StrictlyPreferred</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">Strict preference is just `&lt;` from the preorder. [MSZ 2.5]</p>
-          <pre class="lean-signature"><code>abbrev StrictlyPreferred (a b : A) : Prop</code></pre>
+          <pre class="lean-signature"><code>abbrev StrictlyPreferred (a b : α) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L88"><code>StrictlyPreferred.asymm</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L88"><code>StrictlyPreferred.asymm</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">Strict preference is asymmetric: `a ≻ b → ¬(b ≻ a)`. [MSZ Ex 2.1(a)]</p>
-          <pre class="lean-signature"><code>theorem StrictlyPreferred.asymm {a b : A} (h : StrictlyPreferred a b) :
+          <pre class="lean-signature"><code>theorem StrictlyPreferred.asymm {a b : α} (h : StrictlyPreferred a b) :
     ¬ StrictlyPreferred b a</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L93"><code>StrictlyPreferred.trans</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L93"><code>StrictlyPreferred.trans</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">Strict preference is transitive. [MSZ Ex 2.1(a)]</p>
-          <pre class="lean-signature"><code>theorem StrictlyPreferred.trans {a b c : A}
+          <pre class="lean-signature"><code>theorem StrictlyPreferred.trans {a b c : α}
     (h₁ : StrictlyPreferred a b) (h₂ : StrictlyPreferred b c) :
     StrictlyPreferred a c</code></pre>
         </li>
@@ -1097,23 +1097,23 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L99"><code>StrictlyPreferred.irrefl</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L99"><code>StrictlyPreferred.irrefl</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">Strict preference is irreflexive. [MSZ Ex 2.1(a)]</p>
-          <pre class="lean-signature"><code>theorem StrictlyPreferred.irrefl (a : A) : ¬ StrictlyPreferred a a</code></pre>
+          <pre class="lean-signature"><code>theorem StrictlyPreferred.irrefl (a : α) : ¬ StrictlyPreferred a a</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>

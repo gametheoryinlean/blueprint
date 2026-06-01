@@ -1059,75 +1059,75 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L33"><code>GameTree.PlayerStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L33"><code>GameTree.PlayerStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>def PlayerStrategy (N U : Type*) : Type _</code></pre>
+          <pre class="lean-signature"><code>def PlayerStrategy (ι U : Type*) : Type _</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L39"><code>GameTree.profileStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L39"><code>GameTree.profileStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>def profileStrategy (σ : N → PlayerStrategy N U) : Strategy N U</code></pre>
+          <pre class="lean-signature"><code>def profileStrategy (σ : ι → PlayerStrategy ι U) : Strategy ι U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L49"><code>GameTree.profileStrategy_deviate_variant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L49"><code>GameTree.profileStrategy_deviate_variant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem profileStrategy_deviate_variant (σ : N → PlayerStrategy N U)
-    (i : N) (s&#39; : PlayerStrategy N U) :
+          <pre class="lean-signature"><code>theorem profileStrategy_deviate_variant (σ : ι → PlayerStrategy ι U)
+    (i : ι) (s&#39; : PlayerStrategy ι U) :
     IVariant i (profileStrategy σ) (profileStrategy (Function.update σ i s&#39;))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L57"><code>GameTree.profileStrategy_deviate_eq_of_variant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L57"><code>GameTree.profileStrategy_deviate_eq_of_variant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem profileStrategy_deviate_eq_of_variant (σ : N → PlayerStrategy N U)
-    (i : N) (τ : Strategy N U) (hτ : IVariant i (profileStrategy σ) τ) :
-    profileStrategy (Function.update σ i (τ : PlayerStrategy N U)) = τ</code></pre>
+          <pre class="lean-signature"><code>theorem profileStrategy_deviate_eq_of_variant (σ : ι → PlayerStrategy ι U)
+    (i : ι) (τ : Strategy ι U) (hτ : IVariant i (profileStrategy σ) τ) :
+    profileStrategy (Function.update σ i (τ : PlayerStrategy ι U)) = τ</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm</code></a>
       </p>
       
     </div>

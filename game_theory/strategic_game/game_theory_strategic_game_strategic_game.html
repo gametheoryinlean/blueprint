@@ -1046,12 +1046,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L3"><code>StrategicGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L3"><code>StrategicGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, _mdblueprint.tests.fixtures.lean.GameTheoryLib.StrategicGame.Basic
+            EconCSLib @ 4c49d89, _mdblueprint.tests.fixtures.lean.GameTheoryLib.StrategicGame.Basic
           </span>
           
           
@@ -1062,24 +1062,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Basic.lean#L83"><code>StrategicGame.welfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Basic.lean#L83"><code>StrategicGame.welfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.StrategicGame.Basic
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def welfare [Fintype N] [AddCommMonoid U]
-    (G : StrategicGame N U) (σ : G.Profile) : U</code></pre>
+          <pre class="lean-signature"><code>noncomputable def welfare [Fintype ι] [AddCommMonoid U]
+    (G : StrategicGame ι U) (σ : G.Profile) : U</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Basic</code></a>
       </p>
       
     </div>
@@ -1092,8 +1092,8 @@
 \((I, (S_i)_{i \in I}, (u_i)_{i \in I})\)
 where \(I\) is a set of players, \(S_i\) is the strategy set of player \(i\), and
 \(u_i \colon \prod_{j \in I} S_j \to U\) is the payoff function of player \(i\).</p>
-<p>In the Lean formalization, this is a structure with fields <code>strategy : N → Type*</code> and
-<code>payoff : Profile → N → U</code>, where <code>Profile = ∀ i, strategy i</code>.</p>
+<p>In the Lean formalization, this is a structure with fields <code>strategy : ι → Type*</code> and
+<code>payoff : Profile → ι → U</code>, where <code>Profile = ∀ i, strategy i</code>.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 2] Maschler, Solan, and Zamir, <em>Game Theory</em>, <code>references/GameTheory.pdf</code>. Definition of strategic-form game.</li>

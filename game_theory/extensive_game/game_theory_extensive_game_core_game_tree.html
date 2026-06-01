@@ -1046,22 +1046,22 @@
         <li class="lean-ref">
           <span class="badge lean-kind">inductive</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L48"><code>GameTree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L48"><code>GameTree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
           
-          <pre class="lean-signature"><code>inductive GameTree (N : Type*) (U : Type*) : Type _
-  | Leaf (payoff : N → U) : GameTree N U
-  | Node (mover : N) (head : GameTree N U) (tail : List (GameTree N U)) :
-      GameTree N U
+          <pre class="lean-signature"><code>inductive GameTree (ι : Type*) (U : Type*) : Type _
+  | Leaf (payoff : ι → U) : GameTree ι U
+  | Node (mover : ι) (head : GameTree ι U) (tail : List (GameTree ι U)) :
+      GameTree ι U
 namespace GameTree
-variable {N U : Type*}
+variable {ι U : Type*}
 /-- The full child list at a `Node`, as a guaranteed non-empty list. -/
 @[simp]</code></pre>
         </li>
@@ -1069,17 +1069,17 @@ variable {N U : Type*}
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L59"><code>GameTree.children</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L59"><code>GameTree.children</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
           
-          <pre class="lean-signature"><code>def children : GameTree N U → List (GameTree N U)
+          <pre class="lean-signature"><code>def children : GameTree ι U → List (GameTree ι U)
   | Leaf _ =&gt; []
   | Node _ h t =&gt; h :: t
 /-- Children of a `Node` are never empty. -/</code></pre>
@@ -1088,17 +1088,17 @@ variable {N U : Type*}
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L69"><code>GameTree.size</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L69"><code>GameTree.size</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
           <p class="lean-docstring">Structural size, used for well-founded recursion.</p>
-          <pre class="lean-signature"><code>def size : GameTree N U → ℕ
+          <pre class="lean-signature"><code>def size : GameTree ι U → ℕ
   | Leaf _ =&gt; 1
   | Node _ h t =&gt; 1 + h.size + (t.map size).sum
 /-- Size is always positive. -/</code></pre>
@@ -1107,7 +1107,7 @@ variable {N U : Type*}
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
       </p>
       
     </div>

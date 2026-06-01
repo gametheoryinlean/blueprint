@@ -1059,50 +1059,50 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L23"><code>IsNashEquilibrium</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L23"><code>IsNashEquilibrium</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.StrategicGame.NashEquilibrium
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.NashEquilibrium
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsNashEquilibrium (G : StrategicGame N U) (σ : G.Profile) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsNashEquilibrium (G : StrategicGame ι U) (σ : G.Profile) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Checker.lean#L20"><code>isNashEq</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Checker.lean#L20"><code>isNashEq</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.StrategicGame.Checker
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Checker
           </span>
           
           
           
-          <pre class="lean-signature"><code>def isNashEq [Fintype N] (G : StrategicGame N U) [∀ i, Fintype (G.strategy i)]
+          <pre class="lean-signature"><code>def isNashEq [Fintype ι] (G : StrategicGame ι U) [∀ i, Fintype (G.strategy i)]
     (σ : G.Profile) : Bool</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Checker.lean#L25"><code>isNashEq_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Checker.lean#L25"><code>isNashEq_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.StrategicGame.Checker
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Checker
           </span>
           
           
           <p class="lean-docstring">T6: The checker correctly decides Nash equilibrium (soundness and completeness).</p>
-          <pre class="lean-signature"><code>theorem isNashEq_iff [Fintype N] (G : StrategicGame N U) [∀ i, Fintype (G.strategy i)]
+          <pre class="lean-signature"><code>theorem isNashEq_iff [Fintype ι] (G : StrategicGame ι U) [∀ i, Fintype (G.strategy i)]
     (σ : G.Profile) :
     isNashEq G σ = true ↔ IsNashEquilibrium G σ</code></pre>
         </li>
@@ -1110,7 +1110,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.NashEquilibrium</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Checker.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Checker</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/NashEquilibrium.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.NashEquilibrium</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Checker.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Checker</code></a>
       </p>
       
     </div>

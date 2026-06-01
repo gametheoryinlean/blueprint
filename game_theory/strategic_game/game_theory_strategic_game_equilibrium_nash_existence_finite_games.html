@@ -1061,27 +1061,27 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Nash.lean#L286"><code>StrategicGame.exists_mixed_nash_equilibrium_finite</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Nash.lean#L286"><code>StrategicGame.exists_mixed_nash_equilibrium_finite</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.GameTheory.StrategicGame.Nash
+            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Nash
           </span>
           
           
           
           <pre class="lean-signature"><code>theorem exists_mixed_nash_equilibrium_finite
-    (G : StrategicGame N ℝ) [Fintype N] [DecidableEq N]
+    (G : StrategicGame ι ℝ) [Fintype ι] [DecidableEq ι]
     [∀ i, Fintype (G.strategy i)] [∀ i, DecidableEq (G.strategy i)]
-    [∀ i, Inhabited (G.strategy i)] [Inhabited N] :
+    [∀ i, Inhabited (G.strategy i)] [Inhabited ι] :
     ∃ σ : MixedS G, mixedNashEquilibrium G σ</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/GameTheory/StrategicGame/Nash.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Nash</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Nash.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Nash</code></a>
       </p>
       
     </div>

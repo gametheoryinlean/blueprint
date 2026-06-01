@@ -1059,17 +1059,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Examples/CostM/ReverseSpace.lean#L37"><code>ReverseSpace.naiveReverse</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/ReverseSpace.lean#L37"><code>ReverseSpace.naiveReverse</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Examples.CostM.ReverseSpace
+            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.ReverseSpace
           </span>
           
           
           
-          <pre class="lean-signature"><code>def naiveReverse {A : Type} : List A → CostM ℕ (List A)
+          <pre class="lean-signature"><code>def naiveReverse {α : Type} : List α → CostM ℕ (List α)
   | []      =&gt; pure []
   | a :: as =&gt; do
     ✓[as.length + 1] do
@@ -1081,24 +1081,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Examples/CostM/ReverseSpace.lean#L45"><code>ReverseSpace.naiveReverse_cost_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/ReverseSpace.lean#L45"><code>ReverseSpace.naiveReverse_cost_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Examples.CostM.ReverseSpace
+            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.ReverseSpace
           </span>
           
           
           <p class="lean-docstring">Cumulative `++` allocation is quadratic in input length.</p>
-          <pre class="lean-signature"><code>theorem naiveReverse_cost_le {A : Type} (l : List A) :
+          <pre class="lean-signature"><code>theorem naiveReverse_cost_le {α : Type} (l : List α) :
     (naiveReverse l).cost ≤ l.length * l.length</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Examples/CostM/ReverseSpace.lean#L1"><code>EconCSLib.Examples.CostM.ReverseSpace</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/ReverseSpace.lean#L1"><code>EconCSLib.Examples.CostM.ReverseSpace</code></a>
       </p>
       
     </div>

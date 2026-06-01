@@ -1061,59 +1061,59 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L181"><code>RepresentsPreference</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L181"><code>RepresentsPreference</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure RepresentsPreference [Preorder A] [Preorder V] (u : A → V) : Prop where</code></pre>
+          <pre class="lean-signature"><code>structure RepresentsPreference [Preorder α] [Preorder β] (u : α → β) : Prop where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L186"><code>RepresentsPreference.lt_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L186"><code>RepresentsPreference.lt_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">A utility representation preserves strict preference.</p>
-          <pre class="lean-signature"><code>theorem RepresentsPreference.lt_iff [Preorder A] [Preorder V] {u : A → V}
-    (h : RepresentsPreference u) (a b : A) :
+          <pre class="lean-signature"><code>theorem RepresentsPreference.lt_iff [Preorder α] [Preorder β] {u : α → β}
+    (h : RepresentsPreference u) (a b : α) :
     a &lt; b ↔ u a &lt; u b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L192"><code>RepresentsPreference.indifferent_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L192"><code>RepresentsPreference.indifferent_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.Foundation.Preference
+            EconCSLib @ 4c49d89, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">A utility representation preserves indifference.</p>
-          <pre class="lean-signature"><code>theorem RepresentsPreference.indifferent_iff [Preorder A] [Preorder V] {u : A → V}
-    (h : RepresentsPreference u) (a b : A) :
+          <pre class="lean-signature"><code>theorem RepresentsPreference.indifferent_iff [Preorder α] [Preorder β] {u : α → β}
+    (h : RepresentsPreference u) (a b : α) :
     Indifferent a b ↔ Indifferent (u a) (u b)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>

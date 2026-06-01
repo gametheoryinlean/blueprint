@@ -1059,12 +1059,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L67"><code>BayesianSingleItemAuction.virtualValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L67"><code>BayesianSingleItemAuction.virtualValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ 4c49d89, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1075,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L71"><code>BayesianSingleItemAuction.IsRegular</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L71"><code>BayesianSingleItemAuction.IsRegular</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ 4c49d89, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1091,28 +1091,28 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L82"><code>BayesianSingleItemAuction.IsReserveThreshold</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L82"><code>BayesianSingleItemAuction.IsReserveThreshold</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ 4c49d89, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">A reserve threshold separating nonpositive and nonnegative virtual values.</p>
-          <pre class="lean-signature"><code>def IsReserveThreshold (A : BayesianSingleItemAuction I) (i : I) (reserve : ℝ) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsReserveThreshold (A : BayesianSingleItemAuction I) (i : I) (ρ : ℝ) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L76"><code>BayesianSingleItemAuction.measurable_virtualValue_of_isRegular</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L76"><code>BayesianSingleItemAuction.measurable_virtualValue_of_isRegular</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ 4c49d89, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1125,26 +1125,26 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L101"><code>BayesianSingleItemAuction.isReserveThreshold_of_isRegular_of_virtualValue_eq_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L101"><code>BayesianSingleItemAuction.isReserveThreshold_of_isRegular_of_virtualValue_eq_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ b6e8f90, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ 4c49d89, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">A zero of a regular virtual value is a reserve threshold.</p>
           <pre class="lean-signature"><code>theorem isReserveThreshold_of_isRegular_of_virtualValue_eq_zero
-    (A : BayesianSingleItemAuction I) (hA : A.IsRegular) {i : I} {reserve : ℝ}
-    (hzero : A.virtualValue i reserve = 0) :
-    A.IsReserveThreshold i reserve</code></pre>
+    (A : BayesianSingleItemAuction I) (hA : A.IsRegular) {i : I} {ρ : ℝ}
+    (hzero : A.virtualValue i ρ = 0) :
+    A.IsReserveThreshold i ρ</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/b6e8f906e6aabc3bdb98385abdb724b08526c772/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code></a>
       </p>
       
     </div>
