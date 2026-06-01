@@ -1059,51 +1059,51 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Utility/AffineTransform.lean#L34"><code>IsPositiveAffineOf</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/AffineTransform.lean#L34"><code>IsPositiveAffineOf</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Utility.AffineTransform
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Utility.AffineTransform
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsPositiveAffineOf (u v : α → 𝕜) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsPositiveAffineOf (u v : X → 𝕜) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Utility/AffineTransform.lean#L50"><code>IsPositiveAffineOf.preserves_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/AffineTransform.lean#L50"><code>IsPositiveAffineOf.preserves_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Utility.AffineTransform
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Utility.AffineTransform
           </span>
           
           
           <p class="lean-docstring">A positive affine transform preserves the order: `u x ≤ u y ↔ v x ≤ v y`.</p>
-          <pre class="lean-signature"><code>theorem IsPositiveAffineOf.preserves_le {u v : α → 𝕜}
-    (h : IsPositiveAffineOf u v) (x y : α) :
+          <pre class="lean-signature"><code>theorem IsPositiveAffineOf.preserves_le {u v : X → 𝕜}
+    (h : IsPositiveAffineOf u v) (x y : X) :
     u x ≤ u y ↔ v x ≤ v y</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Utility/AffineTransform.lean#L65"><code>IsPositiveAffineOf.preserves_representation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/AffineTransform.lean#L65"><code>IsPositiveAffineOf.preserves_representation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Utility.AffineTransform
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Utility.AffineTransform
           </span>
           
           
           <p class="lean-docstring">If `u` represents a preference, so does any positive affine transform. [MSZ 2.22]</p>
-          <pre class="lean-signature"><code>theorem IsPositiveAffineOf.preserves_representation [Preorder α] {u v : α → 𝕜}
+          <pre class="lean-signature"><code>theorem IsPositiveAffineOf.preserves_representation [Preorder X] {u v : X → 𝕜}
     (h : IsPositiveAffineOf u v) (hrep : RepresentsPreference u) :
     RepresentsPreference v where</code></pre>
         </li>
@@ -1111,24 +1111,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Utility/AffineTransform.lean#L74"><code>IsPositiveAffineOf.symm</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/AffineTransform.lean#L74"><code>IsPositiveAffineOf.symm</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Utility.AffineTransform
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Utility.AffineTransform
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem IsPositiveAffineOf.symm {u v : α → 𝕜}
+          <pre class="lean-signature"><code>theorem IsPositiveAffineOf.symm {u v : X → 𝕜}
     (h : IsPositiveAffineOf u v) : IsPositiveAffineOf v u</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Utility/AffineTransform.lean#L1"><code>EconCSLib.Foundation.Utility.AffineTransform</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Utility/AffineTransform.lean#L1"><code>EconCSLib.Foundation.Utility.AffineTransform</code></a>
       </p>
       
     </div>

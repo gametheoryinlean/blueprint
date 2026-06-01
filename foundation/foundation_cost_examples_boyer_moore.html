@@ -1061,17 +1061,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/BoyerMoore.lean#L49"><code>BoyerMoore.majority</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/BoyerMoore.lean#L49"><code>BoyerMoore.majority</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ f90aa07, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
           
-          <pre class="lean-signature"><code>def majority : List α → CostM Cells (Option α)
+          <pre class="lean-signature"><code>def majority : List A → CostM Cells (Option A)
   | []      =&gt; pure none
   | x :: xs =&gt; do
     ✓[Cells.alloc 2] do
@@ -1083,40 +1083,40 @@ where</code></pre>
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/BoyerMoore.lean#L66"><code>BoyerMoore.loop_cost</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/BoyerMoore.lean#L66"><code>BoyerMoore.loop_cost</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ f90aa07, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
           <p class="lean-docstring">The loop has zero cost: it overwrites the two slots without allocating.</p>
-          <pre class="lean-signature"><code>theorem loop_cost (cand : α) (cnt : ℕ) (xs : List α) :
+          <pre class="lean-signature"><code>theorem loop_cost (cand : A) (cnt : ℕ) (xs : List A) :
     (majority.loop cand cnt xs).cost = 0</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/BoyerMoore.lean#L79"><code>BoyerMoore.majority_peak_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/BoyerMoore.lean#L79"><code>BoyerMoore.majority_peak_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ f90aa07, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem majority_peak_le (xs : List α) : (majority xs).cost.peak ≤ 2</code></pre>
+          <pre class="lean-signature"><code>theorem majority_peak_le (xs : List A) : (majority xs).cost.peak ≤ 2</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/BoyerMoore.lean#L1"><code>EconCSLib.Examples.CostM.BoyerMoore</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/BoyerMoore.lean#L1"><code>EconCSLib.Examples.CostM.BoyerMoore</code></a>
       </p>
       
     </div>

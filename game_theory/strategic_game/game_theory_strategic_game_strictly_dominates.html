@@ -1059,50 +1059,50 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L28"><code>StrictlyDominates</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L28"><code>StrictlyDominates</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Dominance
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.Dominance
           </span>
           
           
           <p class="lean-docstring">Strategy `s` strictly dominates strategy `s&#39;` for player `i`.</p>
-          <pre class="lean-signature"><code>def StrictlyDominates (G : StrategicGame ι U) (i : ι) (s s&#39; : G.strategy i) : Prop</code></pre>
+          <pre class="lean-signature"><code>def StrictlyDominates (G : StrategicGame N U) (i : N) (s s&#39; : G.strategy i) : Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L40"><code>StrictlyDominates.weakly</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L40"><code>StrictlyDominates.weakly</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Dominance
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.Dominance
           </span>
           
           
           <p class="lean-docstring">Strict dominance implies weak dominance.</p>
-          <pre class="lean-signature"><code>theorem StrictlyDominates.weakly {G : StrategicGame ι U} {i : ι} {s s&#39; : G.strategy i}
+          <pre class="lean-signature"><code>theorem StrictlyDominates.weakly {G : StrategicGame N U} {i : N} {s s&#39; : G.strategy i}
     (h : StrictlyDominates G i s s&#39;) : WeaklyDominates G i s s&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L45"><code>IsStrictlyDominant.isWeaklyDominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L45"><code>IsStrictlyDominant.isWeaklyDominant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.StrategicGame.Dominance
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.StrategicGame.Dominance
           </span>
           
           
           <p class="lean-docstring">A strictly dominant strategy is weakly dominant.</p>
-          <pre class="lean-signature"><code>theorem IsStrictlyDominant.isWeaklyDominant {G : StrategicGame ι U} {i : ι} {s : G.strategy i}
+          <pre class="lean-signature"><code>theorem IsStrictlyDominant.isWeaklyDominant {G : StrategicGame N U} {i : N} {s : G.strategy i}
     [DecidableEq (G.strategy i)]
     (h : IsStrictlyDominant G i s) : IsWeaklyDominant G i s</code></pre>
         </li>
@@ -1110,7 +1110,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Dominance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Dominance</code></a>
       </p>
       
     </div>

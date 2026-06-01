@@ -1059,38 +1059,38 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L30"><code>ExtensiveGame.subgameAt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L30"><code>ExtensiveGame.subgameAt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.Subgame
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.Subgame
           </span>
           
           
           <p class="lean-docstring">The subgame starting at state `s`: same arena, different starting point.</p>
-          <pre class="lean-signature"><code>def subgameAt (G : ExtensiveGame ι U) (s : G.State) : ExtensiveGame ι U</code></pre>
+          <pre class="lean-signature"><code>def subgameAt (G : ExtensiveGame N U) (s : G.State) : ExtensiveGame N U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">inductive</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L119"><code>GameTree.Subtree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L119"><code>GameTree.Subtree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTree
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.GameTree
           </span>
           
           
           <p class="lean-docstring">`Subtree s g` — `s` occurs as a subtree of `g`.</p>
-          <pre class="lean-signature"><code>inductive Subtree : GameTree ι U → GameTree ι U → Prop
-  | refl (g : GameTree ι U) : Subtree g g
-  | inHead (s : GameTree ι U) (m : ι) (h : GameTree ι U) (t : List (GameTree ι U))
+          <pre class="lean-signature"><code>inductive Subtree : GameTree N U → GameTree N U → Prop
+  | refl (g : GameTree N U) : Subtree g g
+  | inHead (s : GameTree N U) (m : N) (h : GameTree N U) (t : List (GameTree N U))
       (hs : Subtree s h) : Subtree s (Node m h t)
-  | inTail (s : GameTree ι U) (m : ι) (h : GameTree ι U) (t : List (GameTree ι U))
-      {c : GameTree ι U} (hmem : c ∈ t) (hs : Subtree s c) :
+  | inTail (s : GameTree N U) (m : N) (h : GameTree N U) (t : List (GameTree N U))
+      {c : GameTree N U} (hmem : c ∈ t) (hs : Subtree s c) :
       Subtree s (Node m h t)
 /-- Every tree is a subtree of itself. -/</code></pre>
         </li>
@@ -1098,7 +1098,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Subgame</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Subgame</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTree</code></a>
       </p>
       
     </div>

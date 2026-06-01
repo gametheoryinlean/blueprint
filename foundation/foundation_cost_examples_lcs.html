@@ -1061,17 +1061,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/LCS.lean#L57"><code>LCS.lcs</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/LCS.lean#L57"><code>LCS.lcs</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ f90aa07, EconCSLib.Examples.CostM.LCS
           </span>
           
           
           
-          <pre class="lean-signature"><code>def lcs : List α → List α → CostM (Visited (ℕ × ℕ)) ℕ
+          <pre class="lean-signature"><code>def lcs : List A → List A → CostM (Visited (ℕ × ℕ)) ℕ
   | [],      ys      =&gt; do
     CostM.tick (Visited.singleton (0, ys.length))
     pure 0
@@ -1088,17 +1088,17 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/LCS.lean#L85"><code>LCS.lcs_cost_subset</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/LCS.lean#L85"><code>LCS.lcs_cost_subset</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ f90aa07, EconCSLib.Examples.CostM.LCS
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem lcs_cost_subset (xs : List α) : ∀ (ys : List α),
+          <pre class="lean-signature"><code>theorem lcs_cost_subset (xs : List A) : ∀ (ys : List A),
     (lcs xs ys).cost.toFinset ⊆
       Finset.range (xs.length + 1) ×ˢ Finset.range (ys.length + 1)</code></pre>
         </li>
@@ -1106,24 +1106,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/LCS.lean#L126"><code>LCS.lcs_cost_card_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/LCS.lean#L126"><code>LCS.lcs_cost_card_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ f90aa07, EconCSLib.Examples.CostM.LCS
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem lcs_cost_card_le (xs ys : List α) :
+          <pre class="lean-signature"><code>theorem lcs_cost_card_le (xs ys : List A) :
     (lcs xs ys).cost.toFinset.card ≤ (xs.length + 1) * (ys.length + 1)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Examples/CostM/LCS.lean#L1"><code>EconCSLib.Examples.CostM.LCS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Examples/CostM/LCS.lean#L1"><code>EconCSLib.Examples.CostM.LCS</code></a>
       </p>
       
     </div>

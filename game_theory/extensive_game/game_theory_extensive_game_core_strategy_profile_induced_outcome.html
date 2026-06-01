@@ -1046,67 +1046,67 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L25"><code>ExtensiveGame.StrategyProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L25"><code>ExtensiveGame.StrategyProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.Strategy
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.Strategy
           </span>
           
           
           <p class="lean-docstring">A strategy profile: a strategy for each player.</p>
-          <pre class="lean-signature"><code>def StrategyProfile (G : ExtensiveGame ι U)</code></pre>
+          <pre class="lean-signature"><code>def StrategyProfile (G : ExtensiveGame N U)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L30"><code>ExtensiveGame.StrategyProfile.actionAt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L30"><code>ExtensiveGame.StrategyProfile.actionAt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.Strategy
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.Strategy
           </span>
           
           
           
-          <pre class="lean-signature"><code>def StrategyProfile.actionAt [DecidableEq ι] {G : ExtensiveGame ι U}
+          <pre class="lean-signature"><code>def StrategyProfile.actionAt [DecidableEq N] {G : ExtensiveGame N U}
     (σ : StrategyProfile G) (s : G.State) :
-    Option (Σ i : ι, G.Action s)</code></pre>
+    Option (Σ i : N, G.Action s)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Play.lean#L58"><code>ExtensiveGame.finalPayoff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Play.lean#L58"><code>ExtensiveGame.finalPayoff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.Play
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.Play
           </span>
           
           
           <p class="lean-docstring">Payoff at the final state for player `i`.</p>
-          <pre class="lean-signature"><code>def finalPayoff (choose : (s : G.State) → G.Action s) (fuel : ℕ) (i : ι) : U</code></pre>
+          <pre class="lean-signature"><code>def finalPayoff (choose : (s : G.State) → G.Action s) (fuel : ℕ) (i : N) : U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L68"><code>GameTree.outcome</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L68"><code>GameTree.outcome</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def outcome (σ : Strategy ι U) : GameTree ι U → (ι → U)
+          <pre class="lean-signature"><code>noncomputable def outcome (σ : Strategy N U) : GameTree N U → (N → U)
   | Leaf p =&gt; p
   | Node m h t =&gt; outcome σ (σ m h t).val
 termination_by g =&gt; g.size
@@ -1117,7 +1117,7 @@ decreasing_by
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Strategy</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/Play.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Play</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Strategy</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/Play.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Play</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE</code></a>
       </p>
       
     </div>

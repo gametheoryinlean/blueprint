@@ -1046,60 +1046,60 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L136"><code>CostM</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L136"><code>CostM</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure CostM (C : Type*) (α : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure CostM (C : Type*) (A : Type*) where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L148"><code>CostM.pure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L148"><code>CostM.pure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
           <p class="lean-docstring">Lift a pure value at zero cost.</p>
-          <pre class="lean-signature"><code>protected def pure [Zero C] (a : α) : CostM C α</code></pre>
+          <pre class="lean-signature"><code>protected def pure [Zero C] (a : A) : CostM C A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L153"><code>CostM.bind</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L153"><code>CostM.bind</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
           <p class="lean-docstring">Sequential composition. The cost of `m &gt;&gt;= f` is `m.cost + (f m.ret).cost`.</p>
-          <pre class="lean-signature"><code>protected def bind [Add C] (m : CostM C α) (f : α → CostM C β) : CostM C β</code></pre>
+          <pre class="lean-signature"><code>protected def bind [Add C] (m : CostM C A) (f : A → CostM C B) : CostM C B</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L228"><code>CostM.tick</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L228"><code>CostM.tick</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
@@ -1110,12 +1110,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L171"><code>CostM.instMonad</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L171"><code>CostM.instMonad</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
@@ -1126,12 +1126,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L218"><code>CostM.instLawfulMonad</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L218"><code>CostM.instLawfulMonad</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
@@ -1142,12 +1142,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L316"><code>CostM.Bounded</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L316"><code>CostM.Bounded</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
@@ -1159,12 +1159,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L321"><code>CostM.IsPolyBounded</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L321"><code>CostM.IsPolyBounded</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.CostM
+            EconCSLib @ f90aa07, EconCSLib.Foundation.CostM
           </span>
           
           
@@ -1176,7 +1176,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/CostM.lean#L1"><code>EconCSLib.Foundation.CostM</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/CostM.lean#L1"><code>EconCSLib.Foundation.CostM</code></a>
       </p>
       
     </div>

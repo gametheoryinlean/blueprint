@@ -1046,91 +1046,91 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Profile.lean#L18"><code>Profile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Profile.lean#L18"><code>Profile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Profile
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Profile
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev Profile (ι : Type*) (S : ι → Type*)</code></pre>
+          <pre class="lean-signature"><code>abbrev Profile (N : Type*) (S : N → Type*)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Profile.lean#L22"><code>deviate</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Profile.lean#L22"><code>deviate</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Profile
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Profile
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev deviate {ι : Type*} {S : ι → Type*} [DecidableEq ι]
-    (σ : Profile ι S) (i : ι) (s&#39; : S i) : Profile ι S</code></pre>
+          <pre class="lean-signature"><code>abbrev deviate {N : Type*} {S : N → Type*} [DecidableEq N]
+    (σ : Profile N S) (i : N) (s&#39; : S i) : Profile N S</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Profile.lean#L35"><code>Profile.deviate_self</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Profile.lean#L35"><code>Profile.deviate_self</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Profile
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Profile
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem deviate_self (σ : Profile ι S) (i : ι) :
+          <pre class="lean-signature"><code>theorem deviate_self (σ : Profile N S) (i : N) :
     deviate σ i (σ i) = σ</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Profile.lean#L41"><code>Profile.deviate_same</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Profile.lean#L41"><code>Profile.deviate_same</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Profile
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Profile
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem deviate_same (σ : Profile ι S) (i : ι) (s&#39; : S i) :
+          <pre class="lean-signature"><code>theorem deviate_same (σ : Profile N S) (i : N) (s&#39; : S i) :
     deviate σ i s&#39; i = s&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Profile.lean#L47"><code>Profile.deviate_of_ne</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Profile.lean#L47"><code>Profile.deviate_of_ne</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.Foundation.Profile
+            EconCSLib @ f90aa07, EconCSLib.Foundation.Profile
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem deviate_of_ne (σ : Profile ι S) (i : ι) (s&#39; : S i) {j : ι} (h : j ≠ i) :
+          <pre class="lean-signature"><code>theorem deviate_of_ne (σ : Profile N S) (i : N) (s&#39; : S i) {j : N} (h : j ≠ i) :
     deviate σ i s&#39; j = σ j</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/Foundation/Profile.lean#L1"><code>EconCSLib.Foundation.Profile</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/Foundation/Profile.lean#L1"><code>EconCSLib.Foundation.Profile</code></a>
       </p>
       
     </div>
@@ -1139,7 +1139,7 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Standalone Profile and Unilateral Deviation</h1>
-<p>For an arbitrary index type <code>ι</code> and family of strategy types <code>S : ι → Type*</code>,
+<p>For an arbitrary index type <code>N</code> and family of strategy types <code>S : N → Type*</code>,
 a <em>strategy profile</em> is a dependent function
 $$
   \sigma : \prod_{i : \iota} S(i).

@@ -1061,65 +1061,65 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L33"><code>GameTree.PlayerStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L33"><code>GameTree.PlayerStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>def PlayerStrategy (ι U : Type*) : Type _</code></pre>
+          <pre class="lean-signature"><code>def PlayerStrategy (N U : Type*) : Type _</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L39"><code>GameTree.profileStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L39"><code>GameTree.profileStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>def profileStrategy (σ : ι → PlayerStrategy ι U) : Strategy ι U</code></pre>
+          <pre class="lean-signature"><code>def profileStrategy (σ : N → PlayerStrategy N U) : Strategy N U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L43"><code>GameTree.toStrategicGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L43"><code>GameTree.toStrategicGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           <p class="lean-docstring">The strategic-form extraction of a finite perfect-information tree.</p>
-          <pre class="lean-signature"><code>noncomputable def toStrategicGame (g : GameTree ι U) : StrategicGame ι U where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def toStrategicGame (g : GameTree N U) : StrategicGame N U where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L71"><code>GameTree.toStrategicGame_nash_iff_isNashAt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L71"><code>GameTree.toStrategicGame_nash_iff_isNashAt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 4c49d89, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
+            EconCSLib @ f90aa07, EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem toStrategicGame_nash_iff_isNashAt (g : GameTree ι U)
+          <pre class="lean-signature"><code>theorem toStrategicGame_nash_iff_isNashAt (g : GameTree N U)
     (σ : (toStrategicGame g).Profile) :
     _root_.IsNashEquilibrium (toStrategicGame g) σ ↔ IsNashAt (profileStrategy σ) g</code></pre>
         </li>
@@ -1127,7 +1127,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/4c49d89595961040e1c9ead965dd276d93ee0a79/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/f90aa07b25326025daa0cfa05c3e47744724453e/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeStrategicForm</code></a>
       </p>
       
     </div>
