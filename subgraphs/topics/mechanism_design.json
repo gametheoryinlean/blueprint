@@ -4,22 +4,22 @@
     "title": "Mechanism Design",
     "href": "mechanism_design/index.html",
     "parent": null,
-    "node_count": 49,
-    "descendant_node_count": 49
+    "node_count": 53,
+    "descendant_node_count": 53
   },
   "counts": {
-    "internal_nodes": 49,
-    "inlined_nodes": 49,
-    "descendant_nodes": 49,
+    "internal_nodes": 53,
+    "inlined_nodes": 53,
+    "descendant_nodes": 53,
     "child_topics": 0,
     "inlined_child_topics": 6,
-    "non_proof_plan_nodes": 48,
+    "non_proof_plan_nodes": 52,
     "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 1,
-    "visible_nodes_without_proof_plans": 51,
-    "visible_nodes_with_selected_proof_plans": 51
+    "visible_nodes_without_proof_plans": 55,
+    "visible_nodes_with_selected_proof_plans": 55
   },
   "nodes": [
     {
@@ -189,6 +189,38 @@
       "status": "proved",
       "href": "mechanism_design/mechanism_design_auction_knapsack_welfare_maximizing_mechanism.html",
       "payload": "node_payloads/mechanism_design_auction_knapsack_welfare_maximizing_mechanism.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.dsic",
+      "title": "Truthful Bidding Is Dominant in the Online Auction",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_dsic.html",
+      "payload": "node_payloads/mechanism_design_auction_online_dsic.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.no_constant_competitive",
+      "title": "No Deterministic Constant Competitive Ratio",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_no_constant_competitive.html",
+      "payload": "node_payloads/mechanism_design_auction_online_no_constant_competitive.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "title": "Secretary Threshold Rule Is 1/4-Competitive",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_secretary_quarter_competitive.html",
+      "payload": "node_payloads/mechanism_design_auction_online_secretary_quarter_competitive.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.single_item_auction",
+      "title": "Online Single-Item (Posted-Price) Auction",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_single_item_auction.html",
+      "payload": "node_payloads/mechanism_design_auction_online_single_item_auction.json"
     },
     {
       "id": "mechanism_design.basic.direct_mechanism_interface",
@@ -669,6 +701,41 @@
       "kind": "uses"
     },
     {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.basic.dsic_predicate",
+      "to": "mechanism_design.auction.online.dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.no_constant_competitive",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.no_constant_competitive",
+      "to": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.formats",
+      "to": "mechanism_design.auction.online.single_item_auction",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "to": "mechanism_design.auction.online.single_item_auction",
+      "kind": "uses"
+    },
+    {
       "from": "mechanism_design.basic.induced_strategic_game",
       "to": "mechanism_design.basic.dsic_predicate",
       "kind": "uses"
@@ -969,6 +1036,13 @@
     },
     {
       "from": "topic:game_theory.strategic_game",
+      "to": "mechanism_design.auction.online.dsic",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:game_theory.strategic_game",
       "to": "mechanism_design.basic.direct_mechanism_interface",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
@@ -1032,7 +1106,7 @@
       "id": "auction",
       "title": "auction",
       "href": "keywords/auction.html",
-      "count": 21
+      "count": 25
     },
     {
       "id": "bayes-nash",
@@ -1101,6 +1175,12 @@
       "count": 2
     },
     {
+      "id": "competitive-ratio",
+      "title": "competitive-ratio",
+      "href": "keywords/competitive-ratio.html",
+      "count": 2
+    },
+    {
       "id": "counterexample",
       "title": "counterexample",
       "href": "keywords/counterexample.html",
@@ -1122,7 +1202,7 @@
       "id": "dsic",
       "title": "dsic",
       "href": "keywords/dsic.html",
-      "count": 9
+      "count": 10
     },
     {
       "id": "dutch-auction",
@@ -1171,6 +1251,12 @@
       "title": "first-price",
       "href": "keywords/first-price.html",
       "count": 4
+    },
+    {
+      "id": "impossibility",
+      "title": "impossibility",
+      "href": "keywords/impossibility.html",
+      "count": 1
     },
     {
       "id": "incentive-compatibility",
@@ -1251,6 +1337,12 @@
       "count": 1
     },
     {
+      "id": "online-algorithm",
+      "title": "online-algorithm",
+      "href": "keywords/online-algorithm.html",
+      "count": 4
+    },
+    {
       "id": "optimal-auction",
       "title": "optimal-auction",
       "href": "keywords/optimal-auction.html",
@@ -1269,6 +1361,12 @@
       "count": 1
     },
     {
+      "id": "posted-price",
+      "title": "posted-price",
+      "href": "keywords/posted-price.html",
+      "count": 3
+    },
+    {
       "id": "provenance",
       "title": "provenance",
       "href": "keywords/provenance.html",
@@ -1278,6 +1376,12 @@
       "id": "quasi-linear-utility",
       "title": "quasi-linear-utility",
       "href": "keywords/quasi-linear-utility.html",
+      "count": 1
+    },
+    {
+      "id": "random-order",
+      "title": "random-order",
+      "href": "keywords/random-order.html",
       "count": 1
     },
     {
@@ -1335,6 +1439,12 @@
       "count": 1
     },
     {
+      "id": "secretary",
+      "title": "secretary",
+      "href": "keywords/secretary.html",
+      "count": 1
+    },
+    {
       "id": "selling-problem",
       "title": "selling-problem",
       "href": "keywords/selling-problem.html",
@@ -1344,7 +1454,7 @@
       "id": "single-item",
       "title": "single-item",
       "href": "keywords/single-item.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "single-parameter",
@@ -1422,7 +1532,7 @@
       "id": "weakly-dominant",
       "title": "weakly-dominant",
       "href": "keywords/weakly-dominant.html",
-      "count": 2
+      "count": 3
     },
     {
       "id": "welfare-without",

@@ -1,0 +1,212 @@
+{
+  "id": "mechanism_design.auction.online.single_item_auction",
+  "title": "Online Single-Item (Posted-Price) Auction",
+  "kind": "definition",
+  "status": "staged",
+  "href": "mechanism_design/mechanism_design_auction_online_single_item_auction.html",
+  "primary_topic": "mechanism_design",
+  "topics": [
+    "mechanism_design",
+    "mechanism_design.auction",
+    "mechanism_design.auction.online"
+  ],
+  "body_html": "<h1>Online Single-Item (Posted-Price) Auction</h1>\n<p>The <strong>online single-item auction</strong> sells one indivisible good to bidders\nwho arrive one at a time. While the item is unsold, the auctioneer posts a\ntake-it-or-leave-it price that may depend <strong>only on the bids already seen</strong>;\nthe current bidder either accepts (and the auction ends) or departs forever.\nThis is the running example of Roughgarden's <em>Twenty Lectures</em>, Problem 2.1.</p>\n<p>The numeric type $F$ is any linearly ordered field; bids, posted prices,\nvaluations, and utilities all live in $F$.</p>\n<h2>Model</h2>\n<p>A run is driven by the generic online-algorithm framework\n<code>Online.OnlineAlgorithm Input State Output</code>, whose single field\n<code>step : State → Input → State × Output</code> consumes one input and emits the\nnext state together with an optional output. The \"no lookahead\" discipline\nis encoded in the <strong>state</strong>, not by an external promise: the auction state</p>\n<p>$$\n\\mathrm{AuctionState}\\,F \\;=\\; \\mathsf{unsold}\\,(\\text{history} : \\mathrm{List}\\,F)\n\\;\\mid\\; \\mathsf{sold}\\,(\\text{winner} : \\mathbb{N})\\,(\\text{price} : F)\n$$</p>\n<p>carries in the <code>unsold</code> case exactly the list of previously rejected bids —\nthe only thing the pricing rule is allowed to read.</p>\n<p>A <code>SingleItemAuction F</code> is then a single datum: a pricing rule\n<code>price : List F → F</code> mapping the rejection history to the next posted price.\nIts embedding into the framework is the field-free definition</p>\n<p><code>A.online : OnlineAlgorithm F (AuctionState F) F\n  init := .unsold []\n  step\n    | .unsold h, some b =&gt; let p := A.price h;\n                           if p ≤ b then (.sold h.length p, some p)\n                           else (.unsold (h ++ [b]), none)\n    | .unsold h, none   =&gt; (.unsold h, none)\n    | .sold w p, _      =&gt; (.sold w p, none)</code></p>\n<p>The current bidder's $0$-indexed position equals <code>history.length</code>. The\nwinning rule is the weak inequality $p \\le b$: a bidder clears the price iff\ntheir bid is at least the posted price. <code>A.run bids</code> extracts the realised\nsale price (<code>some p</code> if some bidder cleared, <code>none</code> if all were rejected)\nby folding <code>A.online</code> over the bid list.</p>\n<h2>Welfare and utility</h2>\n<p>For game-theoretic statements the $n$ bidders are indexed by\n$\\mathrm{Fin}\\,n$, with a valuation profile $v : \\mathrm{Fin}\\,n \\to F$ and a\nbid profile $b : \\mathrm{Fin}\\,n \\to F$ presented in arrival order.</p>\n<ul>\n<li><code>A.welfare v b</code> is the <strong>social welfare</strong>: the valuation $v_j$ of whichever\n  bidder $j$ first clears the posted price, or $0$ if every bidder is\n  rejected. It is defined by a direct two-argument recursion <code>welfareFrom</code>\n  over the <code>(vᵢ, bᵢ)</code> stream (carrying the rejection history separately) so\n  that small concrete profiles reduce cleanly under <code>simp</code> — this is what\n  makes the adversarial and secretary analyses tractable.</li>\n<li><code>A.utility v b i</code> is bidder $i$'s quasi-linear payoff $v_i - p$ when $i$\n  wins at price $p$, and $0$ otherwise. It factors through the state reached\n  <em>before</em> bidder $i$ is processed, isolating $i$'s local view from the\n  global trajectory.</li>\n</ul>\n<h2>Why this shape</h2>\n<p>Keeping the entire embedding in the one <code>A.online</code> definition means the\nauction inherits the framework's <code>run</code>, <code>runStatus</code>, and generic\n<code>run_cons_*</code> recursion lemmas directly, with no duplicated step logic. The\ntwo indexing conventions coexist on purpose: <code>List F</code> is the natural type\nfor the <em>streaming</em> input, while $\\mathrm{Fin}\\,n \\to F$ is the natural type\nfor the <em>game-theoretic</em> layer (fixed agents, single-bidder deviations via\n<code>Function.update</code>, random arrival via <code>Equiv.Perm (Fin n)</code>); the two are\nbridged by <code>List.ofFn</code>.</p>\n<p>Concrete instantiations fix the pricing rule and feed the three results of\nProblem 2.1: truthfulness ([[mechanism_design.auction.online.dsic]]), the\ndeterministic impossibility\n([[mechanism_design.auction.online.no_constant_competitive]]), and the\nsecretary guarantee\n([[mechanism_design.auction.online.secretary_quarter_competitive]]).</p>\n<h2>References</h2>\n<ul>\n<li>[Roughgarden 2016, Lecture 2, Problem 2.1] Tim Roughgarden, <em>Twenty\n  Lectures on Algorithmic Game Theory</em>, Cambridge University Press. Online\n  posted-price single-item auction and its analysis.</li>\n<li>[AGT, Chapter 1, Section 1.3.2] Nisan, Roughgarden, Tardos, and Vazirani,\n  <em>Algorithmic Game Theory</em>. Sealed-bid single-item auctions as the basic\n  algorithmic game theory example.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [
+    {
+      "id": "mechanism_design.auction.basic.formats",
+      "title": "Basic Auction Formats",
+      "href": "mechanism_design/mechanism_design_auction_basic_formats.html"
+    },
+    {
+      "id": "mechanism_design.transfer.mechanisms_with_transfers",
+      "title": "Mechanisms With Transfers",
+      "href": "mechanism_design/mechanism_design_transfer_mechanisms_with_transfers.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.auction.online.dsic",
+      "title": "Truthful Bidding Is Dominant in the Online Auction",
+      "href": "mechanism_design/mechanism_design_auction_online_dsic.html"
+    },
+    {
+      "id": "mechanism_design.auction.online.no_constant_competitive",
+      "title": "No Deterministic Constant Competitive Ratio",
+      "href": "mechanism_design/mechanism_design_auction_online_no_constant_competitive.html"
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "title": "Secretary Threshold Rule Is 1/4-Competitive",
+      "href": "mechanism_design/mechanism_design_auction_online_secretary_quarter_competitive.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Online.OnlineAlgorithm",
+      "display_name": "Online.OnlineAlgorithm",
+      "qualified_name": "Online.OnlineAlgorithm",
+      "module": "EconCSLib.Algorithm.Online",
+      "kind": "structure",
+      "signature": "structure OnlineAlgorithm (Input State Output : Type*) where",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Algorithm/Online.lean#L88",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.OnlineAlgorithm.run",
+      "display_name": "Online.OnlineAlgorithm.run",
+      "qualified_name": "Online.OnlineAlgorithm.run",
+      "module": "EconCSLib.Algorithm.Online",
+      "kind": "def",
+      "signature": "def run (alg : OnlineAlgorithm α σ β) : σ → List α → σ × Option β\n  | s, []      => alg.step s none\n  | s, r :: rs =>\n      match alg.step s (some r) with\n      | (s', some o) => (s', some o)\n      | (s', none)   => alg.run s' rs\n/-- On no requests, `run` is exactly the end-of-input step. -/\n@[simp] theorem run_nil (alg : OnlineAlgorithm α σ β) (s : σ) :\n    alg.run s [] = alg.step s none",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Algorithm/Online.lean#L107",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.Auction.AuctionState",
+      "display_name": "Online.Auction.AuctionState",
+      "qualified_name": "Online.Auction.AuctionState",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "inductive",
+      "signature": "inductive AuctionState (F : Type*) where",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L64",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.Auction.SingleItemAuction",
+      "display_name": "Online.Auction.SingleItemAuction",
+      "qualified_name": "Online.Auction.SingleItemAuction",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "structure",
+      "signature": "structure SingleItemAuction (F : Type*) where",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L74",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.Auction.SingleItemAuction.online",
+      "display_name": "Online.Auction.SingleItemAuction.online",
+      "qualified_name": "Online.Auction.SingleItemAuction.online",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "def",
+      "signature": "def online : OnlineAlgorithm F (AuctionState F) F where",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L92",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.Auction.SingleItemAuction.run",
+      "display_name": "Online.Auction.SingleItemAuction.run",
+      "qualified_name": "Online.Auction.SingleItemAuction.run",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "def",
+      "signature": "def run (bids : List F) : Option F",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L104",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.Auction.SingleItemAuction.welfare",
+      "display_name": "Online.Auction.SingleItemAuction.welfare",
+      "qualified_name": "Online.Auction.SingleItemAuction.welfare",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "def",
+      "signature": "def welfare {n : ℕ} (v b : Fin n → F) : F",
+      "docstring": "Social welfare under valuation profile `v` and bid profile `b`.",
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L132",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    },
+    {
+      "name": "Online.Auction.SingleItemAuction.utility",
+      "display_name": "Online.Auction.SingleItemAuction.utility",
+      "qualified_name": "Online.Auction.SingleItemAuction.utility",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "def",
+      "signature": "def utility {n : ℕ} (v b : Fin n → F) (i : Fin n) : F",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L185",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.Algorithm.Online",
+      "display_name": "EconCSLib.Algorithm.Online",
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Algorithm/Online.lean#L1",
+      "status": "resolved",
+      "reason": null
+    },
+    {
+      "name": "EconCSLib.Examples.Online.SingleItemAuction",
+      "display_name": "EconCSLib.Examples.Online.SingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

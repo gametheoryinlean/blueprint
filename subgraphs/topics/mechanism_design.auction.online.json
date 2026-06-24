@@ -1,0 +1,185 @@
+{
+  "topic": {
+    "id": "mechanism_design.auction.online",
+    "title": "Mechanism Design.Auction.Online",
+    "href": "mechanism_design/auction/online/index.html",
+    "parent": "mechanism_design.auction",
+    "node_count": 4,
+    "descendant_node_count": 4
+  },
+  "counts": {
+    "internal_nodes": 4,
+    "inlined_nodes": 0,
+    "descendant_nodes": 4,
+    "child_topics": 0,
+    "inlined_child_topics": 0,
+    "non_proof_plan_nodes": 4,
+    "proof_plan_nodes": 0,
+    "selected_proof_plan_nodes": 0,
+    "boundary_topics": 2,
+    "proof_plan_attachments": 0,
+    "visible_nodes_without_proof_plans": 7,
+    "visible_nodes_with_selected_proof_plans": 7
+  },
+  "nodes": [
+    {
+      "id": "mechanism_design.auction.online.dsic",
+      "title": "Truthful Bidding Is Dominant in the Online Auction",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_dsic.html",
+      "payload": "node_payloads/mechanism_design_auction_online_dsic.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.no_constant_competitive",
+      "title": "No Deterministic Constant Competitive Ratio",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_no_constant_competitive.html",
+      "payload": "node_payloads/mechanism_design_auction_online_no_constant_competitive.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "title": "Secretary Threshold Rule Is 1/4-Competitive",
+      "kind": "theorem",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_secretary_quarter_competitive.html",
+      "payload": "node_payloads/mechanism_design_auction_online_secretary_quarter_competitive.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.single_item_auction",
+      "title": "Online Single-Item (Posted-Price) Auction",
+      "kind": "definition",
+      "status": "staged",
+      "href": "mechanism_design/mechanism_design_auction_online_single_item_auction.html",
+      "payload": "node_payloads/mechanism_design_auction_online_single_item_auction.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.dsic",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.no_constant_competitive",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.no_constant_competitive",
+      "to": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "kind": "uses"
+    }
+  ],
+  "boundary_topics": [
+    {
+      "id": "game_theory.strategic_game",
+      "title": "Game Theory.Strategic Game",
+      "href": "game_theory/strategic_game/index.html",
+      "role": "dependency",
+      "node_count": 105
+    },
+    {
+      "id": "mechanism_design",
+      "title": "Mechanism Design",
+      "href": "mechanism_design/index.html",
+      "role": "dependency",
+      "node_count": 53
+    }
+  ],
+  "boundary_edges": [
+    {
+      "from": "topic:game_theory.strategic_game",
+      "to": "mechanism_design.auction.online.dsic",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.strategic_game",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.auction.online.dsic",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 1
+    },
+    {
+      "from": "topic:mechanism_design",
+      "to": "mechanism_design.auction.online.single_item_auction",
+      "kind": "boundary_dependency",
+      "topic": "mechanism_design",
+      "count": 2
+    }
+  ],
+  "keywords": [
+    {
+      "id": "auction",
+      "title": "auction",
+      "href": "keywords/auction.html",
+      "count": 4
+    },
+    {
+      "id": "competitive-ratio",
+      "title": "competitive-ratio",
+      "href": "keywords/competitive-ratio.html",
+      "count": 2
+    },
+    {
+      "id": "dsic",
+      "title": "dsic",
+      "href": "keywords/dsic.html",
+      "count": 1
+    },
+    {
+      "id": "impossibility",
+      "title": "impossibility",
+      "href": "keywords/impossibility.html",
+      "count": 1
+    },
+    {
+      "id": "online-algorithm",
+      "title": "online-algorithm",
+      "href": "keywords/online-algorithm.html",
+      "count": 4
+    },
+    {
+      "id": "posted-price",
+      "title": "posted-price",
+      "href": "keywords/posted-price.html",
+      "count": 3
+    },
+    {
+      "id": "random-order",
+      "title": "random-order",
+      "href": "keywords/random-order.html",
+      "count": 1
+    },
+    {
+      "id": "secretary",
+      "title": "secretary",
+      "href": "keywords/secretary.html",
+      "count": 1
+    },
+    {
+      "id": "single-item",
+      "title": "single-item",
+      "href": "keywords/single-item.html",
+      "count": 1
+    },
+    {
+      "id": "weakly-dominant",
+      "title": "weakly-dominant",
+      "href": "keywords/weakly-dominant.html",
+      "count": 1
+    }
+  ],
+  "proof_plan_attachments": [],
+  "child_topics": [],
+  "child_topic_nodes": [],
+  "inlined_child_topics": []
+}

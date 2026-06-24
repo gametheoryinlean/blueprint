@@ -1,0 +1,61 @@
+{
+  "id": "mechanism_design.auction.online.no_constant_competitive",
+  "title": "No Deterministic Constant Competitive Ratio",
+  "kind": "theorem",
+  "status": "staged",
+  "href": "mechanism_design/mechanism_design_auction_online_no_constant_competitive.html",
+  "primary_topic": "mechanism_design",
+  "topics": [
+    "mechanism_design",
+    "mechanism_design.auction",
+    "mechanism_design.auction.online"
+  ],
+  "body_html": "<h1>No Deterministic Constant Competitive Ratio</h1>\n<p><strong>Theorem (Roughgarden, Problem 2.1(b)).</strong> No deterministic online\nsingle-item auction guarantees a constant fraction of the highest\nvaluation against adversarial inputs. For every constant $c &gt; 0$ and every\npricing rule $A$ there is a valuation profile $v$ (two bidders already\nsuffice) with $\\max(v_0, v_1) &gt; 0$ and</p>\n<p>$$\nA.\\mathrm{welfare}(v,\\, v) \\;&lt;\\; c \\cdot \\max(v_0,\\, v_1).\n$$</p>",
+  "proof_html": "<p>Fix the pricing rule $A$ and the constant $c$. Only the first posted price\n$p_0 = A.\\mathrm{price}\\,[\\,]$ matters, and the adversary plays against it\nwith two bidders:</p>\n<ul>\n<li><strong>If $p_0 &gt; 0$:</strong> present a first bidder with a tiny valuation\n  $v_0 \\in (0, p_0)$, below the price, who is rejected; then a second bidder\n  whose valuation is also small. The high value the mechanism <em>could</em> have\n  captured never materialises, so realised welfare is a vanishing fraction\n  of the maximum.</li>\n<li><strong>If $p_0 \\le 0$:</strong> the first bidder (with any positive valuation) clears\n  the price immediately, so the item is sold to an arbitrarily low bidder\n  while a much higher second valuation is locked out.</li>\n</ul>\n<p>In both branches the adversary drives the welfare ratio below the target\n$c$, because the deterministic price $p_0$ is committed <em>before any bid is\nseen</em> and the adversary tailors the two valuations to that single number.</p>\n<h2>Why it matters</h2>\n<p>This is the impossibility half of Problem 2.1, and it motivates the two\nescapes used elsewhere in the example file:</p>\n<ul>\n<li><strong>Randomise the input</strong> (rather than the mechanism): under uniformly\n  random arrival order the secretary-style threshold rule recovers a\n  constant guarantee, the $1/4$ bound of\n  [[mechanism_design.auction.online.secretary_quarter_competitive]].</li>\n<li>The contrast is the standard online-algorithms story: worst-case\n  competitive analysis can be hopeless precisely when the algorithm must\n  commit before seeing the data, while average-case (random-order) analysis\n  remains informative.</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[Roughgarden 2016, Lecture 2, Problem 2.1(b)] Tim Roughgarden, <em>Twenty\n  Lectures on Algorithmic Game Theory</em>, Cambridge University Press.\n  Lower bound against deterministic online auctions.</li>\n</ul>",
+  "deps": [
+    {
+      "id": "mechanism_design.auction.online.single_item_auction",
+      "title": "Online Single-Item (Posted-Price) Auction",
+      "href": "mechanism_design/mechanism_design_auction_online_single_item_auction.html"
+    }
+  ],
+  "dependents": [
+    {
+      "id": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "title": "Secretary Threshold Rule Is 1/4-Competitive",
+      "href": "mechanism_design/mechanism_design_auction_online_secretary_quarter_competitive.html"
+    }
+  ],
+  "lean_refs": [
+    {
+      "name": "Online.Auction.SingleItemAuction.no_constant_competitive_ratio",
+      "display_name": "Online.Auction.SingleItemAuction.no_constant_competitive_ratio",
+      "qualified_name": "Online.Auction.SingleItemAuction.no_constant_competitive_ratio",
+      "module": "EconCSLib.Examples.Online.SingleItemAuction",
+      "kind": "theorem",
+      "signature": "theorem no_constant_competitive_ratio (c : F) (hc : 0 < c)\n    (A : SingleItemAuction F) :\n    ∃ v : Fin 2 → F, 0 < max (v 0) (v 1) ∧\n      A.welfare v v < c * max (v 0) (v 1)",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L473",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.Examples.Online.SingleItemAuction",
+      "display_name": "EconCSLib.Examples.Online.SingleItemAuction",
+      "repository_title": "EconCSLib",
+      "revision": "7446a4ec85309781f77a1d41d97fc73b0e1c8077",
+      "short_revision": "7446a4e",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}
