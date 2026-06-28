@@ -5724,7 +5724,6 @@
         "mechanism_design.auction.basic.first_price_no_dsic",
         "mechanism_design.auction.basic.reserve_second_price_dsic",
         "mechanism_design.auction.basic.second_price_dsic",
-        "mechanism_design.auction.online.dsic",
         "mechanism_design.basic.dsic_predicate"
       ]
     },
@@ -9837,7 +9836,7 @@
       "id": "mechanism_design.auction.online.dsic",
       "title": "Truthful Bidding Is Dominant in the Online Auction",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "auction",
         "online-algorithm",
@@ -9854,28 +9853,25 @@
       "lean_declarations": [
         "Online.Auction.SingleItemAuction.stateBeforeStep",
         "Online.Auction.SingleItemAuction.stateBeforeStep_update_self",
-        "Online.Auction.SingleItemAuction.dsic",
-        "Online.Auction.SingleItemAuction.mechanism",
-        "Online.Auction.SingleItemAuction.mechanism_isDSIC"
+        "Online.Auction.SingleItemAuction.dsic"
       ],
       "topic": "mechanism_design",
       "uses": [
-        "game_theory.strategic_game.weakly_dominant_strategy",
-        "mechanism_design.auction.online.single_item_auction",
-        "mechanism_design.basic.dsic_predicate"
+        "mechanism_design.auction.online.single_item_auction"
       ]
     },
     {
       "id": "mechanism_design.auction.online.no_constant_competitive",
       "title": "No Deterministic Constant Competitive Ratio",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "auction",
         "online-algorithm",
         "competitive-ratio",
         "impossibility",
-        "posted-price"
+        "posted-price",
+        "counterexample"
       ],
       "primary_topic": "mechanism_design",
       "topics": [
@@ -9884,6 +9880,7 @@
         "mechanism_design.auction.online"
       ],
       "lean_declarations": [
+        "Online.Auction.SingleItemAuction.welfare_can_be_zero",
         "Online.Auction.SingleItemAuction.no_constant_competitive_ratio"
       ],
       "topic": "mechanism_design",
@@ -9898,7 +9895,7 @@
       "id": "mechanism_design.auction.online.secretary_quarter_competitive",
       "title": "Secretary Threshold Rule Is 1/4-Competitive",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "tags": [
         "auction",
         "online-algorithm",
@@ -9913,9 +9910,10 @@
         "mechanism_design.auction.online"
       ],
       "lean_declarations": [
+        "Online.Auction.Secretary.maxPairFold",
         "Online.Auction.Secretary.auction",
-        "Online.Auction.Secretary.maxV",
         "Online.Auction.Secretary.Favorable",
+        "Online.Auction.Secretary.welfare_nonneg",
         "Online.Auction.Secretary.welfare_eq_max_of_favorable",
         "Online.Auction.Secretary.favorableSet",
         "Online.Auction.Secretary.favorableSet_card_ge",
@@ -9925,13 +9923,79 @@
       "uses": [
         "mechanism_design.auction.online.no_constant_competitive",
         "mechanism_design.auction.online.single_item_auction"
+      ],
+      "used_by": [
+        "mechanism_design.auction.online.secretary_strict_comparison_fails",
+        "mechanism_design.auction.online.secretary_weak_comparison_needle"
+      ]
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "title": "Strict Value Comparison Breaks the Secretary Guarantee",
+      "kind": "example",
+      "status": "proved",
+      "tags": [
+        "auction",
+        "online-algorithm",
+        "secretary",
+        "counterexample",
+        "competitive-ratio"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.auction",
+        "mechanism_design.auction.online"
+      ],
+      "lean_declarations": [
+        "Online.Auction.StrictComparison.auction",
+        "Online.Auction.StrictComparison.welfare_eq_zero"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.auction.online.secretary_quarter_competitive",
+        "mechanism_design.auction.online.single_item_auction"
+      ],
+      "used_by": [
+        "mechanism_design.auction.online.secretary_weak_comparison_needle"
+      ]
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_weak_comparison_needle",
+      "title": "Weak Value Comparison Degrades to 1/n on the Needle Profile",
+      "kind": "example",
+      "status": "proved",
+      "tags": [
+        "auction",
+        "online-algorithm",
+        "secretary",
+        "counterexample",
+        "competitive-ratio",
+        "needle"
+      ],
+      "primary_topic": "mechanism_design",
+      "topics": [
+        "mechanism_design",
+        "mechanism_design.auction",
+        "mechanism_design.auction.online"
+      ],
+      "lean_declarations": [
+        "Online.Auction.WeakComparison.auction",
+        "Online.Auction.WeakComparison.maxPairFold_fst_zero",
+        "Online.Auction.WeakComparison.welfare_eq_zero_needle_last"
+      ],
+      "topic": "mechanism_design",
+      "uses": [
+        "mechanism_design.auction.online.secretary_quarter_competitive",
+        "mechanism_design.auction.online.secretary_strict_comparison_fails",
+        "mechanism_design.auction.online.single_item_auction"
       ]
     },
     {
       "id": "mechanism_design.auction.online.single_item_auction",
       "title": "Online Single-Item (Posted-Price) Auction",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "tags": [
         "auction",
         "online-algorithm",
@@ -9951,18 +10015,21 @@
         "Online.Auction.SingleItemAuction",
         "Online.Auction.SingleItemAuction.online",
         "Online.Auction.SingleItemAuction.run",
+        "Online.Auction.SingleItemAuction.welfareAux",
         "Online.Auction.SingleItemAuction.welfare",
+        "Online.Auction.SingleItemAuction.stateBeforeStep",
         "Online.Auction.SingleItemAuction.utility"
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.basic.formats",
-        "mechanism_design.transfer.mechanisms_with_transfers"
+        "mechanism_design.auction.basic.formats"
       ],
       "used_by": [
         "mechanism_design.auction.online.dsic",
         "mechanism_design.auction.online.no_constant_competitive",
-        "mechanism_design.auction.online.secretary_quarter_competitive"
+        "mechanism_design.auction.online.secretary_quarter_competitive",
+        "mechanism_design.auction.online.secretary_strict_comparison_fails",
+        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
@@ -10022,7 +10089,6 @@
         "mechanism_design.auction.basic.first_price_no_dsic",
         "mechanism_design.auction.basic.reserve_second_price_dsic",
         "mechanism_design.auction.basic.second_price_dsic",
-        "mechanism_design.auction.online.dsic",
         "mechanism_design.basic.truthfulness_from_dsic",
         "mechanism_design.transfer.mechanisms_with_transfers"
       ]
@@ -10620,7 +10686,6 @@
         "mechanism_design.auction.basic.formats",
         "mechanism_design.auction.basic.reserve_second_price_mechanism",
         "mechanism_design.auction.basic.second_price_mechanism",
-        "mechanism_design.auction.online.single_item_auction",
         "mechanism_design.bayesian.bayesian_mechanisms",
         "mechanism_design.bayesian.ex_ante_expected_utility",
         "mechanism_design.bayesian.selling_problem",
@@ -16906,15 +16971,7 @@
       "to": "mechanism_design.auction.knapsack.welfare_maximizing_mechanism"
     },
     {
-      "from": "game_theory.strategic_game.weakly_dominant_strategy",
-      "to": "mechanism_design.auction.online.dsic"
-    },
-    {
       "from": "mechanism_design.auction.online.single_item_auction",
-      "to": "mechanism_design.auction.online.dsic"
-    },
-    {
-      "from": "mechanism_design.basic.dsic_predicate",
       "to": "mechanism_design.auction.online.dsic"
     },
     {
@@ -16930,11 +16987,27 @@
       "to": "mechanism_design.auction.online.secretary_quarter_competitive"
     },
     {
-      "from": "mechanism_design.auction.basic.formats",
-      "to": "mechanism_design.auction.online.single_item_auction"
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
     },
     {
-      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
+    },
+    {
+      "from": "mechanism_design.auction.basic.formats",
       "to": "mechanism_design.auction.online.single_item_auction"
     },
     {

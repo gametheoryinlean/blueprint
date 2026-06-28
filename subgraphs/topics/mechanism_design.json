@@ -4,22 +4,22 @@
     "title": "Mechanism Design",
     "href": "mechanism_design/index.html",
     "parent": null,
-    "node_count": 53,
-    "descendant_node_count": 53
+    "node_count": 55,
+    "descendant_node_count": 55
   },
   "counts": {
-    "internal_nodes": 53,
-    "inlined_nodes": 53,
-    "descendant_nodes": 53,
+    "internal_nodes": 55,
+    "inlined_nodes": 55,
+    "descendant_nodes": 55,
     "child_topics": 0,
     "inlined_child_topics": 6,
-    "non_proof_plan_nodes": 52,
+    "non_proof_plan_nodes": 54,
     "proof_plan_nodes": 1,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 2,
     "proof_plan_attachments": 1,
-    "visible_nodes_without_proof_plans": 55,
-    "visible_nodes_with_selected_proof_plans": 55
+    "visible_nodes_without_proof_plans": 57,
+    "visible_nodes_with_selected_proof_plans": 57
   },
   "nodes": [
     {
@@ -194,7 +194,7 @@
       "id": "mechanism_design.auction.online.dsic",
       "title": "Truthful Bidding Is Dominant in the Online Auction",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "href": "mechanism_design/mechanism_design_auction_online_dsic.html",
       "payload": "node_payloads/mechanism_design_auction_online_dsic.json"
     },
@@ -202,7 +202,7 @@
       "id": "mechanism_design.auction.online.no_constant_competitive",
       "title": "No Deterministic Constant Competitive Ratio",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "href": "mechanism_design/mechanism_design_auction_online_no_constant_competitive.html",
       "payload": "node_payloads/mechanism_design_auction_online_no_constant_competitive.json"
     },
@@ -210,15 +210,31 @@
       "id": "mechanism_design.auction.online.secretary_quarter_competitive",
       "title": "Secretary Threshold Rule Is 1/4-Competitive",
       "kind": "theorem",
-      "status": "staged",
+      "status": "proved",
       "href": "mechanism_design/mechanism_design_auction_online_secretary_quarter_competitive.html",
       "payload": "node_payloads/mechanism_design_auction_online_secretary_quarter_competitive.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "title": "Strict Value Comparison Breaks the Secretary Guarantee",
+      "kind": "example",
+      "status": "proved",
+      "href": "mechanism_design/mechanism_design_auction_online_secretary_strict_comparison_fails.html",
+      "payload": "node_payloads/mechanism_design_auction_online_secretary_strict_comparison_fails.json"
+    },
+    {
+      "id": "mechanism_design.auction.online.secretary_weak_comparison_needle",
+      "title": "Weak Value Comparison Degrades to 1/n on the Needle Profile",
+      "kind": "example",
+      "status": "proved",
+      "href": "mechanism_design/mechanism_design_auction_online_secretary_weak_comparison_needle.html",
+      "payload": "node_payloads/mechanism_design_auction_online_secretary_weak_comparison_needle.json"
     },
     {
       "id": "mechanism_design.auction.online.single_item_auction",
       "title": "Online Single-Item (Posted-Price) Auction",
       "kind": "definition",
-      "status": "staged",
+      "status": "formalized",
       "href": "mechanism_design/mechanism_design_auction_online_single_item_auction.html",
       "payload": "node_payloads/mechanism_design_auction_online_single_item_auction.json"
     },
@@ -706,11 +722,6 @@
       "kind": "uses"
     },
     {
-      "from": "mechanism_design.basic.dsic_predicate",
-      "to": "mechanism_design.auction.online.dsic",
-      "kind": "uses"
-    },
-    {
       "from": "mechanism_design.auction.online.single_item_auction",
       "to": "mechanism_design.auction.online.no_constant_competitive",
       "kind": "uses"
@@ -726,12 +737,32 @@
       "kind": "uses"
     },
     {
-      "from": "mechanism_design.auction.basic.formats",
-      "to": "mechanism_design.auction.online.single_item_auction",
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails",
       "kind": "uses"
     },
     {
-      "from": "mechanism_design.transfer.mechanisms_with_transfers",
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.basic.formats",
       "to": "mechanism_design.auction.online.single_item_auction",
       "kind": "uses"
     },
@@ -1036,13 +1067,6 @@
     },
     {
       "from": "topic:game_theory.strategic_game",
-      "to": "mechanism_design.auction.online.dsic",
-      "kind": "boundary_dependency",
-      "topic": "game_theory.strategic_game",
-      "count": 1
-    },
-    {
-      "from": "topic:game_theory.strategic_game",
       "to": "mechanism_design.basic.direct_mechanism_interface",
       "kind": "boundary_dependency",
       "topic": "game_theory.strategic_game",
@@ -1106,7 +1130,7 @@
       "id": "auction",
       "title": "auction",
       "href": "keywords/auction.html",
-      "count": 25
+      "count": 27
     },
     {
       "id": "bayes-nash",
@@ -1178,13 +1202,13 @@
       "id": "competitive-ratio",
       "title": "competitive-ratio",
       "href": "keywords/competitive-ratio.html",
-      "count": 2
+      "count": 4
     },
     {
       "id": "counterexample",
       "title": "counterexample",
       "href": "keywords/counterexample.html",
-      "count": 1
+      "count": 4
     },
     {
       "id": "direct-mechanism",
@@ -1337,10 +1361,16 @@
       "count": 1
     },
     {
+      "id": "needle",
+      "title": "needle",
+      "href": "keywords/needle.html",
+      "count": 1
+    },
+    {
       "id": "online-algorithm",
       "title": "online-algorithm",
       "href": "keywords/online-algorithm.html",
-      "count": 4
+      "count": 6
     },
     {
       "id": "optimal-auction",
@@ -1442,7 +1472,7 @@
       "id": "secretary",
       "title": "secretary",
       "href": "keywords/secretary.html",
-      "count": 1
+      "count": 3
     },
     {
       "id": "selling-problem",

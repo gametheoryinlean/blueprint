@@ -721,6 +721,8 @@
       
         <li><a href="../keywords/nature.html">nature</a></li>
       
+        <li><a href="../keywords/needle.html">needle</a></li>
+      
         <li><a href="../keywords/no-externality.html">no-externality</a></li>
       
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
@@ -1034,9 +1036,9 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Online Single-Item (Posted-Price) Auction</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-formalized">formalized</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-mechanism_design-2e-auction-2e-online-2e-single_item_auction">#</a>
@@ -1057,8 +1059,6 @@
         
         <li><a href="mechanism_design_auction_basic_formats.html">Basic Auction Formats</a></li>
         
-        <li><a href="mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a></li>
-        
       </ul>
     </div>
   </div>
@@ -1073,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Algorithm/Online.lean#L88"><code>Online.OnlineAlgorithm</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Algorithm/Online.lean#L88"><code>Online.OnlineAlgorithm</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Algorithm.Online
+            EconCSLib @ dfd86ef, EconCSLib.Algorithm.Online
           </span>
           
           
@@ -1089,12 +1089,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Algorithm/Online.lean#L107"><code>Online.OnlineAlgorithm.run</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Algorithm/Online.lean#L107"><code>Online.OnlineAlgorithm.run</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Algorithm.Online
+            EconCSLib @ dfd86ef, EconCSLib.Algorithm.Online
           </span>
           
           
@@ -1113,103 +1113,139 @@
         <li class="lean-ref">
           <span class="badge lean-kind">inductive</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L64"><code>Online.Auction.AuctionState</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L64"><code>Online.Auction.AuctionState</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>inductive AuctionState (F : Type*) where</code></pre>
+          <pre class="lean-signature"><code>inductive AuctionState (B F : Type*) where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L74"><code>Online.Auction.SingleItemAuction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L73"><code>Online.Auction.SingleItemAuction</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure SingleItemAuction (F : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure SingleItemAuction (B F : Type*) where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L92"><code>Online.Auction.SingleItemAuction.online</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L93"><code>Online.Auction.SingleItemAuction.online</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>def online : OnlineAlgorithm F (AuctionState F) F where</code></pre>
+          <pre class="lean-signature"><code>def online : OnlineAlgorithm (B × F) (AuctionState B F) F where</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L104"><code>Online.Auction.SingleItemAuction.run</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L107"><code>Online.Auction.SingleItemAuction.run</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
-          
-          <pre class="lean-signature"><code>def run (bids : List F) : Option F</code></pre>
+          <p class="lean-docstring">Run the auction on an input sequence, returning the sale price.</p>
+          <pre class="lean-signature"><code>def run (inputs : List (B × F)) : Option F</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L132"><code>Online.Auction.SingleItemAuction.welfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L116"><code>Online.Auction.SingleItemAuction.welfareAux</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
-          <p class="lean-docstring">Social welfare under valuation profile `v` and bid profile `b`.</p>
-          <pre class="lean-signature"><code>def welfare {n : ℕ} (v b : Fin n → F) : F</code></pre>
+          
+          <pre class="lean-signature"><code>def welfareAux [Zero F]
+    (threshold : List (B × F) → WithTop (Lex (F × B)))
+    {n : ℕ} (f : Fin n → B × F) (h : List (B × F)) (k : ℕ) : F</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L185"><code>Online.Auction.SingleItemAuction.utility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L129"><code>Online.Auction.SingleItemAuction.welfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>def utility {n : ℕ} (v b : Fin n → F) (i : Fin n) : F</code></pre>
+          <pre class="lean-signature"><code>def welfare [Zero F] {n : ℕ} (f : Fin n → B × F) : F</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L178"><code>Online.Auction.SingleItemAuction.stateBeforeStep</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def stateBeforeStep {n : ℕ} (f : Fin n → B × F) (i : Fin n) :
+    AuctionState B F</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L185"><code>Online.Auction.SingleItemAuction.utility</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>def utility [Zero F] [Sub F] {n : ℕ} (f : Fin n → B × F) (v : Fin n → F) (i : Fin n) :
+    F</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Algorithm/Online.lean#L1"><code>EconCSLib.Algorithm.Online</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Algorithm/Online.lean#L1"><code>EconCSLib.Algorithm.Online</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
       </p>
       
     </div>
@@ -1219,79 +1255,142 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Online Single-Item (Posted-Price) Auction</h1>
 <p>The <strong>online single-item auction</strong> sells one indivisible good to bidders
-who arrive one at a time. While the item is unsold, the auctioneer posts a
-take-it-or-leave-it price that may depend <strong>only on the bids already seen</strong>;
-the current bidder either accepts (and the auction ends) or departs forever.
-This is the running example of Roughgarden's <em>Twenty Lectures</em>, Problem 2.1.</p>
-<p>The numeric type $F$ is any linearly ordered field; bids, posted prices,
-valuations, and utilities all live in $F$.</p>
+who arrive one at a time. While the item is unsold, the auctioneer posts
+a take-it-or-leave-it price that may depend <strong>only on the bids already
+seen</strong>; the current bidder either accepts (and the auction ends) or departs
+forever. This is the running example of Roughgarden's <em>Twenty Lectures</em>,
+Problem 2.1.</p>
 <h2>Model</h2>
+<p>The type <code>SingleItemAuction B F</code> is parameterised by an identity type <code>B</code>
+and a numeric type <code>F</code> (any linearly ordered field). Each bidder presents
+a pair <code>(b, v) : B × F</code>, and the auction is defined by a single field:</p>
+<ul>
+<li><code>threshold : List (B × F) → WithTop (Lex (F × B))</code> — a lexicographic
+  threshold combining value and identity.</li>
+</ul>
+<p>The field reads the full history of rejected <code>(identity, value)</code> pairs.
+The threshold <code>⊤</code> rejects unconditionally; <code>↑(toLex (p, b))</code> accepts
+when <code>threshold h ≤ ↑(toLex (v_i, b_i))</code>, which by <code>Prod.Lex.le_iff</code>
+gives the <strong>lexicographic</strong> condition:</p>
+<p>$$
+p &lt; v_i \;\lor\; (p = v_i \;\land\; b \le b_i).
+$$</p>
 <p>A run is driven by the generic online-algorithm framework
 <code>Online.OnlineAlgorithm Input State Output</code>, whose single field
-<code>step : State → Input → State × Output</code> consumes one input and emits the
-next state together with an optional output. The "no lookahead" discipline
-is encoded in the <strong>state</strong>, not by an external promise: the auction state</p>
+<code>step : State → Option Input → State × Option Output</code> consumes one input
+and emits the next state together with an optional output. The auction
+state</p>
 <p>$$
-\mathrm{AuctionState}\,F \;=\; \mathsf{unsold}\,(\text{history} : \mathrm{List}\,F)
+\mathrm{AuctionState}\,B\,F \;=\; \mathsf{unsold}\,(\text{history} :
+\mathrm{List}\,(B \times F))
 \;\mid\; \mathsf{sold}\,(\text{winner} : \mathbb{N})\,(\text{price} : F)
 $$</p>
-<p>carries in the <code>unsold</code> case exactly the list of previously rejected bids —
-the only thing the pricing rule is allowed to read.</p>
-<p>A <code>SingleItemAuction F</code> is then a single datum: a pricing rule
-<code>price : List F → F</code> mapping the rejection history to the next posted price.
-Its embedding into the framework is the field-free definition</p>
-<p><code>A.online : OnlineAlgorithm F (AuctionState F) F
-  init := .unsold []
-  step
-    | .unsold h, some b =&gt; let p := A.price h;
-                           if p ≤ b then (.sold h.length p, some p)
-                           else (.unsold (h ++ [b]), none)
-    | .unsold h, none   =&gt; (.unsold h, none)
-    | .sold w p, _      =&gt; (.sold w p, none)</code></p>
-<p>The current bidder's $0$-indexed position equals <code>history.length</code>. The
-winning rule is the weak inequality $p \le b$: a bidder clears the price iff
-their bid is at least the posted price. <code>A.run bids</code> extracts the realised
-sale price (<code>some p</code> if some bidder cleared, <code>none</code> if all were rejected)
-by folding <code>A.online</code> over the bid list.</p>
+<p>carries in the <code>unsold</code> case exactly the list of previously rejected
+$(identity, value)$ pairs — the only thing the pricing rule is allowed to
+read. The embedding into the framework is <code>A.online</code>:</p>
+<p><code>step
+  | .unsold h, some (bi, vi) =&gt; match A.threshold h with
+                           | ⊤     =&gt; (.unsold (h ++ [(bi, vi)]), none)
+                           | ↑t    =&gt; if t ≤ toLex (vi, bi)
+                                      then (.sold h.length (ofLex t).1, some (ofLex t).1)
+                                      else (.unsold (h ++ [(bi, vi)]), none)
+  | .unsold h, none   =&gt; (.unsold h, none)
+  | .sold w p, _      =&gt; (.sold w p, none)</code></p>
 <h2>Welfare and utility</h2>
 <p>For game-theoretic statements the $n$ bidders are indexed by
-$\mathrm{Fin}\,n$, with a valuation profile $v : \mathrm{Fin}\,n \to F$ and a
-bid profile $b : \mathrm{Fin}\,n \to F$ presented in arrival order.</p>
+$\mathrm{Fin}\,n$, with a profile $f : \mathrm{Fin}\,n \to B \times F$
+presented in arrival order.</p>
 <ul>
-<li><code>A.welfare v b</code> is the <strong>social welfare</strong>: the valuation $v_j$ of whichever
-  bidder $j$ first clears the posted price, or $0$ if every bidder is
-  rejected. It is defined by a direct two-argument recursion <code>welfareFrom</code>
-  over the <code>(vᵢ, bᵢ)</code> stream (carrying the rejection history separately) so
-  that small concrete profiles reduce cleanly under <code>simp</code> — this is what
-  makes the adversarial and secretary analyses tractable.</li>
-<li><code>A.utility v b i</code> is bidder $i$'s quasi-linear payoff $v_i - p$ when $i$
-  wins at price $p$, and $0$ otherwise. It factors through the state reached
-  <em>before</em> bidder $i$ is processed, isolating $i$'s local view from the
-  global trajectory.</li>
+<li><code>A.welfare f</code> is the <strong>social welfare</strong>: the value $(f\,j).2$ of
+  whichever bidder $j$ first clears the posted price (lexicographically),
+  or $0$ if every bidder is rejected. It is defined via <code>welfareAux</code>,
+  a direct recursion carrying the rejection history, so that small
+  concrete profiles reduce cleanly under <code>simp</code>.</li>
+<li><code>A.utility f v i</code> is bidder $i$'s quasi-linear payoff $v_i - p$ when
+  $i$ wins at price $p$, and $0$ otherwise. It factors through
+  <code>stateBeforeStep</code>, the state reached <em>before</em> bidder $i$ is processed,
+  isolating $i$'s local view from the global trajectory.</li>
 </ul>
-<h2>Why this shape</h2>
-<p>Keeping the entire embedding in the one <code>A.online</code> definition means the
-auction inherits the framework's <code>run</code>, <code>runStatus</code>, and generic
-<code>run_cons_*</code> recursion lemmas directly, with no duplicated step logic. The
-two indexing conventions coexist on purpose: <code>List F</code> is the natural type
-for the <em>streaming</em> input, while $\mathrm{Fin}\,n \to F$ is the natural type
-for the <em>game-theoretic</em> layer (fixed agents, single-bidder deviations via
+<h2>Remarks</h2>
+<h3>Why a single lexicographic threshold?</h3>
+<p>A natural first design would use a simpler threshold in <code>WithTop F</code>
+(value only) and require <strong>value injectivity</strong> (<code>Function.Injective v</code>)
+in the secretary theorem. But value injectivity is mathematically
+unnatural: the competitive-ratio guarantee is about the mechanism, not
+about an accidental distinctness hypothesis on valuations.</p>
+<p>An earlier design used two separate fields (<code>price</code> and <code>bar</code>) to encode
+the value threshold and identity tie-breaker independently. The current
+single-field design <code>threshold : List (B × F) → WithTop (Lex (F × B))</code>
+is equivalent but cleaner: <code>Lex (F × B)</code> packages both components into
+a single lexicographic pair, and the acceptance test reduces to a single
+comparison <code>threshold h ≤ ↑(toLex (v_i, b_i))</code>.</p>
+<p>The secretary auction
+([[mechanism_design.auction.online.secretary_quarter_competitive]])
+requires <strong>identity injectivity</strong> (<code>Function.Injective g</code>) — a
+structural property of the bidder-labelling system, not a restriction
+on valuations. The lex acceptance rule resolves value ties by comparing
+identities, so:</p>
+<ul>
+<li><strong>Tie-breaking is internal.</strong> Value ties at the threshold are
+  resolved by the identity component of the threshold, without an
+  external tie-breaking oracle or an arbitrary selection.</li>
+<li><strong>DSIC is format-independent.</strong> The <code>local_dsic</code> lemma abstracts
+  the tie-breaking condition as a <code>Prop</code> parameter <code>tie_ok</code>; truthful
+  bidding is optimal regardless of how ties are broken
+  ([[mechanism_design.auction.online.dsic]]).</li>
+<li><strong>The secretary analysis uses <code>g</code>-injectivity, not <code>v</code>-injectivity.</strong>
+  The lex order on <code>(v i, g i)</code> guarantees a unique argmax and
+  second-max even with value ties, and the rejection proof reduces to
+  showing that pre-argmax bids are <strong>lex-strictly</strong> below the threshold.</li>
+</ul>
+<p>Setting the identity component to <code>⊤ : B</code> (requiring <code>[OrderTop B]</code>)
+forces strict value comparison: <code>threshold h ≤ ↑(toLex (v, b))</code> with
+identity component <code>⊤</code> degenerates to <code>p &lt; v</code> since <code>⊤ ≤ b</code> fails
+for all <code>b &lt; ⊤</code>. This is the <code>StrictComparison.auction</code>. It is
+<strong>fatal</strong> for the secretary guarantee: with $v = (M, M)$ and $n = 2$,
+the threshold equals $M$ and the strict test $M &lt; M$ rejects every
+remaining bidder, giving welfare $= 0$ on <strong>all</strong> arrival orders
+([[mechanism_design.auction.online.secretary_strict_comparison_fails]]).</p>
+<p>Setting the identity component to <code>⊥ : B</code> recovers weak comparison
+$p \le v_i$ (since <code>⊥ ≤ b</code> holds for all <code>b</code>). This is the
+<code>WeakComparison.auction</code>. It avoids the equal-value failure, but is
+<strong>also not constant-competitive</strong>: on the needle profile
+$v = (M, 0, \ldots, 0)$, the threshold drops to $0$ and weak comparison
+accepts the <strong>first</strong> phase-2 arrival (since $0 \le 0$), regardless of
+whether it is the needle. The needle is first in phase 2 with
+probability $1/n$, so expected welfare is $(1/n) \cdot M$ — not a
+constant fraction of $\max v$
+([[mechanism_design.auction.online.secretary_weak_comparison_needle]]).</p>
+<p>The secretary auction sets the identity component to the observed
+lex-max identity, navigating between the two pitfalls: it rejects
+haystack bidders whose identities fall below the threshold, while still
+accepting the needle whose value strictly exceeds the threshold.</p>
+<h3>Why two type parameters?</h3>
+<p>The two-type-parameter design <code>SingleItemAuction B F</code> keeps the identity
+type <code>B</code> abstract and separate from the value type <code>F</code>. This enables
+identity-aware pricing (needed for the secretary analysis) while keeping
+the core auction theory generic. The two indexing conventions coexist:
+<code>List (B × F)</code> is the natural type for the <em>streaming</em> input, while
+$\mathrm{Fin}\,n \to B \times F$ is the natural type for the
+<em>game-theoretic</em> layer (fixed agents, single-bidder deviations via
 <code>Function.update</code>, random arrival via <code>Equiv.Perm (Fin n)</code>); the two are
 bridged by <code>List.ofFn</code>.</p>
-<p>Concrete instantiations fix the pricing rule and feed the three results of
-Problem 2.1: truthfulness ([[mechanism_design.auction.online.dsic]]), the
-deterministic impossibility
-([[mechanism_design.auction.online.no_constant_competitive]]), and the
-secretary guarantee
-([[mechanism_design.auction.online.secretary_quarter_competitive]]).</p>
+<h2>Position in the library</h2>
+<p>Concrete instantiations fix the pricing rule and feed the three results
+of Problem 2.1:
+- truthfulness ([[mechanism_design.auction.online.dsic]]),
+- deterministic impossibility
+  ([[mechanism_design.auction.online.no_constant_competitive]]),
+- secretary guarantee
+  ([[mechanism_design.auction.online.secretary_quarter_competitive]]).</p>
 <h2>References</h2>
 <ul>
 <li>[Roughgarden 2016, Lecture 2, Problem 2.1] Tim Roughgarden, <em>Twenty
   Lectures on Algorithmic Game Theory</em>, Cambridge University Press. Online
   posted-price single-item auction and its analysis.</li>
-<li>[AGT, Chapter 1, Section 1.3.2] Nisan, Roughgarden, Tardos, and Vazirani,
-  <em>Algorithmic Game Theory</em>. Sealed-bid single-item auctions as the basic
-  algorithmic game theory example.</li>
+<li>[AGT, Chapter 1, Section 1.3.2] Nisan, Roughgarden, Tardos, and
+  Vazirani, <em>Algorithmic Game Theory</em>. Sealed-bid single-item auctions as
+  the basic algorithmic game theory example.</li>
 </ul>
     
   </div>
@@ -1308,6 +1407,10 @@ secretary guarantee
       <li><a href="mechanism_design_auction_online_no_constant_competitive.html">No Deterministic Constant Competitive Ratio</a></li>
       
       <li><a href="mechanism_design_auction_online_secretary_quarter_competitive.html">Secretary Threshold Rule Is 1/4-Competitive</a></li>
+      
+      <li><a href="mechanism_design_auction_online_secretary_strict_comparison_fails.html">Strict Value Comparison Breaks the Secretary Guarantee</a></li>
+      
+      <li><a href="mechanism_design_auction_online_secretary_weak_comparison_needle.html">Weak Value Comparison Degrades to 1/n on the Needle Profile</a></li>
       
     </ul>
   </section>

@@ -721,6 +721,8 @@
       
         <li><a href="../keywords/nature.html">nature</a></li>
       
+        <li><a href="../keywords/needle.html">needle</a></li>
+      
         <li><a href="../keywords/no-externality.html">no-externality</a></li>
       
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
@@ -1034,9 +1036,9 @@
     <span class="theorem_thmcaption thm-caption">Theorem</span>
     <span class="theorem_thmtitle thm-title">Truthful Bidding Is Dominant in the Online Auction</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-proved">proved</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-mechanism_design-2e-auction-2e-online-2e-dsic">#</a>
@@ -1057,10 +1059,6 @@
         
         <li><a href="mechanism_design_auction_online_single_item_auction.html">Online Single-Item (Posted-Price) Auction</a></li>
         
-        <li><a href="mechanism_design_basic_dsic_predicate.html">DSIC Predicate</a></li>
-        
-        <li><a href="../game_theory/strategic_game/game_theory_strategic_game_weakly_dominant_strategy.html">Weakly Dominant Strategy</a></li>
-        
       </ul>
     </div>
   </div>
@@ -1075,92 +1073,60 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L110"><code>Online.Auction.SingleItemAuction.stateBeforeStep</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L178"><code>Online.Auction.SingleItemAuction.stateBeforeStep</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>def stateBeforeStep {n : ℕ} (b : Fin n → F) (i : Fin n) : AuctionState F</code></pre>
+          <pre class="lean-signature"><code>def stateBeforeStep {n : ℕ} (f : Fin n → B × F) (i : Fin n) :
+    AuctionState B F</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L196"><code>Online.Auction.SingleItemAuction.stateBeforeStep_update_self</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L200"><code>Online.Auction.SingleItemAuction.stateBeforeStep_update_self</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
-          
-          <pre class="lean-signature"><code>lemma stateBeforeStep_update_self {n : ℕ} (b : Fin n → F) (i : Fin n) (x : F) :
-    A.stateBeforeStep (update b i x) i = A.stateBeforeStep b i</code></pre>
+          <p class="lean-docstring">The state before bidder `i` is independent of bidder `i`&#39;s entry.</p>
+          <pre class="lean-signature"><code>lemma stateBeforeStep_update_self {n : ℕ}
+    (f : Fin n → B × F) (i : Fin n) (x : B × F) :
+    A.stateBeforeStep (update f i x) i = A.stateBeforeStep f i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L233"><code>Online.Auction.SingleItemAuction.dsic</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L242"><code>Online.Auction.SingleItemAuction.dsic</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem dsic {n : ℕ} (v b : Fin n → F) (i : Fin n) :
-    A.utility v b i ≤ A.utility v (update b i (v i)) i</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L527"><code>Online.Auction.SingleItemAuction.mechanism</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>def mechanism (n : ℕ) : MechanismWithTransfers (Fin n) (fun _ =&gt; F) (Option ℕ) F where</code></pre>
-        </li>
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">theorem</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L566"><code>Online.Auction.SingleItemAuction.mechanism_isDSIC</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
-          </span>
-          
-          
-          
-          <pre class="lean-signature"><code>theorem mechanism_isDSIC {n : ℕ} :
-    (A.mechanism n).isDSIC
-      (fun (alloc : Option ℕ) (pay : Fin n → F) (v : Fin n → F) (i : Fin n) =&gt;
-        (if alloc = some i.val then v i else 0) - pay i)</code></pre>
+          <pre class="lean-signature"><code>theorem dsic [Ring F] [IsStrictOrderedRing F] {n : ℕ}
+    (f : Fin n → B × F) (v : Fin n → F) (i : Fin n) :
+    A.utility f v i ≤ A.utility (update f i ((f i).1, v i)) v i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
       </p>
       
     </div>
@@ -1173,56 +1139,55 @@
 auction ([[mechanism_design.auction.online.single_item_auction]]) — for
 <em>any</em> history-dependent pricing rule — truthful bidding $b_i = v_i$ is a
 weakly dominant strategy for every bidder.</p>
-<p>Formally, for every pricing rule $A$, every valuation/bid profile
-$v, b : \mathrm{Fin}\,n \to F$, and every bidder $i$,</p>
+<p>Formally, for every pricing rule $A$, every arrival/bid profile
+$f : \mathrm{Fin}\,n \to B \times F$, every true-valuation profile
+$v : \mathrm{Fin}\,n \to F$, and every bidder $i$,</p>
 <p>$$
-A.\mathrm{utility}(v,\, b,\, i)
+A.\mathrm{utility}(f,\, v,\, i)
 \;\le\;
-A.\mathrm{utility}\bigl(v,\; b[i \mapsto v_i],\; i\bigr).
+A.\mathrm{utility}\bigl(f[i \mapsto ((f\,i).1,\, v_i)],\; v,\; i\bigr).
 $$</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>The whole argument is a locality observation, named in Lean by
-<code>stateBeforeStep b i</code> — the state the auction is in <em>just before</em> bidder $i$
-is processed, obtained by running only the bids of the earlier bidders
-$j &lt; i$.</p>
+        <p>The argument is a locality observation followed by a single-variable
+optimisation.</p>
 <ol>
 <li>
 <p><strong>The posted price bidder $i$ faces is independent of $b_i$.</strong>
-   <code>stateBeforeStep b i</code> runs only the first $i$ bids, none of which is
+   <code>stateBeforeStep f i</code> runs only the first $i$ bids, none of which is
    $b_i$, so
    $$
-   \mathrm{stateBeforeStep}\,(b[i \mapsto x])\, i
-   \;=\; \mathrm{stateBeforeStep}\, b\, i
+   \mathrm{stateBeforeStep}\,(f[i \mapsto x])\, i
+   \;=\; \mathrm{stateBeforeStep}\, f\, i
    $$
-   for every alternative bid $x$ (<code>stateBeforeStep_update_self</code>). This is the
-   structural heart of the result: a posted-price rule cannot let a bidder
-   move their own price.</p>
+   for every alternative entry $x$ (<code>stateBeforeStep_update_self</code>). This
+   is the structural heart of the result: a posted-price rule cannot let
+   a bidder move their own price.</p>
 </li>
 <li>
-<p><strong>Single-bidder optimisation at a fixed price.</strong> With the price $p$ thus
-   fixed, bidder $i$'s payoff is $v_i - p$ if they bid at least $p$ and $0$
-   otherwise. Truthful bidding $b_i = v_i$ accepts exactly when $v_i \ge p$,
-   i.e. exactly when the surplus $v_i - p$ is nonnegative, so it attains
-   $\max(v_i - p, 0)$ — weakly better than any deviation.</p>
+<p><strong>Single-bidder optimisation at a fixed price.</strong> With price $p$ and
+   tie-breaking condition <code>tie_ok</code> fixed, bidder $i$'s payoff is
+   $v_i - p$ if the lex condition $p &lt; b_i \lor (p = b_i \land
+   \mathit{tie_ok})$ holds, and $0$ otherwise. Truthful bidding
+   $b_i = v_i$ accepts exactly when the surplus is nonneg, which is
+   optimal. This is the <code>local_dsic</code> lemma, parametric in <code>tie_ok</code>.</p>
 </li>
 </ol>
-<p><code>dsic</code> states the inequality directly at the utility level;
-<code>mechanism_isDSIC</code> lifts the same fact to the generic
-<code>MechanismWithTransfers</code>-level DSIC predicate
-([[mechanism_design.basic.dsic_predicate]]) for the induced direct mechanism
-<code>A.mechanism n</code>.</p>
+<p><code>dsic</code> combines the two steps: rewrite via <code>stateBeforeStep_update_self</code>,
+then apply <code>local_dsic</code> with the appropriate tie-breaking condition
+derived from the threshold's identity component.</p>
 <h2>Why it matters</h2>
 <p>The truthfulness here is <strong>format-independent</strong>: it holds for <em>every</em>
-history-dependent posted-price rule, not just a particular one. This is the
-defining advantage of posted-price mechanisms over the sealed-bid
-second-price auction ([[mechanism_design.auction.basic.second_price_dsic]]) —
-truthfulness comes for free from the order of moves (price first, bid
+history-dependent posted-price rule, not just a particular one. This is
+the defining advantage of posted-price mechanisms over the sealed-bid
+second-price auction ([[mechanism_design.auction.basic.second_price_dsic]])
+— truthfulness comes for free from the order of moves (price first, bid
 second) rather than from a carefully engineered payment rule. It is what
 licenses treating reported bids as true valuations in the welfare analyses
-of parts (b) and (c).</p>
+of parts (b) ([[mechanism_design.auction.online.no_constant_competitive]])
+and (c) ([[mechanism_design.auction.online.secretary_quarter_competitive]]).</p>
 <h2>References</h2>
 <ul>
 <li>[Roughgarden 2016, Lecture 2, Problem 2.1(a)] Tim Roughgarden, <em>Twenty

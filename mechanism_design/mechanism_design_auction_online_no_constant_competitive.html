@@ -721,6 +721,8 @@
       
         <li><a href="../keywords/nature.html">nature</a></li>
       
+        <li><a href="../keywords/needle.html">needle</a></li>
+      
         <li><a href="../keywords/no-externality.html">no-externality</a></li>
       
         <li><a href="../keywords/normal-form.html">normal-form</a></li>
@@ -1034,9 +1036,9 @@
     <span class="theorem_thmcaption thm-caption">Theorem</span>
     <span class="theorem_thmtitle thm-title">No Deterministic Constant Competitive Ratio</span>
     <div class="thm_header_extras">
-      
+      <span class="checkmark">✓</span>
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-staged">staged</span>
+      <span class="badge status-proved">proved</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-mechanism_design-2e-auction-2e-online-2e-no_constant_competitive">#</a>
@@ -1071,26 +1073,48 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L473"><code>Online.Auction.SingleItemAuction.no_constant_competitive_ratio</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L278"><code>Online.Auction.SingleItemAuction.welfare_can_be_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7446a4e, EconCSLib.Examples.Online.SingleItemAuction
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
           </span>
           
           
           
-          <pre class="lean-signature"><code>theorem no_constant_competitive_ratio (c : F) (hc : 0 &lt; c)
-    (A : SingleItemAuction F) :
-    ∃ v : Fin 2 → F, 0 &lt; max (v 0) (v 1) ∧
-      A.welfare v v &lt; c * max (v 0) (v 1)</code></pre>
+          <pre class="lean-signature"><code>theorem welfare_can_be_zero [Inhabited B] [Field F] [IsStrictOrderedRing F]
+    (hn : 1 ≤ n)
+    (hpos : ∀ (t : Lex (F × B)), A.threshold [] = ↑t → (0 : F) &lt; (ofLex t).1) :
+    ∃ f : Fin n → B × F,
+      (0 : F) &lt; maxV hn (fun i =&gt; (f i).2) ∧ A.welfare f = 0</code></pre>
+        </li>
+        
+        <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
+          
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L325"><code>Online.Auction.SingleItemAuction.no_constant_competitive_ratio</code></a>
+          
+          
+          
+          <span class="lean-source-meta">
+            EconCSLib @ dfd86ef, EconCSLib.Examples.Online.SingleItemAuction
+          </span>
+          
+          
+          
+          <pre class="lean-signature"><code>theorem no_constant_competitive_ratio [Inhabited B] [Field F] [IsStrictOrderedRing F]
+    (hn : 1 ≤ n) (hpos : ∀ (t : Lex (F × B)), A.threshold [] = ↑t → (0 : F) &lt; (ofLex t).1)
+    (c : F) (hc : 0 &lt; c) :
+    ∃ f : Fin n → B × F,
+      (0 : F) &lt; maxV hn (fun i =&gt; (f i).2) ∧
+      A.welfare f &lt; c * maxV hn (fun i =&gt; (f i).2)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7446a4ec85309781f77a1d41d97fc73b0e1c8077/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/dfd86ef9eb261b655315ad9160f6de4fa8220ec4/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
       </p>
       
     </div>
@@ -1099,46 +1123,62 @@
 
   <div class="theorem_thmcontent thm-content body">
     <h1>No Deterministic Constant Competitive Ratio</h1>
-<p><strong>Theorem (Roughgarden, Problem 2.1(b)).</strong> No deterministic online
-single-item auction guarantees a constant fraction of the highest
-valuation against adversarial inputs. For every constant $c &gt; 0$ and every
-pricing rule $A$ there is a valuation profile $v$ (two bidders already
-suffice) with $\max(v_0, v_1) &gt; 0$ and</p>
+<p><strong>Theorem (<code>welfare_can_be_zero</code>, Roughgarden Problem 2.1(b)).</strong> Any
+deterministic online single-item auction
+([[mechanism_design.auction.online.single_item_auction]]) with a positive
+opening threshold can be forced to capture <strong>zero</strong> welfare while the
+optimum is positive.</p>
+<p>For every $A$ with $A.\mathrm{threshold}\,[\,] = \uparrow t \implies 0 &lt; (\mathrm{ofLex}\,t).1$ and every $n \ge 1$,
+there exists an $n$-bidder profile $f$ with $\mathrm{maxV}\,f &gt; 0$ and</p>
 <p>$$
-A.\mathrm{welfare}(v,\, v) \;&lt;\; c \cdot \max(v_0,\, v_1).
+A.\mathrm{welfare}(f) \;=\; 0 .
 $$</p>
+<p><strong>Corollary (<code>no_constant_competitive_ratio</code>).</strong> Hence $A$ has no
+constant competitive ratio: for every $c &gt; 0$ and every $n \ge 1$ some
+profile gives $A.\mathrm{welfare}(f) = 0 &lt; c \cdot \mathrm{maxV}\,f$.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Fix the pricing rule $A$ and the constant $c$. Only the first posted price
-$p_0 = A.\mathrm{price}\,[\,]$ matters, and the adversary plays against it
-with two bidders:</p>
+        <p>Fix $A$ whose opening threshold has positive value component. Two cases:</p>
 <ul>
-<li><strong>If $p_0 &gt; 0$:</strong> present a first bidder with a tiny valuation
-  $v_0 \in (0, p_0)$, below the price, who is rejected; then a second bidder
-  whose valuation is also small. The high value the mechanism <em>could</em> have
-  captured never materialises, so realised welfare is a vanishing fraction
-  of the maximum.</li>
-<li><strong>If $p_0 \le 0$:</strong> the first bidder (with any positive valuation) clears
-  the price immediately, so the item is sold to an arbitrarily low bidder
-  while a much higher second valuation is locked out.</li>
+<li><strong>$A.\mathrm{threshold}\,[\,] = \top$.</strong> The adversary sends bidder $0$ with value $1$ and
+  every later bidder with value $0$. Threshold $\top$ rejects everything, so
+  welfare is $0$ while $\mathrm{maxV} \ge 1 &gt; 0$.</li>
+<li><strong>$A.\mathrm{threshold}\,[\,] = \uparrow t$ with $(\mathrm{ofLex}\,t).1 &gt; 0$.</strong> Let $p = (\mathrm{ofLex}\,t).1$.
+  Bidder $0$ values the item at $p/2$ and every later bidder values it
+  at $0$. Bidder $0$ faces threshold $t$ and bids $p/2 &lt; p$, so the
+  lex acceptance condition $t \le \mathrm{toLex}(p/2, b_0)$ fails — they
+  are rejected. Every remaining bidder has value $0$, so welfare is $0$
+  by the structural lemma <code>welfareAux_all_zero</code>.</li>
 </ul>
-<p>In both branches the adversary drives the welfare ratio below the target
-$c$, because the deterministic price $p_0$ is committed <em>before any bid is
-seen</em> and the adversary tailors the two valuations to that single number.</p>
+<p>The corollary is immediate since $0 &lt; c \cdot \mathrm{maxV}$.</p>
+<h2>Why the quantifiers are exactly these</h2>
+<ul>
+<li><strong>Per $n$, not just $n = 2$.</strong> A posted-price auction may depend on the
+  number of bidders (the secretary auction
+  [[mechanism_design.auction.online.secretary_quarter_competitive]] splits
+  at $\lfloor n/2 \rfloor$), so refuting competitiveness on $2$-bidder
+  inputs says nothing about $3$-bidder inputs. The impossibility must —
+  and does — hold for <strong>every</strong> $n$.</li>
+<li><strong>Positive opening threshold, and $n \ge 1$ is then tight.</strong> With
+  a non-positive value component in the opening threshold, a lone first
+  bidder wins the item for free, so a single-bidder auction would capture
+  full welfare. Requiring a positive opening threshold — the natural
+  assumption for an auction — removes exactly that obstruction.</li>
+</ul>
 <h2>Why it matters</h2>
-<p>This is the impossibility half of Problem 2.1, and it motivates the two
-escapes used elsewhere in the example file:</p>
+<p>This is the impossibility half of Problem 2.1, and it motivates the
+escape used in the positive result:</p>
 <ul>
 <li><strong>Randomise the input</strong> (rather than the mechanism): under uniformly
   random arrival order the secretary-style threshold rule recovers a
   constant guarantee, the $1/4$ bound of
   [[mechanism_design.auction.online.secretary_quarter_competitive]].</li>
 <li>The contrast is the standard online-algorithms story: worst-case
-  competitive analysis can be hopeless precisely when the algorithm must
-  commit before seeing the data, while average-case (random-order) analysis
-  remains informative.</li>
+  competitive analysis is hopeless because the algorithm must commit to
+  the opening price before seeing any bid, while average-case
+  (random-order) analysis remains informative.</li>
 </ul>
 <h2>References</h2>
 <ul>
@@ -1181,7 +1221,7 @@ escapes used elsewhere in the example file:</p>
 
   
   <footer class="tags">
-    <span class="tag">auction</span><span class="tag">online-algorithm</span><span class="tag">competitive-ratio</span><span class="tag">impossibility</span><span class="tag">posted-price</span>
+    <span class="tag">auction</span><span class="tag">online-algorithm</span><span class="tag">competitive-ratio</span><span class="tag">impossibility</span><span class="tag">posted-price</span><span class="tag">counterexample</span>
   </footer>
   
 </article>
