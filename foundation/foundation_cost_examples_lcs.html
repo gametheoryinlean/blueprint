@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/LCS.lean#L62"><code>LCS.lcs</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L62"><code>LCS.lcs</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.LCS
           </span>
           
           
@@ -1102,12 +1104,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/LCS.lean#L90"><code>LCS.lcs_cost_subset</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L90"><code>LCS.lcs_cost_subset</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.LCS
           </span>
           
           
@@ -1120,12 +1122,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/LCS.lean#L131"><code>LCS.lcs_cost_card_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L131"><code>LCS.lcs_cost_card_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.LCS
           </span>
           
           
@@ -1137,7 +1139,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/LCS.lean#L1"><code>EconCSLib.Examples.CostM.LCS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L1"><code>EconCSLib.Examples.CostM.LCS</code></a>
       </p>
       
     </div>
@@ -1153,23 +1155,23 @@ $$
   (\operatorname{lcs}\,xs\,ys).\mathrm{cost} \;\subseteq\;
     \{0,\dots,|xs|\} \times \{0,\dots,|ys|\},
 $$
-which is <code>lcs_cost_subset</code>; taking cardinalities gives the polynomial-space
+which is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L90"><code>lcs_cost_subset</code></a>; taking cardinalities gives the polynomial-space
 bound
 $$
   (\operatorname{lcs}\,xs\,ys).\mathrm{cost}.\mathrm{toFinset}.\mathrm{card}
     \;\le\; (|xs|+1)\,(|ys|+1),
 $$
-i.e. <code>lcs_cost_card_le</code>. This is the canonical polynomial-space DP example —
+i.e. <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L131"><code>lcs_cost_card_le</code></a>. This is the canonical polynomial-space DP example —
 the 2-D analogue of <a class="node-ref" data-node-id="foundation.cost.examples.memo_fib" href="cost/examples/foundation_cost_examples_memo_fib.html">Worked Example: Memoized Fibonacci Footprint</a>.</p>
-<p><code>lcs</code> uses the bare <code>CostM.tick</code> form (rather than the <code>✓</code> macro) at its
+<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L62"><code>lcs</code></a> uses the bare <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L228"><code>CostM.tick</code></a> form (rather than the <code>✓</code> macro) at its
 footprint-recording points, since each tick records a specific grid cell
 <code>Visited.singleton (i, j)</code> rather than a unit cost.</p>
 <h2>Lean declarations</h2>
 <ul>
 <li><code>LCS.lcs : List α → List α → CostM (Visited (ℕ × ℕ)) ℕ</code>.</li>
-<li><code>LCS.lcs_cost_subset</code> — footprint <code>⊆</code> the DP grid (via a private
-  <code>range_prod_mono</code> monotonicity lemma).</li>
-<li><code>LCS.lcs_cost_card_le</code> — the <code>(|xs|+1)(|ys|+1)</code> cell-count bound.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L90"><code>LCS.lcs_cost_subset</code></a> — footprint <code>⊆</code> the DP grid (via a private
+  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L82"><code>range_prod_mono</code></a> monotonicity lemma).</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/LCS.lean#L131"><code>LCS.lcs_cost_card_le</code></a> — the <code>(|xs|+1)(|ys|+1)</code> cell-count bound.</li>
 </ul>
 <h2>References</h2>
 <ul>

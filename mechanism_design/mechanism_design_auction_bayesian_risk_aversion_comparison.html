@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1076,7 +1078,7 @@
     <h1>Auction Comparisons Under Risk Aversion</h1>
 <p><strong>Theorem (MSZ Thm 12.25, 12.26, 12.29; Krishna Ch 4).</strong> Under
 symmetric independent private values, the <em>risk-neutral</em> revenue
-equivalence ([[mechanism_design.myerson.revenue_equivalence]]) between
+equivalence (<a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>) between
 first-price, second-price, and all-pay auctions breaks down once
 bidders are risk averse. The standard ordering of expected revenue
 under bidder risk aversion is:</p>
@@ -1090,7 +1092,7 @@ prefer second-price to first-price.</p>
 <h2>Setup</h2>
 <ul>
 <li>Symmetric IPV environment as in
-  [[mechanism_design.auction.bayesian.single_item_framework]]: types $t_i \sim F$ i.i.d.
+  <a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>: types $t_i \sim F$ i.i.d.
   on $[0, \omega]$.</li>
 <li>Each bidder has a strictly increasing, concave utility function
   $u : \mathbb{R} \to \mathbb{R}$ (e.g. CARA: $u(x) = -e^{-\rho x}$
@@ -1112,7 +1114,7 @@ uncertainty about the marginal opponent's bid:
 <p>The result is that the first-price equilibrium bid function
 $\beta^{\mathrm{FP}}_u(t)$ under risk aversion lies strictly above the
 risk-neutral counterpart from
-[[mechanism_design.auction.bayesian.symmetric_first_price_equilibrium]]: $\beta^{\mathrm{FP}}_u(t) &gt; \beta^{\mathrm{FP}}_{\text{rn}}(t)$ for every interior type $t$. Higher bids ⇒ higher seller revenue.</p>
+<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.symmetric_first_price_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>: $\beta^{\mathrm{FP}}_u(t) &gt; \beta^{\mathrm{FP}}_{\text{rn}}(t)$ for every interior type $t$. Higher bids ⇒ higher seller revenue.</p>
 <p>In second-price (and all-pay), bidders' optimal strategies do <em>not</em>
 depend on $u$: truth-telling in second-price and the deterministic
 "pay your bid no matter what" structure in all-pay both leave the
@@ -1152,9 +1154,9 @@ the risk-neutral case.</p>
 <li><code>bidder_prefers_secondPrice_under_riskAversion</code> (welfare comparison).</li>
 </ul>
 <p>Dependencies: a Lean treatment of concave utility (likely via Mathlib's
-<code>ConvexOn</code> / <code>ConcaveOn</code>); the risk-neutral first-price equilibrium
-([[mechanism_design.auction.bayesian.symmetric_first_price_equilibrium]]); the
-all-pay equilibrium ([[mechanism_design.auction.bayesian.all_pay_equilibrium]]).
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Convex/Function.lean#L54"><code>ConvexOn</code></a> / <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Convex/Function.lean#L59"><code>ConcaveOn</code></a>); the risk-neutral first-price equilibrium
+(<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.symmetric_first_price_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>); the
+all-pay equilibrium (<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.all_pay_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_all_pay_equilibrium.html">All-Pay Auction Symmetric Equilibrium</a>).
 Tracked in the MSZ Ch.12 auction gap review.</p>
 <h2>References</h2>
 <ul>

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L476"><code>SocialChoice.Voting.strategyproof_monotonic</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L476"><code>SocialChoice.Voting.strategyproof_monotonic</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.GibbardSatterthwaite
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.GibbardSatterthwaite
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L1"><code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L1"><code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code></a>
       </p>
       
     </div>
@@ -1105,9 +1107,9 @@
     <h1>Strategy-Proof ⇒ Monotonic</h1>
 <p><strong>Theorem.</strong> Every strategy-proof social choice function on a finite voter
 type is monotonic.</p>
-<p>That is, ([[social_choice.voting.strategyproof]]) implies
-([[social_choice.voting.monotonic_scf]]).</p>
-<p>In Lean this is <code>SocialChoice.Voting.strategyproof_monotonic</code>. The statement is
+<p>That is, (<a class="node-ref" data-node-id="social_choice.voting.strategyproof" href="voting/social_choice_voting_strategyproof.html">Strategy-Proof Social Choice Function</a>) implies
+(<a class="node-ref" data-node-id="social_choice.voting.monotonic_scf" href="voting/social_choice_voting_monotonic_scf.html">Monotonic Social Choice Function</a>).</p>
+<p>In Lean this is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L476"><code>SocialChoice.Voting.strategyproof_monotonic</code></a>. The statement is
 present in <code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code>; the proof is
 currently a <code>sorry</code>, with the standard finite-replacement argument outlined
 below.</p>
@@ -1144,7 +1146,7 @@ $Q$ at a winner $a = G(P)$, then strategy-proofness fails too.</p>
    profile $R_{k-1}$ truthful $i_k$ obtains $a$; at $R_k$ — obtained from
    $R_{k-1}$ by $i_k$ reporting $Q_{i_k}$ instead of $P_{i_k}$ — they
    obtain $a' \prec_{P_{i_k}} a$, contradicting strategy-proofness
-   ([[social_choice.voting.strategyproof]]) applied to the deviation
+   (<a class="node-ref" data-node-id="social_choice.voting.strategyproof" href="voting/social_choice_voting_strategyproof.html">Strategy-Proof Social Choice Function</a>) applied to the deviation
    $Q_{i_k}$.</p>
 </li>
 </ol>

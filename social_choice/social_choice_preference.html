@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1060,12 +1062,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L134"><code>IsPreference</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L134"><code>IsPreference</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1076,12 +1078,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L144"><code>Pref</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L144"><code>Pref</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1092,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>
@@ -1111,10 +1113,10 @@ $$</p>
 <p>A <em>preference</em> on $A$ is a relation $R$ together with a proof that the three
 axioms above hold; equivalently, $R$ is a complete preorder on $A$. We write
 $R(a,b)$ to mean "$a$ is weakly preferred to $b$".</p>
-<p>In Lean this is the typeclass <code>IsPreference</code> together with the bundled
+<p>In Lean this is the typeclass <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L134"><code>IsPreference</code></a> together with the bundled
 structure <code>Pref A</code>, providing the relation field <code>rel</code> and a <code>CoeFun</code> so
 <code>p a b</code> reads as $p(a,b)$.</p>
-<p>This foundation-level <code>Pref</code> interface is the canonical single source of truth
+<p>This foundation-level <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L144"><code>Pref</code></a> interface is the canonical single source of truth
 for an agent's ordinal taste over outcomes. Social choice, fair division, and
 matching all build on it.</p>
 <h2>References</h2>

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Visited.lean#L53"><code>Visited</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L53"><code>Visited</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Visited
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Visited
           </span>
           
           
@@ -1089,12 +1091,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Visited.lean#L60"><code>Visited.toFinset</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L60"><code>Visited.toFinset</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Visited
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Visited
           </span>
           
           
@@ -1105,12 +1107,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Visited.lean#L63"><code>Visited.ofFinset</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L63"><code>Visited.ofFinset</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Visited
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Visited
           </span>
           
           
@@ -1121,12 +1123,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Visited.lean#L75"><code>Visited.singleton</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L75"><code>Visited.singleton</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Visited
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Visited
           </span>
           
           
@@ -1137,7 +1139,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Visited.lean#L1"><code>EconCSLib.Foundation.CostM.Visited</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L1"><code>EconCSLib.Foundation.CostM.Visited</code></a>
       </p>
       
     </div>
@@ -1160,14 +1162,14 @@ the second visit is free, so the cost (the footprint) is exactly the set of
 <p><code>Visited α</code> is a <strong>type synonym</strong> for <code>Finset α</code> (<code>def Visited α := Finset α</code>),
 introduced specifically to firewall Mathlib's scoped pointwise <code>Zero (Finset α)</code>
 instance: the cost-monoid <code>0 = ∅</code> and <code>+ = ∪</code> must not collide with pointwise
-arithmetic on finsets. <code>toFinset</code>/<code>ofFinset</code> move across the synonym boundary.</p>
+arithmetic on finsets. <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L60"><code>toFinset</code></a>/<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L63"><code>ofFinset</code></a> move across the synonym boundary.</p>
 <h2>Lean declarations</h2>
 <ul>
-<li><code>Visited</code> — the <code>Finset</code> type synonym; <code>Visited.toFinset</code>/<code>Visited.ofFinset</code>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L53"><code>Visited</code></a> — the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Defs.lean#L75"><code>Finset</code></a> type synonym; <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L60"><code>Visited.toFinset</code></a>/<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L63"><code>Visited.ofFinset</code></a>
   the round-trip maps and <code>Visited.singleton a</code> the one-point footprint.</li>
-<li><code>Zero</code>/<code>Add [DecidableEq α]</code>/<code>AddMonoid</code> instances are anonymous.</li>
-<li><code>Visited.ext</code> plus the <code>simp</code> lemmas <code>toFinset_zero</code>, <code>toFinset_singleton</code>,
-  <code>toFinset_add</code> reduce footprint reasoning to ordinary <code>Finset</code> set algebra.</li>
+<li><code>Zero</code>/<code>Add [DecidableEq α]</code>/<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean#L638"><code>AddMonoid</code></a> instances are anonymous.</li>
+<li><code>Visited.ext</code> plus the <code>simp</code> lemmas <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Insert.lean#L577"><code>toFinset_zero</code></a>, <code>toFinset_singleton</code>,
+  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Basic.lean#L466"><code>toFinset_add</code></a> reduce footprint reasoning to ordinary <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Defs.lean#L75"><code>Finset</code></a> set algebra.</li>
 </ul>
 <p>Worked examples: the 1-D memoization footprint of Fibonacci
 (<a class="node-ref" data-node-id="foundation.cost.examples.memo_fib" href="cost/examples/foundation_cost_examples_memo_fib.html">Worked Example: Memoized Fibonacci Footprint</a>, cost <code>= range (n+1)</code>) and the 2-D
@@ -1181,7 +1183,7 @@ DP-grid footprint of longest common subsequence
 </ul>
 <h2>Provenance</h2>
 <ul>
-<li><code>Visited</code> is an EconCSLib addition (no <code>TimeM</code> counterpart upstream), built on
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Visited.lean#L53"><code>Visited</code></a> is an EconCSLib addition (no <code>TimeM</code> counterpart upstream), built on
   the <a href="https://github.com/leanprover/cslib">leanprover/cslib</a>-derived monad
   core (Apache 2.0).</li>
 </ul>

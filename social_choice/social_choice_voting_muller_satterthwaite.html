@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L447"><code>SocialChoice.Voting.muller_satterthwaite</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L447"><code>SocialChoice.Voting.muller_satterthwaite</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.GibbardSatterthwaite
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.GibbardSatterthwaite
           </span>
           
           
@@ -1097,7 +1099,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L1"><code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L1"><code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code></a>
       </p>
       
     </div>
@@ -1108,10 +1110,10 @@
     <h1>Muller–Satterthwaite Theorem</h1>
 <p><strong>Theorem.</strong> Let $N$ be a finite nonempty voter type and $A$ a finite
 alternative set with $|A| \ge 3$. Every unanimous
-([[social_choice.voting.unanimity]]) and monotonic
-([[social_choice.voting.monotonic_scf]]) social choice function is
-dictatorial ([[social_choice.voting.dictatorial_scf]]).</p>
-<p>In Lean: <code>SocialChoice.Voting.muller_satterthwaite</code>. The statement is
+(<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and monotonic
+(<a class="node-ref" data-node-id="social_choice.voting.monotonic_scf" href="voting/social_choice_voting_monotonic_scf.html">Monotonic Social Choice Function</a>) social choice function is
+dictatorial (<a class="node-ref" data-node-id="social_choice.voting.dictatorial_scf" href="voting/social_choice_voting_dictatorial_scf.html">Dictatorial Social Choice Function</a>).</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L447"><code>SocialChoice.Voting.muller_satterthwaite</code></a>. The statement is
 present in <code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code>; the proof is
 currently a <code>sorry</code>, with the standard SCF-from-SWF reduction outlined below.</p>
     
@@ -1144,12 +1146,12 @@ other alternatives in everyone's ranking.</p>
    independent of how voters rank irrelevant alternatives.)</p>
 </li>
 <li>
-<p><strong>$F$ is a <code>Pref</code>.</strong> Transitivity of $F(P)$ uses monotonicity plus a
+<p><strong>$F$ is a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L144"><code>Pref</code></a>.</strong> Transitivity of $F(P)$ uses monotonicity plus a
    third-alternative case analysis; reflexivity and totality follow from
    the unanimous outcome.</p>
 </li>
 <li>
-<p><strong>Apply Arrow</strong> ([[social_choice.voting.arrow_impossibility]]) to
+<p><strong>Apply Arrow</strong> (<a class="node-ref" data-node-id="social_choice.voting.arrow_impossibility" href="voting/social_choice_voting_arrow_impossibility.html">Arrow&#x27;s Impossibility Theorem</a>) to
    conclude $F$ is dictatorial: some voter $i$'s strict preference
    determines $F(P)$ for every pair.</p>
 </li>

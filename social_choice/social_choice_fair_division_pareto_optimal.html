@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L42"><code>SocialChoice.FairDivision.IsParetoOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L42"><code>SocialChoice.FairDivision.IsParetoOptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Fairness
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Fairness
           </span>
           
           
@@ -1091,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Fairness</code></a>
       </p>
       
     </div>
@@ -1102,7 +1104,7 @@
     <h1>Pareto Optimal Allocation</h1>
 <p>For a feasibility predicate $F : \mathrm{Allocation}\ N\ S \to \mathrm{Prop}$,
 a utility profile $u : N \to S \to \mathbb{R}$, and an allocation $A$
-([[social_choice.fair_division.allocation]]), $A$ is <em>Pareto optimal</em> (PO)
+(<a class="node-ref" data-node-id="social_choice.fair_division.allocation" href="fair_division/social_choice_fair_division_allocation.html">Allocation</a>), $A$ is <em>Pareto optimal</em> (PO)
 if no feasible allocation weakly Pareto-improves on it with at least one
 strict improvement:
 $$
@@ -1110,11 +1112,11 @@ $$
 \bigl(\forall i,\ u_i(A(i)) \le u_i(B(i))\bigr) \;\wedge\;
 \bigl(\exists i,\ u_i(A(i)) &lt; u_i(B(i))\bigr).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.IsParetoOptimal</code>. The feasibility
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L42"><code>SocialChoice.FairDivision.IsParetoOptimal</code></a>. The feasibility
 predicate is a plain hypothesis (rather than being baked into a class),
 so the same definition applies to divisible and indivisible
 specializations
-([[social_choice.fair_division.indivisible.pareto_optimal]]).</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.pareto_optimal" href="fair_division/indivisible/social_choice_fair_division_indivisible_pareto_optimal.html">Indivisible Pareto Optimal</a>).</p>
 <p>PO is the classical efficiency yardstick: it asks only that no other
 feasible allocation can make every agent at least as well off and someone
 strictly better off.</p>
@@ -1122,7 +1124,7 @@ strictly better off.</p>
 exists via the <em>maximum Nash welfare</em> allocation
 (Caragiannis–Kurokawa–Moulin–Procaccia–Shah–Wang 2019) and (with a
 different output) via <em>envy-cycle elimination</em>
-([[social_choice.fair_division.indivisible.envy_cycle_algorithm]]).</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_cycle_algorithm" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle_algorithm.html">Envy-Cycle Elimination Algorithm</a>).</p>
 <h2>References</h2>
 <ul>
 <li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Pareto optimality in fair division.</li>

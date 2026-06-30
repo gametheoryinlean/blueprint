@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L37"><code>SocialChoice.FairDivision.IsEquitable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L37"><code>SocialChoice.FairDivision.IsEquitable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Fairness
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Fairness
           </span>
           
           
@@ -1089,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Fairness</code></a>
       </p>
       
     </div>
@@ -1098,18 +1100,18 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Equitable Allocation</h1>
-<p>An allocation $A : N \to S$ ([[social_choice.fair_division.allocation]])
+<p>An allocation $A : N \to S$ (<a class="node-ref" data-node-id="social_choice.fair_division.allocation" href="fair_division/social_choice_fair_division_allocation.html">Allocation</a>)
 is <em>equitable</em> (EQ) under a utility profile $u$ if every agent assigns the
 same numeric value to their own share:
 $$
 \forall i, j \in N,\ u_i(A(i)) = u_j(A(j)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.IsEquitable</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L37"><code>SocialChoice.FairDivision.IsEquitable</code></a>.</p>
 <p>Equitability is meaningful only when utilities are interpersonally
 comparable — typically when each agent's $u_i$ is <em>normalized</em> so the
 whole resource is valued at the same total (often $1$). Without
 normalization, equating "$u_i(A_i) = u_j(A_j)$" mixes apples and oranges.</p>
-<p>EQ is incomparable with EF ([[social_choice.fair_division.envy_free]]):</p>
+<p>EQ is incomparable with EF (<a class="node-ref" data-node-id="social_choice.fair_division.envy_free" href="fair_division/social_choice_fair_division_envy_free.html">Envy-Free Allocation</a>):</p>
 <ul>
 <li><em>EF does not imply EQ.</em> Two agents with disjoint goods can both be
   envy-free yet derive very different self-utilities.</li>

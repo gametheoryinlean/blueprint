@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L399"><code>SocialChoice.FairDivision.Divisible.strom_A</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L399"><code>SocialChoice.FairDivision.Divisible.strom_A</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1089,12 +1091,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L406"><code>SocialChoice.FairDivision.Divisible.strom_A_closed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L406"><code>SocialChoice.FairDivision.Divisible.strom_A_closed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1105,12 +1107,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L416"><code>SocialChoice.FairDivision.Divisible.strom_A_covers</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L416"><code>SocialChoice.FairDivision.Divisible.strom_A_covers</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1122,7 +1124,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1139,7 +1141,7 @@ A(i, j) \;=\; \{x \in S \mid \forall k \in \mathrm{Fin}\ n,\ v(x, j, k) \le v(x,
 $$</p>
 <p>In Lean: <code>strom_A i j</code>.</p>
 <h2>Closedness</h2>
-<p><code>strom_A_closed</code>: $A(i, j)$ is closed in $\mathrm{Fin}\ n \to \mathbb{R}$.</p>
+<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L406"><code>strom_A_closed</code></a>: $A(i, j)$ is closed in $\mathrm{Fin}\ n \to \mathbb{R}$.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1147,10 +1149,10 @@ $$</p>
         <p>The defining condition is a conjunction of $n$ inequalities of
 the form $v(x, j, k) \le v(x, j, i)$. Each inequality cuts out a closed
 half-space because both sides are continuous in $x$
-([[social_choice.fair_division.divisible.stromquist_value_continuous]]).
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_value_continuous" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_value_continuous.html">Piece-Value Function Is Continuous on the Division Simplex</a>).
 The intersection of finitely many closed sets is closed.</p>
 <h2>Cover property</h2>
-<p><code>strom_A_covers</code>: for each fixed $j$, the family $\{A(i, j) : i \in \mathrm{Fin}\ n\}$
+<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L416"><code>strom_A_covers</code></a>: for each fixed $j$, the family $\{A(i, j) : i \in \mathrm{Fin}\ n\}$
 covers the simplex $S$.</p>
 <p><em>Proof.</em> For any $x \in S$, agent $j$'s values $v(x, j, k)$ over $k$ form
 a finite collection of reals; some $i$ achieves the maximum. That $i$
@@ -1158,11 +1160,11 @@ witnesses $x \in A(i, j)$.</p>
 <h2>Why this matters for KKM</h2>
 <p>The pair (closed $A(i, j)$, family that covers the simplex) is exactly
 the input shape for a KKM-type argument: combined with the "facets-don't-
-touch" property of <code>strom_A</code> (<code>strom_A</code> does not intersect the face
+touch" property of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L399"><code>strom_A</code></a> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L399"><code>strom_A</code></a> does not intersect the face
 opposite vertex $i$), this lets the KKM lemma find a common point in
 $\bigcap_i \bigcup_j A(i, j)$ — which yields a fair division.</p>
 <p>The <em>unique</em>-preference refinement
-([[social_choice.fair_division.divisible.stromquist_unique_preference_sets]])
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unique_preference_sets" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unique_preference_sets.html">Stromquist Unique-Preference Sets B(i, j)</a>)
 strengthens the cover to one with pairwise-disjoint witnesses, giving the
 final EF assignment.</p>
 <h2>References</h2>

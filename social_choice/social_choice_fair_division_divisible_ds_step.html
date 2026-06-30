@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
       </p>
       
     </div>
@@ -1115,14 +1117,14 @@ P(n) \;\;\text{is}\;\;
 \mathrm{IsAllocation}\ A \wedge \mathrm{IsProportional}\ n\ \mu\ A,
 $$</p>
 <p>proved by induction on $n$ in
-<code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code>. The
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code></a>. The
 proof uses three concrete pieces:</p>
 <h2>Algorithm shape</h2>
 <ol>
 <li>
 <p><strong>Threshold step.</strong> For each remaining agent $i$, find $t_i \in I$ with
    $\mu_i([0, t_i]) = \mu_i(I)/n$ via the IVT lemma
-   ([[social_choice.fair_division.divisible.cut_exists]]).</p>
+   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_exists.html">IVT — Cut Point Exists for Non-Atomic Measures on [0,1]</a>).</p>
 </li>
 <li>
 <p><strong>Argmin selection.</strong> Let $i^* = \arg\min_i t_i$ and $t^* = t_{i^*}$.
@@ -1153,14 +1155,14 @@ proof uses three concrete pieces:</p>
 </li>
 </ul>
 <h2>Lean implementation notes</h2>
-<p>The Lean proof uses <code>Fin.insertNth</code> to fold the recursively-produced
+<p>The Lean proof uses <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Fin/Tuple/Basic.lean#L840"><code>Fin.insertNth</code></a> to fold the recursively-produced
 sub-allocation back into a full allocation over <code>Fin n</code>. Partition
 validity (measurability, disjointness, cover) and proportionality are
-established by <code>ennreal_prop_step</code> — a packaged induction-step lemma
+established by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L202"><code>ennreal_prop_step</code></a> — a packaged induction-step lemma
 that combines the moving-knife construction with monotonicity bounds in
-<code>ENNReal</code>.</p>
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/ENNReal/Basic.lean#L101"><code>ENNReal</code></a>.</p>
 <p>All sorries are closed; the resulting public theorem is
-[[social_choice.fair_division.divisible.dubins_spanier_proportional]].</p>
+<a class="node-ref" data-node-id="social_choice.fair_division.divisible.dubins_spanier_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html">Dubins–Spanier Proportional Existence</a>.</p>
 <h2>References</h2>
 <ul>
 <li>Dubins, L. E. and Spanier, E. H. (1961). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 68: 1–17.</li>

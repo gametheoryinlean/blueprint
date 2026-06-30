@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L175"><code>SocialChoice.FairDivision.Divisible.cutter_isEnvyFree_of_fair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L175"><code>SocialChoice.FairDivision.Divisible.cutter_isEnvyFree_of_fair</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>
       </p>
       
     </div>
@@ -1104,13 +1106,13 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Cutter Does Not Envy at a Fair Cut</h1>
 <p><strong>Theorem.</strong> If the cut point $t \in I$ is <em>fair</em> for the cutter
-([[social_choice.fair_division.divisible.cut_and_choose_alloc]]) — i.e.
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_and_choose_alloc" href="fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_alloc.html">Cut-and-Choose Allocation and Fair Cut Point</a>) — i.e.
 $\mu_0([0, t]) = \mu_0((t, 1])$ — then in the cut-and-choose allocation,
 the cutter (agent 0) does not envy the chooser:
 $$
 \mu_0\bigl(A_{\mathrm{chooser}}\bigr) \;\le\; \mu_0\bigl(A_{\mathrm{cutter}}\bigr).
 $$</p>
-<p>In Lean: <code>cutter_isEnvyFree_of_fair</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L175"><code>cutter_isEnvyFree_of_fair</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1122,12 +1124,12 @@ $\mu_0(A_{\mathrm{cutter}}) = \mu_0(A_{\mathrm{chooser}})$, hence the
 no-envy inequality is in fact an equality.</p>
 <h2>Significance</h2>
 <p>This complements the chooser's structural guarantee
-([[social_choice.fair_division.divisible.chooser_envy_free]]): when the
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.chooser_envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_chooser_envy_free.html">Chooser Is Always Envy-Free</a>): when the
 cutter cuts at a fair point, the <em>cutter</em> becomes indifferent between the
 two halves and therefore cannot envy. Combining the two gives full
-envy-freeness ([[social_choice.fair_division.divisible.cut_and_choose_envy_free]]).</p>
+envy-freeness (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_and_choose_envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_envy_free.html">Cut-and-Choose Is Envy-Free at a Fair Cut</a>).</p>
 <p>Fair cut points always exist for finite non-atomic cutter measures
-([[social_choice.fair_division.divisible.fair_cut_exists]]), so cut-and-
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.fair_cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_fair_cut_exists.html">Fair Cut Point Exists</a>), so cut-and-
 choose with a fair cut is a constructive EF-existence procedure for two
 agents.</p>
 <h2>References</h2>

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L65"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isProportional_additive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L65"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isProportional_additive</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.Implications
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Implications
           </span>
           
           
@@ -1099,7 +1101,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Implications</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Implications</code></a>
       </p>
       
     </div>
@@ -1109,14 +1111,14 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>EF ⇒ PROP (Additive Valuations, Complete Allocations)</h1>
 <p><strong>Theorem.</strong> Let $w : N \to G \to \mathbb{R}$ be an additive valuation
-([[social_choice.fair_division.indivisible.additive_valuation]]),
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>),
 <code>allGoods : Finset G</code> the outer good set, and $A$ a complete allocation
-of <code>allGoods</code> ([[social_choice.fair_division.indivisible.allocation]]).
+of <code>allGoods</code> (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.allocation" href="fair_division/indivisible/social_choice_fair_division_indivisible_allocation.html">Indivisible Allocation</a>).
 If $A$ is envy-free under $w.\mathrm{toValuation}$
-([[social_choice.fair_division.indivisible.envy_free]]), then $A$ is
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_free" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_free.html">Indivisible Envy-Free</a>), then $A$ is
 proportional with population size $|N|$
-([[social_choice.fair_division.indivisible.proportional]]).</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isProportional_additive</code>.</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional.html">Indivisible Proportional</a>).</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L65"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isProportional_additive</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1132,7 +1134,7 @@ v_k(\mathrm{allGoods})
 \end{aligned}
 $$</p>
 <p>The first equality combines <code>IsAllocation.complete</code> (the cover) with
-<code>AdditiveValuation.toValuation_union</code> extended to a <code>biUnion</code> over the
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L89"><code>AdditiveValuation.toValuation_union</code></a> extended to a <code>biUnion</code> over the
 disjoint family.</p>
 <h2>Caveats</h2>
 <ul>

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Basic.lean#L329"><code>SocialChoice.Voting.Dictatorial</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L329"><code>SocialChoice.Voting.Dictatorial</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Basic
           </span>
           
           
@@ -1091,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1107,15 +1109,15 @@ $$
 $$
 where $\mathrm{top}_{P_i}$ is voter $i$'s most-preferred alternative under
 $P_i$.</p>
-<p>In Lean: <code>SocialChoice.Voting.Dictatorial</code>, defined as
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L329"><code>SocialChoice.Voting.Dictatorial</code></a>, defined as
 <code>∃ i, ∀ P, f P = {topChoice P i}</code>.</p>
 <p>This is the voting-rule counterpart to dictatorship for social welfare
-functions ([[social_choice.voting.dictatorial_swf]]): rather than copying the
+functions (<a class="node-ref" data-node-id="social_choice.voting.dictatorial_swf" href="voting/social_choice_voting_dictatorial_swf.html">Dictatorial Social Welfare Function</a>): rather than copying the
 dictator's full ranking, the rule returns the dictator's unique top choice as
 the sole winner at every profile.</p>
-<p>Gibbard–Satterthwaite ([[social_choice.voting.gibbard_satterthwaite]]) shows
+<p>Gibbard–Satterthwaite (<a class="node-ref" data-node-id="social_choice.voting.gibbard_satterthwaite" href="voting/social_choice_voting_gibbard_satterthwaite.html">Gibbard–Satterthwaite Theorem</a>) shows
 that for $|A| \ge 3$ on a finite nonempty voter set, a resolute rule that is
-unanimous and strategy-proof ([[social_choice.voting.strategyproof]]) must be
+unanimous and strategy-proof (<a class="node-ref" data-node-id="social_choice.voting.strategyproof" href="voting/social_choice_voting_strategyproof.html">Strategy-Proof Social Choice Function</a>) must be
 dictatorial in this sense.</p>
 <h2>References</h2>
 <ul>

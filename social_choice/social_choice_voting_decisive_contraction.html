@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L555"><code>SocialChoice.Voting.decisive_contraction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L555"><code>SocialChoice.Voting.decisive_contraction</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1093,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1103,11 +1105,11 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Coalition Contraction — Splitting a Decisive Coalition</h1>
 <p><strong>Theorem.</strong> Let $F$ be a social welfare function satisfying unanimity
-([[social_choice.voting.unanimity]]) and IIA ([[social_choice.voting.iia]]),
+(<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and IIA (<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>),
 on a finite voter type with $|A| \ge 3$. If a decisive coalition
-$C$ ([[social_choice.voting.is_decisive]]) has at least two members, then
+$C$ (<a class="node-ref" data-node-id="social_choice.voting.is_decisive" href="voting/social_choice_voting_is_decisive.html">Decisive Coalition and Dictator</a>) has at least two members, then
 there exists a strictly smaller nonempty decisive coalition $D \subsetneq C$.</p>
-<p>In Lean: <code>SocialChoice.Voting.decisive_contraction</code> (a public lemma of the Arrow
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L555"><code>SocialChoice.Voting.decisive_contraction</code></a> (a public lemma of the Arrow
 development in <code>Decisive.lean</code>).</p>
     
     <details class="proof-details">
@@ -1132,7 +1134,7 @@ $(C_1, C^c, C_2)$:</p>
 <p><strong>Case $x \succ_{F(P_0)} z$.</strong> Every voter in $C$ has
   $x \succ z$ in $P_0$, while every voter outside $C$ has the opposite.
   Applying the field-expansion lemma
-  ([[social_choice.voting.decisive_spread]]) to the witness pair
+  (<a class="node-ref" data-node-id="social_choice.voting.decisive_spread" href="voting/social_choice_voting_decisive_spread.html">Field Expansion — Decisive on One Pair Implies Decisive Everywhere</a>) to the witness pair
   $(x, z)$ shows $C_1$ is weakly decisive for $(x, z)$, hence decisive.
   But $|C_1| = 1 &lt; |C|$, so $C_1$ is the smaller decisive coalition.</p>
 </li>

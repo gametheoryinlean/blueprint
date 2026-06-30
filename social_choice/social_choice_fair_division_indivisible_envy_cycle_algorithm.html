@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L926"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L926"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -1093,12 +1095,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L932"><code>SocialChoice.FairDivision.Indivisible.envyCycleRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L932"><code>SocialChoice.FairDivision.Indivisible.envyCycleRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -1112,7 +1114,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></a>
       </p>
       
     </div>
@@ -1130,17 +1132,17 @@ while remaining is nonempty:
   A[i] := A[i] ∪ {g}
   remaining := remaining \ {g}
 return A</code></p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation</code>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L926"><code>SocialChoice.FairDivision.Indivisible.envyCycleAllocation</code></a>
 (top-level worker) and
-<code>SocialChoice.FairDivision.Indivisible.envyCycleRule</code> (bundled rule
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L932"><code>SocialChoice.FairDivision.Indivisible.envyCycleRule</code></a> (bundled rule
 form).</p>
 <h2>Why each step is needed</h2>
 <ul>
 <li>
-<p><strong>Eliminate cycles first.</strong> Each call to <code>eliminateAllCycles</code>
-  ([[social_choice.fair_division.indivisible.eliminate_all_cycles]])
+<p><strong>Eliminate cycles first.</strong> Each call to <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L479"><code>eliminateAllCycles</code></a>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.eliminate_all_cycles" href="fair_division/indivisible/social_choice_fair_division_indivisible_eliminate_all_cycles.html">Eliminate All Envy Cycles</a>)
   ensures the envy graph is acyclic, which (by
-  [[social_choice.fair_division.indivisible.acyclic_has_source]])
+  <a class="node-ref" data-node-id="social_choice.fair_division.indivisible.acyclic_has_source" href="fair_division/indivisible/social_choice_fair_division_indivisible_acyclic_has_source.html">Acyclic Envy Graph Has a Source</a>)
   guarantees that some agent is a source.</p>
 </li>
 <li>
@@ -1151,24 +1153,24 @@ form).</p>
 </li>
 <li>
 <p><strong>Loop.</strong> The outer loop runs <code>|allGoods|</code> times. Each iteration may
-  do many <code>rotateBundles</code> calls inside <code>eliminateAllCycles</code>, but each
+  do many <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L218"><code>rotateBundles</code></a> calls inside <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L479"><code>eliminateAllCycles</code></a>, but each
   rotation strictly decreases the Pareto-domination count
-  ([[social_choice.fair_division.indivisible.pareto_dom_count]]),
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.pareto_dom_count" href="fair_division/indivisible/social_choice_fair_division_indivisible_pareto_dom_count.html">Pareto-Domination Count Termination Measure</a>),
   giving overall termination.</p>
 </li>
 </ul>
 <h2>Termination</h2>
 <p>The outer loop has a fixed number of iterations (the number of items).
-The inner <code>eliminateAllCycles</code> terminates by the well-founded
+The inner <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L479"><code>eliminateAllCycles</code></a> terminates by the well-founded
 Pareto-domination measure. Overall termination is polynomial in
 $|N|, |G|$ on standard random-access models.</p>
 <h2>Correctness</h2>
 <p>Two top-level correctness theorems:</p>
 <ul>
-<li><code>envyCycleAllocation_isAllocation</code>
-  ([[social_choice.fair_division.indivisible.envy_cycle_ef1]]'s
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L943"><code>envyCycleAllocation_isAllocation</code></a>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_cycle_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle_ef1.html">Envy-Cycle Elimination Produces EF1</a>'s
   companion): the output is a valid complete partition.</li>
-<li><code>envyCycleAllocation_isEF1</code> / <code>envyCycleRule_isEF1</code>: the output
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L950"><code>envyCycleAllocation_isEF1</code></a> / <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L961"><code>envyCycleRule_isEF1</code></a>: the output
   is EF1.</li>
 </ul>
 <h2>References</h2>

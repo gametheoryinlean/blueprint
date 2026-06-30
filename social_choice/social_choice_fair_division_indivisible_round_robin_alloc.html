@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L717"><code>SocialChoice.FairDivision.Indivisible.roundRobinAux</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L717"><code>SocialChoice.FairDivision.Indivisible.roundRobinAux</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
@@ -1094,12 +1096,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L724"><code>SocialChoice.FairDivision.Indivisible.roundRobinAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L724"><code>SocialChoice.FairDivision.Indivisible.roundRobinAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
@@ -1111,12 +1113,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L729"><code>SocialChoice.FairDivision.Indivisible.roundRobinRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L729"><code>SocialChoice.FairDivision.Indivisible.roundRobinRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
@@ -1129,7 +1131,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin</code></a>
       </p>
       
     </div>
@@ -1139,14 +1141,14 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Round-Robin Allocation</h1>
 <p>The <em>round-robin algorithm</em> under an additive valuation
-([[social_choice.fair_division.indivisible.additive_valuation]]) cycles
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>) cycles
 through agents in a fixed turn order. Each agent, on their turn, picks
 their favourite remaining good
-([[social_choice.fair_division.indivisible.best_good]]) and adds it to
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.best_good" href="fair_division/indivisible/social_choice_fair_division_indivisible_best_good.html">Best-Good Selection</a>) and adds it to
 their bundle. The procedure terminates when the good set is exhausted.</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.roundRobinAllocation</code>
-(plus the recursive worker <code>roundRobinAux</code> and the bundled rule form
-<code>roundRobinRule</code>). All are <code>noncomputable</code> because they call <code>bestGood</code>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L724"><code>SocialChoice.FairDivision.Indivisible.roundRobinAllocation</code></a>
+(plus the recursive worker <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L717"><code>roundRobinAux</code></a> and the bundled rule form
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L729"><code>roundRobinRule</code></a>). All are <code>noncomputable</code> because they call <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L695"><code>bestGood</code></a>
 on an <code>arg max</code>.</p>
 <h2>Algorithm shape</h2>
 <p><code>state := (remaining = allGoods, bundles = empty for each agent)
@@ -1162,22 +1164,22 @@ return bundles</code></p>
 <code>List.foldr</code> to thread the state.</p>
 <h2>Three layers</h2>
 <ul>
-<li><code>roundRobinAux</code> — the recursive worker on the state tuple.</li>
-<li><code>roundRobinAllocation</code> — top-level call: takes the full agent type,
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L717"><code>roundRobinAux</code></a> — the recursive worker on the state tuple.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L724"><code>roundRobinAllocation</code></a> — top-level call: takes the full agent type,
   the additive valuation, and <code>allGoods</code>, and returns an
   <code>Allocation N G</code>.</li>
-<li><code>roundRobinRule</code> — bundled-additive-instance form returning a
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L729"><code>roundRobinRule</code></a> — bundled-additive-instance form returning a
   feasibility-paired allocation
-  ([[social_choice.fair_division.solution_concept]]).</li>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.solution_concept" href="fair_division/social_choice_fair_division_solution_concept.html">Fair Division Solution Concept and Rule</a>).</li>
 </ul>
 <h2>Correctness theorems</h2>
-<p>Two key correctness theorems for <code>roundRobinAllocation</code>:</p>
+<p>Two key correctness theorems for <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L724"><code>roundRobinAllocation</code></a>:</p>
 <ul>
-<li><code>roundRobinAllocation_isAllocation</code>: the output is a complete
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L737"><code>roundRobinAllocation_isAllocation</code></a>: the output is a complete
   measurable partition of <code>allGoods</code>
-  ([[social_choice.fair_division.indivisible.round_robin_partition]]).</li>
-<li><code>roundRobinAllocation_isEF1</code>: the output is EF1
-  ([[social_choice.fair_division.indivisible.round_robin_ef1]]).</li>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.round_robin_partition" href="fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_partition.html">Round-Robin Output Is a Complete Partition</a>).</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L743"><code>roundRobinAllocation_isEF1</code></a>: the output is EF1
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.round_robin_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_ef1.html">Round-Robin Is EF1</a>).</li>
 </ul>
 <h2>References</h2>
 <ul>

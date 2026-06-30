@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L127"><code>MatrixGame.IsMaximin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L127"><code>MatrixGame.IsMaximin</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1089,12 +1091,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L134"><code>MatrixGame.IsMinimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L134"><code>MatrixGame.IsMinimax</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1105,12 +1107,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L143"><code>MatrixGame.IsValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L143"><code>MatrixGame.IsValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1121,7 +1123,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>
@@ -1165,13 +1167,13 @@ via <code>Real.instConditionallyCompleteLinearOrder</code>), the <code>sSup</cod
 <li><code>IsValue A v</code> is equivalent to the conjunction of the above when the
   minimax theorem (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) holds.</li>
 </ul>
-<p>The Lean library realises <code>IsMaximin</code>, <code>IsMinimax</code>, <code>IsValue</code> in
+<p>The Lean library realises <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L127"><code>IsMaximin</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L134"><code>IsMinimax</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L143"><code>IsValue</code></a> in
 <code>EconCSLib.StrategicGame.Minimax</code>. The bridge lemmas between the
 predicate and <code>sSup</code> forms are tracked as Phase 2 follow-up of #54.</p>
 <h2>Why this matters</h2>
 <p>An ordered-field-generic value route constructs the value as a witness over
 any linearly ordered field, not as a supremum, so it is naturally phrased via
-<code>IsValue</code> rather than via <code>value</code>. The symmetrisation route <code>Minimax.minimax</code>
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L143"><code>IsValue</code></a> rather than via <code>value</code>. The symmetrisation route <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Minimax.lean#L170"><code>Minimax.minimax</code></a>
 (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>) is exactly this: it delivers the
 optimal value and strategies over any
 <code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code> without requiring order

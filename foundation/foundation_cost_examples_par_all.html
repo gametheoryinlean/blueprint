@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/ParAll.lean#L51"><code>ParAll.parMap_unit_cost_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParAll.lean#L51"><code>ParAll.parMap_unit_cost_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.ParAll
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.ParAll
           </span>
           
           
@@ -1092,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/ParAll.lean#L1"><code>EconCSLib.Examples.CostM.ParAll</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParAll.lean#L1"><code>EconCSLib.Examples.CostM.ParAll</code></a>
       </p>
       
     </div>
@@ -1101,23 +1103,23 @@
 
   <div class="example_thmcontent thm-content body">
     <h1>Worked Example: N-ary parList Depth Bound</h1>
-<p>The n-ary <code>parList</code> combinator (<a class="node-ref" data-node-id="foundation.cost.parallel" href="cost/foundation_cost_parallel.html">Parallel Composition in CostM</a>) applied to a
+<p>The n-ary <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>parList</code></a> combinator (<a class="node-ref" data-node-id="foundation.cost.parallel" href="cost/foundation_cost_parallel.html">Parallel Composition in CostM</a>) applied to a
 list of independent unit-cost operations. Because the costs are folded with
-<code>⊔</code> from <code>⊥</code>, running <code>n</code> operations that each charge one unit in parallel has
+<code>⊔</code> from <code>⊥</code>, running <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/OpenProblem/SubmodularWelfareDemandOracle.lean#L143"><code>n</code></a> operations that each charge one unit in parallel has
 depth-1 cost:
 $$
   (\operatorname{parList}\,ms).\mathrm{cost}
     \;=\; \bigsqcup_i (m_i).\mathrm{cost} \;\le\; 1,
 $$
-proved as <code>parMap_unit_cost_le</code>. This is the flat fan-out / fan-in schedule:
+proved as <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParAll.lean#L51"><code>parMap_unit_cost_le</code></a>. This is the flat fan-out / fan-in schedule:
 arbitrarily many independent unit tasks cost the same as one, the defining
 property distinguishing the parallel <code>⊔</code> cost from the sequential <code>+</code> cost
 (<a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>). The empty-list base case (<code>parList []</code>has
 cost <code>⊥ = 0</code>) is exercised by the accompanying examples in the source file.</p>
 <h2>Lean declarations</h2>
 <ul>
-<li><code>ParAll.parMap_unit_cost_le</code> — the <code>parList</code>-of-unit-tasks depth bound <code>≤ 1</code>,
-  alongside two <code>example</code>s pinning the empty and singleton cases.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParAll.lean#L51"><code>ParAll.parMap_unit_cost_le</code></a> — the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>parList</code></a>-of-unit-tasks depth bound <code>≤ 1</code>,
+  alongside two <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/AddRulesCommand.lean#L62"><code>example</code></a>s pinning the empty and singleton cases.</li>
 </ul>
 <h2>References</h2>
 <ul>

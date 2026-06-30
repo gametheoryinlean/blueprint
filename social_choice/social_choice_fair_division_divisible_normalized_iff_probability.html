@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L69"><code>SocialChoice.FairDivision.Divisible.IsNormalized.iff_isProbabilityMeasure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L69"><code>SocialChoice.FairDivision.Divisible.IsNormalized.iff_isProbabilityMeasure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
           </span>
           
           
@@ -1091,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Valuation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Valuation</code></a>
       </p>
       
     </div>
@@ -1102,23 +1104,23 @@
     <h1>Normalized Measure Valuation ↔ Probability Measure</h1>
 <p><strong>Lemma.</strong> For a family of measures $\mu : N \to \mathrm{Measure}\ \Omega$,
 the induced measure valuation $\mathrm{MeasureValuation}\ \mu$
-([[social_choice.fair_division.divisible.measure_valuation]]) is
-normalized ([[social_choice.fair_division.divisible.cake_valuation]]) if
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_valuation" href="fair_division/divisible/social_choice_fair_division_divisible_measure_valuation.html">Measure Valuation</a>) is
+normalized (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cake_valuation" href="fair_division/divisible/social_choice_fair_division_divisible_cake_valuation.html">Cake Valuation</a>) if
 and only if every $\mu_i$ is a probability measure:
 $$
 \mathrm{IsNormalized}\,(\mathrm{MeasureValuation}\ \mu)
 \;\iff\;
 \forall i \in N,\ \mu_i\text{ is a probability measure.}
 $$</p>
-<p>In Lean: <code>IsNormalized.iff_isProbabilityMeasure</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L69"><code>IsNormalized.iff_isProbabilityMeasure</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>Unfolding <code>IsNormalized</code> and <code>MeasureValuation</code>, the predicate
+        <p>Unfolding <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L62"><code>IsNormalized</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L31"><code>MeasureValuation</code></a>, the predicate
 becomes "$\mu_i(\Omega) = 1$ for every $i$", which is exactly the
-defining condition of <code>IsProbabilityMeasure</code>. The two directions are the
-constructor and projection of the one-field <code>IsProbabilityMeasure</code> class.
+defining condition of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean#L63"><code>IsProbabilityMeasure</code></a>. The two directions are the
+constructor and projection of the one-field <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean#L63"><code>IsProbabilityMeasure</code></a> class.
 $\square$</p>
 <p>This is the bridge between two ways of writing the same hypothesis:
 "normalized cake valuation" (the social-choice phrasing) and "probability

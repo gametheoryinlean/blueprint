@@ -10,7 +10,7 @@
     "social_choice.fair_division",
     "social_choice.fair_division.core"
   ],
-  "body_html": "<h1>Fair Division Solution Concept and Rule</h1>\n<p>Two output shapes for fair-division procedures:</p>\n<ul>\n<li>\n<p>A <em>solution concept</em> is a predicate\n  $\\sigma : \\mathrm{Instance}\\ N\\ R\\ S \\to \\mathrm{Allocation}\\ N\\ S \\to \\mathrm{Prop}$\n  marking the allocations that the concept deems acceptable for the\n  instance. In Lean:\n  <code>SolutionConcept N R S := Instance N R S → Allocation N S → Prop</code>.</p>\n</li>\n<li>\n<p>A <em>rule</em> is a deterministic procedure that, for each instance, returns\n  a <em>feasible</em> allocation, packaged with its feasibility witness:\n  $\\rho(I) \\in \\{A : \\mathrm{Allocation}\\ N\\ S \\mid I.\\mathrm{feasible}\\ A\\}.$\n  In Lean: <code>Rule N R S := (I : Instance N R S) → {A : Allocation N S // I.feasible A}</code>.</p>\n</li>\n</ul>\n<p>These are the fair-division analogues of [[social_choice.solution_concept]],\nspecialized to the structured alternative space $\\mathrm{Allocation}\\ N\\ S$.</p>\n<p>Concrete examples that hit each shape:</p>\n<ul>\n<li><em>Solution concepts</em>: envy-freeness\n  ([[social_choice.fair_division.envy_free]]), proportionality\n  ([[social_choice.fair_division.proportional]]), Pareto optimality\n  ([[social_choice.fair_division.pareto_optimal]]).</li>\n<li><em>Rules</em>: cut-and-choose\n  ([[social_choice.fair_division.divisible.cut_and_choose_alloc]]),\n  Dubins–Spanier\n  ([[social_choice.fair_division.divisible.dubins_spanier_proportional]]),\n  round-robin\n  ([[social_choice.fair_division.indivisible.round_robin_alloc]]),\n  envy-cycle elimination\n  ([[social_choice.fair_division.indivisible.envy_cycle_algorithm]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Fair-division rules and acceptable-allocation predicates.</li>\n</ul>",
+  "body_html": "<h1>Fair Division Solution Concept and Rule</h1>\n<p>Two output shapes for fair-division procedures:</p>\n<ul>\n<li>\n<p>A <em>solution concept</em> is a predicate\n  $\\sigma : \\mathrm{Instance}\\ N\\ R\\ S \\to \\mathrm{Allocation}\\ N\\ S \\to \\mathrm{Prop}$\n  marking the allocations that the concept deems acceptable for the\n  instance. In Lean:\n  <code>SolutionConcept N R S := Instance N R S → Allocation N S → Prop</code>.</p>\n</li>\n<li>\n<p>A <em>rule</em> is a deterministic procedure that, for each instance, returns\n  a <em>feasible</em> allocation, packaged with its feasibility witness:\n  $\\rho(I) \\in \\{A : \\mathrm{Allocation}\\ N\\ S \\mid I.\\mathrm{feasible}\\ A\\}.$\n  In Lean: <code>Rule N R S := (I : Instance N R S) → {A : Allocation N S // I.feasible A}</code>.</p>\n</li>\n</ul>\n<p>These are the fair-division analogues of <a class=\"node-ref\" data-node-id=\"social_choice.solution_concept\" href=\"social_choice_solution_concept.html\">Solution Concept, Rule, and Correspondence</a>,\nspecialized to the structured alternative space $\\mathrm{Allocation}\\ N\\ S$.</p>\n<p>Concrete examples that hit each shape:</p>\n<ul>\n<li><em>Solution concepts</em>: envy-freeness\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.envy_free\" href=\"fair_division/social_choice_fair_division_envy_free.html\">Envy-Free Allocation</a>), proportionality\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.proportional\" href=\"fair_division/social_choice_fair_division_proportional.html\">Proportional Allocation</a>), Pareto optimality\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.pareto_optimal\" href=\"fair_division/social_choice_fair_division_pareto_optimal.html\">Pareto Optimal Allocation</a>).</li>\n<li><em>Rules</em>: cut-and-choose\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.cut_and_choose_alloc\" href=\"fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_alloc.html\">Cut-and-Choose Allocation and Fair Cut Point</a>),\n  Dubins–Spanier\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.dubins_spanier_proportional\" href=\"fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html\">Dubins–Spanier Proportional Existence</a>),\n  round-robin\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.round_robin_alloc\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_alloc.html\">Round-Robin Allocation</a>),\n  envy-cycle elimination\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.envy_cycle_algorithm\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle_algorithm.html\">Envy-Cycle Elimination Algorithm</a>).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Fair-division rules and acceptable-allocation predicates.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -36,9 +36,9 @@
       "signature": "def SolutionConcept (N R S : Type*)",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Basic.lean#L78",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L78",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -54,9 +54,9 @@
       "signature": "def Rule (N R S : Type*)",
       "docstring": "A fair-division rule returns a feasible allocation for every instance.",
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Basic.lean#L82",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L82",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -69,9 +69,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Basic",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Basic",
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1085,7 +1087,7 @@ expected payoff at type } r]$.</p>
 <h2>Setup</h2>
 <ul>
 <li>Symmetric IPV environment as in
-  [[mechanism_design.auction.bayesian.single_item_framework]]: types $t_i \sim F$ i.i.d.
+  <a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>: types $t_i \sim F$ i.i.d.
   on $[0, \omega]$ with continuous positive density $f$.</li>
 <li><strong>Reserve price $r$</strong>: the auctioneer commits to not sell the object
   for less than $r$. In first-price, bidders below $r$ drop out (or
@@ -1099,7 +1101,7 @@ expected payoff at type } r]$.</p>
 <h2>Optimal reserve (regular case)</h2>
 <p>When the virtual-valuation function $\psi(t) = t - (1 - F(t))/f(t)$ is
 monotone non-decreasing (the <em>regular case</em> of
-[[mechanism_design.myerson.optimal_auction]]), the revenue-maximising
+<a class="node-ref" data-node-id="mechanism_design.myerson.optimal_auction" href="myerson/mechanism_design_myerson_optimal_auction.html">Regular Myerson Optimal Single-Item Auction</a>), the revenue-maximising
 reserve in any standard auction is
 $$
 r^* \;=\; \psi^{-1}(\max(v_0, 0)),
@@ -1107,7 +1109,7 @@ $$
 where $v_0$ is the seller's own valuation. Setting $r = r^*$ optimises
 revenue <em>for the auctioneer with valuation $v_0$</em>.</p>
 <p>This is the auction-side specialisation of
-[[mechanism_design.myerson.reserve_price]] — the optimal mechanism in
+<a class="node-ref" data-node-id="mechanism_design.myerson.reserve_price" href="myerson/mechanism_design_myerson_reserve_price.html">Myerson Reserve-Price Characterisation</a> — the optimal mechanism in
 the symmetric IPV setting is just the second-price auction (or its
 revenue-equivalent first-price counterpart) with reserve $r^*$.</p>
 <h2>Entry fee ↔ reserve price equivalence</h2>
@@ -1149,9 +1151,9 @@ auctioneer a second instrument to fine-tune participation.</p>
 </ul>
 <p>Dependencies: virtual valuation and Myerson regularity (already in
 <code>EconCSLib/MechanismDesign/Auction/Myerson.lean</code>); the IPV single-item
-framework ([[mechanism_design.auction.bayesian.single_item_framework]]); the
+framework (<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>); the
 revenue-equivalence theorem
-([[mechanism_design.myerson.revenue_equivalence]]). Tracked in the
+(<a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>). Tracked in the
 MSZ Ch.12 auction gap review.</p>
 <h2>References</h2>
 <ul>

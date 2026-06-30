@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L213"><code>SocialChoice.Voting.pluralityScore</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L213"><code>SocialChoice.Voting.pluralityScore</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
@@ -1091,12 +1093,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L225"><code>SocialChoice.Voting.plurality</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L225"><code>SocialChoice.Voting.plurality</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
@@ -1107,7 +1109,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
       </p>
       
     </div>
@@ -1131,9 +1133,9 @@ $$
 \mathrm{plurality}(P) =
 \arg\max_{a \in A}\ \#\{i \in N \mid a \text{ is } i\text{'s top choice}\}.
 $$</p>
-<p>In Lean: <code>SocialChoice.Voting.pluralityScore</code> (the score vector) and
-<code>SocialChoice.Voting.plurality</code> (the rule, <code>scoringRule pluralityScore</code>, a
-set-valued <code>VotingRule</code>). As with Borda ([[social_choice.voting.borda_score]]),
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L213"><code>SocialChoice.Voting.pluralityScore</code></a> (the score vector) and
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L225"><code>SocialChoice.Voting.plurality</code></a> (the rule, <code>scoringRule pluralityScore</code>, a
+set-valued <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L208"><code>VotingRule</code></a>). As with Borda (<a class="node-ref" data-node-id="social_choice.voting.borda_score" href="voting/social_choice_voting_borda_score.html">Borda Score and Borda Rule</a>),
 these are <code>noncomputable</code> because aggregating a bare-<code>Prop</code> strict preference
 uses classical decidability, and ties are kept in the winner set.</p>
 <h2>Properties (informal)</h2>
@@ -1141,9 +1143,9 @@ uses classical decidability, and ties are kept in the winner set.</p>
 <li>Plurality is the simplest positional rule (all weight on the top rank).</li>
 <li>Plurality is <em>not</em> a Condorcet method: examples exist where the Condorcet
   winner is <em>not</em> even a plurality winner.</li>
-<li>Plurality satisfies unanimity ([[social_choice.voting.unanimity]]) but is
+<li>Plurality satisfies unanimity (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) but is
   strategy-manipulable for $|A| \ge 3$
-  ([[social_choice.voting.gibbard_satterthwaite]]).</li>
+  (<a class="node-ref" data-node-id="social_choice.voting.gibbard_satterthwaite" href="voting/social_choice_voting_gibbard_satterthwaite.html">Gibbard–Satterthwaite Theorem</a>).</li>
 </ul>
 <h2>References</h2>
 <ul>

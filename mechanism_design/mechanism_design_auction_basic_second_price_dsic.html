@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L139"><code>Auction.SecondPrice.valuation_is_dominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L139"><code>Auction.SecondPrice.valuation_is_dominant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1094,12 +1096,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L178"><code>Auction.SecondPrice.truthful_weakly_dominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L178"><code>Auction.SecondPrice.truthful_weakly_dominant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1111,12 +1113,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L219"><code>Auction.SecondPrice.mechanism_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L219"><code>Auction.SecondPrice.mechanism_isDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1129,7 +1131,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Vickrey</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Vickrey</code></a>
       </p>
       
     </div>
@@ -1139,7 +1141,7 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Vickrey Truth-Telling Is Dominant</h1>
 <p><strong>Theorem (Vickrey 1961).</strong> In the second-price auction
-([[mechanism_design.auction.basic.second_price_mechanism]]), truthful bidding $b_i = v_i$ is
+(<a class="node-ref" data-node-id="mechanism_design.auction.basic.second_price_mechanism" href="auction/basic/mechanism_design_auction_basic_second_price_mechanism.html">Second-Price (Vickrey) Mechanism</a>), truthful bidding $b_i = v_i$ is
 a weakly dominant strategy for every bidder $i$.</p>
 <p>Formally: for every valuation profile $v : I \to U$, every bidder $i \in I$,
 and every opposing bid profile $b : I \to U$,
@@ -1170,21 +1172,21 @@ $i$'s own bid. Split on whether $i$ is the original winner:</p>
 <li><code>valuation_is_dominant v i b : utility v b i ≤ utility v (Function.update b i (v i)) i</code>
   states the inequality directly at the utility-function level.</li>
 <li><code>truthful_weakly_dominant v i</code> packages the same fact as
-  <code>IsWeaklyDominant</code> in the strategic game <code>game v</code>
-  ([[game_theory.strategic_game.weakly_dominant_strategy]]).</li>
-<li><code>mechanism_isDSIC</code> lifts the result to the
-  <code>MechanismWithTransfers</code>-level DSIC predicate
-  ([[mechanism_design.basic.dsic_predicate]]):
+  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L37"><code>IsWeaklyDominant</code></a> in the strategic game <code>game v</code>
+  (<a class="node-ref" data-node-id="game_theory.strategic_game.weakly_dominant_strategy" href="../game_theory/strategic_game/game_theory_strategic_game_weakly_dominant_strategy.html">Weakly Dominant Strategy</a>).</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L219"><code>mechanism_isDSIC</code></a> lifts the result to the
+  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L66"><code>MechanismWithTransfers</code></a>-level DSIC predicate
+  (<a class="node-ref" data-node-id="mechanism_design.basic.dsic_predicate" href="basic/mechanism_design_basic_dsic_predicate.html">DSIC Predicate</a>):
   <code>Auction.SecondPrice.mechanism.isDSIC Auction.SecondPrice.utility</code>.</li>
 </ul>
 <h2>Why it matters</h2>
 <p>The Vickrey auction is the canonical example of a non-trivial DSIC
 mechanism. It is the single-item specialisation of VCG
-([[mechanism_design.vcg.truthfulness_and_ir]]): when there is only one
+(<a class="node-ref" data-node-id="mechanism_design.vcg.truthfulness_and_ir" href="vcg/mechanism_design_vcg_truthfulness_and_ir.html">VCG Truthfulness And Individual Rationality</a>): when there is only one
 item, the Clarke pivot payment equals the second-highest bid, and the
 allocation rule chooses the bidder with the highest reported value.</p>
 <p>The contrast with first-price auctions
-([[mechanism_design.auction.basic.first_price_no_dsic]]) — where truthful bidding is
+(<a class="node-ref" data-node-id="mechanism_design.auction.basic.first_price_no_dsic" href="auction/basic/mechanism_design_auction_basic_first_price_no_dsic.html">First-Price Fails DSIC</a>) — where truthful bidding is
 <em>not</em> dominant — motivates the broader truthful-mechanism design programme.</p>
 <h2>References</h2>
 <ul>

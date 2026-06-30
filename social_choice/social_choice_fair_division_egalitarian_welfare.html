@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L29"><code>SocialChoice.FairDivision.egalitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L29"><code>SocialChoice.FairDivision.egalitarianWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1090,12 +1092,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L41"><code>SocialChoice.FairDivision.IsMaxmin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L41"><code>SocialChoice.FairDivision.IsMaxmin</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1108,7 +1110,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
       </p>
       
     </div>
@@ -1119,26 +1121,26 @@
     <h1>Egalitarian (Maximin) Welfare</h1>
 <p>For a finite nonempty population $N$, a utility profile $u : N \to S \to
 \mathbb{R}$, and an allocation $A : N \to S$
-([[social_choice.fair_division.allocation]]), the <em>egalitarian welfare</em>
+(<a class="node-ref" data-node-id="social_choice.fair_division.allocation" href="fair_division/social_choice_fair_division_allocation.html">Allocation</a>), the <em>egalitarian welfare</em>
 is the minimum agent utility:
 $$
 W_{\mathrm{egal}}(u, A) = \min_{i \in N} u_i(A(i)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.egalitarianWelfare</code>, defined via
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L29"><code>SocialChoice.FairDivision.egalitarianWelfare</code></a>, defined via
 <code>Finset.univ.inf'</code> to handle the minimum over a finite nonempty type.</p>
 <p>An allocation $A$ is <em>maximin</em> w.r.t. a feasibility predicate $F$ if no
 feasible allocation has a strictly larger minimum utility:
 $$
 \forall B,\ F(B) \Rightarrow W_{\mathrm{egal}}(u, B) \le W_{\mathrm{egal}}(u, A).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.IsMaxmin</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L41"><code>SocialChoice.FairDivision.IsMaxmin</code></a>.</p>
 <p>Basic facts (<code>Welfare.lean</code>):</p>
 <ul>
 <li>$W_{\mathrm{egal}}(u, A) \le u_i(A(i))$ for every agent $i$.</li>
 <li><em>Egalitarian ≤ utilitarian / n:</em> if every agent's utility is bounded
   below by $W_{\mathrm{egal}}$, then $|N| \cdot W_{\mathrm{egal}}(u, A) \le
   W_{\mathrm{util}}(u, A)$
-  ([[social_choice.fair_division.utilitarian_welfare]]). This is the
+  (<a class="node-ref" data-node-id="social_choice.fair_division.utilitarian_welfare" href="fair_division/social_choice_fair_division_utilitarian_welfare.html">Utilitarian Welfare and Utilitarian Optimality</a>). This is the
   Lean lemma <code>nsmul_egalitarianWelfare_le_utilitarianWelfare</code> and matches
   the AM-min inequality.</li>
 </ul>

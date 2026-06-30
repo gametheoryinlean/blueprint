@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L591"><code>SocialChoice.FairDivision.Indivisible.acyclic_has_source</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L591"><code>SocialChoice.FairDivision.Indivisible.acyclic_has_source</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -1092,12 +1094,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L643"><code>SocialChoice.FairDivision.Indivisible.findSource</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L643"><code>SocialChoice.FairDivision.Indivisible.findSource</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -1110,12 +1112,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L649"><code>SocialChoice.FairDivision.Indivisible.findSource_isSource</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L649"><code>SocialChoice.FairDivision.Indivisible.findSource_isSource</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle
           </span>
           
           
@@ -1129,7 +1131,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EnvyCycle</code></a>
       </p>
       
     </div>
@@ -1140,9 +1142,9 @@
     <h1>Acyclic Envy Graph Has a Source</h1>
 <p><strong>Theorem.</strong> Let $v$ be a valuation and $A$ an allocation on a finite
 nonempty agent type. If the envy graph has no envy cycles
-([[social_choice.fair_division.indivisible.envy_cycle]]), then some
-agent is a source ([[social_choice.fair_division.indivisible.envies]]).</p>
-<p>In Lean: <code>acyclic_has_source</code>, with hypotheses <code>[Fintype N] [Nonempty N]</code>.</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_cycle" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle.html">Envy Cycle</a>), then some
+agent is a source (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envies" href="fair_division/indivisible/social_choice_fair_division_indivisible_envies.html">Envy Relation and Sources</a>).</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L591"><code>acyclic_has_source</code></a>, with hypotheses <code>[Fintype N] [Nonempty N]</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1154,18 +1156,18 @@ shows the contrapositive — if no agent is a source, follow envy edges
 backwards from any starting agent; by finiteness and the pigeonhole
 principle, eventually the path revisits an agent, producing a cycle.</p>
 <h2>Computable witness</h2>
-<p><code>findSource</code> (noncomputable) — a deterministic procedure that returns
+<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L643"><code>findSource</code></a> (noncomputable) — a deterministic procedure that returns
 an agent guaranteed to be a source whenever one exists. The companion
-correctness lemma <code>findSource_isSource</code> shows that the returned agent
-satisfies <code>isSource</code>.</p>
+correctness lemma <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L649"><code>findSource_isSource</code></a> shows that the returned agent
+satisfies <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L129"><code>isSource</code></a>.</p>
 <h2>Use in the algorithm</h2>
-<p>After <code>eliminateAllCycles</code>
-([[social_choice.fair_division.indivisible.eliminate_all_cycles]])
+<p>After <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EnvyCycle.lean#L479"><code>eliminateAllCycles</code></a>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.eliminate_all_cycles" href="fair_division/indivisible/social_choice_fair_division_indivisible_eliminate_all_cycles.html">Eliminate All Envy Cycles</a>)
 removes all envy cycles, this theorem guarantees that some agent is a
 source. That agent receives the next item to assign, ensuring no fresh
 envy is created against them. This is the key invariant used in
 proving EF1 of the envy-cycle algorithm
-([[social_choice.fair_division.indivisible.envy_cycle_ef1]]).</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_cycle_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle_ef1.html">Envy-Cycle Elimination Produces EF1</a>).</p>
 <h2>References</h2>
 <ul>
 <li>Lipton, Markakis, Mossel, and Saberi (2004). "On Approximately Fair Allocations of Indivisible Goods". <em>EC</em>. Source existence in acyclic envy graphs.</li>

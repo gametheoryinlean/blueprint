@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L51"><code>SocialChoice.Voting.unanimity_univ_isDecisive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L51"><code>SocialChoice.Voting.unanimity_univ_isDecisive</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1092,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1101,10 +1103,10 @@
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Grand Coalition Is Decisive under Unanimity</h1>
-<p><strong>Theorem.</strong> If a social welfare function $F$ ([[social_choice.voting.swf]])
-satisfies unanimity ([[social_choice.voting.unanimity]]), then the grand
+<p><strong>Theorem.</strong> If a social welfare function $F$ (<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>)
+satisfies unanimity (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>), then the grand
 coalition $N \subseteq N$ is decisive for $F$
-([[social_choice.voting.is_decisive]]).</p>
+(<a class="node-ref" data-node-id="social_choice.voting.is_decisive" href="voting/social_choice_voting_is_decisive.html">Decisive Coalition and Dictator</a>).</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1112,11 +1114,11 @@ coalition $N \subseteq N$ is decisive for $F$
         <p>Unanimity says: if every voter strictly prefers $a$ to $b$, society
 does too. Specialising the universal quantifier in $\mathrm{IsDecisive}$ to
 the universal coalition gives exactly that statement. $\square$</p>
-<p>In Lean: <code>SocialChoice.Voting.unanimity_univ_isDecisive</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L51"><code>SocialChoice.Voting.unanimity_univ_isDecisive</code></a>.</p>
 <p>This is the <em>base case</em> of the decisive-coalition proof of Arrow's theorem
-([[social_choice.voting.arrow_of_unanimity_iia]]): start from the trivially
+(<a class="node-ref" data-node-id="social_choice.voting.arrow_of_unanimity_iia" href="voting/social_choice_voting_arrow_of_unanimity_iia.html">Arrow&#x27;s Theorem via Decisive Coalitions</a>): start from the trivially
 decisive grand coalition, then shrink it in cardinality using
-[[social_choice.voting.decisive_contraction]] until you reach a singleton
+<a class="node-ref" data-node-id="social_choice.voting.decisive_contraction" href="voting/social_choice_voting_decisive_contraction.html">Coalition Contraction — Splitting a Decisive Coalition</a> until you reach a singleton
 dictator.</p>
 <h2>References</h2>
 <ul>

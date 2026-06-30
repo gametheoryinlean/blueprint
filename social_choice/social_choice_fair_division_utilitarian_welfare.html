@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L24"><code>SocialChoice.FairDivision.utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L24"><code>SocialChoice.FairDivision.utilitarianWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1090,12 +1092,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L34"><code>SocialChoice.FairDivision.IsUtilitarianOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L34"><code>SocialChoice.FairDivision.IsUtilitarianOptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1108,7 +1110,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
       </p>
       
     </div>
@@ -1118,20 +1120,20 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Utilitarian Welfare and Utilitarian Optimality</h1>
 <p>For a finite population $N$, a utility profile $u : N \to S \to \mathbb{R}$,
-and an allocation $A : N \to S$ ([[social_choice.fair_division.allocation]]),
+and an allocation $A : N \to S$ (<a class="node-ref" data-node-id="social_choice.fair_division.allocation" href="fair_division/social_choice_fair_division_allocation.html">Allocation</a>),
 the <em>utilitarian (social) welfare</em> is the sum of agents' utilities from
 their own shares:
 $$
 W_{\mathrm{util}}(u, A) = \sum_{i \in N} u_i(A(i)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.utilitarianWelfare</code> (noncomputable, uses
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L24"><code>SocialChoice.FairDivision.utilitarianWelfare</code></a> (noncomputable, uses
 <code>∑ i : N</code> on <code>Fintype N</code>).</p>
 <p>An allocation $A$ is <em>utilitarian-optimal</em> w.r.t. a feasibility predicate
 $F$ if no feasible allocation has strictly larger utilitarian welfare:
 $$
 \forall B,\ F(B) \Rightarrow W_{\mathrm{util}}(u, B) \le W_{\mathrm{util}}(u, A).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.IsUtilitarianOptimal</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L34"><code>SocialChoice.FairDivision.IsUtilitarianOptimal</code></a>.</p>
 <p>The accompanying basic lemmas in <code>Welfare.lean</code> say:</p>
 <ul>
 <li>$W_{\mathrm{util}}$ is monotone in the per-agent utility:
@@ -1140,7 +1142,7 @@ $$</p>
   utility.</li>
 </ul>
 <p>Utilitarian-optimal allocations are Pareto optimal
-([[social_choice.fair_division.pareto_optimal]]) but the converse fails:
+(<a class="node-ref" data-node-id="social_choice.fair_division.pareto_optimal" href="fair_division/social_choice_fair_division_pareto_optimal.html">Pareto Optimal Allocation</a>) but the converse fails:
 PO is a much weaker condition.</p>
 <h2>References</h2>
 <ul>

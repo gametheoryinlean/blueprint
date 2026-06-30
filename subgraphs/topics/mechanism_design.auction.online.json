@@ -5,7 +5,11 @@
     "href": "mechanism_design/auction/online/index.html",
     "parent": "mechanism_design.auction",
     "node_count": 6,
-    "descendant_node_count": 6
+    "descendant_node_count": 6,
+    "status_counts": {
+      "formalized": 1,
+      "proved": 5
+    }
   },
   "counts": {
     "internal_nodes": 6,
@@ -83,13 +87,33 @@
       "kind": "uses"
     },
     {
-      "from": "mechanism_design.auction.online.single_item_auction",
+      "from": "mechanism_design.auction.online.no_constant_competitive",
       "to": "mechanism_design.auction.online.secretary_quarter_competitive",
       "kind": "uses"
     },
     {
       "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
       "to": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle",
+      "kind": "uses"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle",
       "kind": "uses"
     },
     {
@@ -175,7 +199,13 @@
       "id": "sample-then-threshold",
       "title": "sample-then-threshold",
       "href": "keywords/sample-then-threshold.html",
-      "count": 3
+      "count": 1
+    },
+    {
+      "id": "secretary",
+      "title": "secretary",
+      "href": "keywords/secretary.html",
+      "count": 2
     },
     {
       "id": "single-item",

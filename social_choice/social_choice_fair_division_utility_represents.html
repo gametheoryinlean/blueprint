@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L59"><code>SocialChoice.FairDivision.CardinalInstance.UtilityRepresentsSharePref</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L59"><code>SocialChoice.FairDivision.CardinalInstance.UtilityRepresentsSharePref</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Cardinal
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Cardinal
           </span>
           
           
@@ -1090,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Cardinal</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Cardinal</code></a>
       </p>
       
     </div>
@@ -1100,15 +1102,15 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Utility Represents Share Preference</h1>
 <p>Let $I_1$ be a no-externality share instance
-([[social_choice.fair_division.share_instance]]) and $I_2$ a cardinal
-instance ([[social_choice.fair_division.cardinal_instance]]) on the same
+(<a class="node-ref" data-node-id="social_choice.fair_division.share_instance" href="fair_division/social_choice_fair_division_share_instance.html">Share Instance (No-Externality Model)</a>) and $I_2$ a cardinal
+instance (<a class="node-ref" data-node-id="social_choice.fair_division.cardinal_instance" href="fair_division/social_choice_fair_division_cardinal_instance.html">Cardinal Fair-Division Instance</a>) on the same
 population $N$ and share type $S$. We say $I_2$'s utility <em>represents</em>
 $I_1$'s share preference if for every agent $i$ and every pair of
 shares $s, t$,
 $$
 I_1.\mathrm{sharePref}(i)\,s\,t \iff I_2.\mathrm{utility}(i)\,t \le I_2.\mathrm{utility}(i)\,s.
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.CardinalInstance.UtilityRepresentsSharePref</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L59"><code>SocialChoice.FairDivision.CardinalInstance.UtilityRepresentsSharePref</code></a>.</p>
 <p>This is the bridging predicate that lets a cardinal instance <em>play the
 role of</em> an ordinal share instance: whenever the predicate holds, theorems
 stated against $I_1$'s ordinal preferences automatically apply with $I_2$'s
@@ -1124,7 +1126,7 @@ utilities.</p>
 </ul>
 <p>The canonical <em>induced</em> cardinal instance for a given share instance
 ($I_2 = I_1.\mathrm{induced}$ via
-<code>CardinalInstance.inducedSharePref</code> ↔ <code>toShareInstance</code>) automatically
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L37"><code>CardinalInstance.inducedSharePref</code></a> ↔ <code>toShareInstance</code>) automatically
 satisfies the representation predicate.</p>
 <h2>References</h2>
 <ul>

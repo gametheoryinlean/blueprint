@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1347"><code>SocialChoice.FairDivision.Divisible.ef_exists_and_proportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1347"><code>SocialChoice.FairDivision.Divisible.ef_exists_and_proportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1099,7 +1101,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1112,7 +1114,7 @@
 measures $\mu : \mathrm{Fin}\ n \to \mathrm{Measure}\ I$ on $I = [0, 1]$,
 there exists a complete measurable partition that is <strong>both</strong>
 envy-free and proportional.</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Divisible.ef_exists_and_proportional</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1347"><code>SocialChoice.FairDivision.Divisible.ef_exists_and_proportional</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1121,12 +1123,12 @@ envy-free and proportional.</p>
 <ol>
 <li>
 <p>Stromquist's EF existence
-   ([[social_choice.fair_division.divisible.ef_exists]]) yields an EF
+   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html">Envy-Free Existence (Stromquist, n Agents)</a>) yields an EF
    allocation $A$.</p>
 </li>
 <li>
 <p>EF implies proportional for measure valuations
-   ([[social_choice.fair_division.divisible.ef_implies_proportional]])
+   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_implies_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_ef_implies_proportional.html">EF ⇒ Proportional (Measure Valuations)</a>)
    gives the proportionality bound on the same $A$.</p>
 </li>
 </ol>
@@ -1140,11 +1142,11 @@ envy-free and proportional.</p>
   setting: PROP is implied by EF here for free, whereas in the
   indivisible setting the implication only holds for additive
   valuations on complete allocations
-  ([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]])
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>)
   and EF itself need not exist.</li>
 </ul>
 <p>The bundled-instance form sits in
-[[social_choice.fair_division.divisible.measure_instance_existence]].</p>
+<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_instance_existence" href="fair_division/divisible/social_choice_fair_division_divisible_measure_instance_existence.html">Measure-Instance Existence Wrappers</a>.</p>
 <h2>References</h2>
 <ul>
 <li>Stromquist, W. (1980). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 87: 640–644.</li>

@@ -9886,6 +9886,9 @@
       "topic": "mechanism_design",
       "uses": [
         "mechanism_design.auction.online.single_item_auction"
+      ],
+      "used_by": [
+        "mechanism_design.auction.online.secretary_quarter_competitive"
       ]
     },
     {
@@ -9918,7 +9921,12 @@
       ],
       "topic": "mechanism_design",
       "uses": [
+        "mechanism_design.auction.online.no_constant_competitive",
         "mechanism_design.auction.online.single_item_auction"
+      ],
+      "used_by": [
+        "mechanism_design.auction.online.secretary_strict_comparison_fails",
+        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
@@ -9929,7 +9937,7 @@
       "tags": [
         "auction",
         "online-algorithm",
-        "sample-then-threshold",
+        "secretary",
         "counterexample",
         "competitive-ratio"
       ],
@@ -9945,7 +9953,11 @@
       ],
       "topic": "mechanism_design",
       "uses": [
+        "mechanism_design.auction.online.secretary_quarter_competitive",
         "mechanism_design.auction.online.single_item_auction"
+      ],
+      "used_by": [
+        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
@@ -9956,7 +9968,7 @@
       "tags": [
         "auction",
         "online-algorithm",
-        "sample-then-threshold",
+        "secretary",
         "counterexample",
         "competitive-ratio",
         "needle"
@@ -9974,6 +9986,8 @@
       ],
       "topic": "mechanism_design",
       "uses": [
+        "mechanism_design.auction.online.secretary_quarter_competitive",
+        "mechanism_design.auction.online.secretary_strict_comparison_fails",
         "mechanism_design.auction.online.single_item_auction"
       ]
     },
@@ -16965,12 +16979,28 @@
       "to": "mechanism_design.auction.online.no_constant_competitive"
     },
     {
-      "from": "mechanism_design.auction.online.single_item_auction",
+      "from": "mechanism_design.auction.online.no_constant_competitive",
       "to": "mechanism_design.auction.online.secretary_quarter_competitive"
     },
     {
       "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_quarter_competitive"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
       "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
+    },
+    {
+      "from": "mechanism_design.auction.online.single_item_auction",
+      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
+    },
+    {
+      "from": "mechanism_design.auction.online.secretary_strict_comparison_fails",
+      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
     },
     {
       "from": "mechanism_design.auction.online.single_item_auction",

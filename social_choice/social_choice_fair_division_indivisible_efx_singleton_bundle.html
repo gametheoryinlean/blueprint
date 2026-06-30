@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L90"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L90"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
       </p>
       
     </div>
@@ -1110,7 +1112,7 @@ comparison: assuming $v_j(\emptyset) \le v_j(A(j))$,
 $$
 \forall h \in A(i),\ v_j(A(i) \setminus \{h\}) \le v_j(A(j)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code>.
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L90"><code>SocialChoice.FairDivision.Indivisible.isEFX_of_singleton_bundle</code></a>.
 The signature is pair-specific:
 $\mathrm{Fin}\ 2$, fixed agents $i, j$, and the hypothesis $A(i) = \{g\}$
 as data.</p>
@@ -1126,7 +1128,7 @@ than baking it into a typeclass.</p>
 <h2>Significance</h2>
 <p>This is a small <em>pair-helper</em> used inside the 2-agent EFX existence
 construction
-([[social_choice.fair_division.indivisible.efx_exists_two_agents]]) to
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_exists_two_agents" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_exists_two_agents.html">EFX Existence — Two Agents, Any Finite Good Set</a>) to
 discharge one side of the EFX inequality when one agent's bundle has
 collapsed to a singleton. It is <strong>not</strong> a stand-alone "singleton
 bundles automatically give EFX" theorem.</p>

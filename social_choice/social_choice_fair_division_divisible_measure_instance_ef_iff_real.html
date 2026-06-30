@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L173"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.isEnvyFree_iff_toCardinalInstance_isEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L173"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.isEnvyFree_iff_toCardinalInstance_isEnvyFree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
@@ -1093,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
       </p>
       
     </div>
@@ -1104,7 +1106,7 @@
     <h1>Measure-Instance EF ↔ Real-Valued Cardinal EF</h1>
 <p><strong>Theorem.</strong> For a divisible measure instance
 $I : \mathrm{MeasureInstance}\ N\ \Omega$
-([[social_choice.fair_division.divisible.measure_instance]]) with every
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_instance" href="fair_division/divisible/social_choice_fair_division_divisible_measure_instance.html">Divisible Measure Instance</a>) with every
 $I.\mathrm{measure}\ i$ finite, and any allocation $A$, the
 $\mathrm{ENNReal}$-valued envy-freeness predicate agrees with the
 real-valued cardinal envy-freeness obtained from $.toCardinalInstance$:
@@ -1112,7 +1114,7 @@ $$
 I.\mathrm{IsEnvyFree}\ A \;\iff\; (I.\mathrm{toCardinalInstance}).\mathrm{IsEnvyFree}\ A.
 $$</p>
 <p>In Lean:
-<code>SocialChoice.FairDivision.Divisible.MeasureInstance.isEnvyFree_iff_toCardinalInstance_isEnvyFree</code>.</p>
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L173"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.isEnvyFree_iff_toCardinalInstance_isEnvyFree</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1126,14 +1128,14 @@ $\mu_i(A(i))$:</p>
   $(\mu_i(A(j))).\mathrm{toReal} \le (\mu_i(A(i))).\mathrm{toReal}$.</li>
 </ul>
 <p>Both quantities are finite (<code>[IsFiniteMeasure (I.measure i)]</code>) so
-<code>measure_ne_top</code> lets <code>ENNReal.toReal_le_toReal</code> translate between the
+<code>measure_ne_top</code> lets <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/ENNReal/Real.lean#L61"><code>ENNReal.toReal_le_toReal</code></a> translate between the
 two forms. Each direction of the iff is a short calculation.</p>
 <h2>Why this matters</h2>
-<p><code>MeasureInstance</code> is the natural input for measure-theoretic algorithms
+<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L126"><code>MeasureInstance</code></a> is the natural input for measure-theoretic algorithms
 (cut-and-choose, Dubins–Spanier, Stromquist), which all reason with
 $\mathrm{ENNReal}$-valued measures. But the bundled real-valued cardinal
 interface
-([[social_choice.fair_division.divisible.cardinal_instance]]) is what
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cardinal_instance" href="fair_division/divisible/social_choice_fair_division_divisible_cardinal_instance.html">Divisible Cardinal Instance</a>) is what
 downstream call sites prefer (algebra over $\mathbb{R}$ is much easier
 than over $\mathrm{ENNReal}$).</p>
 <p>This equivalence lets a single theorem stated against either form

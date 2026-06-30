@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L247"><code>SocialChoice.FairDivision.Indivisible.isMaxminShare_iff_isAlphaMMS_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L247"><code>SocialChoice.FairDivision.Indivisible.isMaxminShare_iff_isAlphaMMS_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
@@ -1095,7 +1097,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
       </p>
       
     </div>
@@ -1105,19 +1107,19 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>IsMaxminShare ↔ IsAlphaMMS 1</h1>
 <p><strong>Theorem.</strong> An allocation $A$ satisfies the exact MMS guarantee
-([[social_choice.fair_division.indivisible.maximin_share]]) if and only
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.maximin_share" href="fair_division/indivisible/social_choice_fair_division_indivisible_maximin_share.html">Maximin Share (MMS) Allocation</a>) if and only
 if it is 1-MMS in the α-MMS sense
-([[social_choice.fair_division.indivisible.is_alpha_mms]]):
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.is_alpha_mms" href="fair_division/indivisible/social_choice_fair_division_indivisible_is_alpha_mms.html">α-MMS Allocation</a>):
 $$
 \mathrm{IsMaxminShare}\ v\ \mathrm{allGoods}\ A \;\iff\; \mathrm{IsAlphaMMS}\ 1\ v\ \mathrm{allGoods}\ A.
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.isMaxminShare_iff_isAlphaMMS_one</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L247"><code>SocialChoice.FairDivision.Indivisible.isMaxminShare_iff_isAlphaMMS_one</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
         <p>Unfold both predicates against the MMS value
-([[social_choice.fair_division.indivisible.mms_value]]):</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.mms_value" href="fair_division/indivisible/social_choice_fair_division_indivisible_mms_value.html">Maximin Share Value</a>):</p>
 <ul>
 <li><em>IsAlphaMMS 1</em> states $1 \cdot \mathrm{MMS}_i \le v_i(A(i))$, i.e.\
   $\mathrm{MMS}_i \le v_i(A(i))$, i.e.\ agent $i$'s bundle value beats
@@ -1129,15 +1131,15 @@ $$</p>
 <p>The bridge: $\forall B,\ \exists j,\ v_i(B(j)) \le v_i(A(i))$ is
 exactly the statement that the maximin value $\max_B \min_j v_i(B(j))$
 is bounded by $v_i(A(i))$, which is $\mathrm{MMS}_i \le v_i(A(i))$.</p>
-<p>Both directions follow from the <code>mmsValue_le_of_forall</code> and
-<code>iInf_partition_le_mmsValue</code> building blocks
-([[social_choice.fair_division.indivisible.mms_value_bounds]]).</p>
+<p>Both directions follow from the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L154"><code>mmsValue_le_of_forall</code></a> and
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L140"><code>iInf_partition_le_mmsValue</code></a> building blocks
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.mms_value_bounds" href="fair_division/indivisible/social_choice_fair_division_indivisible_mms_value_bounds.html">MMS Value — Basic Bounds</a>).</p>
 <h2>Why both predicates exist</h2>
 <p>The two formulations are complementary:</p>
 <ul>
 <li><em>IsMaxminShare</em> avoids <code>Finset.sup'</code> / <code>Finset.inf'</code> — a slick
   definition for <em>exact</em> MMS that doesn't require the auxiliary
-  <code>mmsValue</code> function. Useful for stating theorems compactly.</li>
+  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L101"><code>mmsValue</code></a> function. Useful for stating theorems compactly.</li>
 <li><em>IsAlphaMMS</em> parameterises smoothly over the approximation
   parameter — needed for $\alpha &lt; 1$ approximation results.</li>
 </ul>

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L665"><code>SocialChoice.Voting.decisive_minimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L665"><code>SocialChoice.Voting.decisive_minimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1094,12 +1096,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L507"><code>SocialChoice.Voting.exists_minimal_decisive_coalition</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L507"><code>SocialChoice.Voting.exists_minimal_decisive_coalition</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1112,7 +1114,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1122,16 +1124,16 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Minimal Decisive Coalition Has Size One</h1>
 <p><strong>Theorem.</strong> Let $F$ be a social welfare function on a finite nonempty voter
-type with $|A| \ge 3$, satisfying unanimity ([[social_choice.voting.unanimity]])
-and IIA ([[social_choice.voting.iia]]). Then $F$ admits a decisive coalition of
+type with $|A| \ge 3$, satisfying unanimity (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>)
+and IIA (<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>). Then $F$ admits a decisive coalition of
 size exactly one.</p>
 <p>Formally: the cardinality predicate $n \mapsto \exists C\ \mathrm{decisive\ of\ size}\ n$
 is well-founded on $\mathbb{N}$, and its minimum equals $1$.</p>
-<p>In Lean: <code>SocialChoice.Voting.decisive_minimal</code> (proves
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L665"><code>SocialChoice.Voting.decisive_minimal</code></a> (proves
 <code>Minimal (exists_nonempty_decisive_of_size F) 1</code>), with the existence half
-<code>SocialChoice.Voting.exists_minimal_decisive_coalition</code>. Both are public lemmas
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L507"><code>SocialChoice.Voting.exists_minimal_decisive_coalition</code></a>. Both are public lemmas
 of the Arrow development in <code>Decisive.lean</code>, over the predicate
-<code>SocialChoice.Voting.exists_nonempty_decisive_of_size</code>.</p>
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L503"><code>SocialChoice.Voting.exists_nonempty_decisive_of_size</code></a>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1140,7 +1142,7 @@ of the Arrow development in <code>Decisive.lean</code>, over the predicate
 <ol>
 <li>
 <p>The grand coalition is decisive of size $|N|$
-   ([[social_choice.voting.unanimity_univ_decisive]]), so the cardinality
+   (<a class="node-ref" data-node-id="social_choice.voting.unanimity_univ_decisive" href="voting/social_choice_voting_unanimity_univ_decisive.html">Grand Coalition Is Decisive under Unanimity</a>), so the cardinality
    predicate is nonempty. Take any minimal $n$.</p>
 </li>
 <li>
@@ -1148,7 +1150,7 @@ of the Arrow development in <code>Decisive.lean</code>, over the predicate
 </li>
 <li>
 <p>$n &lt; 2$: if $n \ge 2$, the contraction lemma
-   ([[social_choice.voting.decisive_contraction]]) produces a strictly
+   (<a class="node-ref" data-node-id="social_choice.voting.decisive_contraction" href="voting/social_choice_voting_decisive_contraction.html">Coalition Contraction — Splitting a Decisive Coalition</a>) produces a strictly
    smaller decisive coalition, contradicting minimality.</p>
 </li>
 </ol>

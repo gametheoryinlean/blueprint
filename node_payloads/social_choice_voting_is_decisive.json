@@ -10,7 +10,7 @@
     "social_choice.voting",
     "social_choice.voting.arrow"
   ],
-  "body_html": "<h1>Decisive Coalition and Dictator</h1>\n<p>A coalition $C \\subseteq N$ is <em>decisive</em> for a social welfare function $F$\n([[social_choice.voting.swf]]) if it is decisive for every ordered pair of\nalternatives:\n$$\n\\forall a, b \\in A,\\ \\mathrm{IsDecisiveFor}(F, C, a, b).\n$$</p>\n<p>An individual $i \\in N$ is a <em>dictator</em> exactly when their singleton coalition\n$\\{i\\}$ is decisive in this sense.</p>\n<p>In Lean: <code>SocialChoice.Voting.IsDecisive F C</code> and the singleton specialization\n<code>SocialChoice.Voting.SWF.IsDictator F i := IsDecisive F {i}</code>.</p>\n<p>This identification is the structural heart of the decisive-coalition proof\nof Arrow ([[social_choice.voting.arrow_of_unanimity_iia]]): the dictatorship\nconclusion ([[social_choice.voting.dictatorial_swf]]) reduces to producing a\nsingleton decisive coalition.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.15] Maschler, Solan, and Zamir, <em>Game Theory</em>. Decisive coalitions and the singleton dictator.</li>\n</ul>",
+  "body_html": "<h1>Decisive Coalition and Dictator</h1>\n<p>A coalition $C \\subseteq N$ is <em>decisive</em> for a social welfare function $F$\n(<a class=\"node-ref\" data-node-id=\"social_choice.voting.swf\" href=\"voting/social_choice_voting_swf.html\">Social Welfare Function</a>) if it is decisive for every ordered pair of\nalternatives:\n$$\n\\forall a, b \\in A,\\ \\mathrm{IsDecisiveFor}(F, C, a, b).\n$$</p>\n<p>An individual $i \\in N$ is a <em>dictator</em> exactly when their singleton coalition\n$\\{i\\}$ is decisive in this sense.</p>\n<p>In Lean: <code>SocialChoice.Voting.IsDecisive F C</code> and the singleton specialization\n<code>SocialChoice.Voting.SWF.IsDictator F i := IsDecisive F {i}</code>.</p>\n<p>This identification is the structural heart of the decisive-coalition proof\nof Arrow (<a class=\"node-ref\" data-node-id=\"social_choice.voting.arrow_of_unanimity_iia\" href=\"voting/social_choice_voting_arrow_of_unanimity_iia.html\">Arrow&#x27;s Theorem via Decisive Coalitions</a>): the dictatorship\nconclusion (<a class=\"node-ref\" data-node-id=\"social_choice.voting.dictatorial_swf\" href=\"voting/social_choice_voting_dictatorial_swf.html\">Dictatorial Social Welfare Function</a>) reduces to producing a\nsingleton decisive coalition.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ 21.15] Maschler, Solan, and Zamir, <em>Game Theory</em>. Decisive coalitions and the singleton dictator.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -41,9 +41,9 @@
       "signature": "def IsDecisive [Fintype N] [Fintype A] (F : SWF N A) (C : Set N) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L43",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L43",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -59,9 +59,9 @@
       "signature": "def SWF.IsDictator [Fintype N] [Fintype A] (F : SWF N A) (i : N) : Prop",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L48",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L48",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -74,9 +74,9 @@
       "name": "EconCSLib.SocialChoice.Voting.Decisive",
       "display_name": "EconCSLib.SocialChoice.Voting.Decisive",
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1",
       "status": "resolved",
       "reason": null
     }

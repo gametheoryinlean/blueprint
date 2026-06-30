@@ -10,7 +10,7 @@
     "social_choice.voting",
     "social_choice.voting.rules"
   ],
-  "body_html": "<h1>Pairwise Majority Comparison</h1>\n<p>For a finite voter type $N$ and preference profile $P$, society <em>prefers\n$a$ to $b$ by strict majority</em> if strictly more voters strictly prefer $a$\nto $b$ than vice versa:\n$$\n\\#\\{i \\in N \\mid a \\succ_{P_i} b\\}\n\\;&gt;\\;\n\\#\\{i \\in N \\mid b \\succ_{P_i} a\\}.\n$$</p>\n<p>In Lean: <code>SocialChoice.Voting.MajorityPrefers</code>, written using\n<code>Finset.card (Finset.univ.filter ...)</code> and the bundled strict preference\n<code>(P i).lt</code>.</p>\n<p>This is the natural starting point for two-alternative voting rules and for\nthe Condorcet criterion ([[social_choice.voting.condorcet_winner]]): a\nCondorcet winner is an alternative that pairwise-majority-beats every\nother.</p>\n<p>The strict-majority form (as opposed to weak majority) makes pairwise\ncomparison antisymmetric — at most one of $a, b$ can majority-beat the\nother.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>. Majority rule.</li>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Voting and Condorcet criteria.</li>\n</ul>",
+  "body_html": "<h1>Pairwise Majority Comparison</h1>\n<p>For a finite voter type $N$ and preference profile $P$, society <em>prefers\n$a$ to $b$ by strict majority</em> if strictly more voters strictly prefer $a$\nto $b$ than vice versa:\n$$\n\\#\\{i \\in N \\mid a \\succ_{P_i} b\\}\n\\;&gt;\\;\n\\#\\{i \\in N \\mid b \\succ_{P_i} a\\}.\n$$</p>\n<p>In Lean: <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L152\"><code>SocialChoice.Voting.MajorityPrefers</code></a>, written using\n<code>Finset.card (Finset.univ.filter ...)</code> and the bundled strict preference\n<code>(P i).lt</code>.</p>\n<p>This is the natural starting point for two-alternative voting rules and for\nthe Condorcet criterion (<a class=\"node-ref\" data-node-id=\"social_choice.voting.condorcet_winner\" href=\"voting/social_choice_voting_condorcet_winner.html\">Condorcet Winner</a>): a\nCondorcet winner is an alternative that pairwise-majority-beats every\nother.</p>\n<p>The strict-majority form (as opposed to weak majority) makes pairwise\ncomparison antisymmetric — at most one of $a, b$ can majority-beat the\nother.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>. Majority rule.</li>\n<li>[AGT Chapter 10] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Voting and Condorcet criteria.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -41,9 +41,9 @@
       "signature": "def MajorityPrefers [Fintype N] [Fintype A] (P : Profile N A) (a b : A) : Prop",
       "docstring": "Pairwise majority comparison.",
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L152",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L152",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -56,9 +56,9 @@
       "name": "EconCSLib.SocialChoice.Voting.VotingRules",
       "display_name": "EconCSLib.SocialChoice.Voting.VotingRules",
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1",
       "status": "resolved",
       "reason": null
     }

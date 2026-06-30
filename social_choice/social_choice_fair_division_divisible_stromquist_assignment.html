@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L552"><code>SocialChoice.FairDivision.Divisible.strom_fair_assignment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L552"><code>SocialChoice.FairDivision.Divisible.strom_fair_assignment</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1108,12 +1110,12 @@
 envy-free assignment of pieces to agents.</p>
 <p>The construction: at $x^*$, each piece $i$ has at least one claimant
 agent $\sigma(i) \in \mathrm{Fin}\ n$ — some $j$ such that $x^* \in B(i, j)$
-([[social_choice.fair_division.divisible.stromquist_unique_preference_sets]]).
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unique_preference_sets" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unique_preference_sets.html">Stromquist Unique-Preference Sets B(i, j)</a>).
 Pick one (DecidableEq / choice).</p>
 <p>The map $\sigma : \mathrm{Fin}\ n \to \mathrm{Fin}\ n$ is <em>injective</em>:
 if $\sigma(i_1) = \sigma(i_2) = j$ then $x^* \in B(i_1, j) \cap B(i_2, j)$,
-which by <code>strom_B_disjoint_over_i</code> (disjointness across pieces at a fixed
-agent, [[social_choice.fair_division.divisible.stromquist_unique_preference_sets]])
+which by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L504"><code>strom_B_disjoint_over_i</code></a> (disjointness across pieces at a fixed
+agent, <a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unique_preference_sets" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unique_preference_sets.html">Stromquist Unique-Preference Sets B(i, j)</a>)
 forces $i_1 = i_2$.</p>
 <p>An injection on a finite set of the same cardinality is a bijection, so
 $\sigma$ is a permutation.</p>
@@ -1122,16 +1124,16 @@ $$
 A(j) \;=\; \mathrm{piece}(x^*, \sigma^{-1}(j)).
 $$</p>
 <p>This is a complete measurable partition by
-[[social_choice.fair_division.divisible.stromquist_pieces]], and it is
+<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_pieces" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_pieces.html">Stromquist Pieces from the Division Simplex</a>, and it is
 envy-free because $\sigma^{-1}(j)$ is agent $j$'s value-maximizer at $x^*$:
 no other piece can be strictly preferred, so by the bundled EF predicate
-([[social_choice.fair_division.divisible.envy_free]]) the allocation is EF.</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_envy_free.html">Divisible Envy-Free, Proportional, Equitable Predicates</a>) the allocation is EF.</p>
 <h2>Role in the proof</h2>
 <p>This lemma is the <em>transducer</em> that converts the KKM common-point
 existence into an actual fair allocation. The "usual case"
-([[social_choice.fair_division.divisible.stromquist_usual_case]]) is
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_usual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_usual_case.html">Stromquist — Usual Case (U Covers the Simplex)</a>) is
 precisely the regime where this lemma applies; the "unusual case"
-([[social_choice.fair_division.divisible.stromquist_unusual_case]])
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unusual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unusual_case.html">Stromquist — Unusual Case (Shifted-Cell Limit)</a>)
 arises when the $U(i)$ family does not cover $S$, and needs the
 shifted-cell trick to push the data into a configuration where this
 lemma can be applied.</p>

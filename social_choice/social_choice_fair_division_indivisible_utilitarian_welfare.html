@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L91"><code>SocialChoice.FairDivision.Indivisible.IsUtilitarianOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L91"><code>SocialChoice.FairDivision.Indivisible.IsUtilitarianOptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
@@ -1094,12 +1096,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L119"><code>SocialChoice.FairDivision.Indivisible.utilitarianWelfare_mono</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L119"><code>SocialChoice.FairDivision.Indivisible.utilitarianWelfare_mono</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
@@ -1113,12 +1115,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L127"><code>SocialChoice.FairDivision.Indivisible.utilitarianWelfare_unique</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L127"><code>SocialChoice.FairDivision.Indivisible.utilitarianWelfare_unique</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
@@ -1131,7 +1133,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare</code></a>
       </p>
       
     </div>
@@ -1141,7 +1143,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Indivisible Utilitarian Welfare</h1>
 <p>Specialisation of the generic utilitarian welfare
-([[social_choice.fair_division.utilitarian_welfare]]) to the
+(<a class="node-ref" data-node-id="social_choice.fair_division.utilitarian_welfare" href="fair_division/social_choice_fair_division_utilitarian_welfare.html">Utilitarian Welfare and Utilitarian Optimality</a>) to the
 indivisible setting: for a valuation $v$ and allocation $A$,
 $$
 W_{\mathrm{util}}(v, A) = \sum_{i \in N} v_i(A(i)).
@@ -1149,20 +1151,20 @@ $$</p>
 <p>The same definition <code>utilitarianWelfare</code> (under
 <code>SocialChoice.FairDivision</code>) applies, taking <code>v.val</code> for the per-agent
 utility function and the indivisible allocation
-([[social_choice.fair_division.indivisible.allocation]]) for the share
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.allocation" href="fair_division/indivisible/social_choice_fair_division_indivisible_allocation.html">Indivisible Allocation</a>) for the share
 assignment.</p>
 <p>The instance-keyed <em>optimality</em> predicate is wrapped here:</p>
 <ul>
-<li><code>IsUtilitarianOptimal</code> (abbrev): no complete allocation
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L91"><code>IsUtilitarianOptimal</code></a> (abbrev): no complete allocation
   (<code>IsAllocation allGoods B</code>) has strictly larger utilitarian welfare.</li>
 </ul>
 <h2>Basic lemmas</h2>
 <p>Re-exported from the generic layer with the indivisible-friendly
 hypotheses:</p>
 <ul>
-<li><code>utilitarianWelfare_mono</code>: pointwise improvement implies welfare
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L119"><code>utilitarianWelfare_mono</code></a>: pointwise improvement implies welfare
   improvement.</li>
-<li><code>utilitarianWelfare_unique</code> (<code>@[simp]</code>): for <code>Unique N</code>, welfare
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L127"><code>utilitarianWelfare_unique</code></a> (<code>@[simp]</code>): for <code>Unique N</code>, welfare
   equals the single agent's utility.</li>
 </ul>
 <h2>Relation to fairness</h2>

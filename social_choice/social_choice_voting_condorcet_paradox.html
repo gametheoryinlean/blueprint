@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L340"><code>SocialChoice.Voting.condorcet_paradox_possible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L340"><code>SocialChoice.Voting.condorcet_paradox_possible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
@@ -1090,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
       </p>
       
     </div>
@@ -1101,8 +1103,8 @@
     <h1>Condorcet Paradox</h1>
 <p><strong>Theorem.</strong> There exists a preference profile on three voters and three
 alternatives that has <em>no</em> Condorcet winner
-([[social_choice.voting.condorcet_winner]]).</p>
-<p>In Lean: <code>SocialChoice.Voting.condorcet_paradox_possible</code>. The explicit
+(<a class="node-ref" data-node-id="social_choice.voting.condorcet_winner" href="voting/social_choice_voting_condorcet_winner.html">Condorcet Winner</a>).</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L340"><code>SocialChoice.Voting.condorcet_paradox_possible</code></a>. The explicit
 witness is the cyclic <em>Condorcet cycle profile</em> over $\mathrm{Fin}\ 3$:</p>
 <table>
 <thead>
@@ -1146,8 +1148,8 @@ $\mathrm{MajorityPrefers}$ counts.</p>
 produce a transitive social ranking. The Condorcet paradox is the canonical
 demonstration that majority rule alone is not enough to escape Arrow-style
 impossibilities; it motivates positional rules (Borda
-[[social_choice.voting.borda_score]], plurality
-[[social_choice.voting.plurality_score]]) and tournament solutions
+<a class="node-ref" data-node-id="social_choice.voting.borda_score" href="voting/social_choice_voting_borda_score.html">Borda Score and Borda Rule</a>, plurality
+<a class="node-ref" data-node-id="social_choice.voting.plurality_score" href="voting/social_choice_voting_plurality_score.html">Plurality Score and Plurality Rule</a>) and tournament solutions
 (Copeland, Slater) that always select <em>some</em> alternative.</p>
 <h2>References</h2>
 <ul>

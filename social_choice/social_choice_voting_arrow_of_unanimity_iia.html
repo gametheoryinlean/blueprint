@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L697"><code>SocialChoice.Voting.arrow_of_unanimity_iia</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L697"><code>SocialChoice.Voting.arrow_of_unanimity_iia</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1106,13 +1108,13 @@
 <p><strong>Theorem.</strong> Let $A$ have three distinct elements (witnessed by
 <code>h0 : ∃ x y z, x ≠ y ∧ x ≠ z ∧ y ≠ z</code>) and let $N$ be a finite nonempty
 voter type. Every social welfare function $F$
-([[social_choice.voting.swf]]) satisfying unanimity
-([[social_choice.voting.unanimity]]) and IIA
-([[social_choice.voting.iia]]) is dictatorial
-([[social_choice.voting.dictatorial_swf]]).</p>
-<p>In Lean: <code>SocialChoice.Voting.arrow_of_unanimity_iia</code>. This is the internal
+(<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>) satisfying unanimity
+(<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and IIA
+(<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>) is dictatorial
+(<a class="node-ref" data-node-id="social_choice.voting.dictatorial_swf" href="voting/social_choice_voting_dictatorial_swf.html">Dictatorial Social Welfare Function</a>).</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L697"><code>SocialChoice.Voting.arrow_of_unanimity_iia</code></a>. This is the internal
 decisive-coalition form of Arrow; the public Fintype-cardinality version
-([[social_choice.voting.arrow_impossibility]]) packages the
+(<a class="node-ref" data-node-id="social_choice.voting.arrow_impossibility" href="voting/social_choice_voting_arrow_impossibility.html">Arrow&#x27;s Impossibility Theorem</a>) packages the
 three-distinct-elements hypothesis from <code>Fintype.card A ≥ 3</code>.</p>
     
     <details class="proof-details">
@@ -1120,7 +1122,7 @@ three-distinct-elements hypothesis from <code>Fintype.card A ≥ 3</code>.</p>
       <div class="proof-body">
         <p>sketch</p>
 <p>By the size-one minimal-decisive-coalition theorem
-([[social_choice.voting.minimal_decisive_card_one]]) there is a decisive
+(<a class="node-ref" data-node-id="social_choice.voting.minimal_decisive_card_one" href="voting/social_choice_voting_minimal_decisive_card_one.html">Minimal Decisive Coalition Has Size One</a>) there is a decisive
 coalition $C$ with $|C| = 1$. Subsingleton extraction yields $C = \{i_0\}$
 for some $i_0$. Because decisive on every ordered pair means in particular
 that $i_0$'s strict preference forces society's strict preference for every

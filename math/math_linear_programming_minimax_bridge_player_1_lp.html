@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1072,7 +1074,7 @@
     <h1>Player-1 LP Formulation of a Matrix Game</h1>
 <p>For a matrix game $A : I \times J \to \mathbb{R}$ played row-by-column,
 the <strong>player-1 (maxmin) linear program</strong> seeks a mixed strategy
-$x \in \Delta(I)$ ([[game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex]]) and a
+$x \in \Delta(I)$ (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_mixed_strategy_simplex.html">Mixed Strategy Simplex</a>) and a
 scalar $v$ such that every pure column response of player 2 yields at
 least $v$:</p>
 <p>$$
@@ -1098,14 +1100,14 @@ normalisation.</p>
 <p>At any feasible $(x, v)$, $v$ is a <em>guaranteed</em> lower bound on player
 1's expected payoff against any pure column. At an optimal $(x^*, v^*)$:</p>
 <ul>
-<li>$v^* = \operatorname{val}(A)$ ([[game_theory.strategic_game.zero_sum.core.value]]).</li>
+<li>$v^* = \operatorname{val}(A)$ (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.value" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_value.html">Value Of A Zero-Sum Game</a>).</li>
 <li>$x^*$ is a maxmin (Nash) strategy for player 1
-  ([[game_theory.strategic_game.zero_sum.core.optimal_strategy_sets]]).</li>
+  (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.optimal_strategy_sets" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_optimal_strategy_sets.html">Optimal Strategy Sets</a>).</li>
 </ul>
 <p>The dual LP corresponds to player 2's minmax LP
-([[math.linear_programming.minimax_bridge.player_2_lp]]); strong duality
-([[math.linear_programming.strong_duality]]) gives the minimax theorem
-([[game_theory.strategic_game.zero_sum.von_neumann_minimax]]).</p>
+(<a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.player_2_lp" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_player_2_lp.html">Player-2 LP Formulation of a Matrix Game</a>); strong duality
+(<a class="node-ref" data-node-id="math.linear_programming.strong_duality" href="linear_programming/math_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>) gives the minimax theorem
+(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>).</p>
 <h2>References</h2>
 <ul>
 <li>[AGT Section 1.4.2] Nisan, Roughgarden, Tardos, and Vazirani,

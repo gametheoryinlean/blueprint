@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L101"><code>SocialChoice.FairDivision.Indivisible.mmsValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L101"><code>SocialChoice.FairDivision.Indivisible.mmsValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
@@ -1092,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
       </p>
       
     </div>
@@ -1102,7 +1104,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Maximin Share Value</h1>
 <p>For an agent $i$, a valuation $v$
-([[social_choice.fair_division.indivisible.valuation]]), and an outer
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a>), and an outer
 good set <code>allGoods : Finset G</code>, the <em>maximin share value</em> is
 $$
 \mathrm{MMS}_i \;=\; \max_{B \text{ complete}}\ \min_{j} v_i(B(j)),
@@ -1124,13 +1126,13 @@ allocations.</p>
 </ul>
 <p>So $\mathrm{MMS}_i$ exists as a finite max of finite mins.</p>
 <h2>Use</h2>
-<p><code>mmsValue</code> is the threshold appearing in the <em>exact</em> MMS guarantee
-([[social_choice.fair_division.indivisible.maximin_share]]) and in the
+<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L101"><code>mmsValue</code></a> is the threshold appearing in the <em>exact</em> MMS guarantee
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.maximin_share" href="fair_division/indivisible/social_choice_fair_division_indivisible_maximin_share.html">Maximin Share (MMS) Allocation</a>) and in the
 α-MMS approximation
-([[social_choice.fair_division.indivisible.is_alpha_mms]]). The
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.is_alpha_mms" href="fair_division/indivisible/social_choice_fair_division_indivisible_is_alpha_mms.html">α-MMS Allocation</a>). The
 predicate <code>IsMaxminShare A</code> (every agent's bundle has value $\ge
-\mathrm{MMS}_i$) and the bound <code>mmsValue_le_proportional_share_additive</code>
-([[social_choice.fair_division.indivisible.mms_value_bounds]]) both
+\mathrm{MMS}_i$) and the bound <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L198"><code>mmsValue_le_proportional_share_additive</code></a>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.mms_value_bounds" href="fair_division/indivisible/social_choice_fair_division_indivisible_mms_value_bounds.html">MMS Value — Basic Bounds</a>) both
 quantify how close $A$ comes to this threshold.</p>
 <h2>References</h2>
 <ul>

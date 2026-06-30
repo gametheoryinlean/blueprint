@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Math/Minimax/Minimax.lean#L170"><code>Minimax.minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Minimax.lean#L170"><code>Minimax.minimax</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Math.Minimax.Minimax
+            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.Minimax
           </span>
           
           
@@ -1092,12 +1094,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Math/Minimax/SkewSymmetric.lean#L50"><code>SkewSymmetric.optimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/SkewSymmetric.lean#L50"><code>SkewSymmetric.optimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Math.Minimax.SkewSymmetric
+            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.SkewSymmetric
           </span>
           
           
@@ -1109,7 +1111,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Math/Minimax/Minimax.lean#L1"><code>EconCSLib.Math.Minimax.Minimax</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Math/Minimax/SkewSymmetric.lean#L1"><code>EconCSLib.Math.Minimax.SkewSymmetric</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Minimax.lean#L1"><code>EconCSLib.Math.Minimax.Minimax</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/SkewSymmetric.lean#L1"><code>EconCSLib.Math.Minimax.SkewSymmetric</code></a>
       </p>
       
     </div>
@@ -1133,13 +1135,13 @@ elements. These operations make sense over any ordered field. The terminal
 inequalities are precisely the two minimax optimality systems, so the
 extracted mixed strategies and value lie in the same ordered field as the
 matrix entries.</p>
-<p>The Lean theorem is <code>Minimax.minimax</code>, polymorphic in
+<p>The Lean theorem is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Minimax.lean#L170"><code>Minimax.minimax</code></a>, polymorphic in
 <code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code>, proved <strong>sorry-free</strong>
 (axioms: <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>). The route is von
 Neumann symmetrisation: shift the game positive, embed it in the
 skew-symmetric matrix on <code>I ⊕ J ⊕ Unit</code>, and read the optimal <code>(x, y, v)</code>
 off the value-0 optimal strategy of that skew game — which exists by the
-Theorem of the Alternative (<code>SkewSymmetric.optimal</code>), a pure feasibility
+Theorem of the Alternative (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/SkewSymmetric.lean#L50"><code>SkewSymmetric.optimal</code></a>), a pure feasibility
 statement needing no LP optimum / order-completeness. The ℝ-specialisation
 also follows from the Loomis route
 (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>).</p>

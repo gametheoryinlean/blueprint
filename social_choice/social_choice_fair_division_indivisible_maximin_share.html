@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L179"><code>SocialChoice.FairDivision.Indivisible.IsMaxminShare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L179"><code>SocialChoice.FairDivision.Indivisible.IsMaxminShare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
           </span>
           
           
@@ -1092,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
       </p>
       
     </div>
@@ -1104,8 +1106,8 @@
 <p>The <em>maximin share</em> (MMS) guarantee asks that each agent's bundle be at
 least as valuable as the best worst-piece they could guarantee by
 self-partitioning.</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsMaxminShare</code>. The
-formulation used in the library, which avoids <code>iSup</code> / <code>iInf</code>, says:
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L179"><code>SocialChoice.FairDivision.Indivisible.IsMaxminShare</code></a>. The
+formulation used in the library, which avoids <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/SetNotation.lean#L60"><code>iSup</code></a> / <code>iInf</code>, says:
 $$
 \forall i \in N,\ \forall B,\ \mathrm{IsAllocation}\ \mathrm{allGoods}\ B \Rightarrow
 \exists j,\ v_i(B(j)) \le v_i(A(i)).
@@ -1125,20 +1127,20 @@ equivalent: $\forall B,\ \exists j,\ v_i(B(j)) \le v_i(A(i))$ is the
 same as $\forall B,\ \min_j v_i(B(j)) \le v_i(A(i))$, which rearranges
 to $v_i(A(i)) \ge \max_B \min_j v_i(B(j))$.</p>
 <p>The library makes this equivalence explicit:
-[[social_choice.fair_division.indivisible.mms_value]] introduces the
+<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.mms_value" href="fair_division/indivisible/social_choice_fair_division_indivisible_mms_value.html">Maximin Share Value</a> introduces the
 extremal $\mathrm{MMS}_i$ value, and the bidirectional bridge
-[[social_choice.fair_division.indivisible.is_alpha_mms_one]] shows
-<code>IsMaxminShare</code> is exactly the $\alpha = 1$ case of α-MMS.</p>
+<span class="node-ref unresolved" data-node-id="social_choice.fair_division.indivisible.is_alpha_mms_one">social_choice.fair_division.indivisible.is_alpha_mms_one</span> shows
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L179"><code>IsMaxminShare</code></a> is exactly the $\alpha = 1$ case of α-MMS.</p>
 <h2>Position in the hierarchy</h2>
 <p>For additive valuations on complete allocations, the chain
 $$
 \mathrm{EF} \Rightarrow \mathrm{EFX} \Rightarrow \mathrm{EF1} \Rightarrow \mathrm{PROP} \Rightarrow \mathrm{MMS}
 $$
 holds via the implication theorems
-([[social_choice.fair_division.indivisible.efx_implies_ef1]],
-[[social_choice.fair_division.indivisible.ef_implies_efx_mono]],
-[[social_choice.fair_division.indivisible.ef_implies_proportional_additive]],
-[[social_choice.fair_division.indivisible.proportional_implies_mms_additive]]).</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_implies_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_implies_ef1.html">EFX ⇒ EF1</a>,
+<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_efx_mono" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_efx_mono.html">EF ⇒ EFX (Monotone Valuations)</a>,
+<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>,
+<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional_implies_mms_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional_implies_mms_additive.html">PROP ⇒ MMS (Additive Valuations, Complete Allocations)</a>).</p>
 <h2>Existence</h2>
 <ul>
 <li>MMS allocations exist <em>almost always</em> for additive valuations
@@ -1147,7 +1149,7 @@ holds via the implication theorems
   not always exist.</li>
 <li>A $\frac{3}{4}$-MMS allocation is always achievable for additive preferences;
   see the α-MMS definition
-  ([[social_choice.fair_division.indivisible.is_alpha_mms]]).</li>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.is_alpha_mms" href="fair_division/indivisible/social_choice_fair_division_indivisible_is_alpha_mms.html">α-MMS Allocation</a>).</li>
 </ul>
 <h2>References</h2>
 <ul>

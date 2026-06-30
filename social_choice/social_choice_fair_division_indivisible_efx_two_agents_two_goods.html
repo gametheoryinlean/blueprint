@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L112"><code>SocialChoice.FairDivision.Indivisible.efx_two_agents_two_goods</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L112"><code>SocialChoice.FairDivision.Indivisible.efx_two_agents_two_goods</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
@@ -1094,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
       </p>
       
     </div>
@@ -1105,7 +1107,7 @@
     <h1>EFX Existence — 2 Agents, 2 Goods</h1>
 <p><strong>Theorem.</strong> For two agents and two distinct goods, an EFX allocation
 always exists.</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.efx_two_agents_two_goods</code>.
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L112"><code>SocialChoice.FairDivision.Indivisible.efx_two_agents_two_goods</code></a>.
 Hypotheses: <code>[DecidableEq G]</code>, two distinct goods $g_1, g_2 \in G$, an
 arbitrary valuation $v$.</p>
     
@@ -1117,12 +1119,12 @@ receives $\{g_2\}$. The bundles partition $\{g_1, g_2\}$ (disjointness
 by $g_1 \ne g_2$; cover by inspection).</p>
 <p>Each bundle has size 1, so the <em>singleton-bundle EFX</em> sufficient
 condition
-([[social_choice.fair_division.indivisible.efx_singleton_bundle]])
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_singleton_bundle" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_singleton_bundle.html">EFX from a Singleton-Bundle Sufficient Condition</a>)
 applies and gives EFX directly without needing any structure on $v$.</p>
 <h2>Significance</h2>
 <p>This is the trivial 2×2 case of the EFX existence question. The general
 2-agent case
-([[social_choice.fair_division.indivisible.efx_exists_two_agents]])
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_exists_two_agents" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_exists_two_agents.html">EFX Existence — Two Agents, Any Finite Good Set</a>)
 strengthens this to arbitrary good sets but still uses the
 singleton-bundle device on a maximin-leximin sub-bundle.</p>
 <h2>References</h2>

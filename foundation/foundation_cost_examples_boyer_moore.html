@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/BoyerMoore.lean#L54"><code>BoyerMoore.majority</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L54"><code>BoyerMoore.majority</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
@@ -1097,12 +1099,12 @@ where</code></pre>
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/BoyerMoore.lean#L71"><code>BoyerMoore.loop_cost</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L71"><code>BoyerMoore.loop_cost</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
@@ -1114,12 +1116,12 @@ where</code></pre>
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/BoyerMoore.lean#L84"><code>BoyerMoore.majority_peak_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L84"><code>BoyerMoore.majority_peak_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
@@ -1130,7 +1132,7 @@ where</code></pre>
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Examples/CostM/BoyerMoore.lean#L1"><code>EconCSLib.Examples.CostM.BoyerMoore</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L1"><code>EconCSLib.Examples.CostM.BoyerMoore</code></a>
       </p>
       
     </div>
@@ -1145,22 +1147,22 @@ working set is two cells — one candidate and one counter,
 $$
   (\operatorname{majority}\,xs).\mathrm{cost}.\mathrm{peak} \;\le\; 2,
 $$
-which is <code>majority_peak_le</code>. The mechanism is that the single-pass <code>loop</code>
+which is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L84"><code>majority_peak_le</code></a>. The mechanism is that the single-pass <code>loop</code>
 allocates nothing — <code>loop_cost : (majority.loop \ldots).cost = 0</code> — so the only
 contributions to the peak come from one <code>alloc 2</code> / <code>free 2</code> pair bracketing
-the pass. Because peak (not sum) is the resource, the tropical <code>Cells</code> monoid
+the pass. Because peak (not sum) is the resource, the tropical <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a> monoid
 is essential here; an additive <code>ℕ</code> cost cannot state this bound.</p>
 <p>This example deliberately <strong>does not</strong> prove functional correctness (that
-<code>majority</code> returns the true majority when one exists). That omission is the
-point: in <code>CostM</code> the complexity bound lives on <code>.cost</code> and is provable in
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L54"><code>majority</code></a> returns the true majority when one exists). That omission is the
+point: in <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L136"><code>CostM</code></a> the complexity bound lives on <code>.cost</code> and is provable in
 complete isolation from the <code>.ret</code> value, demonstrating the
 correctness/complexity decoupling described in <a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>.</p>
 <h2>Lean declarations</h2>
 <ul>
 <li><code>BoyerMoore.majority : List α → CostM Cells (Option α)</code> with its single-pass
   <code>where loop</code> carrying the candidate and counter.</li>
-<li><code>BoyerMoore.loop_cost</code> — the loop contributes zero cost.</li>
-<li><code>BoyerMoore.majority_peak_le</code> — the constant <code>peak ≤ 2</code> bound.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L71"><code>BoyerMoore.loop_cost</code></a> — the loop contributes zero cost.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/BoyerMoore.lean#L84"><code>BoyerMoore.majority_peak_le</code></a> — the constant <code>peak ≤ 2</code> bound.</li>
 </ul>
 <h2>References</h2>
 <ul>

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Basic.lean#L234"><code>SocialChoice.Voting.SWF.IIA</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L234"><code>SocialChoice.Voting.SWF.IIA</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Basic
           </span>
           
           
@@ -1089,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1107,16 +1109,16 @@ $$
 \bigl(\forall i,\ P_i(a,b) \iff Q_i(a,b)\bigr)
 \Rightarrow \bigl(F(P)(a,b) \iff F(Q)(a,b)\bigr).
 $$</p>
-<p>In Lean: <code>SocialChoice.Voting.SWF.IIA</code>. The statement is in terms of the
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L234"><code>SocialChoice.Voting.SWF.IIA</code></a>. The statement is in terms of the
 weak preference $P_i(a,b)$ (the raw bundled relation), which is the standard
 formulation.</p>
 <p>A useful corollary: under IIA the <em>strict</em> social preference between $a$ and
 $b$ also depends only on the pair-restricted profiles
-([[social_choice.voting.iia_strict]] in the decisive-coalition proof).</p>
-<p>IIA, together with unanimity ([[social_choice.voting.unanimity]]), is the
+(<a class="node-ref" data-node-id="social_choice.voting.iia_strict" href="voting/social_choice_voting_iia_strict.html">IIA on Strict Preference</a> in the decisive-coalition proof).</p>
+<p>IIA, together with unanimity (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>), is the
 Arrow hypothesis: every SWF satisfying both must be dictatorial when there
 are at least three alternatives
-([[social_choice.voting.arrow_impossibility]]).</p>
+(<a class="node-ref" data-node-id="social_choice.voting.arrow_impossibility" href="voting/social_choice_voting_arrow_impossibility.html">Arrow&#x27;s Impossibility Theorem</a>).</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ 21.9] Maschler, Solan, and Zamir, <em>Game Theory</em>. Independence of irrelevant alternatives.</li>

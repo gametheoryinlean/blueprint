@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/VCG.lean#L193"><code>MultipleParameterMechanism.VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L193"><code>MultipleParameterMechanism.VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1096,7 +1098,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
       </p>
       
     </div>
@@ -1113,16 +1115,16 @@ u_i \;=\; W(v, a^*) \;-\; \max_{a \in A} W_{-i}(v, a).
 $$</p>
 <p>Equivalently: <strong>agent $i$'s utility is their marginal contribution to
 social welfare.</strong></p>
-<p>In Lean: <code>VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout</code>.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L193"><code>VCGMechanism_quasiLinearUtility_eq_socialWelfare_sub_maxWelfareWithout</code></a>.</p>
 <h2>Why this is the soul of VCG</h2>
 <p>The two headline VCG properties fall out of this identity almost
 immediately:</p>
 <ul>
 <li>
-<p><strong>Truthfulness</strong> ([[mechanism_design.vcg_truthfulness_and_ir]]):
+<p><strong>Truthfulness</strong> (<span class="node-ref unresolved" data-node-id="mechanism_design.vcg_truthfulness_and_ir">mechanism_design.vcg_truthfulness_and_ir</span>):
   $u_i$ depends on $i$'s reported valuation only through $a^*$ (the
   $W_{-i}$ term is <em>report-independent</em>, see
-  [[mechanism_design.vcg.welfare_without]] <code>_update_self</code> lemmas).
+  <a class="node-ref" data-node-id="mechanism_design.vcg.welfare_without" href="vcg/mechanism_design_vcg_welfare_without.html">VCG Welfare Without Agent i</a> <code>_update_self</code> lemmas).
   Hence maximising $u_i$ over $i$'s report is equivalent to
   maximising $v_i(a^*)$ given the other agents' reports — which truthful
   reporting achieves by definition of $a^*$.</p>
@@ -1147,7 +1149,7 @@ $$
 u_i \;=\; v_i(a^*) + W_{-i}(v, a^*) - \max_a W_{-i}(v, a)
    \;=\; W(v, a^*) - \max_a W_{-i}(v, a),
 $$
-using <code>socialWelfare_eq_value_add_welfareWithout</code>.</p>
+using <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L89"><code>socialWelfare_eq_value_add_welfareWithout</code></a>.</p>
 <h2>References</h2>
 <ul>
 <li>[AGT Chapter 9, §9.3.4] Nisan, Roughgarden, Tardos, and Vazirani,

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L58"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L58"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
           </span>
           
           
@@ -1093,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
       </p>
       
     </div>
@@ -1103,24 +1105,24 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Indivisible Envy-Free</h1>
 <p>For an indivisible valuation $v$
-([[social_choice.fair_division.indivisible.valuation]]) and an
-allocation $A$ ([[social_choice.fair_division.indivisible.allocation]]),
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a>) and an
+allocation $A$ (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.allocation" href="fair_division/indivisible/social_choice_fair_division_indivisible_allocation.html">Indivisible Allocation</a>),
 $A$ is <em>envy-free</em> (EF) if every agent weakly prefers their own bundle:
 $$
 \forall i, j \in N,\ v_i(A(j)) \le v_i(A(i)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsEnvyFree</code> — an
-<code>abbrev</code> for the generic [[social_choice.fair_division.envy_free]]
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L58"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree</code></a> — an
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/AffineMonoid/Basic.lean#L25"><code>abbrev</code></a> for the generic <a class="node-ref" data-node-id="social_choice.fair_division.envy_free" href="fair_division/social_choice_fair_division_envy_free.html">Envy-Free Allocation</a>
 specialised at <code>v.val</code>.</p>
 <h2>Non-existence</h2>
 <p>In the indivisible setting EF allocations <em>need not exist</em>: the simplest
 counterexample is two agents and one good (the
 "give it to one agent" allocation makes the other agent envy the
 recipient). This is captured precisely in
-[[social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good]].</p>
+<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_impossible_two_agents_one_good.html">EF Impossibility — Two Agents, One Good</a>.</p>
 <p>The standard relaxations EF1 and EFX
-([[social_choice.fair_division.indivisible.ef1]],
-[[social_choice.fair_division.indivisible.efx]]) recover existence by
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef1.html">EF1 — Envy-Free Up to One Good</a>,
+<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx.html">EFX — Envy-Free Up to Any Good</a>) recover existence by
 weakening the strict comparison: envy is allowed if it vanishes after
 removing some / any single item from the envied bundle.</p>
 <h2>References</h2>

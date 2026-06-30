@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L32"><code>SocialChoice.FairDivision.IsProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L32"><code>SocialChoice.FairDivision.IsProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Fairness
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Fairness
           </span>
           
           
@@ -1090,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Fairness</code></a>
       </p>
       
     </div>
@@ -1102,23 +1104,23 @@
 <p>Fix a population size $n$, a distinguished <em>whole</em> share <code>whole : S</code>
 (typically "the entire resource"), a utility profile $u : N \to S \to
 \mathbb{R}$, and an allocation $A : N \to S$
-([[social_choice.fair_division.allocation]]).</p>
+(<a class="node-ref" data-node-id="social_choice.fair_division.allocation" href="fair_division/social_choice_fair_division_allocation.html">Allocation</a>).</p>
 <p>The allocation $A$ is <em>proportional</em> (PROP) if every agent values their own
 share at least a $1/n$ fraction of the whole:
 $$
 \forall i \in N,\ u_i(\mathrm{whole}) \le n \cdot u_i(A(i)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.IsProportional</code>. The "$1/n$"
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L32"><code>SocialChoice.FairDivision.IsProportional</code></a>. The "$1/n$"
 intuition is stated without division (multiply through by $n$) so the
 definition works over arbitrary <code>Semiring V</code>.</p>
-<p>PROP and EF ([[social_choice.fair_division.envy_free]]) are related but
+<p>PROP and EF (<a class="node-ref" data-node-id="social_choice.fair_division.envy_free" href="fair_division/social_choice_fair_division_envy_free.html">Envy-Free Allocation</a>) are related but
 incomparable in general:</p>
 <ul>
 <li>For divisible goods (non-atomic measures), EF implies PROP
-  ([[social_choice.fair_division.divisible.ef_implies_proportional]]).</li>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_implies_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_ef_implies_proportional.html">EF ⇒ Proportional (Measure Valuations)</a>).</li>
 <li>For indivisible goods (additive valuations) on complete allocations,
   EF still implies PROP
-  ([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]]),
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>),
   but PROP does not imply EF in general.</li>
 </ul>
 <h2>References</h2>

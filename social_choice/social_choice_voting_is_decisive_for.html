@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L37"><code>SocialChoice.Voting.IsDecisiveFor</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L37"><code>SocialChoice.Voting.IsDecisiveFor</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1092,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1101,7 +1103,7 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Decisive Coalition for an Ordered Pair</h1>
-<p>Fix a social welfare function $F$ ([[social_choice.voting.swf]]). A coalition
+<p>Fix a social welfare function $F$ (<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>). A coalition
 $C \subseteq N$ is <em>decisive for the ordered pair</em> $(a, b)$ if unanimous
 strict $a \succ b$ inside $C$ forces society to rank $a \succ b$:
 $$
@@ -1112,9 +1114,9 @@ $$</p>
 <p>The pair $(a,b)$ is ordered: decisiveness for $(a,b)$ does <em>not</em> imply
 decisiveness for $(b,a)$. Lifting from a single decisive pair to all pairs is
 the content of the <em>field expansion</em> lemma
-[[social_choice.voting.decisive_spread]].</p>
+<a class="node-ref" data-node-id="social_choice.voting.decisive_spread" href="voting/social_choice_voting_decisive_spread.html">Field Expansion — Decisive on One Pair Implies Decisive Everywhere</a>.</p>
 <p>Decisiveness is the structural device behind the Arrow proof
-([[social_choice.voting.arrow_of_unanimity_iia]]): one shows the grand
+(<a class="node-ref" data-node-id="social_choice.voting.arrow_of_unanimity_iia" href="voting/social_choice_voting_arrow_of_unanimity_iia.html">Arrow&#x27;s Theorem via Decisive Coalitions</a>): one shows the grand
 coalition is decisive (under unanimity), that decisive coalitions can be
 shrunk in cardinality (under unanimity + IIA), and that a singleton
 decisive coalition is a dictator.</p>

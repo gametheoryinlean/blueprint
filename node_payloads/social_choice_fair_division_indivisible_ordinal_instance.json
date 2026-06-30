@@ -10,7 +10,7 @@
     "social_choice.fair_division",
     "social_choice.fair_division.indivisible"
   ],
-  "body_html": "<h1>Indivisible Ordinal Instance</h1>\n<p>An <em>indivisible ordinal instance</em> is the no-externality share model\nspecialized to discrete-item allocation: each agent's preference is an\nordinal preference on bundles $\\mathrm{Finset}\\ G$.</p>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Indivisible.Instance N G</code>\nwith a <code>sharePref : N → Pref (Finset G)</code> field plus the outer good set\n<code>allGoods : Finset G</code>.</p>\n<p>Feasibility is the partition predicate\n[[social_choice.fair_division.indivisible.allocation]].</p>\n<h2>Bridge to the generic share-instance API</h2>\n<p><code>Indivisible.Instance.toShareInstance</code> (with <code>[Fintype N]\n[DecidableEq G]</code>) views the indivisible ordinal instance as a generic\nno-externality share instance\n([[social_choice.fair_division.share_instance]]) over share type\n$\\mathrm{Finset}\\ G$ and resource value <code>allGoods</code>. This lets all\ngeneric share-instance solution concepts apply.</p>\n<p>This wrapper layer parallels the divisible analogue\n([[social_choice.fair_division.divisible.ordinal_instance]]) — both\nplug into the same shared social-choice infrastructure via\n<code>toShareInstance</code>.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Indivisible-goods instances.</li>\n</ul>",
+  "body_html": "<h1>Indivisible Ordinal Instance</h1>\n<p>An <em>indivisible ordinal instance</em> is the no-externality share model\nspecialized to discrete-item allocation: each agent's preference is an\nordinal preference on bundles $\\mathrm{Finset}\\ G$.</p>\n<p>In Lean: structure <code>SocialChoice.FairDivision.Indivisible.Instance N G</code>\nwith a <code>sharePref : N → Pref (Finset G)</code> field plus the outer good set\n<code>allGoods : Finset G</code>.</p>\n<p>Feasibility is the partition predicate\n<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.allocation\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_allocation.html\">Indivisible Allocation</a>.</p>\n<h2>Bridge to the generic share-instance API</h2>\n<p><a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L49\"><code>Indivisible.Instance.toShareInstance</code></a> (with <code>[Fintype N]\n[DecidableEq G]</code>) views the indivisible ordinal instance as a generic\nno-externality share instance\n(<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.share_instance\" href=\"fair_division/social_choice_fair_division_share_instance.html\">Share Instance (No-Externality Model)</a>) over share type\n$\\mathrm{Finset}\\ G$ and resource value <code>allGoods</code>. This lets all\ngeneric share-instance solution concepts apply.</p>\n<p>This wrapper layer parallels the divisible analogue\n(<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ordinal_instance\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ordinal_instance.html\">Divisible Ordinal Instance</a>) — both\nplug into the same shared social-choice infrastructure via\n<a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L49\"><code>toShareInstance</code></a>.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Indivisible-goods instances.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -35,9 +35,9 @@
       "signature": "structure Instance (N G : Type*) where",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L33",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L33",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -53,9 +53,9 @@
       "signature": "def toShareInstance {N G : Type*} [Fintype N] [DecidableEq G]\n    (I : Instance N G) :\n    SocialChoice.FairDivision.ShareInstance N (Finset G) (Finset G) where",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L49",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L49",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -68,9 +68,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Indivisible.Instance",
       "repository_title": "EconCSLib",
-      "revision": "7f1760fc33b4f3565564b42700af18d4dc6272d9",
-      "short_revision": "7f1760f",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L1",
+      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
+      "short_revision": "7c9a168",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Instance.lean#L1",
       "status": "resolved",
       "reason": null
     }

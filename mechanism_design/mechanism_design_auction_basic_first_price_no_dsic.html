@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1079,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L110"><code>Auction.FirstPrice.no_dominant_strategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L110"><code>Auction.FirstPrice.no_dominant_strategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
@@ -1095,12 +1097,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L187"><code>Auction.FirstPrice.mechanism_not_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L187"><code>Auction.FirstPrice.mechanism_not_isDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
@@ -1113,7 +1115,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L1"><code>EconCSLib.MechanismDesign.Auction.FirstPrice</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L1"><code>EconCSLib.MechanismDesign.Auction.FirstPrice</code></a>
       </p>
       
     </div>
@@ -1123,11 +1125,11 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>First-Price Fails DSIC</h1>
 <p><strong>Theorem.</strong> The first-price auction
-([[mechanism_design.auction.basic.first_price_mechanism]]) is <em>not</em> dominant-strategy
+(<a class="node-ref" data-node-id="mechanism_design.auction.basic.first_price_mechanism" href="auction/basic/mechanism_design_auction_basic_first_price_mechanism.html">First-Price Mechanism</a>) is <em>not</em> dominant-strategy
 incentive compatible: for every bidder $i$ and every bid $b_i$, there
 exists an opposing bid profile that makes $b_i$ strictly worse than some
 other bid for $i$.</p>
-<p>Formally: assuming the bid space <code>U</code> contains a positive element
+<p>Formally: assuming the bid space <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> contains a positive element
 ($\exists a : U.\; 0 &lt; a$), no constant bid is weakly dominant in the
 strategic-game <code>game v</code> for any valuation profile $v$.</p>
     
@@ -1150,7 +1152,7 @@ $b_i$ cannot be weakly dominant.</p>
 <li><code>no_dominant_strategy v i bi ha : ¬ IsWeaklyDominant (game v) i bi</code>
   states that no bid $b_i \in U$ is a weakly dominant strategy for $i$ in
   the first-price game, under the bid-space-has-positives hypothesis <code>ha</code>.</li>
-<li><code>mechanism_not_isDSIC</code> lifts this to the mechanism-level negation
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L187"><code>mechanism_not_isDSIC</code></a> lifts this to the mechanism-level negation
   <code>¬ Auction.FirstPrice.mechanism.isDSIC Auction.FirstPrice.utility</code>.</li>
 </ul>
 <h2>Why it matters</h2>
@@ -1159,9 +1161,9 @@ single-item mechanism. Equilibrium analysis in first-price requires moving
 to the Bayesian setting and computing a symmetric strictly-increasing
 Bayes–Nash equilibrium of the form $b^*(t) = E[Y_1 \mid Y_1 &lt; t]$, where
 $Y_1$ is the maximum opponent valuation
-([[mechanism_design.auction.bayesian.symmetric_first_price_equilibrium]]). This contrasts
+(<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.symmetric_first_price_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>). This contrasts
 sharply with the second-price auction
-([[mechanism_design.auction.basic.second_price_dsic]]), where truthful bidding is dominant
+(<a class="node-ref" data-node-id="mechanism_design.auction.basic.second_price_dsic" href="auction/basic/mechanism_design_auction_basic_second_price_dsic.html">Vickrey Truth-Telling Is Dominant</a>), where truthful bidding is dominant
 without any distributional assumption.</p>
 <p>The first-price/second-price contrast is the simplest concrete instance of
 the dominant-strategy vs. Bayes–Nash gap that motivates much of

@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1069,10 +1071,10 @@
   <div class="proof-plan_thmcontent thm-content body">
     <h1>Kakutani Fixed-Point Proof of the Minimax Theorem</h1>
 <p>A proof of von Neumann's minimax theorem
-([[game_theory.strategic_game.zero_sum.von_neumann_minimax]]) via the <strong>Kakutani
+(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) via the <strong>Kakutani
 fixed-point theorem</strong>, complementing the Loomis induction proof
-([[math.minimax.loomis_induction_proof]]) and the LP-duality
-proof ([[math.minimax.lp_duality_minimax_proof]]).</p>
+(<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof" href="minimax/math_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>) and the LP-duality
+proof (<a class="node-ref" data-node-id="math.minimax.lp_duality_minimax_proof" href="minimax/math_minimax_lp_duality_minimax_proof.html">LP Duality Proof Of Minimax</a>).</p>
 <p>This is the route Nash later generalised to obtain Nash equilibrium
 existence in $N$-person finite games — the zero-sum minimax theorem
 falls out as the 2-player zero-sum special case.</p>
@@ -1115,7 +1117,7 @@ falls out as the 2-player zero-sum special case.</p>
    x A y^* \;\le\; x^* A y^* \;\le\; x^* A y.
    $$</p>
 <p>This is the <strong>saddle-point inequality</strong>
-   ([[game_theory.strategic_game.zero_sum.core.saddle_point]]), equivalent to existence of value
+   (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.saddle_point" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_saddle_point.html">Saddle Point</a>), equivalent to existence of value
    and optimal strategies for both players (the minimax theorem).</p>
 <h2>Why this route matters</h2>
 <ul>
@@ -1128,14 +1130,14 @@ falls out as the 2-player zero-sum special case.</p>
   of saddle point.</li>
 <li><strong>Connections</strong>: Kakutani follows from Brouwer; many minimax-style
   results in continuous games (Sion's theorem
-  [[game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem]]) similarly reduce to
+  <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.continuous.sion_minimax_theorem" href="../game_theory/strategic_game/zero_sum/continuous/game_theory_strategic_game_zero_sum_continuous_sion_minimax_theorem.html">Sion Minimax Theorem</a>) similarly reduce to
   Brouwer / Kakutani arguments.</li>
 </ul>
 <h2>Where Kakutani is missing in this library</h2>
 <p>EconCSLib does not yet carry Kakutani in Lean. Until that infrastructure is
 implemented, this proof exists only at blueprint level. The Lean proof of the matrix-game minimax
-theorem currently uses Loomis ([[math.minimax.minimax_from_loomis]]) over ℝ,
-and <code>Minimax.minimax</code> (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>) over any
+theorem currently uses Loomis (<a class="node-ref" data-node-id="math.minimax.minimax_from_loomis" href="minimax/math_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a>) over ℝ,
+and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Minimax.lean#L170"><code>Minimax.minimax</code></a> (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>) over any
 linearly ordered field.</p>
 <h2>References</h2>
 <ul>

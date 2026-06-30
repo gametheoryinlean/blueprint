@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1060,12 +1062,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L51"><code>strict</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L51"><code>strict</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1076,12 +1078,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L55"><code>indiff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L55"><code>indiff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1092,12 +1094,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L213"><code>VNM.Completeness</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L213"><code>VNM.Completeness</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1108,12 +1110,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L217"><code>VNM.Transitivity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L217"><code>VNM.Transitivity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1124,7 +1126,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>
@@ -1134,7 +1136,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Abstract Preference-Relation Axioms</h1>
 <p>For arguments that quantify over an arbitrary binary relation
-<code>pref : α → α → Prop</code> (rather than the bundled <code>Preorder</code> instance), the
+<code>pref : α → α → Prop</code> (rather than the bundled <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L46"><code>Preorder</code></a> instance), the
 foundation layer exposes a relation-style vocabulary:</p>
 <ul>
 <li><strong>Strict preference</strong> <code>strict pref a b := pref a b ∧ ¬ pref b a</code></li>
@@ -1144,11 +1146,11 @@ foundation layer exposes a relation-style vocabulary:</p>
 </ul>
 <p>This vocabulary is what preference-based statements and the vNM axiom suite use
 to formulate axioms about a free-standing relation argument, without
-committing to the <code>Preorder</code> typeclass on <code>α</code>. Lottery-specific axioms
+committing to the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L46"><code>Preorder</code></a> typeclass on <code>α</code>. Lottery-specific axioms
 (Independence, Continuity, Archimedean property) are stated on top of
-<code>Completeness</code> and <code>Transitivity</code> in <code>Utility.VNMAxioms</code>.</p>
-<p>In Lean, <code>strict</code> and <code>indiff</code> are library-wide definitions.
-<code>Completeness</code> and <code>Transitivity</code> remain inside <code>namespace VNM</code> because they
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L213"><code>Completeness</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L217"><code>Transitivity</code></a> in <code>Utility.VNMAxioms</code>.</p>
+<p>In Lean, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L51"><code>strict</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L55"><code>indiff</code></a> are library-wide definitions.
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L213"><code>Completeness</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L217"><code>Transitivity</code></a> remain inside <code>namespace VNM</code> because they
 name axioms in the vNM suite.</p>
 <h2>References</h2>
 <ul>

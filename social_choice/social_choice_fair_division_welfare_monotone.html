@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L52"><code>SocialChoice.FairDivision.utilitarianWelfare_mono</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L52"><code>SocialChoice.FairDivision.utilitarianWelfare_mono</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1094,12 +1096,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L60"><code>SocialChoice.FairDivision.utilitarianWelfare_unique</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L60"><code>SocialChoice.FairDivision.utilitarianWelfare_unique</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1112,12 +1114,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L66"><code>SocialChoice.FairDivision.egalitarianWelfare_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L66"><code>SocialChoice.FairDivision.egalitarianWelfare_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1130,7 +1132,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
       </p>
       
     </div>
@@ -1146,19 +1148,19 @@ $$
 \bigl(\forall i,\ u_i(A(i)) \le u_i(B(i))\bigr) \Rightarrow
 W_{\mathrm{util}}(u, A) \le W_{\mathrm{util}}(u, B).
 $$
-In Lean: <code>utilitarianWelfare_mono</code> (immediate from <code>Finset.sum_le_sum</code>).</p>
+In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L52"><code>utilitarianWelfare_mono</code></a> (immediate from <code>Finset.sum_le_sum</code>).</p>
 <p><strong>Unique-agent collapse.</strong> If $N$ has exactly one element (the canonical
 <code>default : N</code>), then $W_{\mathrm{util}}(u, A) = u_{\mathrm{default}}(A(\mathrm{default}))$.
-In Lean: <code>utilitarianWelfare_unique</code> (<code>@[simp]</code>-tagged).</p>
+In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L60"><code>utilitarianWelfare_unique</code></a> (<code>@[simp]</code>-tagged).</p>
 <p><strong>Egalitarian lower bound on each agent.</strong> Every agent obtains at least
 the egalitarian welfare from their share:
 $$
 \forall i,\ W_{\mathrm{egal}}(u, A) \le u_i(A(i)).
 $$
-In Lean: <code>egalitarianWelfare_le</code> (immediate from <code>Finset.inf'_le</code>).</p>
+In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L66"><code>egalitarianWelfare_le</code></a> (immediate from <code>Finset.inf'_le</code>).</p>
 <p>These are the basic algebraic facts used downstream when comparing
 utilitarian and egalitarian objectives (see
-[[social_choice.fair_division.egal_le_util]]).</p>
+<a class="node-ref" data-node-id="social_choice.fair_division.egal_le_util" href="fair_division/social_choice_fair_division_egal_le_util.html">Egalitarian Welfare Lower-Bounds Utilitarian Welfare</a>).</p>
 <h2>References</h2>
 <ul>
 <li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Welfare aggregations.</li>

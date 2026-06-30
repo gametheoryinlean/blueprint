@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Cells
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Cells
           </span>
           
           
@@ -1089,12 +1091,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Cells.lean#L122"><code>Cells.alloc</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L122"><code>Cells.alloc</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Cells
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Cells
           </span>
           
           
@@ -1105,12 +1107,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Cells.lean#L129"><code>Cells.free</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L129"><code>Cells.free</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.CostM.Cells
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM.Cells
           </span>
           
           
@@ -1121,7 +1123,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/CostM/Cells.lean#L1"><code>EconCSLib.Foundation.CostM.Cells</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L1"><code>EconCSLib.Foundation.CostM.Cells</code></a>
       </p>
       
     </div>
@@ -1132,7 +1134,7 @@
     <h1>Peak-Memory Cost via the Cells Monoid</h1>
 <p>Additive cost (<a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>) cannot express <strong>peak</strong> memory,
 because the high-water mark of a sequence of allocations and frees is not the
-sum of the per-step changes. <code>Cells</code> is the cost monoid that fixes this: an
+sum of the per-step changes. <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a> is the cost monoid that fixes this: an
 element carries a non-negative <code>peak</code> and a signed net <code>delta</code> with the
 invariant <code>delta ≤ peak</code> (and <code>0 ≤ peak</code>).</p>
 <p>Composition is the <strong>tropical / (max,+)</strong> law that tracks the worst high-water
@@ -1143,22 +1145,22 @@ $$
     \;=\; \bigl(\max(p_1,\; d_1 + p_2),\; d_1 + d_2\bigr),
   \qquad 0 = (0,0).
 $$
-This is an additive monoid (the EconCSLib <code>CostM</code> framework requires <code>C</code> to be
+This is an additive monoid (the EconCSLib <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L136"><code>CostM</code></a> framework requires <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/MathlibTest/WhitespaceLinter.lean#L81"><code>C</code></a> to be
 an additive monoid), but a <em>non-cancellative</em> one — the <code>⋆</code> above is its <code>+</code>.</p>
-<p>The two generators model allocation and release of <code>n</code> cells:
+<p>The two generators model allocation and release of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/OpenProblem/SubmodularWelfareDemandOracle.lean#L143"><code>n</code></a> cells:
 $$
   \operatorname{alloc} n = (n, n),
   \qquad
   \operatorname{free} n = (0, -n).
 $$
-An <code>alloc n</code> raises both the current footprint and the peak by <code>n</code>; a
-<code>free n</code> lowers the net footprint by <code>n</code> while leaving the peak untouched
+An <code>alloc n</code> raises both the current footprint and the peak by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/OpenProblem/SubmodularWelfareDemandOracle.lean#L143"><code>n</code></a>; a
+<code>free n</code> lowers the net footprint by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/OpenProblem/SubmodularWelfareDemandOracle.lean#L143"><code>n</code></a> while leaving the peak untouched
 (the cells were live at some point).</p>
 <h2>Lean declarations</h2>
 <ul>
-<li><code>Cells</code> — the structure (<code>peak</code>, <code>delta</code>, <code>zero_le_peak</code>, <code>delta_le_peak</code>);
-  its <code>Zero</code>/<code>Add</code>/<code>AddMonoid</code> instances are anonymous.</li>
-<li><code>Cells.alloc</code>, <code>Cells.free</code> — the generators.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a> — the structure (<code>peak</code>, <code>delta</code>, <code>zero_le_peak</code>, <code>delta_le_peak</code>);
+  its <code>Zero</code>/<code>Add</code>/<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean#L638"><code>AddMonoid</code></a> instances are anonymous.</li>
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L122"><code>Cells.alloc</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L129"><code>Cells.free</code></a> — the generators.</li>
 <li>Projection lemmas <code>peak_zero</code>/<code>delta_zero</code>, <code>peak_add</code>/<code>delta_add</code>,
   <code>peak_alloc</code>/<code>delta_alloc</code>, <code>peak_free</code>/<code>delta_free</code> drive the <code>simp</code>
   normal form for peak computations.</li>
@@ -1174,7 +1176,7 @@ independent of input length.</p>
 </ul>
 <h2>Provenance</h2>
 <ul>
-<li><code>Cells</code> is an EconCSLib addition (no <code>TimeM</code> counterpart upstream), built on
+<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a> is an EconCSLib addition (no <code>TimeM</code> counterpart upstream), built on
   the <a href="https://github.com/leanprover/cslib">leanprover/cslib</a>-derived monad
   core (Apache 2.0).</li>
 </ul>

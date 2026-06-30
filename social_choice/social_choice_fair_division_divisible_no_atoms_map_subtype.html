@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1060,12 +1062,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">instance</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L35"><code>SocialChoice.FairDivision.Divisible.noAtomsMapSubtypeVal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L35"><code>SocialChoice.FairDivision.Divisible.noAtomsMapSubtypeVal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval
           </span>
           
           
@@ -1077,7 +1079,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval</code></a>
       </p>
       
     </div>
@@ -1090,7 +1092,7 @@
 (viewed as a subtype of $\mathbb{R}$) with no atoms (<code>[NoAtoms μ]</code>). Then
 the pushforward $\mu.map\ \mathrm{Subtype.val}$ on $\mathbb{R}$ also has
 no atoms.</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Divisible.noAtomsMapSubtypeVal</code> —
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L35"><code>SocialChoice.FairDivision.Divisible.noAtomsMapSubtypeVal</code></a> —
 provided as an <code>instance</code> so that downstream lemmas requiring
 <code>[NoAtoms (μ.map Subtype.val)]</code> resolve automatically.</p>
     
@@ -1100,17 +1102,17 @@ provided as an <code>instance</code> so that downstream lemmas requiring
         <p>A single point $\{x\} \subseteq \mathbb{R}$ has pushforward measure
 $\mu(\mathrm{Subtype.val}^{-1}(\{x\}))$. The preimage is either empty (if
 $x \notin I$) or a singleton in $I$; in both cases it is a subsingleton.
-Subsingletons have measure $0$ by <code>Set.Subsingleton.measure_zero</code>. Thus
+Subsingletons have measure $0$ by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean#L43"><code>Set.Subsingleton.measure_zero</code></a>. Thus
 every singleton in $\mathbb{R}$ has zero pushforward measure, which is
-the definition of <code>NoAtoms</code>.</p>
+the definition of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean#L34"><code>NoAtoms</code></a>.</p>
 <h2>Where this is used</h2>
 <p>The cake-cutting machinery often models the cake as $I = [0, 1]$ but
 states IVT lemmas at the $\mathbb{R}$ level
-([[social_choice.fair_division.divisible.cdf_continuous]],
-[[social_choice.fair_division.divisible.cut_exists]]). This instance is
-the bridge that lets <code>cut_exists</code> invoke <code>cdfRealContinuous</code> on
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cdf_continuous" href="fair_division/divisible/social_choice_fair_division_divisible_cdf_continuous.html">CDF of a Non-Atomic Finite Measure on ℝ Is Continuous</a>,
+<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_exists.html">IVT — Cut Point Exists for Non-Atomic Measures on [0,1]</a>). This instance is
+the bridge that lets <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L124"><code>cut_exists</code></a> invoke <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L46"><code>cdfRealContinuous</code></a> on
 $\mu.map\ \mathrm{Subtype.val}$ without manually carrying the
-<code>NoAtoms</code> hypothesis through every call site.</p>
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean#L34"><code>NoAtoms</code></a> hypothesis through every call site.</p>
 <h2>References</h2>
 <ul>
 <li>Folland, G. B. (1999). <em>Real Analysis</em>, §1.5. Pushforward and atomicity.</li>

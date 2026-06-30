@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L518"><code>SocialChoice.FairDivision.Divisible.strom_U</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L518"><code>SocialChoice.FairDivision.Divisible.strom_U</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1089,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1104,26 +1106,26 @@ $$
 U(i) \;=\; \bigcup_{j \in \mathrm{Fin}\ n} B(i, j),
 $$
 with $B(i, j)$ as in
-[[social_choice.fair_division.divisible.stromquist_unique_preference_sets]].</p>
+<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unique_preference_sets" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unique_preference_sets.html">Stromquist Unique-Preference Sets B(i, j)</a>.</p>
 <p>In Lean: <code>strom_U i</code>.</p>
 <h2>Properties</h2>
 <ul>
 <li><strong>Openness.</strong> $U(i)$ is open as a finite union of open sets.</li>
 <li><strong>Avoids the empty-piece face.</strong> $U(i) \cap \mathrm{simplexFaceOpp}(i) = \emptyset$:
   on the face $\{x \in S \mid x_i = 0\}$ the piece $i$ is empty
-  ([[social_choice.fair_division.divisible.stromquist_pieces]]), so no
+  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_pieces" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_pieces.html">Stromquist Pieces from the Division Simplex</a>), so no
   agent values it strictly above the others; in particular nobody
   uniquely prefers it, so $U(i)$ does not meet the face.</li>
 </ul>
 <p>The combination (openness + avoids face $i$) is the KKM input for the
 "usual case" of Stromquist's proof
-([[social_choice.fair_division.divisible.stromquist_usual_case]]): the
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_usual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_usual_case.html">Stromquist — Usual Case (U Covers the Simplex)</a>): the
 KKM lemma applied to the family $\{U(i) : i \in \mathrm{Fin}\ n\}$
 produces a common point in $\bigcap_i U(i)$, at which every piece has a
 unique claimant.</p>
 <p>The "unusual case" arises precisely when $\{U(i)\}_i$ does <em>not</em> cover
 the simplex
-([[social_choice.fair_division.divisible.stromquist_unusual_case]]). The
+(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unusual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unusual_case.html">Stromquist — Unusual Case (Shifted-Cell Limit)</a>). The
 shifted-cell refinement handles this case.</p>
 <h2>References</h2>
 <ul>

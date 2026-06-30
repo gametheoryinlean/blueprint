@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,12 +1081,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L474"><code>SocialChoice.Voting.decisive_spread</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L474"><code>SocialChoice.Voting.decisive_spread</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1099,7 +1101,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1109,12 +1111,12 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Field Expansion — Decisive on One Pair Implies Decisive Everywhere</h1>
 <p><strong>Theorem.</strong> Let $F$ be a social welfare function satisfying unanimity
-([[social_choice.voting.unanimity]]) and IIA ([[social_choice.voting.iia]]).
+(<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and IIA (<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>).
 If a nonempty coalition $C$ is <em>weakly decisive</em> for some ordered pair
 $(x, y)$ with three distinct alternatives $x, y, z$
-([[social_choice.voting.is_weakly_decisive_for]]), then $C$ is <em>decisive</em>
-for every ordered pair of alternatives ([[social_choice.voting.is_decisive]]).</p>
-<p>In Lean: <code>SocialChoice.Voting.decisive_spread</code> (a public lemma of the Arrow
+(<a class="node-ref" data-node-id="social_choice.voting.is_weakly_decisive_for" href="voting/social_choice_voting_is_weakly_decisive_for.html">Weakly Decisive Coalition</a>), then $C$ is <em>decisive</em>
+for every ordered pair of alternatives (<a class="node-ref" data-node-id="social_choice.voting.is_decisive" href="voting/social_choice_voting_is_decisive.html">Decisive Coalition and Dictator</a>).</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L474"><code>SocialChoice.Voting.decisive_spread</code></a> (a public lemma of the Arrow
 development in <code>Decisive.lean</code>), depending on the third-alternative witness
 <code>x ≠ y ≠ z ≠ x</code>.</p>
     
@@ -1123,7 +1125,7 @@ development in <code>Decisive.lean</code>), depending on the third-alternative w
       <div class="proof-body">
         <p>sketch</p>
 <p>The argument splits into directional "spread" lemmas that each construct an
-auxiliary profile and apply [[social_choice.voting.iia_strict]] plus
+auxiliary profile and apply <a class="node-ref" data-node-id="social_choice.voting.iia_strict" href="voting/social_choice_voting_iia_strict.html">IIA on Strict Preference</a> plus
 unanimity:</p>
 <ol>
 <li>
@@ -1132,7 +1134,7 @@ unanimity:</p>
    outside $C$ rank $y \succ x$ but everyone ranks $y \succ z$. Weak
    decisiveness gives $x \succ_{F(P')} y$; unanimity gives
    $y \succ_{F(P')} z$; transitivity of $F(P')$ yields $x \succ_{F(P')} z$.
-   Then IIA (<code>iia_strict</code>) carries the conclusion back to an arbitrary
+   Then IIA (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L89"><code>iia_strict</code></a>) carries the conclusion back to an arbitrary
    $C$-unanimous profile on $(x,z)$.</p>
 </li>
 <li>

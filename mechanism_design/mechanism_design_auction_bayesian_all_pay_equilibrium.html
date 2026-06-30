@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1083,7 +1085,7 @@ that opponent type being below $t$ — <em>un-divided</em> by the probability
 $F(t)^{n-1}$.</p>
 <p>The expected revenue from this equilibrium equals the expected revenue
 of any other standard auction format under the same symmetric IPV
-hypothesis ([[mechanism_design.myerson.revenue_equivalence]]).</p>
+hypothesis (<a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>).</p>
 <h2>Setup</h2>
 <ul>
 <li>$n$ symmetric IPV bidders, types $t_i \sim F$ i.i.d. on $[0, \omega]$.</li>
@@ -1110,7 +1112,7 @@ $\int_0^t z\, (n-1) F(z)^{n-2} f(z)\, dz$, giving the formula above.</p>
   winner pays $\beta^{\mathrm{FP}}(t_{\mathrm{winner}})$; in all-pay,
   <em>every</em> bidder pays $\beta^{\mathrm{AP}}(t_i)$. To equalise expected
   revenue (per the revenue-equivalence theorem
-  [[mechanism_design.myerson.revenue_equivalence]]), bidders shade
+  <a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>), bidders shade
   <em>more aggressively</em> in all-pay than in first-price for low types,
   with $\beta^{\mathrm{AP}}(t) &lt; \beta^{\mathrm{FP}}(t)$ pointwise
   except at the endpoints.</li>
@@ -1143,8 +1145,8 @@ same expected revenue under symmetric IPV.</p>
   specialised to all-pay).</li>
 </ul>
 <p>Dependencies: the symmetric IPV environment from
-[[mechanism_design.auction.bayesian.single_item_framework]], the symmetric first-price
-equilibrium ([[mechanism_design.auction.bayesian.symmetric_first_price_equilibrium]]),
+<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>, the symmetric first-price
+equilibrium (<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.symmetric_first_price_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>),
 and the Myerson envelope identity from
 <code>EconCSLib/MechanismDesign/Auction/Myerson.lean</code>. Tracked in the MSZ Ch.12
 auction gap review.</p>

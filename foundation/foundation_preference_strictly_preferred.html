@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1060,12 +1062,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L90"><code>StrictlyPreferred</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L90"><code>StrictlyPreferred</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1076,12 +1078,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L93"><code>StrictlyPreferred.asymm</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L93"><code>StrictlyPreferred.asymm</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1093,12 +1095,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L98"><code>StrictlyPreferred.trans</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L98"><code>StrictlyPreferred.trans</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1111,12 +1113,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L104"><code>StrictlyPreferred.irrefl</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L104"><code>StrictlyPreferred.irrefl</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1127,7 +1129,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>
@@ -1142,9 +1144,9 @@ $$
   \quad\Longleftrightarrow\quad a \le b \;\text{ and }\; \neg(b \le a).
 $$</p>
 <p>Strict preference is asymmetric, transitive, and irreflexive. These three
-properties — asymmetry from <code>lt_asymm</code>, transitivity from <code>lt_trans</code>,
-irreflexivity from <code>lt_irrefl</code> — are inherited directly from the Mathlib
-<code>Preorder</code> API.</p>
+properties — asymmetry from <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L105"><code>lt_asymm</code></a>, transitivity from <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L100"><code>lt_trans</code></a>,
+irreflexivity from <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L89"><code>lt_irrefl</code></a> — are inherited directly from the Mathlib
+<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L46"><code>Preorder</code></a> API.</p>
 <p>In Lean this is <code>abbrev StrictlyPreferred (a b : α) : Prop := a &lt; b</code>. The
 abbreviation exists for readability in game-theory contexts; downstream code
 may also use the bare <code>&lt;</code> notation interchangeably.</p>

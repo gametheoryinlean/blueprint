@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L180"><code>PrefProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L180"><code>PrefProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.Foundation.Preference
+            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1089,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>
@@ -1105,7 +1107,7 @@ preference $P_i$ on $A$:</p>
 P : N \to \mathrm{Pref}(A), \qquad i \mapsto P_i.
 $$</p>
 <p>In Lean: <code>PrefProfile N A := N → Pref A</code>. Each entry <code>P i</code> is a bundled
-preference ([[social_choice.preference]]), so unanimity, dictatorship, and IIA can all be stated
+preference (<a class="node-ref" data-node-id="social_choice.preference" href="social_choice_preference.html">Preference Relation</a>), so unanimity, dictatorship, and IIA can all be stated
 uniformly in terms of how the entries <code>P i</code> rank pairs of alternatives.</p>
 <p>This is the generic weak-preference profile shape. The voting layer uses a
 strict finite specialization whose ballots are <code>LinearOrder A</code>.</p>

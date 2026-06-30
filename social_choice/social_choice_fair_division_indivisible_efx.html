@@ -865,6 +865,8 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
+        <li><a href="../keywords/secretary.html">secretary</a></li>
+      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L85"><code>SocialChoice.FairDivision.Indivisible.IsEFX</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L85"><code>SocialChoice.FairDivision.Indivisible.IsEFX</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7f1760f, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
+            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
           </span>
           
           
@@ -1089,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7f1760fc33b4f3565564b42700af18d4dc6272d9/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
       </p>
       
     </div>
@@ -1104,20 +1106,20 @@ single item eliminates the envy:
 $$
 \forall i \ne j,\ \forall g \in A(j),\ v_i(A(j) \setminus \{g\}) \le v_i(A(i)).
 $$</p>
-<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsEFX</code>. Requires
-<code>[DecidableEq G]</code> for the <code>Finset</code> difference.</p>
+<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L85"><code>SocialChoice.FairDivision.Indivisible.IsEFX</code></a>. Requires
+<code>[DecidableEq G]</code> for the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Defs.lean#L75"><code>Finset</code></a> difference.</p>
 <h2>Strength</h2>
 <p>EFX is <em>strictly stronger</em> than EF1
-([[social_choice.fair_division.indivisible.ef1]]): EFX demands the
+(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef1.html">EF1 — Envy-Free Up to One Good</a>): EFX demands the
 "removing one item eliminates envy" property for <strong>every</strong> witness, EF1
 for <strong>some</strong>. The implication EFX ⇒ EF1
-([[social_choice.fair_division.indivisible.implications]]) is
+(<span class="node-ref unresolved" data-node-id="social_choice.fair_division.indivisible.implications">social_choice.fair_division.indivisible.implications</span>) is
 unconditional.</p>
 <h2>Existence</h2>
 <p>EFX existence is partially open:</p>
 <ul>
 <li><em>2 agents.</em> EFX always exists, by a small explicit construction
-  ([[social_choice.fair_division.indivisible.efx_exists_two_agents]]).</li>
+  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_exists_two_agents" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_exists_two_agents.html">EFX Existence — Two Agents, Any Finite Good Set</a>).</li>
 <li><em>3 agents.</em> Chaudhury–Garg–Mehlhorn (EC 2020) prove existence for
   any 3-agent additive valuation; this proof is <em>not yet formalised</em>
   in EconCSLib (<code>SocialChoice/FairDivision/Indivisible/EFX.lean</code> only
@@ -1129,7 +1131,7 @@ unconditional.</p>
 <h2>Implications</h2>
 <ul>
 <li><em>EF + monotone valuation</em> ⇒ EFX
-  ([[social_choice.fair_division.indivisible.implications]]):
+  (<span class="node-ref unresolved" data-node-id="social_choice.fair_division.indivisible.implications">social_choice.fair_division.indivisible.implications</span>):
   removing an item from $A(j)$ only decreases its value, so the EF
   inequality $v_i(A(j)) \le v_i(A(i))$ propagates to subsets.
   Additive valuations with nonnegative weights are monotone, so
