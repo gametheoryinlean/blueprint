@@ -9886,20 +9886,17 @@
       "topic": "mechanism_design",
       "uses": [
         "mechanism_design.auction.online.single_item_auction"
-      ],
-      "used_by": [
-        "mechanism_design.auction.online.secretary_quarter_competitive"
       ]
     },
     {
       "id": "mechanism_design.auction.online.secretary_quarter_competitive",
-      "title": "Secretary Threshold Rule Is 1/4-Competitive",
+      "title": "Sample-Then-Threshold Rule Is 1/4-Competitive",
       "kind": "theorem",
       "status": "proved",
       "tags": [
         "auction",
         "online-algorithm",
-        "secretary",
+        "sample-then-threshold",
         "competitive-ratio",
         "random-order"
       ],
@@ -9910,34 +9907,29 @@
         "mechanism_design.auction.online"
       ],
       "lean_declarations": [
-        "Online.Auction.Secretary.maxPairFold",
-        "Online.Auction.Secretary.auction",
-        "Online.Auction.Secretary.Favorable",
-        "Online.Auction.Secretary.welfare_nonneg",
-        "Online.Auction.Secretary.welfare_eq_max_of_favorable",
-        "Online.Auction.Secretary.favorableSet",
-        "Online.Auction.Secretary.favorableSet_card_ge",
-        "Online.Auction.Secretary.competitive"
+        "Online.Auction.SampleThenThreshold.maxPairFold",
+        "Online.Auction.SampleThenThreshold.auction",
+        "Online.Auction.SampleThenThreshold.Favorable",
+        "Online.Auction.SampleThenThreshold.welfare_nonneg",
+        "Online.Auction.SampleThenThreshold.welfare_eq_max_of_favorable",
+        "Online.Auction.SampleThenThreshold.favorableSet",
+        "Online.Auction.SampleThenThreshold.favorableSet_card_ge",
+        "Online.Auction.SampleThenThreshold.competitive"
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.online.no_constant_competitive",
         "mechanism_design.auction.online.single_item_auction"
-      ],
-      "used_by": [
-        "mechanism_design.auction.online.secretary_strict_comparison_fails",
-        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
       "id": "mechanism_design.auction.online.secretary_strict_comparison_fails",
-      "title": "Strict Value Comparison Breaks the Secretary Guarantee",
+      "title": "Strict Value Comparison Breaks the Competitive Guarantee",
       "kind": "example",
       "status": "proved",
       "tags": [
         "auction",
         "online-algorithm",
-        "secretary",
+        "sample-then-threshold",
         "counterexample",
         "competitive-ratio"
       ],
@@ -9953,11 +9945,7 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.online.secretary_quarter_competitive",
         "mechanism_design.auction.online.single_item_auction"
-      ],
-      "used_by": [
-        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
@@ -9968,7 +9956,7 @@
       "tags": [
         "auction",
         "online-algorithm",
-        "secretary",
+        "sample-then-threshold",
         "counterexample",
         "competitive-ratio",
         "needle"
@@ -9986,8 +9974,6 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.online.secretary_quarter_competitive",
-        "mechanism_design.auction.online.secretary_strict_comparison_fails",
         "mechanism_design.auction.online.single_item_auction"
       ]
     },
@@ -16979,28 +16965,12 @@
       "to": "mechanism_design.auction.online.no_constant_competitive"
     },
     {
-      "from": "mechanism_design.auction.online.no_constant_competitive",
-      "to": "mechanism_design.auction.online.secretary_quarter_competitive"
-    },
-    {
       "from": "mechanism_design.auction.online.single_item_auction",
       "to": "mechanism_design.auction.online.secretary_quarter_competitive"
     },
     {
-      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
-      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
-    },
-    {
       "from": "mechanism_design.auction.online.single_item_auction",
       "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
-    },
-    {
-      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
-      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
-    },
-    {
-      "from": "mechanism_design.auction.online.secretary_strict_comparison_fails",
-      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
     },
     {
       "from": "mechanism_design.auction.online.single_item_auction",
