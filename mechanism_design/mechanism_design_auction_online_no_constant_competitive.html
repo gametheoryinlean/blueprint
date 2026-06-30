@@ -1152,27 +1152,12 @@ is either some positive number $p &gt; 0$ or the formal value $+\infty$
   $\max v \ge p/2 &gt; 0$.</li>
 </ul>
 <p>The corollary is immediate from $0 &lt; c \cdot \max v$.</p>
-<h2>Remarks</h2>
-<h3>Why the positivity hypothesis is tight</h3>
+<h2>Tightness of the positivity hypothesis</h2>
 <p>Without a positive opening price, a lone first bidder wins the item for
 free, so a single-bidder auction would capture full welfare. Requiring
 a positive opening price — the natural assumption for an auction —
 removes exactly that obstruction, and the impossibility then holds for
 every $n \ge 1$.</p>
-<h3>Why it matters</h3>
-<p>This is the worst-case-order impossibility statement for the online
-single-item auction, and it motivates the escape used in the positive
-result:</p>
-<ul>
-<li><strong>Randomise the input</strong> (rather than the mechanism): under uniformly
-  random arrival order the secretary-style threshold rule recovers a
-  constant guarantee, the $1/4$ bound of
-  <a class="node-ref" data-node-id="mechanism_design.auction.online.secretary_quarter_competitive" href="auction/online/mechanism_design_auction_online_secretary_quarter_competitive.html">Sample-Then-Threshold Rule Is 1/4-Competitive</a>.</li>
-<li>The contrast is the standard online-algorithms story: worst-case
-  competitive analysis is hopeless because the algorithm must commit to
-  the opening price before seeing any bid, while average-case
-  (random-order) analysis remains informative.</li>
-</ul>
 <h2>Lean formalization</h2>
 <p>In EconCSLib, an auction is captured by a single function
 <code>threshold : List (B × F) → WithTop (Lex (F × B))</code>: given the history of

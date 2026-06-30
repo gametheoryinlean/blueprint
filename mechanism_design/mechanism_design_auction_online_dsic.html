@@ -1177,18 +1177,6 @@ optimisation.</p>
 </ol>
 <p>Combining the two steps: bidder $i$ cannot influence the price they
 face, and at that price truthful bidding maximises their payoff.</p>
-<h2>Remarks</h2>
-<h3>Why it matters</h3>
-<p>The truthfulness here is <strong>format-independent</strong>: it holds for <em>every</em>
-history-dependent posted-price rule, not just a particular one. This is
-the defining advantage of posted-price mechanisms over the sealed-bid
-second-price auction (<a class="node-ref" data-node-id="mechanism_design.auction.basic.second_price_dsic" href="auction/basic/mechanism_design_auction_basic_second_price_dsic.html">Vickrey Truth-Telling Is Dominant</a>)
-— truthfulness comes for free from the order of moves (price first, bid
-second) rather than from a carefully engineered payment rule. It is what
-licenses treating reported bids as true valuations in the downstream
-welfare analyses
-(<a class="node-ref" data-node-id="mechanism_design.auction.online.no_constant_competitive" href="auction/online/mechanism_design_auction_online_no_constant_competitive.html">No Deterministic Constant Competitive Ratio</a>,
-<a class="node-ref" data-node-id="mechanism_design.auction.online.secretary_quarter_competitive" href="auction/online/mechanism_design_auction_online_secretary_quarter_competitive.html">Sample-Then-Threshold Rule Is 1/4-Competitive</a>).</p>
 <h2>Lean formalization</h2>
 <p>The two steps of the proof are isolated as separate lemmas in EconCSLib.
 The locality step is <code>stateBeforeStep_update_self</code>: the state reached
