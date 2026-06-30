@@ -1153,20 +1153,12 @@ is either some positive number $p &gt; 0$ or the formal value $+\infty$
 </ul>
 <p>The corollary is immediate from $0 &lt; c \cdot \max v$.</p>
 <h2>Remarks</h2>
-<h3>Why the quantifiers are exactly these</h3>
-<ul>
-<li><strong>Per $n$, not just $n = 2$.</strong> A posted-price auction may depend on the
-  number of bidders (the secretary auction
-  <a class="node-ref" data-node-id="mechanism_design.auction.online.secretary_quarter_competitive" href="auction/online/mechanism_design_auction_online_secretary_quarter_competitive.html">Sample-Then-Threshold Rule Is 1/4-Competitive</a> splits
-  at $\lfloor n/2 \rfloor$), so refuting competitiveness on $2$-bidder
-  inputs says nothing about $3$-bidder inputs. The impossibility must —
-  and does — hold for <strong>every</strong> $n$.</li>
-<li><strong>Positive opening price, and $n \ge 1$ is then tight.</strong> Without a
-  positive opening price, a lone first bidder wins the item for free, so
-  a single-bidder auction would capture full welfare. Requiring a
-  positive opening price — the natural assumption for an auction —
-  removes exactly that obstruction.</li>
-</ul>
+<h3>Why the positivity hypothesis is tight</h3>
+<p>Without a positive opening price, a lone first bidder wins the item for
+free, so a single-bidder auction would capture full welfare. Requiring
+a positive opening price — the natural assumption for an auction —
+removes exactly that obstruction, and the impossibility then holds for
+every $n \ge 1$.</p>
 <h3>Why it matters</h3>
 <p>This is the worst-case-order impossibility statement for the online
 single-item auction, and it motivates the escape used in the positive
