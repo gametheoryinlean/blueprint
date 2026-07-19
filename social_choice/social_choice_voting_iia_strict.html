@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L89"><code>SocialChoice.Voting.iia_strict</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L89"><code>SocialChoice.Voting.iia_strict</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1097,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1106,7 +1104,7 @@
 
   <div class="lemma_thmcontent thm-content body">
     <h1>IIA on Strict Preference</h1>
-<p><strong>Lemma.</strong> If $F$ satisfies IIA (<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>), and two
+<p><strong>Lemma.</strong> If $F$ satisfies IIA ([[social_choice.voting.iia]]), and two
 profiles $P$, $Q$ agree on the weak ranking of the pair $\{a, b\}$ in both
 directions ($P_i(a,b) \iff Q_i(a,b)$ and $P_i(b,a) \iff Q_i(b,a)$ for all
 $i$), then society's <em>strict</em> preference between $a$ and $b$ is the same
@@ -1119,12 +1117,12 @@ $$</p>
       <summary>Proof</summary>
       <div class="proof-body">
         <p>Strict preference $\succ_R$ is defined as $R(a,b) \wedge \neg R(b,a)$
-(<a class="node-ref" data-node-id="social_choice.strict_preference" href="social_choice_strict_preference.html">Strict Preference</a>). Both conjuncts are determined by
+([[social_choice.strict_preference]]). Both conjuncts are determined by
 the IIA-controlled weak rankings, so the strict comparison transfers between
 $P$ and $Q$. $\square$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L89"><code>SocialChoice.Voting.iia_strict</code></a>.</p>
+<p>In Lean: <code>SocialChoice.Voting.iia_strict</code>.</p>
 <p>This is the workhorse algebraic lemma in the decisive-coalition Arrow proof
-(<a class="node-ref" data-node-id="social_choice.voting.arrow_of_unanimity_iia" href="voting/social_choice_voting_arrow_of_unanimity_iia.html">Arrow&#x27;s Theorem via Decisive Coalitions</a>): every step where the
+([[social_choice.voting.arrow_of_unanimity_iia]]): every step where the
 proof modifies a profile while preserving the $\{a,b\}$ pair-restricted
 profile invokes this lemma to keep society's strict $a$-vs-$b$ comparison
 fixed.</p>

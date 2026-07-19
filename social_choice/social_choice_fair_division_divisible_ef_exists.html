@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1284"><code>SocialChoice.FairDivision.Divisible.ef_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1284"><code>SocialChoice.FairDivision.Divisible.ef_exists</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1097,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1111,8 +1109,8 @@ finite non-atomic measures $\mu : \mathrm{Fin}\ n \to \mathrm{Measure}\ I$
 on the unit interval $I = [0, 1]$, there exists a complete measurable
 partition $A : \mathrm{Fin}\ n \to \mathrm{Set}\ I$ that is envy-free
 under the measure valuation $\mathrm{MeasureValuation}\ \mu$
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_envy_free.html">Divisible Envy-Free, Proportional, Equitable Predicates</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1284"><code>SocialChoice.FairDivision.Divisible.ef_exists</code></a>.</p>
+([[social_choice.fair_division.divisible.envy_free]]).</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Divisible.ef_exists</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1123,16 +1121,16 @@ $\{U(i)\}_i$ cover the division simplex
 <ul>
 <li>
 <p><strong>Usual case.</strong> $\{U(i)\}_i$ covers $S$. Apply
-  <a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_usual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_usual_case.html">Stromquist — Usual Case (U Covers the Simplex)</a> —
+  [[social_choice.fair_division.divisible.stromquist_usual_case]] —
   KKM yields a common point with a unique-preference bijection, and
-  <a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_assignment" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_assignment.html">Fair Assignment from a Common KKM Point</a>
+  [[social_choice.fair_division.divisible.stromquist_assignment]]
   converts the bijection into an EF allocation.</p>
 </li>
 <li>
 <p><strong>Unusual case.</strong> $\{U(i)\}_i$ does not cover $S$. Apply
-  <a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_unusual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_unusual_case.html">Stromquist — Unusual Case (Shifted-Cell Limit)</a> —
+  [[social_choice.fair_division.divisible.stromquist_unusual_case]] —
   the shifted-cell refinement
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_shifted_cells" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_shifted_cells.html">Stromquist Shifted-Cell Approximation</a>)
+  ([[social_choice.fair_division.divisible.stromquist_shifted_cells]])
   produces approximate fair divisions whose limit is fair for the
   original measures.</p>
 </li>
@@ -1143,17 +1141,17 @@ receives a single interval).</p>
 <p>This is the high point of the divisible-fair-division formalization:</p>
 <ul>
 <li>Compared to cut-and-choose
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_and_choose_ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_ef_exists.html">Two-Agent EF Existence via Cut-and-Choose</a>)
+  ([[social_choice.fair_division.divisible.cut_and_choose_ef_exists]])
   it works for <em>any</em> number of agents, not just two.</li>
 <li>Compared to Dubins–Spanier
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.dubins_spanier_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html">Dubins–Spanier Proportional Existence</a>)
+  ([[social_choice.fair_division.divisible.dubins_spanier_proportional]])
   it gives EF, not merely PROP.</li>
 <li>The proof is <em>non-constructive</em>: KKM (and Brouwer / Sperner) are not
   algorithmic, so the EF allocation is shown to exist without an
   explicit construction.</li>
 </ul>
 <p>The combined EF + PROP existence statement is
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists_and_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists_and_proportional.html">EF + Proportional Existence (Stromquist Corollary)</a>.</p>
+[[social_choice.fair_division.divisible.ef_exists_and_proportional]].</p>
 <h2>References</h2>
 <ul>
 <li>Stromquist, W. (1980). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 87: 640–644.</li>

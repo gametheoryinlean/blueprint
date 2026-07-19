@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,25 +1073,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L92"><code>MatrixGame.value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L92"><code>MatrixGame.value</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def value {𝕜 : Type} [Field 𝕜] [ConditionallyCompleteLinearOrder 𝕜]
     [IsStrictOrderedRing 𝕜]
-    (A : MatrixGame I J 𝕜) : 𝕜</code></pre>
+    (A : MatrixGame I J 𝕜) : 𝕜 := A.maximin</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>
@@ -1108,7 +1106,7 @@ $$
   \operatorname{val}(A) = \underline v = \overline v.
 $$</p>
 <p>The Lean development defines <code>MatrixGame.value := A.maximin</code> and provides
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L96"><code>value_eq_maximin</code></a> (definitional) and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L100"><code>value_eq_minimax</code></a> (via the minimax
+<code>value_eq_maximin</code> (definitional) and <code>value_eq_minimax</code> (via the minimax
 theorem).</p>
 <h2>References</h2>
 <ul>

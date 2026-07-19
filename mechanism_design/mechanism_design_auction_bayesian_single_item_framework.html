@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,254 +1077,298 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L57"><code>TypeCDF</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L57"><code>TypeCDF</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">A scalar type distribution on the interval `[0, ω]`, recorded by its CDF.</p>
-          <pre class="lean-signature"><code>structure TypeCDF (ω : ℝ) where</code></pre>
+          <pre class="lean-signature"><code>structure TypeCDF (ω : ℝ) where
+  /-- Upper bound of the support interval is nonnegative. -/
+  omega_nonneg : 0 ≤ ω
+  /-- Cumulative distribution function. -/
+  cdf : ℝ → ℝ
+  /-- Monotonicity of the CDF on the support interval. -/
+  monotoneOn_cdf : MonotoneOn cdf (Set.Icc 0 ω)
+  /-- Normalization at the lower endpoint. -/
+  cdf_zero : cdf 0 = 0
+  /-- Normalization at the upper endpoint. -/
+  cdf_upper : cdf ω = 1
+  /-- Smoothness assumption used in continuous-type auction theory. -/
+  differentiableOn_cdf : DifferentiableOn ℝ cdf (Set.Ioo 0 ω)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L72"><code>ContinuousTypeProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L72"><code>ContinuousTypeProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Agent-specific continuous private-value data.</p>
-          <pre class="lean-signature"><code>structure ContinuousTypeProfile (I : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure ContinuousTypeProfile (I : Type*) where
+  /-- Agent-specific upper bounds `ωᵢ` for the type support. -/
+  omega : I → ℝ
+  /-- Agent-specific CDFs `Fᵢ` on `[0, ωᵢ]`. -/
+  cdf : ∀ i, TypeCDF (omega i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L79"><code>OpponentProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L79"><code>OpponentProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Opponent profiles for agent `i`, with constant coordinate type `X`.</p>
-          <pre class="lean-signature"><code>abbrev OpponentProfile (I : Type*) (X : Type*) (i : I)</code></pre>
+          <pre class="lean-signature"><code>abbrev OpponentProfile (I : Type*) (X : Type*) (i : I) := ∀ _ : {j // j ≠ i}, X</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L82"><code>OpponentTypeProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L82"><code>OpponentTypeProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Opponent type profiles for real-valued auction types.</p>
-          <pre class="lean-signature"><code>abbrev OpponentTypeProfile (I : Type*) (i : I)</code></pre>
+          <pre class="lean-signature"><code>abbrev OpponentTypeProfile (I : Type*) (i : I) := OpponentProfile I ℝ i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L96"><code>BayesianSingleItemAuction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L96"><code>BayesianSingleItemAuction</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           
           <pre class="lean-signature"><code>structure BayesianSingleItemAuction (I : Type*)
-    extends SingleParameterMechanism I ℝ where</code></pre>
+    extends SingleParameterMechanism I ℝ where
+  /-- Common prior probability measure over true type profiles. -/
+  prior : MeasureTheory.Measure (∀ _ : I, ℝ)
+  /-- The prior is a probability measure. -/
+  prob_prior : MeasureTheory.IsProbabilityMeasure prior
+  /-- Opponent-type prior `μᵢ` used for interim expectations conditional on a
+  fixed report by agent `i`. -/
+  opponentPrior : (i : I) → MeasureTheory.Measure (OpponentTypeProfile I i)
+  /-- Each opponent-type prior is a probability measure. -/
+  prob_opponentPrior :
+    ∀ i : I, MeasureTheory.IsProbabilityMeasure (opponentPrior i)
+  /-- Continuous private-value support and CDF data for each agent. -/
+  typeData : ContinuousTypeProfile I</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L124"><code>BayesianSingleItemAuction.profileInsert</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L124"><code>BayesianSingleItemAuction.profileInsert</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Insert one coordinate into an opponent profile.</p>
           <pre class="lean-signature"><code>noncomputable def profileInsert (i : I) (x : X) (t : OpponentProfile I X i) :
-    ∀ _ : I, X</code></pre>
+    ∀ _ : I, X := by
+  classical
+  exact fun j =&gt; if h : j = i then x else t ⟨j, h⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L148"><code>BayesianSingleItemAuction.toDirectBayesianMechanismWithTransfers</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L148"><code>BayesianSingleItemAuction.toDirectBayesianMechanismWithTransfers</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           
           <pre class="lean-signature"><code>def toDirectBayesianMechanismWithTransfers (A : BayesianSingleItemAuction I) :
-    DirectBayesianMechanismWithTransfers I (fun _ =&gt; ℝ) (I → ℝ) ℝ where</code></pre>
+    DirectBayesianMechanismWithTransfers I (fun _ =&gt; ℝ) (I → ℝ) ℝ where
+  prior := A.prior
+  prob_prior := A.prob_prior
+  allocationRule := A.allocationRule
+  paymentRule := A.paymentRule</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L160"><code>BayesianSingleItemAuction.RespectsSingleItemCapacity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L160"><code>BayesianSingleItemAuction.RespectsSingleItemCapacity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">The allocation rule respects the single-item probability budget.</p>
-          <pre class="lean-signature"><code>def RespectsSingleItemCapacity [Fintype I] (A : BayesianSingleItemAuction I) : Prop</code></pre>
+          <pre class="lean-signature"><code>def RespectsSingleItemCapacity [Fintype I] (A : BayesianSingleItemAuction I) : Prop :=
+  ∀ t : ∀ _ : I, ℝ, (∑ i, A.allocationRule t i) ≤ 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L167"><code>BayesianSingleItemAuction.IsFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L167"><code>BayesianSingleItemAuction.IsFeasible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsFeasible [Fintype I] (A : BayesianSingleItemAuction I) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsFeasible [Fintype I] (A : BayesianSingleItemAuction I) : Prop :=
+  A.IsAllocFeasible ∧ A.RespectsSingleItemCapacity</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L182"><code>BayesianSingleItemAuction.typeDensity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L182"><code>BayesianSingleItemAuction.typeDensity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def typeDensity (A : BayesianSingleItemAuction I) (i : I) : ℝ → ℝ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def typeDensity (A : BayesianSingleItemAuction I) (i : I) : ℝ → ℝ :=
+  deriv (A.typeData.cdf i).cdf</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L186"><code>BayesianSingleItemAuction.typeMeasure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L186"><code>BayesianSingleItemAuction.typeMeasure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Type measure generated by `fᵢ` on `[0, ωᵢ]`.</p>
-          <pre class="lean-signature"><code>noncomputable def typeMeasure (A : BayesianSingleItemAuction I) (i : I) : Measure ℝ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def typeMeasure (A : BayesianSingleItemAuction I) (i : I) : Measure ℝ :=
+  (volume.restrict (Set.Ioc 0 (A.typeData.omega i))).withDensity
+    fun v =&gt; ENNReal.ofReal (A.typeDensity i v)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L194"><code>BayesianSingleItemAuction.jointDensity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L194"><code>BayesianSingleItemAuction.jointDensity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def jointDensity [Fintype I] (A : BayesianSingleItemAuction I)
-    (t : ∀ _ : I, ℝ) : ℝ</code></pre>
+    (t : ∀ _ : I, ℝ) : ℝ :=
+  Finset.univ.prod fun i =&gt; A.typeDensity i (t i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L199"><code>BayesianSingleItemAuction.productPrior</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L199"><code>BayesianSingleItemAuction.productPrior</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Product type prior.</p>
           <pre class="lean-signature"><code>noncomputable def productPrior [Fintype I] (A : BayesianSingleItemAuction I) :
-    Measure (∀ _ : I, ℝ)</code></pre>
+    Measure (∀ _ : I, ℝ) :=
+  Measure.pi fun i =&gt; A.typeMeasure i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L204"><code>BayesianSingleItemAuction.opponentProductPrior</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L204"><code>BayesianSingleItemAuction.opponentProductPrior</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Product prior over `i`&#39;s opponents.</p>
           <pre class="lean-signature"><code>noncomputable def opponentProductPrior [Fintype I] [DecidableEq I]
-    (A : BayesianSingleItemAuction I) (i : I) : Measure (OpponentTypeProfile I i)</code></pre>
+    (A : BayesianSingleItemAuction I) (i : I) : Measure (OpponentTypeProfile I i) :=
+  Measure.pi fun j : {j // j ≠ i} =&gt; A.typeMeasure j</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L209"><code>BayesianSingleItemAuction.HasIndependentTypePriors</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L209"><code>BayesianSingleItemAuction.HasIndependentTypePriors</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Stored priors are the product priors.</p>
           <pre class="lean-signature"><code>def HasIndependentTypePriors [Fintype I] [DecidableEq I]
-    (A : BayesianSingleItemAuction I) : Prop</code></pre>
+    (A : BayesianSingleItemAuction I) : Prop :=
+  A.prior = A.productPrior ∧
+    ∀ i : I, A.opponentPrior i = A.opponentProductPrior i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.BayesianSingleItem</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.BayesianSingleItem</code></a>
       </p>
       
     </div>
@@ -1338,7 +1380,7 @@
 <p>This node bundles the data definitions used to model a sealed-bid
 single-item auction in an incomplete-information environment as a direct
 Bayesian mechanism with transfers
-(<a class="node-ref" data-node-id="mechanism_design.bayesian.bayesian_mechanisms" href="bayesian/mechanism_design_bayesian_bayesian_mechanisms.html">Bayesian Mechanisms</a>).</p>
+([[mechanism_design.bayesian.bayesian_mechanisms]]).</p>
 <h2>Continuous private-value data</h2>
 <ul>
 <li><code>TypeCDF (ω : ℝ)</code> records a one-dimensional scalar type distribution on
@@ -1362,7 +1404,7 @@ Bayesian mechanism with transfers
 and integrating over opponents' types.</p>
 <h2>Auction structure</h2>
 <p>A <code>BayesianSingleItemAuction I</code> extends <code>SingleParameterMechanism I ℝ</code>
-(<a class="node-ref" data-node-id="mechanism_design.transfer.single_parameter_transfer_layer" href="transfer/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>) with
+([[mechanism_design.transfer.single_parameter_transfer_layer]]) with
 Bayesian environment data:</p>
 <ul>
 <li><code>prior : Measure (∀ _ : I, ℝ)</code> — the common-knowledge prior on full
@@ -1377,21 +1419,21 @@ Bayesian environment data:</p>
 <p>The reuse pattern is:</p>
 <ul>
 <li><code>allocationRule t i : ℝ</code> — agent <code>i</code>'s winning probability at report
-  profile <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/MathlibTest/eqns.lean#L16"><code>t</code></a>, inherited from the single-parameter mechanism.</li>
-<li><code>paymentRule t i : ℝ</code> — agent <code>i</code>'s payment at report profile <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/MathlibTest/eqns.lean#L16"><code>t</code></a>.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L148"><code>toDirectBayesianMechanismWithTransfers</code></a> exposes the auction as a
+  profile <code>t</code>, inherited from the single-parameter mechanism.</li>
+<li><code>paymentRule t i : ℝ</code> — agent <code>i</code>'s payment at report profile <code>t</code>.</li>
+<li><code>toDirectBayesianMechanismWithTransfers</code> exposes the auction as a
   <code>DirectBayesianMechanismWithTransfers I (fun _ =&gt; ℝ) (I → ℝ) ℝ</code>, so
   Bayesian ex-ante / interim machinery from
-  (<a class="node-ref" data-node-id="mechanism_design.bayesian.bayesian_mechanisms" href="bayesian/mechanism_design_bayesian_bayesian_mechanisms.html">Bayesian Mechanisms</a>) applies.</li>
+  ([[mechanism_design.bayesian.bayesian_mechanisms]]) applies.</li>
 </ul>
 <h2>Feasibility</h2>
 <p>For probabilistic single-item allocation, two constraints matter:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L174"><code>IsAllocFeasible</code></a> (inherited): every <code>allocationRule t i</code> lies in
+<li><code>IsAllocFeasible</code> (inherited): every <code>allocationRule t i</code> lies in
   <code>[0, 1]</code>.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L160"><code>RespectsSingleItemCapacity</code></a>: for every report profile,
+<li><code>RespectsSingleItemCapacity</code>: for every report profile,
   $\sum_i x_i(t) \le 1$ — at most one item is allocated in expectation.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L167"><code>IsFeasible</code></a> is the conjunction.</li>
+<li><code>IsFeasible</code> is the conjunction.</li>
 </ul>
 <h2>Density layer (assuming independence)</h2>
 <p>When the prior is independent across agents, <code>typeDensity i</code> returns the
@@ -1399,18 +1441,18 @@ derivative of <code>Fᵢ</code>, and <code>jointDensity t = ∏ᵢ fᵢ(tᵢ)</c
 density. These are convenience helpers for density-based analysis; the
 core mechanism layer does not require independence.</p>
 <h2>Product priors</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L199"><code>productPrior</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L204"><code>opponentProductPrior</code></a> build the full type prior and
+<p><code>productPrior</code> and <code>opponentProductPrior</code> build the full type prior and
 opponent priors from the one-dimensional density-induced measures. The
-predicate <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L209"><code>HasIndependentTypePriors</code></a> records when the auction's stored priors
+predicate <code>HasIndependentTypePriors</code> records when the auction's stored priors
 are exactly these product priors.</p>
 <h2>Position in the library</h2>
 <p>The single-parameter Myerson payment identity
-(<a class="node-ref" data-node-id="mechanism_design.myerson.payment_formula" href="myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>) and the ex-ante revelation
-principle (<a class="node-ref" data-node-id="mechanism_design.bayesian.ex_ante_revelation_principle" href="bayesian/mechanism_design_bayesian_ex_ante_revelation_principle.html">Ex-Ante Revelation Principle Interface</a>)
+([[mechanism_design.myerson.payment_formula]]) and the ex-ante revelation
+principle ([[mechanism_design.bayesian.ex_ante_revelation_principle]])
 both apply to instances of this framework. Concrete IPV models such as
 the symmetric first-price equilibrium and Myerson's optimal auction are
-tracked separately (<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.symmetric_first_price_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>,
-<a class="node-ref" data-node-id="mechanism_design.myerson.optimal_auction" href="myerson/mechanism_design_myerson_optimal_auction.html">Regular Myerson Optimal Single-Item Auction</a>).</p>
+tracked separately ([[mechanism_design.auction.bayesian.symmetric_first_price_equilibrium]],
+[[mechanism_design.myerson.optimal_auction]]).</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 12, Section 12.1] Maschler, Solan, and Zamir, <em>Game

@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,38 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L61"><code>MatrixGame.AdmissibleSequence</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L61"><code>MatrixGame.AdmissibleSequence</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure AdmissibleSequence (A : MatrixGame I J ℝ) where</code></pre>
+          <pre class="lean-signature"><code>structure AdmissibleSequence (A : MatrixGame I J ℝ) where
+  α : ℕ → J → ℝ
+  β : ℕ → I → ℝ
+  iSeq : ℕ → I
+  jSeq : ℕ → J
+  init_bracket :
+    Finset.univ.inf&#39; Finset.univ_nonempty (α 0)
+      = Finset.univ.sup&#39; Finset.univ_nonempty (β 0)
+  iSeq_best :
+    ∀ t i&#39;, β t i&#39; ≤ β t (iSeq t)
+  jSeq_best :
+    ∀ t j&#39;, α t (jSeq t) ≤ α t j&#39;
+  α_step :
+    ∀ t j, α (t + 1) j = α t j + A.g (iSeq t) j
+  β_step :
+    ∀ t i, β (t + 1) i = β t i + A.g i (jSeq t)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Robinson.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Robinson</code></a>
       </p>
       
     </div>
@@ -1120,7 +1133,7 @@ $\mathbb{R}^n \times \mathbb{R}^m$ satisfying</p>
   $$</li>
 </ul>
 <p>This is a cumulative-payoff encoding of fictitious play
-(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.fictitious_play" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_fictitious_play.html">Fictitious Play</a>): writing
+([[game_theory.strategic_game.zero_sum.learning.fictitious_play]]): writing
 $x(t) := \frac1t \sum_{s \le t} e_{i_s}$ and
 $y(t) := \frac1t \sum_{s \le t} e_{j_s}$ for the empirical frequencies,
 $$
@@ -1170,9 +1183,9 @@ $2\eta = 2\varepsilon/3$ (this is the cleaner constant choice — see Note at en
 <p><strong>(a)</strong> every row $i \in I$ and every column $j \in J$ is <em>useful</em> in
      $[s, s + t^*]$ (i.e., each appears in $I(\beta(\cdot))$ or
      $J(\alpha(\cdot))$ at some step inside the window). By
-     <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.useful_window" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_useful_window.html">Useful Window Bound For Admissible Sequences</a> —
+     [[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.useful_window]] —
      which internally uses
-     <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.bracket_invariant" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_bracket_invariant.html">Bracket Invariant For Admissible Sequences</a> —
+     [[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.bracket_invariant]] —
      $$
        \mu(s + t^*) \;\le\; 4 t^* \|A\|
      $$
@@ -1180,7 +1193,7 @@ $2\eta = 2\varepsilon/3$ (this is the cleaner constant choice — see Note at en
 </li>
 <li>
 <p><strong>(b)</strong> some row or column is not useful. By
-     <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.subgame_reduction" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_subgame_reduction.html">Subgame Reduction For Non-Useful Indices</a>
+     [[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.subgame_reduction]]
      the window is governed by admissible play on a strict submatrix $A'$, so
      the submatrix bound from step 1 applies. Combined with admissibility's
      $2\|A\|$ per-step Lipschitz control on $\mu$, this gives
@@ -1192,7 +1205,7 @@ $2\eta = 2\varepsilon/3$ (this is the cleaner constant choice — see Note at en
 <li>
 <p><strong>Pasting via Euclidean division.</strong> Write $t = q t^* + r$ with $0 \le r &lt; t^*$.
    Apply
-   <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.induction_step" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_induction_step.html">Euclidean Division Pasting In Robinson Induction</a> with
+   [[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.induction_step]] with
    $\varepsilon_{\text{step}} := 2\eta = 2\varepsilon/3$ (so that the step's
    "$\frac{\varepsilon_{\text{step}} t^*}{2}$" matches the subgame-case increment
    $\eta t^*$ from step 2). The pasting lemma yields, for all $t \ge t^*$,
@@ -1233,11 +1246,11 @@ $\min_j x(t)Ay \le \underline v(A) \le \overline v(A) \le \max_i x(t) A^i$,
 the lemma yields the existence of a value $v(A) = \underline v = \overline v$
 and gives that every accumulation point of $(x(t), y(t))$ is an optimal-strategy
 pair. This is the content of
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.fictitious_play_convergence" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_fictitious_play_convergence.html">Fictitious Play Convergence</a>.</p>
+[[game_theory.strategic_game.zero_sum.learning.fictitious_play_convergence]].</p>
 <p>For the Cesàro average payoff statement
 $\frac1n \sum_{p \le n} A_{i_p, j_p} \to v$, see the independent telescoping
 argument in
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.cesaro_payoff_from_robinson" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_cesaro_payoff_from_robinson.html">Cesàro Payoff Convergence From Robinson Lemma</a>.</p>
+[[game_theory.strategic_game.zero_sum.learning.cesaro_payoff_from_robinson]].</p>
 <h2>References</h2>
 <ul>
 <li>[Robinson 1951] J. Robinson, "An iterative method of solving a game",

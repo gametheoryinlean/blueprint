@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,12 +1060,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L46"><code>SocialChoice.FairDivision.Divisible.cdfRealContinuous</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L46"><code>SocialChoice.FairDivision.Divisible.cdfRealContinuous</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval
           </span>
           
           
@@ -1079,7 +1077,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.UnitInterval</code></a>
       </p>
       
     </div>
@@ -1094,7 +1092,7 @@ $$
 F : \mathbb{R} \to \mathbb{R}, \qquad F(t) = \nu\bigl((-\infty, t]\bigr).\mathrm{toReal}
 $$
 is continuous.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/UnitInterval.lean#L46"><code>SocialChoice.FairDivision.Divisible.cdfRealContinuous</code></a>. The
+<p>In Lean: <code>SocialChoice.FairDivision.Divisible.cdfRealContinuous</code>. The
 argument shows continuity from the left and from the right separately
 using the monotonicity of $F$.</p>
     
@@ -1105,24 +1103,24 @@ using the monotonicity of $F$.</p>
 <ul>
 <li><em>Monotonicity.</em> $F$ is monotone because $t \le s$ implies
   $(-\infty, t] \subseteq (-\infty, s]$, and <code>measure_mono</code> plus
-  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/ENNReal/Real.lean#L61"><code>ENNReal.toReal_le_toReal</code></a> give $F(t) \le F(s)$ (both measures are
+  <code>ENNReal.toReal_le_toReal</code> give $F(t) \le F(s)$ (both measures are
   finite).</li>
-<li><em>Right-continuity.</em> Apply <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/MeasureSpace.lean#L685"><code>tendsto_measure_biInter_gt</code></a> to the
+<li><em>Right-continuity.</em> Apply <code>tendsto_measure_biInter_gt</code> to the
   decreasing family $\{(-\infty, r] : r &gt; a\}$; its intersection is
-  $(-\infty, a]$, and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Topology/Instances/ENNReal/Lemmas.lean#L109"><code>ENNReal.continuousAt_toReal</code></a> finishes the
+  $(-\infty, a]$, and <code>ENNReal.continuousAt_toReal</code> finishes the
   reduction back to the real CDF.</li>
 <li><em>Left-continuity.</em> This is where non-atomicity enters. Pick a strictly
   increasing sequence $u_n \uparrow a$ in $(-\infty, a)$. Its union
   satisfies $\bigcup_n (-\infty, u_n] = (-\infty, a)$, and
-  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/MeasureSpace.lean#L613"><code>tendsto_measure_iUnion_atTop</code></a> plus <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean#L100"><code>Iio_ae_eq_Iic</code></a> (which depends on
+  <code>tendsto_measure_iUnion_atTop</code> plus <code>Iio_ae_eq_Iic</code> (which depends on
   non-atomicity to identify $(-\infty, a)$ and $(-\infty, a]$ up to
   $\nu$-null sets) closes the left limit equality.</li>
 </ul>
 <p>The combination of left- and right-continuity yields continuity at every
 $a \in \mathbb{R}$, hence everywhere.</p>
 <h2>Where this is used</h2>
-<p>This is the IVT-input for cake-cutting: it lets <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L124"><code>cut_exists</code></a>
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_exists.html">IVT — Cut Point Exists for Non-Atomic Measures on [0,1]</a>) build a cut point
+<p>This is the IVT-input for cake-cutting: it lets <code>cut_exists</code>
+([[social_choice.fair_division.divisible.cut_exists]]) build a cut point
 $t$ with $\nu((-\infty, t]) = c$ for any prescribed $0 &lt; c &lt; \nu(\mathbb{R})$
 on the unit interval — exactly what cut-and-choose, Dubins–Spanier, and
 Stromquist all need.</p>

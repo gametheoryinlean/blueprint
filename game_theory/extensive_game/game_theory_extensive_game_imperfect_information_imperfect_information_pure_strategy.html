@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,57 +1073,60 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L101"><code>FiniteImperfectGame.PureStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L101"><code>FiniteImperfectGame.PureStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           
-          <pre class="lean-signature"><code>def PureStrategy (i : N) : Type _</code></pre>
+          <pre class="lean-signature"><code>def PureStrategy (i : N) : Type _ :=
+  (k : G.InfoSet) → (s : G.State) → G.info s = some k → G.mover s = some i → G.Action s</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L105"><code>FiniteImperfectGame.PureStrategyProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L105"><code>FiniteImperfectGame.PureStrategyProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           <p class="lean-docstring">A pure strategy profile.</p>
-          <pre class="lean-signature"><code>def PureStrategyProfile : Type _</code></pre>
+          <pre class="lean-signature"><code>def PureStrategyProfile : Type _ :=
+  (i : N) → G.PureStrategy i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L110"><code>FiniteImperfectGame.PureStrategy.actionAt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L110"><code>FiniteImperfectGame.PureStrategy.actionAt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           
           <pre class="lean-signature"><code>def PureStrategy.actionAt {i : N} (σ : G.PureStrategy i) {s : G.State}
     {k : G.InfoSet} (hinfo : G.info s = some k) (hmover : G.mover s = some i) :
-    G.Action s</code></pre>
+    G.Action s :=
+  σ k s hinfo hmover</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation</code></a>
       </p>
       
     </div>

@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/BestResponse.lean#L24"><code>IsBestResponse</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/BestResponse.lean#L24"><code>IsBestResponse</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.BestResponse
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.BestResponse
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsBestResponse (G : StrategicGame N U) (σ : G.Profile) (i : N) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsBestResponse (G : StrategicGame N U) (σ : G.Profile) (i : N) : Prop :=
+  ∀ s&#39; : G.strategy i, G.payoff (deviate σ i s&#39;) i ≤ G.payoff σ i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/BestResponse.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.BestResponse</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/BestResponse.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.BestResponse</code></a>
       </p>
       
     </div>

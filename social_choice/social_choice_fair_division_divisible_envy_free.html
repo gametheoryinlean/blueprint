@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,58 +1075,61 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L68"><code>SocialChoice.FairDivision.Divisible.IsEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L68"><code>SocialChoice.FairDivision.Divisible.IsEnvyFree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsEnvyFree {N Ω V : Type*} [Preorder V]
-    (μ : CakeValuation N Ω V) (A : Allocation N Ω) : Prop</code></pre>
+    (μ : CakeValuation N Ω V) (A : Allocation N Ω) : Prop :=
+  ∀ i j : N, μ.val i (A j) ≤ μ.val i (A i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L75"><code>SocialChoice.FairDivision.Divisible.IsProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L75"><code>SocialChoice.FairDivision.Divisible.IsProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsProportional {N Ω V : Type*} [Preorder V] [Semiring V] (n : ℕ)
-    (μ : CakeValuation N Ω V) (A : Allocation N Ω) : Prop</code></pre>
+    (μ : CakeValuation N Ω V) (A : Allocation N Ω) : Prop :=
+  ∀ i : N, μ.val i Set.univ ≤ (n : V) * μ.val i (A i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L80"><code>SocialChoice.FairDivision.Divisible.IsEquitable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L80"><code>SocialChoice.FairDivision.Divisible.IsEquitable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
           </span>
           
           
           <p class="lean-docstring">Equitable: every agent assigns exactly the same value to their own piece.</p>
           <pre class="lean-signature"><code>def IsEquitable {N Ω V : Type*} [Preorder V]
-    (cv : CakeValuation N Ω V) (A : Allocation N Ω) : Prop</code></pre>
+    (cv : CakeValuation N Ω V) (A : Allocation N Ω) : Prop :=
+  ∀ i j : N, cv.val i (A i) = cv.val j (A j)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Basic</code></a>
       </p>
       
     </div>
@@ -1138,18 +1139,18 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Divisible Envy-Free, Proportional, Equitable Predicates</h1>
 <p>Three fairness predicates specialised to divisible allocations
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.allocation" href="fair_division/divisible/social_choice_fair_division_divisible_allocation.html">Divisible Allocation</a>) under a cake
-valuation $\mathrm{cv}$ (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cake_valuation" href="fair_division/divisible/social_choice_fair_division_divisible_cake_valuation.html">Cake Valuation</a>).</p>
+([[social_choice.fair_division.divisible.allocation]]) under a cake
+valuation $\mathrm{cv}$ ([[social_choice.fair_division.divisible.cake_valuation]]).</p>
 <h2>Envy-Free (EF)</h2>
 <p>$$
 \forall i, j \in N,\ \mathrm{cv}(i, A(j)) \le \mathrm{cv}(i, A(i)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L68"><code>Divisible.IsEnvyFree</code></a>. Requires only <code>[Preorder V]</code> on the value
+<p>In Lean: <code>Divisible.IsEnvyFree</code>. Requires only <code>[Preorder V]</code> on the value
 type.</p>
 <p>For divisible goods with non-atomic measures, EF allocations always exist
-(Stromquist; <a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html">Envy-Free Existence (Stromquist, n Agents)</a>). This is
+(Stromquist; [[social_choice.fair_division.divisible.ef_exists]]). This is
 the central difference from the indivisible setting
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_free" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_free.html">Indivisible Envy-Free</a>), where EF may fail
+([[social_choice.fair_division.indivisible.envy_free]]), where EF may fail
 to exist.</p>
 <h2>Proportional (PROP)</h2>
 <p>For a population size parameter $n$,
@@ -1157,19 +1158,19 @@ $$
 \forall i \in N,\ \mathrm{cv}(i, \Omega) \le n \cdot \mathrm{cv}(i, A(i)).
 $$</p>
 <p>Stated without division so it makes sense over any <code>[Semiring V]</code>. In
-Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L75"><code>Divisible.IsProportional</code></a>.</p>
+Lean: <code>Divisible.IsProportional</code>.</p>
 <h2>Equitable</h2>
 <p>Every agent assigns the same value to their own piece:
 $$
 \forall i, j \in N,\ \mathrm{cv}(i, A(i)) = \mathrm{cv}(j, A(j)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L80"><code>Divisible.IsEquitable</code></a>. Comparable across agents only with
+<p>In Lean: <code>Divisible.IsEquitable</code>. Comparable across agents only with
 normalized cake valuations
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.normalized_iff_probability" href="fair_division/divisible/social_choice_fair_division_divisible_normalized_iff_probability.html">Normalized Measure Valuation ↔ Probability Measure</a>).</p>
+([[social_choice.fair_division.divisible.normalized_iff_probability]]).</p>
 <p>These three are exactly the generic
-(<a class="node-ref" data-node-id="social_choice.fair_division.envy_free" href="fair_division/social_choice_fair_division_envy_free.html">Envy-Free Allocation</a>,
-<a class="node-ref" data-node-id="social_choice.fair_division.proportional" href="fair_division/social_choice_fair_division_proportional.html">Proportional Allocation</a>,
-<a class="node-ref" data-node-id="social_choice.fair_division.equitable" href="fair_division/social_choice_fair_division_equitable.html">Equitable Allocation</a>) predicates re-stated with
+([[social_choice.fair_division.envy_free]],
+[[social_choice.fair_division.proportional]],
+[[social_choice.fair_division.equitable]]) predicates re-stated with
 $\mathrm{cv}.val$ in place of an opaque utility function, so the shape
 matches downstream measure-theoretic proofs.</p>
 <h2>References</h2>

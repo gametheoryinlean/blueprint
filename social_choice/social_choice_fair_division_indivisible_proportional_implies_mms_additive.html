@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L107"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isMaxminShare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L107"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isMaxminShare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Implications
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Implications
           </span>
           
           
@@ -1100,7 +1098,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Implications</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Implications</code></a>
       </p>
       
     </div>
@@ -1111,10 +1109,10 @@
     <h1>PROP ⇒ MMS (Additive Valuations, Complete Allocations)</h1>
 <p><strong>Theorem.</strong> Let $w$ be an additive valuation, <code>allGoods</code> the outer
 good set, and $A$ a proportional allocation
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional.html">Indivisible Proportional</a>) under
+([[social_choice.fair_division.indivisible.proportional]]) under
 $w.\mathrm{toValuation}$. Then $A$ satisfies the maximin-share guarantee
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.maximin_share" href="fair_division/indivisible/social_choice_fair_division_indivisible_maximin_share.html">Maximin Share (MMS) Allocation</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Implications.lean#L107"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isMaxminShare</code></a>.</p>
+([[social_choice.fair_division.indivisible.maximin_share]]).</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsProportional.isMaxminShare</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1135,7 +1133,7 @@ $$
 \sum_{j} v_i(B(j)) = v_i(\mathrm{allGoods}).
 $$</p>
 <p>Combining with proportionality of $A$
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>
+([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]]
 or equivalently the hypothesis here):
 $$
 v_i(\mathrm{allGoods}) \le |N| \cdot v_i(A(i)).
@@ -1146,8 +1144,8 @@ inequality. $\square$</p>
 <h2>Significance</h2>
 <p>This is the last link in the additive-valuations chain
 $\mathrm{EF} \Rightarrow \mathrm{PROP} \Rightarrow \mathrm{MMS}$. Combined
-with <a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_implies_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_implies_ef1.html">EFX ⇒ EF1</a> and
-<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_efx_mono" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_efx_mono.html">EF ⇒ EFX (Monotone Valuations)</a>, it
+with [[social_choice.fair_division.indivisible.efx_implies_ef1]] and
+[[social_choice.fair_division.indivisible.ef_implies_efx_mono]], it
 gives the full chain
 $\mathrm{EF} \Rightarrow \mathrm{EFX} \Rightarrow \mathrm{EF1} \Rightarrow \mathrm{PROP} \Rightarrow \mathrm{MMS}$
 for additive valuations on complete allocations.</p>

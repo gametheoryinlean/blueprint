@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,41 +1073,46 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L31"><code>SocialChoice.FairDivision.Divisible.Instance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L31"><code>SocialChoice.FairDivision.Divisible.Instance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure Instance (N Ω : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure Instance (N Ω : Type*) where
+  /-- Each agent&#39;s ordinal preference over cake pieces. -/
+  sharePref : N → Pref (Set Ω)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L45"><code>SocialChoice.FairDivision.Divisible.Instance.toShareInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L45"><code>SocialChoice.FairDivision.Divisible.Instance.toShareInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           
           <pre class="lean-signature"><code>def toShareInstance {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
     (I : Instance N Ω) :
-    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω) where</code></pre>
+    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω) where
+  resource := Set.univ
+  feasible := fun A =&gt; IsAllocation A
+  sharePref := I.sharePref</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
       </p>
       
     </div>
@@ -1125,19 +1128,19 @@ preference on cake pieces $\mathrm{Set}\ \Omega$.</p>
 with a single field <code>sharePref : N → Pref (Set Ω)</code>.</p>
 <p>Feasibility is fixed at the divisible-allocation level (a measurable
 partition of $\Omega$, the predicate
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.allocation" href="fair_division/divisible/social_choice_fair_division_divisible_allocation.html">Divisible Allocation</a>). The instance's
+[[social_choice.fair_division.divisible.allocation]]). The instance's
 <code>feasible</code> member is therefore a definitional alias for <code>IsAllocation</code>.</p>
 <h2>Bridge to the generic share-instance API</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L45"><code>Divisible.Instance.toShareInstance</code></a> views the divisible instance as a
+<p><code>Divisible.Instance.toShareInstance</code> views the divisible instance as a
 no-externality share instance
-(<a class="node-ref" data-node-id="social_choice.fair_division.share_instance" href="fair_division/social_choice_fair_division_share_instance.html">Share Instance (No-Externality Model)</a>) over the share type
+([[social_choice.fair_division.share_instance]]) over the share type
 $S = \mathrm{Set}\ \Omega$ and resource value $\mathrm{Set.univ}$. This
 makes every fair-division solution concept stated against the generic
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L50"><code>ShareInstance</code></a> API (<a class="node-ref" data-node-id="social_choice.fair_division.solution_concept" href="fair_division/social_choice_fair_division_solution_concept.html">Fair Division Solution Concept and Rule</a>)
+<code>ShareInstance</code> API ([[social_choice.fair_division.solution_concept]])
 automatically applicable to divisible instances.</p>
 <p>The cardinal-instance and measure-instance specializations
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cardinal_instance" href="fair_division/divisible/social_choice_fair_division_divisible_cardinal_instance.html">Divisible Cardinal Instance</a>,
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_instance" href="fair_division/divisible/social_choice_fair_division_divisible_measure_instance.html">Divisible Measure Instance</a>) feed into
+([[social_choice.fair_division.divisible.cardinal_instance]],
+[[social_choice.fair_division.divisible.measure_instance]]) feed into
 the same bridge — the entire divisible track plugs into the shared
 social-choice infrastructure through these wrappers.</p>
 <h2>References</h2>

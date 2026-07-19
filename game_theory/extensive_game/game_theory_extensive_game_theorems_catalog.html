@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1078,7 +1076,7 @@
 locations in EconCSLib.  Each row links to the dedicated knowledge node and
 the module that contains the proof.</p>
 <p>For the analogous strategic-game / zero-sum catalog see
-<a class="node-ref" data-node-id="game_theory.strategic_game.finite_game_catalog" href="../strategic_game/game_theory_strategic_game_finite_game_catalog.html">Finite Game Catalog</a>.</p>
+[[game_theory.strategic_game.finite_game_catalog]].</p>
 <hr />
 <h2>Catalog</h2>
 <h3>1. Kuhn's SPE Existence (no chance)</h3>
@@ -1094,7 +1092,7 @@ pure-strategy subgame-perfect equilibrium.</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><a class="node-ref" data-node-id="game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance" href="perfect_information/game_theory_extensive_game_perfect_information_kuhn_spe_existence_no_chance.html">Kuhn Existence Of Pure Subgame-Perfect Equilibrium (No-Chance)</a></td>
+<td>[[game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1102,7 +1100,7 @@ pure-strategy subgame-perfect equilibrium.</p>
 </tr>
 <tr>
 <td>Lean declarations</td>
-<td><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L157"><code>optStrategy_isSubgamePerfect</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L199"><code>Kuhn_exists_SPE</code></a></td>
+<td><code>optStrategy_isSubgamePerfect</code>, <code>Kuhn_exists_SPE</code></td>
 </tr>
 <tr>
 <td>Status</td>
@@ -1123,7 +1121,7 @@ existence of a mixed-strategy SPE.</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><span class="node-ref unresolved" data-node-id="game_theory.extensive_game.kuhn_spe_existence_with_chance">game_theory.extensive_game.kuhn_spe_existence_with_chance</span></td>
+<td>[[game_theory.extensive_game.kuhn_spe_existence_with_chance]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1141,9 +1139,9 @@ existence of a mixed-strategy SPE.</p>
 </table>
 <h3>3. Zermelo's Determinacy</h3>
 <p><strong>Result:</strong> Every finite 2-player zero-sum perfect-information game is determined:
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L101"><code>optStrategy</code></a> is a saddle point with value <code>value₀ g</code> — player 0 secures at least
+<code>optStrategy</code> is a saddle point with value <code>value₀ g</code> — player 0 secures at least
 <code>value₀ g</code>, player 1 holds player 0 to at most <code>value₀ g</code>. (Bare pure-SPE / Nash
-existence is the Kuhn instance <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L114"><code>zermelo_exists_pure_SPE</code></a> / <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L120"><code>zermelo_exists_pure_NE</code></a>,
+existence is the Kuhn instance <code>zermelo_exists_pure_SPE</code> / <code>zermelo_exists_pure_NE</code>,
 which needs no zero-sum hypothesis.)</p>
 <table>
 <thead>
@@ -1155,7 +1153,7 @@ which needs no zero-sum hypothesis.)</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><a class="node-ref" data-node-id="game_theory.extensive_game.perfect_information.zermelo_determinacy" href="perfect_information/game_theory_extensive_game_perfect_information_zermelo_determinacy.html">Zermelo Determinacy For Finite Perfect-Information Games</a></td>
+<td>[[game_theory.extensive_game.perfect_information.zermelo_determinacy]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1163,7 +1161,7 @@ which needs no zero-sum hypothesis.)</p>
 </tr>
 <tr>
 <td>Lean declarations</td>
-<td><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L319"><code>zermelo_determinacy</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L269"><code>value₀_eq_outcome_and_zeroSum</code></a></td>
+<td><code>zermelo_determinacy</code>, <code>value₀_eq_outcome_and_zeroSum</code></td>
 </tr>
 <tr>
 <td>Status</td>
@@ -1184,7 +1182,7 @@ vector <code>value : GameTree N U → (N → U)</code> to every node of the game
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><a class="node-ref" data-node-id="game_theory.extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance" href="perfect_information/game_theory_extensive_game_perfect_information_zero_sum_perfect_information_value_no_chance.html">Value In Finite Zero-Sum Perfect-Information Games (No-Chance)</a></td>
+<td>[[game_theory.extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1192,7 +1190,7 @@ vector <code>value : GameTree N U → (N → U)</code> to every node of the game
 </tr>
 <tr>
 <td>Lean declarations</td>
-<td><code>value</code>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L53"><code>valueList</code></a></td>
+<td><code>value</code>, <code>valueList</code></td>
 </tr>
 <tr>
 <td>Status</td>
@@ -1213,7 +1211,7 @@ whole game.</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><a class="node-ref" data-node-id="game_theory.extensive_game.perfect_information.spe_implies_nash" href="perfect_information/game_theory_extensive_game_perfect_information_spe_implies_nash.html">Subgame-Perfect Equilibrium Implies Nash Equilibrium</a></td>
+<td>[[game_theory.extensive_game.perfect_information.spe_implies_nash]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1221,7 +1219,7 @@ whole game.</p>
 </tr>
 <tr>
 <td>Lean declarations</td>
-<td><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeNE.lean#L81"><code>IsSubgamePerfect.toNE</code></a></td>
+<td><code>IsSubgamePerfect.toNE</code></td>
 </tr>
 <tr>
 <td>Status</td>
@@ -1243,7 +1241,7 @@ if and only if it is a Nash equilibrium at the root of the tree.</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><a class="node-ref" data-node-id="game_theory.extensive_game.normal_form.agent_normal_form" href="normal_form/game_theory_extensive_game_normal_form_agent_normal_form.html">Agent Normal Form</a></td>
+<td>[[game_theory.extensive_game.normal_form.agent_normal_form]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1251,7 +1249,7 @@ if and only if it is a Nash equilibrium at the root of the tree.</p>
 </tr>
 <tr>
 <td>Lean declarations</td>
-<td><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L48"><code>GameTree.toStrategicGame</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeStrategicForm.lean#L76"><code>toStrategicGame_nash_iff_isNashAt</code></a></td>
+<td><code>GameTree.toStrategicGame</code>, <code>toStrategicGame_nash_iff_isNashAt</code></td>
 </tr>
 <tr>
 <td>Status</td>
@@ -1272,7 +1270,7 @@ strategies for games with imperfect information.</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><a class="node-ref" data-node-id="game_theory.extensive_game.imperfect_information.information_set" href="imperfect_information/game_theory_extensive_game_imperfect_information_information_set.html">Information Set</a></td>
+<td>[[game_theory.extensive_game.imperfect_information.information_set]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1301,7 +1299,7 @@ equilibrium (Kreps–Wilson 1982).</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><span class="node-ref unresolved" data-node-id="game_theory.extensive_game.sequential_equilibrium">game_theory.extensive_game.sequential_equilibrium</span></td>
+<td>[[game_theory.extensive_game.sequential_equilibrium]]</td>
 </tr>
 <tr>
 <td>Lean module</td>
@@ -1330,7 +1328,7 @@ a behavioral strategy (Kuhn 1953).</p>
 <tbody>
 <tr>
 <td>Knowledge node</td>
-<td><span class="node-ref unresolved" data-node-id="game_theory.extensive_game.isbell_behavioral_to_mixed">game_theory.extensive_game.isbell_behavioral_to_mixed</span></td>
+<td>[[game_theory.extensive_game.isbell_behavioral_to_mixed]]</td>
 </tr>
 <tr>
 <td>Lean module</td>

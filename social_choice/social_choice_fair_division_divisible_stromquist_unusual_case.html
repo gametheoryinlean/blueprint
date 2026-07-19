@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1221"><code>SocialChoice.FairDivision.Divisible.strom_unusual_case</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1221"><code>SocialChoice.FairDivision.Divisible.strom_unusual_case</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1097,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1111,7 +1109,7 @@ $\{U(i)\}_i$ do not cover the simplex
 ([[social_choice.fair_division.divisible.stromquist_U]]), there is still
 a complete measurable envy-free allocation.</p>
 <p>The construction is the shifted-cell refinement
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_shifted_cells" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_shifted_cells.html">Stromquist Shifted-Cell Approximation</a>)
+([[social_choice.fair_division.divisible.stromquist_shifted_cells]])
 followed by a limit-passage argument.</p>
     
     <details class="proof-details">
@@ -1124,7 +1122,7 @@ followed by a limit-passage argument.</p>
    perturbed preference unions $\{U'_M(i)\}_i$ cover the simplex (the
    irrationality keeps the cells from straddling indifference
    hyperplanes). Apply the usual-case theorem
-   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_usual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_usual_case.html">Stromquist — Usual Case (U Covers the Simplex)</a>) to
+   ([[social_choice.fair_division.divisible.stromquist_usual_case]]) to
    obtain a simplex point $x^*_M$ and a corresponding fair division
    $A_M$ for the perturbed data.</p>
 </li>
@@ -1137,7 +1135,7 @@ followed by a limit-passage argument.</p>
 <p><strong>Limit is fair.</strong> Two simplex points in the same shifted cell are
    within $\sqrt{n}/M$ in the sup norm, so $A_M \to A_\infty$ in the
    appropriate sense, and continuity of the piece-value function
-   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_value_continuous" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_value_continuous.html">Piece-Value Function Is Continuous on the Division Simplex</a>)
+   ([[social_choice.fair_division.divisible.stromquist_value_continuous]])
    carries EF through the limit: the EF inequality
    $\mu_i(A_\infty(j)) \le \mu_i(A_\infty(i))$ is the limit of the
    approximate EF inequalities for $A_M$.</p>
@@ -1147,10 +1145,10 @@ followed by a limit-passage argument.</p>
 measures.</p>
 <h2>Role in the overall proof</h2>
 <p>Combining the usual-case theorem
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_usual_case" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_usual_case.html">Stromquist — Usual Case (U Covers the Simplex)</a>) and
+([[social_choice.fair_division.divisible.stromquist_usual_case]]) and
 this unusual-case theorem covers both regimes, closing the EF existence
 result for arbitrary $n$ agents
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html">Envy-Free Existence (Stromquist, n Agents)</a>).</p>
+([[social_choice.fair_division.divisible.ef_exists]]).</p>
 <h2>References</h2>
 <ul>
 <li>Stromquist, W. (1980). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 87: 640–644.</li>

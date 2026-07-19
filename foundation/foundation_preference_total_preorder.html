@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,28 +1060,30 @@
         <li class="lean-ref">
           <span class="badge lean-kind">class</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L117"><code>TotalPreorder</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Preference.lean#L117"><code>TotalPreorder</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Preference
           </span>
           
           
           
-          <pre class="lean-signature"><code>class TotalPreorder (A : Type*) extends Preorder A where</code></pre>
+          <pre class="lean-signature"><code>class TotalPreorder (A : Type*) extends Preorder A where
+  /-- The preference relation is complete: for any `a b`, either `a ≤ b` or `b ≤ a`. -/
+  le_total : ∀ (a b : A), a ≤ b ∨ b ≤ a</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L122"><code>TotalPreorder.comparable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Preference.lean#L122"><code>TotalPreorder.comparable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Preference
           </span>
           
           
@@ -1095,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>
       </p>
       
     </div>
@@ -1104,21 +1104,21 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Total Preorder</h1>
-<p>A <em>total preorder</em> on <code>α</code> is a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/PartialOrder.lean#L46"><code>Preorder</code></a> for which <code>≤</code> is total:
+<p>A <em>total preorder</em> on <code>α</code> is a <code>Preorder</code> for which <code>≤</code> is total:
 $$
   \forall a,\, b \in \alpha,\quad a \le b \;\text{ or }\; b \le a.
 $$</p>
-<p>Unlike <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/LinearOrder.lean#L61"><code>LinearOrder</code></a>, a total preorder is <strong>not</strong> required to be antisymmetric
+<p>Unlike <code>LinearOrder</code>, a total preorder is <strong>not</strong> required to be antisymmetric
 or to have decidable order. Distinct elements may be indifferent, which is
 the typical situation in utility theory (multiple alternatives can yield the
 same utility) and in matching theory (a doctor can rank two hospitals equally).</p>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L117"><code>TotalPreorder</code></a> is the appropriate weakening of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/LinearOrder.lean#L61"><code>LinearOrder</code></a> whenever a
+<p><code>TotalPreorder</code> is the appropriate weakening of <code>LinearOrder</code> whenever a
 result needs comparability of any two elements but does not need to identify
-indifferent alternatives. Every <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/LinearOrder.lean#L61"><code>LinearOrder</code></a> is a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L117"><code>TotalPreorder</code></a> via the
+indifferent alternatives. Every <code>LinearOrder</code> is a <code>TotalPreorder</code> via the
 auto-derived <code>LinearOrder.toTotalPreorder</code> instance.</p>
 <p>In Lean this is <code>class TotalPreorder (α : Type*) extends Preorder α</code>
 together with the totality field <code>le_total</code> and the reusable lemma
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L122"><code>TotalPreorder.comparable</code></a>. The bridge from <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Defs/LinearOrder.lean#L61"><code>LinearOrder</code></a> is supplied by
+<code>TotalPreorder.comparable</code>. The bridge from <code>LinearOrder</code> is supplied by
 the auto-derived instance <code>LinearOrder.toTotalPreorder</code> in the same module
 (declared with <code>instance</code>, not enumerated in the declaration list above).</p>
 <h2>References</h2>

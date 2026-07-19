@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,23 +1060,27 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/Basic.lean#L45"><code>MatchingMarket</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/Basic.lean#L45"><code>MatchingMarket</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.Basic
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure MatchingMarket (M W : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure MatchingMarket (M W : Type*) where
+  /-- Each agent on side `M` has a preference over `Option W`. -/
+  prefM : M → Pref (Option W)
+  /-- Each agent on side `W` has a preference over `Option M`. -/
+  prefW : W → Pref (Option M)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/Basic.lean#L1"><code>EconCSLib.MarketDesign.Matching.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/Basic.lean#L1"><code>EconCSLib.MarketDesign.Matching.Basic</code></a>
       </p>
       
     </div>
@@ -1098,7 +1100,7 @@
 <p>We say $j$ is <strong>acceptable</strong> to $i$ if $j \succ_i \bot_i$ (and symmetrically for
 $i$ acceptable to $j$). The market makes no use of cardinal utilities — only
 the ordinal preferences matter.</p>
-<p>In Lean this is the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/Basic.lean#L45"><code>MatchingMarket</code></a> structure under
+<p>In Lean this is the <code>MatchingMarket</code> structure under
 <code>EconCSLib.MarketDesign.Matching.Basic</code>. The "two-sided" terminology refers to
 the two disjoint participant sets $M$, $W$; "one-to-one" refers to each
 participant being matched to at most one partner.</p>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L40"><code>List.exists_argMax_on</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Argmax.lean#L40"><code>List.exists_argMax_on</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Argmax
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Argmax
           </span>
           
           
@@ -1093,29 +1091,30 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L119"><code>List.argMaxOn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Argmax.lean#L119"><code>List.argMaxOn</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Argmax
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Argmax
           </span>
           
           
           
           <pre class="lean-signature"><code>def argMaxOn [TotalPreorder Y] [DecidableLE Y] (f : X → Y)
-    (head : X) (tail : List X) : X</code></pre>
+    (head : X) (tail : List X) : X :=
+  tail.foldl (fun a z =&gt; if f a ≤ f z then z else a) head</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L124"><code>List.argMaxOn_mem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Argmax.lean#L124"><code>List.argMaxOn_mem</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Argmax
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Argmax
           </span>
           
           
@@ -1128,12 +1127,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L130"><code>List.argMaxOn_ge</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Argmax.lean#L130"><code>List.argMaxOn_ge</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Argmax
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Argmax
           </span>
           
           
@@ -1146,12 +1145,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L136"><code>List.le_argMaxOn_head</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Argmax.lean#L136"><code>List.le_argMaxOn_head</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Argmax
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Argmax
           </span>
           
           
@@ -1164,7 +1163,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L1"><code>EconCSLib.Foundation.Argmax</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Argmax.lean#L1"><code>EconCSLib.Foundation.Argmax</code></a>
       </p>
       
     </div>
@@ -1174,7 +1173,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Argmax of a List under a Total Preorder</h1>
 <p>For a function <code>f : α → β</code> valued in a <code>TotalPreorder β</code> and a non-empty
-list <code>head :: tail : List α</code>, some element of the list maximizes <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/MathlibTest/Util/PrintSorries.lean#L58"><code>f</code></a>:
+list <code>head :: tail : List α</code>, some element of the list maximizes <code>f</code>:
 $$
   \exists m \in \operatorname{head} :: \operatorname{tail},\;
   \forall x \in \operatorname{head} :: \operatorname{tail},\; f(x) \le f(m).
@@ -1184,12 +1183,12 @@ the new head via <code>TotalPreorder.le_total</code>.</p>
 <p>From the existence statement a noncomputable choice
 <code>List.argMaxOn f head tail</code> picks a witnessing maximizer. Its API:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L124"><code>argMaxOn_mem</code></a> -- the chosen element lies in the list.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L130"><code>argMaxOn_ge</code></a> -- the chosen element is <code>≥</code> every list element in <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/MathlibTest/Util/PrintSorries.lean#L58"><code>f</code></a>-value.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Argmax.lean#L136"><code>le_argMaxOn_head</code></a> -- specialization: the head's value is <code>≤</code> the chosen
+<li><code>argMaxOn_mem</code> -- the chosen element lies in the list.</li>
+<li><code>argMaxOn_ge</code> -- the chosen element is <code>≥</code> every list element in <code>f</code>-value.</li>
+<li><code>le_argMaxOn_head</code> -- specialization: the head's value is <code>≤</code> the chosen
   element's value.</li>
 </ul>
-<p>The variant exists because Mathlib's <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/List/MinMax.lean#L85"><code>List.argmax</code></a> is computable but requires
+<p>The variant exists because Mathlib's <code>List.argmax</code> is computable but requires
 <code>[LinearOrder]</code>, which is too strong for ranking outcomes that may be
 indifferent (the typical situation when a player's payoffs are equal across
 distinct continuations). The intended consumer is

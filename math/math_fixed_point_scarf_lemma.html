@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,12 +1060,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L2654"><code>IndexedLOrder.Scarf</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/FixedPoint/Scarf.lean#L2654"><code>IndexedLOrder.Scarf</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.FixedPoint.Scarf
+            EconCSLib @ ad4ebea, EconCSLib.Math.FixedPoint.Scarf
           </span>
           
           
@@ -1078,28 +1076,28 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L1237"><code>IndexedLOrder.isColorful</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/FixedPoint/Scarf.lean#L1237"><code>IndexedLOrder.isColorful</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.FixedPoint.Scarf
+            EconCSLib @ ad4ebea, EconCSLib.Math.FixedPoint.Scarf
           </span>
           
           
           
-          <pre class="lean-signature"><code>def isColorful : Prop</code></pre>
+          <pre class="lean-signature"><code>def isColorful : Prop := IST.isCell σ C ∧ σ.image c   = C</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L832"><code>IndexedLOrder.internal_door_two_rooms</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/FixedPoint/Scarf.lean#L832"><code>IndexedLOrder.internal_door_two_rooms</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.FixedPoint.Scarf
+            EconCSLib @ ad4ebea, EconCSLib.Math.FixedPoint.Scarf
           </span>
           
           
@@ -1119,12 +1117,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L2638"><code>IndexedLOrder.typed_colorful_room_odd</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/FixedPoint/Scarf.lean#L2638"><code>IndexedLOrder.typed_colorful_room_odd</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.FixedPoint.Scarf
+            EconCSLib @ ad4ebea, EconCSLib.Math.FixedPoint.Scarf
           </span>
           
           
@@ -1135,7 +1133,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L1"><code>EconCSLib.Math.FixedPoint.Scarf</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/FixedPoint/Scarf.lean#L1"><code>EconCSLib.Math.FixedPoint.Scarf</code></a>
       </p>
       
     </div>
@@ -1149,7 +1147,7 @@ triangulation (an <code>IndexedLOrder I T</code>), the set of <strong>colorful r
 nonempty: there is a cell whose vertex colors realize the full index set
 $I$.</p>
 <p>This is the combinatorial heart of the Brouwer fixed-point proof
-(<a class="node-ref" data-node-id="math.fixed_point.brouwer_simplex" href="fixed_point/math_fixed_point_brouwer_simplex.html">Brouwer Fixed Point Theorem For A Simplex</a>). It plays the role classically filled by
+([[math.fixed_point.brouwer_simplex]]). It plays the role classically filled by
 Sperner's lemma, but is established here through a door-counting /
 room-orientation parity argument rather than Sperner labeling.</p>
     
@@ -1159,13 +1157,13 @@ room-orientation parity argument rather than Sperner labeling.</p>
         <p>An orientation (door-counting) argument:</p>
 <ol>
 <li><strong>Two rooms per internal door.</strong> Each internal door is a face of exactly two
-   rooms (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L832"><code>IndexedLOrder.internal_door_two_rooms</code></a>).</li>
+   rooms (<code>IndexedLOrder.internal_door_two_rooms</code>).</li>
 <li><strong>Parity.</strong> Fixing an index $i \in I$, the number of typed nearly-colorful
    rooms of type $i$ in the double-counting set is <strong>odd</strong>
-   (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L2638"><code>IndexedLOrder.typed_colorful_room_odd</code></a>), by counting outside doors,
+   (<code>IndexedLOrder.typed_colorful_room_odd</code>), by counting outside doors,
    internal doors, and nearly-colorful rooms modulo two.</li>
 <li><strong>Existence.</strong> An odd count is positive, so a colorful room exists
-   (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Scarf.lean#L2654"><code>IndexedLOrder.Scarf</code></a>: <code>(IST.colorful c).Nonempty</code>).</li>
+   (<code>IndexedLOrder.Scarf</code>: <code>(IST.colorful c).Nonempty</code>).</li>
 </ol>
 <p>The Lean development is axiom-clean:
 <code>#print axioms IndexedLOrder.Scarf</code> = <code>propext, choice, Quot.sound</code>.</p>

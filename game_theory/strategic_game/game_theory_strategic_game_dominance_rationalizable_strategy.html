@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L61"><code>StrategicGame.IsRationalizable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L61"><code>StrategicGame.IsRationalizable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.IESDS
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.IESDS
           </span>
           
           
           <p class="lean-docstring">A strategy is rationalizable if it survives all rounds.</p>
-          <pre class="lean-signature"><code>def IsRationalizable (G : StrategicGame N U) (i : N) (s : G.strategy i) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsRationalizable (G : StrategicGame N U) (i : N) (s : G.strategy i) : Prop :=
+  ∀ n, G.Survives n i s</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.IESDS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.IESDS</code></a>
       </p>
       
     </div>
@@ -1114,7 +1113,7 @@ $$
 $$
 A profile $s$ is rationalizable if $s_i\in S_i^\infty$ for every player $i$.</p>
 <h2>Lean scope</h2>
-<p>Lean's <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/IESDS.lean#L61"><code>IsRationalizable</code></a> is defined as surviving iterated elimination of
+<p>Lean's <code>IsRationalizable</code> is defined as surviving iterated elimination of
 <strong>strictly dominated</strong> strategies (IESDS — see
 <a class="node-ref" data-node-id="game_theory.strategic_game.dominance.iterated_elimination" href="dominance/game_theory_strategic_game_dominance_iterated_elimination.html">Iterated Elimination Of Strictly Dominated Strategies</a>), whereas the
 best-response definition above (iterated elimination of strategies that are

@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,23 +1060,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L105"><code>ExtensiveGame.isChanceState</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L105"><code>ExtensiveGame.isChanceState</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.Basic
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.Basic
           </span>
           
           
           <p class="lean-docstring">A state is a chance node.</p>
-          <pre class="lean-signature"><code>def isChanceState (G : ExtensiveGame N U) (s : G.State) : Prop</code></pre>
+          <pre class="lean-signature"><code>def isChanceState (G : ExtensiveGame N U) (s : G.State) : Prop :=
+  G.mover s = none ∧ ¬ G.toArena.IsTerminal s</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Basic</code></a>
       </p>
       
     </div>

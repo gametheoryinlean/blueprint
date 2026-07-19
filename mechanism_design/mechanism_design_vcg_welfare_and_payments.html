@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1081,56 +1079,61 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L172"><code>MultipleParameterMechanism.vcgPayment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L172"><code>MultipleParameterMechanism.vcgPayment</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def vcgPayment (v : ∀ _ : I, Valuation A ℝ) (i : I) : ℝ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def vcgPayment (v : ∀ _ : I, Valuation A ℝ) (i : I) : ℝ :=
+  maxWelfareWithout v i - welfareWithout v i (efficientAllocation v)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L177"><code>MultipleParameterMechanism.VCGMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L177"><code>MultipleParameterMechanism.VCGMechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def VCGMechanism : MultipleParameterMechanism I A ℝ ℝ where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def VCGMechanism : MultipleParameterMechanism I A ℝ ℝ where
+  allocationRule := efficientAllocation
+  paymentRule := vcgPayment</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L185"><code>MultipleParameterMechanism.VCGTransferMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L185"><code>MultipleParameterMechanism.VCGTransferMechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def VCGTransferMechanism :
-    MechanismWithTransfers I (fun _ =&gt; Valuation A ℝ) A ℝ where</code></pre>
+    MechanismWithTransfers I (fun _ =&gt; Valuation A ℝ) A ℝ where
+  allocationRule := (VCGMechanism : MultipleParameterMechanism I A ℝ ℝ).allocationRule
+  paymentRule := (VCGMechanism : MultipleParameterMechanism I A ℝ ℝ).paymentRule</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
       </p>
       
     </div>

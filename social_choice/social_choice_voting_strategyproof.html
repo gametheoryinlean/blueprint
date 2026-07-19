@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L311"><code>SocialChoice.Voting.ResoluteStrategyproofness</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Basic.lean#L311"><code>SocialChoice.Voting.ResoluteStrategyproofness</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Basic
           </span>
           
           
@@ -1093,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1111,8 +1109,8 @@ $$
 $$
 i.e. the new winner $b$ is never strictly preferred to the honest winner $a$
 under $i$'s <em>true</em> preference $P_i$.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L311"><code>SocialChoice.Voting.ResoluteStrategyproofness</code></a>, stated for a rule
-together with a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L216"><code>Resolute</code></a> witness, using <code>updateProfile P i r</code> for the
+<p>In Lean: <code>SocialChoice.Voting.ResoluteStrategyproofness</code>, stated for a rule
+together with a <code>Resolute</code> witness, using <code>updateProfile P i r</code> for the
 profile with voter $i$'s ballot replaced by ranking $r$.</p>
 <p>Strategy-proofness is the central incentive-compatibility axiom for ordinal
 voting rules; it is the natural ordinal counterpart of dominant-strategy
@@ -1120,11 +1118,11 @@ incentive compatibility (DSIC) in mechanism design.</p>
 <p>Two classical implications closed the field:</p>
 <ul>
 <li>Resolute strategy-proof rules are monotonic
-  (<a class="node-ref" data-node-id="social_choice.voting.strategyproof_implies_monotonic" href="voting/social_choice_voting_strategyproof_implies_monotonic.html">Strategy-Proof ⇒ Monotonic</a>).</li>
-<li>Combined with unanimity (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and
+  ([[social_choice.voting.strategyproof_implies_monotonic]]).</li>
+<li>Combined with unanimity ([[social_choice.voting.unanimity]]) and
   $|A| \ge 3$, strategy-proofness forces dictatorship — the
   Gibbard–Satterthwaite theorem
-  (<a class="node-ref" data-node-id="social_choice.voting.gibbard_satterthwaite" href="voting/social_choice_voting_gibbard_satterthwaite.html">Gibbard–Satterthwaite Theorem</a>).</li>
+  ([[social_choice.voting.gibbard_satterthwaite]]).</li>
 </ul>
 <h2>References</h2>
 <ul>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L264"><code>SocialChoice.FairDivision.Divisible.cutAndChoose_ef_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L264"><code>SocialChoice.FairDivision.Divisible.cutAndChoose_ef_exists</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
           </span>
           
           
@@ -1097,12 +1095,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/EnvyFree.lean#L49"><code>SocialChoice.FairDivision.Divisible.ef_exists_two_agents</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/EnvyFree.lean#L49"><code>SocialChoice.FairDivision.Divisible.ef_exists_two_agents</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.EnvyFree
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.EnvyFree
           </span>
           
           
@@ -1118,7 +1116,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/EnvyFree.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.EnvyFree</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/EnvyFree.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.EnvyFree</code></a>
       </p>
       
     </div>
@@ -1132,29 +1130,29 @@ interval $I = [0, 1]$ where $\mu_0, \mu_1$ are finite and $\mu_0$ is
 non-atomic, there exists a complete measurable partition of $I$ that is
 envy-free under the measure valuation
 $\mathrm{MeasureValuation}\ \mu$
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_envy_free.html">Divisible Envy-Free, Proportional, Equitable Predicates</a>).</p>
+([[social_choice.fair_division.divisible.envy_free]]).</p>
 <p>Formally:
 $$
 \exists A : \mathrm{Allocation}\ (\mathrm{Fin}\ 2)\ I,\;
 \mathrm{IsAllocation}\ A \;\wedge\;
 \mathrm{IsEnvyFree}\ (\mathrm{MeasureValuation}\ \mu)\ A.
 $$</p>
-<p>In Lean this appears as two equivalent statements: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L264"><code>cutAndChoose_ef_exists</code></a>
-(in <code>CutAndChoose.lean</code>) and the alias <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/EnvyFree.lean#L49"><code>ef_exists_two_agents</code></a> (in
+<p>In Lean this appears as two equivalent statements: <code>cutAndChoose_ef_exists</code>
+(in <code>CutAndChoose.lean</code>) and the alias <code>ef_exists_two_agents</code> (in
 <code>EnvyFree.lean</code>).</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
         <p>Constructively: pick a fair cut point $t$ via
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.fair_cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_fair_cut_exists.html">Fair Cut Point Exists</a>, use it in the
+[[social_choice.fair_division.divisible.fair_cut_exists]], use it in the
 cut-and-choose protocol to produce
 $A = \mathrm{cutAndChooseAlloc}\ \mu\ t$, and verify EF via
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_and_choose_envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_envy_free.html">Cut-and-Choose Is Envy-Free at a Fair Cut</a>.</p>
+[[social_choice.fair_division.divisible.cut_and_choose_envy_free]].</p>
 <p>The result is a <em>contiguous</em> EF allocation — each agent receives a single
 interval, not a fragmented set. This stronger conclusion sets the stage
 for Stromquist's $n$-agent generalization
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html">Envy-Free Existence (Stromquist, n Agents)</a>), which also
+([[social_choice.fair_division.divisible.ef_exists]]), which also
 produces contiguous EF allocations.</p>
 <h2>References</h2>
 <ul>

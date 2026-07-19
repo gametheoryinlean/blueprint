@@ -10,7 +10,7 @@
     "social_choice.fair_division",
     "social_choice.fair_division.core"
   ],
-  "body_html": "<h1>Envy-Free Allocation</h1>\n<p>For a real-valued utility profile $u : N \\to S \\to \\mathbb{R}$ and an\nallocation $A : N \\to S$ (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.allocation\" href=\"fair_division/social_choice_fair_division_allocation.html\">Allocation</a>),\n$A$ is <em>envy-free</em> (EF) if every agent weakly prefers their own share to\nevery other agent's share:\n$$\n\\forall i, j \\in N,\\ u_i(A(j)) \\le u_i(A(i)).\n$$</p>\n<p>In Lean: <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L26\"><code>SocialChoice.FairDivision.IsEnvyFree</code></a>. The signature takes\n$u$ and $A$ as plain functions, so the predicate applies uniformly to the\ndivisible and indivisible specializations\n(<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.envy_free\" href=\"fair_division/divisible/social_choice_fair_division_divisible_envy_free.html\">Divisible Envy-Free, Proportional, Equitable Predicates</a>,\n<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.envy_free\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_envy_free.html\">Indivisible Envy-Free</a>).</p>\n<h2>Existence</h2>\n<ul>\n<li><em>Divisible</em> (cake cutting with non-atomic finite measures): EF\n  allocations always exist (Stromquist,\n  <a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ef_exists\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html\">Envy-Free Existence (Stromquist, n Agents)</a>).</li>\n<li><em>Indivisible</em> (additive valuations over a finite set of items): EF\n  <em>need not</em> exist, even with 2 agents and 1 item\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_ef_impossible_two_agents_one_good.html\">EF Impossibility — Two Agents, One Good</a>).\n  This motivates the relaxations EF1 / EFX\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.ef1\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_ef1.html\">EF1 — Envy-Free Up to One Good</a>,\n  <a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.efx\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_efx.html\">EFX — Envy-Free Up to Any Good</a>).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Envy-freeness in fair division.</li>\n</ul>",
+  "body_html": "<h1>Envy-Free Allocation</h1>\n<p>For a real-valued utility profile $u : N \\to S \\to \\mathbb{R}$ and an\nallocation $A : N \\to S$ ([[social_choice.fair_division.allocation]]),\n$A$ is <em>envy-free</em> (EF) if every agent weakly prefers their own share to\nevery other agent's share:\n$$\n\\forall i, j \\in N,\\ u_i(A(j)) \\le u_i(A(i)).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.IsEnvyFree</code>. The signature takes\n$u$ and $A$ as plain functions, so the predicate applies uniformly to the\ndivisible and indivisible specializations\n([[social_choice.fair_division.divisible.envy_free]],\n[[social_choice.fair_division.indivisible.envy_free]]).</p>\n<h2>Existence</h2>\n<ul>\n<li><em>Divisible</em> (cake cutting with non-atomic finite measures): EF\n  allocations always exist (Stromquist,\n  [[social_choice.fair_division.divisible.ef_exists]]).</li>\n<li><em>Indivisible</em> (additive valuations over a finite set of items): EF\n  <em>need not</em> exist, even with 2 agents and 1 item\n  ([[social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good]]).\n  This motivates the relaxations EF1 / EFX\n  ([[social_choice.fair_division.indivisible.ef1]],\n  [[social_choice.fair_division.indivisible.efx]]).</li>\n</ul>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 11] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Envy-freeness in fair division.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -48,12 +48,12 @@
       "qualified_name": "SocialChoice.FairDivision.IsEnvyFree",
       "module": "EconCSLib.SocialChoice.FairDivision.Fairness",
       "kind": "def",
-      "signature": "def IsEnvyFree\n    (u : N → S → ℝ) (A : Allocation N S) : Prop",
+      "signature": "def IsEnvyFree\n    (u : N → S → ℝ) (A : Allocation N S) : Prop :=\n  ∀ i j : N, u i (A j) ≤ u i (A i)",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L26",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L26",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -66,9 +66,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Fairness",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Fairness",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Fairness.lean#L1",
       "status": "resolved",
       "reason": null
     }

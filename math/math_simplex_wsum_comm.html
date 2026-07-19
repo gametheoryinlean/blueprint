@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L295"><code>wsum_wsum_comm</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L295"><code>wsum_wsum_comm</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
@@ -1094,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
       </p>
       
     </div>
@@ -1103,14 +1101,14 @@
 
   <div class="lemma_thmcontent thm-content body">
     <h1>Iterated Weighted Sums Commute</h1>
-<p>For finite indices <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> and <code>J</code>, simplex elements <code>x ∈ stdSimplex 𝕜 I</code> and
+<p>For finite indices <code>I</code> and <code>J</code>, simplex elements <code>x ∈ stdSimplex 𝕜 I</code> and
 <code>y ∈ stdSimplex 𝕜 J</code>, and a payoff matrix <code>A : I → J → 𝕜</code>,
 $$
   \sum_{i \in I} x_i \!\left( \sum_{j \in J} y_j \, A_{ij} \right)
   \;=\;
   \sum_{j \in J} y_j \!\left( \sum_{i \in I} x_i \, A_{ij} \right).
 $$</p>
-<p>In <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L87"><code>wsum</code></a>-notation:
+<p>In <code>wsum</code>-notation:
 $$
   \operatorname{wsum} x \, (\lambda i.\; \operatorname{wsum} y\, A_{i\,\cdot})
   \;=\;

@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,39 +1073,41 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L108"><code>CoalitionalGame.IsSimple</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L108"><code>CoalitionalGame.IsSimple</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.CoalitionalGame.Basic
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.CoalitionalGame.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsSimple [Fintype N] [One U] : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsSimple [Fintype N] [One U] : Prop :=
+  (∀ S : Finset N, G.v S = 0 ∨ G.v S = 1) ∧ G.v Finset.univ = 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L112"><code>CoalitionalGame.IsWinning</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L112"><code>CoalitionalGame.IsWinning</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.CoalitionalGame.Basic
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.CoalitionalGame.Basic
           </span>
           
           
           <p class="lean-docstring">A coalition is winning in a simple game if its worth is 1. Requires `[One U]`.</p>
-          <pre class="lean-signature"><code>def IsWinning [One U] (S : Finset N) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsWinning [One U] (S : Finset N) : Prop :=
+  G.v S = 1</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.Basic</code></a>
       </p>
       
     </div>

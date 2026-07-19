@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1076,7 +1074,7 @@
 independent-private-values first-price auction with $n$ bidders,
 common type distribution $F$ on $[0, \omega]$ with continuous density
 $f &gt; 0$, the unique symmetric strictly-increasing Bayes–Nash
-equilibrium (<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.interim_and_ic" href="auction/bayesian/mechanism_design_auction_bayesian_interim_and_ic.html">Bayesian Single-Item Auction Interim Quantities And IC</a>) is
+equilibrium ([[mechanism_design.auction.bayesian.interim_and_ic]]) is
 $$
 \beta(t) \;=\; \mathbb{E}\bigl[\, Y_1 \mid Y_1 \le t \,\bigr]
 \;=\; t \;-\; \frac{\int_0^t F(z)^{n-1}\, dz}{F(t)^{n-1}},
@@ -1087,7 +1085,7 @@ where $Y_1 = \max_{j \ne i} t_j$ is the highest opponent valuation.</p>
 <li>$n$ bidders, each with type $t_i$ drawn i.i.d. from CDF $F$ on
   $[0, \omega]$.</li>
 <li>First-price sealed-bid auction
-  (<a class="node-ref" data-node-id="mechanism_design.auction.basic.first_price_mechanism" href="auction/basic/mechanism_design_auction_basic_first_price_mechanism.html">First-Price Mechanism</a>): highest bidder wins and
+  ([[mechanism_design.auction.basic.first_price_mechanism]]): highest bidder wins and
   pays own bid.</li>
 <li>Pure strategies: bid functions $\beta_i : [0, \omega] \to \mathbb{R}_{\ge 0}$.</li>
 <li><em>Symmetric</em> equilibrium: a single bid function $\beta$ used by every
@@ -1131,14 +1129,14 @@ their type and the highest competitor type <em>conditional on winning</em>.</p>
 result in Bayesian auction theory and the <em>concrete instance</em> of:</p>
 <ul>
 <li>The interim machinery from
-  <a class="node-ref" data-node-id="mechanism_design.auction.bayesian.interim_and_ic" href="auction/bayesian/mechanism_design_auction_bayesian_interim_and_ic.html">Bayesian Single-Item Auction Interim Quantities And IC</a>: $\beta$ induces interim
+  [[mechanism_design.auction.bayesian.interim_and_ic]]: $\beta$ induces interim
   allocation probability $q(t) = F(t)^{n-1}$ and interim expected
   payment $m(t) = \beta(t) q(t)$.</li>
 <li>The Myerson payment formula
-  (<a class="node-ref" data-node-id="mechanism_design.myerson.payment_formula" href="myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>): the implied expected
+  ([[mechanism_design.myerson.payment_formula]]): the implied expected
   payment matches the single-parameter envelope identity.</li>
 <li>Revenue equivalence
-  (<a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>): expected revenue
+  ([[mechanism_design.myerson.revenue_equivalence]]): expected revenue
   equals expected second-highest type $\mathbb{E}[Y_1]$, identical to
   the second-price auction's expected revenue.</li>
 </ul>
@@ -1154,7 +1152,7 @@ result in Bayesian auction theory and the <em>concrete instance</em> of:</p>
 </ul>
 <p>Dependencies on yet-to-formalise pieces: the ODE solution machinery
 or a direct integral-comparison proof, plus a symmetric-IPV
-instantiation of <a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>. Tracked in
+instantiation of [[mechanism_design.auction.bayesian.single_item_framework]]. Tracked in
 the MSZ Ch.12 auction gap review.</p>
 <h2>References</h2>
 <ul>

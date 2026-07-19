@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,40 +1060,43 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Basic.lean#L33"><code>StrategicGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/_mdblueprint/tests/fixtures/lean/GameTheoryLib/StrategicGame/Basic.lean#L3"><code>StrategicGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.Basic
+            EconCSLib @ ad4ebea, _mdblueprint.tests.fixtures.lean.GameTheoryLib.StrategicGame.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure StrategicGame (N : Type*) (U : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure StrategicGame (ι : Type*) (U : Type*) where
+  strategy : ι → Type*
+  payoff : (∀ i, strategy i) → ι → U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Basic.lean#L88"><code>StrategicGame.welfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Basic.lean#L91"><code>StrategicGame.welfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.Basic
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.Basic
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def welfare [Fintype N] [AddCommMonoid U]
-    (G : StrategicGame N U) (σ : G.Profile) : U</code></pre>
+    (G : StrategicGame N U) (σ : G.Profile) : U :=
+  ∑ i, G.payoff σ i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Basic.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Basic</code></a>
       </p>
       
     </div>

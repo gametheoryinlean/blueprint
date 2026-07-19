@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,23 +1060,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L58"><code>SocialChoice.FairDivision.Indivisible.Valuation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L58"><code>SocialChoice.FairDivision.Indivisible.Valuation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure Valuation (N G : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure Valuation (N G : Type*) where
+  /-- The valuation function: agent × bundle → value. -/
+  val : N → Finset G → ℝ</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation</code></a>
       </p>
       
     </div>
@@ -1100,21 +1100,21 @@ with one field <code>val</code>.</p>
 <li>
 <p><em>Real-valued.</em> Keeps the public API aligned with the bundled cardinal
   fair-division interface
-  (<a class="node-ref" data-node-id="social_choice.fair_division.cardinal_instance" href="fair_division/social_choice_fair_division_cardinal_instance.html">Cardinal Fair-Division Instance</a>) and avoids
+  ([[social_choice.fair_division.cardinal_instance]]) and avoids
   carrying ordered-algebra typeclasses through every theorem statement.</p>
 </li>
 <li>
 <p><em>No monotonicity or normalization baked in.</em> Monotonicity (bundles
   grow ⇒ value weakly grows) appears only where it's actually needed,
   e.g. as an explicit hypothesis in
-  <a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx.html">EFX — Envy-Free Up to Any Good</a>'s implication
+  [[social_choice.fair_division.indivisible.efx]]'s implication
   <code>EF ⇒ EFX for monotone valuations</code>. Additive valuations
-  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>)
+  ([[social_choice.fair_division.indivisible.additive_valuation]])
   give monotonicity for free under the nonnegativity-of-weights
   assumption.</p>
 </li>
 <li>
-<p><em>No coupling to ring-theoretic <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L58"><code>Valuation</code></a>.</em> The structure lives in
+<p><em>No coupling to ring-theoretic <code>Valuation</code>.</em> The structure lives in
   namespace <code>SocialChoice.FairDivision.Indivisible</code> so it never clashes
   with <code>Mathlib.RingTheory.Valuation.Basic</code> (ring → ordered monoid),
   nor with the <em>coalitional game</em> characteristic function (<code>v : Set N

@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,87 +1073,104 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L37"><code>FiniteImperfectGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L37"><code>FiniteImperfectGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure FiniteImperfectGame (N U : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure FiniteImperfectGame (N U : Type*) where
+  State : Type*
+  [stateFintype : Fintype State]
+  [stateDecidableEq : DecidableEq State]
+  InfoSet : Type*
+  [infoDecidableEq : DecidableEq InfoSet]
+  Action : State → Type*
+  next : (s : State) → Action s → State
+  init : State
+  mover : State → Option N
+  info : State → Option InfoSet
+  payoff : State → N → U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L72"><code>FiniteImperfectGame.SameMoverOnInfo</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L72"><code>FiniteImperfectGame.SameMoverOnInfo</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           <p class="lean-docstring">States in the same information set have the same mover.</p>
-          <pre class="lean-signature"><code>def SameMoverOnInfo : Prop</code></pre>
+          <pre class="lean-signature"><code>def SameMoverOnInfo : Prop :=
+  ∀ {s t : G.State} {k : G.InfoSet},
+    G.info s = some k → G.info t = some k → G.mover s = G.mover t</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L77"><code>FiniteImperfectGame.SameActionsOnInfo</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L77"><code>FiniteImperfectGame.SameActionsOnInfo</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           <p class="lean-docstring">States in the same information set expose equivalent action types.</p>
-          <pre class="lean-signature"><code>def SameActionsOnInfo : Prop</code></pre>
+          <pre class="lean-signature"><code>def SameActionsOnInfo : Prop :=
+  ∀ {s t : G.State} {k : G.InfoSet},
+    G.info s = some k → G.info t = some k → Nonempty (G.Action s ≃ G.Action t)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L82"><code>FiniteImperfectGame.NoChanceOnDecisionInfo</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L82"><code>FiniteImperfectGame.NoChanceOnDecisionInfo</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           <p class="lean-docstring">Strategic information sets are attached only to player-controlled states.</p>
-          <pre class="lean-signature"><code>def NoChanceOnDecisionInfo : Prop</code></pre>
+          <pre class="lean-signature"><code>def NoChanceOnDecisionInfo : Prop :=
+  ∀ {s : G.State} {k : G.InfoSet}, G.info s = some k → ∃ i : N, G.mover s = some i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L86"><code>FiniteImperfectGame.InfoWellFormed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L86"><code>FiniteImperfectGame.InfoWellFormed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation
           </span>
           
           
           <p class="lean-docstring">Basic well-formedness package for information-set reasoning.</p>
-          <pre class="lean-signature"><code>def InfoWellFormed : Prop</code></pre>
+          <pre class="lean-signature"><code>def InfoWellFormed : Prop :=
+  G.SameMoverOnInfo ∧ G.SameActionsOnInfo ∧ G.NoChanceOnDecisionInfo</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ImperfectInformation.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.ImperfectInformation</code></a>
       </p>
       
     </div>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1073,63 +1071,64 @@
       <ul class="uses">
         
         <li class="lean-ref">
+          <span class="badge lean-kind">def</span>
           
-          
-          <code>Online.Auction.SingleItemAuction.stateBeforeStep</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>(module) EconCSLib.MechanismDesign.Auction.BayesianSingleItem</code>, <code>(module) EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code>, <code>BayesianSingleItemAuction</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/Online/SingleItemAuction.lean#L179"><code>Online.Auction.SingleItemAuction.stateBeforeStep</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ ad4ebea, EconCSLib.Examples.Online.SingleItemAuction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>def stateBeforeStep {n : ℕ} (f : Fin n → B × F) (i : Fin n) :
+    AuctionState B F :=
+  A.online.runStatus (.unsold [])
+    (List.ofFn (fun j : Fin i.val =&gt; f ⟨j.val, j.isLt.trans i.isLt⟩))</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">lemma</span>
           
-          
-          <code>Online.Auction.SingleItemAuction.stateBeforeStep_update_self</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>BayesianSingleItemAuction.virtualScore_update_self_mono_of_isRegular</code>, <code>BayesianSingleItemAuction.virtualSurplusMaximizingWinner_update_self_of_winner</code>, <code>BayesianSingleItemAuction.winningVirtualValue_update_self_of_winner</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/Online/SingleItemAuction.lean#L201"><code>Online.Auction.SingleItemAuction.stateBeforeStep_update_self</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ ad4ebea, EconCSLib.Examples.Online.SingleItemAuction
+          </span>
           
           
+          <p class="lean-docstring">The state before bidder `i` is independent of bidder `i`&#39;s entry.</p>
+          <pre class="lean-signature"><code>lemma stateBeforeStep_update_self {n : ℕ}
+    (f : Fin n → B × F) (i : Fin n) (x : B × F) :
+    A.stateBeforeStep (update f i x) i = A.stateBeforeStep f i</code></pre>
         </li>
         
         <li class="lean-ref">
+          <span class="badge lean-kind">theorem</span>
           
-          
-          <code>Online.Auction.SingleItemAuction.dsic</code>
-          
-          
-          
-          <span class="badge status-staged">Unresolved</span>
-          <span class="lean-source-meta">not found in configured Lean repository</span>
-          
-          <span class="lean-suggestions">Did you mean: <code>BayesianSingleItemAuction.expectedSellerRevenueInEnvironment_eq_myersonPaymentRevenueInEnvironment_of_isDSIC_of_isZeroNormalized</code>, <code>BayesianSingleItemAuction.hasExpectedRevenueVirtualSurplusIdentity_of_myersonPaymentIdentity_of_isDSIC_of_isZeroNormalized</code>, <code>BayesianSingleItemAuction.interimQuasiLinearUtilityIntegrand_le_of_isDSIC</code>?</span>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/Online/SingleItemAuction.lean#L243"><code>Online.Auction.SingleItemAuction.dsic</code></a>
           
           
           
+          <span class="lean-source-meta">
+            EconCSLib @ ad4ebea, EconCSLib.Examples.Online.SingleItemAuction
+          </span>
           
           
+          
+          <pre class="lean-signature"><code>theorem dsic [Ring F] [IsStrictOrderedRing F] {n : ℕ}
+    (f : Fin n → B × F) (v : Fin n → F) (i : Fin n) :
+    A.utility f v i ≤ A.utility (update f i ((f i).1, v i)) v i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <code>EconCSLib.Examples.Online.SingleItemAuction</code> <span class="badge status-staged" title="module not found in repository &#39;econcslib&#39;">Unresolved</span>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/Online/SingleItemAuction.lean#L1"><code>EconCSLib.Examples.Online.SingleItemAuction</code></a>
       </p>
       
     </div>
@@ -1138,57 +1137,66 @@
 
   <div class="theorem_thmcontent thm-content body">
     <h1>Truthful Bidding Is Dominant in the Online Auction</h1>
-<p><strong>Theorem (<code>dsic</code>).</strong> In the online single-item auction
-(<a class="node-ref" data-node-id="mechanism_design.auction.online.single_item_auction" href="auction/online/mechanism_design_auction_online_single_item_auction.html">Online Single-Item (Posted-Price) Auction</a>) — for <em>any</em>
-history-dependent pricing rule — truthful bidding $b_i = v_i$ is a
-weakly dominant strategy for every bidder.</p>
-<p>Formally, for every pricing rule $A$, every arrival/bid profile $f$
-indexed by the $n$ bidders, every true-valuation profile $v$, and every
-bidder $i$, the payoff to $i$ can only increase by switching $i$'s bid
-to the truthful value $v_i$ (keeping everyone else's bid fixed):</p>
+<p><strong>Theorem (Roughgarden, Problem 2.1(a)).</strong> In the online single-item
+auction ([[mechanism_design.auction.online.single_item_auction]]) — for
+<em>any</em> threshold rule — truthful bidding is a weakly dominant strategy
+for every bidder.</p>
+<h2>Statement</h2>
+<p>For every threshold rule $T$, every arrival profile of $n$ bidders with
+true valuations $v_1, \ldots, v_n$, and every bidder $i$:</p>
 <p>$$
-A.\mathrm{utility}(f,\, v,\, i)
-\;\le\;
-A.\mathrm{utility}\bigl(f[i \mapsto ((f\,i).\text{id},\, v_i)],\; v,\; i\bigr).
+u_i(\text{misreport}) \;\le\; u_i(\text{truthful}).
 $$</p>
+<p>That is, bidding $b_i = v_i$ weakly dominates any alternative bid,
+regardless of the other bidders' actions and regardless of the threshold
+rule.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>The argument is a locality observation followed by a single-variable
-optimisation.</p>
-<ol>
-<li>
-<p><strong>The posted price bidder $i$ faces is independent of $b_i$.</strong> The
-   state of the auction just before bidder $i$ arrives is determined by
-   the first $i$ bids — none of which is $b_i$. Replacing $b_i$ with any
-   other bid therefore leaves the price posted to $i$ unchanged. A
-   posted-price rule cannot let a bidder move their own price.</p>
-</li>
-<li>
-<p><strong>Single-bidder optimisation at a fixed price.</strong> With the posted
-   price $p$ and the tie-breaking condition fixed, bidder $i$'s payoff
-   is $v_i - p$ when the acceptance test ($p &lt; b_i$, or $p = b_i$ with
-   the tie-break in $i$'s favour) succeeds, and $0$ otherwise. The
-   surplus $v_i - p$ is nonneg precisely when $p \le v_i$, so bidding
-   $b_i = v_i$ accepts exactly when accepting is profitable. Any other
-   bid either gives up a profitable trade or accepts a money-losing one.</p>
-</li>
-</ol>
-<p>Combining the two steps: bidder $i$ cannot influence the price they
-face, and at that price truthful bidding maximises their payoff.</p>
-<h2>Lean formalization</h2>
-<p>The two steps of the proof are isolated as separate lemmas in EconCSLib.
-The locality step is <code>stateBeforeStep_update_self</code>: the state reached
-<em>before</em> processing bidder $i$ depends only on the first $i$ bids, so
-replacing $i$'s own bid leaves this state — and hence the posted price
-— invariant. The single-bidder optimisation step is <code>local_dsic</code>,
-stated parametrically in an abstract tie-breaking predicate <code>tie_ok</code>;
-this isolates the optimisation from the specifics of how the
-threshold's identity component resolves ties. The top-level theorem
-<code>dsic</code> rewrites via <code>stateBeforeStep_update_self</code> and then applies
-<code>local_dsic</code> with the tie-break condition derived from the threshold's
-identity component.</p>
+        <p>The argument has two independent parts.</p>
+<h3>The price bidder $i$ faces is independent of $b_i$</h3>
+<p>The threshold at position $i$ is computed from the rejection history
+$(b_1, v_1), \ldots, (b_{i-1}, v_{i-1})$ — the bids of bidders who
+arrived <em>before</em> $i$. Replacing bidder $i$'s bid changes nothing about
+this history:</p>
+<p>$$
+T\bigl((b_1,v_1),\ldots,(b_{i-1},v_{i-1})\bigr) \text{ is the same
+whether $i$ bids } v_i \text{ or any } b_i'.
+$$</p>
+<p>This is the structural heart of the result: a posted-price mechanism
+cannot let a bidder influence their own price.</p>
+<h3>Single-bidder optimisation at a fixed threshold</h3>
+<p>Given a fixed threshold $(p, \bar{b})$, bidder $i$'s payoff is:</p>
+<ul>
+<li>$v_i - p$ if the lexicographic condition
+  $p &lt; b_i \lor (p = b_i \land \bar{b} \le \mathrm{id}_i)$ holds,</li>
+<li>$0$ otherwise.</li>
+</ul>
+<p>Truthful bidding $b_i = v_i$ accepts exactly when the surplus
+$v_i - p$ is nonneg: if $v_i &gt; p$, the bidder accepts and earns a
+positive surplus; if $v_i &lt; p$, the bidder rejects and avoids a loss.
+At the boundary $v_i = p$, the surplus is zero, so accepting or
+rejecting are both optimal. This is the best any strategy can do.</p>
+<h2>Why it matters</h2>
+<p>Truthfulness is <strong>format-independent</strong>: it holds for <em>every</em>
+history-dependent threshold rule, not just a particular one. This is the
+defining advantage of posted-price mechanisms over sealed-bid formats
+like the second-price auction
+([[mechanism_design.auction.basic.second_price_dsic]]) — truthfulness
+follows from the order of moves (threshold posted first, bid observed
+second) rather than from a carefully engineered payment rule.</p>
+<p>This result licenses treating reported bids as true valuations in the
+welfare analyses of parts (b)
+([[mechanism_design.auction.online.no_constant_competitive]]) and (c)
+([[mechanism_design.auction.online.secretary_quarter_competitive]]).</p>
+<h2>Remarks</h2>
+<h3>Lean formalization</h3>
+<p>The price-independence step is <code>stateBeforeStep_update_self</code>: the auction
+state before processing bidder $i$ is unchanged by replacing $i$'s entry
+in the profile. The single-bidder optimisation is <code>local_dsic</code>, which is
+parametric in the tie-breaking condition — it works for any threshold
+rule. The main theorem <code>dsic</code> combines both steps.</p>
 <h2>References</h2>
 <ul>
 <li>[Roughgarden 2016, Lecture 2, Problem 2.1(a)] Tim Roughgarden, <em>Twenty

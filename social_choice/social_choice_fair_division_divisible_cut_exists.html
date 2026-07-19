@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L124"><code>SocialChoice.FairDivision.Divisible.cut_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L124"><code>SocialChoice.FairDivision.Divisible.cut_exists</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
           </span>
           
           
@@ -1095,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
       </p>
       
     </div>
@@ -1110,7 +1108,7 @@ there exists a cut point $t \in I$ such that
 $$
 \bigl(\mu([0, t])\bigr).\mathrm{toReal} = c.
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L124"><code>SocialChoice.FairDivision.Divisible.cut_exists</code></a>.</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Divisible.cut_exists</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1125,7 +1123,7 @@ $$</p>
 <li>
 <p><strong>Continuity.</strong> $F$ is continuous on $\mathbb{R}$ for finite
    non-atomic measures
-   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cdf_continuous" href="fair_division/divisible/social_choice_fair_division_divisible_cdf_continuous.html">CDF of a Non-Atomic Finite Measure on ℝ Is Continuous</a>). Restricted
+   ([[social_choice.fair_division.divisible.cdf_continuous]]). Restricted
    to $I = [0, 1]$ it stays continuous.</p>
 </li>
 <li>
@@ -1138,7 +1136,7 @@ $$</p>
 </li>
 </ol>
 <p>The non-atomic-pushforward instance
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.no_atoms_map_subtype" href="fair_division/divisible/social_choice_fair_division_divisible_no_atoms_map_subtype.html">Non-Atomicity Is Preserved by Subtype.val Pushforward</a> handles the
+[[social_choice.fair_division.divisible.no_atoms_map_subtype]] handles the
 type-level conversion between <code>Measure I</code> and the real-valued
 $\mu.\mathrm{map}\ \mathrm{Subtype.val}$ on $\mathbb{R}$ so that the IVT
 applies cleanly.</p>
@@ -1147,7 +1145,7 @@ applies cleanly.</p>
 algorithms in the library:</p>
 <ul>
 <li>Cut-and-choose specializes it at $c = \mu_0(I)/2$ to obtain a fair
-  cut (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.fair_cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_fair_cut_exists.html">Fair Cut Point Exists</a>).</li>
+  cut ([[social_choice.fair_division.divisible.fair_cut_exists]]).</li>
 <li>Dubins–Spanier specializes it at $c = \mu_i(I)/n$ at each agent in
   the moving-knife step.</li>
 <li>Stromquist uses it implicitly inside the value-continuity argument.</li>

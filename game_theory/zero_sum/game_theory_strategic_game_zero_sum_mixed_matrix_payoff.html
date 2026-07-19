@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,104 +1075,110 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L392"><code>expectedPayoffMatrix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L392"><code>expectedPayoffMatrix</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
           <p class="lean-docstring">Expected payoff in a matrix game `A : I → J → 𝕜` under mixed strategies.</p>
           <pre class="lean-signature"><code>def expectedPayoffMatrix (A : I → J → 𝕜) [Fintype J]
-    (x : stdSimplex 𝕜 I) (y : stdSimplex 𝕜 J) : 𝕜</code></pre>
+    (x : stdSimplex 𝕜 I) (y : stdSimplex 𝕜 J) : 𝕜 :=
+  x ⬝ᵥ fun i =&gt; y ⬝ᵥ A i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L89"><code>MatrixGame.E</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L89"><code>MatrixGame.E</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
           <p class="lean-docstring">Expected payoff when Player I uses mixed strategy `x` and Player II uses `y`.</p>
-          <pre class="lean-signature"><code>noncomputable def E (x : stdSimplex 𝕜 I) (y : stdSimplex 𝕜 J) : 𝕜</code></pre>
+          <pre class="lean-signature"><code>noncomputable def E (x : stdSimplex 𝕜 I) (y : stdSimplex 𝕜 J) : 𝕜 :=
+  A.expectedPayoff x y</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L93"><code>MatrixGame.Ej</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L93"><code>MatrixGame.Ej</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
           <p class="lean-docstring">Expected payoff when Player I uses `x` against pure column `j`.</p>
-          <pre class="lean-signature"><code>noncomputable def Ej (x : stdSimplex 𝕜 I) (j : J) : 𝕜</code></pre>
+          <pre class="lean-signature"><code>noncomputable def Ej (x : stdSimplex 𝕜 I) (j : J) : 𝕜 :=
+  A.payoffAgainstColumn x j</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L97"><code>MatrixGame.Ei</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L97"><code>MatrixGame.Ei</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
           <p class="lean-docstring">Expected payoff when pure row `i` faces Player II&#39;s mixed strategy `y`.</p>
-          <pre class="lean-signature"><code>noncomputable def Ei (i : I) (y : stdSimplex 𝕜 J) : 𝕜</code></pre>
+          <pre class="lean-signature"><code>noncomputable def Ei (i : I) (y : stdSimplex 𝕜 J) : 𝕜 :=
+  A.payoffAgainstRow i y</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L81"><code>MatrixGame.payoffAgainstRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L81"><code>MatrixGame.payoffAgainstRow</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
           <p class="lean-docstring">Expected payoff when pure row `i` faces Player II&#39;s mixed strategy `y`.</p>
-          <pre class="lean-signature"><code>noncomputable def payoffAgainstRow (i : I) (y : stdSimplex 𝕜 J) : 𝕜</code></pre>
+          <pre class="lean-signature"><code>noncomputable def payoffAgainstRow (i : I) (y : stdSimplex 𝕜 J) : 𝕜 :=
+  y ⬝ᵥ A.g i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L77"><code>MatrixGame.payoffAgainstColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L77"><code>MatrixGame.payoffAgainstColumn</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
           <p class="lean-docstring">Expected payoff when Player I uses mixed strategy `x` against pure column `j`.</p>
-          <pre class="lean-signature"><code>noncomputable def payoffAgainstColumn (x : stdSimplex 𝕜 I) (j : J) : 𝕜</code></pre>
+          <pre class="lean-signature"><code>noncomputable def payoffAgainstColumn (x : stdSimplex 𝕜 I) (j : J) : 𝕜 :=
+  x ⬝ᵥ fun i =&gt; A.g i j</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>

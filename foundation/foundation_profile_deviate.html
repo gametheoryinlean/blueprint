@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,45 +1060,46 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L23"><code>Profile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Profile.lean#L23"><code>Profile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Profile
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Profile
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev Profile (N : Type*) (S : N → Type*)</code></pre>
+          <pre class="lean-signature"><code>abbrev Profile (N : Type*) (S : N → Type*) := ∀ i : N, S i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L27"><code>deviate</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Profile.lean#L27"><code>deviate</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Profile
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Profile
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev deviate {N : Type*} {S : N → Type*} [DecidableEq N]
-    (σ : Profile N S) (i : N) (s&#39; : S i) : Profile N S</code></pre>
+    (σ : Profile N S) (i : N) (s&#39; : S i) : Profile N S :=
+  Function.update σ i s&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L40"><code>Profile.deviate_self</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Profile.lean#L43"><code>Profile.deviate_self</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Profile
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Profile
           </span>
           
           
@@ -1112,12 +1111,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L46"><code>Profile.deviate_same</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Profile.lean#L49"><code>Profile.deviate_same</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Profile
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Profile
           </span>
           
           
@@ -1129,12 +1128,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L52"><code>Profile.deviate_of_ne</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Profile.lean#L55"><code>Profile.deviate_of_ne</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Profile
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Profile
           </span>
           
           
@@ -1146,7 +1145,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L1"><code>EconCSLib.Foundation.Profile</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Profile.lean#L1"><code>EconCSLib.Foundation.Profile</code></a>
       </p>
       
     </div>
@@ -1162,25 +1161,25 @@ $$
 $$</p>
 <p>A <em>unilateral deviation</em> by player $i$ to $s' \in S(i)$ is the profile that
 agrees with $\sigma$ off $i$ and equals $s'$ at $i$. This is exactly
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Logic/Function/Basic.lean#L634"><code>Function.update</code></a>, exposed under the game-theoretic alias
+<code>Function.update</code>, exposed under the game-theoretic alias
 <code>deviate σ i s'</code> and the dedicated notation $\sigma[i \mapsto s']$.</p>
 <p>The three governing simp lemmas:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L40"><code>deviate_self</code></a> -- deviating to the current value is the identity:
+<li><code>deviate_self</code> -- deviating to the current value is the identity:
   $\sigma[i \mapsto \sigma_i] = \sigma$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L46"><code>deviate_same</code></a> -- at the deviated index, the new profile returns the new
+<li><code>deviate_same</code> -- at the deviated index, the new profile returns the new
   value: $\sigma[i \mapsto s']_i = s'$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Profile.lean#L52"><code>deviate_of_ne</code></a> -- at any other index, the new profile is unchanged:
+<li><code>deviate_of_ne</code> -- at any other index, the new profile is unchanged:
   $\sigma[i \mapsto s']_j = \sigma_j$ when $j \ne i$.</li>
 </ul>
 <h2>Status: long-term compatibility layer</h2>
 <p>This node is the <strong>standalone</strong> profile vocabulary. The canonical
-strategic-game version, <code>G.Profile</code> together with <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Basic.lean#L53"><code>StrategicGame.deviate</code></a>
+strategic-game version, <code>G.Profile</code> together with <code>StrategicGame.deviate</code>
 in <code>StrategicGame.Basic</code>, is the preferred interface for game-bound code.
 The standalone version is preserved indefinitely for two reasons:</p>
 <ol>
 <li>lemmas about profiles can be stated without committing to a specific
-   <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Basic.lean#L33"><code>StrategicGame</code></a> instance (the proofs reduce to <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Logic/Function/Basic.lean#L634"><code>Function.update</code></a> facts);</li>
+   <code>StrategicGame</code> instance (the proofs reduce to <code>Function.update</code> facts);</li>
 <li>legacy student-project code and non-strategic-game profile uses
    (extensive games, social-choice ballots) continue to depend on it.</li>
 </ol>

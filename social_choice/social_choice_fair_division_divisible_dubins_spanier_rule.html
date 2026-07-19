@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L430"><code>SocialChoice.FairDivision.Divisible.dubinsSpanier_exists_proportional_allocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L430"><code>SocialChoice.FairDivision.Divisible.dubinsSpanier_exists_proportional_allocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
           </span>
           
           
@@ -1097,12 +1095,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L447"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierRule_isProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L447"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierRule_isProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
           </span>
           
           
@@ -1116,7 +1114,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
       </p>
       
     </div>
@@ -1126,10 +1124,10 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>Dubins–Spanier as a Rule on Measure Instances</h1>
 <p>Two bundled-instance reformulations of
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.dubins_spanier_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html">Dubins–Spanier Proportional Existence</a>:</p>
+[[social_choice.fair_division.divisible.dubins_spanier_proportional]]:</p>
 <h2>Existence at the instance level</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L430"><code>dubinsSpanier_exists_proportional_allocation</code></a> repackages the bare
-theorem as a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L126"><code>Divisible.MeasureInstance</code></a>-keyed existence statement:
+<p><code>dubinsSpanier_exists_proportional_allocation</code> repackages the bare
+theorem as a <code>Divisible.MeasureInstance</code>-keyed existence statement:
 $$
 \forall n \ge 1,\ \forall I : \mathrm{MeasureInstance}\ (\mathrm{Fin}\ n)\ \mathrm{[0,1]}\ \text{(non-atomic finite)},\
 \exists A,\ I.\mathrm{feasible}\ A \wedge I.\mathrm{IsProportional}\ n\ A.
@@ -1138,8 +1136,8 @@ $$</p>
 family $I.\mathrm{measure}$, and the underlying theorem applies to that
 family.</p>
 <h2>Rule form</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L447"><code>dubinsSpanierRule_isProportional</code></a> exhibits Dubins–Spanier as a <em>rule</em> in
-the sense of <a class="node-ref" data-node-id="social_choice.fair_division.solution_concept" href="fair_division/social_choice_fair_division_solution_concept.html">Fair Division Solution Concept and Rule</a> — a
+<p><code>dubinsSpanierRule_isProportional</code> exhibits Dubins–Spanier as a <em>rule</em> in
+the sense of [[social_choice.fair_division.solution_concept]] — a
 function that takes a measure instance and returns a feasible allocation
 together with a proof that the returned allocation is proportional.</p>
 <p>The rule is <em>non-canonical</em>: the construction depends on choosing one of
@@ -1150,9 +1148,9 @@ all are proportional.</p>
 <p>The proof of existence is the same theorem in all three forms, but
 exposing it as</p>
 <ul>
-<li>a bare existential (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>dubinsSpanierProportional</code></a>),</li>
-<li>an instance-level existential (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L430"><code>dubinsSpanier_exists_proportional_allocation</code></a>),</li>
-<li>a deterministic rule (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L447"><code>dubinsSpanierRule_isProportional</code></a>),</li>
+<li>a bare existential (<code>dubinsSpanierProportional</code>),</li>
+<li>an instance-level existential (<code>dubinsSpanier_exists_proportional_allocation</code>),</li>
+<li>a deterministic rule (<code>dubinsSpanierRule_isProportional</code>),</li>
 </ul>
 <p>lets downstream callers pick whichever fits their needs (proof
 ergonomics, instance polymorphism, or computability).</p>

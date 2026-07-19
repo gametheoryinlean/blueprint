@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/RuralHospitals.lean#L51"><code>GS.stable_matching_perfect</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/RuralHospitals.lean#L51"><code>GS.stable_matching_perfect</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.RuralHospitals
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.RuralHospitals
           </span>
           
           
@@ -1094,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/RuralHospitals.lean#L1"><code>EconCSLib.MarketDesign.Matching.RuralHospitals</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/RuralHospitals.lean#L1"><code>EconCSLib.MarketDesign.Matching.RuralHospitals</code></a>
       </p>
       
     </div>
@@ -1111,7 +1109,7 @@ is invariant across all stable matchings:</p>
 particular the man-optimal $\mu^M$ and woman-optimal $\mu^W$ match exactly the
 same individuals.</p>
 <h2>Formalized specialization: balanced full-preference markets</h2>
-<p>The Lean model (<code>Preferences n</code> via <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L263"><code>MatchingMarket.ofEquivData</code></a>) is the
+<p>The Lean model (<code>Preferences n</code> via <code>MatchingMarket.ofEquivData</code>) is the
 <strong>balanced full-preference</strong> case: $|M| = |W| = n$ and every agent ranks every
 agent on the other side (no $\bot$). There the theorem sharpens to:</p>
 <blockquote>
@@ -1119,7 +1117,7 @@ agent on the other side (no $\bot$). There the theorem sharpens to:</p>
 matched.</p>
 </blockquote>
 <p>So the matched set is all of $\mathrm{Fin}\,n$ in <em>every</em> stable matching and
-invariance is immediate. This is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/RuralHospitals.lean#L51"><code>GS.stable_matching_perfect</code></a>.</p>
+invariance is immediate. This is <code>GS.stable_matching_perfect</code>.</p>
 <h3>Proof (balanced case)</h3>
 <p>Suppose a woman $i_0$ is unmatched in a stable $\mu$. If <em>every</em> man were
 matched, then $\mathrm{matchW} : \text{men} \to \text{women}$ would be a total
@@ -1133,7 +1131,7 @@ finiteness-plus-blocking-pair contradiction.</p>
 <h2>General case (⊥ and unequal sets)</h2>
 <p>With unacceptable partners or $|M| \ne |W|$, stable matchings genuinely <em>can</em>
 leave agents unmatched, and the theorem becomes the non-trivial invariance
-statement above. The standard proof routes through the <span class="node-ref unresolved" data-node-id="lattice">lattice</span> structure
+statement above. The standard proof routes through the [[lattice]] structure
 (WLOG compare $\mu^M$ and $\mu^W$). Formalizing this general version requires
 the $\bot$/acceptability extension of the Lean model and is tracked as future
 work (#231 item D).</p>

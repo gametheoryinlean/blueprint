@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L220"><code>SocialChoice.Voting.SWF</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Basic.lean#L220"><code>SocialChoice.Voting.SWF</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Basic
           </span>
           
           
           <p class="lean-docstring">A social welfare function maps strict profiles to a weak social preference.</p>
-          <pre class="lean-signature"><code>abbrev SWF (N A : Type*) [Fintype N] [Fintype A]</code></pre>
+          <pre class="lean-signature"><code>abbrev SWF (N A : Type*) [Fintype N] [Fintype A] :=
+  Profile N A → Pref A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1111,9 +1110,9 @@ social preference on $A$.</p>
 <code>f : PrefProfile N A → Pref A</code>. A <code>CoeFun</code> instance lets us write <code>F P</code>
 for the aggregated society-wide preference at profile $P$.</p>
 <p>The SWF output is itself a <code>Pref A</code>, so the standard axioms — unanimity
-(<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>), independence of irrelevant alternatives
-(<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>), and (non-)dictatorship
-(<a class="node-ref" data-node-id="social_choice.voting.dictatorial_swf" href="voting/social_choice_voting_dictatorial_swf.html">Dictatorial Social Welfare Function</a>) — apply to the strict and weak
+([[social_choice.voting.unanimity]]), independence of irrelevant alternatives
+([[social_choice.voting.iia]]), and (non-)dictatorship
+([[social_choice.voting.dictatorial_swf]]) — apply to the strict and weak
 relations derived from $F(P)$.</p>
 <h2>References</h2>
 <ul>

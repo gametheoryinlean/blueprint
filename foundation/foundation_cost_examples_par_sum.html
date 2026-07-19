@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L62"><code>ParSum.parSum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ParSum.lean#L62"><code>ParSum.parSum</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.ParSum
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.ParSum
           </span>
           
           
@@ -1093,12 +1091,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L80"><code>ParSum.parSum_cost_le_clog</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ParSum.lean#L80"><code>ParSum.parSum_cost_le_clog</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.ParSum
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.ParSum
           </span>
           
           
@@ -1110,12 +1108,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L122"><code>ParSum.parSum_cost_le_length</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ParSum.lean#L122"><code>ParSum.parSum_cost_le_length</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.ParSum
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.ParSum
           </span>
           
           
@@ -1127,7 +1125,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L1"><code>EconCSLib.Examples.CostM.ParSum</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ParSum.lean#L1"><code>EconCSLib.Examples.CostM.ParSum</code></a>
       </p>
       
     </div>
@@ -1136,22 +1134,22 @@
 
   <div class="example_thmcontent thm-content body">
     <h1>Worked Example: Balanced Parallel Sum Depth</h1>
-<p>A divide-and-conquer list sum built from <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L260"><code>par</code></a> (<a class="node-ref" data-node-id="foundation.cost.parallel" href="cost/foundation_cost_parallel.html">Parallel Composition in CostM</a>),
+<p>A divide-and-conquer list sum built from <code>par</code> (<a class="node-ref" data-node-id="foundation.cost.parallel" href="cost/foundation_cost_parallel.html">Parallel Composition in CostM</a>),
 where cost is combined by <code>⊔</code> so that <code>.cost</code> measures parallel <strong>depth</strong>, not
 total work. Splitting the list in half and summing the halves in parallel
 gives a logarithmic depth,
 $$
   (\operatorname{parSum}\,xs).\mathrm{cost} \;\le\; \lceil \log_2 |xs| \rceil,
 $$
-i.e. <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L80"><code>parSum_cost_le_clog</code></a> (<code>Nat.clog 2 xs.length</code>). The coarser linear bound
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L122"><code>parSum_cost_le_length</code></a> is also provided. This is the depth-side counterpart of
+i.e. <code>parSum_cost_le_clog</code> (<code>Nat.clog 2 xs.length</code>). The coarser linear bound
+<code>parSum_cost_le_length</code> is also provided. This is the depth-side counterpart of
 the additive-work examples: the same algorithm under <code>+</code> would cost <code>O(n)</code>, but
 under <code>⊔</code> the independent branches overlap and only the tree height counts.</p>
 <h2>Lean declarations</h2>
 <ul>
 <li><code>ParSum.parSum : List ℕ → CostM ℕ ℕ</code> — the balanced parallel sum.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L80"><code>ParSum.parSum_cost_le_clog</code></a> — the <code>⌈log₂ n⌉</code> depth bound.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ParSum.lean#L122"><code>ParSum.parSum_cost_le_length</code></a> — the coarser linear bound.</li>
+<li><code>ParSum.parSum_cost_le_clog</code> — the <code>⌈log₂ n⌉</code> depth bound.</li>
+<li><code>ParSum.parSum_cost_le_length</code> — the coarser linear bound.</li>
 </ul>
 <h2>References</h2>
 <ul>

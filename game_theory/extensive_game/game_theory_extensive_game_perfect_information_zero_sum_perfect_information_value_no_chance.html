@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1040,7 +1038,7 @@
     <div class="thm_header_extras">
       <span class="checkmark">✓</span>
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-proved">proved</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-extensive_game-2e-perfect_information-2e-zero_sum_perfect_information_value_no_chance">#</a>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L319"><code>GameTree.zermelo_determinacy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L319"><code>GameTree.zermelo_determinacy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.Zermelo
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.Zermelo
           </span>
           
           
@@ -1095,12 +1093,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L269"><code>GameTree.value₀_eq_outcome_and_zeroSum</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L269"><code>GameTree.value₀_eq_outcome_and_zeroSum</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.Zermelo
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.Zermelo
           </span>
           
           
@@ -1113,7 +1111,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Zermelo</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Zermelo</code></a>
       </p>
       
     </div>
@@ -1137,16 +1135,16 @@ is the maximum over successor values; if player 2 moves, the minimum. Leaves
 contribute their payoff directly. Optimal pure strategies are obtained by
 choosing an optimal successor at each own-move node and then following optimal
 strategies in the selected subgame.</p>
-<p>The Lean theorem <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L319"><code>zermelo_determinacy</code></a> makes the value/optimality precise:
-playing <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L101"><code>optStrategy</code></a>, player 0 secures at least <code>value₀ g</code> and player 1 holds
+<p>The Lean theorem <code>zermelo_determinacy</code> makes the value/optimality precise:
+playing <code>optStrategy</code>, player 0 secures at least <code>value₀ g</code> and player 1 holds
 player 0 to at most <code>value₀ g</code>, so <code>value₀ g</code> is the (max-min = min-max) value
 attained by a pure strategy on both sides. The packaging lemma
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Zermelo.lean#L269"><code>value₀_eq_outcome_and_zeroSum</code></a> records that <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L101"><code>optStrategy</code></a> realizes <code>value₀ g</code>
+<code>value₀_eq_outcome_and_zeroSum</code> records that <code>optStrategy</code> realizes <code>value₀ g</code>
 and that the value vector is zero-sum (<code>value g 1 = -value₀ g</code>).</p>
 <h2>Scope</h2>
 <p>This is the no-chance specialization of the MFoGT proposition cited below
 (stated there in "with or without Nature" form). The variant with chance /
-Nature nodes lives at <span class="node-ref unresolved" data-node-id="zero_sum_perfect_information_value_with_chance">zero_sum_perfect_information_value_with_chance</span> and is
+Nature nodes lives at [[zero_sum_perfect_information_value_with_chance]] and is
 gated on <a href="https://github.com/gametheoryinlean/EconCSLib/issues/181">EG-L3 / #181</a>.</p>
 <h2>References</h2>
 <ul>

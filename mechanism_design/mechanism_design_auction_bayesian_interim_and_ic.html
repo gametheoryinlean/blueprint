@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,109 +1075,116 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L423"><code>BayesianSingleItemAuction.reportProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L423"><code>BayesianSingleItemAuction.reportProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def reportProfile (i : I) (z_i : ℝ) (t : OpponentTypeProfile I i) :
-    ∀ _ : I, ℝ</code></pre>
+    ∀ _ : I, ℝ :=
+  profileInsert i z_i t</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L771"><code>BayesianSingleItemAuction.interimAllocProb</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L771"><code>BayesianSingleItemAuction.interimAllocProb</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Interim allocation probability `q_i(z_i)`.</p>
           <pre class="lean-signature"><code>noncomputable def interimAllocProb
-    (A : BayesianSingleItemAuction I) (i : I) (z_i : ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (i : I) (z_i : ℝ) : ℝ :=
+  A.interimExpectation i z_i fun r =&gt; A.allocationRule r i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L776"><code>BayesianSingleItemAuction.interimExpectedPayment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L776"><code>BayesianSingleItemAuction.interimExpectedPayment</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Interim expected payment `m_i(z_i)`.</p>
           <pre class="lean-signature"><code>noncomputable def interimExpectedPayment
-    (A : BayesianSingleItemAuction I) (i : I) (z_i : ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (i : I) (z_i : ℝ) : ℝ :=
+  A.interimExpectation i z_i fun r =&gt; A.paymentRule r i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1041"><code>BayesianSingleItemAuction.interimQuasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1041"><code>BayesianSingleItemAuction.interimQuasiLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Interim utility `q_i(z_i) * t_i - m_i(z_i)`.</p>
           <pre class="lean-signature"><code>noncomputable def interimQuasiLinearUtility
-    (A : BayesianSingleItemAuction I) (i : I) (t_i z_i : ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (i : I) (t_i z_i : ℝ) : ℝ :=
+  A.interimAllocProb i z_i * t_i - A.interimExpectedPayment i z_i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1046"><code>BayesianSingleItemAuction.equilibriumPayoff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1046"><code>BayesianSingleItemAuction.equilibriumPayoff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Truthful interim payoff `U_i(t_i)`.</p>
           <pre class="lean-signature"><code>noncomputable def equilibriumPayoff
-    (A : BayesianSingleItemAuction I) (i : I) (t_i : ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (i : I) (t_i : ℝ) : ℝ :=
+  A.interimQuasiLinearUtility i t_i t_i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1051"><code>BayesianSingleItemAuction.IsIncentiveCompatible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1051"><code>BayesianSingleItemAuction.IsIncentiveCompatible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.BayesianSingleItem
           </span>
           
           
           <p class="lean-docstring">Interim incentive compatibility.</p>
           <pre class="lean-signature"><code>def IsIncentiveCompatible
-    (A : BayesianSingleItemAuction I) : Prop</code></pre>
+    (A : BayesianSingleItemAuction I) : Prop :=
+  ∀ (i : I) (t_i z_i : ℝ),
+    A.interimQuasiLinearUtility i t_i z_i ≤ A.equilibriumPayoff i t_i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.BayesianSingleItem</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.BayesianSingleItem</code></a>
       </p>
       
     </div>
@@ -1191,7 +1196,7 @@
 <p>This node assembles the <em>interim</em> quantities — winning probability,
 expected payment, quasi-linear utility, equilibrium payoff — and the
 Bayesian incentive-compatibility predicate for a Bayesian single-item
-auction (<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>).</p>
+auction ([[mechanism_design.auction.bayesian.single_item_framework]]).</p>
 <p>Throughout, fix a <code>BayesianSingleItemAuction I</code> denoted $A$ and an agent
 $i \in I$. All expectations are taken against the auction's explicit
 opponent-type prior $\mu_i$, which is independent of any density-level
@@ -1199,8 +1204,8 @@ independence assumption.</p>
 <h2>Report profiles</h2>
 <p><code>reportProfile i z_i t</code> glues agent $i$'s report $z_i$ with an opponent
 type profile $t : \mathrm{OpponentTypeProfile}\,I\,i$ into a full report
-profile in $\prod_{j} \mathbb{R}$, via <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L423"><code>reportProfile</code></a> and the lower-level
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L124"><code>profileInsert</code></a> helper. It is the
+profile in $\prod_{j} \mathbb{R}$, via <code>reportProfile</code> and the lower-level
+<code>profileInsert</code> helper. It is the
 input to the auction's allocation and payment rules when agent $i$ is
 deviating to report $z_i$ while every opponent reports truthfully.</p>
 <h2>Interim winning probability and expected payment</h2>
@@ -1239,19 +1244,19 @@ definitions stay valid in the absence of full joint independence at the
 measure-theoretic level. Density-based formulas (e.g.
 $q_i(z_i) = \int x_i(z_i, t_{-i})\, f_{-i}(t_{-i})\, dt_{-i}$) can be
 derived as theorems on top, under independence assumptions encoded in
-$\mu_i$ and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/BayesianSingleItem.lean#L194"><code>jointDensity</code></a>.</p>
+$\mu_i$ and <code>jointDensity</code>.</p>
 <h2>Position in the library</h2>
 <p>These interim quantities are the auction-side specialisation of the
 generic Bayesian ex-ante / interim machinery in
-(<a class="node-ref" data-node-id="mechanism_design.bayesian.ex_ante_expected_utility" href="bayesian/mechanism_design_bayesian_ex_ante_expected_utility.html">Ex-Ante Expected Utility (Bayesian Mechanisms)</a>). They
+([[mechanism_design.bayesian.ex_ante_expected_utility]]). They
 feed into:</p>
 <ul>
 <li>The Myerson payment identity at the interim level
-  (<a class="node-ref" data-node-id="mechanism_design.myerson.payment_formula" href="myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>).</li>
+  ([[mechanism_design.myerson.payment_formula]]).</li>
 <li>The revenue-equivalence theorem
-  (<a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>).</li>
+  ([[mechanism_design.myerson.revenue_equivalence]]).</li>
 <li>Myerson's optimal auction
-  (<a class="node-ref" data-node-id="mechanism_design.myerson.optimal_auction" href="myerson/mechanism_design_myerson_optimal_auction.html">Regular Myerson Optimal Single-Item Auction</a>).</li>
+  ([[mechanism_design.myerson.optimal_auction]]).</li>
 </ul>
 <h2>References</h2>
 <ul>

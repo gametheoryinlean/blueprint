@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L166"><code>GS.daStep</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L166"><code>GS.daStep</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.GaleShapley
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.GaleShapley
           </span>
           
           
@@ -1093,12 +1091,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L230"><code>GS.daRun</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L230"><code>GS.daRun</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.GaleShapley
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.GaleShapley
           </span>
           
           
@@ -1106,45 +1104,48 @@
           <pre class="lean-signature"><code>noncomputable def daRun {n : ℕ} (w m : Preferences n) : ℕ → DAState n → DAState n
   | 0,        s =&gt; s
   | fuel + 1, s =&gt; if (freeMenSet s).Nonempty then daRun w m fuel (daStep w m s) else s
+
 /-- `finalState`: run `daRun` with fuel `n*n + 1` from `initState`. -/</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L235"><code>GS.finalState</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L235"><code>GS.finalState</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.GaleShapley
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.GaleShapley
           </span>
           
           
           <p class="lean-docstring">`finalState`: run `daRun` with fuel `n*n + 1` from `initState`.</p>
-          <pre class="lean-signature"><code>noncomputable def finalState {n : ℕ} (w m : Preferences n) : DAState n</code></pre>
+          <pre class="lean-signature"><code>noncomputable def finalState {n : ℕ} (w m : Preferences n) : DAState n :=
+  daRun w m (n * n + 1) (initState n)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L239"><code>GS.gs</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L239"><code>GS.gs</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.GaleShapley
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.GaleShapley
           </span>
           
           
           <p class="lean-docstring">The Gale-Shapley function: woman `j`&#39;s partner at termination.</p>
-          <pre class="lean-signature"><code>noncomputable def gs {n : ℕ} [NeZero n] (w m : Preferences n) : Fin n → Fin n</code></pre>
+          <pre class="lean-signature"><code>noncomputable def gs {n : ℕ} [NeZero n] (w m : Preferences n) : Fin n → Fin n := fun j =&gt;
+  (finalState w m).holding j |&gt;.getD default</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L1"><code>EconCSLib.MarketDesign.Matching.GaleShapley</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L1"><code>EconCSLib.MarketDesign.Matching.GaleShapley</code></a>
       </p>
       
     </div>
@@ -1174,13 +1175,13 @@ pairs is at most $|M| \cdot |W|$ and strictly grows each round.</p>
 holding at termination; unmatched men get $\bot$, unmatched women get $\bot$.</p>
 <h2>Variant: Women-Proposing</h2>
 <p>Swap the roles of $M$ and $W$. The output is generally a <em>different</em> stable
-matching (see <span class="node-ref unresolved" data-node-id="lattice">lattice</span>); both are stable but with opposite optimality
-properties for the two sides (see <span class="node-ref unresolved" data-node-id="proposing_optimal">proposing_optimal</span>).</p>
+matching (see [[lattice]]); both are stable but with opposite optimality
+properties for the two sides (see [[proposing_optimal]]).</p>
 <p>In Lean, the men-proposing algorithm is implemented in
 <code>EconCSLib.MarketDesign.Matching.GaleShapley</code> over <code>Fin n</code> indices: one
-round is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L166"><code>GS.daStep</code></a> (free men propose, women keep the best of held + new
-offers, free men advance their cursor), iterated by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L230"><code>GS.daRun</code></a> with fuel
-<code>n*n + 1</code> to <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L235"><code>GS.finalState</code></a>, and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L239"><code>GS.gs</code></a> reads off each woman's final
+round is <code>GS.daStep</code> (free men propose, women keep the best of held + new
+offers, free men advance their cursor), iterated by <code>GS.daRun</code> with fuel
+<code>n*n + 1</code> to <code>GS.finalState</code>, and <code>GS.gs</code> reads off each woman's final
 holding as the output matching.</p>
 <h2>References</h2>
 <ul>

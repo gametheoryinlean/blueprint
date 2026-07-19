@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,136 +1073,147 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L77"><code>KnapsackAuction</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L77"><code>KnapsackAuction</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           
           <pre class="lean-signature"><code>structure KnapsackAuction (I : Type*) (U : Type*)
-    extends SingleParameterMechanism I U where</code></pre>
+    extends SingleParameterMechanism I U where
+  /-- Public weight / size of agent `i` in the knapsack constraint. -/
+  weight : I → U
+  /-- Total knapsack capacity. -/
+  totalCapacity : U</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L89"><code>KnapsackAuction.RespectsCapacity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L89"><code>KnapsackAuction.RespectsCapacity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           <p class="lean-docstring">The allocation rule respects the knapsack capacity constraint.</p>
-          <pre class="lean-signature"><code>def RespectsCapacity [Fintype I] (A : KnapsackAuction I U) : Prop</code></pre>
+          <pre class="lean-signature"><code>def RespectsCapacity [Fintype I] (A : KnapsackAuction I U) : Prop :=
+  ∀ b : I → U, (∑ i, A.weight i * A.allocationRule b i) ≤ A.totalCapacity</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L96"><code>KnapsackAuction.IsFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L96"><code>KnapsackAuction.IsFeasible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsFeasible [Fintype I] (A : KnapsackAuction I U) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsFeasible [Fintype I] (A : KnapsackAuction I U) : Prop :=
+  A.IsAllocFeasible ∧ A.RespectsCapacity</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L100"><code>KnapsackAuction.size</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L100"><code>KnapsackAuction.size</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           <p class="lean-docstring">Agent `i`&#39;s public weight.</p>
-          <pre class="lean-signature"><code>abbrev size (A : KnapsackAuction I U) (i : I) : U</code></pre>
+          <pre class="lean-signature"><code>abbrev size (A : KnapsackAuction I U) (i : I) : U :=
+  A.weight i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L104"><code>KnapsackAuction.capacity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L104"><code>KnapsackAuction.capacity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           <p class="lean-docstring">The total capacity bound.</p>
-          <pre class="lean-signature"><code>abbrev capacity (A : KnapsackAuction I U) : U</code></pre>
+          <pre class="lean-signature"><code>abbrev capacity (A : KnapsackAuction I U) : U :=
+  A.totalCapacity</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L108"><code>KnapsackAuction.NonnegativeWeights</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L108"><code>KnapsackAuction.NonnegativeWeights</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           <p class="lean-docstring">Every public weight is nonnegative.</p>
-          <pre class="lean-signature"><code>def NonnegativeWeights (A : KnapsackAuction I U) : Prop</code></pre>
+          <pre class="lean-signature"><code>def NonnegativeWeights (A : KnapsackAuction I U) : Prop :=
+  ∀ i, 0 ≤ A.weight i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L112"><code>KnapsackAuction.PositiveWeights</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L112"><code>KnapsackAuction.PositiveWeights</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           <p class="lean-docstring">Every public weight is strictly positive.</p>
-          <pre class="lean-signature"><code>def PositiveWeights (A : KnapsackAuction I U) : Prop</code></pre>
+          <pre class="lean-signature"><code>def PositiveWeights (A : KnapsackAuction I U) : Prop :=
+  ∀ i, 0 &lt; A.weight i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L116"><code>KnapsackAuction.NonnegativeCapacity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L116"><code>KnapsackAuction.NonnegativeCapacity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Knapsack
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Knapsack
           </span>
           
           
           <p class="lean-docstring">The knapsack capacity is nonnegative.</p>
-          <pre class="lean-signature"><code>def NonnegativeCapacity (A : KnapsackAuction I U) : Prop</code></pre>
+          <pre class="lean-signature"><code>def NonnegativeCapacity (A : KnapsackAuction I U) : Prop :=
+  0 ≤ A.totalCapacity</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Knapsack</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Knapsack</code></a>
       </p>
       
     </div>
@@ -1214,12 +1223,12 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Knapsack Auction Environment</h1>
 <p>A <strong>knapsack auction</strong> is a single-parameter mechanism
-(<a class="node-ref" data-node-id="mechanism_design.transfer.single_parameter_transfer_layer" href="transfer/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>) equipped
+([[mechanism_design.transfer.single_parameter_transfer_layer]]) equipped
 with two pieces of public data: a per-agent weight (item size) and a
 global capacity bound.</p>
 <h2>Structure</h2>
 <p><code>KnapsackAuction I U</code> extends <code>SingleParameterMechanism I U</code>, where the value
-type <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> is any <strong>linearly ordered field</strong> (<code>[Field U] [LinearOrder U]
+type <code>U</code> is any <strong>linearly ordered field</strong> (<code>[Field U] [LinearOrder U]
 [IsStrictOrderedRing U]</code>; <code>ℚ</code>, <code>ℝ</code>, …):</p>
 <ul>
 <li><code>weight : I → U</code> — the public, common-knowledge size of agent <code>i</code>'s
@@ -1227,7 +1236,7 @@ type <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLi
 <li><code>totalCapacity : U</code> — the total weight the knapsack can hold.</li>
 </ul>
 <p>The combinatorial layer (welfare, welfare-maximizing allocation, fractional
-greedy) is generic in <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a>; the Myerson-payment <strong>DSIC mechanism</strong> is pinned to
+greedy) is generic in <code>U</code>; the Myerson-payment <strong>DSIC mechanism</strong> is pinned to
 <code>U = ℝ</code> because the Myerson payment formula is real-valued.</p>
 <p>The inherited single-parameter fields are:</p>
 <ul>
@@ -1240,12 +1249,12 @@ and its fractional/LP relaxation (when <code>x_i ∈ [0, 1]</code>).</p>
 <h2>Feasibility</h2>
 <p>Two predicates capture knapsack feasibility:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L174"><code>IsAllocFeasible</code></a> (inherited): each $x_i(b) \in [0, 1]$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L89"><code>RespectsCapacity</code></a>: the weighted allocation respects the capacity
+<li><code>IsAllocFeasible</code> (inherited): each $x_i(b) \in [0, 1]$.</li>
+<li><code>RespectsCapacity</code>: the weighted allocation respects the capacity
   $$
   \forall b.\; \sum_{i \in I} w_i \, x_i(b) \;\le\; W.
   $$</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Knapsack.lean#L96"><code>IsFeasible</code></a> is the conjunction of both.</li>
+<li><code>IsFeasible</code> is the conjunction of both.</li>
 </ul>
 <p>This separation lets one prove allocation-bound and capacity-bound
 properties independently — useful when the allocation is built up from
@@ -1259,7 +1268,7 @@ state precisely which positivity assumption they need:</p>
   $w_i$ (e.g. value-density ranking for greedy approximation).</li>
 <li><code>NonnegativeCapacity A</code>: $0 \le W$. Needed to ensure the empty
   allocation is feasible (the base case of all welfare-maximisation
-  arguments — see <a class="node-ref" data-node-id="mechanism_design.auction.knapsack.binary_allocations" href="auction/knapsack/mechanism_design_auction_knapsack_binary_allocations.html">Binary Knapsack Allocations</a>).</li>
+  arguments — see [[mechanism_design.auction.knapsack.binary_allocations]]).</li>
 </ul>
 <p>Convenience accessors <code>size A i := A.weight i</code> and
 <code>capacity A := A.totalCapacity</code> are provided to keep theorem statements
@@ -1268,12 +1277,12 @@ readable.</p>
 <p>The knapsack auction is the canonical single-parameter mechanism with a
 non-trivial allocation constraint. It sits below:</p>
 <ul>
-<li>The binary 0/1 allocation layer (<a class="node-ref" data-node-id="mechanism_design.auction.knapsack.binary_allocations" href="auction/knapsack/mechanism_design_auction_knapsack_binary_allocations.html">Binary Knapsack Allocations</a>)
+<li>The binary 0/1 allocation layer ([[mechanism_design.auction.knapsack.binary_allocations]])
   used for both the welfare-maximisation argument and the dynamic-
   programming solver.</li>
 <li>The welfare-maximising Myerson mechanism
-  (<a class="node-ref" data-node-id="mechanism_design.auction.knapsack.welfare_maximizing_mechanism" href="auction/knapsack/mechanism_design_auction_knapsack_welfare_maximizing_mechanism.html">Welfare-Maximizing Knapsack Mechanism</a>) and the
-  relaxation/DP analysis (<a class="node-ref" data-node-id="mechanism_design.auction.knapsack.relaxations_dynamic_programming" href="auction/knapsack/mechanism_design_auction_knapsack_relaxations_dynamic_programming.html">Knapsack Relaxations And Dynamic Programming</a>).</li>
+  ([[mechanism_design.auction.knapsack.welfare_maximizing_mechanism]]) and the
+  relaxation/DP analysis ([[mechanism_design.auction.knapsack.relaxations_dynamic_programming]]).</li>
 </ul>
 <h2>References</h2>
 <ul>

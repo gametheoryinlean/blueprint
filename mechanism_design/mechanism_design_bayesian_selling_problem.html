@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1074,9 +1072,9 @@
 setting for auction-style allocation of one or more goods to bidders
 with private information. It is the input shape consumed by Myerson's
 optimal-auction theorem
-(<a class="node-ref" data-node-id="mechanism_design.myerson.optimal_auction" href="myerson/mechanism_design_myerson_optimal_auction.html">Regular Myerson Optimal Single-Item Auction</a>), revenue equivalence
-(<a class="node-ref" data-node-id="mechanism_design.myerson.revenue_equivalence" href="myerson/mechanism_design_myerson_revenue_equivalence.html">Revenue Equivalence Theorem</a>), and reserve-price
-characterisation (<a class="node-ref" data-node-id="mechanism_design.myerson.reserve_price" href="myerson/mechanism_design_myerson_reserve_price.html">Myerson Reserve-Price Characterisation</a>).</p>
+([[mechanism_design.myerson.optimal_auction]]), revenue equivalence
+([[mechanism_design.myerson.revenue_equivalence]]), and reserve-price
+characterisation ([[mechanism_design.myerson.reserve_price]]).</p>
 <h2>Setup</h2>
 <p>A selling problem is a tuple
 $\mathcal{S} = (I, A, (T_i)_{i \in I}, (F_i)_{i \in I}, (v_i)_{i \in I})$
@@ -1094,7 +1092,7 @@ where:</p>
 the joint type prior factorises: $F(t_1, \dots, t_n) = \prod_i F_i(t_i)$.</p>
 <h2>Selling mechanism</h2>
 <p>A <em>selling mechanism</em> for $\mathcal{S}$ is a Bayesian mechanism with
-transfers (<a class="node-ref" data-node-id="mechanism_design.transfer.mechanisms_with_transfers" href="transfer/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>)
+transfers ([[mechanism_design.transfer.mechanisms_with_transfers]])
 whose outcome space includes both the allocation and the per-bidder
 payment:</p>
 <ul>
@@ -1122,7 +1120,7 @@ $$</p>
 <ul>
 <li><code>BayesianSellingProblem</code> structure</li>
 <li><code>BayesianSellingMechanism</code> (specialisation of
-  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L124"><code>BayesianMechanismWithTransfers</code></a>)</li>
+  <code>BayesianMechanismWithTransfers</code>)</li>
 <li><code>IPVAssumption</code> (independence of priors)</li>
 <li>Standard examples: single-object, multi-object.</li>
 </ul>

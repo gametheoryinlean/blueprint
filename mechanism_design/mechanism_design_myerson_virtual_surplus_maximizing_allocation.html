@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,150 +1075,161 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L121"><code>BayesianSingleItemAuction.virtualSurplus</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L121"><code>BayesianSingleItemAuction.virtualSurplus</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Virtual surplus of an allocation rule at a reported type profile.</p>
           <pre class="lean-signature"><code>noncomputable def virtualSurplus [Fintype I]
-    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) (b : I → ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) (b : I → ℝ) : ℝ :=
+  ∑ i, x b i * A.virtualValue i (b i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L126"><code>BayesianSingleItemAuction.expectedVirtualSurplus</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L126"><code>BayesianSingleItemAuction.expectedVirtualSurplus</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Ex-ante expected virtual surplus under the auction prior.</p>
           <pre class="lean-signature"><code>noncomputable def expectedVirtualSurplus [Fintype I]
-    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) : ℝ :=
+  ∫ t, A.virtualSurplus x t ∂A.prior</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L131"><code>BayesianSingleItemAuction.IntegrableVirtualSurplus</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L131"><code>BayesianSingleItemAuction.IntegrableVirtualSurplus</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Integrability condition for ex-ante virtual surplus under the auction prior.</p>
           <pre class="lean-signature"><code>def IntegrableVirtualSurplus [Fintype I]
-    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) : Prop</code></pre>
+    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) : Prop :=
+  Integrable (fun t =&gt; A.virtualSurplus x t) A.prior</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L145"><code>BayesianSingleItemAuction.IsSingleItemAllocationRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L145"><code>BayesianSingleItemAuction.IsSingleItemAllocationRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">A nonnegative fractional allocation rule with total mass at most `1`.</p>
           <pre class="lean-signature"><code>def IsSingleItemAllocationRule [Fintype I]
-    (x : (I → ℝ) → I → ℝ) : Prop</code></pre>
+    (x : (I → ℝ) → I → ℝ) : Prop :=
+  (∀ b i, 0 ≤ x b i) ∧ ∀ b, (∑ i, x b i) ≤ 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L168"><code>BayesianSingleItemAuction.IsVirtualSurplusOptimalAllocationRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L168"><code>BayesianSingleItemAuction.IsVirtualSurplusOptimalAllocationRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Feasible allocation rules that pointwise maximize virtual surplus.</p>
           <pre class="lean-signature"><code>def IsVirtualSurplusOptimalAllocationRule [Fintype I]
-    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) : Prop</code></pre>
+    (A : BayesianSingleItemAuction I) (x : (I → ℝ) → I → ℝ) : Prop :=
+  IsSingleItemAllocationRule x ∧
+    ∀ y, IsSingleItemAllocationRule y →
+      ∀ b, A.virtualSurplus y b ≤ A.virtualSurplus x b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L177"><code>BayesianSingleItemAuction.virtualScore</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L177"><code>BayesianSingleItemAuction.virtualScore</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Lexicographic score used to break ties among virtual values.</p>
           <pre class="lean-signature"><code>noncomputable def virtualScore [LinearOrder I]
-    (A : BayesianSingleItemAuction I) (b : I → ℝ) (i : I) : ℝ ×ₗ I</code></pre>
+    (A : BayesianSingleItemAuction I) (b : I → ℝ) (i : I) : ℝ ×ₗ I :=
+  toLex (A.virtualValue i (b i), i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L182"><code>BayesianSingleItemAuction.virtualSurplusMaximizingWinner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L182"><code>BayesianSingleItemAuction.virtualSurplusMaximizingWinner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">The virtual-value winner with deterministic tie-breaking.</p>
           <pre class="lean-signature"><code>noncomputable def virtualSurplusMaximizingWinner
     [Fintype I] [Nontrivial I] [LinearOrder I]
-    (A : BayesianSingleItemAuction I) (b : I → ℝ) : I</code></pre>
+    (A : BayesianSingleItemAuction I) (b : I → ℝ) : I :=
+  Auction.argmaxBid (A.virtualScore b)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L216"><code>BayesianSingleItemAuction.winningVirtualValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L216"><code>BayesianSingleItemAuction.winningVirtualValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">The virtual value attained by the selected virtual-value winner.</p>
           <pre class="lean-signature"><code>noncomputable def winningVirtualValue
     [Fintype I] [Nontrivial I] [LinearOrder I]
-    (A : BayesianSingleItemAuction I) (b : I → ℝ) : ℝ</code></pre>
+    (A : BayesianSingleItemAuction I) (b : I → ℝ) : ℝ :=
+  A.virtualValue (A.virtualSurplusMaximizingWinner b)
+    (b (A.virtualSurplusMaximizingWinner b))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L223"><code>BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L223"><code>BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1233,12 +1242,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L723"><code>BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule_isSingleItemAllocationRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L723"><code>BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule_isSingleItemAllocationRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1252,12 +1261,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L991"><code>BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule_isVirtualSurplusOptimalAllocationRule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L991"><code>BayesianSingleItemAuction.virtualSurplusMaximizingAllocationRule_isVirtualSurplusOptimalAllocationRule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1271,7 +1280,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code></a>
       </p>
       
     </div>
@@ -1285,14 +1294,14 @@
 \sum_i x_i(t)\,\psi_i(t_i),
 \]
 where \(\psi_i\) is bidder \(i\)'s virtual value
-(<a class="node-ref" data-node-id="mechanism_design.myerson.virtual_value_regularity" href="myerson/mechanism_design_myerson_virtual_value_regularity.html">Virtual Values and Regularity</a>).</p>
+([[mechanism_design.myerson.virtual_value_regularity]]).</p>
 <h2>Allocation rule</h2>
 <p><code>virtualSurplusMaximizingAllocationRule A</code> chooses a bidder with maximal
 virtual value when the winning virtual value is positive.  If every virtual
 value is nonpositive, the allocation rule assigns probability zero to every
 bidder, so the item is withheld.</p>
-<p>Tie-breaking is deterministic: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L177"><code>virtualScore</code></a> pairs each virtual value with the
-bidder index in lexicographic order, and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L182"><code>virtualSurplusMaximizingWinner</code></a> uses
+<p>Tie-breaking is deterministic: <code>virtualScore</code> pairs each virtual value with the
+bidder index in lexicographic order, and <code>virtualSurplusMaximizingWinner</code> uses
 the existing finite argmax utilities from the auction layer.</p>
 <h2>Formal properties</h2>
 <p>The formalization proves that this rule is a feasible single-item allocation:
@@ -1302,7 +1311,7 @@ all feasible single-item allocation rules.</p>
 <p>These pointwise facts lift to ex-ante expected virtual-surplus comparisons
 under the corresponding integrability assumptions, and become the allocation
 part of the regular Myerson optimal auction theorem
-<a class="node-ref" data-node-id="mechanism_design.myerson.optimal_auction" href="myerson/mechanism_design_myerson_optimal_auction.html">Regular Myerson Optimal Single-Item Auction</a>.</p>
+[[mechanism_design.myerson.optimal_auction]].</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 12, Section 12.10] Maschler, Solan, and Zamir, <em>Game Theory</em>.</li>

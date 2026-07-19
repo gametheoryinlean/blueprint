@@ -2116,7 +2116,7 @@
       "id": "game_theory.extensive_game.normal_form.extensive_normal_form_invariance",
       "title": "Normal Form Invariance Of Extensive Representations",
       "kind": "proposition",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "extensive-game",
         "normal-form",
@@ -2289,7 +2289,7 @@
       "id": "game_theory.extensive_game.perfect_information.kuhn_spe_existence_no_chance",
       "title": "Kuhn Existence Of Pure Subgame-Perfect Equilibrium (No-Chance)",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "extensive-game",
         "subgame-perfect-equilibrium",
@@ -2421,7 +2421,7 @@
       "id": "game_theory.extensive_game.perfect_information.spe_implies_nash",
       "title": "Subgame-Perfect Equilibrium Implies Nash Equilibrium",
       "kind": "proposition",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "extensive-game",
         "subgame-perfect-equilibrium",
@@ -2447,7 +2447,7 @@
       "id": "game_theory.extensive_game.perfect_information.strictly_competitive_perfect_information_determined",
       "title": "Strictly Competitive Perfect-Information Determinacy",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "extensive-game",
         "determinacy",
@@ -2502,7 +2502,7 @@
       "id": "game_theory.extensive_game.perfect_information.zermelo_determinacy",
       "title": "Zermelo Determinacy For Finite Perfect-Information Games",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "extensive-game",
         "determinacy",
@@ -2531,7 +2531,7 @@
       "id": "game_theory.extensive_game.perfect_information.zero_sum_perfect_information_value_no_chance",
       "title": "Value In Finite Zero-Sum Perfect-Information Games (No-Chance)",
       "kind": "theorem",
-      "status": "formalized",
+      "status": "proved",
       "tags": [
         "extensive-game",
         "zero-sum",
@@ -9886,9 +9886,6 @@
       "topic": "mechanism_design",
       "uses": [
         "mechanism_design.auction.online.single_item_auction"
-      ],
-      "used_by": [
-        "mechanism_design.auction.online.secretary_quarter_competitive"
       ]
     },
     {
@@ -9921,12 +9918,7 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.online.no_constant_competitive",
         "mechanism_design.auction.online.single_item_auction"
-      ],
-      "used_by": [
-        "mechanism_design.auction.online.secretary_strict_comparison_fails",
-        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
@@ -9937,7 +9929,7 @@
       "tags": [
         "auction",
         "online-algorithm",
-        "secretary",
+        "sample-then-threshold",
         "counterexample",
         "competitive-ratio"
       ],
@@ -9953,11 +9945,7 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.online.secretary_quarter_competitive",
         "mechanism_design.auction.online.single_item_auction"
-      ],
-      "used_by": [
-        "mechanism_design.auction.online.secretary_weak_comparison_needle"
       ]
     },
     {
@@ -9968,7 +9956,7 @@
       "tags": [
         "auction",
         "online-algorithm",
-        "secretary",
+        "sample-then-threshold",
         "counterexample",
         "competitive-ratio",
         "needle"
@@ -9986,8 +9974,6 @@
       ],
       "topic": "mechanism_design",
       "uses": [
-        "mechanism_design.auction.online.secretary_quarter_competitive",
-        "mechanism_design.auction.online.secretary_strict_comparison_fails",
         "mechanism_design.auction.online.single_item_auction"
       ]
     },
@@ -10011,6 +9997,9 @@
       "lean_declarations": [
         "Online.OnlineAlgorithm",
         "Online.OnlineAlgorithm.run",
+        "Online.OnlineAlgorithm.runAll",
+        "Online.IsCompetitiveMax",
+        "Online.IsCompetitiveMin",
         "Online.Auction.AuctionState",
         "Online.Auction.SingleItemAuction",
         "Online.Auction.SingleItemAuction.online",
@@ -16979,28 +16968,12 @@
       "to": "mechanism_design.auction.online.no_constant_competitive"
     },
     {
-      "from": "mechanism_design.auction.online.no_constant_competitive",
-      "to": "mechanism_design.auction.online.secretary_quarter_competitive"
-    },
-    {
       "from": "mechanism_design.auction.online.single_item_auction",
       "to": "mechanism_design.auction.online.secretary_quarter_competitive"
     },
     {
-      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
-      "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
-    },
-    {
       "from": "mechanism_design.auction.online.single_item_auction",
       "to": "mechanism_design.auction.online.secretary_strict_comparison_fails"
-    },
-    {
-      "from": "mechanism_design.auction.online.secretary_quarter_competitive",
-      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
-    },
-    {
-      "from": "mechanism_design.auction.online.secretary_strict_comparison_fails",
-      "to": "mechanism_design.auction.online.secretary_weak_comparison_needle"
     },
     {
       "from": "mechanism_design.auction.online.single_item_auction",

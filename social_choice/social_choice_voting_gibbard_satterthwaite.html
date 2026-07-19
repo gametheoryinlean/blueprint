@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L496"><code>SocialChoice.Voting.gibbard_satterthwaite</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L496"><code>SocialChoice.Voting.gibbard_satterthwaite</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.GibbardSatterthwaite
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.GibbardSatterthwaite
           </span>
           
           
@@ -1097,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L1"><code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L1"><code>EconCSLib.SocialChoice.Voting.GibbardSatterthwaite</code></a>
       </p>
       
     </div>
@@ -1108,10 +1106,10 @@
     <h1>Gibbard–Satterthwaite Theorem</h1>
 <p><strong>Theorem (Gibbard 1973, Satterthwaite 1975).</strong> Let $N$ be a finite nonempty
 voter type and $A$ a finite alternative set with $|A| \ge 3$. Every
-unanimous (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and strategy-proof
-(<a class="node-ref" data-node-id="social_choice.voting.strategyproof" href="voting/social_choice_voting_strategyproof.html">Strategy-Proof Social Choice Function</a>) social choice function is
-dictatorial (<a class="node-ref" data-node-id="social_choice.voting.dictatorial_scf" href="voting/social_choice_voting_dictatorial_scf.html">Dictatorial Social Choice Function</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L496"><code>SocialChoice.Voting.gibbard_satterthwaite</code></a>, with signature
+unanimous ([[social_choice.voting.unanimity]]) and strategy-proof
+([[social_choice.voting.strategyproof]]) social choice function is
+dictatorial ([[social_choice.voting.dictatorial_scf]]).</p>
+<p>In Lean: <code>SocialChoice.Voting.gibbard_satterthwaite</code>, with signature
 <code>[Fintype N] [Nonempty N] [DecidableEq N] [Fintype A] (hA : Fintype.card A ≥ 3)</code>.</p>
     
     <details class="proof-details">
@@ -1120,22 +1118,22 @@ dictatorial (<a class="node-ref" data-node-id="social_choice.voting.dictatorial_
         <p>The Lean term composes two lemmas:</p>
 <ol>
 <li>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L476"><code>strategyproof_monotonic</code></a> (<a class="node-ref" data-node-id="social_choice.voting.strategyproof_implies_monotonic" href="voting/social_choice_voting_strategyproof_implies_monotonic.html">Strategy-Proof ⇒ Monotonic</a>)
+<p><code>strategyproof_monotonic</code> ([[social_choice.voting.strategyproof_implies_monotonic]])
    turns strategy-proofness into monotonicity
-   (<a class="node-ref" data-node-id="social_choice.voting.monotonic_scf" href="voting/social_choice_voting_monotonic_scf.html">Monotonic Social Choice Function</a>).</p>
+   ([[social_choice.voting.monotonic_scf]]).</p>
 </li>
 <li>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L447"><code>muller_satterthwaite</code></a> (<a class="node-ref" data-node-id="social_choice.voting.muller_satterthwaite" href="voting/social_choice_voting_muller_satterthwaite.html">Muller–Satterthwaite Theorem</a>)
+<p><code>muller_satterthwaite</code> ([[social_choice.voting.muller_satterthwaite]])
    turns monotonicity plus unanimity (with $|A| \ge 3$) into dictatorship.</p>
 </li>
 </ol>
 <p>Both intermediate theorems are themselves admitted with proof plans; once
-they are filled, the composition in <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/GibbardSatterthwaite.lean#L496"><code>gibbard_satterthwaite</code></a> closes on its
+they are filled, the composition in <code>gibbard_satterthwaite</code> closes on its
 own (no further sorries in this file).</p>
 <h2>Interpretation</h2>
 <p>For ordinal voting rules on three or more alternatives, <em>honesty cannot be a
 dominant strategy without a dictator</em>. This is the SCF analogue of Arrow
-(<a class="node-ref" data-node-id="social_choice.voting.arrow_impossibility" href="voting/social_choice_voting_arrow_impossibility.html">Arrow&#x27;s Impossibility Theorem</a>), and the central motivating
+([[social_choice.voting.arrow_impossibility]]), and the central motivating
 impossibility for the field of <em>strategy-proof mechanism design</em> — including
 randomized escapes (Gibbard 1977), domain restrictions (Moulin's median
 voter on single-peaked domains), and money-augmented mechanisms (VCG, where

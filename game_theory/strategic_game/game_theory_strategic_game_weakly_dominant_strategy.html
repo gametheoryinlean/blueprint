@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,28 +1073,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L37"><code>IsWeaklyDominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L37"><code>IsWeaklyDominant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.Dominance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.Dominance
           </span>
           
           
           <p class="lean-docstring">Strategy `s` is weakly dominant for player `i`.</p>
-          <pre class="lean-signature"><code>def IsWeaklyDominant (G : StrategicGame N U) (i : N) (s : G.strategy i) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsWeaklyDominant (G : StrategicGame N U) (i : N) (s : G.strategy i) : Prop :=
+  ∀ s&#39; : G.strategy i, WeaklyDominates G i s s&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L59"><code>IsWeaklyDominant.isBestResponse</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L59"><code>IsWeaklyDominant.isBestResponse</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.Dominance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.Dominance
           </span>
           
           
@@ -1109,7 +1108,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Dominance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Dominance.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Dominance</code></a>
       </p>
       
     </div>

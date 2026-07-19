@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,24 +1077,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L97"><code>SocialChoice.FairDivision.Indivisible.IsProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L97"><code>SocialChoice.FairDivision.Indivisible.IsProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev IsProportional (n : ℕ)
-    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop</code></pre>
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop :=
+  SocialChoice.FairDivision.IsProportional n allGoods v.val A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
       </p>
       
     </div>
@@ -1105,33 +1104,33 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Indivisible Proportional</h1>
-<p>For a valuation $v$ (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a>)
+<p>For a valuation $v$ ([[social_choice.fair_division.indivisible.valuation]])
 and an allocation $A$ over an outer good set <code>allGoods : Finset G</code>,
 $A$ is <em>proportional</em> (PROP) if every agent's bundle is worth at least
 a $1/n$ fraction of the total value:
 $$
 \forall i \in N,\ v_i(\mathrm{allGoods}) \le n \cdot v_i(A(i)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L97"><code>SocialChoice.FairDivision.Indivisible.IsProportional</code></a> — an
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/AffineMonoid/Basic.lean#L25"><code>abbrev</code></a> for the generic <a class="node-ref" data-node-id="social_choice.fair_division.proportional" href="fair_division/social_choice_fair_division_proportional.html">Proportional Allocation</a>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsProportional</code> — an
+<code>abbrev</code> for the generic [[social_choice.fair_division.proportional]]
 specialised at <code>v.val</code> and the whole-set <code>allGoods</code>.</p>
 <h2>Existence</h2>
 <p>PROP allocations <strong>need not exist</strong> for indivisible goods. The same
 counterexample that defeats EF
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_impossible_two_agents_one_good.html">EF Impossibility — Two Agents, One Good</a>)
+([[social_choice.fair_division.indivisible.ef_impossible_two_agents_one_good]])
 also defeats PROP: with 2 agents and 1 unit-value good, the agent who
 gets nothing receives value $0 &lt; 1/2$.</p>
 <p>For additive valuations on complete allocations, however, EF (when it
 holds) implies PROP
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>).</p>
+([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]]).</p>
 <h2>Implications</h2>
 <p>In the indivisible-additive setting:
 - <strong>EF ⇒ PROP</strong>
-  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>):
+  ([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]]):
   envy-freeness combined with additivity forces every agent to receive
   at least $1/n$ of the total value.
 - <strong>PROP ⇒ MMS</strong>
-  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional_implies_mms_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional_implies_mms_additive.html">PROP ⇒ MMS (Additive Valuations, Complete Allocations)</a>):
+  ([[social_choice.fair_division.indivisible.proportional_implies_mms_additive]]):
   the proportional bound implies the maximin-share guarantee.
 - <strong>EF1 does <em>not</em> imply PROP</strong> in general.</p>
 <h2>References</h2>

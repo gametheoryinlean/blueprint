@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L87"><code>SocialChoice.FairDivision.Divisible.IsEnvyFree.isProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L87"><code>SocialChoice.FairDivision.Divisible.IsEnvyFree.isProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Basic
           </span>
           
           
@@ -1099,7 +1097,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Basic</code></a>
       </p>
       
     </div>
@@ -1112,15 +1110,15 @@
 cake $\Omega$ and a finite agent type $N$, and let $A$ be an envy-free
 complete divisible allocation under the measure valuation
 $\mathrm{MeasureValuation}\ \mu$
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_valuation" href="fair_division/divisible/social_choice_fair_division_divisible_measure_valuation.html">Measure Valuation</a>,
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_envy_free.html">Divisible Envy-Free, Proportional, Equitable Predicates</a>,
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.allocation" href="fair_division/divisible/social_choice_fair_division_divisible_allocation.html">Divisible Allocation</a>). Then $A$ is
+([[social_choice.fair_division.divisible.measure_valuation]],
+[[social_choice.fair_division.divisible.envy_free]],
+[[social_choice.fair_division.divisible.allocation]]). Then $A$ is
 proportional with respect to $|N|$.</p>
 <p>That is, for every agent $i$,
 $$
 \mu_i(\Omega) \;\le\; |N| \cdot \mu_i(A(i)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Basic.lean#L87"><code>SocialChoice.FairDivision.Divisible.IsEnvyFree.isProportional</code></a>.</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Divisible.IsEnvyFree.isProportional</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1136,17 +1134,17 @@ each agent $i$:</p>
   &amp;= |N| \cdot \mu_i(A(i)). &amp;&amp; \text{constant sum}
 \end{aligned}
 $$</p>
-<p>The countable-additivity step uses <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/NullMeasurable.lean#L238"><code>MeasureTheory.measure_iUnion</code></a> on the
+<p>The countable-additivity step uses <code>MeasureTheory.measure_iUnion</code> on the
 disjoint measurable family $A : N \to \mathrm{Set}\ \Omega$; for a finite
-agent type this collapses to a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Defs.lean#L75"><code>Finset</code></a> sum via <code>tsum_fintype</code>.</p>
+agent type this collapses to a <code>Finset</code> sum via <code>tsum_fintype</code>.</p>
 <h2>Interpretation</h2>
 <p>Envy-freeness is a <em>strictly stronger</em> fairness notion than
 proportionality for divisible goods. The theorem above is the precise
 form: an EF measure-valued allocation automatically guarantees every
 agent at least their $1/n$ share of the whole.</p>
-<p>The same statement at the bundled <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L126"><code>MeasureInstance</code></a> level — including the
+<p>The same statement at the bundled <code>MeasureInstance</code> level — including the
 real-valued (<code>toReal</code>) variant — appears in
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_instance_existence" href="fair_division/divisible/social_choice_fair_division_divisible_measure_instance_existence.html">Measure-Instance Existence Wrappers</a>.</p>
+[[social_choice.fair_division.divisible.measure_instance_existence]].</p>
 <h2>References</h2>
 <ul>
 <li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. EF implies proportional for divisible goods.</li>

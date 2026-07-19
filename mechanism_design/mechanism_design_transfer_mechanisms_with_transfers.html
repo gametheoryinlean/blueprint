@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,29 +1077,33 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L66"><code>MechanismWithTransfers</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L66"><code>MechanismWithTransfers</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>structure MechanismWithTransfers
-    (I : Type*) (T : I → Type*) (A : Type*) (P : Type*) where</code></pre>
+    (I : Type*) (T : I → Type*) (A : Type*) (P : Type*) where
+  /-- The allocation rule: given reports, choose an allocation. -/
+  allocationRule : (∀ i, T i) → A
+  /-- The payment rule: given reports, determine each agent&#39;s payment. -/
+  paymentRule : (∀ i, T i) → I → P</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L86"><code>MechanismWithTransfers.quasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L86"><code>MechanismWithTransfers.quasiLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1109,87 +1111,97 @@
           <pre class="lean-signature"><code>def quasiLinearUtility [Sub U]
     (val : A → (∀ i, T i) → I → V)
     (valueToUtility : V → U) (paymentToUtility : P → U)
-    (r : ∀ i, T i) (trueTypes : ∀ i, T i) (i : I) : U</code></pre>
+    (r : ∀ i, T i) (trueTypes : ∀ i, T i) (i : I) : U :=
+  valueToUtility (val (M.allocationRule r) trueTypes i) -
+    paymentToUtility (M.paymentRule r i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L96"><code>MechanismWithTransfers.toMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L96"><code>MechanismWithTransfers.toMechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def toMechanism :
-    Mechanism I T (A × (I → P)) where</code></pre>
+    Mechanism I T (A × (I → P)) where
+  outcome r := (M.allocationRule r, M.paymentRule r)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L107"><code>MechanismWithTransfers.toStrategicGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L107"><code>MechanismWithTransfers.toStrategicGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def toStrategicGame
     (u : A → (I → P) → (∀ i, T i) → I → U)
-    (trueTypes : ∀ i, T i) : StrategicGame I U where</code></pre>
+    (trueTypes : ∀ i, T i) : StrategicGame I U where
+  strategy := T
+  payoff r i := u (M.allocationRule r) (M.paymentRule r) trueTypes i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L114"><code>MechanismWithTransfers.isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L114"><code>MechanismWithTransfers.isDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           <p class="lean-docstring">DSIC for a mechanism with transfers, relative to an externally supplied utility rule.</p>
           <pre class="lean-signature"><code>def isDSIC [Preorder U]
-    (u : A → (I → P) → (∀ i, T i) → I → U) : Prop</code></pre>
+    (u : A → (I → P) → (∀ i, T i) → I → U) : Prop :=
+  ∀ trueTypes : (∀ i, T i), ∀ i : I,
+    IsWeaklyDominant (M.toStrategicGame u trueTypes) i (trueTypes i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L121"><code>MechanismWithTransfers.isExPostIR</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L121"><code>MechanismWithTransfers.isExPostIR</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def isExPostIR [Preorder U] [Zero U]
-    (u : A → (I → P) → (∀ i, T i) → I → U) : Prop</code></pre>
+    (u : A → (I → P) → (∀ i, T i) → I → U) : Prop :=
+  ∀ trueTypes : (∀ i, T i), ∀ i : I, ∀ r : (∀ i, T i),
+    0 ≤ u (M.allocationRule (Function.update r i (trueTypes i)))
+      (M.paymentRule (Function.update r i (trueTypes i))) trueTypes i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L128"><code>MechanismWithTransfers.toQuasiLinearGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L128"><code>MechanismWithTransfers.toQuasiLinearGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1197,49 +1209,54 @@
           <pre class="lean-signature"><code>def toQuasiLinearGame [Sub U]
     (val : A → (∀ i, T i) → I → V)
     (valueToUtility : V → U) (paymentToUtility : P → U)
-    (trueTypes : ∀ i, T i) : StrategicGame I U</code></pre>
+    (trueTypes : ∀ i, T i) : StrategicGame I U :=
+  M.toStrategicGame
+    (fun a pay types i =&gt; valueToUtility (val a types i) - paymentToUtility (pay i))
+    trueTypes</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L137"><code>MechanismWithTransfers.isQuasiLinearDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L137"><code>MechanismWithTransfers.isQuasiLinearDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           <p class="lean-docstring">DSIC for quasi-linear utility, as a specialization of `isDSIC`.</p>
           <pre class="lean-signature"><code>def isQuasiLinearDSIC [Sub U] [Preorder U]
     (val : A → (∀ i, T i) → I → V)
-    (valueToUtility : V → U) (paymentToUtility : P → U) : Prop</code></pre>
+    (valueToUtility : V → U) (paymentToUtility : P → U) : Prop :=
+  M.isDSIC (fun a pay types i =&gt; valueToUtility (val a types i) - paymentToUtility (pay i))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L143"><code>MechanismWithTransfers.isQuasiLinearExPostIR</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L143"><code>MechanismWithTransfers.isQuasiLinearExPostIR</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           <p class="lean-docstring">Ex-post IR for quasi-linear utility, as a specialization of `isExPostIR`.</p>
           <pre class="lean-signature"><code>def isQuasiLinearExPostIR [Sub U] [Preorder U] [Zero U]
     (val : A → (∀ i, T i) → I → V)
-    (valueToUtility : V → U) (paymentToUtility : P → U) : Prop</code></pre>
+    (valueToUtility : V → U) (paymentToUtility : P → U) : Prop :=
+  M.isExPostIR (fun a pay types i =&gt; valueToUtility (val a types i) - paymentToUtility (pay i))</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Transfer</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Transfer</code></a>
       </p>
       
     </div>
@@ -1264,10 +1281,10 @@ quasi-linear utilities.</p>
   Quasi-linear utilities and VCG-style transfer mechanisms.</li>
 </ul>
 <h2>Used by auctions</h2>
-<p><a class="node-ref" data-node-id="mechanism_design.auction.basic.formats" href="auction/basic/mechanism_design_auction_basic_formats.html">Basic Auction Formats</a> (basic auction formats use the
-transfer interface), <a class="node-ref" data-node-id="mechanism_design.auction.basic.first_price_mechanism" href="auction/basic/mechanism_design_auction_basic_first_price_mechanism.html">First-Price Mechanism</a>
+<p>[[mechanism_design.auction.basic.formats]] (basic auction formats use the
+transfer interface), [[mechanism_design.auction.basic.first_price_mechanism]]
 (first-price mechanism as a transfer mechanism),
-<a class="node-ref" data-node-id="mechanism_design.auction.basic.second_price_mechanism" href="auction/basic/mechanism_design_auction_basic_second_price_mechanism.html">Second-Price (Vickrey) Mechanism</a> (second-price
+[[mechanism_design.auction.basic.second_price_mechanism]] (second-price
 mechanism as a transfer mechanism).</p>
 <h2>Provenance</h2>
 <ul>

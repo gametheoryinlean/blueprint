@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,58 +1073,61 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L48"><code>Lottery</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L48"><code>Lottery</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev Lottery (𝕜 : Type*) (O : Type*) [Semiring 𝕜] [PartialOrder 𝕜] [Fintype O]</code></pre>
+          <pre class="lean-signature"><code>abbrev Lottery (𝕜 : Type*) (O : Type*) [Semiring 𝕜] [PartialOrder 𝕜] [Fintype O] :=
+  stdSimplex 𝕜 O</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L63"><code>Lottery.pure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L63"><code>Lottery.pure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev Lottery.pure {O : Type*} [Fintype O] [DecidableEq O] (o₀ : O) :
-    Lottery 𝕜 O</code></pre>
+    Lottery 𝕜 O :=
+  stdSimplex.pure o₀</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L71"><code>Lottery.mix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L71"><code>Lottery.mix</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev Lottery.mix {O : Type*} [Fintype O]
     (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1)
-    (L₁ L₂ : Lottery 𝕜 O) : Lottery 𝕜 O</code></pre>
+    (L₁ L₂ : Lottery 𝕜 O) : Lottery 𝕜 O :=
+  stdSimplex.mix α hα₀ hα₁ L₁ L₂</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L1"><code>EconCSLib.Foundation.Utility.Lottery</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L1"><code>EconCSLib.Foundation.Utility.Lottery</code></a>
       </p>
       
     </div>
@@ -1146,13 +1147,13 @@ $$
   \alpha L_1(o)+(1-\alpha)L_2(o).
 $$</p>
 <h2>Implementation note</h2>
-<p><code>Lottery 𝕜 O</code> is a domain-flavored <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/AffineMonoid/Basic.lean#L25"><code>abbrev</code></a> for <code>stdSimplex 𝕜 O</code>. The
-constructors <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L63"><code>Lottery.pure</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L71"><code>Lottery.mix</code></a> are definitional aliases for
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L308"><code>stdSimplex.pure</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L156"><code>stdSimplex.mix</code></a> from <code>Core.Simplex</code>; the canonical
-algebra (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L95"><code>Lottery.expectedValue_pure</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L104"><code>Lottery.expectedValue_mix</code></a>,
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L111"><code>Lottery.expectedValue_mono</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L117"><code>Lottery.expectedValue_const</code></a>) is one-line
-wrappers over <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L319"><code>wsum_pure_apply</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L181"><code>wsum_mix</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L96"><code>wsum_le_wsum</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L91"><code>wsum_const</code></a>.
-See <a class="node-ref" data-node-id="math.simplex.mix" href="../../math/simplex/math_simplex_mix.html">Convex Combination of Simplex Points</a> for the underlying convex-combination vocabulary.</p>
+<p><code>Lottery 𝕜 O</code> is a domain-flavored <code>abbrev</code> for <code>stdSimplex 𝕜 O</code>. The
+constructors <code>Lottery.pure</code> and <code>Lottery.mix</code> are definitional aliases for
+<code>stdSimplex.pure</code> and <code>stdSimplex.mix</code> from <code>Core.Simplex</code>; the canonical
+algebra (<code>Lottery.expectedValue_pure</code>, <code>Lottery.expectedValue_mix</code>,
+<code>Lottery.expectedValue_mono</code>, <code>Lottery.expectedValue_const</code>) is one-line
+wrappers over <code>wsum_pure_apply</code>, <code>wsum_mix</code>, <code>wsum_le_wsum</code>, <code>wsum_const</code>.
+See [[math.simplex.mix]] for the underlying convex-combination vocabulary.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 2, Definitions 2.9-2.11] Maschler, Solan, and Zamir, <em>Game Theory</em>. Lotteries, degenerate lotteries, and compound lotteries.</li>

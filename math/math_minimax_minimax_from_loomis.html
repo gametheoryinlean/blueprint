@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L212"><code>MinimaxLoomis.singleton_of_card_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L212"><code>MinimaxLoomis.singleton_of_card_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
@@ -1095,28 +1093,34 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L221"><code>MinimaxLoomis.dropEquiv</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L221"><code>MinimaxLoomis.dropEquiv</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
           <p class="lean-docstring">The equivalence `J ≃ Option {j // j ≠ j₀}`: `j₀ ↦ none`, other `j ↦ some j`.</p>
-          <pre class="lean-signature"><code>noncomputable def dropEquiv [DecidableEq J] (j₀ : J) : J ≃ Option {j : J // j ≠ j₀} where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def dropEquiv [DecidableEq J] (j₀ : J) : J ≃ Option {j : J // j ≠ j₀} where
+  toFun j := if h : j = j₀ then none else some ⟨j, h⟩
+  invFun o := match o with | none =&gt; j₀ | some j =&gt; j.val
+  left_inv j := by by_cases h : j = j₀ &lt;;&gt; simp [h]
+  right_inv o := by cases o with
+    | none =&gt; simp
+    | some j =&gt; simp [j.property]</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L231"><code>MinimaxLoomis.sum_split_at</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L231"><code>MinimaxLoomis.sum_split_at</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
@@ -1128,12 +1132,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L242"><code>MinimaxLoomis.extendDropColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L242"><code>MinimaxLoomis.extendDropColumn</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
@@ -1146,30 +1150,31 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L260"><code>MinimaxLoomis.extendDropRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L260"><code>MinimaxLoomis.extendDropRow</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
           <p class="lean-docstring">Dual: extend a mixed strategy on `I&#39; = {i // i ≠ i₀}` to one on `I`.</p>
           <pre class="lean-signature"><code>noncomputable def extendDropRow [DecidableEq I] (i₀ : I)
     (x&#39; : stdSimplex ℝ {i : I // i ≠ i₀}) :
-    stdSimplex ℝ I</code></pre>
+    stdSimplex ℝ I :=
+  extendDropColumn (J := I) i₀ x&#39;</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L267"><code>MinimaxLoomis.wsum_extendDropColumn</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L267"><code>MinimaxLoomis.wsum_extendDropColumn</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
@@ -1183,12 +1188,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L284"><code>MinimaxLoomis.wsum_extendDropRow</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L284"><code>MinimaxLoomis.wsum_extendDropRow</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.MinimaxLoomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.MinimaxLoomis
           </span>
           
           
@@ -1202,12 +1207,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L900"><code>Loomis.minmax_from_general</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/Loomis.lean#L900"><code>Loomis.minmax_from_general</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
@@ -1219,12 +1224,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L881"><code>Loomis.lamB0_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/Loomis.lean#L881"><code>Loomis.lamB0_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
@@ -1236,12 +1241,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L886"><code>Loomis.muB0_one</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/Loomis.lean#L886"><code>Loomis.muB0_one</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ ad4ebea, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
@@ -1253,7 +1258,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L1"><code>EconCSLib.Math.Minimax.MinimaxLoomis</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L1"><code>EconCSLib.Math.Minimax.MinimaxLoomis</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>
       </p>
       
     </div>
@@ -1267,7 +1272,7 @@ the finite von Neumann minimax theorem
 (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>): take the Loomis theorem
 (<a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="minimax/math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a>) and specialise the positive matrix
 $B$ to the all-ones matrix $\mathbf{1}$. An alternative, ordered-field-generic
-route is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Minimax.lean#L170"><code>Minimax.minimax</code></a>
+route is <code>Minimax.minimax</code>
 (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>), proved sorry-free by von
 Neumann symmetrisation over any linearly ordered field.</p>
 <p><em>Proof (specialization of Loomis).</em> Apply the Loomis theorem
@@ -1293,10 +1298,10 @@ $\lambda_0 = \mu_0 = v$, with $(x, y)$ the asserted optimisers.</p>
 <p><em>Lean implementation note.</em> The Lean development now formalises the general
 positive-$B$ Loomis theorem in <code>EconCSLib.StrategicGame.Loomis</code> and
 re-derives finite minimax as the one-line corollary
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L900"><code>Loomis.minmax_from_general</code></a>, which calls <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L806"><code>loomis_value_eq</code></a> at the
+<code>Loomis.minmax_from_general</code>, which calls <code>loomis_value_eq</code> at the
 all-ones matrix <code>B = fun _ _ =&gt; 1</code> and uses the bridge lemmas
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L881"><code>lamB0_one</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L886"><code>muB0_one</code></a> to translate <code>lamB0 A 1</code> back to
-<code>MinimaxLoomis.lam0 A</code> (resp. <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/Loomis.lean#L126"><code>muB0</code></a>/<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Minimax/MinimaxLoomis.lean#L134"><code>mu0</code></a>). This corollary is now the sole
+<code>lamB0_one</code> and <code>muB0_one</code> to translate <code>lamB0 A 1</code> back to
+<code>MinimaxLoomis.lam0 A</code> (resp. <code>muB0</code>/<code>mu0</code>). This corollary is now the sole
 route: the earlier standalone induction in
 <code>EconCSLib.StrategicGame.MinimaxLoomis</code> was removed as redundant. That module
 now contributes only the shared foundational scaffold reused by the general

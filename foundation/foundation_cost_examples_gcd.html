@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L39"><code>GCD.gcd</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/GCD.lean#L39"><code>GCD.gcd</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.GCD
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.GCD
           </span>
           
           
@@ -1091,18 +1089,19 @@
     ✓ gcd (b + 1) (a % (b + 1))
 termination_by _ b =&gt; b
 decreasing_by exact Nat.mod_lt _ (Nat.succ_pos _)
+
 /-- Linear cost bound: `gcd a b` performs at most `b` `mod` operations. -/</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L47"><code>GCD.gcd_cost_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/GCD.lean#L47"><code>GCD.gcd_cost_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.GCD
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.GCD
           </span>
           
           
@@ -1113,12 +1112,12 @@ decreasing_by exact Nat.mod_lt _ (Nat.succ_pos _)
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L85"><code>GCD.gcd_cost_log_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/GCD.lean#L85"><code>GCD.gcd_cost_log_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.GCD
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.GCD
           </span>
           
           
@@ -1130,7 +1129,7 @@ decreasing_by exact Nat.mod_lt _ (Nat.succ_pos _)
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L1"><code>EconCSLib.Examples.CostM.GCD</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/GCD.lean#L1"><code>EconCSLib.Examples.CostM.GCD</code></a>
       </p>
       
     </div>
@@ -1139,11 +1138,11 @@ decreasing_by exact Nat.mod_lt _ (Nat.succ_pos _)
 
   <div class="example_thmcontent thm-content body">
     <h1>Worked Example: Euclidean GCD Step Count</h1>
-<p>The simplest <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L136"><code>CostM</code></a> instance: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L39"><code>gcd</code></a> in <code>CostM ℕ</code>, charging one unit per
+<p>The simplest <code>CostM</code> instance: <code>gcd</code> in <code>CostM ℕ</code>, charging one unit per
 modulus operation. Two bounds are proved:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L47"><code>gcd_cost_le</code></a>  —  <code>(gcd a b).cost ≤ b</code> (a trivial linear bound), and</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L85"><code>gcd_cost_log_le</code></a>  —  <code>(gcd a b).cost ≤ 2 · \log_2 b + 1</code>, the textbook
+<li><code>gcd_cost_le</code>  —  <code>(gcd a b).cost ≤ b</code> (a trivial linear bound), and</li>
+<li><code>gcd_cost_log_le</code>  —  <code>(gcd a b).cost ≤ 2 · \log_2 b + 1</code>, the textbook
   logarithmic bound following from the fact that two consecutive remainders
   at least halve the modulus.</li>
 </ul>
@@ -1154,8 +1153,8 @@ value lives on <code>.ret</code>.</p>
 <h2>Lean declarations</h2>
 <ul>
 <li><code>GCD.gcd : ℕ → ℕ → CostM ℕ ℕ</code> — the instrumented algorithm.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L47"><code>GCD.gcd_cost_le</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L85"><code>GCD.gcd_cost_log_le</code></a> — the linear and logarithmic step
-  bounds (the latter via a private <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/GCD.lean#L67"><code>mod_halves</code></a> halving lemma).</li>
+<li><code>GCD.gcd_cost_le</code>, <code>GCD.gcd_cost_log_le</code> — the linear and logarithmic step
+  bounds (the latter via a private <code>mod_halves</code> halving lemma).</li>
 </ul>
 <h2>References</h2>
 <ul>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L74"><code>MatrixGame.exists_strong_complementary_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L74"><code>MatrixGame.exists_strong_complementary_pair</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity
           </span>
           
           
@@ -1099,7 +1097,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity</code></a>
       </p>
       
     </div>
@@ -1129,7 +1127,7 @@ value against $y^*$; dually for columns.</p>
 best-response row has positive probability</em> — comes from
 <a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="linear_programming/math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> applied to the
 matrix-game LP. The Lean implementation
-(<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L74"><code>MatrixGame.exists_strong_complementary_pair</code></a>) carries out:</p>
+(<code>MatrixGame.exists_strong_complementary_pair</code>) carries out:</p>
 <h3>Step 1 — Shift to make payoffs strictly positive</h3>
 <p>Choose $K := 1 + |A.\mathrm{value}| + \max_{i,j} |A_{ij}|$. Then
 $A'_{ij} := A_{ij} + K &gt; 0$ for every $i, j$, and the shifted value
@@ -1183,7 +1181,7 @@ then $x^*_i &gt; 0$. Symmetric argument for columns. $\square$</p>
   the <code>min ⟨c, x⟩ s.t. Ax ≥ b, x ≥ 0</code> form of
   <a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="linear_programming/math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>.</li>
 <li>The Lean implementation restricts <code>I J : Type</code> (= <code>Type 0</code>) so the
-  <code>Fintype.sum_equiv</code> adapter that bridges <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> and <code>Fin (#I)</code> lines up
+  <code>Fintype.sum_equiv</code> adapter that bridges <code>I</code> and <code>Fin (#I)</code> lines up
   with the LP theorem's universe ($\mathbb{R} : \mathrm{Type}\,0$).</li>
 <li>Combined with <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.support_complementarity" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_support_complementarity.html">Support Complementarity</a> this
   produces a <em>fully two-sided</em> biconditional in the strong pair: every

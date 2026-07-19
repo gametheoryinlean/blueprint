@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,40 +1073,42 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L260"><code>CostM.par</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/CostM.lean#L260"><code>CostM.par</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.CostM
           </span>
           
           
           
-          <pre class="lean-signature"><code>def par [SemilatticeSup C] (m₁ : CostM C A) (m₂ : CostM C B) : CostM C (A × B)</code></pre>
+          <pre class="lean-signature"><code>def par [SemilatticeSup C] (m₁ : CostM C A) (m₂ : CostM C B) : CostM C (A × B) :=
+  ⟨(m₁.ret, m₂.ret), m₁.cost ⊔ m₂.cost⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>CostM.parList</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/CostM.lean#L286"><code>CostM.parList</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.CostM
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.CostM
           </span>
           
           
           
           <pre class="lean-signature"><code>def parList [SemilatticeSup C] [OrderBot C] (ms : List (CostM C A)) :
-    CostM C (List A)</code></pre>
+    CostM C (List A) :=
+  ⟨ms.map (·.ret), ms.foldr (fun m acc =&gt; m.cost ⊔ acc) ⊥⟩</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L1"><code>EconCSLib.Foundation.CostM</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/CostM.lean#L1"><code>EconCSLib.Foundation.CostM</code></a>
       </p>
       
     </div>
@@ -1125,30 +1125,30 @@ $$
   (\operatorname{par} m_1\, m_2).\mathrm{cost}
     \;=\; m_1.\mathrm{cost} \,\sqcup\, m_2.\mathrm{cost}.
 $$
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L260"><code>par</code></a> is <strong>not</strong> a monadic operation: neither operand's value feeds the other,
+<code>par</code> is <strong>not</strong> a monadic operation: neither operand's value feeds the other,
 so it is only sound when the two sides are genuinely data-independent. It
 requires <code>[SemilatticeSup C]</code>.</p>
-<p>The n-ary <code>parList ms</code> extends <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L260"><code>par</code></a> to a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/Filter.lean#L13"><code>List</code></a> of independent operands:
+<p>The n-ary <code>parList ms</code> extends <code>par</code> to a <code>List</code> of independent operands:
 returns are collected in order, and costs are folded with <code>⊔</code> from the
 identity <code>⊥</code> (so the empty list costs <code>⊥</code>, which is <code>0</code> for <code>C = ℕ</code>):
 $$
   (\operatorname{parList}\,[m_1,\dots,m_n]).\mathrm{cost}
     \;=\; m_1.\mathrm{cost} \sqcup \cdots \sqcup m_n.\mathrm{cost}.
 $$
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>parList</code></a> additionally needs <code>[OrderBot C]</code> for that identity. This is the
-flat fan-out / fan-in, depth-1 schedule with <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/OpenProblem/SubmodularWelfareDemandOracle.lean#L143"><code>n</code></a> workers.</p>
+<code>parList</code> additionally needs <code>[OrderBot C]</code> for that identity. This is the
+flat fan-out / fan-in, depth-1 schedule with <code>n</code> workers.</p>
 <p>For combined work-and-depth tracking one would use <code>C := ℕ × ℕ</code> with <code>+</code> on
 the work component and <code>⊔</code> on the depth component; that per-component
 combinator is not provided here.</p>
 <h2>Lean declarations</h2>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L260"><code>CostM.par</code></a> <code>[SemilatticeSup C]</code> with projection lemmas <code>ret_par</code>, <code>cost_par</code>.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>CostM.parList</code></a> <code>[SemilatticeSup C] [OrderBot C]</code> with <code>ret_parList</code>,
+<li><code>CostM.par</code> <code>[SemilatticeSup C]</code> with projection lemmas <code>ret_par</code>, <code>cost_par</code>.</li>
+<li><code>CostM.parList</code> <code>[SemilatticeSup C] [OrderBot C]</code> with <code>ret_parList</code>,
   <code>cost_parList</code>, the base case <code>parList_nil</code>, and the cons recurrence
   <code>cost_parList_cons</code>.</li>
 </ul>
 <p>Worked examples: balanced-tree depth in <a class="node-ref" data-node-id="foundation.cost.examples.par_sum" href="cost/examples/foundation_cost_examples_par_sum.html">Worked Example: Balanced Parallel Sum Depth</a>
-and the n-ary <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>parList</code></a> bound in <a class="node-ref" data-node-id="foundation.cost.examples.par_all" href="cost/examples/foundation_cost_examples_par_all.html">Worked Example: N-ary parList Depth Bound</a>.</p>
+and the n-ary <code>parList</code> bound in <a class="node-ref" data-node-id="foundation.cost.examples.par_all" href="cost/examples/foundation_cost_examples_par_all.html">Worked Example: N-ary parList Depth Bound</a>.</p>
 <h2>References</h2>
 <ul>
 <li>[Danielsson 2008] Nils Anders Danielsson, <em>Lightweight Semiformal Time
@@ -1157,7 +1157,7 @@ and the n-ary <a class="lean-decl-ref" href="https://github.com/gametheoryinlean
 </ul>
 <h2>Provenance</h2>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L260"><code>par</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/CostM.lean#L286"><code>parList</code></a> are EconCSLib additions on top of the <code>TimeM</code>-derived
+<li><code>par</code> and <code>parList</code> are EconCSLib additions on top of the <code>TimeM</code>-derived
   monad core from <a href="https://github.com/leanprover/cslib">leanprover/cslib</a>
   (Apache 2.0); they have no upstream counterpart at the pinned revision.</li>
 </ul>

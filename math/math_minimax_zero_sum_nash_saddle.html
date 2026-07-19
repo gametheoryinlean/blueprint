@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L81"><code>MatrixGame.isMixedNashEq_iff_isSaddlePoint</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L81"><code>MatrixGame.isMixedNashEq_iff_isSaddlePoint</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
           </span>
           
           
@@ -1096,7 +1094,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>
@@ -1123,8 +1121,8 @@ $$
 The second inequality is equivalent to $u(x^*,y^*)\le u(x^*,y)$ for all
 $y$. Together these are precisely the saddle-point inequalities.</p>
 <p>In the Lean formalisation this equivalence is <em>definitional</em>: the predicate
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L74"><code>MatrixGame.IsSaddlePoint</code></a> is an <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/AffineMonoid/Basic.lean#L25"><code>abbrev</code></a> for <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L64"><code>MatrixGame.IsMixedNashEq</code></a>, so
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L81"><code>isMixedNashEq_iff_isSaddlePoint</code></a> is closed by <code>Iff.rfl</code>.  The
+<code>MatrixGame.IsSaddlePoint</code> is an <code>abbrev</code> for <code>MatrixGame.IsMixedNashEq</code>, so
+<code>isMixedNashEq_iff_isSaddlePoint</code> is closed by <code>Iff.rfl</code>.  The
 strategic-game-level form (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a>)
 follows from the same definitional identity combined with the profile
 expansion lemmas.</p>

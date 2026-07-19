@@ -10,8 +10,8 @@
     "social_choice.fair_division",
     "social_choice.fair_division.divisible"
   ],
-  "body_html": "<h1>Normalized Measure Valuation ↔ Probability Measure</h1>\n<p><strong>Lemma.</strong> For a family of measures $\\mu : N \\to \\mathrm{Measure}\\ \\Omega$,\nthe induced measure valuation $\\mathrm{MeasureValuation}\\ \\mu$\n(<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.measure_valuation\" href=\"fair_division/divisible/social_choice_fair_division_divisible_measure_valuation.html\">Measure Valuation</a>) is\nnormalized (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.cake_valuation\" href=\"fair_division/divisible/social_choice_fair_division_divisible_cake_valuation.html\">Cake Valuation</a>) if\nand only if every $\\mu_i$ is a probability measure:\n$$\n\\mathrm{IsNormalized}\\,(\\mathrm{MeasureValuation}\\ \\mu)\n\\;\\iff\\;\n\\forall i \\in N,\\ \\mu_i\\text{ is a probability measure.}\n$$</p>\n<p>In Lean: <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L69\"><code>IsNormalized.iff_isProbabilityMeasure</code></a>.</p>",
-  "proof_html": "<p>Unfolding <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L62\"><code>IsNormalized</code></a> and <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L31\"><code>MeasureValuation</code></a>, the predicate\nbecomes \"$\\mu_i(\\Omega) = 1$ for every $i$\", which is exactly the\ndefining condition of <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean#L63\"><code>IsProbabilityMeasure</code></a>. The two directions are the\nconstructor and projection of the one-field <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/Probability.lean#L63\"><code>IsProbabilityMeasure</code></a> class.\n$\\square$</p>\n<p>This is the bridge between two ways of writing the same hypothesis:\n\"normalized cake valuation\" (the social-choice phrasing) and \"probability\nmeasure family\" (the measure-theoretic phrasing). Downstream theorems\ntypically state hypotheses in whichever form is most convenient and use\nthis lemma to translate.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Normalised cake valuations.</li>\n</ul>",
+  "body_html": "<h1>Normalized Measure Valuation ↔ Probability Measure</h1>\n<p><strong>Lemma.</strong> For a family of measures $\\mu : N \\to \\mathrm{Measure}\\ \\Omega$,\nthe induced measure valuation $\\mathrm{MeasureValuation}\\ \\mu$\n([[social_choice.fair_division.divisible.measure_valuation]]) is\nnormalized ([[social_choice.fair_division.divisible.cake_valuation]]) if\nand only if every $\\mu_i$ is a probability measure:\n$$\n\\mathrm{IsNormalized}\\,(\\mathrm{MeasureValuation}\\ \\mu)\n\\;\\iff\\;\n\\forall i \\in N,\\ \\mu_i\\text{ is a probability measure.}\n$$</p>\n<p>In Lean: <code>IsNormalized.iff_isProbabilityMeasure</code>.</p>",
+  "proof_html": "<p>Unfolding <code>IsNormalized</code> and <code>MeasureValuation</code>, the predicate\nbecomes \"$\\mu_i(\\Omega) = 1$ for every $i$\", which is exactly the\ndefining condition of <code>IsProbabilityMeasure</code>. The two directions are the\nconstructor and projection of the one-field <code>IsProbabilityMeasure</code> class.\n$\\square$</p>\n<p>This is the bridge between two ways of writing the same hypothesis:\n\"normalized cake valuation\" (the social-choice phrasing) and \"probability\nmeasure family\" (the measure-theoretic phrasing). Downstream theorems\ntypically state hypotheses in whichever form is most convenient and use\nthis lemma to translate.</p>\n<h2>References</h2>\n<ul>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>. Normalised cake valuations.</li>\n</ul>",
   "deps": [
     {
       "id": "social_choice.fair_division.divisible.measure_valuation",
@@ -30,9 +30,9 @@
       "signature": "lemma iff_isProbabilityMeasure {N Ω : Type*} [MeasurableSpace Ω]\n    (μ : N → MeasureTheory.Measure Ω) :\n    IsNormalized (MeasureValuation μ) ↔ ∀ i, MeasureTheory.IsProbabilityMeasure (μ i)",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L69",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L69",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -45,9 +45,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Divisible.Valuation",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.Valuation",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1",
       "status": "resolved",
       "reason": null
     }

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L1072"><code>galeShapley_isStable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L1072"><code>galeShapley_isStable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.GaleShapley
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.GaleShapley
           </span>
           
           
@@ -1095,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L1"><code>EconCSLib.MarketDesign.Matching.GaleShapley</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L1"><code>EconCSLib.MarketDesign.Matching.GaleShapley</code></a>
       </p>
       
     </div>
@@ -1106,7 +1104,7 @@
     <h1>Gale-Shapley Theorem</h1>
 <p><strong>Theorem.</strong> Every finite one-to-one matching market $(M, W, \succ)$ admits
 a stable matching. Specifically, the matching output by the men-proposing
-deferred-acceptance algorithm (<span class="node-ref unresolved" data-node-id="gale_shapley_algorithm">gale_shapley_algorithm</span>) is stable.</p>
+deferred-acceptance algorithm ([[gale_shapley_algorithm]]) is stable.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1141,14 +1139,14 @@ $i \succ_j \mu^{-1}(j)$.</p>
 shows only <code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>. Closed under MT-L1
 (#203). The two structural ingredients are now in place:</p>
 <ol>
-<li>The "monotone holding" invariant <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L345"><code>holding_rank_mono_run</code></a> (+ the
-   stay-matched companion <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L360"><code>held_preserved_run</code></a>): a woman's holding partner
+<li>The "monotone holding" invariant <code>holding_rank_mono_run</code> (+ the
+   stay-matched companion <code>held_preserved_run</code>): a woman's holding partner
    can only improve over time and she never reverts to unmatched.</li>
-<li>The "no free men at termination" property <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L962"><code>finalState_no_free_men</code></a>,
+<li>The "no free men at termination" property <code>finalState_no_free_men</code>,
    from the cursor-sum growth bound versus the <code>n*n</code> proposal ceiling.</li>
 </ol>
-<p>The blocking-pair argument is assembled in the <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L734"><code>RSInv</code></a> (Roth–Sotomayor)
-run-state invariant and discharged by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/GaleShapley.lean#L933"><code>rsinv_stability</code></a>.</p>
+<p>The blocking-pair argument is assembled in the <code>RSInv</code> (Roth–Sotomayor)
+run-state invariant and discharged by <code>rsinv_stability</code>.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ Ch.22, Thm 22.7] Maschler, Solan, Zamir, <em>Game Theory</em>.</li>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,40 +1060,44 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L42"><code>SocialChoice.FairDivision.Indivisible.Allocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L42"><code>SocialChoice.FairDivision.Indivisible.Allocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Allocation (N G : Type*)</code></pre>
+          <pre class="lean-signature"><code>def Allocation (N G : Type*) := N → Finset G</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L55"><code>SocialChoice.FairDivision.Indivisible.IsAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L55"><code>SocialChoice.FairDivision.Indivisible.IsAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Basic
           </span>
           
           
           
           <pre class="lean-signature"><code>structure IsAllocation {N G : Type*} [Fintype N] [DecidableEq G]
-    (allGoods : Finset G) (A : Allocation N G) : Prop where</code></pre>
+    (allGoods : Finset G) (A : Allocation N G) : Prop where
+  /-- Distinct agents receive disjoint bundles. -/
+  disjoint : ∀ i j : N, i ≠ j → Disjoint (A i) (A j)
+  /-- Every good in `allGoods` is allocated to some agent. -/
+  complete  : allGoods = Finset.univ.biUnion A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Basic</code></a>
       </p>
       
     </div>
@@ -1114,7 +1116,7 @@ $$</p>
 a plain type alias.</p>
 <h2>Partition predicate</h2>
 <p>A <em>complete</em> indivisible allocation partitions an outer good set
-<code>allGoods : Finset G</code>. In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L55"><code>IsAllocation</code></a> is a structure with two
+<code>allGoods : Finset G</code>. In Lean: <code>IsAllocation</code> is a structure with two
 fields:</p>
 <ul>
 <li><code>disjoint : ∀ i ≠ j, Disjoint (A i) (A j)</code> — agents receive disjoint
@@ -1123,17 +1125,17 @@ fields:</p>
   <code>allGoods</code> is allocated to some agent.</li>
 </ul>
 <p>The class hypotheses <code>[Fintype N]</code> and <code>[DecidableEq G]</code> are required
-by the <code>Finset.univ.biUnion</code> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Order/Disjoint.lean#L48"><code>Disjoint</code></a> operators.</p>
-<p>A small derived fact <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L68"><code>IsAllocation.mem_biUnion</code></a> says every good in
+by the <code>Finset.univ.biUnion</code> and <code>Disjoint</code> operators.</p>
+<p>A small derived fact <code>IsAllocation.mem_biUnion</code> says every good in
 <code>allGoods</code> belongs to some agent's bundle.</p>
 <h2>Why feasibility is a separate predicate</h2>
 <p>Algorithms like round-robin
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.round_robin_alloc" href="fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_alloc.html">Round-Robin Allocation</a>) and
+([[social_choice.fair_division.indivisible.round_robin_alloc]]) and
 envy-cycle elimination
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_cycle_algorithm" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle_algorithm.html">Envy-Cycle Elimination Algorithm</a>)
+([[social_choice.fair_division.indivisible.envy_cycle_algorithm]])
 manipulate raw allocations (function values, not partition witnesses) in
-intermediate states. Keeping <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L42"><code>Allocation</code></a> as a plain function type and
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Basic.lean#L55"><code>IsAllocation</code></a> as a separate hypothesis lets these algorithms be
+intermediate states. Keeping <code>Allocation</code> as a plain function type and
+<code>IsAllocation</code> as a separate hypothesis lets these algorithms be
 written without prematurely committing to partition invariants at
 every step.</p>
 <h2>References</h2>

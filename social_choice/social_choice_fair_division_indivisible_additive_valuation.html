@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,44 +1073,47 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L68"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L68"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure AdditiveValuation (N G : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure AdditiveValuation (N G : Type*) where
+  /-- Per-item weight: agent × good → value. -/
+  weight : N → G → ℝ</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L79"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L79"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
           </span>
           
           
           
-          <pre class="lean-signature"><code>def toValuation (w : AdditiveValuation N G) : Valuation N G</code></pre>
+          <pre class="lean-signature"><code>def toValuation (w : AdditiveValuation N G) : Valuation N G :=
+  ⟨fun i S =&gt; ∑ g ∈ S, w.weight i g⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L84"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation_empty</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L84"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation_empty</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
           </span>
           
           
@@ -1124,12 +1125,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L89"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation_union</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L89"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation_union</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
           </span>
           
           
@@ -1142,12 +1143,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L96"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation_mono</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L96"><code>SocialChoice.FairDivision.Indivisible.AdditiveValuation.toValuation_mono</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation
           </span>
           
           
@@ -1162,7 +1163,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Valuation</code></a>
       </p>
       
     </div>
@@ -1180,8 +1181,8 @@ with weights $w_i : G \to \mathbb{R}$.</p>
 <p>In Lean: structure <code>SocialChoice.FairDivision.Indivisible.AdditiveValuation N G</code>
 with one field <code>weight : N → G → ℝ</code>.</p>
 <h2>Lift to abstract valuation</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L79"><code>AdditiveValuation.toValuation</code></a> lifts to a generic
-<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a>:
+<p><code>AdditiveValuation.toValuation</code> lifts to a generic
+[[social_choice.fair_division.indivisible.valuation]]:
 $$
 (w.\mathrm{toValuation}).\mathrm{val}\ i\ S = \sum_{g \in S} w.\mathrm{weight}\ i\ g.
 $$</p>
@@ -1189,18 +1190,18 @@ $$</p>
 <p>Three structural lemmas at the additive layer:</p>
 <ul>
 <li>
-<p><strong><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L84"><code>toValuation_empty</code></a></strong> (<code>@[simp]</code>):
+<p><strong><code>toValuation_empty</code></strong> (<code>@[simp]</code>):
   $w.\mathrm{toValuation}.\mathrm{val}\ i\ \emptyset = 0$.</p>
 </li>
 <li>
-<p><strong><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L89"><code>toValuation_union</code></a></strong> for disjoint bundles
+<p><strong><code>toValuation_union</code></strong> for disjoint bundles
   ($\mathrm{Disjoint}\ S\ T$, $[\mathrm{DecidableEq}\ G]$):
   $$
   v(i, S \cup T) = v(i, S) + v(i, T).
   $$</p>
 </li>
 <li>
-<p><strong><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L96"><code>toValuation_mono</code></a></strong> for nonnegative weights
+<p><strong><code>toValuation_mono</code></strong> for nonnegative weights
   ($\forall i\,g,\ w(i, g) \ge 0$, $[\mathrm{DecidableEq}\ G]$):
   $$
   T \subseteq S \;\Rightarrow\; v(i, T) \le v(i, S).
@@ -1209,8 +1210,8 @@ $$</p>
 </ul>
 <h2>Why additivity matters</h2>
 <p>The implication chain
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_proportional_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>,
-<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional_implies_mms_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional_implies_mms_additive.html">PROP ⇒ MMS (Additive Valuations, Complete Allocations)</a>)
+([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]],
+[[social_choice.fair_division.indivisible.proportional_implies_mms_additive]])
 needs additivity to convert a per-bundle inequality
 $v_i(B_j) \le v_i(A_i)$ into the total-value comparisons that
 proportionality and MMS demand. Monotone but non-additive valuations

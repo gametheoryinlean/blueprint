@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,39 +1073,42 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L26"><code>ExtensiveGame.Strategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L26"><code>ExtensiveGame.Strategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.Strategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.Strategy
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Strategy (G : ExtensiveGame N U) (i : N)</code></pre>
+          <pre class="lean-signature"><code>def Strategy (G : ExtensiveGame N U) (i : N) :=
+  (s : G.State) → G.mover s = some i → G.Action s</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L66"><code>GameTree.Strategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L66"><code>GameTree.Strategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Strategy (N U : Type*) : Type _</code></pre>
+          <pre class="lean-signature"><code>def Strategy (N U : Type*) : Type _ :=
+  (m : N) → (h : GameTree N U) → (t : List (GameTree N U)) →
+    { c : GameTree N U // c ∈ h :: t }</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Strategy</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/Strategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Strategy</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE</code></a>
       </p>
       
     </div>

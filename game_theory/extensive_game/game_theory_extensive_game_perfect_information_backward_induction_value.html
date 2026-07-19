@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,46 +1073,49 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L45"><code>GameTree.value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L45"><code>GameTree.value</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.BackwardInduction
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.BackwardInduction
           </span>
           
           
           
-          <pre class="lean-signature"><code>def value : GameTree N U → (N → U)
+          <pre class="lean-signature"><code>  def value : GameTree N U → (N → U)
     | Leaf p =&gt; p
     | Node m h t =&gt;
-        let hv</code></pre>
+        let hv := value h
+        let tv := valueList t
+        List.argMaxOn (fun v =&gt; v m) hv tv</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L53"><code>GameTree.valueList</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L53"><code>GameTree.valueList</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.BackwardInduction
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.BackwardInduction
           </span>
           
           
           
-          <pre class="lean-signature"><code>def valueList : List (GameTree N U) → List (N → U)
+          <pre class="lean-signature"><code>  def valueList : List (GameTree N U) → List (N → U)
     | [] =&gt; []
     | x :: xs =&gt; value x :: valueList xs
 end
+
 @[simp]</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BackwardInduction</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BackwardInduction</code></a>
       </p>
       
     </div>
@@ -1134,8 +1135,8 @@ computed bottom-up:</p>
 <p>The only structural requirement on the payoff type $U$ is a total preorder
 (reflexivity, transitivity, totality); neither antisymmetry nor decidability is
 used. The mover's own coordinate dominates every child's value
-(<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L88"><code>value_Node_ge</code></a>), and the chosen value is realized by some child
-(<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/BackwardInduction.lean#L106"><code>value_Node_eq_some_child_value</code></a>). This value function and its optimality
+(<code>value_Node_ge</code>), and the chosen value is realized by some child
+(<code>value_Node_eq_some_child_value</code>). This value function and its optimality
 lemmas are the machinery behind Zermelo determinacy
 (<a class="node-ref" data-node-id="game_theory.extensive_game.perfect_information.subgame_perfect_equilibrium" href="perfect_information/game_theory_extensive_game_perfect_information_subgame_perfect_equilibrium.html">Subgame-Perfect Equilibrium In Perfect-Information Games</a>)
 and Kuhn's subgame-perfect existence theorem.</p>

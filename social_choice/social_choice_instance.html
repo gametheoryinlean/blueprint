@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,27 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Basic.lean#L38"><code>SocialChoice.Instance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Basic.lean#L38"><code>SocialChoice.Instance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure Instance (N A : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure Instance (N A : Type*) where
+  /-- Feasible alternatives for this instance. -/
+  feasible : A → Prop
+  /-- Each agent&#39;s weak preference over alternatives. -/
+  pref : N → Pref A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Basic.lean#L1"><code>EconCSLib.SocialChoice.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Basic.lean#L1"><code>EconCSLib.SocialChoice.Basic</code></a>
       </p>
       
     </div>
@@ -1116,11 +1118,11 @@ problems share the same alternative space:</p>
 <li>Voting instances typically take $F$ to be <code>fun _ =&gt; True</code> and use the
   whole alternative set.</li>
 <li>Fair-division instances over a fixed allocation type can vary feasibility
-  per resource; <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L50"><code>ShareInstance</code></a> carries a <code>feasible : (N → S) → Prop</code>
+  per resource; <code>ShareInstance</code> carries a <code>feasible : (N → S) → Prop</code>
   predicate on allocations rather than on individual outcomes.</li>
 </ul>
 <p>The pair $(F, P)$ is the canonical input for any <em>solution concept</em> on the
-instance (<a class="node-ref" data-node-id="social_choice.solution_concept" href="social_choice_solution_concept.html">Solution Concept, Rule, and Correspondence</a>).</p>
+instance ([[social_choice.solution_concept]]).</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>. Generic social-choice setup.</li>

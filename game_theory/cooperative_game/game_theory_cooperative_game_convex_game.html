@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,28 +1073,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L102"><code>CoalitionalGame.IsConvex</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L102"><code>CoalitionalGame.IsConvex</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.CoalitionalGame.Basic
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.CoalitionalGame.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsConvex [LE U] : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsConvex [LE U] : Prop :=
+  ∀ S T : Finset N, G.v (S ∪ T) + G.v (S ∩ T) ≥ G.v S + G.v T</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L124"><code>CoalitionalGame.IsConvex.isSuperadditive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L124"><code>CoalitionalGame.IsConvex.isSuperadditive</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.CoalitionalGame.Basic
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.CoalitionalGame.Basic
           </span>
           
           
@@ -1107,7 +1106,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.Basic</code></a>
       </p>
       
     </div>
@@ -1127,8 +1126,8 @@ coalition they join becomes larger. Convexity is a strong regularity
 condition: convex games have nonempty core, and their Shapley value lies in
 the core.</p>
 <h2>Lean Status</h2>
-<p>Lean defines convexity as <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L102"><code>CoalitionalGame.IsConvex</code></a> and proves the basic
-fact <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Basic.lean#L124"><code>CoalitionalGame.IsConvex.isSuperadditive</code></a>.</p>
+<p>Lean defines convexity as <code>CoalitionalGame.IsConvex</code> and proves the basic
+fact <code>CoalitionalGame.IsConvex.isSuperadditive</code>.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ Ch.17, Def 17.51 and Thm 17.54] Maschler, Solan, Zamir,

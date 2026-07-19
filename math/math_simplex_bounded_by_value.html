@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L341"><code>ge_iff_simplex_ge</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L341"><code>ge_iff_simplex_ge</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
@@ -1092,12 +1090,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L350"><code>le_iff_simplex_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L350"><code>le_iff_simplex_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
@@ -1109,7 +1107,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
       </p>
       
     </div>
@@ -1118,22 +1116,22 @@
 
   <div class="lemma_thmcontent thm-content body">
     <h1>Pointwise Bounds Are Simplex Bounds</h1>
-<p>For a finite index <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a>, strictly ordered field <code>𝕜</code>, value <code>v ∈ 𝕜</code>, and
+<p>For a finite index <code>I</code>, strictly ordered field <code>𝕜</code>, value <code>v ∈ 𝕜</code>, and
 function <code>f : I → 𝕜</code>,
 $$
   (\forall i,\; v \le f(i)) \;\Longleftrightarrow\;
   (\forall x \in \operatorname{stdSimplex} \mathbb{K}\, I,\; v \le \operatorname{wsum} x\, f).
 $$</p>
-<p>The symmetric <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L350"><code>le_iff_simplex_le</code></a> gives the analogous statement for upper
+<p>The symmetric <code>le_iff_simplex_le</code> gives the analogous statement for upper
 bounds. Both directions are short:</p>
 <ul>
-<li>pointwise $\Rightarrow$ simplex uses <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L91"><code>wsum_const</code></a> plus <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L96"><code>wsum_le_wsum</code></a>;</li>
+<li>pointwise $\Rightarrow$ simplex uses <code>wsum_const</code> plus <code>wsum_le_wsum</code>;</li>
 <li>simplex $\Rightarrow$ pointwise specializes to the point-mass simplex
-  element <code>stdSimplex.pure i</code> and applies <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L319"><code>wsum_pure_apply</code></a>.</li>
+  element <code>stdSimplex.pure i</code> and applies <code>wsum_pure_apply</code>.</li>
 </ul>
 <p>These bridges are the workhorses of Loomis-style minimax arguments: they
 reduce a quantification over the entire mixed-strategy simplex to a
-quantification over pure strategies, where finiteness of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> makes the
+quantification over pure strategies, where finiteness of <code>I</code> makes the
 remaining argument elementary.</p>
 <h2>References</h2>
 <ul>

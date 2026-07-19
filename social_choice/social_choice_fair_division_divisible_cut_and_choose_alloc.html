@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L71"><code>SocialChoice.FairDivision.Divisible.cutAndChooseAlloc</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L71"><code>SocialChoice.FairDivision.Divisible.cutAndChooseAlloc</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
           </span>
           
           
@@ -1092,23 +1090,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L86"><code>SocialChoice.FairDivision.Divisible.IsFairCutPoint</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L86"><code>SocialChoice.FairDivision.Divisible.IsFairCutPoint</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsFairCutPoint (μ : Fin 2 → Measure I) (t : I) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsFairCutPoint (μ : Fin 2 → Measure I) (t : I) : Prop :=
+  μ 0 (Iic t) = μ 0 (Ioi t)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>
       </p>
       
     </div>
@@ -1128,7 +1127,7 @@ $t \in I$. The output is the function <code>cutAndChooseAlloc μ t : Allocation
 <li>otherwise the chooser takes $R$, the cutter takes $L$.</li>
 </ul>
 <p>In Lean: <code>cutAndChooseAlloc μ t</code>. The <code>@[simp]</code> lemmas
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L94"><code>cutAndChooseAlloc_zero</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L99"><code>cutAndChooseAlloc_one</code></a> unfold the assignment
+<code>cutAndChooseAlloc_zero</code> and <code>cutAndChooseAlloc_one</code> unfold the assignment
 for the cutter (agent 0) and the chooser (agent 1) respectively.</p>
 <h2>Fair cut point</h2>
 <p>The cut point $t$ is <em>fair for the cutter</em> if agent 0's measure splits the
@@ -1139,9 +1138,9 @@ $$</p>
 <p>In Lean: <code>IsFairCutPoint μ t</code>.</p>
 <p>A fair cut point always exists for finite non-atomic $\mu_0$ — this is the
 shared unit-interval IVT lemma
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_exists.html">IVT — Cut Point Exists for Non-Atomic Measures on [0,1]</a>) specialised at
+([[social_choice.fair_division.divisible.cut_exists]]) specialised at
 $c = \mu_0(I)/2$, giving
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.fair_cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_fair_cut_exists.html">Fair Cut Point Exists</a>.</p>
+[[social_choice.fair_division.divisible.fair_cut_exists]].</p>
 <h2>References</h2>
 <ul>
 <li>Steinhaus, H. (1948). "The Problem of Fair Division". <em>Econometrica</em>.</li>

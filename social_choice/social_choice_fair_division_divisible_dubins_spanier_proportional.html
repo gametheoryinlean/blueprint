@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier
           </span>
           
           
@@ -1094,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.DubinsSpanier</code></a>
       </p>
       
     </div>
@@ -1111,20 +1109,20 @@ proportional in the measure sense:
 $$
 \forall i \in \mathrm{Fin}\ n,\ \mu_i(I) \;\le\; n \cdot \mu_i(A(i)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/DubinsSpanier.lean#L423"><code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code></a>.</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Divisible.dubinsSpanierProportional</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
-        <p>By the moving-knife induction (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ds_step" href="fair_division/divisible/social_choice_fair_division_divisible_ds_step.html">Dubins–Spanier Inductive Step</a>),
+        <p>By the moving-knife induction ([[social_choice.fair_division.divisible.ds_step]]),
 using the IVT-on-measures cut lemma
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_exists.html">IVT — Cut Point Exists for Non-Atomic Measures on [0,1]</a>) at each level.</p>
+([[social_choice.fair_division.divisible.cut_exists]]) at each level.</p>
 <h2>Significance</h2>
 <p>Two parts:</p>
 <ol>
 <li>
 <p><strong>Existence with explicit algorithm.</strong> Unlike Stromquist's EF existence
-   (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html">Envy-Free Existence (Stromquist, n Agents)</a>) — which uses a
+   ([[social_choice.fair_division.divisible.ef_exists]]) — which uses a
    KKM compactness argument — Dubins–Spanier's proportional existence is
    <em>constructive</em>: the algorithm can be unfolded to produce the
    allocation step by step.</p>
@@ -1136,7 +1134,7 @@ using the IVT-on-measures cut lemma
 </li>
 </ol>
 <p>The bundled-instance wrapper is
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.dubins_spanier_rule" href="fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_rule.html">Dubins–Spanier as a Rule on Measure Instances</a>.</p>
+[[social_choice.fair_division.divisible.dubins_spanier_rule]].</p>
 <h2>References</h2>
 <ul>
 <li>Dubins, L. E. and Spanier, E. H. (1961). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 68: 1–17.</li>

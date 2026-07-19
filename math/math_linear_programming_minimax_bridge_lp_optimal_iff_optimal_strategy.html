@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1074,21 +1072,21 @@
     <h1>LP Optimum ↔ Game-Theoretic Optimal Strategy</h1>
 <p><strong>Theorem.</strong> Let $A : I \times J \to \mathbb{R}$ be a finite matrix
 game with value $\operatorname{val}(A) \in \mathbb{R}$
-(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.value" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_value.html">Value Of A Zero-Sum Game</a>).</p>
+([[game_theory.strategic_game.zero_sum.core.value]]).</p>
 <ol>
 <li>
 <p>The pair $(x^*, v^*)$ is optimal for player 1's LP
-   (<a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.player_1_lp" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_player_1_lp.html">Player-1 LP Formulation of a Matrix Game</a>) <strong>if and only if</strong> $x^*$ is a maxmin
+   ([[math.linear_programming.minimax_bridge.player_1_lp]]) <strong>if and only if</strong> $x^*$ is a maxmin
    (optimal) mixed strategy for player 1 and $v^* = \operatorname{val}(A)$.</p>
 </li>
 <li>
 <p>The pair $(y^*, w^*)$ is optimal for player 2's LP
-   (<a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.player_2_lp" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_player_2_lp.html">Player-2 LP Formulation of a Matrix Game</a>) <strong>if and only if</strong> $y^*$ is a minmax
+   ([[math.linear_programming.minimax_bridge.player_2_lp]]) <strong>if and only if</strong> $y^*$ is a minmax
    (optimal) mixed strategy for player 2 and $w^* = \operatorname{val}(A)$.</p>
 </li>
 <li>
 <p>Any pair $(x^*, y^*)$ obtained from LP optima is a saddle point of
-   $A$ (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.saddle_point" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_saddle_point.html">Saddle Point</a>); conversely every saddle point
+   $A$ ([[game_theory.strategic_game.zero_sum.core.saddle_point]]); conversely every saddle point
    gives optimal LP solutions.</p>
 </li>
 </ol>
@@ -1101,8 +1099,8 @@ optimal for player 1's LP, then by the constraint
 $xA \ge v^* \cdot \mathbf{1}_J$ at $(x^*, v^*)$, player 1's mixed
 strategy $x^*$ guarantees at least $v^*$ against every pure column,
 hence against every mixed column. By LP-duality with
-<a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.player_2_lp" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_player_2_lp.html">Player-2 LP Formulation of a Matrix Game</a> and
-<a class="node-ref" data-node-id="math.linear_programming.strong_duality" href="linear_programming/math_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>, $v^* = w^*$ equals the LP
+[[math.linear_programming.minimax_bridge.player_2_lp]] and
+[[math.linear_programming.strong_duality]], $v^* = w^*$ equals the LP
 common value, which is also $\operatorname{val}(A)$ by the standard
 maxmin-minmax characterisation.</p>
 <p><strong>(⇐)</strong> <em>Optimal strategy gives LP optimum.</em> If $x^*$ achieves
@@ -1115,7 +1113,7 @@ optimal $(x^*, y^*)$ jointly satisfy
 $x^* A \ge \operatorname{val}(A) \cdot \mathbf{1}_J$ and
 $A y^* \le \operatorname{val}(A) \cdot \mathbf{1}_I$, which is exactly
 the saddle-point characterisation
-(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.optimal_pairs_are_saddle_points" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_optimal_pairs_are_saddle_points.html">Optimal Pairs Are Exactly Saddle Points</a>).</p>
+([[game_theory.strategic_game.zero_sum.core.optimal_pairs_are_saddle_points]]).</p>
 <h2>Significance</h2>
 <p>This theorem is the <em>clean conversion</em> between the LP and game-theoretic
 viewpoints:</p>
@@ -1126,10 +1124,10 @@ viewpoints:</p>
   complexity.</li>
 <li><strong>Mathematically</strong>, it says LP-duality and the minimax theorem are
   equivalent statements
-  (<a class="node-ref" data-node-id="math.minimax.lp_duality_minimax_proof" href="minimax/math_minimax_lp_duality_minimax_proof.html">LP Duality Proof Of Minimax</a>).</li>
+  ([[math.minimax.lp_duality_minimax_proof]]).</li>
 <li><strong>Structurally</strong>, support and strong-complementarity properties
-  (<span class="node-ref unresolved" data-node-id="math.minimax.support_complementarity">math.minimax.support_complementarity</span>,
-  <a class="node-ref" data-node-id="math.minimax.strong_complementarity" href="minimax/math_minimax_strong_complementarity.html">Strong Complementarity</a>) transfer cleanly
+  ([[math.minimax.support_complementarity]],
+  [[math.minimax.strong_complementarity]]) transfer cleanly
   between the two pictures.</li>
 </ul>
 <h2>References</h2>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L233"><code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L233"><code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
@@ -1098,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
       </p>
       
     </div>
@@ -1109,10 +1107,10 @@
     <h1>EFX Existence — Two Agents, Any Finite Good Set</h1>
 <p><strong>Theorem.</strong> For any two agents and any finite good set $G$, with an
 <em>additive</em> valuation $w : \mathrm{Fin}\ 2 \to G \to \mathbb{R}$
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>) whose
+([[social_choice.fair_division.indivisible.additive_valuation]]) whose
 weights are nonnegative for each agent, there exists an EFX allocation
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx.html">EFX — Envy-Free Up to Any Good</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L233"><code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code></a>.
+([[social_choice.fair_division.indivisible.efx]]).</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.efx_exists_two_agents</code>.
 Hypotheses: <code>[Fintype G]</code>, <code>[DecidableEq G]</code>, <code>AdditiveValuation (Fin 2) G</code>,
 and per-agent nonnegativity (<code>∀ g, 0 ≤ w.weight i g</code> for $i \in \{0, 1\}$).</p>
     
@@ -1125,28 +1123,28 @@ and per-agent nonnegativity (<code>∀ g, 0 ≤ w.weight i g</code> for $i \in \
 <li>
 <p><strong>Enumerate allocations.</strong> Range over $2^{|G|}$ candidate splits of
    <code>allGoods</code> into two bundles via the helper <code>mkAlloc</code>. The feasible
-   set is nonempty (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L159"><code>feasible_nonempty</code></a>).</p>
+   set is nonempty (<code>feasible_nonempty</code>).</p>
 </li>
 <li>
 <p><strong>Pick an optimal split.</strong> Choose a split that maximises agent $0$'s
    value of their own bundle, subject to agent $1$ choosing the larger-
-   for-them side (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L169"><code>optimal_exists</code></a>). Additivity + nonneg weights make
+   for-them side (<code>optimal_exists</code>). Additivity + nonneg weights make
    this maximin choice well-defined on a finite set.</p>
 </li>
 <li>
 <p><strong>EFX verification.</strong> Closed by the two pair-specific lemmas:</p>
 </li>
-<li><em>Agent 0 is EFX</em> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L190"><code>agent0_efx</code></a>): removing any item from agent 1's
+<li><em>Agent 0 is EFX</em> (<code>agent0_efx</code>): removing any item from agent 1's
      bundle, the maximin choice ensures agent 0's value of the
      residual cannot exceed agent 0's own bundle value.</li>
-<li><em>Agent 1 is EFX</em> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L198"><code>agent1_efx</code></a>): they took the better half by
+<li><em>Agent 1 is EFX</em> (<code>agent1_efx</code>): they took the better half by
      construction; removing any item from agent 0's bundle only
      decreases its value (by additivity + nonneg weights), so agent 1
      still prefers their own.</li>
 </ol>
-<p>The Lean proof factors out <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L153"><code>mkAlloc_isAllocation</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L159"><code>feasible_nonempty</code></a>,
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L169"><code>optimal_exists</code></a> for the partition-enumeration argument, then
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L190"><code>agent0_efx</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L198"><code>agent1_efx</code></a> close the two EFX directions
+<p>The Lean proof factors out <code>mkAlloc_isAllocation</code>, <code>feasible_nonempty</code>,
+<code>optimal_exists</code> for the partition-enumeration argument, then
+<code>agent0_efx</code> and <code>agent1_efx</code> close the two EFX directions
 separately.</p>
 <h2>Status of the wider EFX problem</h2>
 <table>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,39 +1073,41 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L78"><code>SocialChoice.FairDivision.SolutionConcept</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Basic.lean#L78"><code>SocialChoice.FairDivision.SolutionConcept</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def SolutionConcept (N R S : Type*)</code></pre>
+          <pre class="lean-signature"><code>def SolutionConcept (N R S : Type*) :=
+  Instance N R S → Allocation N S → Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L82"><code>SocialChoice.FairDivision.Rule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Basic.lean#L82"><code>SocialChoice.FairDivision.Rule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Basic
           </span>
           
           
           <p class="lean-docstring">A fair-division rule returns a feasible allocation for every instance.</p>
-          <pre class="lean-signature"><code>def Rule (N R S : Type*)</code></pre>
+          <pre class="lean-signature"><code>def Rule (N R S : Type*) :=
+  (I : Instance N R S) → {A : Allocation N S // I.feasible A}</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Basic</code></a>
       </p>
       
     </div>
@@ -1132,22 +1132,22 @@
   In Lean: <code>Rule N R S := (I : Instance N R S) → {A : Allocation N S // I.feasible A}</code>.</p>
 </li>
 </ul>
-<p>These are the fair-division analogues of <a class="node-ref" data-node-id="social_choice.solution_concept" href="social_choice_solution_concept.html">Solution Concept, Rule, and Correspondence</a>,
+<p>These are the fair-division analogues of [[social_choice.solution_concept]],
 specialized to the structured alternative space $\mathrm{Allocation}\ N\ S$.</p>
 <p>Concrete examples that hit each shape:</p>
 <ul>
 <li><em>Solution concepts</em>: envy-freeness
-  (<a class="node-ref" data-node-id="social_choice.fair_division.envy_free" href="fair_division/social_choice_fair_division_envy_free.html">Envy-Free Allocation</a>), proportionality
-  (<a class="node-ref" data-node-id="social_choice.fair_division.proportional" href="fair_division/social_choice_fair_division_proportional.html">Proportional Allocation</a>), Pareto optimality
-  (<a class="node-ref" data-node-id="social_choice.fair_division.pareto_optimal" href="fair_division/social_choice_fair_division_pareto_optimal.html">Pareto Optimal Allocation</a>).</li>
+  ([[social_choice.fair_division.envy_free]]), proportionality
+  ([[social_choice.fair_division.proportional]]), Pareto optimality
+  ([[social_choice.fair_division.pareto_optimal]]).</li>
 <li><em>Rules</em>: cut-and-choose
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_and_choose_alloc" href="fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_alloc.html">Cut-and-Choose Allocation and Fair Cut Point</a>),
+  ([[social_choice.fair_division.divisible.cut_and_choose_alloc]]),
   Dubins–Spanier
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.dubins_spanier_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html">Dubins–Spanier Proportional Existence</a>),
+  ([[social_choice.fair_division.divisible.dubins_spanier_proportional]]),
   round-robin
-  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.round_robin_alloc" href="fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_alloc.html">Round-Robin Allocation</a>),
+  ([[social_choice.fair_division.indivisible.round_robin_alloc]]),
   envy-cycle elimination
-  (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_cycle_algorithm" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_cycle_algorithm.html">Envy-Cycle Elimination Algorithm</a>).</li>
+  ([[social_choice.fair_division.indivisible.envy_cycle_algorithm]]).</li>
 </ul>
 <h2>References</h2>
 <ul>

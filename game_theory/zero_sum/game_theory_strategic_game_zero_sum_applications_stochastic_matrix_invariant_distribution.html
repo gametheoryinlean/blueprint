@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L190"><code>EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L190"><code>EconCSLib.StrategicGame.MatrixGame.exists_invariant_distribution</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1096,28 +1094,30 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L39"><code>EconCSLib.StrategicGame.IsStochasticMatrix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L39"><code>EconCSLib.StrategicGame.IsStochasticMatrix</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure IsStochasticMatrix (A : I → I → ℝ) : Prop where</code></pre>
+          <pre class="lean-signature"><code>structure IsStochasticMatrix (A : I → I → ℝ) : Prop where
+  nonneg : ∀ i j, 0 ≤ A i j
+  rowSum : ∀ i, ∑ j, A i j = 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L58"><code>EconCSLib.StrategicGame.uniformDist</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L58"><code>EconCSLib.StrategicGame.uniformDist</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1128,28 +1128,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L78"><code>EconCSLib.StrategicGame.MatrixGame.disp</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L78"><code>EconCSLib.StrategicGame.MatrixGame.disp</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
           
-          <pre class="lean-signature"><code>private def disp (A : I → I → ℝ) : I → I → ℝ</code></pre>
+          <pre class="lean-signature"><code>private def disp (A : I → I → ℝ) : I → I → ℝ :=
+  fun i j =&gt; A i j - (if i = j then 1 else 0)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L49"><code>EconCSLib.StrategicGame.IsStochasticMatrix.total_mass_preserved</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L49"><code>EconCSLib.StrategicGame.IsStochasticMatrix.total_mass_preserved</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1161,12 +1162,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L96"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ei</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L96"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ei</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1179,12 +1180,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L82"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ej</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L82"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ej</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1197,12 +1198,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L113"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ei_uniform</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L113"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ei_uniform</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1214,12 +1215,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L127"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ei_argmin_nonneg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L127"><code>EconCSLib.StrategicGame.MatrixGame.disp_Ei_argmin_nonneg</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1232,12 +1233,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L182"><code>EconCSLib.StrategicGame.MatrixGame.disp_value_eq_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L182"><code>EconCSLib.StrategicGame.MatrixGame.disp_value_eq_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1249,12 +1250,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L168"><code>EconCSLib.StrategicGame.MatrixGame.disp_value_ge_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L168"><code>EconCSLib.StrategicGame.MatrixGame.disp_value_ge_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1266,12 +1267,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L148"><code>EconCSLib.StrategicGame.MatrixGame.disp_value_le_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L148"><code>EconCSLib.StrategicGame.MatrixGame.disp_value_le_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix
           </span>
           
           
@@ -1283,7 +1284,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StochasticMatrix</code></a>
       </p>
       
     </div>
@@ -1360,9 +1361,9 @@ $$</p>
   saddle-point condition for the matrix game with payoff $B$.</li>
 <li>The Lean implementation lives in
   <code>EconCSLib.StrategicGame.StochasticMatrix</code> and consists of:</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L39"><code>IsStochasticMatrix</code></a> — predicate (rows sum to 1, entries ≥ 0).</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L58"><code>uniformDist</code></a> — uniform mixed strategy on a <code>Nonempty</code> <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Fintype/Defs.lean#L57"><code>Fintype</code></a>.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/StochasticMatrix.lean#L190"><code>MatrixGame.exists_invariant_distribution</code></a> — main theorem.</li>
+<li><code>IsStochasticMatrix</code> — predicate (rows sum to 1, entries ≥ 0).</li>
+<li><code>uniformDist</code> — uniform mixed strategy on a <code>Nonempty</code> <code>Fintype</code>.</li>
+<li><code>MatrixGame.exists_invariant_distribution</code> — main theorem.</li>
 </ul>
 <h2>References</h2>
 <ul>

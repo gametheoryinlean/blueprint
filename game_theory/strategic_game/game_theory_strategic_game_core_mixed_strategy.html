@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,152 +1073,164 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L53"><code>StrategicGame.MixedStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L53"><code>StrategicGame.MixedStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev MixedStrategy (G : StrategicGame N U) (i : N) [Fintype (G.strategy i)]</code></pre>
+          <pre class="lean-signature"><code>abbrev MixedStrategy (G : StrategicGame N U) (i : N) [Fintype (G.strategy i)] :=
+  stdSimplex U (G.strategy i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L58"><code>StrategicGame.MixedProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L58"><code>StrategicGame.MixedProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           
-          <pre class="lean-signature"><code>def MixedProfile (G : StrategicGame N U) [∀ i, Fintype (G.strategy i)]</code></pre>
+          <pre class="lean-signature"><code>def MixedProfile (G : StrategicGame N U) [∀ i, Fintype (G.strategy i)] :=
+  ∀ i, MixedStrategy G i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L88"><code>StrategicGame.pureToMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L88"><code>StrategicGame.pureToMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           <p class="lean-docstring">Embed a pure strategy as a mixed strategy (point mass).</p>
           <pre class="lean-signature"><code>def pureToMixed {G : StrategicGame N U}
     {i : N} [Fintype (G.strategy i)] [DecidableEq (G.strategy i)]
-    (s₀ : G.strategy i) : MixedStrategy G i where</code></pre>
+    (s₀ : G.strategy i) : MixedStrategy G i where
+  val s := if s = s₀ then 1 else 0
+  property := ⟨fun s =&gt; by simp only; split_ifs &lt;;&gt; norm_num,
+               by simp [Finset.sum_ite_eq&#39;, Finset.mem_univ]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L66"><code>StrategicGame.IsCompletelyMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L66"><code>StrategicGame.IsCompletelyMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsCompletelyMixed
     (G : StrategicGame N ℚ) {i : N} [Fintype (G.strategy i)]
-    (p : MixedStrategy G i) : Prop</code></pre>
+    (p : MixedStrategy G i) : Prop :=
+  ∀ s : G.strategy i, 0 &lt; p.val s</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L73"><code>StrategicGame.IsCompletelyMixedProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L73"><code>StrategicGame.IsCompletelyMixedProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsCompletelyMixedProfile
     (G : StrategicGame N ℚ) [∀ i, Fintype (G.strategy i)]
-    (p : MixedProfile G) : Prop</code></pre>
+    (p : MixedProfile G) : Prop :=
+  ∀ i : N, IsCompletelyMixed G (p i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L96"><code>StrategicGame.uniformMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L96"><code>StrategicGame.uniformMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           <p class="lean-docstring">The uniform mixed strategy over a finite nonempty strategy set.</p>
           <pre class="lean-signature"><code>def uniformMixed {G : StrategicGame N U}
     {i : N} [Fintype (G.strategy i)] [Nonempty (G.strategy i)] :
-    MixedStrategy G i where</code></pre>
+    MixedStrategy G i where
+  val _ := 1 / Fintype.card (G.strategy i)
+  property := ⟨fun _ =&gt; by positivity,
+               by simp [Finset.sum_const, Finset.card_univ]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L127"><code>StrategicGame.uniformMixedProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L127"><code>StrategicGame.uniformMixedProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           <p class="lean-docstring">The profile where every player uses the uniform mixed strategy.</p>
           <pre class="lean-signature"><code>def uniformMixedProfile
     (G : StrategicGame N ℚ) [∀ i, Fintype (G.strategy i)]
-    [∀ i, Nonempty (G.strategy i)] : MixedProfile G</code></pre>
+    [∀ i, Nonempty (G.strategy i)] : MixedProfile G :=
+  fun i =&gt; uniformMixed (G := G) (i := i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L151"><code>StrategicGame.pureProfileToMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L151"><code>StrategicGame.pureProfileToMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           <p class="lean-docstring">Embed a pure profile as a mixed profile.</p>
           <pre class="lean-signature"><code>def pureProfileToMixed {G : StrategicGame N U}
     [∀ i, Fintype (G.strategy i)] [∀ i, DecidableEq (G.strategy i)]
-    (σ : G.Profile) : MixedProfile G</code></pre>
+    (σ : G.Profile) : MixedProfile G :=
+  fun i =&gt; pureToMixed (σ i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L171"><code>StrategicGame.deviateMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L171"><code>StrategicGame.deviateMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
@@ -1228,18 +1238,19 @@
           <pre class="lean-signature"><code>def deviateMixed
     (G : StrategicGame N U)
     [∀ i, Fintype (G.strategy i)] [DecidableEq N] [∀ i, DecidableEq (G.strategy i)]
-    (p : MixedProfile G) (who : N) (s&#39; : G.strategy who) : MixedProfile G</code></pre>
+    (p : MixedProfile G) (who : N) (s&#39; : G.strategy who) : MixedProfile G :=
+  Function.update p who (pureToMixed s&#39;)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L79"><code>StrategicGame.IsCompletelyMixedProfile.player</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L79"><code>StrategicGame.IsCompletelyMixedProfile.player</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
@@ -1253,12 +1264,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L142"><code>StrategicGame.pureToMixed_not_isCompletelyMixed_of_ne</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L142"><code>StrategicGame.pureToMixed_not_isCompletelyMixed_of_ne</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
@@ -1266,18 +1277,18 @@
           <pre class="lean-signature"><code>theorem pureToMixed_not_isCompletelyMixed_of_ne {G : StrategicGame N ℚ}
     {i : N} [Fintype (G.strategy i)] [DecidableEq (G.strategy i)]
     {s₀ s₁ : G.strategy i} (h : s₁ ≠ s₀) :
-    ¬ IsCompletelyMixed G (pureToMixed (G</code></pre>
+    ¬ IsCompletelyMixed G (pureToMixed (G := G) (i := i) s₀)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L133"><code>StrategicGame.uniformMixedProfile_isCompletelyMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L133"><code>StrategicGame.uniformMixedProfile_isCompletelyMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
@@ -1291,12 +1302,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L104"><code>StrategicGame.uniformMixed_apply</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L104"><code>StrategicGame.uniformMixed_apply</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
@@ -1304,36 +1315,36 @@
           <pre class="lean-signature"><code>theorem uniformMixed_apply {G : StrategicGame N ℚ}
     {i : N} [Fintype (G.strategy i)] [Nonempty (G.strategy i)]
     (s : G.strategy i) :
-    (uniformMixed (G</code></pre>
+    (uniformMixed (G := G) (i := i)).val s = 1 / Fintype.card (G.strategy i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L120"><code>StrategicGame.uniformMixed_isCompletelyMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L120"><code>StrategicGame.uniformMixed_isCompletelyMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
           
           <pre class="lean-signature"><code>theorem uniformMixed_isCompletelyMixed {G : StrategicGame N ℚ}
     {i : N} [Fintype (G.strategy i)] [Nonempty (G.strategy i)] :
-    IsCompletelyMixed G (uniformMixed (G</code></pre>
+    IsCompletelyMixed G (uniformMixed (G := G) (i := i))</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L111"><code>StrategicGame.uniformMixed_pos</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L111"><code>StrategicGame.uniformMixed_pos</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.MixedStrategy
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.MixedStrategy
           </span>
           
           
@@ -1341,13 +1352,13 @@
           <pre class="lean-signature"><code>theorem uniformMixed_pos {G : StrategicGame N ℚ}
     {i : N} [Fintype (G.strategy i)] [Nonempty (G.strategy i)]
     (s : G.strategy i) :
-    0 &lt; (uniformMixed (G</code></pre>
+    0 &lt; (uniformMixed (G := G) (i := i)).val s</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.MixedStrategy</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/MixedStrategy.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.MixedStrategy</code></a>
       </p>
       
     </div>

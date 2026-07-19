@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,26 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L62"><code>CoalitionalGame.IsBalanced</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L62"><code>CoalitionalGame.IsBalanced</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.CoalitionalGame.Core
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.CoalitionalGame.Core
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsBalanced (𝒟 : Finset (Finset N)) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsBalanced (𝒟 : Finset (Finset N)) : Prop :=
+  ∃ δ : Finset N → ℝ,
+    (∀ S ∈ 𝒟, δ S &gt; 0) ∧
+    ∀ i : N, ∑ S ∈ 𝒟.filter (i ∈ ·), δ S = 1</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.Core</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/CoalitionalGame/Core.lean#L1"><code>EconCSLib.GameTheory.CoalitionalGame.Core</code></a>
       </p>
       
     </div>
@@ -1110,7 +1111,7 @@ $$</p>
 <p>The condition says that the weighted incidence vectors of the coalitions in
 $\mathcal{D}$ add up to the incidence vector of the grand coalition.</p>
 <p>Balanced collections are the combinatorial input to the
-Bondareva-Shapley theorem (<a class="node-ref" data-node-id="game_theory.cooperative_game.bondareva_shapley" href="game_theory_cooperative_game_bondareva_shapley.html">Bondareva-Shapley Theorem</a>).</p>
+Bondareva-Shapley theorem ([[game_theory.cooperative_game.bondareva_shapley]]).</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ Ch.17, Def 17.11] Maschler, Solan, Zamir, <em>Game Theory</em>.</li>

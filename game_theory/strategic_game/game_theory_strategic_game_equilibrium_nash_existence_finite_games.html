@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Nash.lean#L291"><code>StrategicGame.exists_mixed_nash_equilibrium_finite</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Nash.lean#L291"><code>StrategicGame.exists_mixed_nash_equilibrium_finite</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.Nash
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.Nash
           </span>
           
           
@@ -1097,7 +1095,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Nash.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Nash</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/Nash.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.Nash</code></a>
       </p>
       
     </div>
@@ -1130,7 +1128,7 @@ Each $c^i_{s^i}$ is continuous (expected payoffs are multilinear and $(\cdot)^+$
 is continuous) and the denominator is $\ge 1$, so $f$ is continuous; its $i$-th
 block is nonnegative and sums to $1$, hence $f(\sigma)\in\Delta$. As $\Delta$ is
 nonempty, compact and convex, <strong>Brouwer's fixed-point theorem</strong>
-(<a class="node-ref" data-node-id="math.fixed_point.brouwer_compact_convex" href="../../math/fixed_point/math_fixed_point_brouwer_compact_convex.html">Brouwer Fixed Point Theorem</a>) yields a $\sigma$ with
+([[math.fixed_point.brouwer_compact_convex]]) yields a $\sigma$ with
 $f(\sigma)=\sigma$.</p>
 <p>Such a fixed point is a Nash equilibrium. Fix $i$. If
 $\sum_{t^i}c^i_{t^i}(\sigma)=0$, every gain vanishes, so
@@ -1145,12 +1143,12 @@ $$
 and as the denominator exceeds $1$ this forces $\sigma^i(s^i)=0$, contradicting
 $\sigma^i(s^i)&gt;0$. Hence no player has a profitable pure deviation, so $\sigma$
 is a mixed Nash equilibrium
-(<a class="node-ref" data-node-id="game_theory.strategic_game.equilibrium.mixed_nash_equilibrium" href="equilibrium/game_theory_strategic_game_equilibrium_mixed_nash_equilibrium.html">Mixed Nash Equilibrium</a>). Conversely,
+([[game_theory.strategic_game.equilibrium.mixed_nash_equilibrium]]). Conversely,
 every mixed equilibrium is a fixed point of $f$, since all gains vanish.
 $\qquad\blacksquare$</p>
 <h2>Formalization</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/Nash.lean#L291"><code>StrategicGame.exists_mixed_nash_equilibrium_finite</code></a> formalizes this argument.
-The Brouwer step is discharged by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/FixedPoint/Brouwer_product.lean#L703"><code>Brouwer_Product</code></a> (a product-of-simplices form
+<p><code>StrategicGame.exists_mixed_nash_equilibrium_finite</code> formalizes this argument.
+The Brouwer step is discharged by <code>Brouwer_Product</code> (a product-of-simplices form
 of Brouwer), itself reduced to Brouwer on the simplex via <strong>Scarf's combinatorial
 lemma</strong> (<code>EconCSLib.Math.FixedPoint.Brouwer</code>, <code>EconCSLib.Math.FixedPoint.Scarf</code>),
 ported from the <a href="https://github.com/math-xmum/Brouwer">math-xmum/Brouwer</a>

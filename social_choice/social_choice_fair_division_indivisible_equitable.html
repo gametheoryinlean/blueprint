@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,23 +1077,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L149"><code>SocialChoice.FairDivision.Indivisible.IsEquitable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L149"><code>SocialChoice.FairDivision.Indivisible.IsEquitable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev IsEquitable (v : Valuation N G) (A : Allocation N G) : Prop</code></pre>
+          <pre class="lean-signature"><code>abbrev IsEquitable (v : Valuation N G) (A : Allocation N G) : Prop :=
+  SocialChoice.FairDivision.IsEquitable v.val A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
       </p>
       
     </div>
@@ -1104,14 +1103,14 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Indivisible Equitable</h1>
-<p>For a valuation $v$ (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a>)
+<p>For a valuation $v$ ([[social_choice.fair_division.indivisible.valuation]])
 and an allocation $A$, $A$ is <em>equitable</em> (EQ) if every agent assigns
 the same numeric value to their own bundle:
 $$
 \forall i, j \in N,\ v_i(A(i)) = v_j(A(j)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L149"><code>SocialChoice.FairDivision.Indivisible.IsEquitable</code></a> — an
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/AffineMonoid/Basic.lean#L25"><code>abbrev</code></a> for the generic <a class="node-ref" data-node-id="social_choice.fair_division.equitable" href="fair_division/social_choice_fair_division_equitable.html">Equitable Allocation</a>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsEquitable</code> — an
+<code>abbrev</code> for the generic [[social_choice.fair_division.equitable]]
 specialised at <code>v.val</code>.</p>
 <p>EQ is meaningful only when valuations are <em>interpersonally comparable</em>,
 typically when each $v_i$ is normalised so the whole good set has the
@@ -1119,7 +1118,7 @@ same total (often $1$). Without normalisation, equating
 "$v_i(A(i)) = v_j(A(j))$" mixes agents' value scales.</p>
 <h2>Relation to EF</h2>
 <p>EQ is <em>incomparable</em> with EF
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_free" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_free.html">Indivisible Envy-Free</a>):</p>
+([[social_choice.fair_division.indivisible.envy_free]]):</p>
 <ul>
 <li><em>EF does not imply EQ.</em> Two agents may both be envy-free yet derive
   very different self-utilities — e.g. agent 0 gets a good worth 10 to

@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,24 +1073,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L392"><code>expectedPayoffMatrix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L392"><code>expectedPayoffMatrix</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
           <p class="lean-docstring">Expected payoff in a matrix game `A : I → J → 𝕜` under mixed strategies.</p>
           <pre class="lean-signature"><code>def expectedPayoffMatrix (A : I → J → 𝕜) [Fintype J]
-    (x : stdSimplex 𝕜 I) (y : stdSimplex 𝕜 J) : 𝕜</code></pre>
+    (x : stdSimplex 𝕜 I) (y : stdSimplex 𝕜 J) : 𝕜 :=
+  x ⬝ᵥ fun i =&gt; y ⬝ᵥ A i</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
       </p>
       
     </div>

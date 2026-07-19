@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L120"><code>SocialChoice.FairDivision.Divisible.proportional_exists</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L120"><code>SocialChoice.FairDivision.Divisible.proportional_exists</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1098,7 +1096,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1114,7 +1112,7 @@ $A$ that is proportional in the measure sense:
 $$
 \forall i \in \mathrm{Fin}\ n,\ \mu_i(I) \;\le\; n \cdot \mu_i(A(i)).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L120"><code>SocialChoice.FairDivision.Divisible.proportional_exists</code></a>,
+<p>In Lean: <code>SocialChoice.FairDivision.Divisible.proportional_exists</code>,
 declared at the top of <code>Existence.lean</code> so the file's main objective
 (EF existence) does not pull in Dubins–Spanier directly.</p>
     
@@ -1122,16 +1120,16 @@ declared at the top of <code>Existence.lean</code> so the file's main objective
       <summary>Proof</summary>
       <div class="proof-body">
         <p>A direct delegation to the Dubins–Spanier moving-knife construction
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.dubins_spanier_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html">Dubins–Spanier Proportional Existence</a>).</p>
+([[social_choice.fair_division.divisible.dubins_spanier_proportional]]).</p>
 <h2>Where this sits</h2>
-<p>In the Stromquist program (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html">Envy-Free Existence (Stromquist, n Agents)</a>),
+<p>In the Stromquist program ([[social_choice.fair_division.divisible.ef_exists]]),
 proportionality is the <em>easier</em> sister result. EF existence sits a layer
 above it and uses a fundamentally different (KKM / shifted-cell)
 argument. The two are combined in
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_exists_and_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_ef_exists_and_proportional.html">EF + Proportional Existence (Stromquist Corollary)</a>,
+[[social_choice.fair_division.divisible.ef_exists_and_proportional]],
 which observes that the EF allocation produced by Stromquist is in
 particular proportional (via <code>IsEnvyFree.isProportional</code> on measure
-valuations, <a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_implies_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_ef_implies_proportional.html">EF ⇒ Proportional (Measure Valuations)</a>).</p>
+valuations, [[social_choice.fair_division.divisible.ef_implies_proportional]]).</p>
 <h2>References</h2>
 <ul>
 <li>Dubins, L. E. and Spanier, E. H. (1961). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 68: 1–17.</li>

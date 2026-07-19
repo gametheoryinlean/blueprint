@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,28 +1075,35 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/PrisonersDilemma.lean#L60"><code>PrisonersDilemma.PD</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/PrisonersDilemma.lean#L60"><code>PrisonersDilemma.PD</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.PrisonersDilemma
+            EconCSLib @ ad4ebea, EconCSLib.Examples.PrisonersDilemma
           </span>
           
           
           <p class="lean-docstring">The Prisoner&#39;s Dilemma as a strategic game with natural number payoffs.</p>
-          <pre class="lean-signature"><code>def PD : StrategicGame (Fin 2) ℕ where</code></pre>
+          <pre class="lean-signature"><code>def PD : StrategicGame (Fin 2) ℕ where
+  strategy := fun _ =&gt; PDMove
+  payoff σ i :=
+    match σ 0, σ 1 with
+    | Cooperate, Cooperate =&gt; 3
+    | Cooperate, Defect    =&gt; if i = 0 then 0 else 5
+    | Defect,    Cooperate =&gt; if i = 0 then 5 else 0
+    | Defect,    Defect    =&gt; 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/PrisonersDilemma.lean#L71"><code>PrisonersDilemma.pd_defect_weakly_dominant</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/PrisonersDilemma.lean#L71"><code>PrisonersDilemma.pd_defect_weakly_dominant</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.PrisonersDilemma
+            EconCSLib @ ad4ebea, EconCSLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -1109,12 +1114,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/PrisonersDilemma.lean#L77"><code>PrisonersDilemma.pd_defect_nash</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/PrisonersDilemma.lean#L77"><code>PrisonersDilemma.pd_defect_nash</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.PrisonersDilemma
+            EconCSLib @ ad4ebea, EconCSLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -1125,12 +1130,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/PrisonersDilemma.lean#L81"><code>PrisonersDilemma.pd_nash_unique</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/PrisonersDilemma.lean#L81"><code>PrisonersDilemma.pd_nash_unique</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.PrisonersDilemma
+            EconCSLib @ ad4ebea, EconCSLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -1142,12 +1147,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/PrisonersDilemma.lean#L89"><code>PrisonersDilemma.pd_pareto_suboptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/PrisonersDilemma.lean#L89"><code>PrisonersDilemma.pd_pareto_suboptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.PrisonersDilemma
+            EconCSLib @ ad4ebea, EconCSLib.Examples.PrisonersDilemma
           </span>
           
           
@@ -1159,7 +1164,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/PrisonersDilemma.lean#L1"><code>EconCSLib.Examples.PrisonersDilemma</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/PrisonersDilemma.lean#L1"><code>EconCSLib.Examples.PrisonersDilemma</code></a>
       </p>
       
     </div>

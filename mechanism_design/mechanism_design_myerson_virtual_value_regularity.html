@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,60 +1073,64 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L72"><code>BayesianSingleItemAuction.virtualValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L72"><code>BayesianSingleItemAuction.virtualValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Myerson virtual value `v - (1 - F_i(v)) / f_i(v)` for bidder `i`.</p>
-          <pre class="lean-signature"><code>noncomputable def virtualValue (A : BayesianSingleItemAuction I) (i : I) (v : ℝ) : ℝ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def virtualValue (A : BayesianSingleItemAuction I) (i : I) (v : ℝ) : ℝ :=
+  v - (1 - (A.typeData.cdf i).cdf v) / A.typeDensity i v</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L76"><code>BayesianSingleItemAuction.IsRegular</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L76"><code>BayesianSingleItemAuction.IsRegular</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">Regularity: every bidder&#39;s virtual value is monotone.</p>
-          <pre class="lean-signature"><code>def IsRegular (A : BayesianSingleItemAuction I) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsRegular (A : BayesianSingleItemAuction I) : Prop :=
+  ∀ i : I, Monotone (A.virtualValue i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L87"><code>BayesianSingleItemAuction.IsReserveThreshold</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L87"><code>BayesianSingleItemAuction.IsReserveThreshold</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
           <p class="lean-docstring">A reserve threshold separating nonpositive and nonnegative virtual values.</p>
-          <pre class="lean-signature"><code>def IsReserveThreshold (A : BayesianSingleItemAuction I) (i : I) (reserve : ℝ) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsReserveThreshold (A : BayesianSingleItemAuction I) (i : I) (reserve : ℝ) : Prop :=
+  (∀ v, v &lt; reserve → A.virtualValue i v ≤ 0) ∧
+    ∀ v, reserve ≤ v → 0 ≤ A.virtualValue i v</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L81"><code>BayesianSingleItemAuction.measurable_virtualValue_of_isRegular</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L81"><code>BayesianSingleItemAuction.measurable_virtualValue_of_isRegular</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1141,12 +1143,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L106"><code>BayesianSingleItemAuction.isReserveThreshold_of_isRegular_of_virtualValue_eq_zero</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L106"><code>BayesianSingleItemAuction.isReserveThreshold_of_isRegular_of_virtualValue_eq_zero</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.OptimalSingleItem
           </span>
           
           
@@ -1160,7 +1162,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/OptimalSingleItem.lean#L1"><code>EconCSLib.MechanismDesign.Auction.OptimalSingleItem</code></a>
       </p>
       
     </div>
@@ -1170,7 +1172,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Virtual Values and Regularity</h1>
 <p>For a Bayesian single-item auction
-(<a class="node-ref" data-node-id="mechanism_design.auction.bayesian.single_item_framework" href="auction/bayesian/mechanism_design_auction_bayesian_single_item_framework.html">Bayesian Single-Item Auction Framework</a>), the Myerson
+([[mechanism_design.auction.bayesian.single_item_framework]]), the Myerson
 virtual value of bidder \(i\) at type \(v\) is
 \[
 \psi_i(v) = v - \frac{1 - F_i(v)}{f_i(v)}.
@@ -1182,14 +1184,14 @@ the density <code>A.typeDensity i</code>.</p>
 Regularity is the condition that makes the virtual-surplus-maximizing
 allocation rule monotone in each bidder's own report, which is the bridge to
 DSIC via the Myerson monotonicity characterization
-(<a class="node-ref" data-node-id="mechanism_design.myerson.monotonicity_characterization" href="myerson/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a>).</p>
+([[mechanism_design.myerson.monotonicity_characterization]]).</p>
 <h2>Reserve thresholds</h2>
 <p><code>IsReserveThreshold A i rho</code> records that <code>rho</code> separates nonpositive and
 nonnegative virtual values for bidder \(i\).  If the virtual value is regular
 and \(\psi_i(\rho)=0\), then <code>rho</code> is a reserve threshold.  These threshold
 lemmas are used to interpret the optimal allocation rule as selling only above
 reserve values, and support the reserve-price node
-<a class="node-ref" data-node-id="mechanism_design.myerson.reserve_price" href="myerson/mechanism_design_myerson_reserve_price.html">Myerson Reserve-Price Characterisation</a>.</p>
+[[mechanism_design.myerson.reserve_price]].</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 12, Section 12.10] Maschler, Solan, and Zamir, <em>Game Theory</em>.</li>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L344"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isAlphaMMS_additive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L344"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isAlphaMMS_additive</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.MMS
           </span>
           
           
@@ -1103,7 +1101,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.MMS</code></a>
       </p>
       
     </div>
@@ -1113,21 +1111,21 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>PROP ⇒ α-MMS (Additive Valuations)</h1>
 <p><strong>Theorem.</strong> For an additive valuation
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>) with
+([[social_choice.fair_division.indivisible.additive_valuation]]) with
 nonnegative weights, every proportional allocation
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional.html">Indivisible Proportional</a>) is
+([[social_choice.fair_division.indivisible.proportional]]) is
 <em>1-MMS</em> — i.e. it satisfies the α-MMS guarantee
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.is_alpha_mms" href="fair_division/indivisible/social_choice_fair_division_indivisible_is_alpha_mms.html">α-MMS Allocation</a>) at the
+([[social_choice.fair_division.indivisible.is_alpha_mms]]) at the
 maximum α.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L344"><code>SocialChoice.FairDivision.Indivisible.IsProportional.isAlphaMMS_additive</code></a>.</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsProportional.isAlphaMMS_additive</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
       <div class="proof-body">
         <p>The MMS value is bounded above by the proportional share
 $v_i(\mathrm{allGoods}) / n$ in the additive case
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.mms_value_bounds" href="fair_division/indivisible/social_choice_fair_division_indivisible_mms_value_bounds.html">MMS Value — Basic Bounds</a>'s
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/MMS.lean#L198"><code>mmsValue_le_proportional_share_additive</code></a>):
+([[social_choice.fair_division.indivisible.mms_value_bounds]]'s
+<code>mmsValue_le_proportional_share_additive</code>):
 $$
 n \cdot \mathrm{MMS}_i \le v_i(\mathrm{allGoods}).
 $$</p>
@@ -1141,9 +1139,9 @@ trick) gives $\mathrm{MMS}_i \le v_i(A(i))$, which is the 1-MMS
 condition.</p>
 <h2>Relation to the exact-MMS implication</h2>
 <p>The exact <code>IsMaxminShare</code> implication
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.proportional_implies_mms_additive" href="fair_division/indivisible/social_choice_fair_division_indivisible_proportional_implies_mms_additive.html">PROP ⇒ MMS (Additive Valuations, Complete Allocations)</a>)
+([[social_choice.fair_division.indivisible.proportional_implies_mms_additive]])
 is the equivalent statement in the alternative formulation; the two
-agree by <a class="node-ref" data-node-id="social_choice.fair_division.indivisible.mms_iff_alpha_one" href="fair_division/indivisible/social_choice_fair_division_indivisible_mms_iff_alpha_one.html">IsMaxminShare ↔ IsAlphaMMS 1</a>.</p>
+agree by [[social_choice.fair_division.indivisible.mms_iff_alpha_one]].</p>
 <h2>Significance</h2>
 <p>This closes the implication chain for additive valuations:
 $$

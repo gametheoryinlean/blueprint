@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1074,7 +1072,7 @@
     <h1>Revenue Equivalence Theorem</h1>
 <p><strong>Theorem (Myerson 1981; MSZ Thm 12.21).</strong> Let $M$ and $M'$ be two
 Bayesian Incentive Compatible (BIC) selling mechanisms over the same
-IPV selling problem (<a class="node-ref" data-node-id="mechanism_design.bayesian.selling_problem" href="bayesian/mechanism_design_bayesian_selling_problem.html">Bayesian Selling Problem (IPV)</a>).
+IPV selling problem ([[mechanism_design.bayesian.selling_problem]]).
 If</p>
 <ol>
 <li>
@@ -1099,7 +1097,7 @@ If</p>
         <p>route</p>
 <p>Expected revenue is the negative of total expected bidder surplus
 (seller's payment intake equals bidders' payment outflow). By the
-Myerson payment formula (<a class="node-ref" data-node-id="mechanism_design.myerson.payment_formula" href="myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>),
+Myerson payment formula ([[mechanism_design.myerson.payment_formula]]),
 each BIC mechanism's expected payment from bidder $i$ at type $t_i$ is
 determined entirely by:</p>
 <ul>
@@ -1117,7 +1115,7 @@ rule and the lowest-type boundary affect revenue</strong> under BIC + IPV.
 This dramatically simplifies optimal-auction design: maximising revenue
 reduces to maximising over interim allocation rules, leading directly to
 the virtual-valuation framework
-(<a class="node-ref" data-node-id="mechanism_design.myerson.optimal_auction" href="myerson/mechanism_design_myerson_optimal_auction.html">Regular Myerson Optimal Single-Item Auction</a>).</p>
+([[mechanism_design.myerson.optimal_auction]]).</p>
 <h2>Lean port (deferred — see #174)</h2>
 <p>Planned declarations in <code>EconCSLib/MechanismDesign/Auction/Myerson.lean</code>:</p>
 <ul>
@@ -1126,7 +1124,7 @@ the virtual-valuation framework
 <li>Supporting integration lemmas for the BIC payment formula.</li>
 </ul>
 <p>Dependencies on yet-to-formalise pieces: <code>BayesianSellingProblem</code>
-(<a class="node-ref" data-node-id="mechanism_design.bayesian.selling_problem" href="bayesian/mechanism_design_bayesian_selling_problem.html">Bayesian Selling Problem (IPV)</a>), the BIC interim
+([[mechanism_design.bayesian.selling_problem]]), the BIC interim
 characterisation. The single-parameter Myerson envelope is already in
 <code>EconCSLib/MechanismDesign/Auction/Myerson.lean</code> and provides the per-bidder
 identity used in the proof.</p>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,62 +1073,65 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L308"><code>stdSimplex.pure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L308"><code>stdSimplex.pure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
           <p class="lean-docstring">Point-mass simplex element at `i₀`.</p>
-          <pre class="lean-signature"><code>def stdSimplex.pure [DecidableEq I] (i₀ : I) : stdSimplex 𝕜 I where</code></pre>
+          <pre class="lean-signature"><code>def stdSimplex.pure [DecidableEq I] (i₀ : I) : stdSimplex 𝕜 I where
+  val i := if i = i₀ then 1 else 0
+  property := ⟨fun i =&gt; by simp only; split_ifs &lt;;&gt; norm_num,
+               by simp [Finset.sum_ite_eq&#39;, Finset.mem_univ]⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L314"><code>stdSimplex.pure_apply</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L314"><code>stdSimplex.pure_apply</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
           
           <pre class="lean-signature"><code>theorem stdSimplex.pure_apply [DecidableEq I] (i₀ i : I) :
-    (stdSimplex.pure (𝕜</code></pre>
+    (stdSimplex.pure (𝕜 := 𝕜) i₀).val i = if i = i₀ then 1 else 0</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L319"><code>wsum_pure_apply</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L319"><code>wsum_pure_apply</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
           
           <pre class="lean-signature"><code>theorem wsum_pure_apply [DecidableEq I] (i₀ : I) (f : I → 𝕜) :
-    wsum (stdSimplex.pure (𝕜</code></pre>
+    wsum (stdSimplex.pure (𝕜 := 𝕜) i₀) f = f i₀</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L327"><code>wsum_pure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L327"><code>wsum_pure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.Simplex
+            EconCSLib @ ad4ebea, EconCSLib.Math.Simplex
           </span>
           
           
@@ -1144,7 +1145,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L1"><code>EconCSLib.Math.Simplex</code></a>
       </p>
       
     </div>
@@ -1153,7 +1154,7 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Point Mass on the Standard Simplex</h1>
-<p>For a finite index <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> with decidable equality and a chosen vertex <code>i₀ ∈ I</code>,
+<p>For a finite index <code>I</code> with decidable equality and a chosen vertex <code>i₀ ∈ I</code>,
 the <em>point mass</em> <code>stdSimplex.pure i₀</code> is the simplex element that puts unit
 weight on <code>i₀</code>:
 $$
@@ -1162,13 +1163,13 @@ $$
 $$</p>
 <p>The two key facts:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L314"><code>stdSimplex.pure_apply</code></a> -- the coordinate formula above (rfl-true).</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L319"><code>wsum_pure_apply</code></a> -- weighted-sum collapse:
+<li><code>stdSimplex.pure_apply</code> -- the coordinate formula above (rfl-true).</li>
+<li><code>wsum_pure_apply</code> -- weighted-sum collapse:
   $\operatorname{wsum}\,(\operatorname{pure} i_0)\, f \;=\; f(i_0)$.</li>
 </ul>
-<p>A legacy version <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L327"><code>wsum_pure</code></a> is also exposed for code that builds the point
+<p>A legacy version <code>wsum_pure</code> is also exposed for code that builds the point
 mass inline as an anonymous-structure simplex element; new code should
-prefer <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L308"><code>stdSimplex.pure</code></a> together with <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L319"><code>wsum_pure_apply</code></a>.</p>
+prefer <code>stdSimplex.pure</code> together with <code>wsum_pure_apply</code>.</p>
 <p>The point mass is the bridge between pure and mixed strategies: it embeds
 any pure action into the mixed-strategy simplex without disturbing its
 weighted-sum semantics. This embedding is what justifies "pure strategies

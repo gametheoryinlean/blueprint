@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1062,39 +1060,42 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L25"><code>SocialChoice.FairDivision.Divisible.CakeValuation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L25"><code>SocialChoice.FairDivision.Divisible.CakeValuation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
           </span>
           
           
           <p class="lean-docstring">An abstract cake valuation assigns a value in `V` to each agent-piece pair.</p>
-          <pre class="lean-signature"><code>structure CakeValuation (N Ω V : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure CakeValuation (N Ω V : Type*) where
+  /-- The valuation function: agent × cake-piece → value. -/
+  val : N → Set Ω → V</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L62"><code>SocialChoice.FairDivision.Divisible.IsNormalized</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L62"><code>SocialChoice.FairDivision.Divisible.IsNormalized</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Valuation
           </span>
           
           
           <p class="lean-docstring">A normalized cake valuation: each agent values the whole cake at exactly `1`.</p>
-          <pre class="lean-signature"><code>def IsNormalized {N Ω V : Type*} [One V] (cv : CakeValuation N Ω V) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsNormalized {N Ω V : Type*} [One V] (cv : CakeValuation N Ω V) : Prop :=
+  ∀ i : N, cv.val i Set.univ = 1</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Valuation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Valuation</code></a>
       </p>
       
     </div>
@@ -1112,18 +1113,18 @@ $$</p>
 carrying a single field <code>val</code>.</p>
 <p>The value type $V$ stays polymorphic because the canonical instance —
 measure-based valuations
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_valuation" href="fair_division/divisible/social_choice_fair_division_divisible_measure_valuation.html">Measure Valuation</a>) — takes values
-in <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/ENNReal/Basic.lean#L101"><code>ENNReal</code></a>, while real-valued bundled interfaces use $\mathbb{R}$.</p>
+([[social_choice.fair_division.divisible.measure_valuation]]) — takes values
+in <code>ENNReal</code>, while real-valued bundled interfaces use $\mathbb{R}$.</p>
 <h2>Normalization</h2>
 <p>A cake valuation is <em>normalized</em> if every agent values the whole cake at
 $1$:
 $$
 \forall i \in N,\ \mathrm{val}(i, \Omega) = 1.
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Valuation.lean#L62"><code>IsNormalized</code></a>, requiring <code>[One V]</code>.</p>
+<p>In Lean: <code>IsNormalized</code>, requiring <code>[One V]</code>.</p>
 <p>For a measure-valuation $\mu_i$, normalization is equivalent to each
 $\mu_i$ being a probability measure
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.normalized_iff_probability" href="fair_division/divisible/social_choice_fair_division_divisible_normalized_iff_probability.html">Normalized Measure Valuation ↔ Probability Measure</a>).</p>
+([[social_choice.fair_division.divisible.normalized_iff_probability]]).</p>
 <p>Normalized cake valuations are the standard setting for comparing
 proportionality bounds, MMS values, and welfare aggregates across
 agents.</p>

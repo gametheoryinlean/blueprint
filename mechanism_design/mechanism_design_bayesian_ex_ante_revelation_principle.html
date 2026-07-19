@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L256"><code>BayesianMechanismWithTransfers.directRevelation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L256"><code>BayesianMechanismWithTransfers.directRevelation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.MechBayesian
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.MechBayesian
           </span>
           
           
@@ -1088,18 +1086,22 @@
           <pre class="lean-signature"><code>def directRevelation
     (B : BayesianMechanismWithTransfers I T M A P)
     (σ : StrategyProfile T M) :
-    DirectBayesianMechanismWithTransfers I T A P where</code></pre>
+    DirectBayesianMechanismWithTransfers I T A P where
+  prior := B.prior
+  prob_prior := B.prob_prior
+  allocationRule t := B.inducedAllocation σ t
+  paymentRule t := B.inducedPayments σ t</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L286"><code>BayesianMechanismWithTransfers.ExAnteRevelationPrincipleConclusion</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L286"><code>BayesianMechanismWithTransfers.ExAnteRevelationPrincipleConclusion</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.MechBayesian
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.MechBayesian
           </span>
           
           
@@ -1110,18 +1112,20 @@
     [∀ i, MeasurableSpace (M i)]
     (B : BayesianMechanismWithTransfers I T M A P)
     (u : A → (I → P) → (∀ i, T i) → I → ℝ)
-    (σ : StrategyProfile T M) : Prop</code></pre>
+    (σ : StrategyProfile T M) : Prop :=
+  (B.directRevelation σ).IsExAnteBayesianNashEquilibrium u
+    DirectBayesianMechanismWithTransfers.truthfulStrategy</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L309"><code>BayesianMechanismWithTransfers.exAnte_revelation_principle</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L309"><code>BayesianMechanismWithTransfers.exAnte_revelation_principle</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.MechBayesian
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.MechBayesian
           </span>
           
           
@@ -1140,7 +1144,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L1"><code>EconCSLib.MechanismDesign.Auction.MechBayesian</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/MechBayesian.lean#L1"><code>EconCSLib.MechanismDesign.Auction.MechBayesian</code></a>
       </p>
       
     </div>

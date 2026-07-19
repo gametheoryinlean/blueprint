@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,40 +1073,54 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L50"><code>SocialChoice.FairDivision.ShareInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Basic.lean#L50"><code>SocialChoice.FairDivision.ShareInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure ShareInstance (N R S : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure ShareInstance (N R S : Type*) where
+  /-- Resource-side data for the instance. -/
+  resource : R
+  /-- Feasible allocations for the given resource data. -/
+  feasible : Allocation N S → Prop
+  /-- Each agent&#39;s preference over individual shares. -/
+  sharePref : N → Pref S</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L63"><code>SocialChoice.FairDivision.ShareInstance.toInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Basic.lean#L63"><code>SocialChoice.FairDivision.ShareInstance.toInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Basic
           </span>
           
           
           
           <pre class="lean-signature"><code>def toInstance {N R S : Type*}
-    (I : ShareInstance N R S) : Instance N R S where</code></pre>
+    (I : ShareInstance N R S) : Instance N R S where
+  resource := I.resource
+  feasible := I.feasible
+  pref i :=
+    { rel := fun A B =&gt; I.sharePref i (A i) (B i)
+      prop :=
+        { reflexive := fun A =&gt; I.sharePref i |&gt;.prop.reflexive (A i)
+          transitive := fun _ _ _ hAB hBC =&gt; I.sharePref i |&gt;.prop.transitive hAB hBC
+          total := fun A B =&gt; I.sharePref i |&gt;.prop.total (A i) (B i) } }</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Basic.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Basic</code></a>
       </p>
       
     </div>
@@ -1129,14 +1141,14 @@ each agent's own share).</p>
 <h2>Lift to the full-allocation interface</h2>
 <p>There is a canonical embedding
 <code>toInstance : ShareInstance N R S → Instance N R S</code>
-(<a class="node-ref" data-node-id="social_choice.fair_division.instance" href="fair_division/social_choice_fair_division_instance.html">Fair Division Instance</a>) that promotes share preferences
+([[social_choice.fair_division.instance]]) that promotes share preferences
 to allocation preferences by comparing two allocations only through the
 evaluating agent's own share:
 $$
 A \preceq_i B \iff A(i) \preceq_{\mathrm{share},i} B(i).
 $$</p>
 <p>The promoted relation inherits reflexivity, transitivity, and totality
-pointwise from <code>sharePref i</code>, so the result is a valid <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L144"><code>Pref</code></a> on
+pointwise from <code>sharePref i</code>, so the result is a valid <code>Pref</code> on
 allocations.</p>
 <p>This lift is the bridge that makes the share-instance API a true special
 case of the generic allocation-preference instance, and lets the same

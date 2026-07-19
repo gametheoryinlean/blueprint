@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L118"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isEFX_of_mono</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L118"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isEFX_of_mono</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness
           </span>
           
           
@@ -1093,7 +1091,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Fairness</code></a>
       </p>
       
     </div>
@@ -1105,9 +1103,9 @@
 <p><strong>Theorem.</strong> Let $v$ be a <em>monotone</em> indivisible valuation —
 i.e. $T \subseteq S \Rightarrow v_i(T) \le v_i(S)$ for every $i$ — and
 let $A$ be envy-free
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_free" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_free.html">Indivisible Envy-Free</a>). Then $A$ is
-EFX (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx.html">EFX — Envy-Free Up to Any Good</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L118"><code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isEFX_of_mono</code></a>.</p>
+([[social_choice.fair_division.indivisible.envy_free]]). Then $A$ is
+EFX ([[social_choice.fair_division.indivisible.efx]]).</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsEnvyFree.isEFX_of_mono</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1123,16 +1121,16 @@ inequality at the element $g$. Quantifying over $g$ gives EFX. $\square$</p>
 <h2>Monotonicity as an explicit hypothesis</h2>
 <p>The Lean signature takes the monotonicity hypothesis as a plain function
 hypothesis <code>(hmono : ∀ i S T, T ⊆ S → v.val i T ≤ v.val i S)</code> rather
-than as a typeclass, because the abstract <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/RingTheory/Valuation/Basic.lean#L80"><code>Valuation</code></a> interface
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_valuation.html">Indivisible Valuation</a>) deliberately
+than as a typeclass, because the abstract <code>Valuation</code> interface
+([[social_choice.fair_division.indivisible.valuation]]) deliberately
 does not bake in monotonicity. Additive valuations with nonnegative
 weights are monotone (lemma
-<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>'s
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Valuation.lean#L96"><code>toValuation_mono</code></a>), so the implication automatically applies in the
+[[social_choice.fair_division.indivisible.additive_valuation]]'s
+<code>toValuation_mono</code>), so the implication automatically applies in the
 additive setting.</p>
 <h2>Significance</h2>
 <p>Combined with the unconditional EFX ⇒ EF1
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx_implies_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx_implies_ef1.html">EFX ⇒ EF1</a>), this
+([[social_choice.fair_division.indivisible.efx_implies_ef1]]), this
 gives the full chain EF ⇒ EFX ⇒ EF1 for monotone valuations.</p>
 <p>For non-monotone valuations the implication may fail: an envy-free
 allocation can become un-EFX after item removal if removing a low-value

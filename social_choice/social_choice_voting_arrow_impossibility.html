@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Arrow.lean#L67"><code>SocialChoice.Voting.arrow_impossibility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Arrow.lean#L67"><code>SocialChoice.Voting.arrow_impossibility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Arrow
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Arrow
           </span>
           
           
@@ -1094,7 +1092,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Arrow.lean#L1"><code>EconCSLib.SocialChoice.Voting.Arrow</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Arrow.lean#L1"><code>EconCSLib.SocialChoice.Voting.Arrow</code></a>
       </p>
       
     </div>
@@ -1105,13 +1103,13 @@
     <h1>Arrow's Impossibility Theorem</h1>
 <p><strong>Theorem (Arrow 1951).</strong> Let $N$ be a finite nonempty population and $A$ a
 finite alternative set with $|A| \ge 3$. Every social welfare function
-$F$ (<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>) satisfying</p>
+$F$ ([[social_choice.voting.swf]]) satisfying</p>
 <ul>
-<li>unanimity (<a class="node-ref" data-node-id="social_choice.voting.unanimity" href="voting/social_choice_voting_unanimity.html">Unanimity (Pareto Axiom)</a>) and</li>
-<li>independence of irrelevant alternatives (<a class="node-ref" data-node-id="social_choice.voting.iia" href="voting/social_choice_voting_iia.html">Independence of Irrelevant Alternatives</a>)</li>
+<li>unanimity ([[social_choice.voting.unanimity]]) and</li>
+<li>independence of irrelevant alternatives ([[social_choice.voting.iia]])</li>
 </ul>
-<p>is dictatorial (<a class="node-ref" data-node-id="social_choice.voting.dictatorial_swf" href="voting/social_choice_voting_dictatorial_swf.html">Dictatorial Social Welfare Function</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Arrow.lean#L67"><code>SocialChoice.Voting.arrow_impossibility</code></a>, with signature
+<p>is dictatorial ([[social_choice.voting.dictatorial_swf]]).</p>
+<p>In Lean: <code>SocialChoice.Voting.arrow_impossibility</code>, with signature
 <code>[Fintype A] [Fintype N] [Nonempty N] (hA : Fintype.card A ≥ 3)</code>.</p>
     
     <details class="proof-details">
@@ -1119,9 +1117,9 @@ $F$ (<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/so
       <div class="proof-body">
         <p>The public theorem packages the cardinality hypothesis: a finite alternative
 set with at least three elements contains three distinct alternatives
-$x, y, z$ (via <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Fintype/EquivFin.lean#L80"><code>Fintype.equivFin</code></a>), which is the witness shape consumed by
+$x, y, z$ (via <code>Fintype.equivFin</code>), which is the witness shape consumed by
 the decisive-coalitions form
-<a class="node-ref" data-node-id="social_choice.voting.arrow_of_unanimity_iia" href="voting/social_choice_voting_arrow_of_unanimity_iia.html">Arrow&#x27;s Theorem via Decisive Coalitions</a>. Apply that theorem to
+[[social_choice.voting.arrow_of_unanimity_iia]]. Apply that theorem to
 conclude. $\square$</p>
 <h2>Interpretation</h2>
 <p>If one insists on aggregating individual rankings into a single social
@@ -1130,7 +1128,7 @@ $\{a,b\}$ ranking depend on irrelevant alternatives, then the <em>only</em>
 admissible rules with three or more alternatives are dictatorships — one
 agent fully determines society's strict preference. Three classical escapes
 are: weaken to a social choice function (Gibbard–Satterthwaite is the SCF
-analogue, <a class="node-ref" data-node-id="social_choice.voting.gibbard_satterthwaite" href="voting/social_choice_voting_gibbard_satterthwaite.html">Gibbard–Satterthwaite Theorem</a>); restrict the
+analogue, [[social_choice.voting.gibbard_satterthwaite]]); restrict the
 preference domain (e.g. single-peaked); or move from ordinal to cardinal /
 probabilistic aggregation.</p>
 <h2>References</h2>

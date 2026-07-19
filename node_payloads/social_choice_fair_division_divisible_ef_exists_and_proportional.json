@@ -10,8 +10,8 @@
     "social_choice.fair_division",
     "social_choice.fair_division.divisible"
   ],
-  "body_html": "<h1>EF + Proportional Existence (Stromquist Corollary)</h1>\n<p><strong>Theorem.</strong> For every $n \\ge 1$ and every family of finite non-atomic\nmeasures $\\mu : \\mathrm{Fin}\\ n \\to \\mathrm{Measure}\\ I$ on $I = [0, 1]$,\nthere exists a complete measurable partition that is <strong>both</strong>\nenvy-free and proportional.</p>\n<p>In Lean: <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1347\"><code>SocialChoice.FairDivision.Divisible.ef_exists_and_proportional</code></a>.</p>",
-  "proof_html": "<p>A two-step composition:</p>\n<ol>\n<li>\n<p>Stromquist's EF existence\n   (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ef_exists\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html\">Envy-Free Existence (Stromquist, n Agents)</a>) yields an EF\n   allocation $A$.</p>\n</li>\n<li>\n<p>EF implies proportional for measure valuations\n   (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ef_implies_proportional\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ef_implies_proportional.html\">EF ⇒ Proportional (Measure Valuations)</a>)\n   gives the proportionality bound on the same $A$.</p>\n</li>\n</ol>\n<h2>Why list this as a separate node</h2>\n<p>Two reasons:</p>\n<ul>\n<li>Many downstream contexts want a single statement asserting both\n  fairness notions hold together (typical for textbook statements of\n  \"fair division exists for cake-cutting\").</li>\n<li>It exposes the <em>strength gap</em> between EF and PROP in the divisible\n  setting: PROP is implied by EF here for free, whereas in the\n  indivisible setting the implication only holds for additive\n  valuations on complete allocations\n  (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.indivisible.ef_implies_proportional_additive\" href=\"fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_proportional_additive.html\">EF ⇒ PROP (Additive Valuations, Complete Allocations)</a>)\n  and EF itself need not exist.</li>\n</ul>\n<p>The bundled-instance form sits in\n<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.measure_instance_existence\" href=\"fair_division/divisible/social_choice_fair_division_divisible_measure_instance_existence.html\">Measure-Instance Existence Wrappers</a>.</p>\n<h2>References</h2>\n<ul>\n<li>Stromquist, W. (1980). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 87: 640–644.</li>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>.</li>\n</ul>",
+  "body_html": "<h1>EF + Proportional Existence (Stromquist Corollary)</h1>\n<p><strong>Theorem.</strong> For every $n \\ge 1$ and every family of finite non-atomic\nmeasures $\\mu : \\mathrm{Fin}\\ n \\to \\mathrm{Measure}\\ I$ on $I = [0, 1]$,\nthere exists a complete measurable partition that is <strong>both</strong>\nenvy-free and proportional.</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Divisible.ef_exists_and_proportional</code>.</p>",
+  "proof_html": "<p>A two-step composition:</p>\n<ol>\n<li>\n<p>Stromquist's EF existence\n   ([[social_choice.fair_division.divisible.ef_exists]]) yields an EF\n   allocation $A$.</p>\n</li>\n<li>\n<p>EF implies proportional for measure valuations\n   ([[social_choice.fair_division.divisible.ef_implies_proportional]])\n   gives the proportionality bound on the same $A$.</p>\n</li>\n</ol>\n<h2>Why list this as a separate node</h2>\n<p>Two reasons:</p>\n<ul>\n<li>Many downstream contexts want a single statement asserting both\n  fairness notions hold together (typical for textbook statements of\n  \"fair division exists for cake-cutting\").</li>\n<li>It exposes the <em>strength gap</em> between EF and PROP in the divisible\n  setting: PROP is implied by EF here for free, whereas in the\n  indivisible setting the implication only holds for additive\n  valuations on complete allocations\n  ([[social_choice.fair_division.indivisible.ef_implies_proportional_additive]])\n  and EF itself need not exist.</li>\n</ul>\n<p>The bundled-instance form sits in\n[[social_choice.fair_division.divisible.measure_instance_existence]].</p>\n<h2>References</h2>\n<ul>\n<li>Stromquist, W. (1980). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 87: 640–644.</li>\n<li>[AGT Chapter 13] Nisan, Roughgarden, Tardos, and Vazirani, <em>Algorithmic Game Theory</em>.</li>\n</ul>",
   "deps": [
     {
       "id": "social_choice.fair_division.divisible.ef_exists",
@@ -41,9 +41,9 @@
       "signature": "theorem ef_exists_and_proportional\n    {N : Type*} [Fintype N] [Nonempty N]\n    (μ : N → Measure I)\n    [∀ i, IsFiniteMeasure (μ i)]\n    [∀ i, NoAtoms (μ i)] :\n    ∃ A : Allocation N I,\n      IsAllocation A ∧\n      IsEnvyFree (MeasureValuation μ) A ∧\n      IsProportional (Fintype.card N) (MeasureValuation μ) A",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1347",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1347",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -56,9 +56,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1",
       "status": "resolved",
       "reason": null
     }

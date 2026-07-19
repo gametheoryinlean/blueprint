@@ -10,7 +10,7 @@
     "game_theory.zero_sum.core"
   ],
   "body_html": "<h1>Support Complementarity</h1>\n<p>Let $x \\in X(A)$ and $y \\in Y(A)$. If $i \\in \\operatorname{supp}(x)$, then\nthe pure row $i$ obtains the value against $y$. If\n$j \\in \\operatorname{supp}(y)$, then the mixed strategy $x$ obtains the\nvalue against the pure column $j$.</p>",
-  "proof_html": "<p>Let $v=\\operatorname{val}(A)$. Since $y$ is optimal for player II,\neach pure row payoff satisfies $e_iAy\\le v$. Since $x$ is optimal for player\nI, the average of these row payoffs under $x$ is\n$$\n  xAy=\\sum_i x_i(e_iAy)=v.\n$$\nAn average of numbers all bounded above by $v$ can equal $v$ only if every\nterm with positive weight is equal to $v$. Hence $e_iAy=v$ for\n$i\\in\\operatorname{supp}(x)$. The column statement is dual: optimality of\n$x$ gives $xAe_j\\ge v$ for every $j$, while optimality of $y$ gives\n$$\n  xAy=\\sum_j y_j(xAe_j)=v.\n$$\nThus every positively weighted column in $y$ satisfies $xAe_j=v$.</p>\n<p>The Lean formalisation provides separate theorems for the two directions:\n<a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L238\"><code>MatrixGame.support_complementarity_row</code></a> (rows in $\\operatorname{supp}(x)$\nhit the value) and <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L275\"><code>MatrixGame.support_complementarity_column</code></a> (columns in\n$\\operatorname{supp}(y)$ hit the value).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(b)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Complementarity on supports of optimal strategies.</li>\n</ul>",
+  "proof_html": "<p>Let $v=\\operatorname{val}(A)$. Since $y$ is optimal for player II,\neach pure row payoff satisfies $e_iAy\\le v$. Since $x$ is optimal for player\nI, the average of these row payoffs under $x$ is\n$$\n  xAy=\\sum_i x_i(e_iAy)=v.\n$$\nAn average of numbers all bounded above by $v$ can equal $v$ only if every\nterm with positive weight is equal to $v$. Hence $e_iAy=v$ for\n$i\\in\\operatorname{supp}(x)$. The column statement is dual: optimality of\n$x$ gives $xAe_j\\ge v$ for every $j$, while optimality of $y$ gives\n$$\n  xAy=\\sum_j y_j(xAe_j)=v.\n$$\nThus every positively weighted column in $y$ satisfies $xAe_j=v$.</p>\n<p>The Lean formalisation provides separate theorems for the two directions:\n<code>MatrixGame.support_complementarity_row</code> (rows in $\\operatorname{supp}(x)$\nhit the value) and <code>MatrixGame.support_complementarity_column</code> (columns in\n$\\operatorname{supp}(y)$ hit the value).</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Prop. 2.4.1(b)] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Complementarity on supports of optimal strategies.</li>\n</ul>",
   "deps": [
     {
       "id": "game_theory.strategic_game.zero_sum.core.mixed_support",
@@ -50,9 +50,9 @@
       "signature": "theorem support_complementarity_row [DecidableEq I]\n    (xx : stdSimplex ℝ I) (yy : stdSimplex ℝ J)\n    (hxx : xx ∈ A.optimalRowStrategies) (hyy : yy ∈ A.optimalColumnStrategies)\n    {i : I} (hi : 0 < xx.val i) :\n    A.Ei i yy = A.value",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L238",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L238",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -68,9 +68,9 @@
       "signature": "theorem support_complementarity_column [DecidableEq J]\n    (xx : stdSimplex ℝ I) (yy : stdSimplex ℝ J)\n    (hxx : xx ∈ A.optimalRowStrategies) (hyy : yy ∈ A.optimalColumnStrategies)\n    {j : J} (hj : 0 < yy.val j) :\n    A.Ej xx j = A.value",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L275",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L275",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -83,9 +83,9 @@
       "name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
       "display_name": "EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1",
       "status": "resolved",
       "reason": null
     }

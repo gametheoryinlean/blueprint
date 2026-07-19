@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,80 +1073,86 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L57"><code>EconCSLib.LinearAlgebra.rowEval</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L57"><code>EconCSLib.LinearAlgebra.rowEval</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ ad4ebea, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
           
           <pre class="lean-signature"><code>def rowEval {I : Type*} {n : ℕ} [Fintype I] (A : I → Fin n → 𝕜) (i : I)
-    (x : Fin n → 𝕜) : 𝕜</code></pre>
+    (x : Fin n → 𝕜) : 𝕜 :=
+  ∑ j, A i j * x j</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L62"><code>EconCSLib.LinearAlgebra.IsFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L62"><code>EconCSLib.LinearAlgebra.IsFeasible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ ad4ebea, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
           <p class="lean-docstring">Primal feasibility of the system `A x ≥ b`.</p>
           <pre class="lean-signature"><code>def IsFeasible {I : Type*} {n : ℕ} [Fintype I] (A : I → Fin n → 𝕜)
-    (b : I → 𝕜) : Prop</code></pre>
+    (b : I → 𝕜) : Prop :=
+  ∃ x : Fin n → 𝕜, ∀ i, b i ≤ rowEval A i x</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L67"><code>EconCSLib.LinearAlgebra.IsCertificate</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L67"><code>EconCSLib.LinearAlgebra.IsCertificate</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ ad4ebea, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
           <p class="lean-docstring">`u : I → 𝕜` is a Farkas certificate of infeasibility of `A x ≥ b`.</p>
           <pre class="lean-signature"><code>def IsCertificate {I : Type*} {n : ℕ} [Fintype I] (A : I → Fin n → 𝕜)
-    (b : I → 𝕜) (u : I → 𝕜) : Prop</code></pre>
+    (b : I → 𝕜) (u : I → 𝕜) : Prop :=
+  (∀ i, 0 ≤ u i) ∧
+  (∀ j : Fin n, ∑ i, u i * A i j = 0) ∧
+  (0 &lt; ∑ i, u i * b i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L74"><code>EconCSLib.LinearAlgebra.HasCertificate</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L74"><code>EconCSLib.LinearAlgebra.HasCertificate</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ ad4ebea, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
           <p class="lean-docstring">Existence of a Farkas certificate.</p>
           <pre class="lean-signature"><code>def HasCertificate {I : Type*} {n : ℕ} [Fintype I] (A : I → Fin n → 𝕜)
-    (b : I → 𝕜) : Prop</code></pre>
+    (b : I → 𝕜) : Prop :=
+  ∃ u : I → 𝕜, IsCertificate A b u</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L80"><code>EconCSLib.LinearAlgebra.feas_cert_disjoint</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L80"><code>EconCSLib.LinearAlgebra.feas_cert_disjoint</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ ad4ebea, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
@@ -1161,12 +1165,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L603"><code>EconCSLib.LinearAlgebra.theorem_of_alternative</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L603"><code>EconCSLib.LinearAlgebra.theorem_of_alternative</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Math.LinearAlgebra.FourierMotzkin
+            EconCSLib @ ad4ebea, EconCSLib.Math.LinearAlgebra.FourierMotzkin
           </span>
           
           
@@ -1179,7 +1183,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L1"><code>EconCSLib.Math.LinearAlgebra.FourierMotzkin</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/LinearAlgebra/FourierMotzkin.lean#L1"><code>EconCSLib.Math.LinearAlgebra.FourierMotzkin</code></a>
       </p>
       
     </div>

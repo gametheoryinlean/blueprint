@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L73"><code>SocialChoice.FairDivision.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L73"><code>SocialChoice.FairDivision.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Welfare
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Welfare
           </span>
           
           
@@ -1095,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Welfare</code></a>
       </p>
       
     </div>
@@ -1107,13 +1105,13 @@
 <p><strong>Lemma.</strong> For a finite nonempty population $N$, a utility profile $u$,
 and an allocation $A$, if every agent's utility is bounded below by the
 egalitarian welfare
-(<a class="node-ref" data-node-id="social_choice.fair_division.egalitarian_welfare" href="fair_division/social_choice_fair_division_egalitarian_welfare.html">Egalitarian (Maximin) Welfare</a>) — for instance, by
+([[social_choice.fair_division.egalitarian_welfare]]) — for instance, by
 the lemma <code>egalitarianWelfare_le</code> from
-<a class="node-ref" data-node-id="social_choice.fair_division.welfare_monotone" href="fair_division/social_choice_fair_division_welfare_monotone.html">Basic Welfare Lemmas</a> — then
+[[social_choice.fair_division.welfare_monotone]] — then
 $$
 |N| \cdot W_{\mathrm{egal}}(u, A) \;\le\; W_{\mathrm{util}}(u, A).
 $$</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Welfare.lean#L73"><code>SocialChoice.FairDivision.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>,
+<p>In Lean: <code>SocialChoice.FairDivision.nsmul_egalitarianWelfare_le_utilitarianWelfare</code>,
 stated as <code>Fintype.card N • egalitarianWelfare u A ≤ utilitarianWelfare u A</code>
 to avoid division.</p>
     

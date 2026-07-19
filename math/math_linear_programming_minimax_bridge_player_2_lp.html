@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1072,7 +1070,7 @@
     <h1>Player-2 LP Formulation of a Matrix Game</h1>
 <p>For a matrix game $A : I \times J \to \mathbb{R}$ played row-by-column,
 the <strong>player-2 (minmax) linear program</strong> seeks a mixed strategy
-$y \in \Delta(J)$ (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_mixed_strategy_simplex.html">Mixed Strategy Simplex</a>) and a
+$y \in \Delta(J)$ ([[game_theory.strategic_game.zero_sum.core.mixed_strategy_simplex]]) and a
 scalar $w$ such that every pure row response of player 1 yields at most
 $w$:</p>
 <p>$$
@@ -1087,31 +1085,31 @@ $$</p>
 probability normalisation on $y$.</p>
 <h2>Duality with player 1's LP</h2>
 <p>The player-2 LP is <strong>exactly the dual</strong> of player 1's LP
-(<a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.player_1_lp" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_player_1_lp.html">Player-1 LP Formulation of a Matrix Game</a>) in the standard LP duality sense
+([[math.linear_programming.minimax_bridge.player_1_lp]]) in the standard LP duality sense
 (write player 1's LP in equality / slack form; take the LP dual; the
 result is player 2's LP after relabelling).</p>
 <p>Strong LP duality
-(<a class="node-ref" data-node-id="math.linear_programming.strong_duality" href="linear_programming/math_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>) then yields:</p>
+([[math.linear_programming.strong_duality]]) then yields:</p>
 <ul>
 <li><em>Feasibility on both sides</em>: both LPs are feasible — player 1's LP
   has $v = \min_j A_{ij}$ for $x = e_i$; player 2's LP has analogous
   feasibility.</li>
 <li><em>Optimal value equality</em>: $v^* = w^* = \operatorname{val}(A)$
-  (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.value" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_value.html">Value Of A Zero-Sum Game</a>) — the minimax theorem
-  (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) re-derived from LP
+  ([[game_theory.strategic_game.zero_sum.core.value]]) — the minimax theorem
+  ([[game_theory.strategic_game.zero_sum.von_neumann_minimax]]) re-derived from LP
   duality.</li>
 <li><em>Complementary slackness</em>: optimal solutions $(x^*, y^*)$ satisfy
   support / complementarity conditions
-  (<span class="node-ref unresolved" data-node-id="math.minimax.support_complementarity">math.minimax.support_complementarity</span>,
-  <a class="node-ref" data-node-id="math.minimax.strong_complementarity" href="minimax/math_minimax_strong_complementarity.html">Strong Complementarity</a>).</li>
+  ([[math.minimax.support_complementarity]],
+  [[math.minimax.strong_complementarity]]).</li>
 </ul>
 <h2>See also</h2>
 <ul>
-<li><a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_lp_optimal_iff_optimal_strategy.html">LP Optimum ↔ Game-Theoretic Optimal Strategy</a> formalises the
+<li>[[math.linear_programming.minimax_bridge.lp_optimal_iff_optimal_strategy]] formalises the
   bijection between LP optima and game-theoretic optimal strategies.</li>
-<li><a class="node-ref" data-node-id="math.minimax.lp_duality_minimax_proof" href="minimax/math_minimax_lp_duality_minimax_proof.html">LP Duality Proof Of Minimax</a> is the explicit
+<li>[[math.minimax.lp_duality_minimax_proof]] is the explicit
   proof-plan turning LP duality into the matrix-game minimax theorem.</li>
-<li><a class="node-ref" data-node-id="math.linear_programming.minimax_bridge.zero_sum_lp_bridge" href="linear_programming/minimax_bridge/math_linear_programming_minimax_bridge_zero_sum_lp_bridge.html">Zero-Sum Linear Programming Bridge</a> discusses the AGT-style
+<li>[[math.linear_programming.minimax_bridge.zero_sum_lp_bridge]] discusses the AGT-style
   presentation of the same equivalence.</li>
 </ul>
 <h2>References</h2>

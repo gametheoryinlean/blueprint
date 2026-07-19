@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,28 +1073,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L244"><code>SocialChoice.FairDivision.Divisible.strom_piece</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L244"><code>SocialChoice.FairDivision.Divisible.strom_piece</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def strom_piece (x : Fin n → ℝ) (i : Fin n) : Set ℝ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def strom_piece (x : Fin n → ℝ) (i : Fin n) : Set ℝ :=
+  Set.Ico (∑ j ∈ Finset.univ.filter (· &lt; i), x j) (∑ j ∈ Finset.univ.filter (· ≤ i), x j)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L250"><code>SocialChoice.FairDivision.Divisible.strom_piece_partition</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L250"><code>SocialChoice.FairDivision.Divisible.strom_piece_partition</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1110,12 +1109,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L341"><code>SocialChoice.FairDivision.Divisible.strom_piece_empty_iff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L341"><code>SocialChoice.FairDivision.Divisible.strom_piece_empty_iff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1127,7 +1126,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1151,7 +1150,7 @@ $$
 \mathrm{piece}(x, i) \;=\; \varphi\bigl(\bigl(\sum_{j &lt; i} x_j,\ \sum_{j \le i} x_j\bigr]\bigr).
 $$</p>
 <p>The piece collapses to the empty set exactly when its fractional length
-is zero — <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L341"><code>strom_piece_empty_iff</code></a>:
+is zero — <code>strom_piece_empty_iff</code>:
 $$
 \mathrm{piece}(x, i) = \emptyset \;\iff\; x_i = 0.
 $$</p>
@@ -1164,9 +1163,9 @@ form a complete measurable partition of $\mathbb{R}$:</p>
 <li>cover of $\mathbb{R}$ (the union of all half-open intervals over a partition
   of $(0, 1)$, transported by $\varphi$).</li>
 </ul>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L250"><code>strom_piece_partition</code></a>. This is the building block that turns a
+<p>In Lean: <code>strom_piece_partition</code>. This is the building block that turns a
 KKM-found simplex point into a divisible allocation in
-<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_assignment" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_assignment.html">Fair Assignment from a Common KKM Point</a>.</p>
+[[social_choice.fair_division.divisible.stromquist_assignment]].</p>
 <h2>References</h2>
 <ul>
 <li>Stromquist, W. (1980). "How to Cut a Cake Fairly". <em>Amer. Math. Monthly</em> 87: 640–644.</li>

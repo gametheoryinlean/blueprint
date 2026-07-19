@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,39 +1073,41 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L157"><code>SocialChoice.Voting.CondorcetWinner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/VotingRules.lean#L157"><code>SocialChoice.Voting.CondorcetWinner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
           
-          <pre class="lean-signature"><code>def CondorcetWinner [Fintype N] [Fintype A] (P : Profile N A) (a : A) : Prop</code></pre>
+          <pre class="lean-signature"><code>def CondorcetWinner [Fintype N] [Fintype A] (P : Profile N A) (a : A) : Prop :=
+  ∀ b : A, b ≠ a → MajorityPrefers P a b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L161"><code>SocialChoice.Voting.HasCondorcetWinner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/VotingRules.lean#L161"><code>SocialChoice.Voting.HasCondorcetWinner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.VotingRules
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.VotingRules
           </span>
           
           
           <p class="lean-docstring">A profile has at least one Condorcet winner.</p>
-          <pre class="lean-signature"><code>def HasCondorcetWinner [Fintype N] [Fintype A] (P : Profile N A) : Prop</code></pre>
+          <pre class="lean-signature"><code>def HasCondorcetWinner [Fintype N] [Fintype A] (P : Profile N A) : Prop :=
+  ∃ a : A, CondorcetWinner P a</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/VotingRules.lean#L1"><code>EconCSLib.SocialChoice.Voting.VotingRules</code></a>
       </p>
       
     </div>
@@ -1118,20 +1118,20 @@
     <h1>Condorcet Winner</h1>
 <p>An alternative $a \in A$ is a <em>Condorcet winner</em> for a preference profile
 $P$ if it beats every other alternative in pairwise strict-majority
-comparison (<a class="node-ref" data-node-id="social_choice.voting.majority_prefers" href="voting/social_choice_voting_majority_prefers.html">Pairwise Majority Comparison</a>):
+comparison ([[social_choice.voting.majority_prefers]]):
 $$
 \forall b \in A,\ b \ne a,\ \mathrm{MajorityPrefers}(P, a, b).
 $$</p>
 <p>A profile <em>has a Condorcet winner</em> if some such $a$ exists.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L157"><code>SocialChoice.Voting.CondorcetWinner</code></a> and <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/VotingRules.lean#L161"><code>HasCondorcetWinner</code></a>.</p>
+<p>In Lean: <code>SocialChoice.Voting.CondorcetWinner</code> and <code>HasCondorcetWinner</code>.</p>
 <p>A Condorcet winner — when one exists — is the canonical "majority-acceptable"
 choice. But Condorcet winners <em>need not exist</em>: cyclic pairwise majorities
-("Condorcet paradox", <a class="node-ref" data-node-id="social_choice.voting.condorcet_paradox" href="voting/social_choice_voting_condorcet_paradox.html">Condorcet Paradox</a>) are
+("Condorcet paradox", [[social_choice.voting.condorcet_paradox]]) are
 possible already with 3 voters and 3 alternatives.</p>
 <p>Concrete rules that always elect the Condorcet winner when it exists are
 called <em>Condorcet methods</em> (Copeland, Schulze, Ranked Pairs, …). Borda
-(<a class="node-ref" data-node-id="social_choice.voting.borda_score" href="voting/social_choice_voting_borda_score.html">Borda Score and Borda Rule</a>) and plurality
-(<a class="node-ref" data-node-id="social_choice.voting.plurality_score" href="voting/social_choice_voting_plurality_score.html">Plurality Score and Plurality Rule</a>) are <em>not</em> Condorcet methods.</p>
+([[social_choice.voting.borda_score]]) and plurality
+([[social_choice.voting.plurality_score]]) are <em>not</em> Condorcet methods.</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ, Chapter 21] Maschler, Solan, and Zamir, <em>Game Theory</em>. Condorcet winner; see the <code>source</code> block

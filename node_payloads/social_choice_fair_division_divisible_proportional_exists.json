@@ -10,8 +10,8 @@
     "social_choice.fair_division",
     "social_choice.fair_division.divisible"
   ],
-  "body_html": "<h1>Proportional Existence on [0,1] (n Agents)</h1>\n<p><strong>Theorem.</strong> For every $n \\ge 1$ and every family of finite non-atomic\nmeasures $\\mu : \\mathrm{Fin}\\ n \\to \\mathrm{Measure}\\ I$ on the unit\ninterval $I = [0, 1]$, there exists a complete measurable partition\n$A$ that is proportional in the measure sense:\n$$\n\\forall i \\in \\mathrm{Fin}\\ n,\\ \\mu_i(I) \\;\\le\\; n \\cdot \\mu_i(A(i)).\n$$</p>\n<p>In Lean: <a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L120\"><code>SocialChoice.FairDivision.Divisible.proportional_exists</code></a>,\ndeclared at the top of <code>Existence.lean</code> so the file's main objective\n(EF existence) does not pull in Dubins–Spanier directly.</p>",
-  "proof_html": "<p>A direct delegation to the Dubins–Spanier moving-knife construction\n(<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.dubins_spanier_proportional\" href=\"fair_division/divisible/social_choice_fair_division_divisible_dubins_spanier_proportional.html\">Dubins–Spanier Proportional Existence</a>).</p>\n<h2>Where this sits</h2>\n<p>In the Stromquist program (<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ef_exists\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ef_exists.html\">Envy-Free Existence (Stromquist, n Agents)</a>),\nproportionality is the <em>easier</em> sister result. EF existence sits a layer\nabove it and uses a fundamentally different (KKM / shifted-cell)\nargument. The two are combined in\n<a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ef_exists_and_proportional\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ef_exists_and_proportional.html\">EF + Proportional Existence (Stromquist Corollary)</a>,\nwhich observes that the EF allocation produced by Stromquist is in\nparticular proportional (via <code>IsEnvyFree.isProportional</code> on measure\nvaluations, <a class=\"node-ref\" data-node-id=\"social_choice.fair_division.divisible.ef_implies_proportional\" href=\"fair_division/divisible/social_choice_fair_division_divisible_ef_implies_proportional.html\">EF ⇒ Proportional (Measure Valuations)</a>).</p>\n<h2>References</h2>\n<ul>\n<li>Dubins, L. E. and Spanier, E. H. (1961). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 68: 1–17.</li>\n<li>Stromquist, W. (1980). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 87: 640–644.</li>\n</ul>",
+  "body_html": "<h1>Proportional Existence on [0,1] (n Agents)</h1>\n<p><strong>Theorem.</strong> For every $n \\ge 1$ and every family of finite non-atomic\nmeasures $\\mu : \\mathrm{Fin}\\ n \\to \\mathrm{Measure}\\ I$ on the unit\ninterval $I = [0, 1]$, there exists a complete measurable partition\n$A$ that is proportional in the measure sense:\n$$\n\\forall i \\in \\mathrm{Fin}\\ n,\\ \\mu_i(I) \\;\\le\\; n \\cdot \\mu_i(A(i)).\n$$</p>\n<p>In Lean: <code>SocialChoice.FairDivision.Divisible.proportional_exists</code>,\ndeclared at the top of <code>Existence.lean</code> so the file's main objective\n(EF existence) does not pull in Dubins–Spanier directly.</p>",
+  "proof_html": "<p>A direct delegation to the Dubins–Spanier moving-knife construction\n([[social_choice.fair_division.divisible.dubins_spanier_proportional]]).</p>\n<h2>Where this sits</h2>\n<p>In the Stromquist program ([[social_choice.fair_division.divisible.ef_exists]]),\nproportionality is the <em>easier</em> sister result. EF existence sits a layer\nabove it and uses a fundamentally different (KKM / shifted-cell)\nargument. The two are combined in\n[[social_choice.fair_division.divisible.ef_exists_and_proportional]],\nwhich observes that the EF allocation produced by Stromquist is in\nparticular proportional (via <code>IsEnvyFree.isProportional</code> on measure\nvaluations, [[social_choice.fair_division.divisible.ef_implies_proportional]]).</p>\n<h2>References</h2>\n<ul>\n<li>Dubins, L. E. and Spanier, E. H. (1961). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 68: 1–17.</li>\n<li>Stromquist, W. (1980). \"How to Cut a Cake Fairly\". <em>Amer. Math. Monthly</em> 87: 640–644.</li>\n</ul>",
   "deps": [
     {
       "id": "social_choice.fair_division.divisible.dubins_spanier_proportional",
@@ -36,9 +36,9 @@
       "signature": "theorem proportional_exists\n    {N : Type*} [Fintype N] [Nonempty N]\n    (μ : N → Measure I)\n    [∀ i, IsFiniteMeasure (μ i)]\n    [∀ i, NoAtoms (μ i)] :\n    ∃ A : Allocation N I,\n      IsAllocation A ∧\n      IsProportional (Fintype.card N) (MeasureValuation μ) A",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L120",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L120",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -51,9 +51,9 @@
       "name": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
       "display_name": "EconCSLib.SocialChoice.FairDivision.Divisible.Existence",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1",
       "status": "resolved",
       "reason": null
     }

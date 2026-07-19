@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">inductive</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L89"><code>ZeroSumChance.GameTree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L89"><code>ZeroSumChance.GameTree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
           </span>
           
           
@@ -1099,12 +1097,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L125"><code>ZeroSumChance.GameTree.value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L125"><code>ZeroSumChance.GameTree.value</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
           </span>
           
           
@@ -1115,6 +1113,7 @@
     | .A =&gt; max L.value R.value
     | .B =&gt; min L.value R.value
   | Nnode prob L R =&gt; prob * L.value + (1 - prob) * R.value
+
 /-- **A&#39;s dominant strategy**: at each A-node, move to whichever child has the
     higher value; ties go left. -/</code></pre>
         </li>
@@ -1122,28 +1121,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L134"><code>ZeroSumChance.GameTree.DStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L134"><code>ZeroSumChance.GameTree.DStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
           </span>
           
           
           
-          <pre class="lean-signature"><code>def DStrategy : Strategy</code></pre>
+          <pre class="lean-signature"><code>def DStrategy : Strategy :=
+  fun L R =&gt; if L.value &lt; R.value then .r else .l</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L142"><code>ZeroSumChance.GameTree.outcome</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L142"><code>ZeroSumChance.GameTree.outcome</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
           </span>
           
           
@@ -1158,18 +1158,25 @@
       | .l =&gt; outcome SA SB L
       | .r =&gt; outcome SA SB R
   | Nnode prob L R =&gt; prob * outcome SA SB L + (1 - prob) * outcome SA SB R
-/-! ### Main theorem -/</code></pre>
+
+/-! ### Main theorem -/
+
+/-- **Soundness of `DStrategy`**: the backward-induction value is a lower bound
+    on the outcome A achieves by following `DStrategy`, regardless of how B plays.
+
+    Formally: for every B-strategy `SB` and game tree `t`,
+    `t.value ≤ t.outcome DStrategy SB`. -/</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L160"><code>ZeroSumChance.GameTree.value_prop</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L160"><code>ZeroSumChance.GameTree.value_prop</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance
           </span>
           
           
@@ -1180,7 +1187,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.ZeroSumGameTreeWithChance</code></a>
       </p>
       
     </div>
@@ -1199,7 +1206,7 @@ values.</p>
       <div class="proof-body">
         <p>Sketch</p>
 <p>Same forward / backward induction as
-<span class="node-ref unresolved" data-node-id="zero_sum_perfect_information_value_no_chance">zero_sum_perfect_information_value_no_chance</span>, with one extra case: at a
+[[zero_sum_perfect_information_value_no_chance]], with one extra case: at a
 Nature node the value is the probability-weighted expectation over the
 successor values. The minimax / maximin equality at player nodes is unaffected
 because expectation is linear and player choice still optimizes over a finite
@@ -1208,11 +1215,11 @@ set.</p>
 <p>Implemented in <code>EconCSLib.ExtensiveGame.ZeroSumGameTreeWithChance</code> (EG-L6, #220).
 The key declarations are:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L89"><code>ZeroSumChance.GameTree</code></a> — binary game tree with <code>Leaf</code>, <code>Pnode</code>, <code>Nnode</code>.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L125"><code>ZeroSumChance.GameTree.value</code></a> — backward-induction value (computable).</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L134"><code>ZeroSumChance.GameTree.DStrategy</code></a> — A's dominant strategy.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L142"><code>ZeroSumChance.GameTree.outcome</code></a> — payoff under a strategy pair.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/ZeroSumGameTreeWithChance.lean#L160"><code>ZeroSumChance.GameTree.value_prop</code></a> — <code>t.value ≤ t.outcome DStrategy SB</code>.</li>
+<li><code>ZeroSumChance.GameTree</code> — binary game tree with <code>Leaf</code>, <code>Pnode</code>, <code>Nnode</code>.</li>
+<li><code>ZeroSumChance.GameTree.value</code> — backward-induction value (computable).</li>
+<li><code>ZeroSumChance.GameTree.DStrategy</code> — A's dominant strategy.</li>
+<li><code>ZeroSumChance.GameTree.outcome</code> — payoff under a strategy pair.</li>
+<li><code>ZeroSumChance.GameTree.value_prop</code> — <code>t.value ≤ t.outcome DStrategy SB</code>.</li>
 </ul>
 <p>The ℚ-valued port requires no vNM theorem; rational arithmetic handles chance
 averaging directly. The fully general n-player + arbitrary utility version

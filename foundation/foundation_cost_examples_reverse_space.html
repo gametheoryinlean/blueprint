@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ReverseSpace.lean#L42"><code>ReverseSpace.naiveReverse</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ReverseSpace.lean#L42"><code>ReverseSpace.naiveReverse</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.ReverseSpace
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.ReverseSpace
           </span>
           
           
@@ -1091,18 +1089,19 @@
     ✓[as.length + 1] do
       let rest ← naiveReverse as
       pure (rest ++ [a])
+
 /-- Cumulative `++` allocation is quadratic in input length. -/</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ReverseSpace.lean#L50"><code>ReverseSpace.naiveReverse_cost_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ReverseSpace.lean#L50"><code>ReverseSpace.naiveReverse_cost_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.CostM.ReverseSpace
+            EconCSLib @ ad4ebea, EconCSLib.Examples.CostM.ReverseSpace
           </span>
           
           
@@ -1114,7 +1113,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ReverseSpace.lean#L1"><code>EconCSLib.Examples.CostM.ReverseSpace</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/CostM/ReverseSpace.lean#L1"><code>EconCSLib.Examples.CostM.ReverseSpace</code></a>
       </p>
       
     </div>
@@ -1129,14 +1128,14 @@ append whose cost is proportional to the accumulated length, giving
 $$
   (\operatorname{naiveReverse}\,l).\mathrm{cost} \;\le\; |l|^2,
 $$
-proved as <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ReverseSpace.lean#L50"><code>naiveReverse_cost_le</code></a>. This is the counterpoint to the linear and
+proved as <code>naiveReverse_cost_le</code>. This is the counterpoint to the linear and
 logarithmic <code>CostM ℕ</code> examples (<a class="node-ref" data-node-id="foundation.cost.examples.gcd" href="cost/examples/foundation_cost_examples_gcd.html">Worked Example: Euclidean GCD Step Count</a>): a
 worse algorithm shows up directly as a worse bound on <code>.cost</code>, with no change
 to the monad or to the correctness of the reversed result on <code>.ret</code>.</p>
 <h2>Lean declarations</h2>
 <ul>
 <li><code>ReverseSpace.naiveReverse : List α → CostM ℕ (List α)</code>.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/CostM/ReverseSpace.lean#L50"><code>ReverseSpace.naiveReverse_cost_le</code></a> — the <code>|l|²</code> cost bound.</li>
+<li><code>ReverseSpace.naiveReverse_cost_le</code> — the <code>|l|²</code> cost bound.</li>
 </ul>
 <h2>References</h2>
 <ul>

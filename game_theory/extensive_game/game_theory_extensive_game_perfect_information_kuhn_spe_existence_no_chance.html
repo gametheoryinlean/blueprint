@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1040,7 +1038,7 @@
     <div class="thm_header_extras">
       <span class="checkmark">✓</span>
       <span class="badge kind-theorem">theorem</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-proved">proved</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-extensive_game-2e-perfect_information-2e-kuhn_spe_existence_no_chance">#</a>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L157"><code>GameTree.optStrategy_isSubgamePerfect</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L157"><code>GameTree.optStrategy_isSubgamePerfect</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
           </span>
           
           
@@ -1092,12 +1090,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L199"><code>GameTree.Kuhn_exists_SPE</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L199"><code>GameTree.Kuhn_exists_SPE</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE
           </span>
           
           
@@ -1108,7 +1106,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.GameTreeSPE</code></a>
       </p>
       
     </div>
@@ -1120,7 +1118,7 @@
 <p>Every finite perfect-information game <strong>without chance moves</strong> has a
 subgame-perfect equilibrium in pure strategies.</p>
 <p>Formally, on <code>GameTree N U</code> with <code>[TotalPreorder U]</code>, the strategy
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTreeSPE.lean#L101"><code>optStrategy</code></a> produced by backward induction is subgame-perfect.</p>
+<code>optStrategy</code> produced by backward induction is subgame-perfect.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1132,12 +1130,12 @@ tree is shorter, so induction gives a subgame-perfect strategy profile there.
 Combining the reduced-game strategy with the locally optimal choices at removed
 positions yields a pure strategy profile that is Nash in every subgame.</p>
 <p>The Lean proof in <code>GameTreeSPE.lean</code> follows exactly this pattern, with the
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L171"><code>GameTree.strong_induction</code></a> principle providing the size-decreasing induction
+<code>GameTree.strong_induction</code> principle providing the size-decreasing induction
 hypothesis.</p>
 <h2>Scope</h2>
 <p>This node is the no-chance specialization of the MFoGT theorem cited below
 (stated there in "with or without Nature" form). The variant that allows
-chance/Nature nodes is tracked by <span class="node-ref unresolved" data-node-id="kuhn_spe_existence_with_chance">kuhn_spe_existence_with_chance</span> and the
+chance/Nature nodes is tracked by [[kuhn_spe_existence_with_chance]] and the
 Lean implementation is gated on the vNM theorem in
 <code>EconCSLib/Utility/Lottery.lean</code> (see
 <a href="https://github.com/gametheoryinlean/EconCSLib/issues/181">EG-L3 / #181</a>).</p>

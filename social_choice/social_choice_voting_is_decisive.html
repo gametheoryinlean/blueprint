@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,39 +1073,41 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L43"><code>SocialChoice.Voting.IsDecisive</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L43"><code>SocialChoice.Voting.IsDecisive</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsDecisive [Fintype N] [Fintype A] (F : SWF N A) (C : Set N) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsDecisive [Fintype N] [Fintype A] (F : SWF N A) (C : Set N) : Prop :=
+  ∀ a b, IsDecisiveFor F C a b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L48"><code>SocialChoice.Voting.SWF.IsDictator</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L48"><code>SocialChoice.Voting.SWF.IsDictator</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
           
-          <pre class="lean-signature"><code>def SWF.IsDictator [Fintype N] [Fintype A] (F : SWF N A) (i : N) : Prop</code></pre>
+          <pre class="lean-signature"><code>def SWF.IsDictator [Fintype N] [Fintype A] (F : SWF N A) (i : N) : Prop :=
+  IsDecisive F {i}</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1117,7 +1117,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Decisive Coalition and Dictator</h1>
 <p>A coalition $C \subseteq N$ is <em>decisive</em> for a social welfare function $F$
-(<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>) if it is decisive for every ordered pair of
+([[social_choice.voting.swf]]) if it is decisive for every ordered pair of
 alternatives:
 $$
 \forall a, b \in A,\ \mathrm{IsDecisiveFor}(F, C, a, b).
@@ -1127,8 +1127,8 @@ $\{i\}$ is decisive in this sense.</p>
 <p>In Lean: <code>SocialChoice.Voting.IsDecisive F C</code> and the singleton specialization
 <code>SocialChoice.Voting.SWF.IsDictator F i := IsDecisive F {i}</code>.</p>
 <p>This identification is the structural heart of the decisive-coalition proof
-of Arrow (<a class="node-ref" data-node-id="social_choice.voting.arrow_of_unanimity_iia" href="voting/social_choice_voting_arrow_of_unanimity_iia.html">Arrow&#x27;s Theorem via Decisive Coalitions</a>): the dictatorship
-conclusion (<a class="node-ref" data-node-id="social_choice.voting.dictatorial_swf" href="voting/social_choice_voting_dictatorial_swf.html">Dictatorial Social Welfare Function</a>) reduces to producing a
+of Arrow ([[social_choice.voting.arrow_of_unanimity_iia]]): the dictatorship
+conclusion ([[social_choice.voting.dictatorial_swf]]) reduces to producing a
 singleton decisive coalition.</p>
 <h2>References</h2>
 <ul>

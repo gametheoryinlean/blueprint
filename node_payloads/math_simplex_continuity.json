@@ -9,7 +9,7 @@
     "math",
     "math.simplex"
   ],
-  "body_html": "<h1>Continuity on the Real Standard Simplex</h1>\n<p>Specialized to the field $\\mathbb{R}$, the standard simplex carries the\nsubspace topology from $\\mathbb{R}^I$, and two basic continuity facts are\nneeded by every existence-via-compactness argument:</p>\n<ul>\n<li><code>stdSimplex.continuous_coord i</code> -- the <code>i</code>-th coordinate projection\n  $x \\mapsto x_i$ is continuous on <code>stdSimplex ℝ I</code>.</li>\n<li><code>wsum_continuous f</code> -- for any <code>f : I → ℝ</code>, the map\n  $x \\mapsto \\operatorname{wsum} x\\, f$ is continuous on <code>stdSimplex ℝ I</code>.</li>\n</ul>\n<p>Combined with Mathlib's compactness of the real standard simplex\n(<a class=\"lean-decl-ref\" href=\"https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Convex/StdSimplex.lean#L191\"><code>stdSimplex.instCompactSpace_coe</code></a>), these continuity facts deliver the\nexistence of optimal mixed strategies via the extreme-value theorem. This\nis the analytic ingredient of the Loomis route to the minimax theorem and\nof Brouwer-based proofs of Nash existence.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 5] Maschler, Solan, and Zamir, <em>Game Theory</em>. Continuity of the expected payoff in the\n  mixed-strategy profile.</li>\n</ul>",
+  "body_html": "<h1>Continuity on the Real Standard Simplex</h1>\n<p>Specialized to the field $\\mathbb{R}$, the standard simplex carries the\nsubspace topology from $\\mathbb{R}^I$, and two basic continuity facts are\nneeded by every existence-via-compactness argument:</p>\n<ul>\n<li><code>stdSimplex.continuous_coord i</code> -- the <code>i</code>-th coordinate projection\n  $x \\mapsto x_i$ is continuous on <code>stdSimplex ℝ I</code>.</li>\n<li><code>wsum_continuous f</code> -- for any <code>f : I → ℝ</code>, the map\n  $x \\mapsto \\operatorname{wsum} x\\, f$ is continuous on <code>stdSimplex ℝ I</code>.</li>\n</ul>\n<p>Combined with Mathlib's compactness of the real standard simplex\n(<code>stdSimplex.instCompactSpace_coe</code>), these continuity facts deliver the\nexistence of optimal mixed strategies via the extreme-value theorem. This\nis the analytic ingredient of the Loomis route to the minimax theorem and\nof Brouwer-based proofs of Nash existence.</p>\n<h2>References</h2>\n<ul>\n<li>[MSZ, Chapter 5] Maschler, Solan, and Zamir, <em>Game Theory</em>. Continuity of the expected payoff in the\n  mixed-strategy profile.</li>\n</ul>",
   "proof_html": null,
   "deps": [
     {
@@ -40,9 +40,9 @@
       "signature": "theorem stdSimplex.continuous_coord (i : I) :\n    Continuous fun x : stdSimplex ℝ I => x.val i",
       "docstring": "The `i`-th coordinate projection on `stdSimplex ℝ I` is continuous.",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L369",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L369",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -58,9 +58,9 @@
       "signature": "theorem wsum_continuous (f : I → ℝ) :\n    Continuous fun x : stdSimplex ℝ I => wsum x f",
       "docstring": "`wsum (·) f` is continuous on the standard simplex over ℝ.",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L374",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L374",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -73,9 +73,9 @@
       "name": "EconCSLib.Math.Simplex",
       "display_name": "EconCSLib.Math.Simplex",
       "repository_title": "EconCSLib",
-      "revision": "7c9a1688acedefe48ec89a442571f12d87a380db",
-      "short_revision": "7c9a168",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Math/Simplex.lean#L1",
+      "revision": "ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8",
+      "short_revision": "ad4ebea",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Math/Simplex.lean#L1",
       "status": "resolved",
       "reason": null
     }

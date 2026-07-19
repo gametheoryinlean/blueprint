@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L74"><code>SocialChoice.FairDivision.Indivisible.IsEFX.of_noEnvy_mono</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L74"><code>SocialChoice.FairDivision.Indivisible.IsEFX.of_noEnvy_mono</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.EFX
           </span>
           
           
@@ -1095,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.EFX</code></a>
       </p>
       
     </div>
@@ -1105,19 +1103,19 @@
   <div class="theorem_thmcontent thm-content body">
     <h1>EFX from No-Envy + Monotonicity</h1>
 <p><strong>Theorem.</strong> For a monotone valuation $v$ on indivisible goods,
-envy-freeness (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.envy_free" href="fair_division/indivisible/social_choice_fair_division_indivisible_envy_free.html">Indivisible Envy-Free</a>)
-implies EFX (<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.efx" href="fair_division/indivisible/social_choice_fair_division_indivisible_efx.html">EFX — Envy-Free Up to Any Good</a>).</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L74"><code>SocialChoice.FairDivision.Indivisible.IsEFX.of_noEnvy_mono</code></a>.</p>
+envy-freeness ([[social_choice.fair_division.indivisible.envy_free]])
+implies EFX ([[social_choice.fair_division.indivisible.efx]]).</p>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsEFX.of_noEnvy_mono</code>.</p>
 <h2>Statement and proof</h2>
 <p>This is the same content as
-<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.ef_implies_efx_mono" href="fair_division/indivisible/social_choice_fair_division_indivisible_ef_implies_efx_mono.html">EF ⇒ EFX (Monotone Valuations)</a>, stated
+[[social_choice.fair_division.indivisible.ef_implies_efx_mono]], stated
 inside <code>EFX.lean</code> as a local sufficiency lemma for the EFX existence
 proofs in the same file. The Lean signatures differ only in how the
 hypothesis is bundled:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Fairness.lean#L118"><code>IsEnvyFree.isEFX_of_mono</code></a> in <code>Fairness.lean</code> — phrased as a method
+<li><code>IsEnvyFree.isEFX_of_mono</code> in <code>Fairness.lean</code> — phrased as a method
   on the EF predicate.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/EFX.lean#L74"><code>IsEFX.of_noEnvy_mono</code></a> in <code>EFX.lean</code> — phrased as a constructor of
+<li><code>IsEFX.of_noEnvy_mono</code> in <code>EFX.lean</code> — phrased as a constructor of
   the EFX predicate.</li>
 </ul>
 <p>Both prove $T \subseteq S \Rightarrow v_i(T) \le v_i(S)$, combined with

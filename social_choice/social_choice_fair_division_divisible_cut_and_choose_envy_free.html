@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,12 +1075,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L193"><code>SocialChoice.FairDivision.Divisible.cutAndChoose_isEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L193"><code>SocialChoice.FairDivision.Divisible.cutAndChoose_isEnvyFree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose
           </span>
           
           
@@ -1095,7 +1093,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.CutAndChoose</code></a>
       </p>
       
     </div>
@@ -1107,7 +1105,7 @@
 <p><strong>Theorem.</strong> For a two-agent measure family $\mu : \mathrm{Fin}\ 2 \to
 \mathrm{Measure}\ I$ and a *fair* cut point $t$ for the cutter, the
 cut-and-choose allocation is envy-free.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/CutAndChoose.lean#L193"><code>cutAndChoose_isEnvyFree</code></a>.</p>
+<p>In Lean: <code>cutAndChoose_isEnvyFree</code>.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1115,17 +1113,17 @@ cut-and-choose allocation is envy-free.</p>
         <p>Combine the two half-results:</p>
 <ul>
 <li>The chooser never envies the cutter at <em>any</em> cut
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.chooser_envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_chooser_envy_free.html">Chooser Is Always Envy-Free</a>).</li>
+  ([[social_choice.fair_division.divisible.chooser_envy_free]]).</li>
 <li>The cutter does not envy the chooser <em>at a fair cut</em>
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cutter_envy_free_of_fair" href="fair_division/divisible/social_choice_fair_division_divisible_cutter_envy_free_of_fair.html">Cutter Does Not Envy at a Fair Cut</a>).</li>
+  ([[social_choice.fair_division.divisible.cutter_envy_free_of_fair]]).</li>
 </ul>
 <p>Together these cover both directions of the envy-freeness condition
 $\forall i, j,\ \mu_i(A_j) \le \mu_i(A_i)$ for the two agents.</p>
 <h2>Existence corollary</h2>
 <p>Because fair cut points always exist for finite non-atomic cutter measures
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.fair_cut_exists" href="fair_division/divisible/social_choice_fair_division_divisible_fair_cut_exists.html">Fair Cut Point Exists</a>), cut-and-choose
+([[social_choice.fair_division.divisible.fair_cut_exists]]), cut-and-choose
 gives a constructive existence proof for EF allocations on two agents
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cut_and_choose_ef_exists" href="fair_division/divisible/social_choice_fair_division_divisible_cut_and_choose_ef_exists.html">Two-Agent EF Existence via Cut-and-Choose</a>).</p>
+([[social_choice.fair_division.divisible.cut_and_choose_ef_exists]]).</p>
 <h2>References</h2>
 <ul>
 <li>Steinhaus, H. (1948). "The Problem of Fair Division". <em>Econometrica</em>.</li>

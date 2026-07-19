@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBasic.lean#L62"><code>Mechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/MechBasic.lean#L62"><code>Mechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.MechBasic
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.MechBasic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure Mechanism (I : Type*) (T : I → Type*) (O : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure Mechanism (I : Type*) (T : I → Type*) (O : Type*) where
+  /-- The outcome function: given all agents&#39; reports, choose an outcome. -/
+  outcome : (∀ i, T i) → O</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/MechBasic.lean#L1"><code>EconCSLib.MechanismDesign.Auction.MechBasic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/MechBasic.lean#L1"><code>EconCSLib.MechanismDesign.Auction.MechBasic</code></a>
       </p>
       
     </div>

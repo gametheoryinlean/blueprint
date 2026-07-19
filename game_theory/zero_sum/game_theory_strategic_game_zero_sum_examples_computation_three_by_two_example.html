@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,60 +1073,67 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L32"><code>EconCSLib.StrategicGame.Examples.threeByTwoExample</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L32"><code>EconCSLib.StrategicGame.Examples.threeByTwoExample</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.StrategicGame.ThreeByTwo
+            EconCSLib @ ad4ebea, EconCSLib.Examples.StrategicGame.ThreeByTwo
           </span>
           
           
           <p class="lean-docstring">The 3×2 worked example matrix.</p>
-          <pre class="lean-signature"><code>def threeByTwoExample : MatrixGame (Fin 3) (Fin 2) ℝ where</code></pre>
+          <pre class="lean-signature"><code>def threeByTwoExample : MatrixGame (Fin 3) (Fin 2) ℝ where
+  g := !![3, -1; 0, 0; -2, 1]</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L49"><code>EconCSLib.StrategicGame.Examples.threeByTwoRowOpt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L49"><code>EconCSLib.StrategicGame.Examples.threeByTwoRowOpt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.StrategicGame.ThreeByTwo
+            EconCSLib @ ad4ebea, EconCSLib.Examples.StrategicGame.ThreeByTwo
           </span>
           
           
           <p class="lean-docstring">Row player&#39;s optimal strategy `(3/7, 0, 4/7)`.</p>
-          <pre class="lean-signature"><code>noncomputable def threeByTwoRowOpt : stdSimplex ℝ (Fin 3)</code></pre>
+          <pre class="lean-signature"><code>noncomputable def threeByTwoRowOpt : stdSimplex ℝ (Fin 3) :=
+  ⟨![3 / 7, 0, 4 / 7],
+    fun i =&gt; by fin_cases i &lt;;&gt; norm_num,
+    by rw [Fin.sum_univ_three]; show (3 : ℝ) / 7 + 0 + 4 / 7 = 1; norm_num⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L62"><code>EconCSLib.StrategicGame.Examples.threeByTwoColOpt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L62"><code>EconCSLib.StrategicGame.Examples.threeByTwoColOpt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.StrategicGame.ThreeByTwo
+            EconCSLib @ ad4ebea, EconCSLib.Examples.StrategicGame.ThreeByTwo
           </span>
           
           
           <p class="lean-docstring">Column player&#39;s optimal strategy `(2/7, 5/7)`.</p>
-          <pre class="lean-signature"><code>noncomputable def threeByTwoColOpt : stdSimplex ℝ (Fin 2)</code></pre>
+          <pre class="lean-signature"><code>noncomputable def threeByTwoColOpt : stdSimplex ℝ (Fin 2) :=
+  ⟨![2 / 7, 5 / 7],
+    fun j =&gt; by fin_cases j &lt;;&gt; norm_num,
+    by rw [Fin.sum_univ_two]; show (2 : ℝ) / 7 + 5 / 7 = 1; norm_num⟩</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L106"><code>EconCSLib.StrategicGame.Examples.threeByTwoExample_value</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L106"><code>EconCSLib.StrategicGame.Examples.threeByTwoExample_value</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Examples.StrategicGame.ThreeByTwo
+            EconCSLib @ ad4ebea, EconCSLib.Examples.StrategicGame.ThreeByTwo
           </span>
           
           
@@ -1139,7 +1144,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L1"><code>EconCSLib.Examples.StrategicGame.ThreeByTwo</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Examples/StrategicGame/ThreeByTwo.lean#L1"><code>EconCSLib.Examples.StrategicGame.ThreeByTwo</code></a>
       </p>
       
     </div>

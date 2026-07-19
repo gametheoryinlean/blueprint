@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,29 +1073,32 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L77"><code>SocialChoice.Voting.IsWeaklyDecisiveFor</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L77"><code>SocialChoice.Voting.IsWeaklyDecisiveFor</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsWeaklyDecisiveFor [Fintype N] [Fintype A]
-    (F : SWF N A) (C : Set N) (a b : A) : Prop</code></pre>
+    (F : SWF N A) (C : Set N) (a b : A) : Prop :=
+  ∀ P : Profile N A,
+    (∀ i ∈ C, Prefers P i a b) ∧ (∀ i ∉ C, Prefers P i b a) →
+      strict (F P) a b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L83"><code>SocialChoice.Voting.isWeaklyDecisiveFor_of_isDecisiveFor</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L83"><code>SocialChoice.Voting.isWeaklyDecisiveFor_of_isDecisiveFor</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Decisive
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Decisive
           </span>
           
           
@@ -1110,7 +1111,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Decisive.lean#L1"><code>EconCSLib.SocialChoice.Voting.Decisive</code></a>
       </p>
       
     </div>
@@ -1120,7 +1121,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Weakly Decisive Coalition</h1>
 <p>A coalition $C \subseteq N$ is <em>weakly decisive for the ordered pair</em>
-$(a, b)$ under a social welfare function $F$ (<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>)
+$(a, b)$ under a social welfare function $F$ ([[social_choice.voting.swf]])
 if unanimous $a \succ b$ inside $C$, <em>combined with</em> unanimous
 $b \succ a$ outside $C$, forces society to rank $a \succ b$:
 $$
@@ -1130,13 +1131,13 @@ $$
 \Rightarrow a \succ_{F(P)} b.
 $$</p>
 <p>In Lean: <code>SocialChoice.Voting.IsWeaklyDecisiveFor F C a b</code>.</p>
-<p>Weak decisiveness is <em>implied</em> by decisiveness (<a class="node-ref" data-node-id="social_choice.voting.is_decisive_for" href="voting/social_choice_voting_is_decisive_for.html">Decisive Coalition for an Ordered Pair</a>)
+<p>Weak decisiveness is <em>implied</em> by decisiveness ([[social_choice.voting.is_decisive_for]])
 — a witness profile satisfying the stronger constraint of total opposition
 is in particular a witness for plain decisiveness:
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Decisive.lean#L83"><code>SocialChoice.Voting.isWeaklyDecisiveFor_of_isDecisiveFor</code></a>.</p>
+<code>SocialChoice.Voting.isWeaklyDecisiveFor_of_isDecisiveFor</code>.</p>
 <p>The opposite-direction-strengthening — turning weak decisiveness into full
 decisiveness — is the substantive content of the <em>field expansion</em> lemma
-<a class="node-ref" data-node-id="social_choice.voting.decisive_spread" href="voting/social_choice_voting_decisive_spread.html">Field Expansion — Decisive on One Pair Implies Decisive Everywhere</a>. The split into "weak" vs full
+[[social_choice.voting.decisive_spread]]. The split into "weak" vs full
 decisiveness lets the Arrow proof use only the simpler hypothesis when
 building witnesses.</p>
 <h2>References</h2>

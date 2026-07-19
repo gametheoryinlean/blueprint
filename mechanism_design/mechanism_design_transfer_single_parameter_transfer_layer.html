@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,50 +1073,55 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L163"><code>SingleParameterMechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L163"><code>SingleParameterMechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>structure SingleParameterMechanism (I : Type*) (R : Type*)
     extends MechanismWithTransfers I (fun _ =&gt; R) (I → R) R
+
 namespace SingleParameterMechanism
+
 variable {I : Type*} [DecidableEq I] {R : Type*}
 variable (M : SingleParameterMechanism I R)
+
 /-- Allocation feasibility: each agent&#39;s allocation lies in `[0, 1]`.
+
   Requires `Zero R`, `One R`, and `LE R` (e.g., any linearly ordered field). -/</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L174"><code>SingleParameterMechanism.IsAllocFeasible</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L174"><code>SingleParameterMechanism.IsAllocFeasible</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsAllocFeasible [Zero R] [One R] [LE R] : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsAllocFeasible [Zero R] [One R] [LE R] : Prop :=
+  ∀ (b : I → R) (i : I), 0 ≤ M.allocationRule b i ∧ M.allocationRule b i ≤ 1</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L185"><code>SingleParameterMechanism.IsMonotone</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L185"><code>SingleParameterMechanism.IsMonotone</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1129,62 +1132,65 @@ variable (M : SingleParameterMechanism I R)
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L195"><code>SingleParameterMechanism.payment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L195"><code>SingleParameterMechanism.payment</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev payment (b : I → R) : I → R</code></pre>
+          <pre class="lean-signature"><code>abbrev payment (b : I → R) : I → R :=
+  M.paymentRule b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L200"><code>SingleParameterMechanism.quasiLinearValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L200"><code>SingleParameterMechanism.quasiLinearValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def quasiLinearValue [Mul R]
-    (x θ : I → R) (i : I) : R</code></pre>
+    (x θ : I → R) (i : I) : R :=
+  θ i * x i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L206"><code>SingleParameterMechanism.quasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L206"><code>SingleParameterMechanism.quasiLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def quasiLinearUtility [Mul R] [Sub R]
-    (b θ : I → R) (i : I) : R</code></pre>
+    (b θ : I → R) (i : I) : R :=
+  quasiLinearValue (M.allocationRule b) θ i - M.payment b i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L214"><code>SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L214"><code>SingleParameterMechanism.quasiLinearUtility_eq_transferQuasiLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1193,18 +1199,20 @@ variable (M : SingleParameterMechanism I R)
     (b θ : I → R) (i : I) :
     M.quasiLinearUtility b θ i =
       MechanismWithTransfers.quasiLinearUtility
-        (I</code></pre>
+        (I := I) (T := fun _ =&gt; R) (A := I → R) (P := R) (V := R) (U := R)
+        ({ allocationRule := M.allocationRule
+           paymentRule</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L230"><code>SingleParameterMechanism.IsDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L230"><code>SingleParameterMechanism.IsDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
@@ -1215,24 +1223,27 @@ variable (M : SingleParameterMechanism I R)
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L238"><code>SingleParameterMechanism.IsImplementable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L238"><code>SingleParameterMechanism.IsImplementable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Transfer
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Transfer
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsImplementable [Mul R] [Sub R] [Preorder R]
-    (x : (I → R) → I → R) : Prop</code></pre>
+    (x : (I → R) → I → R) : Prop :=
+  ∃ p : (I → R) → I → R,
+    ( { allocationRule := x
+        paymentRule := p } : SingleParameterMechanism I R).IsDSIC</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Transfer</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Transfer.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Transfer</code></a>
       </p>
       
     </div>

@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,44 +1077,45 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L68"><code>Auction.FirstPrice.winner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L68"><code>Auction.FirstPrice.winner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def winner (b : I → U) : I</code></pre>
+          <pre class="lean-signature"><code>noncomputable def winner (b : I → U) : I := Auction.argmaxBid b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L79"><code>Auction.FirstPrice.utility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L79"><code>Auction.FirstPrice.utility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def utility (v b : I → U) (i : I) : U</code></pre>
+          <pre class="lean-signature"><code>noncomputable def utility (v b : I → U) (i : I) : U :=
+  if i = winner b then v i - b i else 0</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L86"><code>Auction.FirstPrice.utility_winner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L86"><code>Auction.FirstPrice.utility_winner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
@@ -1128,12 +1127,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L91"><code>Auction.FirstPrice.utility_loser</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L91"><code>Auction.FirstPrice.utility_loser</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
@@ -1145,44 +1144,48 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L162"><code>Auction.FirstPrice.mechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L162"><code>Auction.FirstPrice.mechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U where
+  allocationRule b := winner b
+  paymentRule b i := if i = winner b then b i else 0</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L98"><code>Auction.FirstPrice.game</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L98"><code>Auction.FirstPrice.game</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def game (v : I → U) : StrategicGame I U where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def game (v : I → U) : StrategicGame I U where
+  strategy := fun _ =&gt; U
+  payoff b i := utility v b i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L171"><code>Auction.FirstPrice.game_eq_toStrategicGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L171"><code>Auction.FirstPrice.game_eq_toStrategicGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.FirstPrice
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.FirstPrice
           </span>
           
           
@@ -1196,7 +1199,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L1"><code>EconCSLib.MechanismDesign.Auction.FirstPrice</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L1"><code>EconCSLib.MechanismDesign.Auction.FirstPrice</code></a>
       </p>
       
     </div>
@@ -1209,12 +1212,12 @@
 in which the highest bidder wins and pays their own bid. All other bidders
 pay nothing.</p>
 <h2>Setup</h2>
-<p>Fix a finite, nontrivial bidder set <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> and an ordered abelian group <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> of
+<p>Fix a finite, nontrivial bidder set <code>I</code> and an ordered abelian group <code>U</code> of
 bids and utilities. The bid profile is <code>b : I → U</code>.</p>
 <ul>
 <li><code>winner b : I</code> — the highest bidder, defined as <code>Auction.argmaxBid b</code>.
   The same deterministic tie-breaker as in the second-price auction
-  (<a class="node-ref" data-node-id="mechanism_design.auction.basic.ordered_bid_utilities" href="auction/basic/mechanism_design_auction_basic_ordered_bid_utilities.html">Ordered-Bid Utilities</a>).</li>
+  ([[mechanism_design.auction.basic.ordered_bid_utilities]]).</li>
 <li><code>utility v b i : U</code> — quasi-linear payoff at valuation profile <code>v</code>:
   $$
   u_i(v, b) \;=\; \begin{cases} v_i - b_i &amp; i = \mathrm{winner}(b),\\ 0 &amp; \text{otherwise}.\end{cases}
@@ -1224,28 +1227,28 @@ bids and utilities. The bid profile is <code>b : I → U</code>.</p>
 <ul>
 <li><code>mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U</code> packages the
   first-price auction as a transfer mechanism
-  (<a class="node-ref" data-node-id="mechanism_design.transfer.mechanisms_with_transfers" href="transfer/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>). The report type
-  is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> per bidder, the allocation type is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> (the winning bidder), and
+  ([[mechanism_design.transfer.mechanisms_with_transfers]]). The report type
+  is <code>U</code> per bidder, the allocation type is <code>I</code> (the winning bidder), and
   the payment rule is <code>paymentRule b w = if w = winner b then b w else 0</code>.</li>
 <li><code>game v : StrategicGame I U</code> packages the same auction as a strategic
   game with the bid profile as the strategy profile and the quasi-linear
   payoff above as the utility function.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/FirstPrice.lean#L171"><code>game_eq_toStrategicGame</code></a> certifies that <code>game v</code> agrees with
+<li><code>game_eq_toStrategicGame</code> certifies that <code>game v</code> agrees with
   <code>mechanism.toStrategicGame</code> for the auction utility function.</li>
 </ul>
 <h2>Allocation rule is shared with second-price</h2>
 <p>The first-price and second-price auctions share the same allocation rule
-(highest bidder wins, ties broken by <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/AuctionBasic.lean#L213"><code>argmaxBid</code></a>); they differ only in the
+(highest bidder wins, ties broken by <code>argmaxBid</code>); they differ only in the
 payment rule. This is the elementary instance of the broader observation
 that, within the single-parameter Myerson framework
-(<a class="node-ref" data-node-id="mechanism_design.transfer.single_parameter_transfer_layer" href="transfer/mechanism_design_transfer_single_parameter_transfer_layer.html">Single-Parameter Transfer Layer</a>), allocation
+([[mechanism_design.transfer.single_parameter_transfer_layer]]), allocation
 and payment are independent design choices.</p>
 <h2>Position in the library</h2>
 <p>The negative DSIC result is in the companion theorem node
-<a class="node-ref" data-node-id="mechanism_design.auction.basic.first_price_no_dsic" href="auction/basic/mechanism_design_auction_basic_first_price_no_dsic.html">First-Price Fails DSIC</a>: truthful bidding is not weakly
+[[mechanism_design.auction.basic.first_price_no_dsic]]: truthful bidding is not weakly
 dominant in the first-price auction. Symmetric Bayesian Nash equilibria
 under IPV — the standard positive analysis of first-price — are tracked at
-the blueprint level in <a class="node-ref" data-node-id="mechanism_design.auction.bayesian.symmetric_first_price_equilibrium" href="auction/bayesian/mechanism_design_auction_bayesian_symmetric_first_price_equilibrium.html">Symmetric IPV First-Price Equilibrium</a>.</p>
+the blueprint level in [[mechanism_design.auction.bayesian.symmetric_first_price_equilibrium]].</p>
 <h2>References</h2>
 <ul>
 <li>[AGT, Chapter 1, Section 1.3.2] Nisan, Roughgarden, Tardos, and Vazirani,

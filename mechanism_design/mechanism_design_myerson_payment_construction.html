@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,30 +1075,32 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Myerson.lean#L53"><code>SingleParameterMechanism.withMyersonPayment</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Myerson.lean#L53"><code>SingleParameterMechanism.withMyersonPayment</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Myerson
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Myerson
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def withMyersonPayment
     [DecidableEq I]
-    (x : (I → ℝ) → I → ℝ) : SingleParameterMechanism I ℝ where</code></pre>
+    (x : (I → ℝ) → I → ℝ) : SingleParameterMechanism I ℝ where
+  allocationRule := x
+  paymentRule := myersonPayment x</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Myerson.lean#L61"><code>SingleParameterMechanism.withMyersonPayment_quasiLinearUtility_eq</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Myerson.lean#L61"><code>SingleParameterMechanism.withMyersonPayment_quasiLinearUtility_eq</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Myerson
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Myerson
           </span>
           
           
@@ -1114,7 +1114,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Myerson.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Myerson</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Myerson.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Myerson</code></a>
       </p>
       
     </div>
@@ -1123,15 +1123,15 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Myerson Payment Construction</h1>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Myerson.lean#L53"><code>withMyersonPayment</code></a> is the <em>constructive operator</em> that takes a
+<p><code>withMyersonPayment</code> is the <em>constructive operator</em> that takes a
 single-parameter allocation rule $x : (I \to \mathbb{R}) \to (I \to \mathbb{R})$
 and returns the mechanism with Myerson payments
-(<a class="node-ref" data-node-id="mechanism_design.myerson.payment_formula" href="myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a>) attached.</p>
+([[mechanism_design.myerson.payment_formula]]) attached.</p>
 <p>If the input allocation rule is monotone, the resulting mechanism is
 DSIC — this is the implementability half of the Myerson characterisation
-(<a class="node-ref" data-node-id="mechanism_design.myerson.monotonicity_characterization" href="myerson/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a>).</p>
+([[mechanism_design.myerson.monotonicity_characterization]]).</p>
 <h2>Quasi-linear utility after attachment</h2>
-<p>The companion lemma <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Myerson.lean#L61"><code>withMyersonPayment_quasiLinearUtility_eq</code></a> gives the
+<p>The companion lemma <code>withMyersonPayment_quasiLinearUtility_eq</code> gives the
 explicit utility expression after Myerson payments are attached:
 $$
 u_i(b_i; b_{-i}) \;=\; v_i \cdot x_i(b_i, b_{-i})
@@ -1143,13 +1143,13 @@ $x_i$ is monotone in its first argument — yielding both DSIC (truthful
 reporting is best) and ex-post IR (utility is non-negative).</p>
 <h2>Where this sits</h2>
 <ul>
-<li><em>Definition layer</em>: this node. <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Myerson.lean#L53"><code>withMyersonPayment</code></a> is the operator
+<li><em>Definition layer</em>: this node. <code>withMyersonPayment</code> is the operator
   itself, and the utility-equality lemma is its definitional
   unfolding.</li>
 <li><em>Characterisation layer</em>:
-  <a class="node-ref" data-node-id="mechanism_design.myerson.monotonicity_characterization" href="myerson/mechanism_design_myerson_monotonicity_characterization.html">Myerson Monotonicity Characterization</a> proves
+  [[mechanism_design.myerson.monotonicity_characterization]] proves
   monotone $\Leftrightarrow$ implementable using this operator.</li>
-<li><em>Formula layer</em>: <a class="node-ref" data-node-id="mechanism_design.myerson.payment_formula" href="myerson/mechanism_design_myerson_payment_formula.html">Myerson Payment Formula</a> gives
+<li><em>Formula layer</em>: [[mechanism_design.myerson.payment_formula]] gives
   the Myerson payment integral itself.</li>
 </ul>
 <h2>References</h2>

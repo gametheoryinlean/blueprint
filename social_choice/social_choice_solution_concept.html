@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,55 +1073,58 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Basic.lean#L46"><code>SocialChoice.SolutionConcept</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Basic.lean#L46"><code>SocialChoice.SolutionConcept</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def SolutionConcept (N A : Type*)</code></pre>
+          <pre class="lean-signature"><code>def SolutionConcept (N A : Type*) :=
+  Instance N A → A → Prop</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Basic.lean#L50"><code>SocialChoice.Rule</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Basic.lean#L50"><code>SocialChoice.Rule</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Basic
           </span>
           
           
           <p class="lean-docstring">A rule returns a feasible alternative for every instance.</p>
-          <pre class="lean-signature"><code>def Rule (N A : Type*)</code></pre>
+          <pre class="lean-signature"><code>def Rule (N A : Type*) :=
+  (I : Instance N A) → {a : A // I.feasible a}</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Basic.lean#L54"><code>SocialChoice.Correspondence</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Basic.lean#L54"><code>SocialChoice.Correspondence</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Basic
           </span>
           
           
           <p class="lean-docstring">A correspondence is a set-valued choice rule on instances.</p>
-          <pre class="lean-signature"><code>def Correspondence (N A : Type*)</code></pre>
+          <pre class="lean-signature"><code>def Correspondence (N A : Type*) :=
+  Instance N A → Set A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Basic.lean#L1"><code>EconCSLib.SocialChoice.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Basic.lean#L1"><code>EconCSLib.SocialChoice.Basic</code></a>
       </p>
       
     </div>
@@ -1134,7 +1135,7 @@
     <h1>Solution Concept, Rule, and Correspondence</h1>
 <p>For a fixed population $N$ and alternative space $A$, three closely related
 shapes describe ways of selecting alternatives from a social choice
-instance $I = (F, P)$ (<a class="node-ref" data-node-id="social_choice.instance" href="social_choice_instance.html">Social Choice Instance</a>).</p>
+instance $I = (F, P)$ ([[social_choice.instance]]).</p>
 <ul>
 <li>
 <p>A <em>solution concept</em> is a predicate
@@ -1161,8 +1162,8 @@ rule with a feasibility guarantee), and a <em>set-valued map</em> (a Pareto
 correspondence, a choice correspondence, and so on).</p>
 <p>Specializations appear at later layers: the voting layer instantiates
 solution concepts and rules into social welfare functions and social
-choice functions (<a class="node-ref" data-node-id="social_choice.voting.swf" href="voting/social_choice_voting_swf.html">Social Welfare Function</a>,
-<a class="node-ref" data-node-id="social_choice.voting.scf" href="voting/social_choice_voting_scf.html">Social Choice Function</a>); fair division supplies rules returning a
+choice functions ([[social_choice.voting.swf]],
+[[social_choice.voting.scf]]); fair division supplies rules returning a
 feasible allocation.</p>
 <h2>References</h2>
 <ul>

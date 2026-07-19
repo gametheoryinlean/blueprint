@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,131 +1077,139 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L126"><code>SocialChoice.FairDivision.Divisible.MeasureInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L126"><code>SocialChoice.FairDivision.Divisible.MeasureInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">A measure-based divisible-goods instance.</p>
-          <pre class="lean-signature"><code>structure MeasureInstance (N Ω : Type*) [MeasurableSpace Ω] where</code></pre>
+          <pre class="lean-signature"><code>structure MeasureInstance (N Ω : Type*) [MeasurableSpace Ω] where
+  /-- Each agent&#39;s measure over cake pieces. -/
+  measure : N → Measure Ω</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L133"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.toCakeValuation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L133"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.toCakeValuation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">The raw cake valuation induced by a measure instance.</p>
           <pre class="lean-signature"><code>def toCakeValuation {N Ω : Type*} [MeasurableSpace Ω]
-    (I : MeasureInstance N Ω) : CakeValuation N Ω ENNReal</code></pre>
+    (I : MeasureInstance N Ω) : CakeValuation N Ω ENNReal :=
+  MeasureValuation I.measure</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L138"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.toCardinalInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L138"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.toCardinalInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">The real-valued cardinal instance induced by measure values.</p>
           <pre class="lean-signature"><code>noncomputable def toCardinalInstance {N Ω : Type*} [MeasurableSpace Ω]
-    (I : MeasureInstance N Ω) : CardinalInstance N Ω where</code></pre>
+    (I : MeasureInstance N Ω) : CardinalInstance N Ω where
+  utility := fun i S =&gt; (I.measure i S).toReal</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L159"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.toShareInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L159"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.toShareInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           
           <pre class="lean-signature"><code>noncomputable def toShareInstance {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
     (I : MeasureInstance N Ω) :
-    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω)</code></pre>
+    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω) :=
+  I.toGenericCardinalInstance.toShareInstance</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L167"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L167"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsEnvyFree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Envy-freeness for a measure-based divisible instance, stated in `ENNReal`.</p>
           <pre class="lean-signature"><code>def IsEnvyFree {N Ω : Type*} [MeasurableSpace Ω]
-    (I : MeasureInstance N Ω) (A : Allocation N Ω) : Prop</code></pre>
+    (I : MeasureInstance N Ω) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.Divisible.IsEnvyFree I.toCakeValuation A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L185"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L185"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Proportionality for a measure-based divisible instance, stated in `ENNReal`.</p>
           <pre class="lean-signature"><code>def IsProportional {N Ω : Type*} [MeasurableSpace Ω]
-    (I : MeasureInstance N Ω) (n : ℕ) (A : Allocation N Ω) : Prop</code></pre>
+    (I : MeasureInstance N Ω) (n : ℕ) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.Divisible.IsProportional n I.toCakeValuation A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L190"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsEquitable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L190"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsEquitable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Equitability for a measure-based divisible instance, stated in `ENNReal`.</p>
           <pre class="lean-signature"><code>def IsEquitable {N Ω : Type*} [MeasurableSpace Ω]
-    (I : MeasureInstance N Ω) (A : Allocation N Ω) : Prop</code></pre>
+    (I : MeasureInstance N Ω) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.Divisible.IsEquitable I.toCakeValuation A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L195"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsEnvyFree.isProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L195"><code>SocialChoice.FairDivision.Divisible.MeasureInstance.IsEnvyFree.isProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
@@ -1220,7 +1226,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
       </p>
       
     </div>
@@ -1239,28 +1245,28 @@ $$</p>
 <p>Three canonical conversions tie the measure-instance into the rest of
 the stack:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L133"><code>toCakeValuation</code></a> — view the family as a cake valuation
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_valuation" href="fair_division/divisible/social_choice_fair_division_divisible_measure_valuation.html">Measure Valuation</a>) with
+<li><code>toCakeValuation</code> — view the family as a cake valuation
+  ([[social_choice.fair_division.divisible.measure_valuation]]) with
   $\mathrm{ENNReal}$ values.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L138"><code>toCardinalInstance</code></a> — push the measures to real-valued utilities via
+<li><code>toCardinalInstance</code> — push the measures to real-valued utilities via
   <code>.toReal</code>, giving a divisible cardinal instance
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.cardinal_instance" href="fair_division/divisible/social_choice_fair_division_divisible_cardinal_instance.html">Divisible Cardinal Instance</a>).</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L159"><code>toShareInstance</code></a> — compose with the cardinal-induced share
+  ([[social_choice.fair_division.divisible.cardinal_instance]]).</li>
+<li><code>toShareInstance</code> — compose with the cardinal-induced share
   preference to obtain a no-externality share instance.</li>
 </ul>
 <h2>Instance-keyed fairness predicates</h2>
 <p>Re-exports of the divisible fairness predicates
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.envy_free" href="fair_division/divisible/social_choice_fair_division_divisible_envy_free.html">Divisible Envy-Free, Proportional, Equitable Predicates</a>) keyed on the
+([[social_choice.fair_division.divisible.envy_free]]) keyed on the
 instance: <code>IsEnvyFree A</code>, <code>IsProportional n A</code>, <code>IsEquitable A</code>. These
 are stated in $\mathrm{ENNReal}$ (the natural ambient ring for measure
 values), with a translation to the real-valued cardinal form provided
-by <a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_instance_ef_iff_real" href="fair_division/divisible/social_choice_fair_division_divisible_measure_instance_ef_iff_real.html">Measure-Instance EF ↔ Real-Valued Cardinal EF</a>.</p>
+by [[social_choice.fair_division.divisible.measure_instance_ef_iff_real]].</p>
 <p>The basic implication <code>IsEnvyFree ⇒ IsProportional</code> lifts directly from
 the cake-valuation level
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ef_implies_proportional" href="fair_division/divisible/social_choice_fair_division_divisible_ef_implies_proportional.html">EF ⇒ Proportional (Measure Valuations)</a>); the
-instance-level wrapper is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L195"><code>MeasureInstance.IsEnvyFree.isProportional</code></a>.</p>
+([[social_choice.fair_division.divisible.ef_implies_proportional]]); the
+instance-level wrapper is <code>MeasureInstance.IsEnvyFree.isProportional</code>.</p>
 <p>The existence theorems
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.measure_instance_existence" href="fair_division/divisible/social_choice_fair_division_divisible_measure_instance_existence.html">Measure-Instance Existence Wrappers</a>)
+([[social_choice.fair_division.divisible.measure_instance_existence]])
 are stated at this layer.</p>
 <h2>References</h2>
 <ul>

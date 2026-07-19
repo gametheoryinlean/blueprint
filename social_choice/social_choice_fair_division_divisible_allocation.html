@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,56 +1073,63 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L27"><code>SocialChoice.FairDivision.Divisible.Allocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L27"><code>SocialChoice.FairDivision.Divisible.Allocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Allocation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Allocation
           </span>
           
           
           
-          <pre class="lean-signature"><code>abbrev Allocation (N Ω : Type*)</code></pre>
+          <pre class="lean-signature"><code>abbrev Allocation (N Ω : Type*) := SocialChoice.FairDivision.Allocation N (Set Ω)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L30"><code>SocialChoice.FairDivision.Divisible.IsAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L30"><code>SocialChoice.FairDivision.Divisible.IsAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Allocation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Allocation
           </span>
           
           
           <p class="lean-docstring">A complete divisible allocation is a measurable partition of the cake.</p>
           <pre class="lean-signature"><code>structure IsAllocation {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
-    (A : Allocation N Ω) : Prop where</code></pre>
+    (A : Allocation N Ω) : Prop where
+  /-- Each piece is a measurable set. -/
+  measurable : ∀ i : N, MeasurableSet (A i)
+  /-- Distinct agents receive disjoint pieces. -/
+  disjoint   : ∀ i j : N, i ≠ j → Disjoint (A i) (A j)
+  /-- Every point of the cake belongs to some agent&#39;s piece. -/
+  cover      : ⋃ i : N, A i = Set.univ</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L53"><code>SocialChoice.FairDivision.Divisible.IsContiguousAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L53"><code>SocialChoice.FairDivision.Divisible.IsContiguousAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Allocation
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Allocation
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsContiguousAllocation {N : Type*} (A : Allocation N ℝ) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsContiguousAllocation {N : Type*} (A : Allocation N ℝ) : Prop :=
+  ∀ i : N, (A i).OrdConnected</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Allocation</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Allocation</code></a>
       </p>
       
     </div>
@@ -1136,7 +1141,7 @@
 <p>A <em>divisible allocation</em> on a measurable cake $\Omega$ assigns each agent
 $i \in N$ a <em>piece</em> $A(i) \subseteq \Omega$. Concretely the type is a
 specialization of the generic allocation alias
-(<a class="node-ref" data-node-id="social_choice.fair_division.allocation" href="fair_division/social_choice_fair_division_allocation.html">Allocation</a>):
+([[social_choice.fair_division.allocation]]):
 $$
 \mathrm{Allocation}\ N\ \Omega \;=\;
 \mathrm{FairDivision.Allocation}\ N\ (\mathrm{Set}\ \Omega) \;=\; N \to \mathrm{Set}\ \Omega.
@@ -1144,7 +1149,7 @@ $$</p>
 <p>In Lean: <code>SocialChoice.FairDivision.Divisible.Allocation N Ω</code>.</p>
 <h2>Partition predicate</h2>
 <p>A <em>complete</em> divisible allocation is a measurable partition of the cake. In
-Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L30"><code>IsAllocation</code></a> is a structure with three fields:</p>
+Lean: <code>IsAllocation</code> is a structure with three fields:</p>
 <ul>
 <li><code>measurable : ∀ i, MeasurableSet (A i)</code> — each piece is measurable;</li>
 <li><code>disjoint  : ∀ i ≠ j, Disjoint (A i) (A j)</code> — distinct agents get
@@ -1154,7 +1159,7 @@ Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSL
 </ul>
 <p>The class hypotheses <code>[MeasurableSpace Ω]</code> and <code>[Fintype N]</code> are needed for
 the union/disjointness conditions to make sense.</p>
-<p>A small derived fact <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Allocation.lean#L45"><code>IsAllocation.mem_iUnion</code></a> says every $x \in \Omega$
+<p>A small derived fact <code>IsAllocation.mem_iUnion</code> says every $x \in \Omega$
 belongs to some $A(i)$.</p>
 <h2>Contiguous allocations on $\mathbb{R}$</h2>
 <p>A specialised predicate <code>IsContiguousAllocation A</code> (on $A : N \to

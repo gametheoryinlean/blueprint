@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,28 +1073,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L83"><code>MultipleParameterMechanism.welfareWithout</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L83"><code>MultipleParameterMechanism.welfareWithout</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           <p class="lean-docstring">Reported social welfare of all agents except `i`.</p>
-          <pre class="lean-signature"><code>def welfareWithout (v : ∀ _ : I, Valuation A ℝ) (i : I) (a : A) : ℝ</code></pre>
+          <pre class="lean-signature"><code>def welfareWithout (v : ∀ _ : I, Valuation A ℝ) (i : I) (a : A) : ℝ :=
+  (Finset.univ.erase i).sum fun j =&gt; v j a</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L89"><code>MultipleParameterMechanism.socialWelfare_eq_value_add_welfareWithout</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L89"><code>MultipleParameterMechanism.socialWelfare_eq_value_add_welfareWithout</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1109,12 +1108,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L98"><code>MultipleParameterMechanism.welfareWithout_le_socialWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L98"><code>MultipleParameterMechanism.welfareWithout_le_socialWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1129,12 +1128,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L111"><code>MultipleParameterMechanism.welfareWithout_le_socialWelfare_of_nonneg_i</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L111"><code>MultipleParameterMechanism.welfareWithout_le_socialWelfare_of_nonneg_i</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1148,12 +1147,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L122"><code>MultipleParameterMechanism.welfareWithout_update_self</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L122"><code>MultipleParameterMechanism.welfareWithout_update_self</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1166,28 +1165,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L133"><code>MultipleParameterMechanism.maxWelfareWithout</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L133"><code>MultipleParameterMechanism.maxWelfareWithout</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           <p class="lean-docstring">The maximum reported welfare of agents other than `i`.</p>
-          <pre class="lean-signature"><code>noncomputable def maxWelfareWithout (v : ∀ _ : I, Valuation A ℝ) (i : I) : ℝ</code></pre>
+          <pre class="lean-signature"><code>noncomputable def maxWelfareWithout (v : ∀ _ : I, Valuation A ℝ) (i : I) : ℝ :=
+  Finset.sup&#39; Finset.univ Finset.univ_nonempty (welfareWithout v i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L138"><code>MultipleParameterMechanism.maxWelfareWithout_update_self</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L138"><code>MultipleParameterMechanism.maxWelfareWithout_update_self</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1200,12 +1200,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L147"><code>MultipleParameterMechanism.exists_withoutAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L147"><code>MultipleParameterMechanism.exists_withoutAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1217,28 +1217,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L160"><code>MultipleParameterMechanism.withoutAllocation</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L160"><code>MultipleParameterMechanism.withoutAllocation</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           <p class="lean-docstring">A welfare-maximizing allocation for agents other than `i`.</p>
-          <pre class="lean-signature"><code>noncomputable def withoutAllocation (v : ∀ _ : I, Valuation A ℝ) (i : I) : A</code></pre>
+          <pre class="lean-signature"><code>noncomputable def withoutAllocation (v : ∀ _ : I, Valuation A ℝ) (i : I) : A :=
+  Classical.choose (exists_withoutAllocation v i)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L165"><code>MultipleParameterMechanism.withoutAllocation_isOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L165"><code>MultipleParameterMechanism.withoutAllocation_isOptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1250,7 +1251,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
       </p>
       
     </div>
@@ -1267,22 +1268,22 @@ W_{-i}(v, a) \;=\; \sum_{j \neq i} v_j(a).
 $$</p>
 <p>Together with <code>maxWelfareWithout v i := \max_a W_{-i}(v, a)</code> it
 underpins the Clarke-pivot payment $p_i(v) = \max_a W_{-i}(v, a) - W_{-i}(v, a^*)$
-(see <a class="node-ref" data-node-id="mechanism_design.vcg.payment_identity" href="vcg/mechanism_design_vcg_payment_identity.html">VCG Payment Identity</a>).</p>
+(see [[mechanism_design.vcg.payment_identity]]).</p>
 <h2>Core identities and bounds</h2>
 <ul>
-<li><strong>Decomposition</strong> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L89"><code>socialWelfare_eq_value_add_welfareWithout</code></a>):
+<li><strong>Decomposition</strong> (<code>socialWelfare_eq_value_add_welfareWithout</code>):
   $W(v, a) = v_i(a) + W_{-i}(v, a)$ for every agent $i$ and allocation $a$.</li>
-<li><strong>Monotonicity</strong> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L98"><code>welfareWithout_le_socialWelfare</code></a>):
+<li><strong>Monotonicity</strong> (<code>welfareWithout_le_socialWelfare</code>):
   $W_{-i}(v, a) \le W(v, a)$ when $v_i(a) \ge 0$, with a non-negativity
-  variant <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L111"><code>welfareWithout_le_socialWelfare_of_nonneg_i</code></a>.</li>
-<li><strong>Report independence</strong> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L122"><code>welfareWithout_update_self</code></a>,
-  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L138"><code>maxWelfareWithout_update_self</code></a>): replacing agent $i$'s reported
+  variant <code>welfareWithout_le_socialWelfare_of_nonneg_i</code>.</li>
+<li><strong>Report independence</strong> (<code>welfareWithout_update_self</code>,
+  <code>maxWelfareWithout_update_self</code>): replacing agent $i$'s reported
   valuation does not change $W_{-i}$ or its max — by construction,
   agent $i$'s report is the one term excluded from the sum. This is
   the <em>strategic core</em> of the Clarke pivot: agent $i$ cannot influence
   $\max_a W_{-i}$.</li>
-<li><strong>Existence and choice</strong> (<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L147"><code>exists_withoutAllocation</code></a>,
-  <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L160"><code>withoutAllocation</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L165"><code>withoutAllocation_isOptimal</code></a>): a welfare-
+<li><strong>Existence and choice</strong> (<code>exists_withoutAllocation</code>,
+  <code>withoutAllocation</code>, <code>withoutAllocation_isOptimal</code>): a welfare-
   without-$i$-maximising allocation always exists for finite $A$ and is
   selected noncomputably via choice.</li>
 </ul>

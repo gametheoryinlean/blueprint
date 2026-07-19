@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,24 +1077,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Efficiency.lean#L47"><code>SocialChoice.FairDivision.Indivisible.IsParetoOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Efficiency.lean#L47"><code>SocialChoice.FairDivision.Indivisible.IsParetoOptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.Efficiency
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.Efficiency
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev IsParetoOptimal [Fintype N] [DecidableEq G]
-    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop</code></pre>
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop :=
+  SocialChoice.FairDivision.IsParetoOptimal (fun B =&gt; IsAllocation allGoods B) v.val A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Efficiency.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Efficiency</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/Efficiency.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.Efficiency</code></a>
       </p>
       
     </div>
@@ -1108,12 +1107,12 @@
 <p>An indivisible allocation $A$ is <em>Pareto optimal</em> (PO) if no complete
 allocation weakly improves every agent's bundle value with at least one
 strict improvement.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/Efficiency.lean#L47"><code>SocialChoice.FairDivision.Indivisible.IsParetoOptimal</code></a> — an
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Algebra/AffineMonoid/Basic.lean#L25"><code>abbrev</code></a> for the generic <a class="node-ref" data-node-id="social_choice.fair_division.pareto_optimal" href="fair_division/social_choice_fair_division_pareto_optimal.html">Pareto Optimal Allocation</a>
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.IsParetoOptimal</code> — an
+<code>abbrev</code> for the generic [[social_choice.fair_division.pareto_optimal]]
 specialised at <code>v.val</code> with the feasibility predicate $B \mapsto
 \mathrm{IsAllocation}\ \mathrm{allGoods}\ B$.</p>
 <p>The class hypotheses <code>[Fintype N]</code> (for <code>IsAllocation</code>'s
-<code>Finset.univ.biUnion</code>) and <code>[DecidableEq G]</code> (for <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Defs.lean#L75"><code>Finset</code></a> operations)
+<code>Finset.univ.biUnion</code>) and <code>[DecidableEq G]</code> (for <code>Finset</code> operations)
 are required.</p>
 <h2>Significance</h2>
 <p>PO is the standard efficiency yardstick for indivisible allocations.

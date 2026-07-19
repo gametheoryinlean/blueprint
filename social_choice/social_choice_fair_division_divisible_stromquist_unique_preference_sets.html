@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,28 +1073,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L470"><code>SocialChoice.FairDivision.Divisible.strom_B</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L470"><code>SocialChoice.FairDivision.Divisible.strom_B</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
           
-          <pre class="lean-signature"><code>private def strom_B (i j : Fin n) : Set (Fin n → ℝ)</code></pre>
+          <pre class="lean-signature"><code>private def strom_B (i j : Fin n) : Set (Fin n → ℝ) :=
+  strom_A n μ i j \ ⋃ k ∈ Finset.univ.filter (· ≠ i), strom_A n μ k j</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L477"><code>SocialChoice.FairDivision.Divisible.strom_B_open</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L477"><code>SocialChoice.FairDivision.Divisible.strom_B_open</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1107,12 +1106,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L504"><code>SocialChoice.FairDivision.Divisible.strom_B_disjoint_over_i</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L504"><code>SocialChoice.FairDivision.Divisible.strom_B_disjoint_over_i</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Existence
           </span>
           
           
@@ -1124,7 +1123,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Existence</code></a>
       </p>
       
     </div>
@@ -1134,7 +1133,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Stromquist Unique-Preference Sets B(i, j)</h1>
 <p>A strengthening of the preference sets
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_preference_sets" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_preference_sets.html">Stromquist Preference Sets A(i, j)</a>):
+([[social_choice.fair_division.divisible.stromquist_preference_sets]]):
 $B(i, j)$ collects the divisions where piece $i$ is agent $j$'s <strong>unique</strong>
 value-maximizer:
 $$
@@ -1142,7 +1141,7 @@ B(i, j) \;=\; \{x \in S \mid \forall k \ne i,\ v(x, j, k) &lt; v(x, j, i)\}.
 $$</p>
 <p>In Lean: <code>strom_B i j</code>.</p>
 <h2>Openness</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L477"><code>strom_B_open</code></a>: $B(i, j)$ is open in $\mathrm{Fin}\ n \to \mathbb{R}$.</p>
+<p><code>strom_B_open</code>: $B(i, j)$ is open in $\mathrm{Fin}\ n \to \mathbb{R}$.</p>
     
     <details class="proof-details">
       <summary>Proof</summary>
@@ -1150,10 +1149,10 @@ $$</p>
         <p>The defining condition is a conjunction of $n - 1$ strict
 inequalities, each of which cuts out an open half-space because both
 sides are continuous
-(<a class="node-ref" data-node-id="social_choice.fair_division.divisible.stromquist_value_continuous" href="fair_division/divisible/social_choice_fair_division_divisible_stromquist_value_continuous.html">Piece-Value Function Is Continuous on the Division Simplex</a>).
+([[social_choice.fair_division.divisible.stromquist_value_continuous]]).
 A finite intersection of open sets is open.</p>
 <h2>Pairwise disjoint across pieces at a fixed agent</h2>
-<p><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Existence.lean#L504"><code>strom_B_disjoint_over_i</code></a>: for fixed $j$, the family
+<p><code>strom_B_disjoint_over_i</code>: for fixed $j$, the family
 $\{B(i, j) : i \in \mathrm{Fin}\ n\}$ is pairwise disjoint.</p>
 <p><em>Proof.</em> If $x \in B(i_1, j) \cap B(i_2, j)$ with $i_1 \ne i_2$, then
 agent $j$ has piece $i_1$ as their unique value-maximizer (the $B(i_1, j)$

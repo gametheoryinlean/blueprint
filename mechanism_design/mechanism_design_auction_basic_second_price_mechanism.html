@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,44 +1077,44 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L75"><code>Auction.SecondPrice.winner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L75"><code>Auction.SecondPrice.winner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def winner (b : I → U) : I</code></pre>
+          <pre class="lean-signature"><code>noncomputable def winner (b : I → U) : I := Auction.argmaxBid b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L78"><code>Auction.SecondPrice.secondPrice</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L78"><code>Auction.SecondPrice.secondPrice</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
           <p class="lean-docstring">The second price: the highest bid among all bidders other than the winner.</p>
-          <pre class="lean-signature"><code>noncomputable def secondPrice (b : I → U) : U</code></pre>
+          <pre class="lean-signature"><code>noncomputable def secondPrice (b : I → U) : U := Auction.maxBidExcluding b (winner b)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L105"><code>Auction.SecondPrice.secondPrice_le_bid_winner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L105"><code>Auction.SecondPrice.secondPrice_le_bid_winner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1127,28 +1125,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L113"><code>Auction.SecondPrice.utility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L113"><code>Auction.SecondPrice.utility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def utility (v b : I → U) (i : I) : U</code></pre>
+          <pre class="lean-signature"><code>noncomputable def utility (v b : I → U) (i : I) : U :=
+  if i = winner b then v i - secondPrice b else 0</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L120"><code>Auction.SecondPrice.utility_winner</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L120"><code>Auction.SecondPrice.utility_winner</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1160,12 +1159,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L125"><code>Auction.SecondPrice.utility_loser</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L125"><code>Auction.SecondPrice.utility_loser</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1177,12 +1176,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L129"><code>Auction.SecondPrice.utility_nonneg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L129"><code>Auction.SecondPrice.utility_nonneg</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1194,44 +1193,48 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L194"><code>Auction.SecondPrice.mechanism</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L194"><code>Auction.SecondPrice.mechanism</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U where
+  allocationRule b := winner b
+  paymentRule b i := if i = winner b then secondPrice b else 0</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L172"><code>Auction.SecondPrice.game</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L172"><code>Auction.SecondPrice.game</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
           
-          <pre class="lean-signature"><code>noncomputable def game (v : I → U) : StrategicGame I U where</code></pre>
+          <pre class="lean-signature"><code>noncomputable def game (v : I → U) : StrategicGame I U where
+  strategy := fun _ =&gt; U
+  payoff b i := utility v b i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L203"><code>Auction.SecondPrice.game_eq_toStrategicGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L203"><code>Auction.SecondPrice.game_eq_toStrategicGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.Vickrey
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.Vickrey
           </span>
           
           
@@ -1245,7 +1248,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Vickrey</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L1"><code>EconCSLib.MechanismDesign.Auction.Vickrey</code></a>
       </p>
       
     </div>
@@ -1258,50 +1261,50 @@
 which the bidder submitting the highest bid wins the item, and the winner pays
 the second-highest bid. All other bidders pay nothing.</p>
 <h2>Setup</h2>
-<p>Fix a finite, nontrivial bidder set <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> and an ordered abelian group <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> of
+<p>Fix a finite, nontrivial bidder set <code>I</code> and an ordered abelian group <code>U</code> of
 bids and utilities (for example <code>ℚ</code> or <code>ℝ</code>). Bids form a profile <code>b : I → U</code>.</p>
 <ul>
 <li><code>winner b : I</code> — the bidder with the highest bid, defined as
   <code>Auction.argmaxBid b</code>. Ties are broken by the deterministic argmax of the
-  basic auction layer (<a class="node-ref" data-node-id="mechanism_design.auction.basic.ordered_bid_utilities" href="auction/basic/mechanism_design_auction_basic_ordered_bid_utilities.html">Ordered-Bid Utilities</a>).</li>
+  basic auction layer ([[mechanism_design.auction.basic.ordered_bid_utilities]]).</li>
 <li><code>secondPrice b : U</code> — the highest bid among all bidders other than the
   winner, defined as <code>Auction.maxBidExcluding b (winner b)</code>.</li>
 <li><code>utility v b i : U</code> — quasi-linear payoff for bidder <code>i</code> at valuation
-  profile <code>v</code> and bid profile <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/proofwidgets/ProofWidgets/Demos/Graph/ExprGraph.lean#L82"><code>b</code></a>:
+  profile <code>v</code> and bid profile <code>b</code>:
   $$
   u_i(v, b) \;=\; \begin{cases} v_i - \mathrm{secondPrice}(b) &amp; i = \mathrm{winner}(b),\\ 0 &amp; \text{otherwise}.\end{cases}
   $$</li>
 </ul>
 <h2>Basic properties</h2>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L105"><code>secondPrice_le_bid_winner</code></a>: the second-highest bid never exceeds the
+<li><code>secondPrice_le_bid_winner</code>: the second-highest bid never exceeds the
   winning bid, $\mathrm{secondPrice}(b) \le b(\mathrm{winner}\,b)$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L120"><code>utility_winner</code></a>, <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L125"><code>utility_loser</code></a>: the case analysis of <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L113"><code>utility</code></a> as
+<li><code>utility_winner</code>, <code>utility_loser</code>: the case analysis of <code>utility</code> as
   computational lemmas.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L129"><code>utility_nonneg</code></a>: truthful bidding ($b_i = v_i$) yields nonnegative payoff
+<li><code>utility_nonneg</code>: truthful bidding ($b_i = v_i$) yields nonnegative payoff
   for bidder <code>i</code>, regardless of opponents' bids.</li>
 </ul>
 <h2>Mechanism and strategic-game packaging</h2>
 <ul>
 <li><code>mechanism : MechanismWithTransfers I (fun _ =&gt; U) I U</code> packages the
   second-price auction as a transfer mechanism
-  (<a class="node-ref" data-node-id="mechanism_design.transfer.mechanisms_with_transfers" href="transfer/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>): the report type
-  is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> per bidder, the allocation type is <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Analysis/Real/Pi/Irrational.lean#L45"><code>I</code></a> (the winning bidder), and
-  payments live in <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/aesop/AesopTest/ForwardTransparency.lean#L25"><code>U</code></a> with <code>paymentRule b w = if w = winner b then
+  ([[mechanism_design.transfer.mechanisms_with_transfers]]): the report type
+  is <code>U</code> per bidder, the allocation type is <code>I</code> (the winning bidder), and
+  payments live in <code>U</code> with <code>paymentRule b w = if w = winner b then
   secondPrice b else 0</code>.</li>
 <li><code>game v : StrategicGame I U</code> packages the same mechanism as a strategic
-  game with bid profile <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/proofwidgets/ProofWidgets/Demos/Graph/ExprGraph.lean#L82"><code>b</code></a> as the strategy profile and the quasi-linear
+  game with bid profile <code>b</code> as the strategy profile and the quasi-linear
   payoff above as the utility function.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/Vickrey.lean#L203"><code>game_eq_toStrategicGame</code></a> certifies that <code>game v</code> agrees with
+<li><code>game_eq_toStrategicGame</code> certifies that <code>game v</code> agrees with
   <code>mechanism.toStrategicGame</code> for the auction utility function.</li>
 </ul>
 <h2>Position in the library</h2>
 <p>The second-price auction is an instance of the general transfer-mechanism
-interface (<a class="node-ref" data-node-id="mechanism_design.transfer.mechanisms_with_transfers" href="transfer/mechanism_design_transfer_mechanisms_with_transfers.html">Mechanisms With Transfers</a>). Its
+interface ([[mechanism_design.transfer.mechanisms_with_transfers]]). Its
 DSIC property is proved in the companion theorem node
-<a class="node-ref" data-node-id="mechanism_design.auction.basic.second_price_dsic" href="auction/basic/mechanism_design_auction_basic_second_price_dsic.html">Vickrey Truth-Telling Is Dominant</a>. The first-price auction with the same
+[[mechanism_design.auction.basic.second_price_dsic]]. The first-price auction with the same
 allocation rule but different payment is in
-<a class="node-ref" data-node-id="mechanism_design.auction.basic.first_price_mechanism" href="auction/basic/mechanism_design_auction_basic_first_price_mechanism.html">First-Price Mechanism</a>.</p>
+[[mechanism_design.auction.basic.first_price_mechanism]].</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Chapter 1, Section 1.2.4 and Exercise 4] Maschler, Solan, and

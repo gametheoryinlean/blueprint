@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,12 +1073,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L214"><code>MultipleParameterMechanism.VCGMechanism_truthful_quasiLinearUtility_nonneg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L214"><code>MultipleParameterMechanism.VCGMechanism_truthful_quasiLinearUtility_nonneg</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1096,12 +1094,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L243"><code>MultipleParameterMechanism.VCGMechanism_truthful_profile_quasiLinearUtility_nonneg</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L243"><code>MultipleParameterMechanism.VCGMechanism_truthful_profile_quasiLinearUtility_nonneg</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1117,12 +1115,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L256"><code>MultipleParameterMechanism.VCGMechanism_isExPostIR_of_all_nonnegative</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L256"><code>MultipleParameterMechanism.VCGMechanism_isExPostIR_of_all_nonnegative</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
@@ -1131,31 +1129,35 @@
     (hnonneg :
       ∀ v : (∀ _ : I, Valuation A ℝ), ∀ i : I, ∀ a : A, 0 ≤ v i a) :
     MechanismWithTransfers.isQuasiLinearExPostIR
-      (M</code></pre>
+      (M := (VCGTransferMechanism :
+        MechanismWithTransfers I (fun _ =&gt; Valuation A ℝ) A ℝ))
+      valueOfAllocation id id</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L280"><code>MultipleParameterMechanism.VCGMechanism_isDSIC</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L280"><code>MultipleParameterMechanism.VCGMechanism_isDSIC</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MechanismDesign.Auction.VCG
+            EconCSLib @ ad4ebea, EconCSLib.MechanismDesign.Auction.VCG
           </span>
           
           
           
           <pre class="lean-signature"><code>theorem VCGMechanism_isDSIC :
     MechanismWithTransfers.isQuasiLinearDSIC
-      (M</code></pre>
+      (M := (VCGTransferMechanism :
+        MechanismWithTransfers I (fun _ =&gt; Valuation A ℝ) A ℝ))
+      valueOfAllocation id id</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MechanismDesign/Auction/VCG.lean#L1"><code>EconCSLib.MechanismDesign.Auction.VCG</code></a>
       </p>
       
     </div>

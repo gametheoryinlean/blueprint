@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1079,29 +1077,30 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L106"><code>SocialChoice.FairDivision.Indivisible.IsMaxmin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L106"><code>SocialChoice.FairDivision.Indivisible.IsMaxmin</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev IsMaxmin [Fintype N] [Nonempty N] [DecidableEq G]
-    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop</code></pre>
+    (v : Valuation N G) (allGoods : Finset G) (A : Allocation N G) : Prop :=
+  SocialChoice.FairDivision.IsMaxmin (fun B =&gt; IsAllocation allGoods B) v.val A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L133"><code>SocialChoice.FairDivision.Indivisible.egalitarianWelfare_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L133"><code>SocialChoice.FairDivision.Indivisible.egalitarianWelfare_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
@@ -1114,12 +1113,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L143"><code>SocialChoice.FairDivision.Indivisible.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L143"><code>SocialChoice.FairDivision.Indivisible.nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare
           </span>
           
           
@@ -1134,7 +1133,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.SocialWelfare</code></a>
       </p>
       
     </div>
@@ -1144,7 +1143,7 @@
   <div class="definition_thmcontent thm-content body">
     <h1>Indivisible Egalitarian (Maximin) Welfare</h1>
 <p>Specialisation of the generic egalitarian welfare
-(<a class="node-ref" data-node-id="social_choice.fair_division.egalitarian_welfare" href="fair_division/social_choice_fair_division_egalitarian_welfare.html">Egalitarian (Maximin) Welfare</a>) to the
+([[social_choice.fair_division.egalitarian_welfare]]) to the
 indivisible setting: for a valuation $v$ and allocation $A$ on a finite
 nonempty agent type,
 $$
@@ -1153,27 +1152,27 @@ $$</p>
 <p>The same definition <code>egalitarianWelfare</code> (under
 <code>SocialChoice.FairDivision</code>) applies, taking <code>v.val</code> for the per-agent
 utility function and the indivisible allocation
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.allocation" href="fair_division/indivisible/social_choice_fair_division_indivisible_allocation.html">Indivisible Allocation</a>) for the share
+([[social_choice.fair_division.indivisible.allocation]]) for the share
 assignment.</p>
 <p>The instance-keyed <em>optimality</em> predicate is wrapped here:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L106"><code>IsMaxmin</code></a> (abbrev): no complete allocation
+<li><code>IsMaxmin</code> (abbrev): no complete allocation
   (<code>IsAllocation allGoods B</code>) has strictly larger egalitarian welfare.</li>
 </ul>
 <h2>Basic lemmas</h2>
 <p>Re-exported from the generic layer with the indivisible-friendly
 hypotheses:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L133"><code>egalitarianWelfare_le</code></a>: $W_{\mathrm{egal}}(v, A) \le v_i(A(i))$ for
+<li><code>egalitarianWelfare_le</code>: $W_{\mathrm{egal}}(v, A) \le v_i(A(i))$ for
   every agent $i$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/SocialWelfare.lean#L143"><code>nsmul_egalitarianWelfare_le_utilitarianWelfare</code></a>: combined with
-  <a class="node-ref" data-node-id="social_choice.fair_division.indivisible.utilitarian_welfare" href="fair_division/indivisible/social_choice_fair_division_indivisible_utilitarian_welfare.html">Indivisible Utilitarian Welfare</a>,
+<li><code>nsmul_egalitarianWelfare_le_utilitarianWelfare</code>: combined with
+  [[social_choice.fair_division.indivisible.utilitarian_welfare]],
   $|N| \cdot W_{\mathrm{egal}} \le W_{\mathrm{util}}$.</li>
 </ul>
 <h2>Relation to MMS</h2>
 <p>Egalitarian welfare is a <em>global</em> maximin (over all $i$, take the
 worst-off), while MMS
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.maximin_share" href="fair_division/indivisible/social_choice_fair_division_indivisible_maximin_share.html">Maximin Share (MMS) Allocation</a>) is a
+([[social_choice.fair_division.indivisible.maximin_share]]) is a
 <em>per-agent</em> maximin (over self-partitions). They are conceptually
 related but distinct: $W_{\mathrm{egal}}$ depends only on the bundle
 values, while MMS additionally depends on each agent's full valuation

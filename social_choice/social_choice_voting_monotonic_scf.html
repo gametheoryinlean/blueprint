@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,23 +1075,24 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L306"><code>SocialChoice.Voting.Monotonicity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Basic.lean#L306"><code>SocialChoice.Voting.Monotonicity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.Voting.Basic
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.Voting.Basic
           </span>
           
           
           <p class="lean-docstring">Monotonicity: raising a selected alternative cannot make it unselected.</p>
-          <pre class="lean-signature"><code>def Monotonicity (f : VotingRule N A) : Prop</code></pre>
+          <pre class="lean-signature"><code>def Monotonicity (f : VotingRule N A) : Prop :=
+  ∀ (P Q : Profile N A) (a : A), a ∈ f P → SimpleLift Q P a → a ∈ f Q</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/Voting/Basic.lean#L1"><code>EconCSLib.SocialChoice.Voting.Basic</code></a>
       </p>
       
     </div>
@@ -1112,16 +1111,16 @@ $$
 Here $\mathrm{SimpleLift}(Q, P, a)$ requires, for every voter $i$ and
 alternative $x$: if $a \succ_{P_i} x$ then $a \succ_{Q_i} x$, and if
 $x \succ_{Q_i} a$ then $x \succ_{P_i} a$ — i.e. $a$ only moves up, never down.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L306"><code>SocialChoice.Voting.Monotonicity</code></a>, using the lift relation
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/Voting/Basic.lean#L301"><code>SocialChoice.Voting.SimpleLift</code></a>.</p>
+<p>In Lean: <code>SocialChoice.Voting.Monotonicity</code>, using the lift relation
+<code>SocialChoice.Voting.SimpleLift</code>.</p>
 <p>The condition only constrains strict comparisons involving the winner $a$;
 voters may rearrange their rankings among the other alternatives freely.</p>
 <p>Monotonicity is the bridge from strategy-proofness
-(<a class="node-ref" data-node-id="social_choice.voting.strategyproof" href="voting/social_choice_voting_strategyproof.html">Strategy-Proof Social Choice Function</a>) to dictatorship in the Gibbard
+([[social_choice.voting.strategyproof]]) to dictatorship in the Gibbard
 –Satterthwaite chain: resolute strategy-proof rules are monotonic
-(<a class="node-ref" data-node-id="social_choice.voting.strategyproof_implies_monotonic" href="voting/social_choice_voting_strategyproof_implies_monotonic.html">Strategy-Proof ⇒ Monotonic</a>), and monotonic
+([[social_choice.voting.strategyproof_implies_monotonic]]), and monotonic
 unanimous resolute rules with $|A| \ge 3$ are dictatorial
-(<a class="node-ref" data-node-id="social_choice.voting.muller_satterthwaite" href="voting/social_choice_voting_muller_satterthwaite.html">Muller–Satterthwaite Theorem</a>).</p>
+([[social_choice.voting.muller_satterthwaite]]).</p>
 <h2>References</h2>
 <ul>
 <li>[MSZ 21.22] Maschler, Solan, and Zamir, <em>Game Theory</em>. Monotonicity for SCFs.</li>

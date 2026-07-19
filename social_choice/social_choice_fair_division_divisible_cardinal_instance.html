@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1085,163 +1083,181 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L55"><code>SocialChoice.FairDivision.Divisible.CardinalInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L55"><code>SocialChoice.FairDivision.Divisible.CardinalInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">A real-valued cardinal divisible-goods instance.</p>
-          <pre class="lean-signature"><code>structure CardinalInstance (N Ω : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure CardinalInstance (N Ω : Type*) where
+  /-- Utility assigned by each agent to each cake piece. -/
+  utility : N → Set Ω → ℝ</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L69"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.toGenericCardinalInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L69"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.toGenericCardinalInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           
           <pre class="lean-signature"><code>def toGenericCardinalInstance {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
     (I : CardinalInstance N Ω) :
-    SocialChoice.FairDivision.CardinalInstance N (Set Ω) (Set Ω) where</code></pre>
+    SocialChoice.FairDivision.CardinalInstance N (Set Ω) (Set Ω) where
+  resource := Set.univ
+  feasible := fun A =&gt; IsAllocation A
+  utility := I.utility</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L78"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.toShareInstance</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L78"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.toShareInstance</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           
           <pre class="lean-signature"><code>def toShareInstance {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
     (I : CardinalInstance N Ω) :
-    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω)</code></pre>
+    SocialChoice.FairDivision.ShareInstance N (Set Ω) (Set Ω) :=
+  I.toGenericCardinalInstance.toShareInstance</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L86"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsEnvyFree</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L86"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsEnvyFree</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Envy-freeness for a divisible cardinal instance.</p>
           <pre class="lean-signature"><code>def IsEnvyFree {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
-    (I : CardinalInstance N Ω) (A : Allocation N Ω) : Prop</code></pre>
+    (I : CardinalInstance N Ω) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.CardinalInstance.IsEnvyFree
+    I.toGenericCardinalInstance A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L92"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsProportional</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L92"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsProportional</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Proportionality for a divisible cardinal instance, relative to the whole cake.</p>
           <pre class="lean-signature"><code>def IsProportional {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
-    (I : CardinalInstance N Ω) (n : ℕ) (A : Allocation N Ω) : Prop</code></pre>
+    (I : CardinalInstance N Ω) (n : ℕ) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.CardinalInstance.IsProportional
+    I.toGenericCardinalInstance n Set.univ A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L98"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsEquitable</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L98"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsEquitable</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Equitability for a divisible cardinal instance.</p>
           <pre class="lean-signature"><code>def IsEquitable {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
-    (I : CardinalInstance N Ω) (A : Allocation N Ω) : Prop</code></pre>
+    (I : CardinalInstance N Ω) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.CardinalInstance.IsEquitable
+    I.toGenericCardinalInstance A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L104"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsParetoOptimal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L104"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.IsParetoOptimal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Pareto optimality for a divisible cardinal instance.</p>
           <pre class="lean-signature"><code>def IsParetoOptimal {N Ω : Type*} [MeasurableSpace Ω] [Fintype N]
-    (I : CardinalInstance N Ω) (A : Allocation N Ω) : Prop</code></pre>
+    (I : CardinalInstance N Ω) (A : Allocation N Ω) : Prop :=
+  SocialChoice.FairDivision.CardinalInstance.IsParetoOptimal
+    I.toGenericCardinalInstance A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L110"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.utilitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L110"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.utilitarianWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Utilitarian welfare for a divisible cardinal instance.</p>
           <pre class="lean-signature"><code>noncomputable def utilitarianWelfare {N Ω : Type*}
     [MeasurableSpace Ω] [Fintype N]
-    (I : CardinalInstance N Ω) (A : Allocation N Ω) : ℝ</code></pre>
+    (I : CardinalInstance N Ω) (A : Allocation N Ω) : ℝ :=
+  SocialChoice.FairDivision.CardinalInstance.utilitarianWelfare
+    I.toGenericCardinalInstance A</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L117"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.egalitarianWelfare</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L117"><code>SocialChoice.FairDivision.Divisible.CardinalInstance.egalitarianWelfare</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Divisible.Instance
           </span>
           
           
           <p class="lean-docstring">Egalitarian welfare for a divisible cardinal instance.</p>
           <pre class="lean-signature"><code>noncomputable def egalitarianWelfare {N Ω : Type*}
     [MeasurableSpace Ω] [Fintype N] [Nonempty N]
-    (I : CardinalInstance N Ω) (A : Allocation N Ω) : ℝ</code></pre>
+    (I : CardinalInstance N Ω) (A : Allocation N Ω) : ℝ :=
+  SocialChoice.FairDivision.CardinalInstance.egalitarianWelfare
+    I.toGenericCardinalInstance A</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Divisible.Instance</code></a>
       </p>
       
     </div>
@@ -1258,13 +1274,13 @@ $$</p>
 <p>In Lean: structure <code>SocialChoice.FairDivision.Divisible.CardinalInstance N Ω</code>.</p>
 <h2>Bridges</h2>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L69"><code>toGenericCardinalInstance</code></a> — view as a generic real-valued cardinal
+<li><code>toGenericCardinalInstance</code> — view as a generic real-valued cardinal
   fair-division instance
-  (<a class="node-ref" data-node-id="social_choice.fair_division.cardinal_instance" href="fair_division/social_choice_fair_division_cardinal_instance.html">Cardinal Fair-Division Instance</a>) over share type
+  ([[social_choice.fair_division.cardinal_instance]]) over share type
   $\mathrm{Set}\ \Omega$ and resource $\mathrm{Set.univ}$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Divisible/Instance.lean#L78"><code>toShareInstance</code></a> — compose with <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Cardinal.lean#L37"><code>inducedSharePref</code></a> to get the
+<li><code>toShareInstance</code> — compose with <code>inducedSharePref</code> to get the
   underlying divisible <em>ordinal</em> instance
-  (<a class="node-ref" data-node-id="social_choice.fair_division.divisible.ordinal_instance" href="fair_division/divisible/social_choice_fair_division_divisible_ordinal_instance.html">Divisible Ordinal Instance</a>).</li>
+  ([[social_choice.fair_division.divisible.ordinal_instance]]).</li>
 </ul>
 <h2>Instance-keyed fairness and welfare</h2>
 <p>A complete set of instance-keyed wrappers re-exports the generic
@@ -1274,8 +1290,8 @@ predicates:</p>
   <code>IsParetoOptimal A</code> — fairness / efficiency predicates pinned to the
   current instance's utility and feasibility.</li>
 <li><code>utilitarianWelfare A</code>, <code>egalitarianWelfare A</code> — welfare aggregations
-  (<a class="node-ref" data-node-id="social_choice.fair_division.utilitarian_welfare" href="fair_division/social_choice_fair_division_utilitarian_welfare.html">Utilitarian Welfare and Utilitarian Optimality</a>,
-  <a class="node-ref" data-node-id="social_choice.fair_division.egalitarian_welfare" href="fair_division/social_choice_fair_division_egalitarian_welfare.html">Egalitarian (Maximin) Welfare</a>).</li>
+  ([[social_choice.fair_division.utilitarian_welfare]],
+  [[social_choice.fair_division.egalitarian_welfare]]).</li>
 </ul>
 <p>All wrappers are definitional passes through to the corresponding
 generic predicates with $I.\mathrm{utility}$ and feasibility supplied

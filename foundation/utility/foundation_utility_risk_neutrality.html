@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,73 +1073,76 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Basic.lean#L44"><code>IsAffineUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Basic.lean#L44"><code>IsAffineUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Basic
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsAffineUtility (u : 𝕜 → 𝕜) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsAffineUtility (u : 𝕜 → 𝕜) : Prop :=
+  ∃ (a b : 𝕜), ∀ x, u x = a * x + b</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Basic.lean#L50"><code>IsRiskNeutral</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Basic.lean#L50"><code>IsRiskNeutral</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Basic
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>def IsRiskNeutral {I : Type*} [Fintype I] (u : 𝕜 → 𝕜) : Prop</code></pre>
+          <pre class="lean-signature"><code>def IsRiskNeutral {I : Type*} [Fintype I] (u : 𝕜 → 𝕜) : Prop :=
+  ∀ (p : stdSimplex 𝕜 I) (x : I → 𝕜),
+    u (wsum p x) = wsum p (u ∘ x)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Basic.lean#L55"><code>IsAffineUtility.isRiskNeutral</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Basic.lean#L55"><code>IsAffineUtility.isRiskNeutral</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Basic
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Basic
           </span>
           
           
           <p class="lean-docstring">An affine utility function is risk neutral. [MSZ 2.27, easy direction]</p>
           <pre class="lean-signature"><code>theorem IsAffineUtility.isRiskNeutral {I : Type*} [Fintype I] {u : 𝕜 → 𝕜}
-    (h : IsAffineUtility u) : IsRiskNeutral (I</code></pre>
+    (h : IsAffineUtility u) : IsRiskNeutral (I := I) u</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Basic.lean#L66"><code>IsRiskNeutral.isAffine</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Basic.lean#L66"><code>IsRiskNeutral.isAffine</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Basic
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Basic
           </span>
           
           
           
           <pre class="lean-signature"><code>theorem IsRiskNeutral.isAffine {I : Type*} [Fintype I] [Nontrivial I] {u : 𝕜 → 𝕜}
-    (h : IsRiskNeutral (I</code></pre>
+    (h : IsRiskNeutral (I := I) u) : IsAffineUtility u</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Basic.lean#L1"><code>EconCSLib.Foundation.Utility.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Basic.lean#L1"><code>EconCSLib.Foundation.Utility.Basic</code></a>
       </p>
       
     </div>

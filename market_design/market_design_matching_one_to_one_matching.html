@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,23 +1073,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/Basic.lean#L57"><code>Matching</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/Basic.lean#L57"><code>Matching</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.MarketDesign.Matching.Basic
+            EconCSLib @ ad4ebea, EconCSLib.MarketDesign.Matching.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure Matching (M W : Type*) where</code></pre>
+          <pre class="lean-signature"><code>structure Matching (M W : Type*) where
+  /-- Partner of each agent on side `M`. -/
+  matchM : M → Option W
+  /-- Partner of each agent on side `W`. -/
+  matchW : W → Option M
+  /-- Consistency: `matchM m = some w ↔ matchW w = some m`. -/
+  consistent : ∀ (m : M) (w : W), matchM m = some w ↔ matchW w = some m</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/MarketDesign/Matching/Basic.lean#L1"><code>EconCSLib.MarketDesign.Matching.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/MarketDesign/Matching/Basic.lean#L1"><code>EconCSLib.MarketDesign.Matching.Basic</code></a>
       </p>
       
     </div>

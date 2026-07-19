@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,60 +1073,65 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L213"><code>VNM.Completeness</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Preference.lean#L213"><code>VNM.Completeness</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">**Completeness**: every pair is comparable.</p>
-          <pre class="lean-signature"><code>def Completeness (pref : A → A → Prop) : Prop</code></pre>
+          <pre class="lean-signature"><code>def Completeness (pref : A → A → Prop) : Prop :=
+  ∀ a b : A, pref a b ∨ pref b a</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L217"><code>VNM.Transitivity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Preference.lean#L217"><code>VNM.Transitivity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Preference
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Preference
           </span>
           
           
           <p class="lean-docstring">**Transitivity**: preference chains compose.</p>
-          <pre class="lean-signature"><code>def Transitivity (pref : A → A → Prop) : Prop</code></pre>
+          <pre class="lean-signature"><code>def Transitivity (pref : A → A → Prop) : Prop :=
+  ∀ a b c : A, pref a b → pref b c → pref a c</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/VNMAxioms.lean#L50"><code>VNM.Independence</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/VNMAxioms.lean#L50"><code>VNM.Independence</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.VNMAxioms
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.VNMAxioms
           </span>
           
           
           
-          <pre class="lean-signature"><code>def Independence (pref : Lottery 𝕜 O → Lottery 𝕜 O → Prop) : Prop</code></pre>
+          <pre class="lean-signature"><code>def Independence (pref : Lottery 𝕜 O → Lottery 𝕜 O → Prop) : Prop :=
+  ∀ (L₁ L₂ N : Lottery 𝕜 O) (α : 𝕜) (hα₀ : 0 &lt; α) (hα₁ : α ≤ 1),
+    pref L₁ L₂ ↔ pref (Lottery.mix α (le_of_lt hα₀) hα₁ L₁ N)
+                       (Lottery.mix α (le_of_lt hα₀) hα₁ L₂ N)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/VNMAxioms.lean#L57"><code>VNM.Continuity</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/VNMAxioms.lean#L57"><code>VNM.Continuity</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.VNMAxioms
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.VNMAxioms
           </span>
           
           
@@ -1139,7 +1142,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1"><code>EconCSLib.Foundation.Utility.VNMAxioms</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Preference.lean#L1"><code>EconCSLib.Foundation.Preference</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/VNMAxioms.lean#L1"><code>EconCSLib.Foundation.Utility.VNMAxioms</code></a>
       </p>
       
     </div>

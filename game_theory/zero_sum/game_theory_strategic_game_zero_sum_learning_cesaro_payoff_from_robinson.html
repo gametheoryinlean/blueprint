@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,24 +1075,25 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L25"><code>MatrixGame.realisedCumPayoff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L25"><code>MatrixGame.realisedCumPayoff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
+            EconCSLib @ ad4ebea, EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro
           </span>
           
           
           <p class="lean-docstring">**Realised cumulative payoff** along a play sequence on `A`.</p>
           <pre class="lean-signature"><code>noncomputable def realisedCumPayoff (A : MatrixGame I J ℝ) (iSeq : ℕ → I)
-    (jSeq : ℕ → J) (n : ℕ) : ℝ</code></pre>
+    (jSeq : ℕ → J) (n : ℕ) : ℝ :=
+  ∑ p ∈ Finset.range n, A.g (iSeq p) (jSeq p)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/GameTheory/StrategicGame/ZeroSum/Learning/Cesaro.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.Learning.Cesaro</code></a>
       </p>
       
     </div>
@@ -1106,13 +1105,13 @@
 <p>The average realised payoff along a fictitious-play trajectory converges to the
 value of the game. The proof is an elementary telescoping identity that uses
 the Robinson admissible-sequence lemma
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma.html">Robinson Admissible Sequence Lemma</a> only as a black box.</p>
+[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma]] only as a black box.</p>
 <h2>Setup</h2>
 <p>Let $A \in \mathbb{R}^{m \times n}$ be a matrix game with value $v := v(A)$
-established by <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma.html">Robinson Admissible Sequence Lemma</a>
+established by [[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma]]
 (equivalently, by the minimax theorem). Let $(i_n, j_n)_{n \ge 1}$ be a
 fictitious-play realisation
-(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.fictitious_play" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_fictitious_play.html">Fictitious Play</a>).</p>
+([[game_theory.strategic_game.zero_sum.learning.fictitious_play]]).</p>
 <p>Define the <strong>realised cumulative payoff</strong> $R_n$ and the <strong>counterfactual
 cumulative payoffs</strong> $U_m^i$ for each pure row $i$:
 $$
@@ -1158,7 +1157,7 @@ Since $i_n \in \operatorname{argmax}_i U_n^i / n$ (with $U_n^i / n = (A y_n)^i$ 
 is player II's empirical frequency), we have
 $U_n^{i_n} / n = \max_i (A y_n)^i$. The minimax bracket together with
 $\mu(n)/n \to 0$ from
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma" href="../strategic_game/zero_sum/learning/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma.html">Robinson Admissible Sequence Lemma</a> yields
+[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma]] yields
 $\max_i (A y_n)^i \to v$. Hence
 $$
   \limsup_{n \to \infty} \frac{R_n}{n} \;\le\; v.
@@ -1176,10 +1175,10 @@ $\liminf R_n / n \ge v$.</p>
 <h2>Note</h2>
 <p>This proof is <strong>independent</strong> of the internal combinatorial structure of
 Robinson's induction
-(<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.bracket_invariant" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_bracket_invariant.html">Bracket Invariant For Admissible Sequences</a>,
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.useful_window" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_useful_window.html">Useful Window Bound For Admissible Sequences</a>,
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.subgame_reduction" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_subgame_reduction.html">Subgame Reduction For Non-Useful Indices</a>,
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.induction_step" href="../strategic_game/zero_sum/learning/robinson_admissible_lemma/game_theory_strategic_game_zero_sum_learning_robinson_admissible_lemma_induction_step.html">Euclidean Division Pasting In Robinson Induction</a>). It uses
+([[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.bracket_invariant]],
+[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.useful_window]],
+[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.subgame_reduction]],
+[[game_theory.strategic_game.zero_sum.learning.robinson_admissible_lemma.induction_step]]). It uses
 the parent lemma only via its conclusion $\mu(n)/n \to 0$.</p>
 <p>Practically, this makes it the <strong>shortest formalisable item</strong> in the Robinson
 chain — a natural first Lean target.</p>

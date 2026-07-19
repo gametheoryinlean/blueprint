@@ -865,8 +865,6 @@
       
         <li><a href="../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1075,30 +1073,31 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L695"><code>SocialChoice.FairDivision.Indivisible.bestGood</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L695"><code>SocialChoice.FairDivision.Indivisible.bestGood</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
           <p class="lean-docstring">`bestGood I i s hs` is a good in `s` maximizing agent `i`&#39;s item weight.</p>
           <pre class="lean-signature"><code>noncomputable def bestGood [DecidableEq G]
     (I : AdditiveInstance (Fin n) G) (i : Fin n)
-    (s : Finset G) (hs : s.Nonempty) : G</code></pre>
+    (s : Finset G) (hs : s.Nonempty) : G :=
+  rawBestGood I.toAdditiveValuation i s hs</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L702"><code>SocialChoice.FairDivision.Indivisible.bestGood_mem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L702"><code>SocialChoice.FairDivision.Indivisible.bestGood_mem</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
@@ -1112,12 +1111,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">lemma</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L710"><code>SocialChoice.FairDivision.Indivisible.bestGood_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L710"><code>SocialChoice.FairDivision.Indivisible.bestGood_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
+            EconCSLib @ ad4ebea, EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin
           </span>
           
           
@@ -1131,7 +1130,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L1"><code>EconCSLib.SocialChoice.FairDivision.Indivisible.RoundRobin</code></a>
       </p>
       
     </div>
@@ -1143,21 +1142,21 @@
 <p>The <em>best-good</em> operation picks an agent's favourite available item from
 a remaining finite set $R \subseteq G$ under an additive valuation
 $w : N \to G \to \mathbb{R}$
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.additive_valuation" href="fair_division/indivisible/social_choice_fair_division_indivisible_additive_valuation.html">Additive Valuation</a>).</p>
+([[social_choice.fair_division.indivisible.additive_valuation]]).</p>
 <p>Informally:
 $$
 \mathrm{bestGood}(i, R) = \arg\max_{g \in R} w(i, g),
 $$
 with deterministic tie-breaking using the underlying decidable
 equality on $G$.</p>
-<p>In Lean: <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L695"><code>SocialChoice.FairDivision.Indivisible.bestGood</code></a>. Marked
-<code>noncomputable</code> because the <code>arg max</code> selection over a <a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/.lake/packages/mathlib/Mathlib/Data/Finset/Defs.lean#L75"><code>Finset</code></a> uses
+<p>In Lean: <code>SocialChoice.FairDivision.Indivisible.bestGood</code>. Marked
+<code>noncomputable</code> because the <code>arg max</code> selection over a <code>Finset</code> uses
 classical decidability.</p>
 <h2>Basic properties</h2>
 <p>Two small lemmas pin down the operation:</p>
 <ul>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L702"><code>bestGood_mem</code></a> : when $R$ is nonempty, $\mathrm{bestGood}(i, R) \in R$.</li>
-<li><a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L710"><code>bestGood_le</code></a> : $\mathrm{bestGood}(i, R)$ achieves the maximum value:
+<li><code>bestGood_mem</code> : when $R$ is nonempty, $\mathrm{bestGood}(i, R) \in R$.</li>
+<li><code>bestGood_le</code> : $\mathrm{bestGood}(i, R)$ achieves the maximum value:
   $\forall g \in R,\ w(i, g) \le w(i, \mathrm{bestGood}(i, R))$.</li>
 </ul>
 <p>These are exactly what the round-robin partition / correctness proofs
@@ -1165,11 +1164,11 @@ need to reason about: an agent always takes a <em>valid</em> item (not yet
 allocated) and always takes their <em>best-remaining</em> item.</p>
 <h2>Use in round-robin</h2>
 <p>The round-robin allocation
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.round_robin_alloc" href="fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_alloc.html">Round-Robin Allocation</a>) calls
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L695"><code>bestGood</code></a> at each step to give the current agent their favourite
+([[social_choice.fair_division.indivisible.round_robin_alloc]]) calls
+<code>bestGood</code> at each step to give the current agent their favourite
 remaining item. The two properties above are the only facts about
-<a class="lean-decl-ref" href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/SocialChoice/FairDivision/Indivisible/RoundRobin.lean#L695"><code>bestGood</code></a> that the EF1 correctness proof
-(<a class="node-ref" data-node-id="social_choice.fair_division.indivisible.round_robin_ef1" href="fair_division/indivisible/social_choice_fair_division_indivisible_round_robin_ef1.html">Round-Robin Is EF1</a>) uses —
+<code>bestGood</code> that the EF1 correctness proof
+([[social_choice.fair_division.indivisible.round_robin_ef1]]) uses —
 the rest is bookkeeping about turn order.</p>
 <h2>References</h2>
 <ul>

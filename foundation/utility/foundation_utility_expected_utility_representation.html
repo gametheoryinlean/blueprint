@@ -865,8 +865,6 @@
       
         <li><a href="../../keywords/second-price-auction.html">second-price-auction</a></li>
       
-        <li><a href="../../keywords/secretary.html">secretary</a></li>
-      
         <li><a href="../../keywords/selling-problem.html">selling-problem</a></li>
       
         <li><a href="../../keywords/semi-algebraic.html">semi-algebraic</a></li>
@@ -1077,46 +1075,47 @@
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L82"><code>Lottery.expectedValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L82"><code>Lottery.expectedValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           
           <pre class="lean-signature"><code>abbrev Lottery.expectedValue {O : Type*} [Fintype O]
-    (L : Lottery 𝕜 O) (f : O → 𝕜) : 𝕜</code></pre>
+    (L : Lottery 𝕜 O) (f : O → 𝕜) : 𝕜 :=
+  wsum L f</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L95"><code>Lottery.expectedValue_pure</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L95"><code>Lottery.expectedValue_pure</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           <p class="lean-docstring">Expected value of a pure lottery equals the outcome value.</p>
           <pre class="lean-signature"><code>theorem Lottery.expectedValue_pure [DecidableEq O] (o₀ : O) (f : O → 𝕜) :
-    Lottery.expectedValue (Lottery.pure (𝕜</code></pre>
+    Lottery.expectedValue (Lottery.pure (𝕜 := 𝕜) o₀) f = f o₀</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L104"><code>Lottery.expectedValue_mix</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L104"><code>Lottery.expectedValue_mix</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
@@ -1130,41 +1129,43 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L131"><code>IsLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L131"><code>IsLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           
           <pre class="lean-signature"><code>def IsLinearUtility {O : Type*} [Fintype O]
-    (u : Lottery 𝕜 O → 𝕜) : Prop</code></pre>
+    (u : Lottery 𝕜 O → 𝕜) : Prop :=
+  ∀ (α : 𝕜) (hα₀ : 0 ≤ α) (hα₁ : α ≤ 1) (L₁ L₂ : Lottery 𝕜 O),
+    u (Lottery.mix α hα₀ hα₁ L₁ L₂) = α * u L₁ + (1 - α) * u L₂</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L137"><code>expectedValue_isLinearUtility</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L137"><code>expectedValue_isLinearUtility</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 7c9a168, EconCSLib.Foundation.Utility.Lottery
+            EconCSLib @ ad4ebea, EconCSLib.Foundation.Utility.Lottery
           </span>
           
           
           <p class="lean-docstring">Expected value (with respect to a fixed payoff function) is a linear utility.</p>
           <pre class="lean-signature"><code>theorem expectedValue_isLinearUtility {O : Type*} [Fintype O] (f : O → 𝕜) :
-    IsLinearUtility (𝕜</code></pre>
+    IsLinearUtility (𝕜 := 𝕜) (fun L =&gt; Lottery.expectedValue L f)</code></pre>
         </li>
         
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/7c9a1688acedefe48ec89a442571f12d87a380db/EconCSLib/Foundation/Utility/Lottery.lean#L1"><code>EconCSLib.Foundation.Utility.Lottery</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/ad4ebea4dbb84ef91d9e0fdc4d7356f9e22cd6f8/EconCSLib/Foundation/Utility/Lottery.lean#L1"><code>EconCSLib.Foundation.Utility.Lottery</code></a>
       </p>
       
     </div>
