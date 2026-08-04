@@ -425,6 +425,8 @@
       
         <li><a href="../../keywords/contraction.html">contraction</a></li>
       
+        <li><a href="../../keywords/control.html">control</a></li>
+      
         <li><a href="../../keywords/convergence.html">convergence</a></li>
       
         <li><a href="../../keywords/convex-combination.html">convex-combination</a></li>
@@ -724,6 +726,8 @@
         <li><a href="../../keywords/needle.html">needle</a></li>
       
         <li><a href="../../keywords/no-externality.html">no-externality</a></li>
+      
+        <li><a href="../../keywords/non-player.html">non-player</a></li>
       
         <li><a href="../../keywords/normal-form.html">normal-form</a></li>
       
@@ -1060,12 +1064,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L44"><code>Arena</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Structural/Basic.lean#L35"><code>Arena</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.Basic
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.Structural.Basic
           </span>
           
           
@@ -1073,30 +1077,26 @@
           <pre class="lean-signature"><code>structure Arena where
   /-- The state space. -/
   State : Type*
-  /-- Available actions at each state. Empty = terminal. -/
+  /-- Available actions at each state. Empty means terminal. -/
   Action : State → Type*
-  /-- Transition function: state + action → next state. -/
+  /-- Transition function from a state and one legal action. -/
   next : (s : State) → Action s → State</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L78"><code>ExtensiveGame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L43"><code>ExtensiveGame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.Basic
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.Basic
           </span>
           
           
           
-          <pre class="lean-signature"><code>structure ExtensiveGame (N : Type*) (U : Type*) extends Arena where
-  /-- The initial state (root of the game tree). -/
-  init : State
-  /-- Who controls each state. `none` = chance or nature. -/
-  mover : State → Option N
+          <pre class="lean-signature"><code>structure ExtensiveGame (N : Type*) (U : Type*) extends ControlledGame N where
   /-- Payoff at each state for each player.
       Meaningful at terminal states; may be arbitrary elsewhere. -/
   payoff : State → N → U</code></pre>
@@ -1105,29 +1105,29 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L101"><code>ExtensiveGame.isPlayerState</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L145"><code>ExtensiveGame.isPlayerState</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.Basic
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.Basic
           </span>
           
           
           <p class="lean-docstring">A state is controlled by player `i`.</p>
           <pre class="lean-signature"><code>def isPlayerState (G : ExtensiveGame N U) (s : G.State) (i : N) : Prop :=
-  G.mover s = some i</code></pre>
+  G.toControlledGame.isPlayerState s i</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">abbrev</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L98"><code>ExtensiveGame.isTerminal</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L142"><code>ExtensiveGame.isTerminal</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.Basic
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.Basic
           </span>
           
           
@@ -1138,7 +1138,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Basic</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Basic</code></a>
       </p>
       
     </div>

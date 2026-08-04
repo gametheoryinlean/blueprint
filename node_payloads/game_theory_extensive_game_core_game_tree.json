@@ -14,6 +14,11 @@
   "deps": [],
   "dependents": [
     {
+      "id": "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
+      "title": "Finite Game-Tree Strategy Induces An Outcome",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_core_finite_game_tree_induced_outcome.html"
+    },
+    {
       "id": "game_theory.extensive_game.core.history_and_subgame",
       "title": "History And Subgame",
       "href": "game_theory/extensive_game/game_theory_extensive_game_core_history_and_subgame.html"
@@ -34,9 +39,9 @@
       "signature": "inductive GameTree (N : Type*) (U : Type*) : Type _\n  | Leaf (payoff : N → U) : GameTree N U\n  | Node (mover : N) (head : GameTree N U) (tail : List (GameTree N U)) :\n      GameTree N U\n\nnamespace GameTree\n\nvariable {N U : Type*}\n\n/-- The full child list at a `Node`, as a guaranteed non-empty list. -/\n@[simp]",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "cc959e3198792509953959de9050411c12a7aacc",
-      "short_revision": "cc959e3",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L53",
+      "revision": "cef01c709a7d238f076b45818f2ff2629518efe3",
+      "short_revision": "cef01c7",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L53",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -52,9 +57,9 @@
       "signature": "def children : GameTree N U → List (GameTree N U)\n  | Leaf _ => []\n  | Node _ h t => h :: t\n\n/-- Children of a `Node` are never empty. -/",
       "docstring": null,
       "repository_title": "EconCSLib",
-      "revision": "cc959e3198792509953959de9050411c12a7aacc",
-      "short_revision": "cc959e3",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L64",
+      "revision": "cef01c709a7d238f076b45818f2ff2629518efe3",
+      "short_revision": "cef01c7",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L64",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -70,9 +75,9 @@
       "signature": "def size : GameTree N U → ℕ\n  | Leaf _ => 1\n  | Node _ h t => 1 + h.size + (t.map size).sum\n\n/-- Size is always positive. -/",
       "docstring": "Structural size, used for well-founded recursion.",
       "repository_title": "EconCSLib",
-      "revision": "cc959e3198792509953959de9050411c12a7aacc",
-      "short_revision": "cc959e3",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L74",
+      "revision": "cef01c709a7d238f076b45818f2ff2629518efe3",
+      "short_revision": "cef01c7",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L74",
       "doc_url": null,
       "has_sorry": false,
       "status": "resolved",
@@ -85,9 +90,9 @@
       "name": "EconCSLib.GameTheory.ExtensiveGame.GameTree",
       "display_name": "EconCSLib.GameTheory.ExtensiveGame.GameTree",
       "repository_title": "EconCSLib",
-      "revision": "cc959e3198792509953959de9050411c12a7aacc",
-      "short_revision": "cc959e3",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1",
+      "revision": "cef01c709a7d238f076b45818f2ff2629518efe3",
+      "short_revision": "cef01c7",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/GameTree.lean#L1",
       "status": "resolved",
       "reason": null
     }

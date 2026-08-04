@@ -4,24 +4,32 @@
     "title": "Game Theory.Extensive Game",
     "href": "game_theory/extensive_game/index.html",
     "parent": "game_theory",
-    "node_count": 57,
-    "descendant_node_count": 57
+    "node_count": 59,
+    "descendant_node_count": 59
   },
   "counts": {
-    "internal_nodes": 57,
-    "inlined_nodes": 57,
-    "descendant_nodes": 57,
+    "internal_nodes": 59,
+    "inlined_nodes": 59,
+    "descendant_nodes": 59,
     "child_topics": 0,
     "inlined_child_topics": 5,
-    "non_proof_plan_nodes": 57,
+    "non_proof_plan_nodes": 59,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 3,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 61,
-    "visible_nodes_with_selected_proof_plans": 61
+    "visible_nodes_without_proof_plans": 63,
+    "visible_nodes_with_selected_proof_plans": 63
   },
   "nodes": [
+    {
+      "id": "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
+      "title": "Finite Game-Tree Strategy Induces An Outcome",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_core_finite_game_tree_induced_outcome.html",
+      "payload": "node_payloads/game_theory_extensive_game_core_finite_game_tree_induced_outcome.json"
+    },
     {
       "id": "game_theory.extensive_game.core.game_tree",
       "title": "Game Tree",
@@ -42,15 +50,23 @@
       "id": "game_theory.extensive_game.core.nature_player",
       "title": "Nature In Extensive Games",
       "kind": "definition",
-      "status": "formalized",
+      "status": "staged",
       "href": "game_theory/extensive_game/game_theory_extensive_game_core_nature_player.html",
       "payload": "node_payloads/game_theory_extensive_game_core_nature_player.json"
+    },
+    {
+      "id": "game_theory.extensive_game.core.non_player_controlled_state",
+      "title": "Non-Player-Controlled Nonterminal State",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_core_non_player_controlled_state.html",
+      "payload": "node_payloads/game_theory_extensive_game_core_non_player_controlled_state.json"
     },
     {
       "id": "game_theory.extensive_game.core.strategy_profile_induced_outcome",
       "title": "Strategy Profile And Induced Outcome",
       "kind": "definition",
-      "status": "formalized",
+      "status": "staged",
       "href": "game_theory/extensive_game/game_theory_extensive_game_core_strategy_profile_induced_outcome.html",
       "payload": "node_payloads/game_theory_extensive_game_core_strategy_profile_induced_outcome.json"
     },
@@ -480,6 +496,11 @@
     }
   ],
   "edges": [
+    {
+      "from": "game_theory.extensive_game.core.game_tree",
+      "to": "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
+      "kind": "uses"
+    },
     {
       "from": "game_theory.extensive_game.core.game_tree",
       "to": "game_theory.extensive_game.core.history_and_subgame",
@@ -1040,6 +1061,12 @@
       "count": 1
     },
     {
+      "id": "control",
+      "title": "control",
+      "href": "keywords/control.html",
+      "count": 1
+    },
+    {
       "id": "determinacy",
       "title": "determinacy",
       "href": "keywords/determinacy.html",
@@ -1073,7 +1100,7 @@
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 57
+      "count": 59
     },
     {
       "id": "forward-induction",
@@ -1085,7 +1112,7 @@
       "id": "game-tree",
       "title": "game-tree",
       "href": "keywords/game-tree.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "genericity",
@@ -1142,6 +1169,12 @@
       "count": 1
     },
     {
+      "id": "non-player",
+      "title": "non-player",
+      "href": "keywords/non-player.html",
+      "count": 1
+    },
+    {
       "id": "normal-form",
       "title": "normal-form",
       "href": "keywords/normal-form.html",
@@ -1157,7 +1190,7 @@
       "id": "outcome",
       "title": "outcome",
       "href": "keywords/outcome.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "perfect-information",
@@ -1211,7 +1244,7 @@
       "id": "strategy",
       "title": "strategy",
       "href": "keywords/strategy.html",
-      "count": 3
+      "count": 4
     },
     {
       "id": "subgame",

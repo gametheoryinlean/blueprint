@@ -425,6 +425,8 @@
       
         <li><a href="../../keywords/contraction.html">contraction</a></li>
       
+        <li><a href="../../keywords/control.html">control</a></li>
+      
         <li><a href="../../keywords/convergence.html">convergence</a></li>
       
         <li><a href="../../keywords/convex-combination.html">convex-combination</a></li>
@@ -724,6 +726,8 @@
         <li><a href="../../keywords/needle.html">needle</a></li>
       
         <li><a href="../../keywords/no-externality.html">no-externality</a></li>
+      
+        <li><a href="../../keywords/non-player.html">non-player</a></li>
       
         <li><a href="../../keywords/normal-form.html">normal-form</a></li>
       
@@ -1036,52 +1040,19 @@
     <span class="definition_thmcaption thm-caption">Definition</span>
     <span class="definition_thmtitle thm-title">Nature In Extensive Games</span>
     <div class="thm_header_extras">
-      <span class="checkmark">✓</span>
+      
       <span class="badge kind-definition">definition</span>
-      <span class="badge status-formalized">formalized</span>
+      <span class="badge status-staged">staged</span>
     </div>
     <div class="thm_header_hidden_extras">
       <a class="permalink" href="#node-game_theory-2e-extensive_game-2e-core-2e-nature_player">#</a>
       
-      
-      <button class="modal-trigger lean" type="button" data-modal-target="lean-modal">L∃∀N</button>
       
     </div>
   </header>
 
   
 
-  
-  <div class="modal-container" id="lean-modal" hidden>
-    <div class="modal-content">
-      <header><h1>Lean declarations</h1><button class="closebtn" type="button">x</button></header>
-      <ul class="uses">
-        
-        <li class="lean-ref">
-          <span class="badge lean-kind">def</span>
-          
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L105"><code>ExtensiveGame.isChanceState</code></a>
-          
-          
-          
-          <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.Basic
-          </span>
-          
-          
-          <p class="lean-docstring">A state is a chance node.</p>
-          <pre class="lean-signature"><code>def isChanceState (G : ExtensiveGame N U) (s : G.State) : Prop :=
-  G.mover s = none ∧ ¬ G.toArena.IsTerminal s</code></pre>
-        </li>
-        
-      </ul>
-      
-      <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Basic</code></a>
-      </p>
-      
-    </div>
-  </div>
   
 
   <div class="definition_thmcontent thm-content body">
@@ -1090,6 +1061,13 @@
 chooses an action. Instead, the game description specifies a probability
 distribution over successors. A strategy profile of the strategic players then
 induces a probability distribution over terminal outcomes.</p>
+<h2>Lean Status</h2>
+<p>Not yet formalized by the structural EFG core. The current
+<code>ControlledGame.isNonPlayerState</code> predicate (and compatibility name
+<code>isChanceState</code>) records only a non-player-controlled nonterminal state; it
+does not supply a probability mass function, stochastic kernel, or law on
+successors. That distinct structural concept is recorded in
+[[game_theory.extensive_game.core.non_player_controlled_state]].</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Section 6.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Nature or hazard player chooses successors according to specified probability distributions.</li>

@@ -425,6 +425,8 @@
       
         <li><a href="../../keywords/contraction.html">contraction</a></li>
       
+        <li><a href="../../keywords/control.html">control</a></li>
+      
         <li><a href="../../keywords/convergence.html">convergence</a></li>
       
         <li><a href="../../keywords/convex-combination.html">convex-combination</a></li>
@@ -724,6 +726,8 @@
         <li><a href="../../keywords/needle.html">needle</a></li>
       
         <li><a href="../../keywords/no-externality.html">no-externality</a></li>
+      
+        <li><a href="../../keywords/non-player.html">non-player</a></li>
       
         <li><a href="../../keywords/normal-form.html">normal-form</a></li>
       
@@ -1075,30 +1079,31 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L102"><code>ExtensiveGame.BehaviorStrategy</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L105"><code>ExtensiveGame.BehaviorStrategy</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
           
           <pre class="lean-signature"><code>def BehaviorStrategy (G : ExtensiveGame iota U) (i : iota)
     [(s : G.State) -&gt; Fintype (G.Action s)] : Type _ :=
-  (s : G.State) -&gt; G.mover s = some i -&gt; stdSimplex Real (G.Action s)</code></pre>
+  (s : G.State) -&gt; G.mover s = some i -&gt;
+    ¬ G.isTerminal s -&gt; stdSimplex Real (G.Action s)</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L107"><code>ExtensiveGame.BehaviorProfile</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L111"><code>ExtensiveGame.BehaviorProfile</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1111,12 +1116,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L68"><code>ExtensiveGame.reachableSubgameAt</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L50"><code>ExtensiveGame.reachableSubgameAt</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.Subgame
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.Subgame
           </span>
           
           
@@ -1134,12 +1139,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L437"><code>ExtensiveGame.reachProb</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L445"><code>ExtensiveGame.reachProb</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1153,12 +1158,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L501"><code>ExtensiveGame.expectedPayoff</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L509"><code>ExtensiveGame.expectedPayoff</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1173,12 +1178,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L270"><code>ExtensiveGame.BehaviorStrategy.restrictReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L278"><code>ExtensiveGame.BehaviorStrategy.restrictReachableSubgame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1187,18 +1192,18 @@
     [(s : G.State) -&gt; Fintype (G.Action s)] {i : iota}
     (beta : G.BehaviorStrategy i) (root : G.State) :
     (G.reachableSubgameAt root).BehaviorStrategy i :=
-  fun s h =&gt; beta s.1 h</code></pre>
+  fun s h hnonterminal =&gt; beta s.1 h hnonterminal</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L278"><code>ExtensiveGame.BehaviorStrategy.liftReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L286"><code>ExtensiveGame.BehaviorStrategy.liftReachableSubgame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1214,12 +1219,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L338"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L346"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1234,12 +1239,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L346"><code>ExtensiveGame.BehaviorProfile.liftReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L354"><code>ExtensiveGame.BehaviorProfile.liftReachableSubgame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1256,12 +1261,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L367"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame_deviate_liftReachableSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L375"><code>ExtensiveGame.BehaviorProfile.restrictReachableSubgame_deviate_liftReachableSubgame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1280,12 +1285,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L508"><code>ExtensiveGame.expectedPayoffFrom_restrictSubgame</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L516"><code>ExtensiveGame.expectedPayoffFrom_restrictSubgame</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1302,12 +1307,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L533"><code>ExtensiveGame.expectedPayoff_restrictSubgame_init</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L541"><code>ExtensiveGame.expectedPayoff_restrictSubgame_init</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1323,12 +1328,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L563"><code>ExtensiveGame.ReachedSubgamePayoffTransfer</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L571"><code>ExtensiveGame.ReachedSubgamePayoffTransfer</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1344,12 +1349,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L582"><code>ExtensiveGame.ReachedSubgamePayoffTransfer.init</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L590"><code>ExtensiveGame.ReachedSubgamePayoffTransfer.init</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1367,12 +1372,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L633"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_of_reachProb_pos</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L641"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_of_reachProb_pos</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1393,12 +1398,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L701"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_init</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L709"><code>ExtensiveGame.IsBehaviorNashEq.restrictSubgame_init</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1416,7 +1421,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Subgame</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Subgame.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.Subgame</code></a>, <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy</code></a>
       </p>
       
     </div>

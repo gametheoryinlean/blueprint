@@ -425,6 +425,8 @@
       
         <li><a href="../../keywords/contraction.html">contraction</a></li>
       
+        <li><a href="../../keywords/control.html">control</a></li>
+      
         <li><a href="../../keywords/convergence.html">convergence</a></li>
       
         <li><a href="../../keywords/convex-combination.html">convex-combination</a></li>
@@ -724,6 +726,8 @@
         <li><a href="../../keywords/needle.html">needle</a></li>
       
         <li><a href="../../keywords/no-externality.html">no-externality</a></li>
+      
+        <li><a href="../../keywords/non-player.html">non-player</a></li>
       
         <li><a href="../../keywords/normal-form.html">normal-form</a></li>
       
@@ -1073,12 +1077,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L122"><code>ExtensiveGame.BehaviorStrategy.IsCompletelyMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L126"><code>ExtensiveGame.BehaviorStrategy.IsCompletelyMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1086,19 +1090,20 @@
           <pre class="lean-signature"><code>def IsCompletelyMixed {G : ExtensiveGame iota U}
     [(s : G.State) -&gt; Fintype (G.Action s)] {i : iota}
     (beta : G.BehaviorStrategy i) : Prop :=
-  forall (s : G.State) (h : G.mover s = some i) (a : G.Action s),
-    0 &lt; (beta s h).val a</code></pre>
+  forall (s : G.State) (h : G.mover s = some i)
+    (hnonterminal : ¬ G.isTerminal s) (a : G.Action s),
+    0 &lt; (beta s h hnonterminal).val a</code></pre>
         </li>
         
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L136"><code>ExtensiveGame.BehaviorProfile.IsCompletelyMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L141"><code>ExtensiveGame.BehaviorProfile.IsCompletelyMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1112,12 +1117,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L452"><code>ExtensiveGame.BehaviorProfile.IsCompletelyMixedWithPositiveReach</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L460"><code>ExtensiveGame.BehaviorProfile.IsCompletelyMixedWithPositiveReach</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1131,12 +1136,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L181"><code>ExtensiveGame.BehaviorProfile.IsCompletelyMixed.actionProb_pos</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L189"><code>ExtensiveGame.BehaviorProfile.IsCompletelyMixed.actionProb_pos</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1151,12 +1156,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L615"><code>ExtensiveGame.IsBehaviorSubgamePerfect</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L623"><code>ExtensiveGame.IsBehaviorSubgamePerfect</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1172,12 +1177,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L662"><code>ExtensiveGame.IsBehaviorNashEq.toSubgamePerfect_of_reachProb_pos</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L670"><code>ExtensiveGame.IsBehaviorNashEq.toSubgamePerfect_of_reachProb_pos</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1198,12 +1203,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L682"><code>ExtensiveGame.IsBehaviorNashEq.toSubgamePerfect_of_isCompletelyMixed</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L690"><code>ExtensiveGame.IsBehaviorNashEq.toSubgamePerfect_of_isCompletelyMixed</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ cc959e3, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
+            EconCSLib @ cef01c7, EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy
           </span>
           
           
@@ -1224,7 +1229,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/BehaviorStrategy.lean#L1"><code>EconCSLib.GameTheory.ExtensiveGame.BehaviorStrategy</code></a>
       </p>
       
     </div>

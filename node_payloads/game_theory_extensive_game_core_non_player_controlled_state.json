@@ -1,0 +1,48 @@
+{
+  "id": "game_theory.extensive_game.core.non_player_controlled_state",
+  "title": "Non-Player-Controlled Nonterminal State",
+  "kind": "definition",
+  "status": "formalized",
+  "href": "game_theory/extensive_game/game_theory_extensive_game_core_non_player_controlled_state.html",
+  "primary_topic": "game_theory.extensive_game",
+  "topics": [
+    "game_theory.extensive_game",
+    "game_theory.extensive_game.core"
+  ],
+  "body_html": "<h1>Non-Player-Controlled Nonterminal State</h1>\n<p>A non-player-controlled state is a nonterminal state whose mover label is\n<code>none</code>. This is purely structural: it says that no strategic player controls\nthe transition, but does not specify how the next action or successor is\nselected.</p>\n<p>A probabilistic Nature/chance interpretation requires additional stochastic\ndata and is tracked separately in\n[[game_theory.extensive_game.core.nature_player]].</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 6.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Nature nodes motivate distinguishing strategic control from non-player transitions; probability is additional data.</li>\n</ul>",
+  "proof_html": null,
+  "deps": [],
+  "dependents": [],
+  "lean_refs": [
+    {
+      "name": "ControlledGame.isNonPlayerState",
+      "display_name": "ControlledGame.isNonPlayerState",
+      "qualified_name": "ControlledGame.isNonPlayerState",
+      "module": "EconCSLib.GameTheory.ExtensiveGame.Structural.Basic",
+      "kind": "def",
+      "signature": "def isNonPlayerState (G : ControlledGame N) (s : G.State) : Prop :=\n  G.mover s = none ∧ ¬ G.toArena.IsTerminal s",
+      "docstring": null,
+      "repository_title": "EconCSLib",
+      "revision": "cef01c709a7d238f076b45818f2ff2629518efe3",
+      "short_revision": "cef01c7",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Structural/Basic.lean#L122",
+      "doc_url": null,
+      "has_sorry": false,
+      "status": "resolved",
+      "reason": null,
+      "suggestions": []
+    }
+  ],
+  "lean_modules": [
+    {
+      "name": "EconCSLib.GameTheory.ExtensiveGame.Structural.Basic",
+      "display_name": "EconCSLib.GameTheory.ExtensiveGame.Structural.Basic",
+      "repository_title": "EconCSLib",
+      "revision": "cef01c709a7d238f076b45818f2ff2629518efe3",
+      "short_revision": "cef01c7",
+      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cef01c709a7d238f076b45818f2ff2629518efe3/EconCSLib/GameTheory/ExtensiveGame/Structural/Basic.lean#L1",
+      "status": "resolved",
+      "reason": null
+    }
+  ]
+}

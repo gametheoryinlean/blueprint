@@ -4,24 +4,32 @@
     "title": "Game Theory.Extensive Game.Perfect Information",
     "href": "game_theory/extensive_game/perfect_information/index.html",
     "parent": "game_theory.extensive_game",
-    "node_count": 15,
-    "descendant_node_count": 15
+    "node_count": 16,
+    "descendant_node_count": 16
   },
   "counts": {
-    "internal_nodes": 15,
+    "internal_nodes": 16,
     "inlined_nodes": 0,
-    "descendant_nodes": 15,
+    "descendant_nodes": 16,
     "child_topics": 0,
     "inlined_child_topics": 0,
-    "non_proof_plan_nodes": 15,
+    "non_proof_plan_nodes": 16,
     "proof_plan_nodes": 0,
     "selected_proof_plan_nodes": 0,
     "boundary_topics": 4,
     "proof_plan_attachments": 0,
-    "visible_nodes_without_proof_plans": 20,
-    "visible_nodes_with_selected_proof_plans": 20
+    "visible_nodes_without_proof_plans": 21,
+    "visible_nodes_with_selected_proof_plans": 21
   },
   "nodes": [
+    {
+      "id": "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
+      "title": "Finite Game-Tree Strategy Induces An Outcome",
+      "kind": "definition",
+      "status": "formalized",
+      "href": "game_theory/extensive_game/game_theory_extensive_game_core_finite_game_tree_induced_outcome.html",
+      "payload": "node_payloads/game_theory_extensive_game_core_finite_game_tree_induced_outcome.json"
+    },
     {
       "id": "game_theory.extensive_game.perfect_information.backward_induction_value",
       "title": "Backward Induction Value",
@@ -221,7 +229,7 @@
       "title": "Game Theory.Extensive Game",
       "href": "game_theory/extensive_game/index.html",
       "role": "dependency_and_dependent",
-      "node_count": 57
+      "node_count": 59
     },
     {
       "id": "game_theory.repeated_game",
@@ -246,6 +254,13 @@
     }
   ],
   "boundary_edges": [
+    {
+      "from": "topic:game_theory.extensive_game",
+      "to": "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
+      "kind": "boundary_dependency",
+      "topic": "game_theory.extensive_game",
+      "count": 1
+    },
     {
       "from": "topic:game_theory.extensive_game",
       "to": "game_theory.extensive_game.perfect_information.backward_induction_value",
@@ -374,7 +389,13 @@
       "id": "extensive-game",
       "title": "extensive-game",
       "href": "keywords/extensive-game.html",
-      "count": 15
+      "count": 16
+    },
+    {
+      "id": "game-tree",
+      "title": "game-tree",
+      "href": "keywords/game-tree.html",
+      "count": 1
     },
     {
       "id": "genericity",
@@ -395,6 +416,12 @@
       "count": 1
     },
     {
+      "id": "outcome",
+      "title": "outcome",
+      "href": "keywords/outcome.html",
+      "count": 1
+    },
+    {
       "id": "perfect-information",
       "title": "perfect-information",
       "href": "keywords/perfect-information.html",
@@ -404,7 +431,7 @@
       "id": "strategy",
       "title": "strategy",
       "href": "keywords/strategy.html",
-      "count": 1
+      "count": 2
     },
     {
       "id": "subgame-perfect-equilibrium",

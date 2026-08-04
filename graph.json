@@ -1160,6 +1160,32 @@
       ]
     },
     {
+      "id": "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
+      "title": "Finite Game-Tree Strategy Induces An Outcome",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "extensive-game",
+        "game-tree",
+        "strategy",
+        "outcome"
+      ],
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.core",
+        "game_theory.extensive_game.perfect_information"
+      ],
+      "lean_declarations": [
+        "GameTree.Strategy",
+        "GameTree.outcome"
+      ],
+      "topic": "game_theory.extensive_game",
+      "uses": [
+        "game_theory.extensive_game.core.game_tree"
+      ]
+    },
+    {
       "id": "game_theory.extensive_game.core.game_tree",
       "title": "Game Tree",
       "kind": "definition",
@@ -1180,6 +1206,7 @@
       ],
       "topic": "game_theory.extensive_game",
       "used_by": [
+        "game_theory.extensive_game.core.finite_game_tree_induced_outcome",
         "game_theory.extensive_game.core.history_and_subgame",
         "game_theory.extensive_game.perfect_information.backward_induction_value"
       ]
@@ -1215,7 +1242,7 @@
       "id": "game_theory.extensive_game.core.nature_player",
       "title": "Nature In Extensive Games",
       "kind": "definition",
-      "status": "formalized",
+      "status": "staged",
       "tags": [
         "extensive-game",
         "nature",
@@ -1226,9 +1253,6 @@
         "game_theory.extensive_game",
         "game_theory.extensive_game.core"
       ],
-      "lean_declarations": [
-        "ExtensiveGame.isChanceState"
-      ],
       "topic": "game_theory.extensive_game",
       "used_by": [
         "game_theory.extensive_game.examples.entrant_incomplete_information_value_example",
@@ -1238,10 +1262,30 @@
       ]
     },
     {
+      "id": "game_theory.extensive_game.core.non_player_controlled_state",
+      "title": "Non-Player-Controlled Nonterminal State",
+      "kind": "definition",
+      "status": "formalized",
+      "tags": [
+        "extensive-game",
+        "control",
+        "non-player"
+      ],
+      "primary_topic": "game_theory.extensive_game",
+      "topics": [
+        "game_theory.extensive_game",
+        "game_theory.extensive_game.core"
+      ],
+      "lean_declarations": [
+        "ControlledGame.isNonPlayerState"
+      ],
+      "topic": "game_theory.extensive_game"
+    },
+    {
       "id": "game_theory.extensive_game.core.strategy_profile_induced_outcome",
       "title": "Strategy Profile And Induced Outcome",
       "kind": "definition",
-      "status": "formalized",
+      "status": "staged",
       "tags": [
         "extensive-game",
         "strategy",
@@ -1251,12 +1295,6 @@
       "topics": [
         "game_theory.extensive_game",
         "game_theory.extensive_game.core"
-      ],
-      "lean_declarations": [
-        "ExtensiveGame.StrategyProfile",
-        "ExtensiveGame.StrategyProfile.actionAt",
-        "ExtensiveGame.finalPayoff",
-        "GameTree.outcome"
       ],
       "topic": "game_theory.extensive_game",
       "used_by": [
@@ -14878,6 +14916,10 @@
     {
       "from": "game_theory.cooperative_game.tu_game",
       "to": "game_theory.cooperative_game.superadditive_game"
+    },
+    {
+      "from": "game_theory.extensive_game.core.game_tree",
+      "to": "game_theory.extensive_game.core.finite_game_tree_induced_outcome"
     },
     {
       "from": "game_theory.extensive_game.core.game_tree",

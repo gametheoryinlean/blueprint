@@ -2,14 +2,14 @@
   "id": "game_theory.extensive_game.core.nature_player",
   "title": "Nature In Extensive Games",
   "kind": "definition",
-  "status": "formalized",
+  "status": "staged",
   "href": "game_theory/extensive_game/game_theory_extensive_game_core_nature_player.html",
   "primary_topic": "game_theory.extensive_game",
   "topics": [
     "game_theory.extensive_game",
     "game_theory.extensive_game.core"
   ],
-  "body_html": "<h1>Nature In Extensive Games</h1>\n<p>An extensive game with Nature has chance nodes at which no strategic player\nchooses an action. Instead, the game description specifies a probability\ndistribution over successors. A strategy profile of the strategic players then\ninduces a probability distribution over terminal outcomes.</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 6.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Nature or hazard player chooses successors according to specified probability distributions.</li>\n</ul>",
+  "body_html": "<h1>Nature In Extensive Games</h1>\n<p>An extensive game with Nature has chance nodes at which no strategic player\nchooses an action. Instead, the game description specifies a probability\ndistribution over successors. A strategy profile of the strategic players then\ninduces a probability distribution over terminal outcomes.</p>\n<h2>Lean Status</h2>\n<p>Not yet formalized by the structural EFG core. The current\n<code>ControlledGame.isNonPlayerState</code> predicate (and compatibility name\n<code>isChanceState</code>) records only a non-player-controlled nonterminal state; it\ndoes not supply a probability mass function, stochastic kernel, or law on\nsuccessors. That distinct structural concept is recorded in\n[[game_theory.extensive_game.core.non_player_controlled_state]].</p>\n<h2>References</h2>\n<ul>\n<li>[MFoGT, Section 6.2.5] Laraki, Renault, and Sorin, <em>Mathematical Foundations of Game Theory</em>. Nature or hazard player chooses successors according to specified probability distributions.</li>\n</ul>",
   "proof_html": null,
   "deps": [],
   "dependents": [
@@ -34,36 +34,6 @@
       "href": "game_theory/extensive_game/game_theory_extensive_game_perfect_information_zero_sum_perfect_information_value_with_chance.html"
     }
   ],
-  "lean_refs": [
-    {
-      "name": "ExtensiveGame.isChanceState",
-      "display_name": "ExtensiveGame.isChanceState",
-      "qualified_name": "ExtensiveGame.isChanceState",
-      "module": "EconCSLib.GameTheory.ExtensiveGame.Basic",
-      "kind": "def",
-      "signature": "def isChanceState (G : ExtensiveGame N U) (s : G.State) : Prop :=\n  G.mover s = none ∧ ¬ G.toArena.IsTerminal s",
-      "docstring": "A state is a chance node.",
-      "repository_title": "EconCSLib",
-      "revision": "cc959e3198792509953959de9050411c12a7aacc",
-      "short_revision": "cc959e3",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L105",
-      "doc_url": null,
-      "has_sorry": false,
-      "status": "resolved",
-      "reason": null,
-      "suggestions": []
-    }
-  ],
-  "lean_modules": [
-    {
-      "name": "EconCSLib.GameTheory.ExtensiveGame.Basic",
-      "display_name": "EconCSLib.GameTheory.ExtensiveGame.Basic",
-      "repository_title": "EconCSLib",
-      "revision": "cc959e3198792509953959de9050411c12a7aacc",
-      "short_revision": "cc959e3",
-      "source_url": "https://github.com/gametheoryinlean/EconCSLib/blob/cc959e3198792509953959de9050411c12a7aacc/EconCSLib/GameTheory/ExtensiveGame/Basic.lean#L1",
-      "status": "resolved",
-      "reason": null
-    }
-  ]
+  "lean_refs": [],
+  "lean_modules": []
 }
