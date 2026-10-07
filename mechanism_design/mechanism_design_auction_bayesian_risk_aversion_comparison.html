@@ -275,6 +275,10 @@
       <button class="sidebar-toggle sidebar-toggle-keywords" type="button" aria-expanded="true" aria-controls="keyword-list">
         <span class="toggle-icon" aria-hidden="true">▾</span> Keywords
       </button>
+      <input type="search" id="keyword-search" class="keyword-search"
+             placeholder="Search 376 keywords…"
+             aria-controls="keyword-list" autocomplete="off">
+      <p id="keyword-empty" class="keyword-empty" hidden>No matches</p>
       <ul id="keyword-list" class="keyword-list nav-list">
       
         <li><a href="../keywords/action.html">action</a></li>
@@ -1105,14 +1109,16 @@ prefer second-price to first-price.</p>
 </ul>
 <h2>Key driver</h2>
 <p>In first-price, <em>bid shading</em> below truthful is bounded by the
-uncertainty about the marginal opponent's bid:
-- A higher bid increases the probability of winning (good) at the cost
-  of a higher payment if winning (bad).
-- Risk aversion <em>raises</em> the marginal value of winning relative to the
+uncertainty about the marginal opponent's bid:</p>
+<ul>
+<li>A higher bid increases the probability of winning (good) at the cost
+  of a higher payment if winning (bad).</li>
+<li>Risk aversion <em>raises</em> the marginal value of winning relative to the
   marginal cost of paying more — the bidder prefers a more certain,
-  smaller, payoff over a riskier larger one.
-- Hence risk-averse bidders shade <em>less</em> than risk-neutral bidders,
-  bidding closer to their true valuation.</p>
+  smaller, payoff over a riskier larger one.</li>
+<li>Hence risk-averse bidders shade <em>less</em> than risk-neutral bidders,
+  bidding closer to their true valuation.</li>
+</ul>
 <p>The result is that the first-price equilibrium bid function
 $\beta^{\mathrm{FP}}_u(t)$ under risk aversion lies strictly above the
 risk-neutral counterpart from
@@ -1123,12 +1129,14 @@ depend on $u$: truth-telling in second-price and the deterministic
 strategy invariant. The expected revenue is therefore unchanged from
 the risk-neutral case.</p>
 <h2>Bidder welfare comparison</h2>
-<p>The same logic reverses for bidder preferences:
-- Risk-averse bidders strictly prefer the deterministic "pay only on
+<p>The same logic reverses for bidder preferences:</p>
+<ul>
+<li>Risk-averse bidders strictly prefer the deterministic "pay only on
   losing" structure of second-price to the lottery-like outcomes of
-  first-price.
-- Quantitatively, ex-ante expected utility from second-price exceeds
-  that from first-price (under symmetric IPV and any concave $u$).</p>
+  first-price.</li>
+<li>Quantitatively, ex-ante expected utility from second-price exceeds
+  that from first-price (under symmetric IPV and any concave $u$).</li>
+</ul>
 <h2>Why it matters</h2>
 <ul>
 <li><strong>Auction design under risk aversion.</strong> A revenue-maximising seller
@@ -1236,19 +1244,43 @@ Tracked in the MSZ Ch.12 auction gap review.</p>
         });
       });
 
-      // Keywords section toggle
+      // Keywords section toggle (folded by default: the keyword list can run
+      // into the hundreds of entries, so only Topics is open on first visit).
       var keywordBtn = document.querySelector('.sidebar-toggle-keywords');
       var keywordList = document.getElementById('keyword-list');
-      if (keywordBtn && keywordList) {
+      // `hidden` on the list is the single source of fold truth, so a search
+      // that auto-expands the list cannot desync the toggle button.
+      function setKeywordsFolded(folded, remember) {
+        keywordList.hidden = folded;
+        if (keywordBtn) keywordBtn.setAttribute('aria-expanded', String(!folded));
+        if (remember) localStorage.setItem('sidebar-keywords-folded', String(folded));
+      }
+      if (keywordList) {
         var kwStored = localStorage.getItem('sidebar-keywords-folded');
-        var kwFolded = kwStored === 'true';
-        keywordList.hidden = kwFolded;
-        keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
+        setKeywordsFolded(kwStored === null ? true : kwStored === 'true', false);
+      }
+      if (keywordBtn && keywordList) {
         keywordBtn.addEventListener('click', function() {
-          kwFolded = !kwFolded;
-          keywordList.hidden = kwFolded;
-          keywordBtn.setAttribute('aria-expanded', String(!kwFolded));
-          localStorage.setItem('sidebar-keywords-folded', String(kwFolded));
+          setKeywordsFolded(!keywordList.hidden, true);
+        });
+      }
+
+      // Keyword search: client-side filter over the existing <li> entries,
+      // so every keyword page stays a plain reachable link with no JS.
+      var keywordSearch = document.getElementById('keyword-search');
+      var keywordEmpty = document.getElementById('keyword-empty');
+      if (keywordSearch && keywordList) {
+        var keywordItems = Array.prototype.slice.call(keywordList.querySelectorAll('li'));
+        keywordSearch.addEventListener('input', function() {
+          var query = keywordSearch.value.trim().toLowerCase();
+          if (query && keywordList.hidden) setKeywordsFolded(false, false);
+          var visible = 0;
+          keywordItems.forEach(function(item) {
+            var match = !query || item.textContent.toLowerCase().indexOf(query) !== -1;
+            item.hidden = !match;
+            if (match) visible += 1;
+          });
+          if (keywordEmpty) keywordEmpty.hidden = visible !== 0;
         });
       }
     });
