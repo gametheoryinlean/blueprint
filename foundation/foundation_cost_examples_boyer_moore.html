@@ -1083,12 +1083,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/BoyerMoore.lean#L54"><code>BoyerMoore.majority</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/BoyerMoore.lean#L54"><code>BoyerMoore.majority</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
@@ -1113,12 +1113,12 @@ where
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/BoyerMoore.lean#L71"><code>BoyerMoore.loop_cost</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/BoyerMoore.lean#L71"><code>BoyerMoore.loop_cost</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
@@ -1130,12 +1130,12 @@ where
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/BoyerMoore.lean#L84"><code>BoyerMoore.majority_peak_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/BoyerMoore.lean#L84"><code>BoyerMoore.majority_peak_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.BoyerMoore
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.BoyerMoore
           </span>
           
           
@@ -1146,7 +1146,7 @@ where
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/BoyerMoore.lean#L1"><code>EconCSLib.Examples.CostM.BoyerMoore</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/BoyerMoore.lean#L1"><code>EconCSLib.Examples.CostM.BoyerMoore</code></a>
       </p>
       
     </div>
@@ -1155,7 +1155,7 @@ where
 
   <div class="example_thmcontent thm-content body">
     <h1>Worked Example: Constant-Space Boyer–Moore Majority</h1>
-<p>The Boyer–Moore majority vote in <code>CostM Cells</code> (<a class="node-ref" data-node-id="foundation.cost.cells" href="cost/foundation_cost_cells.html">Peak-Memory Cost via the Cells Monoid</a>),
+<p>The Boyer–Moore majority vote in <code>CostM Cells</code> (<a class="node-ref" data-node-id="foundation.cost.cells" href="foundation_cost_cells.html">Peak-Memory Cost via the Cells Monoid</a>),
 proving a <strong>constant</strong> peak-memory bound: regardless of input length, the peak
 working set is two cells — one candidate and one counter,
 $$
@@ -1170,7 +1170,7 @@ is essential here; an additive <code>ℕ</code> cost cannot state this bound.</p
 <code>majority</code> returns the true majority when one exists). That omission is the
 point: in <code>CostM</code> the complexity bound lives on <code>.cost</code> and is provable in
 complete isolation from the <code>.ret</code> value, demonstrating the
-correctness/complexity decoupling described in <a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>.</p>
+correctness/complexity decoupling described in <a class="node-ref" data-node-id="foundation.cost.costm" href="foundation_cost_costm.html">The CostM Complexity Monad</a>.</p>
 <h2>Lean declarations</h2>
 <ul>
 <li><code>BoyerMoore.majority : List α → CostM Cells (Option α)</code> with its single-pass
@@ -1181,7 +1181,7 @@ correctness/complexity decoupling described in <a class="node-ref" data-node-id=
 <h2>References</h2>
 <ul>
 <li>[Danielsson 2008] Nils Anders Danielsson, POPL 2008. Cost monoids for
-  resource analysis (<a class="node-ref" data-node-id="foundation.cost.cells" href="cost/foundation_cost_cells.html">Peak-Memory Cost via the Cells Monoid</a>).</li>
+  resource analysis (<a class="node-ref" data-node-id="foundation.cost.cells" href="foundation_cost_cells.html">Peak-Memory Cost via the Cells Monoid</a>).</li>
 </ul>
     
   </div>

@@ -1087,12 +1087,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L343"><code>MatrixGame.optimal_pairs_iff_saddle_point</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L343"><code>MatrixGame.optimal_pairs_iff_saddle_point</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
           </span>
           
           
@@ -1106,12 +1106,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L158"><code>MatrixGame.mem_optimalRowStrategies_iff_E_ge</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L158"><code>MatrixGame.mem_optimalRowStrategies_iff_E_ge</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
           </span>
           
           
@@ -1123,12 +1123,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L200"><code>MatrixGame.mem_optimalColumnStrategies_iff_E_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGameNash.lean#L200"><code>MatrixGame.mem_optimalColumnStrategies_iff_E_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGameNash
           </span>
           
           
@@ -1140,7 +1140,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>
@@ -1164,12 +1164,12 @@ $$
 for all $x'$ and $y'$. Thus $(x,y)$ is a saddle point. Conversely, if
 $(x,y)$ is a saddle point, then taking $x'$ and $y'$ as pure strategies and
 applying the simplex-side order characterisations
-(<a class="node-ref" data-node-id="math.simplex.bounded_by_value" href="../../math/simplex/math_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>) gives
+(<a class="node-ref" data-node-id="math.simplex.bounded_by_value" href="../../math/math_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>) gives
 $$
   E_A(x,y)\le \operatorname{guarantee}_I(x), \qquad
   \operatorname{guarantee}_{II}(y)\le E_A(x,y).
 $$
-Weak duality <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_le_minimax" href="../strategic_game/zero_sum/game_theory_strategic_game_zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a> sandwiches both quantities
+Weak duality <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_le_minimax" href="game_theory_strategic_game_zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a> sandwiches both quantities
 between $v$ on the appropriate side, forcing equality. Hence $x\in X(A)$ and
 $y\in Y(A)$.</p>
 <p>The Lean formalisation factors through two characterisation iff-theorems

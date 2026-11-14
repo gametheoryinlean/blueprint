@@ -1083,12 +1083,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Math/Minimax/Loomis.lean#L806"><code>Loomis.loomis_value_eq</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Math/Minimax/Loomis.lean#L806"><code>Loomis.loomis_value_eq</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d8043d2, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
@@ -1100,7 +1100,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>
       </p>
       
     </div>
@@ -1109,7 +1109,7 @@
 
   <div class="proof-plan_thmcontent thm-content body">
     <h1>Direct Induction Proof Of Loomis Theorem</h1>
-<p>This proof-plan closes <a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="minimax/math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a> by induction
+<p>This proof-plan closes <a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a> by induction
 on $N := |I| + |J|$. The sub-lemmas it cites factor the argument into six
 pieces.</p>
 <h2>Notation</h2>
@@ -1125,7 +1125,7 @@ $$
   \mu_0 = \inf_{y \in \Delta(J)} \mu_\mathrm{aux}(y).
 $$
 Both ratios are well-defined by
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.positive_aggregate" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a>:
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.positive_aggregate" href="math_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a>:
 $(xB)_j &gt; 0$ and $(By)_i &gt; 0$ for every $x \in \Delta(I)$, $y \in \Delta(J)$,
 $j \in J$, $i \in I$.</p>
     
@@ -1134,7 +1134,7 @@ $j \in J$, $i \in I$.</p>
       <div class="proof-body">
         <p>structure</p>
 <p><em>Step 1 — Existence of optimisers.</em> By
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.value_existence" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a>, the
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.value_existence" href="math_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a>, the
 functionals $\lambda_\mathrm{aux}$ and $\mu_\mathrm{aux}$ are continuous on
 the compact simplices $\Delta(I)$ and $\Delta(J)$, and attain their
 respective $\sup$ and $\inf$. Let $x_0 \in \Delta(I)$ and $y_0 \in \Delta(J)$
@@ -1145,11 +1145,11 @@ $$
   (A y_0)_i \le \mu_0 \,(B y_0)_i.
 $$</p>
 <p><em>Step 2 — Weak duality.</em> By
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.weak_duality" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_weak_duality.html">Weak Duality For Loomis Values</a>,
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.weak_duality" href="math_minimax_loomis_induction_proof_weak_duality.html">Weak Duality For Loomis Values</a>,
 $\lambda_0 \le \mu_0$, using positivity of $x_0 B y_0$.</p>
 <p><em>Step 3 — Induction on $N = |I| + |J|$.</em> The base case $N = 2$ (i.e. $|I| =
 |J| = 1$) is handled by
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.base_case" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_base_case.html">Base Case of Loomis Induction</a>: the unique
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.base_case" href="math_minimax_loomis_induction_proof_base_case.html">Base Case of Loomis Induction</a>: the unique
 ratio $A_{i_0, j_0} / B_{i_0, j_0}$ is simultaneously $\lambda_0$ and
 $\mu_0$.</p>
 <p><em>Step 4 — Inductive step.</em> Assume $\lambda_0' = \mu_0'$ for every
@@ -1167,13 +1167,13 @@ $(x_0 A)_{j_0} &gt; \lambda_0 (x_0 B)_{j_0}$, or some row $i_0$ satisfies
 $(A y_0)_{i_0} &lt; \mu_0 (B y_0)_{i_0}$. The two cases are dual:</p>
 <ul>
 <li>the column case is closed by
-  <a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.column_drop" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_column_drop.html">Column-Drop Step of Loomis Induction</a>;</li>
+  <a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.column_drop" href="math_minimax_loomis_induction_proof_column_drop.html">Column-Drop Step of Loomis Induction</a>;</li>
 <li>the row case is closed by
-  <a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.row_drop" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_row_drop.html">Row-Drop Step of Loomis Induction</a>.</li>
+  <a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.row_drop" href="math_minimax_loomis_induction_proof_row_drop.html">Row-Drop Step of Loomis Induction</a>.</li>
 </ul>
 <p>Each case derives a contradiction from $\lambda_0 &lt; \mu_0$, completing the
 induction. Therefore $\lambda_0 = \mu_0 = v$, and $(x_0, y_0, v)$ witnesses
-the Loomis inequalities of <a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="minimax/math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a>.</p>
+the Loomis inequalities of <a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a>.</p>
 <h2>References</h2>
 <ul>
 <li>[MFoGT, Section 2.8, Exercise 1] Laraki, Renault, and Sorin,

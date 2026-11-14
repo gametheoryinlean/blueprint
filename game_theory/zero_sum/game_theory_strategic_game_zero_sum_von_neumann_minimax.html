@@ -1068,12 +1068,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L192"><code>MatrixGame.maximin_le_minimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L192"><code>MatrixGame.maximin_le_minimax</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1084,12 +1084,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L205"><code>MatrixGame.minimax_theorem</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L205"><code>MatrixGame.minimax_theorem</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1100,12 +1100,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L214"><code>MatrixGame.minimax_optimal_strategies</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L214"><code>MatrixGame.minimax_optimal_strategies</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1119,7 +1119,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>
@@ -1135,25 +1135,25 @@ value $v$ such that player I guarantees at least $v$ against every column and
 player II holds player I to at most $v$ against every row.</p>
 <p>Two proof routes attach to this theorem as separate proof-plan nodes:</p>
 <ul>
-<li><a class="node-ref" data-node-id="math.minimax.minimax_from_loomis" href="../../math/minimax/math_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a> (<strong>selected</strong>): finite
+<li><a class="node-ref" data-node-id="math.minimax.minimax_from_loomis" href="../../math/math_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a> (<strong>selected</strong>): finite
   minimax is the $B = \mathbf{1}$ specialisation of the Loomis theorem
-  (<a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="../../math/minimax/math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a>). Fully formalised in Lean
+  (<a class="node-ref" data-node-id="math.minimax.loomis_theorem" href="../../math/math_minimax_loomis_theorem.html">Loomis Theorem (Positive B)</a>). Fully formalised in Lean
   (<code>EconCSLib.StrategicGame.MinimaxLoomis</code>), which inlines the $B = \mathbf{1}$
   case of the Loomis induction
-  (<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof" href="../../math/minimax/math_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>) rather than first porting
+  (<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof" href="../../math/math_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>) rather than first porting
   the general positive-$B$ Loomis statement. The compactness/continuity
   building blocks it relies on live in the core simplex layer
-  (<a class="node-ref" data-node-id="math.simplex.pure" href="../../math/simplex/math_simplex_pure.html">Point Mass on the Standard Simplex</a>, <a class="node-ref" data-node-id="math.simplex.continuity" href="../../math/simplex/math_simplex_continuity.html">Continuity on the Real Standard Simplex</a>,
-  <a class="node-ref" data-node-id="math.simplex.bounded_by_value" href="../../math/simplex/math_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>) and the existence + weak-duality
-  step is <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.lam_mu_existence" href="../strategic_game/zero_sum/game_theory_strategic_game_zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a>; weak duality
-  (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_le_minimax" href="../strategic_game/zero_sum/game_theory_strategic_game_zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a>) supplies one direction of the
+  (<a class="node-ref" data-node-id="math.simplex.pure" href="../../math/math_simplex_pure.html">Point Mass on the Standard Simplex</a>, <a class="node-ref" data-node-id="math.simplex.continuity" href="../../math/math_simplex_continuity.html">Continuity on the Real Standard Simplex</a>,
+  <a class="node-ref" data-node-id="math.simplex.bounded_by_value" href="../../math/math_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>) and the existence + weak-duality
+  step is <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.lam_mu_existence" href="game_theory_strategic_game_zero_sum_lam_mu_existence.html">Existence of Optimal Mixed Strategies (Loomis Foundations)</a>; weak duality
+  (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_le_minimax" href="game_theory_strategic_game_zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a>) supplies one direction of the
   equality.</li>
 <li><code>Minimax.minimax</code> (<strong>proved</strong>, ordered-field-generic): a von Neumann
   symmetrisation proof that works over any linearly ordered field — embed the
   game in a skew-symmetric matrix and read the saddle point off its value-0
   optimal strategy, which exists by the Theorem of the Alternative. Sorry-free,
   needing no compactness or order-completeness
-  (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="../../math/minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>).</li>
+  (<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="../../math/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>).</li>
 </ul>
 <h2>References</h2>
 <ul>

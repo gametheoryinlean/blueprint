@@ -1081,12 +1081,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L127"><code>MatrixGame.IsMaximin</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L127"><code>MatrixGame.IsMaximin</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1099,12 +1099,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L134"><code>MatrixGame.IsMinimax</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L134"><code>MatrixGame.IsMinimax</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1117,12 +1117,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L143"><code>MatrixGame.IsValue</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L143"><code>MatrixGame.IsValue</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame
           </span>
           
           
@@ -1135,7 +1135,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/MatrixGame.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.MatrixGame</code></a>
       </p>
       
     </div>
@@ -1172,12 +1172,12 @@ without invoking $\sup$ / $\inf$.</p>
 <h2>Relationship to <code>sSup</code>-based definitions</h2>
 <p>When $\mathbb{K}$ admits order completeness (e.g. $\mathbb{K} = \mathbb{R}$
 via <code>Real.instConditionallyCompleteLinearOrder</code>), the <code>sSup</code>-based
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_maximin_minimax.html">Maximin and Minimax Values</a> definitions are available, and:</p>
+<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_minimax" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_maximin_minimax.html">Maximin and Minimax Values</a> definitions are available, and:</p>
 <ul>
 <li><code>IsMaximin A v ↔ v = A.maximin</code> (assuming the supremum is attained),</li>
 <li><code>IsMinimax A v ↔ v = A.minimax</code>,</li>
 <li><code>IsValue A v</code> is equivalent to the conjunction of the above when the
-  minimax theorem (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) holds.</li>
+  minimax theorem (<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>) holds.</li>
 </ul>
 <p>The Lean library realises <code>IsMaximin</code>, <code>IsMinimax</code>, <code>IsValue</code> in
 <code>EconCSLib.StrategicGame.Minimax</code>. The bridge lemmas between the
@@ -1186,7 +1186,7 @@ predicate and <code>sSup</code> forms are tracked as Phase 2 follow-up of #54.</
 <p>An ordered-field-generic value route constructs the value as a witness over
 any linearly ordered field, not as a supremum, so it is naturally phrased via
 <code>IsValue</code> rather than via <code>value</code>. The symmetrisation route <code>Minimax.minimax</code>
-(<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="minimax/math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>) is exactly this: it delivers the
+(<a class="node-ref" data-node-id="math.minimax.ordered_field_minimax" href="math_minimax_ordered_field_minimax.html">Ordered-Field Minimax Statement</a>) is exactly this: it delivers the
 optimal value and strategies over any
 <code>[Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜]</code> without requiring order
 completeness, so the predicate forms are the natural interface for it.</p>

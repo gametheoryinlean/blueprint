@@ -1085,12 +1085,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L74"><code>MatrixGame.exists_strong_complementary_pair</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L74"><code>MatrixGame.exists_strong_complementary_pair</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity
+            EconCSLib @ d8043d2, EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity
           </span>
           
           
@@ -1105,7 +1105,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/GameTheory/StrategicGame/ZeroSum/StrongComplementarity.lean#L1"><code>EconCSLib.GameTheory.StrategicGame.ZeroSum.StrongComplementarity</code></a>
       </p>
       
     </div>
@@ -1128,12 +1128,12 @@ exists an optimal pair $(x^*, y^*) \in X(A) \times Y(A)$ such that</p>
       <summary>Proof</summary>
       <div class="proof-body">
         <p><em>The forward direction</em> of each biconditional is
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.support_complementarity" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_support_complementarity.html">Support Complementarity</a> (Prop. 2.4.1(b)) and
+<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.support_complementarity" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_core_support_complementarity.html">Support Complementarity</a> (Prop. 2.4.1(b)) and
 holds for every optimal pair: if $x^*_i &gt; 0$, then row $i$ obtains the
 value against $y^*$; dually for columns.</p>
 <p><em>The reverse direction — existence of an optimal pair where every
 best-response row has positive probability</em> — comes from
-<a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="linear_programming/math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> applied to the
+<a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> applied to the
 matrix-game LP. The Lean implementation
 (<code>MatrixGame.exists_strong_complementary_pair</code>) carries out:</p>
 <h3>Step 1 — Shift to make payoffs strictly positive</h3>
@@ -1153,11 +1153,11 @@ $$</p>
 (since $\sum_i x'_i = 1/v'$ at optimum).</p>
 <h3>Step 3 — Build LP-feasible primal and dual from a matrix-game optimal pair</h3>
 <p>From an existing matrix-game optimal pair $(x^0, y^0)$ (via
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a>), define
+<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.matrix_game_nash_equilibrium" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_matrix_game_nash_equilibrium.html">Mixed Nash Equilibrium of a Matrix Game</a>), define
 $x'^0 := x^0 / v'$ and $u'^0 := y^0 / v'$. Both have LP objective
 $1/v'$, hence are LP-optimal by weak duality.</p>
 <h3>Step 4 — Apply LP strong complementarity</h3>
-<p>Invoke <a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="linear_programming/math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> to obtain a
+<p>Invoke <a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a> to obtain a
 strong-CS optimal LP pair $(x'^*, u'^*)$.</p>
 <h3>Step 5 — Rescale back and translate the biconditional</h3>
 <p>Set $x^*_i := x'^*(e\,i) \cdot v'$ and $y^*_j := u'^*_j \cdot v'$
@@ -1187,11 +1187,11 @@ then $x^*_i &gt; 0$. Symmetric argument for columns. $\square$</p>
 <li>The shift in Step 1 is essential for the standard-form LP reduction;
   without it the value LP "max $v$" has $v$ free, which doesn't fit
   the <code>min ⟨c, x⟩ s.t. Ax ≥ b, x ≥ 0</code> form of
-  <a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="linear_programming/math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>.</li>
+  <a class="node-ref" data-node-id="math.linear_programming.strong_complementarity" href="math_linear_programming_strong_complementarity.html">Strong Complementarity For Linear Programming</a>.</li>
 <li>The Lean implementation restricts <code>I J : Type</code> (= <code>Type 0</code>) so the
   <code>Fintype.sum_equiv</code> adapter that bridges <code>I</code> and <code>Fin (#I)</code> lines up
   with the LP theorem's universe ($\mathbb{R} : \mathrm{Type}\,0$).</li>
-<li>Combined with <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.support_complementarity" href="../game_theory/strategic_game/zero_sum/core/game_theory_strategic_game_zero_sum_core_support_complementarity.html">Support Complementarity</a> this
+<li>Combined with <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.core.support_complementarity" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_core_support_complementarity.html">Support Complementarity</a> this
   produces a <em>fully two-sided</em> biconditional in the strong pair: every
   best-response row has positive probability and every positive-probability
   row is a best response.</li>

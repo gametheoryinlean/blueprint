@@ -1083,12 +1083,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/ParAll.lean#L51"><code>ParAll.parMap_unit_cost_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/ParAll.lean#L51"><code>ParAll.parMap_unit_cost_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.ParAll
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.ParAll
           </span>
           
           
@@ -1100,7 +1100,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/ParAll.lean#L1"><code>EconCSLib.Examples.CostM.ParAll</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/ParAll.lean#L1"><code>EconCSLib.Examples.CostM.ParAll</code></a>
       </p>
       
     </div>
@@ -1109,7 +1109,7 @@
 
   <div class="example_thmcontent thm-content body">
     <h1>Worked Example: N-ary parList Depth Bound</h1>
-<p>The n-ary <code>parList</code> combinator (<a class="node-ref" data-node-id="foundation.cost.parallel" href="cost/foundation_cost_parallel.html">Parallel Composition in CostM</a>) applied to a
+<p>The n-ary <code>parList</code> combinator (<a class="node-ref" data-node-id="foundation.cost.parallel" href="foundation_cost_parallel.html">Parallel Composition in CostM</a>) applied to a
 list of independent unit-cost operations. Because the costs are folded with
 <code>⊔</code> from <code>⊥</code>, running <code>n</code> operations that each charge one unit in parallel has
 depth-1 cost:
@@ -1120,7 +1120,7 @@ $$
 proved as <code>parMap_unit_cost_le</code>. This is the flat fan-out / fan-in schedule:
 arbitrarily many independent unit tasks cost the same as one, the defining
 property distinguishing the parallel <code>⊔</code> cost from the sequential <code>+</code> cost
-(<a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>). The empty-list base case (<code>parList []</code>has
+(<a class="node-ref" data-node-id="foundation.cost.costm" href="foundation_cost_costm.html">The CostM Complexity Monad</a>). The empty-list base case (<code>parList []</code>has
 cost <code>⊥ = 0</code>) is exercised by the accompanying examples in the source file.</p>
 <h2>Lean declarations</h2>
 <ul>
@@ -1130,7 +1130,7 @@ cost <code>⊥ = 0</code>) is exercised by the accompanying examples in the sour
 <h2>References</h2>
 <ul>
 <li>[Danielsson 2008] Nils Anders Danielsson, POPL 2008. The underlying cost
-  monad (<a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>).</li>
+  monad (<a class="node-ref" data-node-id="foundation.cost.costm" href="foundation_cost_costm.html">The CostM Complexity Monad</a>).</li>
 </ul>
     
   </div>

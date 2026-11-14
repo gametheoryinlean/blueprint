@@ -1084,7 +1084,7 @@
       <div class="proof-body">
         <p>Shift the matrix by adding a positive constant to every entry, so all entries
 are positive.  Apply finite-dimensional linear-programming duality
-(<a class="node-ref" data-node-id="math.linear_programming.strong_duality" href="linear_programming/math_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>) to the dual programs
+(<a class="node-ref" data-node-id="math.linear_programming.strong_duality" href="math_linear_programming_strong_duality.html">Strong Duality For Linear Programming</a>) to the dual programs
 $$
   XA \ge \mathbf{1}, \quad X \ge 0
 $$
@@ -1095,13 +1095,13 @@ $$
 The dual optimal solutions have a common objective value $w&gt;0$.  Normalizing
 the vectors by $w$ gives mixed strategies $x^*$ and $y^*$, and the inequalities
 become the minimax optimality inequalities with value $1/w$ via the simplex
-bound transfer <a class="node-ref" data-node-id="math.simplex.bounded_by_value" href="simplex/math_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>.  Weak duality
-<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_le_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a> closes the sandwich, and undoing the
+bound transfer <a class="node-ref" data-node-id="math.simplex.bounded_by_value" href="math_simplex_bounded_by_value.html">Pointwise Bounds Are Simplex Bounds</a>.  Weak duality
+<a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.maximin_le_minimax" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_maximin_le_minimax.html">Maximin is Bounded by Minimax</a> closes the sandwich, and undoing the
 constant shift gives the original game.</p>
 <p>This proof route is recorded as a <code>candidate</code> rather than <code>selected</code>: the
-library's chosen formalisation route for <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/strategic_game/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>
+library's chosen formalisation route for <a class="node-ref" data-node-id="game_theory.strategic_game.zero_sum.von_neumann_minimax" href="../game_theory/zero_sum/game_theory_strategic_game_zero_sum_von_neumann_minimax.html">Von Neumann Minimax Theorem</a>
 is the simplified-Loomis induction
-(<a class="node-ref" data-node-id="math.minimax.minimax_from_loomis" href="minimax/math_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a>). The LP-duality route is now
+(<a class="node-ref" data-node-id="math.minimax.minimax_from_loomis" href="math_minimax_minimax_from_loomis.html">Minimax via the All-Ones Specialization of Loomis</a>). The LP-duality route is now
 viable in EconCSLib via the strong-duality node (Farkas → LP strong duality)
 landed in #71, but has not been carried through to a Lean proof.</p>
 <h2>References</h2>

@@ -1083,12 +1083,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/LCS.lean#L62"><code>LCS.lcs</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/LCS.lean#L62"><code>LCS.lcs</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.LCS
           </span>
           
           
@@ -1118,12 +1118,12 @@ preserves the `×ˢ` containment. -/</code></pre>
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/LCS.lean#L90"><code>LCS.lcs_cost_subset</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/LCS.lean#L90"><code>LCS.lcs_cost_subset</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.LCS
           </span>
           
           
@@ -1136,12 +1136,12 @@ preserves the `×ˢ` containment. -/</code></pre>
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/LCS.lean#L131"><code>LCS.lcs_cost_card_le</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/LCS.lean#L131"><code>LCS.lcs_cost_card_le</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Examples.CostM.LCS
+            EconCSLib @ d8043d2, EconCSLib.Examples.CostM.LCS
           </span>
           
           
@@ -1153,7 +1153,7 @@ preserves the `×ˢ` containment. -/</code></pre>
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Examples/CostM/LCS.lean#L1"><code>EconCSLib.Examples.CostM.LCS</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Examples/CostM/LCS.lean#L1"><code>EconCSLib.Examples.CostM.LCS</code></a>
       </p>
       
     </div>
@@ -1176,7 +1176,7 @@ $$
     \;\le\; (|xs|+1)\,(|ys|+1),
 $$
 i.e. <code>lcs_cost_card_le</code>. This is the canonical polynomial-space DP example —
-the 2-D analogue of <a class="node-ref" data-node-id="foundation.cost.examples.memo_fib" href="cost/examples/foundation_cost_examples_memo_fib.html">Worked Example: Memoized Fibonacci Footprint</a>.</p>
+the 2-D analogue of <a class="node-ref" data-node-id="foundation.cost.examples.memo_fib" href="foundation_cost_examples_memo_fib.html">Worked Example: Memoized Fibonacci Footprint</a>.</p>
 <p><code>lcs</code> uses the bare <code>CostM.tick</code> form (rather than the <code>✓</code> macro) at its
 footprint-recording points, since each tick records a specific grid cell
 <code>Visited.singleton (i, j)</code> rather than a unit cost.</p>
@@ -1190,7 +1190,7 @@ footprint-recording points, since each tick records a specific grid cell
 <h2>References</h2>
 <ul>
 <li>[Danielsson 2008] Nils Anders Danielsson, POPL 2008. Footprint cost monoids
-  (<a class="node-ref" data-node-id="foundation.cost.visited" href="cost/foundation_cost_visited.html">Memoization Footprint via the Visited Monoid</a>).</li>
+  (<a class="node-ref" data-node-id="foundation.cost.visited" href="foundation_cost_visited.html">Memoization Footprint via the Visited Monoid</a>).</li>
 </ul>
     
   </div>

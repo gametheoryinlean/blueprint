@@ -1085,12 +1085,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">theorem</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Math/Minimax/Loomis.lean#L505"><code>Loomis.loomis_value_eq_aux</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Math/Minimax/Loomis.lean#L505"><code>Loomis.loomis_value_eq_aux</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Math.Minimax.Loomis
+            EconCSLib @ d8043d2, EconCSLib.Math.Minimax.Loomis
           </span>
           
           
@@ -1105,7 +1105,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Math/Minimax/Loomis.lean#L1"><code>EconCSLib.Math.Minimax.Loomis</code></a>
       </p>
       
     </div>
@@ -1115,14 +1115,14 @@
   <div class="lemma_thmcontent thm-content body">
     <h1>Column-Drop Step of Loomis Induction</h1>
 <p>The first of the two symmetric inductive steps in
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof" href="minimax/math_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>: a strict column inequality
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof" href="math_minimax_loomis_induction_proof.html">Direct Induction Proof Of Loomis Theorem</a>: a strict column inequality
 in the optimiser of $A$ forces a contradiction by mixing with the inductive
 optimiser of a column-restricted game.</p>
 <h2>Setup</h2>
 <p>Fix $A, B \colon I \times J \to \mathbb{R}$ with $B$ entrywise positive and
 $|I| + |J| \ge 3$. Let $x_0 \in \Delta(I)$ and $y_0 \in \Delta(J)$ be the
 optimisers from
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.value_existence" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a>, and use
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.value_existence" href="math_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a>, and use
 $\lambda_0, \mu_0$ as defined there.</p>
 <p><strong>Induction hypothesis.</strong> Every pair $(A', B')$ on smaller index types — in
 particular on $(I, J')$ with $J' \subsetneq J$ — satisfies the equality
@@ -1166,7 +1166,7 @@ $$
   \lambda_0 \;&lt;\; \mu_0 \;\le\; \mu_0' \;=\; \lambda_0'.
 $$</p>
 <p><strong>Step 5: Inductive optimiser $x'$.</strong> By
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.value_existence" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a> applied to
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.value_existence" href="math_minimax_loomis_induction_proof_value_existence.html">Existence of Loomis Optimisers</a> applied to
 $(A', B')$ there exists $x' \in \Delta(I)$ with
 $$
   (x' A)_j \ge \lambda_0' \,(x' B)_j
@@ -1188,7 +1188,7 @@ $$
 $$
 The extra term $\alpha(\lambda_0' - \lambda_0)(x'B)_j$ is strictly positive
 when $\alpha &gt; 0$ (Step 4 plus $(x'B)_j &gt; 0$ by
-<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.positive_aggregate" href="minimax/loomis_induction_proof/math_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a>). So for
+<a class="node-ref" data-node-id="math.minimax.loomis_induction_proof.positive_aggregate" href="math_minimax_loomis_induction_proof_positive_aggregate.html">Positive Aggregates xB and By</a>). So for
 every $\alpha \in (0, 1]$ and every $j \ne j_0$,
 $$
   (x_\alpha A)_j \;&gt;\; \lambda_0 (x_\alpha B)_j. \tag{*}

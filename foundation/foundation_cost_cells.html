@@ -1081,12 +1081,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">structure</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Foundation/CostM/Cells.lean#L63"><code>Cells</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Foundation.CostM.Cells
+            EconCSLib @ d8043d2, EconCSLib.Foundation.CostM.Cells
           </span>
           
           
@@ -1105,12 +1105,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Foundation/CostM/Cells.lean#L122"><code>Cells.alloc</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Foundation/CostM/Cells.lean#L122"><code>Cells.alloc</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Foundation.CostM.Cells
+            EconCSLib @ d8043d2, EconCSLib.Foundation.CostM.Cells
           </span>
           
           
@@ -1125,12 +1125,12 @@
         <li class="lean-ref">
           <span class="badge lean-kind">def</span>
           
-          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Foundation/CostM/Cells.lean#L129"><code>Cells.free</code></a>
+          <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Foundation/CostM/Cells.lean#L129"><code>Cells.free</code></a>
           
           
           
           <span class="lean-source-meta">
-            EconCSLib @ 5522991, EconCSLib.Foundation.CostM.Cells
+            EconCSLib @ d8043d2, EconCSLib.Foundation.CostM.Cells
           </span>
           
           
@@ -1147,7 +1147,7 @@
       </ul>
       
       <p class="lean-modules">Modules:
-        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/55229910db21f09a441df6c31f48420680359a4c/EconCSLib/Foundation/CostM/Cells.lean#L1"><code>EconCSLib.Foundation.CostM.Cells</code></a>
+        <a href="https://github.com/gametheoryinlean/EconCSLib/blob/d8043d27eb7b5fa422959a83d46952bd0ca9c449/EconCSLib/Foundation/CostM/Cells.lean#L1"><code>EconCSLib.Foundation.CostM.Cells</code></a>
       </p>
       
     </div>
@@ -1156,7 +1156,7 @@
 
   <div class="definition_thmcontent thm-content body">
     <h1>Peak-Memory Cost via the Cells Monoid</h1>
-<p>Additive cost (<a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>) cannot express <strong>peak</strong> memory,
+<p>Additive cost (<a class="node-ref" data-node-id="foundation.cost.costm" href="foundation_cost_costm.html">The CostM Complexity Monad</a>) cannot express <strong>peak</strong> memory,
 because the high-water mark of a sequence of allocations and frees is not the
 sum of the per-step changes. <code>Cells</code> is the cost monoid that fixes this: an
 element carries a non-negative <code>peak</code> and a signed net <code>delta</code> with the
@@ -1190,13 +1190,13 @@ An <code>alloc n</code> raises both the current footprint and the peak by <code>
   normal form for peak computations.</li>
 </ul>
 <p>The canonical use is the constant-space Boyer–Moore majority vote,
-<a class="node-ref" data-node-id="foundation.cost.examples.boyer_moore" href="cost/examples/foundation_cost_examples_boyer_moore.html">Worked Example: Constant-Space Boyer–Moore Majority</a>, which proves <code>peak ≤ 2</code>
+<a class="node-ref" data-node-id="foundation.cost.examples.boyer_moore" href="foundation_cost_examples_boyer_moore.html">Worked Example: Constant-Space Boyer–Moore Majority</a>, which proves <code>peak ≤ 2</code>
 independent of input length.</p>
 <h2>References</h2>
 <ul>
 <li>[Danielsson 2008] Nils Anders Danielsson, <em>Lightweight Semiformal Time
   Complexity Analysis for Purely Functional Data Structures</em>, POPL 2008. Cost
-  monoids for resource analysis (<a class="node-ref" data-node-id="foundation.cost.costm" href="cost/foundation_cost_costm.html">The CostM Complexity Monad</a>).</li>
+  monoids for resource analysis (<a class="node-ref" data-node-id="foundation.cost.costm" href="foundation_cost_costm.html">The CostM Complexity Monad</a>).</li>
 </ul>
 <h2>Provenance</h2>
 <ul>
